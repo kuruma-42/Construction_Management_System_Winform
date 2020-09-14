@@ -1,0 +1,7 @@
+D:\3.DevOps\Eldigm_Plus\EldigmPlusSvc_Main\bin\EldigmPlusSvc_Main.dll.config
+D:\3.DevOps\Eldigm_Plus\EldigmPlusSvc_Main\bin\EldigmPlusSvc_Main.dll
+D:\3.DevOps\Eldigm_Plus\EldigmPlusSvc_Main\bin\EldigmPlusSvc_Main.pdb
+D:\3.DevOps\Eldigm_Plus\EldigmPlusSvc_Main\obj\Debug\EldigmPlusSvc_Main.csproj.CoreCompileInputs.cache
+D:\3.DevOps\Eldigm_Plus\EldigmPlusSvc_Main\obj\Debug\EldigmPlusSvc_Main.dll
+D:\3.DevOps\Eldigm_Plus\EldigmPlusSvc_Main\obj\Debug\EldigmPlusSvc_Main.pdb
+D:\3.DevOps\Eldigm_Plus\EldigmPlusSvc_Main\obj\Debug\EldigmPlusSvc_Main.csprojAssemblyReference.cache

@@ -1,0 +1,35 @@
+
+2020-09-14 10:05:55-->  [error]  (page)::FrmSysCodeGrp  (Function)::setDataBind_treeView1  (Detail):: 
+System.ServiceModel.ActionNotSupportedException: EndpointDispatcher에서 ContractFilter가 일치하지 않으므로 수신자 쪽에서 동작 'http://tempuri.org/IWsMainHome/sSiteMenu'이(가) 있는 메시지를 처리할 수 없습니다. 발신자와 수신자 사이에 계약 불일치(발신자와 수신자 사이의 동작 불일치) 또는 바인딩/보안 불일치가 있기 때문일 수 있습니다. 발신자와 수신자의 계약 및 바인딩(메시지, 전송, 없음 등의 보안 요구 사항 포함)이 같은지 확인하십시오.
+
+Server stack trace: 
+   위치: System.ServiceModel.Channels.ServiceChannel.ThrowIfFaultUnderstood(Message reply, MessageFault fault, String action, MessageVersion version, FaultConverter faultConverter)
+   위치: System.ServiceModel.Channels.ServiceChannel.HandleReply(ProxyOperationRuntime operation, ProxyRpc& rpc)
+   위치: System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   위치: System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   위치: System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   위치: System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   위치: System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   위치: EldigmPlusApp.WsMHome.IWsMainHome.sSiteMenu(sSiteMenuRequest request)
+   위치: EldigmPlusApp.WsMHome.WsMainHomeClient.EldigmPlusApp.WsMHome.IWsMainHome.sSiteMenu(sSiteMenuRequest request) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\Connected Services\WsMHome\Reference.cs:줄 527
+   위치: EldigmPlusApp.WsMHome.WsMainHomeClient.sSiteMenu(String pDbNm, String pSiteCd, DataTopMenu[]& reList, String& reMsg) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\Connected Services\WsMHome\Reference.cs:줄 534
+   위치: EldigmPlusApp.SubForm.Sys.SysCode.FrmSysCodeGrp.setDataBind_treeView1() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\SysCode\FrmSysCodeGrp.cs:줄 112
+2020-09-14 10:06:04-->  [error]  (page)::FrmSysCodeGrp  (Function)::setDataBind_treeView1  (Detail):: 
+System.ServiceModel.ActionNotSupportedException: EndpointDispatcher에서 ContractFilter가 일치하지 않으므로 수신자 쪽에서 동작 'http://tempuri.org/IWsMainHome/sSiteMenu'이(가) 있는 메시지를 처리할 수 없습니다. 발신자와 수신자 사이에 계약 불일치(발신자와 수신자 사이의 동작 불일치) 또는 바인딩/보안 불일치가 있기 때문일 수 있습니다. 발신자와 수신자의 계약 및 바인딩(메시지, 전송, 없음 등의 보안 요구 사항 포함)이 같은지 확인하십시오.
+
+Server stack trace: 
+   위치: System.ServiceModel.Channels.ServiceChannel.ThrowIfFaultUnderstood(Message reply, MessageFault fault, String action, MessageVersion version, FaultConverter faultConverter)
+   위치: System.ServiceModel.Channels.ServiceChannel.HandleReply(ProxyOperationRuntime operation, ProxyRpc& rpc)
+   위치: System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   위치: System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   위치: System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   위치: System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   위치: System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   위치: EldigmPlusApp.WsMHome.IWsMainHome.sSiteMenu(sSiteMenuRequest request)
+   위치: EldigmPlusApp.WsMHome.WsMainHomeClient.EldigmPlusApp.WsMHome.IWsMainHome.sSiteMenu(sSiteMenuRequest request) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\Connected Services\WsMHome\Reference.cs:줄 527
+   위치: EldigmPlusApp.WsMHome.WsMainHomeClient.sSiteMenu(String pDbNm, String pSiteCd, DataTopMenu[]& reList, String& reMsg) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\Connected Services\WsMHome\Reference.cs:줄 534
+   위치: EldigmPlusApp.SubForm.Sys.SysCode.FrmSysCodeGrp.setDataBind_treeView1() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\SysCode\FrmSysCodeGrp.cs:줄 112

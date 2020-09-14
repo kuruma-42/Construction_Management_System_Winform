@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/EldigmPlusSvc_Memco.WebSvc.MainHome" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/EldigmPlusSvc_Memco.WebSvc.MainHome" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="ArrayOfDataTopMenu">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DataTopMenu" nillable="true" type="tns:DataTopMenu" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDataTopMenu" nillable="true" type="tns:ArrayOfDataTopMenu" />
+  <xs:complexType name="DataTopMenu">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="TOP_MENU_CD" type="xs:int" />
+      <xs:element minOccurs="0" name="TOP_MENU_NM" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DataTopMenu" nillable="true" type="tns:DataTopMenu" />
+  <xs:complexType name="ArrayOfDataSubMenu1">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DataSubMenu1" nillable="true" type="tns:DataSubMenu1" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDataSubMenu1" nillable="true" type="tns:ArrayOfDataSubMenu1" />
+  <xs:complexType name="DataSubMenu1">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="SUB_MENU_CD" type="xs:int" />
+      <xs:element minOccurs="0" name="SUB_MENU_NM" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DataSubMenu1" nillable="true" type="tns:DataSubMenu1" />
+  <xs:complexType name="ArrayOfDataSubMenu2">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DataSubMenu2" nillable="true" type="tns:DataSubMenu2" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDataSubMenu2" nillable="true" type="tns:ArrayOfDataSubMenu2" />
+  <xs:complexType name="DataSubMenu2">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="MENU_CD" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TOP_MENU_CD" type="xs:int" />
+      <xs:element minOccurs="0" name="SUB_MENU_CD" type="xs:int" />
+      <xs:element minOccurs="0" name="MENU_NM" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MEMO" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MENU_PATH" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DataSubMenu2" nillable="true" type="tns:DataSubMenu2" />
+</xs:schema>

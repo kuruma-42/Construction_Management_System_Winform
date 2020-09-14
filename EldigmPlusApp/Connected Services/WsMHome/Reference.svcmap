@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="b7a3014e-7238-43d9-bb74-e0e9d4af209e" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:49501/WebSvc/MainHome/WsMainHome.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="WsMainHome.disco" MetadataType="Disco" ID="0f6d233f-83e6-462f-96d3-701c176921ba" SourceId="1" SourceUrl="http://localhost:49501/WebSvc/MainHome/WsMainHome.svc?disco" />
+    <MetadataFile FileName="WsMainHome.xsd" MetadataType="Schema" ID="8a1570a9-513e-43a1-8846-40dfbee2a9e6" SourceId="1" SourceUrl="http://localhost:49501/WebSvc/MainHome/WsMainHome.svc?xsd=xsd2" />
+    <MetadataFile FileName="WsMainHome1.xsd" MetadataType="Schema" ID="4f92ca73-06e1-4dc5-8571-c7ee691be0f7" SourceId="1" SourceUrl="http://localhost:49501/WebSvc/MainHome/WsMainHome.svc?xsd=xsd0" />
+    <MetadataFile FileName="WsMainHome.wsdl" MetadataType="Wsdl" ID="15b634d3-2b38-44cb-800f-bae2adb2b479" SourceId="1" SourceUrl="http://localhost:49501/WebSvc/MainHome/WsMainHome.svc?wsdl" />
+    <MetadataFile FileName="WsMainHome2.xsd" MetadataType="Schema" ID="55f9551b-6c94-44ab-ab04-157887bfa9df" SourceId="1" SourceUrl="http://localhost:49501/WebSvc/MainHome/WsMainHome.svc?xsd=xsd1" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

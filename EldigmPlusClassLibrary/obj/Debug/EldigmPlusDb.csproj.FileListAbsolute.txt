@@ -1,0 +1,8 @@
+D:\3.DevOps\Eldigm_Plus\EldigmPlusClassLibrary\bin\Debug\EldigmPlusClassLibrary.dll
+D:\3.DevOps\Eldigm_Plus\EldigmPlusClassLibrary\bin\Debug\EldigmPlusClassLibrary.pdb
+D:\3.DevOps\Eldigm_Plus\EldigmPlusClassLibrary\bin\Debug\Framework.dll
+D:\3.DevOps\Eldigm_Plus\EldigmPlusClassLibrary\obj\Debug\EldigmPlusDb.csproj.CoreCompileInputs.cache
+D:\3.DevOps\Eldigm_Plus\EldigmPlusClassLibrary\obj\Debug\EldigmPlusDb.csproj.CopyComplete
+D:\3.DevOps\Eldigm_Plus\EldigmPlusClassLibrary\obj\Debug\EldigmPlusClassLibrary.dll
+D:\3.DevOps\Eldigm_Plus\EldigmPlusClassLibrary\obj\Debug\EldigmPlusClassLibrary.pdb
+D:\3.DevOps\Eldigm_Plus\EldigmPlusClassLibrary\obj\Debug\EldigmPlusDb.csprojAssemblyReference.cache
