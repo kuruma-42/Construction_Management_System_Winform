@@ -25,6 +25,8 @@ namespace EldigmPlusSvc_Memco.WebSvc.MainHome
         string sSiteSubMenu2(string pDbNm, string pSiteCd, string pTopMenuCd, string pSubMenuCd, out List<DataSubMenu2> reList, out string reMsg);
     }
 
+
+
     [DataContract]
     public class DataTopMenu
     {

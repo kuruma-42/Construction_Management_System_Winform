@@ -22,5 +22,35 @@ namespace EldigmPlusApp.Properties {
                 return defaultInstance;
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.WebServiceUrl)]
+        [global::System.Configuration.DefaultSettingValueAttribute("http://localhost:49501/WebSvc/MainHome/WsMainHome.svc")]
+        public string EldigmPlusApp_WsMHome_WsMainHome {
+            get {
+                return ((string)(this["EldigmPlusApp_WsMHome_WsMainHome"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.WebServiceUrl)]
+        [global::System.Configuration.DefaultSettingValueAttribute("http://localhost:49501/WebSvc/Sys/SysCode/WsSysCodeGrpPra.svc")]
+        public string EldigmPlusApp_WsSCodeGrpPra_WsSysCodeGrpPra {
+            get {
+                return ((string)(this["EldigmPlusApp_WsSCodeGrpPra_WsSysCodeGrpPra"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.WebServiceUrl)]
+        [global::System.Configuration.DefaultSettingValueAttribute("http://localhost:49501/WebSvc/Sys/SysCode/WsSysCodeGrp.svc")]
+        public string EldigmPlusApp_WsSCodeGrp_WsSysCodeGrp {
+            get {
+                return ((string)(this["EldigmPlusApp_WsSCodeGrp_WsSysCodeGrp"]));
+            }
+        }
     }
 }

@@ -1,3 +1,6 @@
+D:\3.DevOps\Eldigm_Plus\EldigmPlusSvc_Memco\bin\DbClass\Common\EncDecClass.cs
+D:\3.DevOps\Eldigm_Plus\EldigmPlusSvc_Memco\bin\DbClass\MainHome\DbMainHome.cs
+D:\3.DevOps\Eldigm_Plus\EldigmPlusSvc_Memco\bin\DbClass\Sys\SysCode\DbSysCodeGrp.cs
 D:\3.DevOps\Eldigm_Plus\EldigmPlusSvc_Memco\bin\EldigmPlusSvc_Memco.dll.config
 D:\3.DevOps\Eldigm_Plus\EldigmPlusSvc_Memco\bin\EldigmPlusSvc_Memco.dll
 D:\3.DevOps\Eldigm_Plus\EldigmPlusSvc_Memco\bin\EldigmPlusSvc_Memco.pdb

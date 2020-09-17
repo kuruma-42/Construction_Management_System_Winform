@@ -327,11 +327,11 @@
             this.Controls.Add(this._MainUnpinnedTabAreaBottom);
             this.Controls.Add(this._MainUnpinnedTabAreaLeft);
             this.Controls.Add(this._MainUnpinnedTabAreaRight);
-            this.Controls.Add(this._FrmMainUnpinnedTabAreaRight);
-            this.Controls.Add(this._FrmMainUnpinnedTabAreaLeft);
+            this.Controls.Add(this.windowDockingArea1);
             this.Controls.Add(this._FrmMainUnpinnedTabAreaTop);
             this.Controls.Add(this._FrmMainUnpinnedTabAreaBottom);
-            this.Controls.Add(this.windowDockingArea1);
+            this.Controls.Add(this._FrmMainUnpinnedTabAreaRight);
+            this.Controls.Add(this._FrmMainUnpinnedTabAreaLeft);
             this.Controls.Add(this.menuStripTop);
             this.Controls.Add(this.statusStripBottom);
             this.Name = "FrmMain";

@@ -138,4 +138,7 @@
   <data name="lngRecentlyUsedMenu" xml:space="preserve">
     <value>最近使用项目</value>
   </data>
+  <data name="lngSearch" xml:space="preserve">
+    <value>搜索</value>
+  </data>
 </root>

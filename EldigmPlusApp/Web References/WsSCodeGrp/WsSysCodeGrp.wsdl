@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="WsSysCodeGrp" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:49501/WebSvc/Sys/SysCode/WsSysCodeGrp.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:49501/WebSvc/Sys/SysCode/WsSysCodeGrp.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:49501/WebSvc/Sys/SysCode/WsSysCodeGrp.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/EldigmPlusSvc_Memco.WebSvc.Sys.SysCode" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IWsSysCodeGrp_sSysCodeGrp_InputMessage">
+    <wsdl:part name="parameters" element="tns:sSysCodeGrp" />
+  </wsdl:message>
+  <wsdl:message name="IWsSysCodeGrp_sSysCodeGrp_OutputMessage">
+    <wsdl:part name="parameters" element="tns:sSysCodeGrpResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWsSysCodeGrp_mSysCodeGrp_InputMessage">
+    <wsdl:part name="parameters" element="tns:mSysCodeGrp" />
+  </wsdl:message>
+  <wsdl:message name="IWsSysCodeGrp_mSysCodeGrp_OutputMessage">
+    <wsdl:part name="parameters" element="tns:mSysCodeGrpResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWsSysCodeGrp_sSysCodeGrp_UsingFlag_InputMessage">
+    <wsdl:part name="parameters" element="tns:sSysCodeGrp_UsingFlag" />
+  </wsdl:message>
+  <wsdl:message name="IWsSysCodeGrp_sSysCodeGrp_UsingFlag_OutputMessage">
+    <wsdl:part name="parameters" element="tns:sSysCodeGrp_UsingFlagResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWsSysCodeGrp_sSysCode_InputMessage">
+    <wsdl:part name="parameters" element="tns:sSysCode" />
+  </wsdl:message>
+  <wsdl:message name="IWsSysCodeGrp_sSysCode_OutputMessage">
+    <wsdl:part name="parameters" element="tns:sSysCodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWsSysCodeGrp_mSysCode_InputMessage">
+    <wsdl:part name="parameters" element="tns:mSysCode" />
+  </wsdl:message>
+  <wsdl:message name="IWsSysCodeGrp_mSysCode_OutputMessage">
+    <wsdl:part name="parameters" element="tns:mSysCodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWsSysCodeGrp_exSysCode_InputMessage">
+    <wsdl:part name="parameters" element="tns:exSysCode" />
+  </wsdl:message>
+  <wsdl:message name="IWsSysCodeGrp_exSysCode_OutputMessage">
+    <wsdl:part name="parameters" element="tns:exSysCodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWsSysCodeGrp_aSysCode_InputMessage">
+    <wsdl:part name="parameters" element="tns:aSysCode" />
+  </wsdl:message>
+  <wsdl:message name="IWsSysCodeGrp_aSysCode_OutputMessage">
+    <wsdl:part name="parameters" element="tns:aSysCodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWsSysCodeGrp_fSysCodeSearch_InputMessage">
+    <wsdl:part name="parameters" element="tns:fSysCodeSearch" />
+  </wsdl:message>
+  <wsdl:message name="IWsSysCodeGrp_fSysCodeSearch_OutputMessage">
+    <wsdl:part name="parameters" element="tns:fSysCodeSearchResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IWsSysCodeGrp">
+    <wsdl:operation name="sSysCodeGrp">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWsSysCodeGrp/sSysCodeGrp" message="tns:IWsSysCodeGrp_sSysCodeGrp_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWsSysCodeGrp/sSysCodeGrpResponse" message="tns:IWsSysCodeGrp_sSysCodeGrp_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="mSysCodeGrp">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWsSysCodeGrp/mSysCodeGrp" message="tns:IWsSysCodeGrp_mSysCodeGrp_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWsSysCodeGrp/mSysCodeGrpResponse" message="tns:IWsSysCodeGrp_mSysCodeGrp_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="sSysCodeGrp_UsingFlag">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWsSysCodeGrp/sSysCodeGrp_UsingFlag" message="tns:IWsSysCodeGrp_sSysCodeGrp_UsingFlag_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWsSysCodeGrp/sSysCodeGrp_UsingFlagResponse" message="tns:IWsSysCodeGrp_sSysCodeGrp_UsingFlag_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="sSysCode">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWsSysCodeGrp/sSysCode" message="tns:IWsSysCodeGrp_sSysCode_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWsSysCodeGrp/sSysCodeResponse" message="tns:IWsSysCodeGrp_sSysCode_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="mSysCode">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWsSysCodeGrp/mSysCode" message="tns:IWsSysCodeGrp_mSysCode_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWsSysCodeGrp/mSysCodeResponse" message="tns:IWsSysCodeGrp_mSysCode_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="exSysCode">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWsSysCodeGrp/exSysCode" message="tns:IWsSysCodeGrp_exSysCode_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWsSysCodeGrp/exSysCodeResponse" message="tns:IWsSysCodeGrp_exSysCode_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="aSysCode">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWsSysCodeGrp/aSysCode" message="tns:IWsSysCodeGrp_aSysCode_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWsSysCodeGrp/aSysCodeResponse" message="tns:IWsSysCodeGrp_aSysCode_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="fSysCodeSearch">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWsSysCodeGrp/fSysCodeSearch" message="tns:IWsSysCodeGrp_fSysCodeSearch_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWsSysCodeGrp/fSysCodeSearchResponse" message="tns:IWsSysCodeGrp_fSysCodeSearch_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IWsSysCodeGrp" type="tns:IWsSysCodeGrp">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="sSysCodeGrp">
+      <soap:operation soapAction="http://tempuri.org/IWsSysCodeGrp/sSysCodeGrp" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mSysCodeGrp">
+      <soap:operation soapAction="http://tempuri.org/IWsSysCodeGrp/mSysCodeGrp" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="sSysCodeGrp_UsingFlag">
+      <soap:operation soapAction="http://tempuri.org/IWsSysCodeGrp/sSysCodeGrp_UsingFlag" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="sSysCode">
+      <soap:operation soapAction="http://tempuri.org/IWsSysCodeGrp/sSysCode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mSysCode">
+      <soap:operation soapAction="http://tempuri.org/IWsSysCodeGrp/mSysCode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="exSysCode">
+      <soap:operation soapAction="http://tempuri.org/IWsSysCodeGrp/exSysCode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="aSysCode">
+      <soap:operation soapAction="http://tempuri.org/IWsSysCodeGrp/aSysCode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="fSysCodeSearch">
+      <soap:operation soapAction="http://tempuri.org/IWsSysCodeGrp/fSysCodeSearch" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="WsSysCodeGrp">
+    <wsdl:port name="BasicHttpBinding_IWsSysCodeGrp" binding="tns:BasicHttpBinding_IWsSysCodeGrp">
+      <soap:address location="http://localhost:49501/WebSvc/Sys/SysCode/WsSysCodeGrp.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

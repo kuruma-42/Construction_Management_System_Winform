@@ -49,9 +49,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DbClass\Common\EncDecClass.cs" />
-    <Compile Include="DbClass\MainHome\DbMainHome.cs" />
-    <Compile Include="DbClass\Sys\SysCode\DbSysSysCode.cs" />
+    <Compile Include="DbClass\Common\EncDecClass.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="DbClass\MainHome\DbMainHome.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="DbClass\Sys\SysCode\DbPractice.cs" />
+    <Compile Include="DbClass\Sys\SysCode\DbSysCodeGrp.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />

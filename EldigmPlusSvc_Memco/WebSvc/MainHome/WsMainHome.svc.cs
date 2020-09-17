@@ -17,14 +17,14 @@ namespace EldigmPlusSvc_Memco.WebSvc.MainHome
             string reCode = "N";
 
             string reVal = "";
-            BizMainHome bizSys = null;
+            BizMainHome bizHome = null;
             try
             {
-                bizSys = new BizMainHome();
+                bizHome = new BizMainHome();
 
                 try
                 {
-                    reVal = bizSys.sDbNm(pMemcoCd);
+                    reVal = bizHome.sDbNm(pMemcoCd);
 
                     reMsg = "[검색 성공]";
                     reCode = "Y";
@@ -51,14 +51,14 @@ namespace EldigmPlusSvc_Memco.WebSvc.MainHome
             string reCode = "N";
 
             DataSet ds = null;
-            BizMainHome bizSys = null;
+            BizMainHome bizHome = null;
             try
             {
-                bizSys = new BizMainHome();
+                bizHome = new BizMainHome();
 
                 try
                 {
-                    ds = bizSys.sSiteMenu(pDbNm, pSiteCd);
+                    ds = bizHome.sSiteMenu(pDbNm, pSiteCd);
 
                     reMsg = "[검색 성공]";
                     reCode = "Y";
@@ -97,14 +97,14 @@ namespace EldigmPlusSvc_Memco.WebSvc.MainHome
             string reCode = "N";
 
             DataSet ds = null;
-            BizMainHome bizSys = null;
+            BizMainHome bizHome = null;
             try
             {
-                bizSys = new BizMainHome();
+                bizHome = new BizMainHome();
 
                 try
                 {
-                    ds = bizSys.sSiteSubMenu1(pDbNm, pSiteCd, pTopMenuCd);
+                    ds = bizHome.sSiteSubMenu1(pDbNm, pSiteCd, pTopMenuCd);
 
                     reMsg = "[검색 성공]";
                     reCode = "Y";
@@ -143,14 +143,14 @@ namespace EldigmPlusSvc_Memco.WebSvc.MainHome
             string reCode = "N";
 
             DataSet ds = null;
-            BizMainHome bizSys = null;
+            BizMainHome bizHome = null;
             try
             {
-                bizSys = new BizMainHome();
+                bizHome = new BizMainHome();
 
                 try
                 {
-                    ds = bizSys.sSiteSubMenu2(pDbNm, pSiteCd, pTopMenuCd, pSubMenuCd);
+                    ds = bizHome.sSiteSubMenu2(pDbNm, pSiteCd, pTopMenuCd, pSubMenuCd);
 
                     reMsg = "[검색 성공]";
                     reCode = "Y";

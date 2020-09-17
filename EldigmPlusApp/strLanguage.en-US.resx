@@ -138,4 +138,7 @@
   <data name="lngRecentlyUsedMenu" xml:space="preserve">
     <value>Recently used menu</value>
   </data>
+  <data name="lngSearch" xml:space="preserve">
+    <value>Search</value>
+  </data>
 </root>

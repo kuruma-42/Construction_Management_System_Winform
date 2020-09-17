@@ -1,3 +1,6 @@
+D:\3.DevOps\Eldigm_Plus\EldigmPlusClassLibrary\bin\Debug\DbClass\Common\EncDecClass.cs
+D:\3.DevOps\Eldigm_Plus\EldigmPlusClassLibrary\bin\Debug\DbClass\MainHome\DbMainHome.cs
+D:\3.DevOps\Eldigm_Plus\EldigmPlusClassLibrary\bin\Debug\DbClass\Sys\SysCode\DbSysCodeGrp.cs
 D:\3.DevOps\Eldigm_Plus\EldigmPlusClassLibrary\bin\Debug\EldigmPlusClassLibrary.dll
 D:\3.DevOps\Eldigm_Plus\EldigmPlusClassLibrary\bin\Debug\EldigmPlusClassLibrary.pdb
 D:\3.DevOps\Eldigm_Plus\EldigmPlusClassLibrary\bin\Debug\Framework.dll

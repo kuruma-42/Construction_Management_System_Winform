@@ -2,16 +2,10 @@
 using Framework.IO;
 using Framework.Log;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
 using System.Globalization;
-using System.Linq;
 using System.Resources;
-using System.Text;
 using System.Threading;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace EldigmPlusApp.SubForm.MainHome
@@ -21,11 +15,11 @@ namespace EldigmPlusApp.SubForm.MainHome
         LogUtil logs = null;
         ResourceManager lngRM = null;
 
-        string appPath = "";
+        string _appPath = "";
 
-        string firstMenuCd;
-        string firstMenuTag;
-        string firstMenuNm;
+        string _firstMenuCd;
+        string _firstMenuTag;
+        string _firstMenuNm;
 
         public FrmMain()
         {
@@ -33,7 +27,7 @@ namespace EldigmPlusApp.SubForm.MainHome
 
             try
             {
-                appPath = Application.StartupPath + "\\";
+                _appPath = Application.StartupPath + "\\";
                 GetIni();
 
                 // Sets the UI culture
@@ -63,7 +57,7 @@ namespace EldigmPlusApp.SubForm.MainHome
             }
             catch (Exception ex)
             {
-                logs.SaveLog("[error]  (page)::FrmMain.cs  (Function)::FrmMain  (Detail)::" + "\r\n" + ex.ToString());
+                logs.SaveLog("[error]  (page)::FrmMain.cs  (Function)::FrmMain  (Detail)::" + "\r\n" + ex.ToString(), "Error");
             }
         }
 
@@ -79,19 +73,21 @@ namespace EldigmPlusApp.SubForm.MainHome
         {
             try
             {
-                string filePath = appPath + "Config\\";
+                string filePath = _appPath + "Config\\";
 
                 IniFile ini = new IniFile(filePath + "EldigmPlusApp.ini");
 
-                AppInfo.SsDbNm = "";
+                AppInfo.SsServer = ini.IniReadValue("WEBSERVICE", "Server");
 
                 AppInfo.SsLanguage = ini.IniReadValue("INFO", "Language");
                 AppInfo.SsMemcoCd = ini.IniReadValue("INFO", "MemcoCd");
                 AppInfo.SsSiteCd = ini.IniReadValue("INFO", "SiteCd");
+
+                AppInfo.SsDbNm = "";
             }
             catch (Exception ex)
             {
-                logs.SaveLog("[error]  (page)::FrmMain.cs  (Function)::GetIni  (Detail)::" + "\r\n" + ex.ToString());
+                logs.SaveLog("[error]  (page)::FrmMain.cs  (Function)::GetIni  (Detail)::" + "\r\n" + ex.ToString(), "Error");
             }
         }
 
@@ -104,7 +100,7 @@ namespace EldigmPlusApp.SubForm.MainHome
             }
             catch (Exception ex)
             {
-                logs.SaveLog("[error]  (page)::FrmMain.cs  (Function)::FrmMain_Load  (Detail)::" + "\r\n" + ex.ToString());
+                logs.SaveLog("[error]  (page)::FrmMain.cs  (Function)::FrmMain_Load  (Detail)::" + "\r\n" + ex.ToString(), "Error");
             }
         }
 
@@ -113,22 +109,54 @@ namespace EldigmPlusApp.SubForm.MainHome
             this.Close();
         }
 
+        //private void GetDbNm()
+        //{
+        //    WsMHome.WsMainHomeClient wsMHome = null;
+            
+        //    string reCode = "";
+        //    string reMsg = "";
+        //    string reData = "";
+        //    try
+        //    {
+        //        wsMHome = new WsMHome.WsMainHomeClient();
+        //        string wsUrl = "http://localhost:49501/WebSvc/MainHome/WsMainHome.svc";
+        //        wsMHome.Endpoint.Address = new System.ServiceModel.EndpointAddress(wsUrl);
+        //        wsMHome.Open();
+
+        //        reCode = wsMHome.sDbNm(AppInfo.SsMemcoCd, out reData, out reMsg);
+                
+        //        if (reCode == "Y")
+        //        {
+        //            if (!string.IsNullOrEmpty(reData))
+        //                AppInfo.SsDbNm = reData;
+        //        }
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        logs.SaveLog("[error]  (page)::FrmMain  (Function)::GetDbNm  (Detail)::reMsg=[" + reMsg + "]");
+        //        logs.SaveLog("[error]  (page)::FrmMain  (Function)::GetDbNm  (Detail)::" + "\r\n" + ex.ToString());
+        //    }
+        //    finally
+        //    {
+        //        if (wsMHome != null)
+        //            wsMHome.Close();
+        //    }
+        //}
+
         private void GetDbNm()
         {
-            WsMHome.WsMainHomeClient wsMHome = null;
-            
+            WsMHome.WsMainHome wSvc = null;
             string reCode = "";
             string reMsg = "";
             string reData = "";
             try
             {
-                wsMHome = new WsMHome.WsMainHomeClient();
-                string wsUrl = "http://localhost:49501/WebSvc/MainHome/WsMainHome.svc";
-                wsMHome.Endpoint.Address = new System.ServiceModel.EndpointAddress(wsUrl);
-                wsMHome.Open();
+                wSvc = new WsMHome.WsMainHome();
+                wSvc.Url = "http://" + AppInfo.SsServer + "/WebSvc/MainHome/WsMainHome.svc";
+                wSvc.Timeout = 1000;
 
-                reCode = wsMHome.sDbNm(AppInfo.SsMemcoCd, out reData, out reMsg);
-                
+                reCode = wSvc.sDbNm(AppInfo.SsMemcoCd, out reData, out reMsg);
+
                 if (reCode == "Y")
                 {
                     if (!string.IsNullOrEmpty(reData))
@@ -137,31 +165,30 @@ namespace EldigmPlusApp.SubForm.MainHome
             }
             catch (Exception ex)
             {
-                logs.SaveLog("[error]  (page)::FrmMain  (Function)::GetDbNm  (Detail)::reMsg=[" + reMsg + "]");
-                logs.SaveLog("[error]  (page)::FrmMain  (Function)::GetDbNm  (Detail)::" + "\r\n" + ex.ToString());
+                logs.SaveLog("[error]  (page)::FrmMain.cs  (Function)::GetDbNm  (Detail)::reCode=[" + reCode + "], reMsg=[" + reMsg + "]", "Error");
+                logs.SaveLog("[error]  (page)::FrmMain.cs  (Function)::GetDbNm  (Detail)::" + "\r\n" + ex.ToString(), "Error");
             }
             finally
             {
-                if (wsMHome != null)
-                    wsMHome.Close();
+                if (wSvc != null)
+                    wSvc.Dispose();
             }
         }
 
         // ** 상단 메뉴 **
         private void SetTopMenu()
         {
-            WsMHome.WsMainHomeClient wsMHome = null;
+            WsMHome.WsMainHome wSvc = null;
             string reCode = "";
             string reMsg = "";
             WsMHome.DataTopMenu[] getData = null;
             try
             {
-                wsMHome = new WsMHome.WsMainHomeClient();
-                string wsUrl = "http://localhost:49501/WebSvc/MainHome/WsMainHome.svc";
-                wsMHome.Endpoint.Address = new System.ServiceModel.EndpointAddress(wsUrl);
-                wsMHome.Open();
+                wSvc = new WsMHome.WsMainHome();
+                wSvc.Url = "http://" + AppInfo.SsServer + "/WebSvc/MainHome/WsMainHome.svc";
+                wSvc.Timeout = 1000;
 
-                reCode = wsMHome.sSiteMenu(AppInfo.SsDbNm, AppInfo.SsSiteCd, out getData, out reMsg);
+                reCode = wSvc.sSiteMenu(AppInfo.SsDbNm, AppInfo.SsSiteCd, out getData, out reMsg);
 
                 ToolStripMenuItem TopMenu;
                 if (reCode == "Y")
@@ -191,13 +218,13 @@ namespace EldigmPlusApp.SubForm.MainHome
             }
             catch (Exception ex)
             {
-                logs.SaveLog("[error]  (page)::FrmMain  (Function)::SetTopMenu  (Detail)::reMsg=[" + reMsg + "]");
-                logs.SaveLog("[error]  (page)::FrmMain  (Function)::SetTopMenu  (Detail)::" + "\r\n" + ex.ToString());
+                logs.SaveLog("[error]  (page)::FrmMain.cs  (Function)::SetTopMenu  (Detail)::reMsg=[" + reMsg + "]", "Error");
+                logs.SaveLog("[error]  (page)::FrmMain.cs  (Function)::SetTopMenu  (Detail)::" + "\r\n" + ex.ToString(), "Error");
             }
             finally
             {
-                if (wsMHome != null)
-                    wsMHome.Close();
+                if (wSvc != null)
+                    wSvc.Dispose();
             }
         }
 
@@ -214,26 +241,30 @@ namespace EldigmPlusApp.SubForm.MainHome
             }
             catch (Exception ex)
             {
-                logs.SaveLog("[error]  (page)::FrmMain  (Function)::topMenu_click  (Detail)::" + "\r\n" + ex.ToString());
+                logs.SaveLog("[error]  (page)::FrmMain.cs  (Function)::topMenu_click  (Detail)::" + "\r\n" + ex.ToString(), "Error");
             }
         }
 
         // ** 좌측 메뉴 **
         private void SetLeftMenu(string pTopMenuCd)
         {
-            WsMHome.WsMainHomeClient wsMHome = null;
-            string reCode = "";
-            string reMsg = "";
+            WsMHome.WsMainHome wSvc = null;
+            string reCode1 = "";
+            string reMsg1 = "";
             WsMHome.DataSubMenu1[] getData1 = null;
+
+            string reCode2 = "";
+            string reMsg2 = "";
+            WsMHome.DataSubMenu2[] getData2 = null;
             try
             {
-                wsMHome = new WsMHome.WsMainHomeClient();
-                string wsUrl = "http://localhost:49501/WebSvc/MainHome/WsMainHome.svc";
-                wsMHome.Endpoint.Address = new System.ServiceModel.EndpointAddress(wsUrl);
+                wSvc = new WsMHome.WsMainHome();
+                wSvc.Url = "http://" + AppInfo.SsServer + "/WebSvc/MainHome/WsMainHome.svc";
+                wSvc.Timeout = 1000;
 
-                reCode = wsMHome.sSiteSubMenu1(AppInfo.SsDbNm, AppInfo.SsSiteCd, pTopMenuCd, out getData1, out reMsg);
+                reCode1 = wSvc.sSiteSubMenu1(AppInfo.SsDbNm, AppInfo.SsSiteCd, pTopMenuCd, out getData1, out reMsg1);
 
-                if (reCode == "Y")
+                if (reCode1 == "Y")
                 {
                     if (getData1 != null && getData1.Length > 0)
                     {
@@ -252,11 +283,9 @@ namespace EldigmPlusApp.SubForm.MainHome
 
 
 
-                            WsMHome.DataSubMenu2[] getData2 = null;
+                            reCode2 = wSvc.sSiteSubMenu2(AppInfo.SsDbNm, AppInfo.SsSiteCd, pTopMenuCd, subMenuCd, out getData2, out reMsg2);
 
-                            reCode = wsMHome.sSiteSubMenu2(AppInfo.SsDbNm, AppInfo.SsSiteCd, pTopMenuCd, subMenuCd, out getData2, out reMsg);
-
-                            if (reCode == "Y")
+                            if (reCode2 == "Y")
                             {
                                 if (getData2 != null && getData2.Length > 0)
                                 {
@@ -280,11 +309,11 @@ namespace EldigmPlusApp.SubForm.MainHome
                                         // ** 로딩 후 좌측 울트라 메뉴 첫번째 페이지 열기 **
                                         if (i == 0 && k == 0)
                                         {
-                                            firstMenuCd = menuCd;
-                                            firstMenuTag = menuTag;
-                                            firstMenuNm = menuNm;
+                                            _firstMenuCd = menuCd;
+                                            _firstMenuTag = menuTag;
+                                            _firstMenuNm = menuNm;
 
-                                            StartFirstMenuForm(firstMenuCd, firstMenuTag, firstMenuNm);
+                                            StartFirstMenuForm(_firstMenuCd, _firstMenuTag, _firstMenuNm);
                                         }
                                     }
                                 }
@@ -295,14 +324,14 @@ namespace EldigmPlusApp.SubForm.MainHome
             }
             catch (Exception ex)
             {
-                logs.SaveLog("[error]  (page)::FrmMain  (Function)::SetLeftMenu  (Detail)::pTopMenuCd=[" + pTopMenuCd + "]");
-                logs.SaveLog("[error]  (page)::FrmMain  (Function)::SetLeftMenu  (Detail)::reMsg1=[" + reMsg + "]");
-                logs.SaveLog("[error]  (page)::FrmMain  (Function)::SetLeftMenu  (Detail)::" + "\r\n" + ex.ToString());
+                logs.SaveLog("[error]  (page)::FrmMain.cs  (Function)::SetLeftMenu  (Detail)::pTopMenuCd=[" + pTopMenuCd + "]", "Error");
+                logs.SaveLog("[error]  (page)::FrmMain.cs  (Function)::SetLeftMenu  (Detail)::reMsg1=[" + reMsg1 + "], reMsg2=[" + reMsg2 + "]", "Error");
+                logs.SaveLog("[error]  (page)::FrmMain.cs  (Function)::SetLeftMenu  (Detail)::" + "\r\n" + ex.ToString(), "Error");
             }
             finally
             {
-                if (wsMHome != null)
-                    wsMHome.Close();
+                if (wSvc != null)
+                    wSvc.Dispose();
             }
         }
 
@@ -340,8 +369,8 @@ namespace EldigmPlusApp.SubForm.MainHome
             }
             catch (Exception ex)
             {
-                logs.SaveLog("[error]  (page)::FrmMain  (Function)::StartFirstMenuForm  (Detail)::pMenuCd=[" + pMenuCd + "], pMenuTag=[" + pMenuTag + "], pFrmText=[" + pFrmText + "]");
-                logs.SaveLog("[error]  (page)::FrmMain  (Function)::StartFirstMenuForm  (Detail)::" + "\r\n" + ex.ToString());
+                logs.SaveLog("[error]  (page)::FrmMain.cs  (Function)::StartFirstMenuForm  (Detail)::pMenuCd=[" + pMenuCd + "], pMenuTag=[" + pMenuTag + "], pFrmText=[" + pFrmText + "]", "Error");
+                logs.SaveLog("[error]  (page)::FrmMain.cs  (Function)::StartFirstMenuForm  (Detail)::" + "\r\n" + ex.ToString(), "Error");
             }
         }
 
@@ -381,7 +410,7 @@ namespace EldigmPlusApp.SubForm.MainHome
             }
             catch (Exception ex)
             {
-                logs.SaveLog("[error]  (page)::FrmMain  (Function)::ultraExplorerBarLeft_ItemClick  (Detail)::" + "\r\n" + ex.ToString());
+                logs.SaveLog("[error]  (page)::FrmMain.cs  (Function)::ultraExplorerBarLeft_ItemClick  (Detail)::" + "\r\n" + ex.ToString(), "Error");
             }
         }
 

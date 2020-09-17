@@ -1,0 +1,1325 @@
+
+2020-09-14 16:57:42-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::pScodeGrp=[]
+2020-09-14 16:57:42-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::reMsg=[[검색 성공]]
+2020-09-14 16:57:42-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail):: 
+System.ArgumentException: dgv1_SCODE_GRP 열을 찾을 수 없습니다.
+매개 변수 이름: columnName
+   위치: System.Windows.Forms.DataGridViewCellCollection.get_Item(String columnName)
+   위치: EldigmPlusApp.SubForm.Sys.SysCode.Form1.setDataBind_grideView1(String pScodeGrp) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\SysCode\Form1.cs:줄 211
+2020-09-14 17:08:43-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::pScodeGrp=[]
+2020-09-14 17:08:43-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::reMsg=[[검색 성공]]
+2020-09-14 17:08:43-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail):: 
+System.ArgumentException: dgv1_SCODE_GRP 열을 찾을 수 없습니다.
+매개 변수 이름: columnName
+   위치: System.Windows.Forms.DataGridViewCellCollection.get_Item(String columnName)
+   위치: EldigmPlusApp.SubForm.Sys.SysCode.Form1.setDataBind_grideView1(String pScodeGrp) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\SysCode\Form1.cs:줄 211
+2020-09-14 17:08:45-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::pScodeGrp=[AlarmTime]
+2020-09-14 17:08:45-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::reMsg=[[검색 성공]]
+2020-09-14 17:08:45-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail):: 
+System.ArgumentException: dgv1_SCODE_GRP 열을 찾을 수 없습니다.
+매개 변수 이름: columnName
+   위치: System.Windows.Forms.DataGridViewCellCollection.get_Item(String columnName)
+   위치: EldigmPlusApp.SubForm.Sys.SysCode.Form1.setDataBind_grideView1(String pScodeGrp) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\SysCode\Form1.cs:줄 211
+2020-09-14 17:08:45-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::pScodeGrp=[AgreeUInfoRequired]
+2020-09-14 17:08:45-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::reMsg=[[검색 성공]]
+2020-09-14 17:08:45-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail):: 
+System.ArgumentException: dgv1_SCODE_GRP 열을 찾을 수 없습니다.
+매개 변수 이름: columnName
+   위치: System.Windows.Forms.DataGridViewCellCollection.get_Item(String columnName)
+   위치: EldigmPlusApp.SubForm.Sys.SysCode.Form1.setDataBind_grideView1(String pScodeGrp) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\SysCode\Form1.cs:줄 211
+2020-09-14 17:08:46-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::pScodeGrp=[CoType]
+2020-09-14 17:08:46-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::reMsg=[[검색 성공]]
+2020-09-14 17:08:46-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail):: 
+System.ArgumentException: dgv1_SCODE_GRP 열을 찾을 수 없습니다.
+매개 변수 이름: columnName
+   위치: System.Windows.Forms.DataGridViewCellCollection.get_Item(String columnName)
+   위치: EldigmPlusApp.SubForm.Sys.SysCode.Form1.setDataBind_grideView1(String pScodeGrp) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\SysCode\Form1.cs:줄 211
+2020-09-14 17:08:46-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::pScodeGrp=[PushType]
+2020-09-14 17:08:46-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::reMsg=[[검색 성공]]
+2020-09-14 17:08:46-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail):: 
+System.ArgumentException: dgv1_SCODE_GRP 열을 찾을 수 없습니다.
+매개 변수 이름: columnName
+   위치: System.Windows.Forms.DataGridViewCellCollection.get_Item(String columnName)
+   위치: EldigmPlusApp.SubForm.Sys.SysCode.Form1.setDataBind_grideView1(String pScodeGrp) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\SysCode\Form1.cs:줄 211
+2020-09-14 17:08:47-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::pScodeGrp=[]
+2020-09-14 17:08:47-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::reMsg=[[검색 성공]]
+2020-09-14 17:08:47-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail):: 
+System.ArgumentException: dgv1_SCODE_GRP 열을 찾을 수 없습니다.
+매개 변수 이름: columnName
+   위치: System.Windows.Forms.DataGridViewCellCollection.get_Item(String columnName)
+   위치: EldigmPlusApp.SubForm.Sys.SysCode.Form1.setDataBind_grideView1(String pScodeGrp) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\SysCode\Form1.cs:줄 211
+2020-09-14 17:08:49-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::pScodeGrp=[]
+2020-09-14 17:08:49-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::reMsg=[[검색 성공]]
+2020-09-14 17:08:49-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail):: 
+System.ArgumentException: dgv1_SCODE_GRP 열을 찾을 수 없습니다.
+매개 변수 이름: columnName
+   위치: System.Windows.Forms.DataGridViewCellCollection.get_Item(String columnName)
+   위치: EldigmPlusApp.SubForm.Sys.SysCode.Form1.setDataBind_grideView1(String pScodeGrp) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\SysCode\Form1.cs:줄 211
+2020-09-14 17:08:50-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::pScodeGrp=[]
+2020-09-14 17:08:50-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::reMsg=[[검색 성공]]
+2020-09-14 17:08:50-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail):: 
+System.ArgumentException: dgv1_SCODE_GRP 열을 찾을 수 없습니다.
+매개 변수 이름: columnName
+   위치: System.Windows.Forms.DataGridViewCellCollection.get_Item(String columnName)
+   위치: EldigmPlusApp.SubForm.Sys.SysCode.Form1.setDataBind_grideView1(String pScodeGrp) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\SysCode\Form1.cs:줄 211
+2020-09-14 17:08:55-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::pScodeGrp=[]
+2020-09-14 17:08:55-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::reMsg=[[검색 성공]]
+2020-09-14 17:08:55-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail):: 
+System.ArgumentException: dgv1_SCODE_GRP 열을 찾을 수 없습니다.
+매개 변수 이름: columnName
+   위치: System.Windows.Forms.DataGridViewCellCollection.get_Item(String columnName)
+   위치: EldigmPlusApp.SubForm.Sys.SysCode.Form1.setDataBind_grideView1(String pScodeGrp) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\SysCode\Form1.cs:줄 211
+2020-09-14 17:08:56-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::pScodeGrp=[]
+2020-09-14 17:08:56-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::reMsg=[[검색 성공]]
+2020-09-14 17:08:56-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail):: 
+System.ArgumentException: dgv1_SCODE_GRP 열을 찾을 수 없습니다.
+매개 변수 이름: columnName
+   위치: System.Windows.Forms.DataGridViewCellCollection.get_Item(String columnName)
+   위치: EldigmPlusApp.SubForm.Sys.SysCode.Form1.setDataBind_grideView1(String pScodeGrp) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\SysCode\Form1.cs:줄 211
+2020-09-14 17:08:59-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::pScodeGrp=[]
+2020-09-14 17:08:59-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::reMsg=[[검색 성공]]
+2020-09-14 17:08:59-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail):: 
+System.ArgumentException: dgv1_SCODE_GRP 열을 찾을 수 없습니다.
+매개 변수 이름: columnName
+   위치: System.Windows.Forms.DataGridViewCellCollection.get_Item(String columnName)
+   위치: EldigmPlusApp.SubForm.Sys.SysCode.Form1.setDataBind_grideView1(String pScodeGrp) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\SysCode\Form1.cs:줄 211
+2020-09-14 17:09:42-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::pScodeGrp=[]
+2020-09-14 17:09:42-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::reMsg=[[검색 성공]]
+2020-09-14 17:09:42-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail):: 
+System.ArgumentException: dgv1_SCODE_GRP 열을 찾을 수 없습니다.
+매개 변수 이름: columnName
+   위치: System.Windows.Forms.DataGridViewCellCollection.get_Item(String columnName)
+   위치: EldigmPlusApp.SubForm.Sys.SysCode.Form1.setDataBind_grideView1(String pScodeGrp) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\SysCode\Form1.cs:줄 211
+2020-09-14 17:09:42-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::pScodeGrp=[AlarmTime]
+2020-09-14 17:09:42-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::reMsg=[[검색 성공]]
+2020-09-14 17:09:42-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail):: 
+System.ArgumentException: dgv1_SCODE_GRP 열을 찾을 수 없습니다.
+매개 변수 이름: columnName
+   위치: System.Windows.Forms.DataGridViewCellCollection.get_Item(String columnName)
+   위치: EldigmPlusApp.SubForm.Sys.SysCode.Form1.setDataBind_grideView1(String pScodeGrp) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\SysCode\Form1.cs:줄 211
+2020-09-14 17:09:43-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::pScodeGrp=[LoginDvcType]
+2020-09-14 17:09:43-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::reMsg=[[검색 성공]]
+2020-09-14 17:09:43-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail):: 
+System.ArgumentException: dgv1_SCODE_GRP 열을 찾을 수 없습니다.
+매개 변수 이름: columnName
+   위치: System.Windows.Forms.DataGridViewCellCollection.get_Item(String columnName)
+   위치: EldigmPlusApp.SubForm.Sys.SysCode.Form1.setDataBind_grideView1(String pScodeGrp) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\SysCode\Form1.cs:줄 211
+2020-09-14 17:09:44-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::pScodeGrp=[AgreeUInfoRequired]
+2020-09-14 17:09:44-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::reMsg=[[검색 성공]]
+2020-09-14 17:09:44-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail):: 
+System.ArgumentException: dgv1_SCODE_GRP 열을 찾을 수 없습니다.
+매개 변수 이름: columnName
+   위치: System.Windows.Forms.DataGridViewCellCollection.get_Item(String columnName)
+   위치: EldigmPlusApp.SubForm.Sys.SysCode.Form1.setDataBind_grideView1(String pScodeGrp) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\SysCode\Form1.cs:줄 211
+2020-09-14 17:09:44-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::pScodeGrp=[AgreeUInfoCheck]
+2020-09-14 17:09:44-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::reMsg=[[검색 성공]]
+2020-09-14 17:09:44-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail):: 
+System.ArgumentException: dgv1_SCODE_GRP 열을 찾을 수 없습니다.
+매개 변수 이름: columnName
+   위치: System.Windows.Forms.DataGridViewCellCollection.get_Item(String columnName)
+   위치: EldigmPlusApp.SubForm.Sys.SysCode.Form1.setDataBind_grideView1(String pScodeGrp) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\SysCode\Form1.cs:줄 211
+2020-09-14 17:09:44-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::pScodeGrp=[CoType]
+2020-09-14 17:09:44-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::reMsg=[[검색 성공]]
+2020-09-14 17:09:44-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail):: 
+System.ArgumentException: dgv1_SCODE_GRP 열을 찾을 수 없습니다.
+매개 변수 이름: columnName
+   위치: System.Windows.Forms.DataGridViewCellCollection.get_Item(String columnName)
+   위치: EldigmPlusApp.SubForm.Sys.SysCode.Form1.setDataBind_grideView1(String pScodeGrp) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\SysCode\Form1.cs:줄 211
+2020-09-14 17:09:45-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::pScodeGrp=[PushType]
+2020-09-14 17:09:45-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::reMsg=[[검색 성공]]
+2020-09-14 17:09:45-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail):: 
+System.ArgumentException: dgv1_SCODE_GRP 열을 찾을 수 없습니다.
+매개 변수 이름: columnName
+   위치: System.Windows.Forms.DataGridViewCellCollection.get_Item(String columnName)
+   위치: EldigmPlusApp.SubForm.Sys.SysCode.Form1.setDataBind_grideView1(String pScodeGrp) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\SysCode\Form1.cs:줄 211
+2020-09-14 17:14:29-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::pScodeGrp=[]
+2020-09-14 17:14:29-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::reMsg=[[검색 성공]]
+2020-09-14 17:14:29-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail):: 
+System.ArgumentException: dgv1_SCODE_GRP 열을 찾을 수 없습니다.
+매개 변수 이름: columnName
+   위치: System.Windows.Forms.DataGridViewCellCollection.get_Item(String columnName)
+   위치: EldigmPlusApp.SubForm.Sys.SysCode.Form1.setDataBind_grideView1(String pScodeGrp) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\SysCode\Form1.cs:줄 211
+2020-09-14 17:15:11-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::pScodeGrp=[LabInfoType]
+2020-09-14 17:15:11-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::reMsg=[[검색 성공]]
+2020-09-14 17:15:11-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail):: 
+System.ArgumentException: dgv1_SCODE_GRP 열을 찾을 수 없습니다.
+매개 변수 이름: columnName
+   위치: System.Windows.Forms.DataGridViewCellCollection.get_Item(String columnName)
+   위치: EldigmPlusApp.SubForm.Sys.SysCode.Form1.setDataBind_grideView1(String pScodeGrp) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\SysCode\Form1.cs:줄 211
+2020-09-14 17:15:11-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::pScodeGrp=[LoginDvcType]
+2020-09-14 17:15:11-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::reMsg=[[검색 성공]]
+2020-09-14 17:15:11-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail):: 
+System.ArgumentException: dgv1_SCODE_GRP 열을 찾을 수 없습니다.
+매개 변수 이름: columnName
+   위치: System.Windows.Forms.DataGridViewCellCollection.get_Item(String columnName)
+   위치: EldigmPlusApp.SubForm.Sys.SysCode.Form1.setDataBind_grideView1(String pScodeGrp) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\SysCode\Form1.cs:줄 211
+2020-09-14 17:15:59-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::pScodeGrp=[AgreeUInfoRequired]
+2020-09-14 17:15:59-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::reMsg=[[검색 성공]]
+2020-09-14 17:15:59-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail):: 
+System.ArgumentException: dgv1_SCODE_GRP 열을 찾을 수 없습니다.
+매개 변수 이름: columnName
+   위치: System.Windows.Forms.DataGridViewCellCollection.get_Item(String columnName)
+   위치: EldigmPlusApp.SubForm.Sys.SysCode.Form1.setDataBind_grideView1(String pScodeGrp) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\SysCode\Form1.cs:줄 211
+2020-09-15 11:40:43-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::treeView1_AfterSelect  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Sys.SysCode.FrmSysCode.treeView1_AfterSelect(Object sender, TreeViewEventArgs e) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\SysCode\FrmSysCode.cs:줄 161
+2020-09-15 11:40:43-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::treeView1_AfterSelect  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Sys.SysCode.FrmSysCode.treeView1_AfterSelect(Object sender, TreeViewEventArgs e) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\SysCode\FrmSysCode.cs:줄 161
+2020-09-15 11:58:41-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::pScodeGrp=[LabInfoType]
+2020-09-15 11:58:41-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::reMsg=[[검색 성공]]
+2020-09-15 11:58:41-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail):: 
+System.ArgumentOutOfRangeException: 인덱스가 범위를 벗어났습니다. 인덱스는 음수가 아니어야 하며 컬렉션의 크기보다 작아야 합니다.
+매개 변수 이름: index
+   위치: System.Collections.ArrayList.get_Item(Int32 index)
+   위치: System.Windows.Forms.DataGridViewRowCollection.SharedRow(Int32 rowIndex)
+   위치: System.Windows.Forms.DataGridViewRowCollection.get_Item(Int32 index)
+   위치: EldigmPlusApp.SubForm.Sys.SysCode.FrmSysCode.setDataBind_grideView1(String pScodeGrp) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\SysCode\FrmSysCode.cs:줄 210
+2020-09-15 11:58:47-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::pScodeGrp=[LoginDvcType]
+2020-09-15 11:58:47-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::reMsg=[[검색 성공]]
+2020-09-15 11:58:47-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail):: 
+System.ArgumentOutOfRangeException: 인덱스가 범위를 벗어났습니다. 인덱스는 음수가 아니어야 하며 컬렉션의 크기보다 작아야 합니다.
+매개 변수 이름: index
+   위치: System.Collections.ArrayList.get_Item(Int32 index)
+   위치: System.Windows.Forms.DataGridViewRowCollection.SharedRow(Int32 rowIndex)
+   위치: System.Windows.Forms.DataGridViewRowCollection.get_Item(Int32 index)
+   위치: EldigmPlusApp.SubForm.Sys.SysCode.FrmSysCode.setDataBind_grideView1(String pScodeGrp) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\SysCode\FrmSysCode.cs:줄 210
+2020-09-15 11:58:48-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::pScodeGrp=[AgreeUInfoRequired]
+2020-09-15 11:58:48-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::reMsg=[[검색 성공]]
+2020-09-15 11:58:48-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail):: 
+System.ArgumentOutOfRangeException: 인덱스가 범위를 벗어났습니다. 인덱스는 음수가 아니어야 하며 컬렉션의 크기보다 작아야 합니다.
+매개 변수 이름: index
+   위치: System.Collections.ArrayList.get_Item(Int32 index)
+   위치: System.Windows.Forms.DataGridViewRowCollection.SharedRow(Int32 rowIndex)
+   위치: System.Windows.Forms.DataGridViewRowCollection.get_Item(Int32 index)
+   위치: EldigmPlusApp.SubForm.Sys.SysCode.FrmSysCode.setDataBind_grideView1(String pScodeGrp) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\SysCode\FrmSysCode.cs:줄 210
+2020-09-15 11:58:49-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::pScodeGrp=[AlarmTime]
+2020-09-15 11:58:49-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::reMsg=[[검색 성공]]
+2020-09-15 11:58:49-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail):: 
+System.ArgumentOutOfRangeException: 인덱스가 범위를 벗어났습니다. 인덱스는 음수가 아니어야 하며 컬렉션의 크기보다 작아야 합니다.
+매개 변수 이름: index
+   위치: System.Collections.ArrayList.get_Item(Int32 index)
+   위치: System.Windows.Forms.DataGridViewRowCollection.SharedRow(Int32 rowIndex)
+   위치: System.Windows.Forms.DataGridViewRowCollection.get_Item(Int32 index)
+   위치: EldigmPlusApp.SubForm.Sys.SysCode.FrmSysCode.setDataBind_grideView1(String pScodeGrp) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\SysCode\FrmSysCode.cs:줄 210
+2020-09-15 11:58:51-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::pScodeGrp=[LabInfoType]
+2020-09-15 11:58:51-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::reMsg=[[검색 성공]]
+2020-09-15 11:58:51-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail):: 
+System.ArgumentOutOfRangeException: 인덱스가 범위를 벗어났습니다. 인덱스는 음수가 아니어야 하며 컬렉션의 크기보다 작아야 합니다.
+매개 변수 이름: index
+   위치: System.Collections.ArrayList.get_Item(Int32 index)
+   위치: System.Windows.Forms.DataGridViewRowCollection.SharedRow(Int32 rowIndex)
+   위치: System.Windows.Forms.DataGridViewRowCollection.get_Item(Int32 index)
+   위치: EldigmPlusApp.SubForm.Sys.SysCode.FrmSysCode.setDataBind_grideView1(String pScodeGrp) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\SysCode\FrmSysCode.cs:줄 210
+2020-09-15 12:01:55-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::pScodeGrp=[LabInfoType]
+2020-09-15 12:01:55-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::reMsg=[[검색 성공]]
+2020-09-15 12:01:55-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail):: 
+System.ArgumentOutOfRangeException: 인덱스가 범위를 벗어났습니다. 인덱스는 음수가 아니어야 하며 컬렉션의 크기보다 작아야 합니다.
+매개 변수 이름: index
+   위치: System.Collections.ArrayList.get_Item(Int32 index)
+   위치: System.Windows.Forms.DataGridViewRowCollection.SharedRow(Int32 rowIndex)
+   위치: System.Windows.Forms.DataGridViewRowCollection.get_Item(Int32 index)
+   위치: EldigmPlusApp.SubForm.Sys.SysCode.FrmSysCode.setDataBind_grideView1(String pScodeGrp) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\SysCode\FrmSysCode.cs:줄 210
+2020-09-15 12:04:04-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::pScodeGrp=[LabInfoType]
+2020-09-15 12:04:04-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::reMsg=[[검색 성공]]
+2020-09-15 12:04:04-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail):: 
+System.ArgumentOutOfRangeException: 인덱스가 범위를 벗어났습니다. 인덱스는 음수가 아니어야 하며 컬렉션의 크기보다 작아야 합니다.
+매개 변수 이름: index
+   위치: System.Collections.ArrayList.get_Item(Int32 index)
+   위치: System.Windows.Forms.DataGridViewRowCollection.SharedRow(Int32 rowIndex)
+   위치: System.Windows.Forms.DataGridViewRowCollection.get_Item(Int32 index)
+   위치: EldigmPlusApp.SubForm.Sys.SysCode.FrmSysCode.setDataBind_grideView1(String pScodeGrp) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\SysCode\FrmSysCode.cs:줄 210
+2020-09-15 12:07:23-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::pScodeGrp=[LabInfoType]
+2020-09-15 12:07:23-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::reMsg=[[검색 성공]]
+2020-09-15 12:07:23-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail):: 
+System.ArgumentOutOfRangeException: 인덱스가 범위를 벗어났습니다. 인덱스는 음수가 아니어야 하며 컬렉션의 크기보다 작아야 합니다.
+매개 변수 이름: index
+   위치: System.Collections.ArrayList.get_Item(Int32 index)
+   위치: System.Windows.Forms.DataGridViewRowCollection.SharedRow(Int32 rowIndex)
+   위치: System.Windows.Forms.DataGridViewRowCollection.get_Item(Int32 index)
+   위치: EldigmPlusApp.SubForm.Sys.SysCode.FrmSysCode.setDataBind_grideView1(String pScodeGrp) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\SysCode\FrmSysCode.cs:줄 210
+2020-09-15 14:57:23-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::pScodeGrp=[LabInfoType]
+2020-09-15 14:57:23-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::reMsg=[[검색 성공]]
+2020-09-15 14:57:23-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail):: 
+System.ArgumentOutOfRangeException: 인덱스가 범위를 벗어났습니다. 인덱스는 음수가 아니어야 하며 컬렉션의 크기보다 작아야 합니다.
+매개 변수 이름: index
+   위치: System.Collections.ArrayList.get_Item(Int32 index)
+   위치: System.Windows.Forms.DataGridViewRowCollection.SharedRow(Int32 rowIndex)
+   위치: System.Windows.Forms.DataGridViewRowCollection.get_Item(Int32 index)
+   위치: EldigmPlusApp.SubForm.Sys.SysCode.FrmSysCode.setDataBind_grideView1(String pScodeGrp) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\SysCode\FrmSysCode.cs:줄 210
+2020-09-15 15:18:35-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::pScodeGrp=[LabInfoType]
+2020-09-15 15:18:35-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::reMsg=[[검색 성공]]
+2020-09-15 15:18:35-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail):: 
+System.ArgumentOutOfRangeException: 인덱스가 범위를 벗어났습니다. 인덱스는 음수가 아니어야 하며 컬렉션의 크기보다 작아야 합니다.
+매개 변수 이름: index
+   위치: System.Collections.ArrayList.get_Item(Int32 index)
+   위치: System.Windows.Forms.DataGridViewRowCollection.SharedRow(Int32 rowIndex)
+   위치: System.Windows.Forms.DataGridViewRowCollection.get_Item(Int32 index)
+   위치: EldigmPlusApp.SubForm.Sys.SysCode.FrmSysCode.setDataBind_grideView1(String pScodeGrp) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\SysCode\FrmSysCode.cs:줄 210
+2020-09-15 15:18:36-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::pScodeGrp=[AlarmTime]
+2020-09-15 15:18:36-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::reMsg=[[검색 성공]]
+2020-09-15 15:18:36-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail):: 
+System.ArgumentOutOfRangeException: 인덱스가 범위를 벗어났습니다. 인덱스는 음수가 아니어야 하며 컬렉션의 크기보다 작아야 합니다.
+매개 변수 이름: index
+   위치: System.Collections.ArrayList.get_Item(Int32 index)
+   위치: System.Windows.Forms.DataGridViewRowCollection.SharedRow(Int32 rowIndex)
+   위치: System.Windows.Forms.DataGridViewRowCollection.get_Item(Int32 index)
+   위치: EldigmPlusApp.SubForm.Sys.SysCode.FrmSysCode.setDataBind_grideView1(String pScodeGrp) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\SysCode\FrmSysCode.cs:줄 210
+2020-09-15 15:18:37-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::pScodeGrp=[LabInfoType]
+2020-09-15 15:18:37-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::reMsg=[[검색 성공]]
+2020-09-15 15:18:37-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail):: 
+System.ArgumentOutOfRangeException: 인덱스가 범위를 벗어났습니다. 인덱스는 음수가 아니어야 하며 컬렉션의 크기보다 작아야 합니다.
+매개 변수 이름: index
+   위치: System.Collections.ArrayList.get_Item(Int32 index)
+   위치: System.Windows.Forms.DataGridViewRowCollection.SharedRow(Int32 rowIndex)
+   위치: System.Windows.Forms.DataGridViewRowCollection.get_Item(Int32 index)
+   위치: EldigmPlusApp.SubForm.Sys.SysCode.FrmSysCode.setDataBind_grideView1(String pScodeGrp) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\SysCode\FrmSysCode.cs:줄 210
+2020-09-15 15:18:38-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::pScodeGrp=[LoginDvcType]
+2020-09-15 15:18:38-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::reMsg=[[검색 성공]]
+2020-09-15 15:18:38-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail):: 
+System.ArgumentOutOfRangeException: 인덱스가 범위를 벗어났습니다. 인덱스는 음수가 아니어야 하며 컬렉션의 크기보다 작아야 합니다.
+매개 변수 이름: index
+   위치: System.Collections.ArrayList.get_Item(Int32 index)
+   위치: System.Windows.Forms.DataGridViewRowCollection.SharedRow(Int32 rowIndex)
+   위치: System.Windows.Forms.DataGridViewRowCollection.get_Item(Int32 index)
+   위치: EldigmPlusApp.SubForm.Sys.SysCode.FrmSysCode.setDataBind_grideView1(String pScodeGrp) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\SysCode\FrmSysCode.cs:줄 210
+2020-09-15 15:33:22-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::pScodeGrp=[LabInfoType]
+2020-09-15 15:33:22-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::reMsg=[[검색 성공]]
+2020-09-15 15:33:22-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail):: 
+System.ArgumentOutOfRangeException: 인덱스가 범위를 벗어났습니다. 인덱스는 음수가 아니어야 하며 컬렉션의 크기보다 작아야 합니다.
+매개 변수 이름: index
+   위치: System.Collections.ArrayList.get_Item(Int32 index)
+   위치: System.Windows.Forms.DataGridViewRowCollection.SharedRow(Int32 rowIndex)
+   위치: System.Windows.Forms.DataGridViewRowCollection.get_Item(Int32 index)
+   위치: EldigmPlusApp.SubForm.Sys.SysCode.FrmSysCode.setDataBind_grideView1(String pScodeGrp) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\SysCode\FrmSysCode.cs:줄 210
+2020-09-15 15:33:23-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::pScodeGrp=[AlarmTime]
+2020-09-15 15:33:23-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::reMsg=[[검색 성공]]
+2020-09-15 15:33:23-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail):: 
+System.ArgumentOutOfRangeException: 인덱스가 범위를 벗어났습니다. 인덱스는 음수가 아니어야 하며 컬렉션의 크기보다 작아야 합니다.
+매개 변수 이름: index
+   위치: System.Collections.ArrayList.get_Item(Int32 index)
+   위치: System.Windows.Forms.DataGridViewRowCollection.SharedRow(Int32 rowIndex)
+   위치: System.Windows.Forms.DataGridViewRowCollection.get_Item(Int32 index)
+   위치: EldigmPlusApp.SubForm.Sys.SysCode.FrmSysCode.setDataBind_grideView1(String pScodeGrp) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\SysCode\FrmSysCode.cs:줄 210
+2020-09-15 15:33:24-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::pScodeGrp=[LoginDvcType]
+2020-09-15 15:33:24-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::reMsg=[[검색 성공]]
+2020-09-15 15:33:24-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail):: 
+System.ArgumentOutOfRangeException: 인덱스가 범위를 벗어났습니다. 인덱스는 음수가 아니어야 하며 컬렉션의 크기보다 작아야 합니다.
+매개 변수 이름: index
+   위치: System.Collections.ArrayList.get_Item(Int32 index)
+   위치: System.Windows.Forms.DataGridViewRowCollection.SharedRow(Int32 rowIndex)
+   위치: System.Windows.Forms.DataGridViewRowCollection.get_Item(Int32 index)
+   위치: EldigmPlusApp.SubForm.Sys.SysCode.FrmSysCode.setDataBind_grideView1(String pScodeGrp) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\SysCode\FrmSysCode.cs:줄 210
+2020-09-15 15:33:24-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::pScodeGrp=[CoType]
+2020-09-15 15:33:24-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::reMsg=[[검색 성공]]
+2020-09-15 15:33:24-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail):: 
+System.ArgumentOutOfRangeException: 인덱스가 범위를 벗어났습니다. 인덱스는 음수가 아니어야 하며 컬렉션의 크기보다 작아야 합니다.
+매개 변수 이름: index
+   위치: System.Collections.ArrayList.get_Item(Int32 index)
+   위치: System.Windows.Forms.DataGridViewRowCollection.SharedRow(Int32 rowIndex)
+   위치: System.Windows.Forms.DataGridViewRowCollection.get_Item(Int32 index)
+   위치: EldigmPlusApp.SubForm.Sys.SysCode.FrmSysCode.setDataBind_grideView1(String pScodeGrp) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\SysCode\FrmSysCode.cs:줄 210
+2020-09-15 15:33:25-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::pScodeGrp=[PushType]
+2020-09-15 15:33:25-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::reMsg=[[검색 성공]]
+2020-09-15 15:33:25-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail):: 
+System.ArgumentOutOfRangeException: 인덱스가 범위를 벗어났습니다. 인덱스는 음수가 아니어야 하며 컬렉션의 크기보다 작아야 합니다.
+매개 변수 이름: index
+   위치: System.Collections.ArrayList.get_Item(Int32 index)
+   위치: System.Windows.Forms.DataGridViewRowCollection.SharedRow(Int32 rowIndex)
+   위치: System.Windows.Forms.DataGridViewRowCollection.get_Item(Int32 index)
+   위치: EldigmPlusApp.SubForm.Sys.SysCode.FrmSysCode.setDataBind_grideView1(String pScodeGrp) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\SysCode\FrmSysCode.cs:줄 210
+2020-09-15 15:33:25-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::pScodeGrp=[CoType]
+2020-09-15 15:33:25-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::reMsg=[[검색 성공]]
+2020-09-15 15:33:25-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail):: 
+System.ArgumentOutOfRangeException: 인덱스가 범위를 벗어났습니다. 인덱스는 음수가 아니어야 하며 컬렉션의 크기보다 작아야 합니다.
+매개 변수 이름: index
+   위치: System.Collections.ArrayList.get_Item(Int32 index)
+   위치: System.Windows.Forms.DataGridViewRowCollection.SharedRow(Int32 rowIndex)
+   위치: System.Windows.Forms.DataGridViewRowCollection.get_Item(Int32 index)
+   위치: EldigmPlusApp.SubForm.Sys.SysCode.FrmSysCode.setDataBind_grideView1(String pScodeGrp) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\SysCode\FrmSysCode.cs:줄 210
+2020-09-15 15:33:26-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::pScodeGrp=[AgreeUInfoCheck]
+2020-09-15 15:33:26-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::reMsg=[[검색 성공]]
+2020-09-15 15:33:26-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail):: 
+System.ArgumentOutOfRangeException: 인덱스가 범위를 벗어났습니다. 인덱스는 음수가 아니어야 하며 컬렉션의 크기보다 작아야 합니다.
+매개 변수 이름: index
+   위치: System.Collections.ArrayList.get_Item(Int32 index)
+   위치: System.Windows.Forms.DataGridViewRowCollection.SharedRow(Int32 rowIndex)
+   위치: System.Windows.Forms.DataGridViewRowCollection.get_Item(Int32 index)
+   위치: EldigmPlusApp.SubForm.Sys.SysCode.FrmSysCode.setDataBind_grideView1(String pScodeGrp) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\SysCode\FrmSysCode.cs:줄 210
+2020-09-15 15:33:26-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::pScodeGrp=[LoginDvcType]
+2020-09-15 15:33:26-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::reMsg=[[검색 성공]]
+2020-09-15 15:33:26-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail):: 
+System.ArgumentOutOfRangeException: 인덱스가 범위를 벗어났습니다. 인덱스는 음수가 아니어야 하며 컬렉션의 크기보다 작아야 합니다.
+매개 변수 이름: index
+   위치: System.Collections.ArrayList.get_Item(Int32 index)
+   위치: System.Windows.Forms.DataGridViewRowCollection.SharedRow(Int32 rowIndex)
+   위치: System.Windows.Forms.DataGridViewRowCollection.get_Item(Int32 index)
+   위치: EldigmPlusApp.SubForm.Sys.SysCode.FrmSysCode.setDataBind_grideView1(String pScodeGrp) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\SysCode\FrmSysCode.cs:줄 210
+2020-09-15 15:33:26-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::pScodeGrp=[LabInfoType]
+2020-09-15 15:33:26-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::reMsg=[[검색 성공]]
+2020-09-15 15:33:26-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail):: 
+System.ArgumentOutOfRangeException: 인덱스가 범위를 벗어났습니다. 인덱스는 음수가 아니어야 하며 컬렉션의 크기보다 작아야 합니다.
+매개 변수 이름: index
+   위치: System.Collections.ArrayList.get_Item(Int32 index)
+   위치: System.Windows.Forms.DataGridViewRowCollection.SharedRow(Int32 rowIndex)
+   위치: System.Windows.Forms.DataGridViewRowCollection.get_Item(Int32 index)
+   위치: EldigmPlusApp.SubForm.Sys.SysCode.FrmSysCode.setDataBind_grideView1(String pScodeGrp) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\SysCode\FrmSysCode.cs:줄 210
+2020-09-15 15:33:27-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::pScodeGrp=[AlarmTime]
+2020-09-15 15:33:27-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::reMsg=[[검색 성공]]
+2020-09-15 15:33:27-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail):: 
+System.ArgumentOutOfRangeException: 인덱스가 범위를 벗어났습니다. 인덱스는 음수가 아니어야 하며 컬렉션의 크기보다 작아야 합니다.
+매개 변수 이름: index
+   위치: System.Collections.ArrayList.get_Item(Int32 index)
+   위치: System.Windows.Forms.DataGridViewRowCollection.SharedRow(Int32 rowIndex)
+   위치: System.Windows.Forms.DataGridViewRowCollection.get_Item(Int32 index)
+   위치: EldigmPlusApp.SubForm.Sys.SysCode.FrmSysCode.setDataBind_grideView1(String pScodeGrp) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\SysCode\FrmSysCode.cs:줄 210
+2020-09-15 15:33:27-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::pScodeGrp=[LabInfoType]
+2020-09-15 15:33:27-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::reMsg=[[검색 성공]]
+2020-09-15 15:33:27-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail):: 
+System.ArgumentOutOfRangeException: 인덱스가 범위를 벗어났습니다. 인덱스는 음수가 아니어야 하며 컬렉션의 크기보다 작아야 합니다.
+매개 변수 이름: index
+   위치: System.Collections.ArrayList.get_Item(Int32 index)
+   위치: System.Windows.Forms.DataGridViewRowCollection.SharedRow(Int32 rowIndex)
+   위치: System.Windows.Forms.DataGridViewRowCollection.get_Item(Int32 index)
+   위치: EldigmPlusApp.SubForm.Sys.SysCode.FrmSysCode.setDataBind_grideView1(String pScodeGrp) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\SysCode\FrmSysCode.cs:줄 210
+2020-09-15 15:33:30-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::pScodeGrp=[AgreeUInfoRequired]
+2020-09-15 15:33:30-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::reMsg=[[검색 성공]]
+2020-09-15 15:33:30-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail):: 
+System.ArgumentOutOfRangeException: 인덱스가 범위를 벗어났습니다. 인덱스는 음수가 아니어야 하며 컬렉션의 크기보다 작아야 합니다.
+매개 변수 이름: index
+   위치: System.Collections.ArrayList.get_Item(Int32 index)
+   위치: System.Windows.Forms.DataGridViewRowCollection.SharedRow(Int32 rowIndex)
+   위치: System.Windows.Forms.DataGridViewRowCollection.get_Item(Int32 index)
+   위치: EldigmPlusApp.SubForm.Sys.SysCode.FrmSysCode.setDataBind_grideView1(String pScodeGrp) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\SysCode\FrmSysCode.cs:줄 210
+2020-09-15 15:33:30-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::pScodeGrp=[PushType]
+2020-09-15 15:33:30-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::reMsg=[[검색 성공]]
+2020-09-15 15:33:30-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail):: 
+System.ArgumentOutOfRangeException: 인덱스가 범위를 벗어났습니다. 인덱스는 음수가 아니어야 하며 컬렉션의 크기보다 작아야 합니다.
+매개 변수 이름: index
+   위치: System.Collections.ArrayList.get_Item(Int32 index)
+   위치: System.Windows.Forms.DataGridViewRowCollection.SharedRow(Int32 rowIndex)
+   위치: System.Windows.Forms.DataGridViewRowCollection.get_Item(Int32 index)
+   위치: EldigmPlusApp.SubForm.Sys.SysCode.FrmSysCode.setDataBind_grideView1(String pScodeGrp) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\SysCode\FrmSysCode.cs:줄 210
+2020-09-15 17:37:41-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::pScodeGrp=[LabInfoType]
+2020-09-15 17:37:41-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::reMsg=[[검색 성공]]
+2020-09-15 17:37:41-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Sys.SysCode.FrmSysCode.setDataBind_grideView1(String pScodeGrp) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\SysCode\FrmSysCode.cs:줄 211
+2020-09-15 17:37:44-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::pScodeGrp=[LabInfoType]
+2020-09-15 17:37:44-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::reMsg=[[검색 성공]]
+2020-09-15 17:37:44-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Sys.SysCode.FrmSysCode.setDataBind_grideView1(String pScodeGrp) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\SysCode\FrmSysCode.cs:줄 211
+2020-09-15 17:37:45-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::pScodeGrp=[LabInfoType]
+2020-09-15 17:37:45-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::reMsg=[[검색 성공]]
+2020-09-15 17:37:45-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Sys.SysCode.FrmSysCode.setDataBind_grideView1(String pScodeGrp) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\SysCode\FrmSysCode.cs:줄 211
+2020-09-15 17:37:52-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::pScodeGrp=[AlarmTime]
+2020-09-15 17:37:52-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::reMsg=[[검색 성공]]
+2020-09-15 17:37:52-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Sys.SysCode.FrmSysCode.setDataBind_grideView1(String pScodeGrp) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\SysCode\FrmSysCode.cs:줄 211
+2020-09-15 17:37:52-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::pScodeGrp=[LoginDvcType]
+2020-09-15 17:37:52-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::reMsg=[[검색 성공]]
+2020-09-15 17:37:52-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Sys.SysCode.FrmSysCode.setDataBind_grideView1(String pScodeGrp) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\SysCode\FrmSysCode.cs:줄 211
+2020-09-15 17:37:53-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::pScodeGrp=[LabInfoType]
+2020-09-15 17:37:53-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::reMsg=[[검색 성공]]
+2020-09-15 17:37:53-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Sys.SysCode.FrmSysCode.setDataBind_grideView1(String pScodeGrp) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\SysCode\FrmSysCode.cs:줄 211
+2020-09-15 17:37:54-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::pScodeGrp=[AlarmTime]
+2020-09-15 17:37:54-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::reMsg=[[검색 성공]]
+2020-09-15 17:37:54-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Sys.SysCode.FrmSysCode.setDataBind_grideView1(String pScodeGrp) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\SysCode\FrmSysCode.cs:줄 211
+2020-09-15 17:37:54-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::pScodeGrp=[LoginDvcType]
+2020-09-15 17:37:54-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::reMsg=[[검색 성공]]
+2020-09-15 17:37:54-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Sys.SysCode.FrmSysCode.setDataBind_grideView1(String pScodeGrp) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\SysCode\FrmSysCode.cs:줄 211
+2020-09-15 17:37:54-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::pScodeGrp=[AgreeUInfoCheck]
+2020-09-15 17:37:54-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::reMsg=[[검색 성공]]
+2020-09-15 17:37:54-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Sys.SysCode.FrmSysCode.setDataBind_grideView1(String pScodeGrp) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\SysCode\FrmSysCode.cs:줄 211
+2020-09-15 17:37:55-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::pScodeGrp=[PushType]
+2020-09-15 17:37:55-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::reMsg=[[검색 성공]]
+2020-09-15 17:37:55-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Sys.SysCode.FrmSysCode.setDataBind_grideView1(String pScodeGrp) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\SysCode\FrmSysCode.cs:줄 211
+2020-09-15 17:37:55-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::pScodeGrp=[CoType]
+2020-09-15 17:37:55-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::reMsg=[[검색 성공]]
+2020-09-15 17:37:55-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Sys.SysCode.FrmSysCode.setDataBind_grideView1(String pScodeGrp) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\SysCode\FrmSysCode.cs:줄 211
+2020-09-15 17:37:56-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::pScodeGrp=[AgreeUInfoCheck]
+2020-09-15 17:37:56-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::reMsg=[[검색 성공]]
+2020-09-15 17:37:56-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Sys.SysCode.FrmSysCode.setDataBind_grideView1(String pScodeGrp) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\SysCode\FrmSysCode.cs:줄 211
+2020-09-15 17:37:56-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::pScodeGrp=[AgreeUInfoRequired]
+2020-09-15 17:37:56-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::reMsg=[[검색 성공]]
+2020-09-15 17:37:56-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Sys.SysCode.FrmSysCode.setDataBind_grideView1(String pScodeGrp) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\SysCode\FrmSysCode.cs:줄 211
+2020-09-15 17:37:57-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::pScodeGrp=[LoginDvcType]
+2020-09-15 17:37:57-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::reMsg=[[검색 성공]]
+2020-09-15 17:37:57-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Sys.SysCode.FrmSysCode.setDataBind_grideView1(String pScodeGrp) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\SysCode\FrmSysCode.cs:줄 211
+2020-09-15 17:37:57-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::pScodeGrp=[AlarmTime]
+2020-09-15 17:37:57-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::reMsg=[[검색 성공]]
+2020-09-15 17:37:57-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Sys.SysCode.FrmSysCode.setDataBind_grideView1(String pScodeGrp) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\SysCode\FrmSysCode.cs:줄 211
+2020-09-15 17:37:58-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::pScodeGrp=[LabInfoType]
+2020-09-15 17:37:58-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::reMsg=[[검색 성공]]
+2020-09-15 17:37:58-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Sys.SysCode.FrmSysCode.setDataBind_grideView1(String pScodeGrp) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\SysCode\FrmSysCode.cs:줄 211
+2020-09-15 17:37:58-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::pScodeGrp=[AlarmTime]
+2020-09-15 17:37:58-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::reMsg=[[검색 성공]]
+2020-09-15 17:37:58-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Sys.SysCode.FrmSysCode.setDataBind_grideView1(String pScodeGrp) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\SysCode\FrmSysCode.cs:줄 211
+2020-09-15 17:38:00-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::pScodeGrp=[LabInfoType]
+2020-09-15 17:38:00-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::reMsg=[[검색 성공]]
+2020-09-15 17:38:00-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Sys.SysCode.FrmSysCode.setDataBind_grideView1(String pScodeGrp) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\SysCode\FrmSysCode.cs:줄 211
+2020-09-15 17:38:02-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::pScodeGrp=[AlarmTime]
+2020-09-15 17:38:02-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::reMsg=[[검색 성공]]
+2020-09-15 17:38:02-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Sys.SysCode.FrmSysCode.setDataBind_grideView1(String pScodeGrp) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\SysCode\FrmSysCode.cs:줄 211
+2020-09-15 17:38:06-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::pScodeGrp=[LoginDvcType]
+2020-09-15 17:38:06-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::reMsg=[[검색 성공]]
+2020-09-15 17:38:06-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Sys.SysCode.FrmSysCode.setDataBind_grideView1(String pScodeGrp) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\SysCode\FrmSysCode.cs:줄 211
+2020-09-15 17:40:02-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::pScodeGrp=[LabInfoType]
+2020-09-15 17:40:02-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::reMsg=[[검색 성공]]
+2020-09-15 17:40:02-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Sys.SysCode.FrmSysCode.setDataBind_grideView1(String pScodeGrp) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\SysCode\FrmSysCode.cs:줄 211
+2020-09-15 20:39:18-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::btnSave_Click  (Detail):: 
+System.ArgumentException: dgv1_SCODE_GRP 열을 찾을 수 없습니다.
+매개 변수 이름: columnName
+   위치: System.Windows.Forms.DataGridViewCellCollection.get_Item(String columnName)
+   위치: EldigmPlusApp.SubForm.Sys.SysCode.FrmSysCode.btnSave_Click(Object sender, EventArgs e) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\SysCode\FrmSysCode.cs:줄 340
+2020-09-15 20:39:21-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::btnSave_Click  (Detail):: 
+System.ArgumentException: dgv1_SCODE_GRP 열을 찾을 수 없습니다.
+매개 변수 이름: columnName
+   위치: System.Windows.Forms.DataGridViewCellCollection.get_Item(String columnName)
+   위치: EldigmPlusApp.SubForm.Sys.SysCode.FrmSysCode.btnSave_Click(Object sender, EventArgs e) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\SysCode\FrmSysCode.cs:줄 340
+2020-09-15 20:39:21-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::btnSave_Click  (Detail):: 
+System.ArgumentException: dgv1_SCODE_GRP 열을 찾을 수 없습니다.
+매개 변수 이름: columnName
+   위치: System.Windows.Forms.DataGridViewCellCollection.get_Item(String columnName)
+   위치: EldigmPlusApp.SubForm.Sys.SysCode.FrmSysCode.btnSave_Click(Object sender, EventArgs e) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\SysCode\FrmSysCode.cs:줄 340
+2020-09-15 20:39:22-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::btnSave_Click  (Detail):: 
+System.ArgumentException: dgv1_SCODE_GRP 열을 찾을 수 없습니다.
+매개 변수 이름: columnName
+   위치: System.Windows.Forms.DataGridViewCellCollection.get_Item(String columnName)
+   위치: EldigmPlusApp.SubForm.Sys.SysCode.FrmSysCode.btnSave_Click(Object sender, EventArgs e) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\SysCode\FrmSysCode.cs:줄 340
+2020-09-15 20:39:22-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::btnSave_Click  (Detail):: 
+System.ArgumentException: dgv1_SCODE_GRP 열을 찾을 수 없습니다.
+매개 변수 이름: columnName
+   위치: System.Windows.Forms.DataGridViewCellCollection.get_Item(String columnName)
+   위치: EldigmPlusApp.SubForm.Sys.SysCode.FrmSysCode.btnSave_Click(Object sender, EventArgs e) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\SysCode\FrmSysCode.cs:줄 340
+2020-09-15 20:39:23-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::btnSave_Click  (Detail):: 
+System.ArgumentException: dgv1_SCODE_GRP 열을 찾을 수 없습니다.
+매개 변수 이름: columnName
+   위치: System.Windows.Forms.DataGridViewCellCollection.get_Item(String columnName)
+   위치: EldigmPlusApp.SubForm.Sys.SysCode.FrmSysCode.btnSave_Click(Object sender, EventArgs e) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\SysCode\FrmSysCode.cs:줄 340
+2020-09-15 20:40:26-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::btnSave_Click  (Detail):: 
+System.ArgumentException: dgv1_SCODE_GRP 열을 찾을 수 없습니다.
+매개 변수 이름: columnName
+   위치: System.Windows.Forms.DataGridViewCellCollection.get_Item(String columnName)
+   위치: EldigmPlusApp.SubForm.Sys.SysCode.FrmSysCode.btnSave_Click(Object sender, EventArgs e) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\SysCode\FrmSysCode.cs:줄 340
+2020-09-15 20:40:30-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::btnSave_Click  (Detail):: 
+System.ArgumentException: dgv1_SCODE_GRP 열을 찾을 수 없습니다.
+매개 변수 이름: columnName
+   위치: System.Windows.Forms.DataGridViewCellCollection.get_Item(String columnName)
+   위치: EldigmPlusApp.SubForm.Sys.SysCode.FrmSysCode.btnSave_Click(Object sender, EventArgs e) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\SysCode\FrmSysCode.cs:줄 340
+2020-09-15 20:40:35-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::btnSave_Click  (Detail):: 
+System.ArgumentException: dgv1_SCODE_GRP 열을 찾을 수 없습니다.
+매개 변수 이름: columnName
+   위치: System.Windows.Forms.DataGridViewCellCollection.get_Item(String columnName)
+   위치: EldigmPlusApp.SubForm.Sys.SysCode.FrmSysCode.btnSave_Click(Object sender, EventArgs e) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\SysCode\FrmSysCode.cs:줄 340
+2020-09-15 20:40:35-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::btnSave_Click  (Detail):: 
+System.ArgumentException: dgv1_SCODE_GRP 열을 찾을 수 없습니다.
+매개 변수 이름: columnName
+   위치: System.Windows.Forms.DataGridViewCellCollection.get_Item(String columnName)
+   위치: EldigmPlusApp.SubForm.Sys.SysCode.FrmSysCode.btnSave_Click(Object sender, EventArgs e) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\SysCode\FrmSysCode.cs:줄 340
+2020-09-15 20:40:35-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::btnSave_Click  (Detail):: 
+System.ArgumentException: dgv1_SCODE_GRP 열을 찾을 수 없습니다.
+매개 변수 이름: columnName
+   위치: System.Windows.Forms.DataGridViewCellCollection.get_Item(String columnName)
+   위치: EldigmPlusApp.SubForm.Sys.SysCode.FrmSysCode.btnSave_Click(Object sender, EventArgs e) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\SysCode\FrmSysCode.cs:줄 340
+2020-09-15 20:40:36-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::btnSave_Click  (Detail):: 
+System.ArgumentException: dgv1_SCODE_GRP 열을 찾을 수 없습니다.
+매개 변수 이름: columnName
+   위치: System.Windows.Forms.DataGridViewCellCollection.get_Item(String columnName)
+   위치: EldigmPlusApp.SubForm.Sys.SysCode.FrmSysCode.btnSave_Click(Object sender, EventArgs e) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\SysCode\FrmSysCode.cs:줄 340
+2020-09-15 20:40:36-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::btnSave_Click  (Detail):: 
+System.ArgumentException: dgv1_SCODE_GRP 열을 찾을 수 없습니다.
+매개 변수 이름: columnName
+   위치: System.Windows.Forms.DataGridViewCellCollection.get_Item(String columnName)
+   위치: EldigmPlusApp.SubForm.Sys.SysCode.FrmSysCode.btnSave_Click(Object sender, EventArgs e) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\SysCode\FrmSysCode.cs:줄 340
+2020-09-15 20:40:36-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::btnSave_Click  (Detail):: 
+System.ArgumentException: dgv1_SCODE_GRP 열을 찾을 수 없습니다.
+매개 변수 이름: columnName
+   위치: System.Windows.Forms.DataGridViewCellCollection.get_Item(String columnName)
+   위치: EldigmPlusApp.SubForm.Sys.SysCode.FrmSysCode.btnSave_Click(Object sender, EventArgs e) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\SysCode\FrmSysCode.cs:줄 340
+2020-09-15 20:47:11-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::btnSave_Click  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Sys.SysCode.FrmSysCode.btnSave_Click(Object sender, EventArgs e) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\SysCode\FrmSysCode.cs:줄 344
+2020-09-15 20:47:19-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::btnSave_Click  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Sys.SysCode.FrmSysCode.btnSave_Click(Object sender, EventArgs e) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\SysCode\FrmSysCode.cs:줄 344
+2020-09-15 20:47:22-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::btnSave_Click  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Sys.SysCode.FrmSysCode.btnSave_Click(Object sender, EventArgs e) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\SysCode\FrmSysCode.cs:줄 344
+2020-09-15 20:47:22-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::btnSave_Click  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Sys.SysCode.FrmSysCode.btnSave_Click(Object sender, EventArgs e) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\SysCode\FrmSysCode.cs:줄 344
+2020-09-15 20:47:23-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::btnSave_Click  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Sys.SysCode.FrmSysCode.btnSave_Click(Object sender, EventArgs e) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\SysCode\FrmSysCode.cs:줄 344
+2020-09-15 20:47:23-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::btnSave_Click  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Sys.SysCode.FrmSysCode.btnSave_Click(Object sender, EventArgs e) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\SysCode\FrmSysCode.cs:줄 344
+2020-09-16 10:14:55-->  [error]  (page)::FrmMain.cs  (Function)::GetDbNm  (Detail)::reCode=[], reMsg=[]
+2020-09-16 10:14:55-->  [error]  (page)::FrmMain.cs  (Function)::GetDbNm  (Detail)::
+System.Net.WebException: 작업 시간이 초과되었습니다.
+   위치: System.Web.Services.Protocols.WebClientProtocol.GetWebResponse(WebRequest request)
+   위치: System.Web.Services.Protocols.HttpWebClientProtocol.GetWebResponse(WebRequest request)
+   위치: System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke(String methodName, Object[] parameters)
+   위치: EldigmPlusApp.WsMHome.WsMainHome.sDbNm(String pMemcoCd, String& reData, String& reMsg) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\Web References\WsMHome\Reference.cs:줄 94
+   위치: EldigmPlusApp.SubForm.MainHome.FrmMain.GetDbNm() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\MainHome\FrmMain.cs:줄 158
+2020-09-16 10:15:29-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::btnSave_Click  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Sys.SysCode.FrmSysCode.button1_Click(Object sender, EventArgs e) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\SysCode\FrmSysCode.cs:줄 508
+2020-09-16 10:26:12-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::btnSave_Click  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Sys.SysCode.FrmSysCode.btnSearch_Click(Object sender, EventArgs e) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\SysCode\FrmSysCode.cs:줄 508
+2020-09-16 11:42:24-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::pScodeGrp=[PC]
+2020-09-16 11:42:24-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::reMsg=[]
+2020-09-16 11:42:24-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail):: 
+System.Net.WebException: 요청이 중단되었습니다. 작업 시간이 초과되었습니다.
+   위치: System.Web.Services.Protocols.WebClientProtocol.GetWebResponse(WebRequest request)
+   위치: System.Web.Services.Protocols.HttpWebClientProtocol.GetWebResponse(WebRequest request)
+   위치: System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke(String methodName, Object[] parameters)
+   위치: EldigmPlusApp.WsSCodeGrp.WsSysCodeGrp.fSysCodeSearch(String pScode_Nm, DataSysCode[]& reList, String& reMsg) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\Web References\WsSCodeGrp\Reference.cs:줄 366
+   위치: EldigmPlusApp.SubForm.Sys.SysCode.FrmSysCode.btnSearch_Click(Object sender, EventArgs e) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\SysCode\FrmSysCode.cs:줄 505
+2020-09-16 11:47:56-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::pScodeGrp=[PC]
+2020-09-16 11:47:56-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::reMsg=[]
+2020-09-16 11:47:56-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail):: 
+System.Net.WebException: 요청이 중단되었습니다. 작업 시간이 초과되었습니다.
+   위치: System.Web.Services.Protocols.WebClientProtocol.GetWebResponse(WebRequest request)
+   위치: System.Web.Services.Protocols.HttpWebClientProtocol.GetWebResponse(WebRequest request)
+   위치: System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke(String methodName, Object[] parameters)
+   위치: EldigmPlusApp.WsSCodeGrp.WsSysCodeGrp.fSysCodeSearch(String pScode_Nm, DataSysCode[]& reList, String& reMsg) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\Web References\WsSCodeGrp\Reference.cs:줄 366
+   위치: EldigmPlusApp.SubForm.Sys.SysCode.FrmSysCode.btnSearch_Click(Object sender, EventArgs e) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\SysCode\FrmSysCode.cs:줄 505
+2020-09-16 11:48:18-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::pScodeGrp=[PC]
+2020-09-16 11:48:18-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::reMsg=[]
+2020-09-16 11:48:18-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail):: 
+System.Net.WebException: 요청이 중단되었습니다. 작업 시간이 초과되었습니다.
+   위치: System.Web.Services.Protocols.WebClientProtocol.GetWebResponse(WebRequest request)
+   위치: System.Web.Services.Protocols.HttpWebClientProtocol.GetWebResponse(WebRequest request)
+   위치: System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke(String methodName, Object[] parameters)
+   위치: EldigmPlusApp.WsSCodeGrp.WsSysCodeGrp.fSysCodeSearch(String pScode_Nm, DataSysCode[]& reList, String& reMsg) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\Web References\WsSCodeGrp\Reference.cs:줄 366
+   위치: EldigmPlusApp.SubForm.Sys.SysCode.FrmSysCode.btnSearch_Click(Object sender, EventArgs e) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\SysCode\FrmSysCode.cs:줄 505
+2020-09-16 11:58:18-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::pScodeGrp=[PC]
+2020-09-16 11:58:18-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::reMsg=[]
+2020-09-16 11:58:19-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail):: 
+System.Net.WebException: 작업 시간이 초과되었습니다.
+   위치: System.Web.Services.Protocols.WebClientProtocol.GetWebResponse(WebRequest request)
+   위치: System.Web.Services.Protocols.HttpWebClientProtocol.GetWebResponse(WebRequest request)
+   위치: System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke(String methodName, Object[] parameters)
+   위치: EldigmPlusApp.WsSCodeGrp.WsSysCodeGrp.fSysCodeSearch(String pScode_Nm, DataSysCode[]& reList, String& reMsg) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\Web References\WsSCodeGrp\Reference.cs:줄 366
+   위치: EldigmPlusApp.SubForm.Sys.SysCode.FrmSysCode.btnSearch_Click(Object sender, EventArgs e) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\SysCode\FrmSysCode.cs:줄 505
+2020-09-16 12:00:33-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::pScodeGrp=[PC]
+2020-09-16 12:00:33-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::reMsg=[[검색 성공]]
+2020-09-16 12:00:33-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail):: 
+System.InvalidOperationException: DataGridView 컨트롤이 변경 알림을 지원하고 삭제를 허용하는 IBindingList에 데이터 바인딩된 경우가 아니면 행 컬렉션을 프로그래밍 방식으로 지울 수 없습니다.
+   위치: System.Windows.Forms.DataGridViewRowCollection.Clear()
+   위치: EldigmPlusApp.SubForm.Sys.SysCode.FrmSysCode.btnSearch_Click(Object sender, EventArgs e) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\SysCode\FrmSysCode.cs:줄 513
+2020-09-16 12:00:55-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::pScodeGrp=[]
+2020-09-16 12:00:55-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::reMsg=[[검색 성공]]
+2020-09-16 12:00:55-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail):: 
+System.InvalidOperationException: DataGridView 컨트롤이 변경 알림을 지원하고 삭제를 허용하는 IBindingList에 데이터 바인딩된 경우가 아니면 행 컬렉션을 프로그래밍 방식으로 지울 수 없습니다.
+   위치: System.Windows.Forms.DataGridViewRowCollection.Clear()
+   위치: EldigmPlusApp.SubForm.Sys.SysCode.FrmSysCode.btnSearch_Click(Object sender, EventArgs e) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\SysCode\FrmSysCode.cs:줄 513
+2020-09-16 12:01:02-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::pScodeGrp=[]
+2020-09-16 12:01:02-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::reMsg=[[검색 성공]]
+2020-09-16 12:01:02-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail):: 
+System.InvalidOperationException: DataGridView 컨트롤이 변경 알림을 지원하고 삭제를 허용하는 IBindingList에 데이터 바인딩된 경우가 아니면 행 컬렉션을 프로그래밍 방식으로 지울 수 없습니다.
+   위치: System.Windows.Forms.DataGridViewRowCollection.Clear()
+   위치: EldigmPlusApp.SubForm.Sys.SysCode.FrmSysCode.btnSearch_Click(Object sender, EventArgs e) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\SysCode\FrmSysCode.cs:줄 513
+2020-09-16 12:03:22-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::pScodeGrp=[]
+2020-09-16 12:03:22-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::reMsg=[[검색 성공]]
+2020-09-16 12:03:22-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail):: 
+System.InvalidOperationException: DataGridView 컨트롤이 변경 알림을 지원하고 삭제를 허용하는 IBindingList에 데이터 바인딩된 경우가 아니면 행 컬렉션을 프로그래밍 방식으로 지울 수 없습니다.
+   위치: System.Windows.Forms.DataGridViewRowCollection.Clear()
+   위치: EldigmPlusApp.SubForm.Sys.SysCode.FrmSysCode.btnSearch_Click(Object sender, EventArgs e) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\SysCode\FrmSysCode.cs:줄 513
+2020-09-16 12:04:33-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::pScodeGrp=[]
+2020-09-16 12:04:33-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::reMsg=[[검색 성공]]
+2020-09-16 12:04:33-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail):: 
+System.InvalidOperationException: DataGridView 컨트롤이 변경 알림을 지원하고 삭제를 허용하는 IBindingList에 데이터 바인딩된 경우가 아니면 행 컬렉션을 프로그래밍 방식으로 지울 수 없습니다.
+   위치: System.Windows.Forms.DataGridViewRowCollection.Clear()
+   위치: EldigmPlusApp.SubForm.Sys.SysCode.FrmSysCode.btnSearch_Click(Object sender, EventArgs e) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\SysCode\FrmSysCode.cs:줄 513
+2020-09-16 12:04:46-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::pScodeGrp=[]
+2020-09-16 12:04:46-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::reMsg=[]
+2020-09-16 12:04:46-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail):: 
+System.Net.WebException: 요청이 중단되었습니다. 작업 시간이 초과되었습니다.
+   위치: System.Web.Services.Protocols.WebClientProtocol.GetWebResponse(WebRequest request)
+   위치: System.Web.Services.Protocols.HttpWebClientProtocol.GetWebResponse(WebRequest request)
+   위치: System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke(String methodName, Object[] parameters)
+   위치: EldigmPlusApp.WsSCodeGrp.WsSysCodeGrp.fSysCodeSearch(String pScode_Nm, DataSysCode[]& reList, String& reMsg) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\Web References\WsSCodeGrp\Reference.cs:줄 366
+   위치: EldigmPlusApp.SubForm.Sys.SysCode.FrmSysCode.btnSearch_Click(Object sender, EventArgs e) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\SysCode\FrmSysCode.cs:줄 505
+2020-09-16 12:08:03-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::pScodeGrp=[PC]
+2020-09-16 12:08:03-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::reMsg=[]
+2020-09-16 12:08:03-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail):: 
+System.Net.WebException: 요청이 중단되었습니다. 작업 시간이 초과되었습니다.
+   위치: System.Web.Services.Protocols.WebClientProtocol.GetWebResponse(WebRequest request)
+   위치: System.Web.Services.Protocols.HttpWebClientProtocol.GetWebResponse(WebRequest request)
+   위치: System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke(String methodName, Object[] parameters)
+   위치: EldigmPlusApp.WsSCodeGrp.WsSysCodeGrp.fSysCodeSearch(String pScode_Nm, DataSysCode[]& reList, String& reMsg) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\Web References\WsSCodeGrp\Reference.cs:줄 366
+   위치: EldigmPlusApp.SubForm.Sys.SysCode.FrmSysCode.btnSearch_Click(Object sender, EventArgs e) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\SysCode\FrmSysCode.cs:줄 505
+2020-09-16 12:08:14-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::pScodeGrp=[PC]
+2020-09-16 12:08:14-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::reMsg=[]
+2020-09-16 12:08:14-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail):: 
+System.Net.WebException: 요청이 중단되었습니다. 작업 시간이 초과되었습니다.
+   위치: System.Web.Services.Protocols.WebClientProtocol.GetWebResponse(WebRequest request)
+   위치: System.Web.Services.Protocols.HttpWebClientProtocol.GetWebResponse(WebRequest request)
+   위치: System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke(String methodName, Object[] parameters)
+   위치: EldigmPlusApp.WsSCodeGrp.WsSysCodeGrp.fSysCodeSearch(String pScode_Nm, DataSysCode[]& reList, String& reMsg) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\Web References\WsSCodeGrp\Reference.cs:줄 366
+   위치: EldigmPlusApp.SubForm.Sys.SysCode.FrmSysCode.btnSearch_Click(Object sender, EventArgs e) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\SysCode\FrmSysCode.cs:줄 505
+2020-09-16 12:08:54-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::pScodeGrp=[PC]
+2020-09-16 12:08:54-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::reMsg=[[검색 성공]]
+2020-09-16 12:08:54-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail):: 
+System.InvalidOperationException: DataGridView 컨트롤이 변경 알림을 지원하고 삭제를 허용하는 IBindingList에 데이터 바인딩된 경우가 아니면 행 컬렉션을 프로그래밍 방식으로 지울 수 없습니다.
+   위치: System.Windows.Forms.DataGridViewRowCollection.Clear()
+   위치: EldigmPlusApp.SubForm.Sys.SysCode.FrmSysCode.btnSearch_Click(Object sender, EventArgs e) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\SysCode\FrmSysCode.cs:줄 513
+2020-09-16 12:09:05-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::pScodeGrp=[]
+2020-09-16 12:09:05-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::reMsg=[[검색 성공]]
+2020-09-16 12:09:05-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail):: 
+System.InvalidOperationException: DataGridView 컨트롤이 변경 알림을 지원하고 삭제를 허용하는 IBindingList에 데이터 바인딩된 경우가 아니면 행 컬렉션을 프로그래밍 방식으로 지울 수 없습니다.
+   위치: System.Windows.Forms.DataGridViewRowCollection.Clear()
+   위치: EldigmPlusApp.SubForm.Sys.SysCode.FrmSysCode.btnSearch_Click(Object sender, EventArgs e) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\SysCode\FrmSysCode.cs:줄 513
+2020-09-16 12:15:11-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::pScodeGrp=[PC]
+2020-09-16 12:15:11-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::reMsg=[[검색 성공]]
+2020-09-16 12:15:11-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail):: 
+System.InvalidOperationException: DataGridView 컨트롤이 변경 알림을 지원하고 삭제를 허용하는 IBindingList에 데이터 바인딩된 경우가 아니면 행 컬렉션을 프로그래밍 방식으로 지울 수 없습니다.
+   위치: System.Windows.Forms.DataGridViewRowCollection.Clear()
+   위치: EldigmPlusApp.SubForm.Sys.SysCode.FrmSysCode.btnSearch_Click(Object sender, EventArgs e) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\SysCode\FrmSysCode.cs:줄 519
+2020-09-16 12:35:44-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::pScodeGrp=[PC]
+2020-09-16 12:35:44-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::reMsg=[[검색 성공]]
+2020-09-16 12:35:44-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail):: 
+System.InvalidOperationException: DataGridView 컨트롤이 변경 알림을 지원하고 삭제를 허용하는 IBindingList에 데이터 바인딩된 경우가 아니면 행 컬렉션을 프로그래밍 방식으로 지울 수 없습니다.
+   위치: System.Windows.Forms.DataGridViewRowCollection.Clear()
+   위치: EldigmPlusApp.SubForm.Sys.SysCode.FrmSysCode.btnSearch_Click(Object sender, EventArgs e) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\SysCode\FrmSysCode.cs:줄 521
+2020-09-16 12:35:47-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::pScodeGrp=[AlarmTime]
+2020-09-16 12:35:47-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::reMsg=[[검색 성공]]
+2020-09-16 12:35:47-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail):: 
+System.InvalidOperationException: DataGridView 컨트롤이 변경 알림을 지원하고 삭제를 허용하는 IBindingList에 데이터 바인딩된 경우가 아니면 행 컬렉션을 프로그래밍 방식으로 지울 수 없습니다.
+   위치: System.Windows.Forms.DataGridViewRowCollection.Clear()
+   위치: EldigmPlusApp.SubForm.Sys.SysCode.FrmSysCode.setDataBind_grideView1(String pScodeGrp) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\SysCode\FrmSysCode.cs:줄 219
+2020-09-16 12:35:49-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::pScodeGrp=[LoginDvcType]
+2020-09-16 12:35:49-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::reMsg=[[검색 성공]]
+2020-09-16 12:35:49-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail):: 
+System.InvalidOperationException: DataGridView 컨트롤이 변경 알림을 지원하고 삭제를 허용하는 IBindingList에 데이터 바인딩된 경우가 아니면 행 컬렉션을 프로그래밍 방식으로 지울 수 없습니다.
+   위치: System.Windows.Forms.DataGridViewRowCollection.Clear()
+   위치: EldigmPlusApp.SubForm.Sys.SysCode.FrmSysCode.setDataBind_grideView1(String pScodeGrp) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\SysCode\FrmSysCode.cs:줄 219
+2020-09-16 12:35:54-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::pScodeGrp=[LabInfoType]
+2020-09-16 12:35:54-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::reMsg=[[검색 성공]]
+2020-09-16 12:35:54-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail):: 
+System.InvalidOperationException: DataGridView 컨트롤이 변경 알림을 지원하고 삭제를 허용하는 IBindingList에 데이터 바인딩된 경우가 아니면 행 컬렉션을 프로그래밍 방식으로 지울 수 없습니다.
+   위치: System.Windows.Forms.DataGridViewRowCollection.Clear()
+   위치: EldigmPlusApp.SubForm.Sys.SysCode.FrmSysCode.setDataBind_grideView1(String pScodeGrp) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\SysCode\FrmSysCode.cs:줄 219
+2020-09-16 14:08:05-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::pScodeGrp=[AlarmTime]
+2020-09-16 14:08:05-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::reMsg=[[검색 성공]]
+2020-09-16 14:08:05-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail):: 
+System.InvalidOperationException: DataGridView 컨트롤이 변경 알림을 지원하고 삭제를 허용하는 IBindingList에 데이터 바인딩된 경우가 아니면 행 컬렉션을 프로그래밍 방식으로 지울 수 없습니다.
+   위치: System.Windows.Forms.DataGridViewRowCollection.Clear()
+   위치: EldigmPlusApp.SubForm.Sys.SysCode.FrmSysCode.setDataBind_grideView1(String pScodeGrp) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\SysCode\FrmSysCode.cs:줄 219
+2020-09-16 14:08:06-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::pScodeGrp=[LoginDvcType]
+2020-09-16 14:08:06-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::reMsg=[[검색 성공]]
+2020-09-16 14:08:06-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail):: 
+System.InvalidOperationException: DataGridView 컨트롤이 변경 알림을 지원하고 삭제를 허용하는 IBindingList에 데이터 바인딩된 경우가 아니면 행 컬렉션을 프로그래밍 방식으로 지울 수 없습니다.
+   위치: System.Windows.Forms.DataGridViewRowCollection.Clear()
+   위치: EldigmPlusApp.SubForm.Sys.SysCode.FrmSysCode.setDataBind_grideView1(String pScodeGrp) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\SysCode\FrmSysCode.cs:줄 219
+2020-09-16 14:08:06-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::pScodeGrp=[AgreeUInfoRequired]
+2020-09-16 14:08:06-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::reMsg=[[검색 성공]]
+2020-09-16 14:08:06-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail):: 
+System.InvalidOperationException: DataGridView 컨트롤이 변경 알림을 지원하고 삭제를 허용하는 IBindingList에 데이터 바인딩된 경우가 아니면 행 컬렉션을 프로그래밍 방식으로 지울 수 없습니다.
+   위치: System.Windows.Forms.DataGridViewRowCollection.Clear()
+   위치: EldigmPlusApp.SubForm.Sys.SysCode.FrmSysCode.setDataBind_grideView1(String pScodeGrp) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\SysCode\FrmSysCode.cs:줄 219
+2020-09-16 14:08:07-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::pScodeGrp=[AgreeUInfoCheck]
+2020-09-16 14:08:07-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::reMsg=[[검색 성공]]
+2020-09-16 14:08:07-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail):: 
+System.InvalidOperationException: DataGridView 컨트롤이 변경 알림을 지원하고 삭제를 허용하는 IBindingList에 데이터 바인딩된 경우가 아니면 행 컬렉션을 프로그래밍 방식으로 지울 수 없습니다.
+   위치: System.Windows.Forms.DataGridViewRowCollection.Clear()
+   위치: EldigmPlusApp.SubForm.Sys.SysCode.FrmSysCode.setDataBind_grideView1(String pScodeGrp) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\SysCode\FrmSysCode.cs:줄 219
+2020-09-16 14:08:07-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::pScodeGrp=[CoType]
+2020-09-16 14:08:07-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::reMsg=[[검색 성공]]
+2020-09-16 14:08:07-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail):: 
+System.InvalidOperationException: DataGridView 컨트롤이 변경 알림을 지원하고 삭제를 허용하는 IBindingList에 데이터 바인딩된 경우가 아니면 행 컬렉션을 프로그래밍 방식으로 지울 수 없습니다.
+   위치: System.Windows.Forms.DataGridViewRowCollection.Clear()
+   위치: EldigmPlusApp.SubForm.Sys.SysCode.FrmSysCode.setDataBind_grideView1(String pScodeGrp) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\SysCode\FrmSysCode.cs:줄 219
+2020-09-16 14:08:07-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::pScodeGrp=[PushType]
+2020-09-16 14:08:07-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::reMsg=[[검색 성공]]
+2020-09-16 14:08:07-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail):: 
+System.InvalidOperationException: DataGridView 컨트롤이 변경 알림을 지원하고 삭제를 허용하는 IBindingList에 데이터 바인딩된 경우가 아니면 행 컬렉션을 프로그래밍 방식으로 지울 수 없습니다.
+   위치: System.Windows.Forms.DataGridViewRowCollection.Clear()
+   위치: EldigmPlusApp.SubForm.Sys.SysCode.FrmSysCode.setDataBind_grideView1(String pScodeGrp) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\SysCode\FrmSysCode.cs:줄 219
+2020-09-16 14:08:28-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::pScodeGrp=[AlarmTime]
+2020-09-16 14:08:28-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::reMsg=[[검색 성공]]
+2020-09-16 14:08:28-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail):: 
+System.InvalidOperationException: DataGridView 컨트롤이 변경 알림을 지원하고 삭제를 허용하는 IBindingList에 데이터 바인딩된 경우가 아니면 행 컬렉션을 프로그래밍 방식으로 지울 수 없습니다.
+   위치: System.Windows.Forms.DataGridViewRowCollection.Clear()
+   위치: EldigmPlusApp.SubForm.Sys.SysCode.FrmSysCode.setDataBind_grideView1(String pScodeGrp) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\SysCode\FrmSysCode.cs:줄 219
+2020-09-16 14:08:28-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::pScodeGrp=[LabInfoType]
+2020-09-16 14:08:28-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::reMsg=[[검색 성공]]
+2020-09-16 14:08:28-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail):: 
+System.InvalidOperationException: DataGridView 컨트롤이 변경 알림을 지원하고 삭제를 허용하는 IBindingList에 데이터 바인딩된 경우가 아니면 행 컬렉션을 프로그래밍 방식으로 지울 수 없습니다.
+   위치: System.Windows.Forms.DataGridViewRowCollection.Clear()
+   위치: EldigmPlusApp.SubForm.Sys.SysCode.FrmSysCode.setDataBind_grideView1(String pScodeGrp) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\SysCode\FrmSysCode.cs:줄 219
+2020-09-16 14:08:29-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::pScodeGrp=[AlarmTime]
+2020-09-16 14:08:29-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::reMsg=[[검색 성공]]
+2020-09-16 14:08:29-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail):: 
+System.InvalidOperationException: DataGridView 컨트롤이 변경 알림을 지원하고 삭제를 허용하는 IBindingList에 데이터 바인딩된 경우가 아니면 행 컬렉션을 프로그래밍 방식으로 지울 수 없습니다.
+   위치: System.Windows.Forms.DataGridViewRowCollection.Clear()
+   위치: EldigmPlusApp.SubForm.Sys.SysCode.FrmSysCode.setDataBind_grideView1(String pScodeGrp) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\SysCode\FrmSysCode.cs:줄 219
+2020-09-16 14:08:30-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::pScodeGrp=[LoginDvcType]
+2020-09-16 14:08:30-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::reMsg=[[검색 성공]]
+2020-09-16 14:08:30-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail):: 
+System.InvalidOperationException: DataGridView 컨트롤이 변경 알림을 지원하고 삭제를 허용하는 IBindingList에 데이터 바인딩된 경우가 아니면 행 컬렉션을 프로그래밍 방식으로 지울 수 없습니다.
+   위치: System.Windows.Forms.DataGridViewRowCollection.Clear()
+   위치: EldigmPlusApp.SubForm.Sys.SysCode.FrmSysCode.setDataBind_grideView1(String pScodeGrp) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\SysCode\FrmSysCode.cs:줄 219
+2020-09-16 14:09:18-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::pScodeGrp=[PC]
+2020-09-16 14:09:18-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::reMsg=[]
+2020-09-16 14:09:18-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail):: 
+System.Net.WebException: 작업 시간이 초과되었습니다.
+   위치: System.Web.Services.Protocols.WebClientProtocol.GetWebResponse(WebRequest request)
+   위치: System.Web.Services.Protocols.HttpWebClientProtocol.GetWebResponse(WebRequest request)
+   위치: System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke(String methodName, Object[] parameters)
+   위치: EldigmPlusApp.WsSCodeGrp.WsSysCodeGrp.fSysCodeSearch(String _scodeGrp, String pScode_Nm, DataSysCode[]& reList, String& reMsg) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\Web References\WsSCodeGrp\Reference.cs:줄 366
+   위치: EldigmPlusApp.SubForm.Sys.SysCode.FrmSysCode.btnSearch_Click(Object sender, EventArgs e) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\SysCode\FrmSysCode.cs:줄 513
+2020-09-16 14:13:40-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::pScodeGrp=[텍]
+2020-09-16 14:13:41-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::reMsg=[]
+2020-09-16 14:13:42-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail):: 
+System.Net.WebException: 요청이 중단되었습니다. 작업 시간이 초과되었습니다.
+   위치: System.Web.Services.Protocols.WebClientProtocol.GetWebResponse(WebRequest request)
+   위치: System.Web.Services.Protocols.HttpWebClientProtocol.GetWebResponse(WebRequest request)
+   위치: System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke(String methodName, Object[] parameters)
+   위치: EldigmPlusApp.WsSCodeGrp.WsSysCodeGrp.fSysCodeSearch(String _scodeGrp, String pScode_Nm, DataSysCode[]& reList, String& reMsg) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\Web References\WsSCodeGrp\Reference.cs:줄 366
+   위치: EldigmPlusApp.SubForm.Sys.SysCode.FrmSysCode.btnSearch_Click(Object sender, EventArgs e) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\SysCode\FrmSysCode.cs:줄 513
+2020-09-16 14:17:00-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::pScodeGrp=[텍]
+2020-09-16 14:17:00-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::reMsg=[]
+2020-09-16 14:17:01-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail):: 
+System.Net.WebException: 요청이 중단되었습니다. 작업 시간이 초과되었습니다.
+   위치: System.Web.Services.Protocols.WebClientProtocol.GetWebResponse(WebRequest request)
+   위치: System.Web.Services.Protocols.HttpWebClientProtocol.GetWebResponse(WebRequest request)
+   위치: System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke(String methodName, Object[] parameters)
+   위치: EldigmPlusApp.WsSCodeGrp.WsSysCodeGrp.fSysCodeSearch(String _scodeGrp, String pScode_Nm, DataSysCode[]& reList, String& reMsg) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\Web References\WsSCodeGrp\Reference.cs:줄 366
+   위치: EldigmPlusApp.SubForm.Sys.SysCode.FrmSysCode.btnSearch_Click(Object sender, EventArgs e) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\SysCode\FrmSysCode.cs:줄 513
+2020-09-16 14:17:45-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::pScodeGrp=[텍]
+2020-09-16 14:17:45-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::reMsg=[]
+2020-09-16 14:17:45-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail):: 
+System.Net.WebException: 요청이 중단되었습니다. 작업 시간이 초과되었습니다.
+   위치: System.Web.Services.Protocols.WebClientProtocol.GetWebResponse(WebRequest request)
+   위치: System.Web.Services.Protocols.HttpWebClientProtocol.GetWebResponse(WebRequest request)
+   위치: System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke(String methodName, Object[] parameters)
+   위치: EldigmPlusApp.WsSCodeGrp.WsSysCodeGrp.fSysCodeSearch(String _scodeGrp, String pScode_Nm, DataSysCode[]& reList, String& reMsg) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\Web References\WsSCodeGrp\Reference.cs:줄 366
+   위치: EldigmPlusApp.SubForm.Sys.SysCode.FrmSysCode.btnSearch_Click(Object sender, EventArgs e) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\SysCode\FrmSysCode.cs:줄 513
+2020-09-16 14:18:01-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::pScodeGrp=[텍]
+2020-09-16 14:18:01-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::reMsg=[]
+2020-09-16 14:18:01-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail):: 
+System.Net.WebException: 요청이 중단되었습니다. 작업 시간이 초과되었습니다.
+   위치: System.Web.Services.Protocols.WebClientProtocol.GetWebResponse(WebRequest request)
+   위치: System.Web.Services.Protocols.HttpWebClientProtocol.GetWebResponse(WebRequest request)
+   위치: System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke(String methodName, Object[] parameters)
+   위치: EldigmPlusApp.WsSCodeGrp.WsSysCodeGrp.fSysCodeSearch(String _scodeGrp, String pScode_Nm, DataSysCode[]& reList, String& reMsg) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\Web References\WsSCodeGrp\Reference.cs:줄 366
+   위치: EldigmPlusApp.SubForm.Sys.SysCode.FrmSysCode.btnSearch_Click(Object sender, EventArgs e) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\SysCode\FrmSysCode.cs:줄 513
+2020-09-16 14:19:16-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::pScodeGrp=[텍]
+2020-09-16 14:19:16-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::reMsg=[[검색 성공]]
+2020-09-16 14:19:16-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail):: 
+System.InvalidOperationException: DataGridView 컨트롤이 변경 알림을 지원하고 삭제를 허용하는 IBindingList에 데이터 바인딩된 경우가 아니면 행 컬렉션을 프로그래밍 방식으로 지울 수 없습니다.
+   위치: System.Windows.Forms.DataGridViewRowCollection.Clear()
+   위치: EldigmPlusApp.SubForm.Sys.SysCode.FrmSysCode.btnSearch_Click(Object sender, EventArgs e) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\SysCode\FrmSysCode.cs:줄 521
+2020-09-16 14:19:16-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::pScodeGrp=[텍]
+2020-09-16 14:19:16-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::reMsg=[[검색 성공]]
+2020-09-16 14:19:16-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail):: 
+System.InvalidOperationException: DataGridView 컨트롤이 변경 알림을 지원하고 삭제를 허용하는 IBindingList에 데이터 바인딩된 경우가 아니면 행 컬렉션을 프로그래밍 방식으로 지울 수 없습니다.
+   위치: System.Windows.Forms.DataGridViewRowCollection.Clear()
+   위치: EldigmPlusApp.SubForm.Sys.SysCode.FrmSysCode.btnSearch_Click(Object sender, EventArgs e) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\SysCode\FrmSysCode.cs:줄 521
+2020-09-16 14:19:16-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::pScodeGrp=[텍]
+2020-09-16 14:19:16-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::reMsg=[[검색 성공]]
+2020-09-16 14:19:16-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail):: 
+System.InvalidOperationException: DataGridView 컨트롤이 변경 알림을 지원하고 삭제를 허용하는 IBindingList에 데이터 바인딩된 경우가 아니면 행 컬렉션을 프로그래밍 방식으로 지울 수 없습니다.
+   위치: System.Windows.Forms.DataGridViewRowCollection.Clear()
+   위치: EldigmPlusApp.SubForm.Sys.SysCode.FrmSysCode.btnSearch_Click(Object sender, EventArgs e) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\SysCode\FrmSysCode.cs:줄 521
+2020-09-16 14:19:21-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::pScodeGrp=[AlarmTime]
+2020-09-16 14:19:21-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::reMsg=[[검색 성공]]
+2020-09-16 14:19:21-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail):: 
+System.InvalidOperationException: DataGridView 컨트롤이 변경 알림을 지원하고 삭제를 허용하는 IBindingList에 데이터 바인딩된 경우가 아니면 행 컬렉션을 프로그래밍 방식으로 지울 수 없습니다.
+   위치: System.Windows.Forms.DataGridViewRowCollection.Clear()
+   위치: EldigmPlusApp.SubForm.Sys.SysCode.FrmSysCode.setDataBind_grideView1(String pScodeGrp) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\SysCode\FrmSysCode.cs:줄 219
+2020-09-16 14:19:21-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::pScodeGrp=[LoginDvcType]
+2020-09-16 14:19:21-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::reMsg=[[검색 성공]]
+2020-09-16 14:19:21-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail):: 
+System.InvalidOperationException: DataGridView 컨트롤이 변경 알림을 지원하고 삭제를 허용하는 IBindingList에 데이터 바인딩된 경우가 아니면 행 컬렉션을 프로그래밍 방식으로 지울 수 없습니다.
+   위치: System.Windows.Forms.DataGridViewRowCollection.Clear()
+   위치: EldigmPlusApp.SubForm.Sys.SysCode.FrmSysCode.setDataBind_grideView1(String pScodeGrp) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\SysCode\FrmSysCode.cs:줄 219
+2020-09-16 14:19:21-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::pScodeGrp=[AgreeUInfoCheck]
+2020-09-16 14:19:21-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::reMsg=[[검색 성공]]
+2020-09-16 14:19:21-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail):: 
+System.InvalidOperationException: DataGridView 컨트롤이 변경 알림을 지원하고 삭제를 허용하는 IBindingList에 데이터 바인딩된 경우가 아니면 행 컬렉션을 프로그래밍 방식으로 지울 수 없습니다.
+   위치: System.Windows.Forms.DataGridViewRowCollection.Clear()
+   위치: EldigmPlusApp.SubForm.Sys.SysCode.FrmSysCode.setDataBind_grideView1(String pScodeGrp) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\SysCode\FrmSysCode.cs:줄 219
+2020-09-16 14:19:22-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::pScodeGrp=[CoType]
+2020-09-16 14:19:22-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::reMsg=[[검색 성공]]
+2020-09-16 14:19:22-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail):: 
+System.InvalidOperationException: DataGridView 컨트롤이 변경 알림을 지원하고 삭제를 허용하는 IBindingList에 데이터 바인딩된 경우가 아니면 행 컬렉션을 프로그래밍 방식으로 지울 수 없습니다.
+   위치: System.Windows.Forms.DataGridViewRowCollection.Clear()
+   위치: EldigmPlusApp.SubForm.Sys.SysCode.FrmSysCode.setDataBind_grideView1(String pScodeGrp) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\SysCode\FrmSysCode.cs:줄 219
+2020-09-16 14:19:22-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::pScodeGrp=[PushType]
+2020-09-16 14:19:22-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::reMsg=[[검색 성공]]
+2020-09-16 14:19:22-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail):: 
+System.InvalidOperationException: DataGridView 컨트롤이 변경 알림을 지원하고 삭제를 허용하는 IBindingList에 데이터 바인딩된 경우가 아니면 행 컬렉션을 프로그래밍 방식으로 지울 수 없습니다.
+   위치: System.Windows.Forms.DataGridViewRowCollection.Clear()
+   위치: EldigmPlusApp.SubForm.Sys.SysCode.FrmSysCode.setDataBind_grideView1(String pScodeGrp) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\SysCode\FrmSysCode.cs:줄 219
+2020-09-16 14:19:23-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::pScodeGrp=[AgreeUInfoCheck]
+2020-09-16 14:19:23-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::reMsg=[[검색 성공]]
+2020-09-16 14:19:23-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail):: 
+System.InvalidOperationException: DataGridView 컨트롤이 변경 알림을 지원하고 삭제를 허용하는 IBindingList에 데이터 바인딩된 경우가 아니면 행 컬렉션을 프로그래밍 방식으로 지울 수 없습니다.
+   위치: System.Windows.Forms.DataGridViewRowCollection.Clear()
+   위치: EldigmPlusApp.SubForm.Sys.SysCode.FrmSysCode.setDataBind_grideView1(String pScodeGrp) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\SysCode\FrmSysCode.cs:줄 219
+2020-09-16 14:19:23-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::pScodeGrp=[LoginDvcType]
+2020-09-16 14:19:23-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::reMsg=[[검색 성공]]
+2020-09-16 14:19:23-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail):: 
+System.InvalidOperationException: DataGridView 컨트롤이 변경 알림을 지원하고 삭제를 허용하는 IBindingList에 데이터 바인딩된 경우가 아니면 행 컬렉션을 프로그래밍 방식으로 지울 수 없습니다.
+   위치: System.Windows.Forms.DataGridViewRowCollection.Clear()
+   위치: EldigmPlusApp.SubForm.Sys.SysCode.FrmSysCode.setDataBind_grideView1(String pScodeGrp) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\SysCode\FrmSysCode.cs:줄 219
+2020-09-16 14:19:24-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::pScodeGrp=[AlarmTime]
+2020-09-16 14:19:24-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::reMsg=[[검색 성공]]
+2020-09-16 14:19:24-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail):: 
+System.InvalidOperationException: DataGridView 컨트롤이 변경 알림을 지원하고 삭제를 허용하는 IBindingList에 데이터 바인딩된 경우가 아니면 행 컬렉션을 프로그래밍 방식으로 지울 수 없습니다.
+   위치: System.Windows.Forms.DataGridViewRowCollection.Clear()
+   위치: EldigmPlusApp.SubForm.Sys.SysCode.FrmSysCode.setDataBind_grideView1(String pScodeGrp) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\SysCode\FrmSysCode.cs:줄 219
+2020-09-16 14:19:24-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::pScodeGrp=[LabInfoType]
+2020-09-16 14:19:24-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::reMsg=[[검색 성공]]
+2020-09-16 14:19:24-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail):: 
+System.InvalidOperationException: DataGridView 컨트롤이 변경 알림을 지원하고 삭제를 허용하는 IBindingList에 데이터 바인딩된 경우가 아니면 행 컬렉션을 프로그래밍 방식으로 지울 수 없습니다.
+   위치: System.Windows.Forms.DataGridViewRowCollection.Clear()
+   위치: EldigmPlusApp.SubForm.Sys.SysCode.FrmSysCode.setDataBind_grideView1(String pScodeGrp) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\SysCode\FrmSysCode.cs:줄 219
+2020-09-16 14:19:31-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::pScodeGrp=[AlarmTime]
+2020-09-16 14:19:31-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::reMsg=[[검색 성공]]
+2020-09-16 14:19:31-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail):: 
+System.InvalidOperationException: DataGridView 컨트롤이 변경 알림을 지원하고 삭제를 허용하는 IBindingList에 데이터 바인딩된 경우가 아니면 행 컬렉션을 프로그래밍 방식으로 지울 수 없습니다.
+   위치: System.Windows.Forms.DataGridViewRowCollection.Clear()
+   위치: EldigmPlusApp.SubForm.Sys.SysCode.FrmSysCode.setDataBind_grideView1(String pScodeGrp) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\SysCode\FrmSysCode.cs:줄 219
+2020-09-16 14:19:32-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::pScodeGrp=[LoginDvcType]
+2020-09-16 14:19:32-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::reMsg=[[검색 성공]]
+2020-09-16 14:19:32-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail):: 
+System.InvalidOperationException: DataGridView 컨트롤이 변경 알림을 지원하고 삭제를 허용하는 IBindingList에 데이터 바인딩된 경우가 아니면 행 컬렉션을 프로그래밍 방식으로 지울 수 없습니다.
+   위치: System.Windows.Forms.DataGridViewRowCollection.Clear()
+   위치: EldigmPlusApp.SubForm.Sys.SysCode.FrmSysCode.setDataBind_grideView1(String pScodeGrp) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\SysCode\FrmSysCode.cs:줄 219
+2020-09-16 14:19:32-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::pScodeGrp=[AgreeUInfoRequired]
+2020-09-16 14:19:32-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::reMsg=[[검색 성공]]
+2020-09-16 14:19:32-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail):: 
+System.InvalidOperationException: DataGridView 컨트롤이 변경 알림을 지원하고 삭제를 허용하는 IBindingList에 데이터 바인딩된 경우가 아니면 행 컬렉션을 프로그래밍 방식으로 지울 수 없습니다.
+   위치: System.Windows.Forms.DataGridViewRowCollection.Clear()
+   위치: EldigmPlusApp.SubForm.Sys.SysCode.FrmSysCode.setDataBind_grideView1(String pScodeGrp) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\SysCode\FrmSysCode.cs:줄 219
+2020-09-16 14:19:33-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::pScodeGrp=[AgreeUInfoCheck]
+2020-09-16 14:19:33-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::reMsg=[[검색 성공]]
+2020-09-16 14:19:33-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail):: 
+System.InvalidOperationException: DataGridView 컨트롤이 변경 알림을 지원하고 삭제를 허용하는 IBindingList에 데이터 바인딩된 경우가 아니면 행 컬렉션을 프로그래밍 방식으로 지울 수 없습니다.
+   위치: System.Windows.Forms.DataGridViewRowCollection.Clear()
+   위치: EldigmPlusApp.SubForm.Sys.SysCode.FrmSysCode.setDataBind_grideView1(String pScodeGrp) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\SysCode\FrmSysCode.cs:줄 219
+2020-09-16 14:19:33-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::pScodeGrp=[PushType]
+2020-09-16 14:19:33-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::reMsg=[[검색 성공]]
+2020-09-16 14:19:33-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail):: 
+System.InvalidOperationException: DataGridView 컨트롤이 변경 알림을 지원하고 삭제를 허용하는 IBindingList에 데이터 바인딩된 경우가 아니면 행 컬렉션을 프로그래밍 방식으로 지울 수 없습니다.
+   위치: System.Windows.Forms.DataGridViewRowCollection.Clear()
+   위치: EldigmPlusApp.SubForm.Sys.SysCode.FrmSysCode.setDataBind_grideView1(String pScodeGrp) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\SysCode\FrmSysCode.cs:줄 219
+2020-09-16 14:19:33-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::pScodeGrp=[CoType]
+2020-09-16 14:19:33-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::reMsg=[[검색 성공]]
+2020-09-16 14:19:33-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail):: 
+System.InvalidOperationException: DataGridView 컨트롤이 변경 알림을 지원하고 삭제를 허용하는 IBindingList에 데이터 바인딩된 경우가 아니면 행 컬렉션을 프로그래밍 방식으로 지울 수 없습니다.
+   위치: System.Windows.Forms.DataGridViewRowCollection.Clear()
+   위치: EldigmPlusApp.SubForm.Sys.SysCode.FrmSysCode.setDataBind_grideView1(String pScodeGrp) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\SysCode\FrmSysCode.cs:줄 219
+2020-09-16 14:19:35-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::pScodeGrp=[LabInfoType]
+2020-09-16 14:19:35-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::reMsg=[[검색 성공]]
+2020-09-16 14:19:35-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail):: 
+System.InvalidOperationException: DataGridView 컨트롤이 변경 알림을 지원하고 삭제를 허용하는 IBindingList에 데이터 바인딩된 경우가 아니면 행 컬렉션을 프로그래밍 방식으로 지울 수 없습니다.
+   위치: System.Windows.Forms.DataGridViewRowCollection.Clear()
+   위치: EldigmPlusApp.SubForm.Sys.SysCode.FrmSysCode.setDataBind_grideView1(String pScodeGrp) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\SysCode\FrmSysCode.cs:줄 219
+2020-09-16 14:47:42-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::pScodeGrp=[LoginDvcType]
+2020-09-16 14:47:42-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::reMsg=[[검색 성공]]
+2020-09-16 14:47:42-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail):: 
+System.InvalidOperationException: DataGridView 컨트롤이 변경 알림을 지원하고 삭제를 허용하는 IBindingList에 데이터 바인딩된 경우가 아니면 행 컬렉션을 프로그래밍 방식으로 지울 수 없습니다.
+   위치: System.Windows.Forms.DataGridViewRowCollection.Clear()
+   위치: EldigmPlusApp.SubForm.Sys.SysCode.FrmSysCode.setDataBind_grideView1(String pScodeGrp) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\SysCode\FrmSysCode.cs:줄 290
+2020-09-16 14:47:43-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::pScodeGrp=[PC]
+2020-09-16 14:47:43-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::reMsg=[[검색 성공]]
+2020-09-16 14:47:43-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail):: 
+System.InvalidOperationException: DataGridView 컨트롤이 변경 알림을 지원하고 삭제를 허용하는 IBindingList에 데이터 바인딩된 경우가 아니면 행 컬렉션을 프로그래밍 방식으로 지울 수 없습니다.
+   위치: System.Windows.Forms.DataGridViewRowCollection.Clear()
+   위치: EldigmPlusApp.SubForm.Sys.SysCode.FrmSysCode.treeView1_AfterSelect(Object sender, TreeViewEventArgs e) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\SysCode\FrmSysCode.cs:줄 211
+2020-09-16 14:47:43-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::pScodeGrp=[LabInfoType]
+2020-09-16 14:47:43-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::reMsg=[[검색 성공]]
+2020-09-16 14:47:43-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail):: 
+System.InvalidOperationException: DataGridView 컨트롤이 변경 알림을 지원하고 삭제를 허용하는 IBindingList에 데이터 바인딩된 경우가 아니면 행 컬렉션을 프로그래밍 방식으로 지울 수 없습니다.
+   위치: System.Windows.Forms.DataGridViewRowCollection.Clear()
+   위치: EldigmPlusApp.SubForm.Sys.SysCode.FrmSysCode.setDataBind_grideView1(String pScodeGrp) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\SysCode\FrmSysCode.cs:줄 290
+2020-09-16 14:47:43-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::pScodeGrp=[AlarmTime]
+2020-09-16 14:47:43-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::reMsg=[[검색 성공]]
+2020-09-16 14:47:43-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail):: 
+System.InvalidOperationException: DataGridView 컨트롤이 변경 알림을 지원하고 삭제를 허용하는 IBindingList에 데이터 바인딩된 경우가 아니면 행 컬렉션을 프로그래밍 방식으로 지울 수 없습니다.
+   위치: System.Windows.Forms.DataGridViewRowCollection.Clear()
+   위치: EldigmPlusApp.SubForm.Sys.SysCode.FrmSysCode.setDataBind_grideView1(String pScodeGrp) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\SysCode\FrmSysCode.cs:줄 290
+2020-09-16 14:47:44-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::pScodeGrp=[LabInfoType]
+2020-09-16 14:47:44-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::reMsg=[[검색 성공]]
+2020-09-16 14:47:44-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail):: 
+System.InvalidOperationException: DataGridView 컨트롤이 변경 알림을 지원하고 삭제를 허용하는 IBindingList에 데이터 바인딩된 경우가 아니면 행 컬렉션을 프로그래밍 방식으로 지울 수 없습니다.
+   위치: System.Windows.Forms.DataGridViewRowCollection.Clear()
+   위치: EldigmPlusApp.SubForm.Sys.SysCode.FrmSysCode.setDataBind_grideView1(String pScodeGrp) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\SysCode\FrmSysCode.cs:줄 290
+2020-09-16 14:47:44-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::pScodeGrp=[AlarmTime]
+2020-09-16 14:47:44-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::reMsg=[[검색 성공]]
+2020-09-16 14:47:44-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail):: 
+System.InvalidOperationException: DataGridView 컨트롤이 변경 알림을 지원하고 삭제를 허용하는 IBindingList에 데이터 바인딩된 경우가 아니면 행 컬렉션을 프로그래밍 방식으로 지울 수 없습니다.
+   위치: System.Windows.Forms.DataGridViewRowCollection.Clear()
+   위치: EldigmPlusApp.SubForm.Sys.SysCode.FrmSysCode.setDataBind_grideView1(String pScodeGrp) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\SysCode\FrmSysCode.cs:줄 290
+2020-09-16 14:47:45-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::pScodeGrp=[LoginDvcType]
+2020-09-16 14:47:45-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::reMsg=[[검색 성공]]
+2020-09-16 14:47:45-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail):: 
+System.InvalidOperationException: DataGridView 컨트롤이 변경 알림을 지원하고 삭제를 허용하는 IBindingList에 데이터 바인딩된 경우가 아니면 행 컬렉션을 프로그래밍 방식으로 지울 수 없습니다.
+   위치: System.Windows.Forms.DataGridViewRowCollection.Clear()
+   위치: EldigmPlusApp.SubForm.Sys.SysCode.FrmSysCode.setDataBind_grideView1(String pScodeGrp) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\SysCode\FrmSysCode.cs:줄 290
+2020-09-16 14:47:46-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::pScodeGrp=[PC]
+2020-09-16 14:47:46-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::reMsg=[[검색 성공]]
+2020-09-16 14:47:46-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail):: 
+System.InvalidOperationException: DataGridView 컨트롤이 변경 알림을 지원하고 삭제를 허용하는 IBindingList에 데이터 바인딩된 경우가 아니면 행 컬렉션을 프로그래밍 방식으로 지울 수 없습니다.
+   위치: System.Windows.Forms.DataGridViewRowCollection.Clear()
+   위치: EldigmPlusApp.SubForm.Sys.SysCode.FrmSysCode.treeView1_AfterSelect(Object sender, TreeViewEventArgs e) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\SysCode\FrmSysCode.cs:줄 211
+2020-09-16 14:47:46-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::pScodeGrp=[AgreeUInfoRequired]
+2020-09-16 14:47:46-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::reMsg=[[검색 성공]]
+2020-09-16 14:47:46-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail):: 
+System.InvalidOperationException: DataGridView 컨트롤이 변경 알림을 지원하고 삭제를 허용하는 IBindingList에 데이터 바인딩된 경우가 아니면 행 컬렉션을 프로그래밍 방식으로 지울 수 없습니다.
+   위치: System.Windows.Forms.DataGridViewRowCollection.Clear()
+   위치: EldigmPlusApp.SubForm.Sys.SysCode.FrmSysCode.setDataBind_grideView1(String pScodeGrp) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\SysCode\FrmSysCode.cs:줄 290
+2020-09-16 14:47:48-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::pScodeGrp=[AgreeUInfoCheck]
+2020-09-16 14:47:48-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::reMsg=[[검색 성공]]
+2020-09-16 14:47:48-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail):: 
+System.InvalidOperationException: DataGridView 컨트롤이 변경 알림을 지원하고 삭제를 허용하는 IBindingList에 데이터 바인딩된 경우가 아니면 행 컬렉션을 프로그래밍 방식으로 지울 수 없습니다.
+   위치: System.Windows.Forms.DataGridViewRowCollection.Clear()
+   위치: EldigmPlusApp.SubForm.Sys.SysCode.FrmSysCode.setDataBind_grideView1(String pScodeGrp) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\SysCode\FrmSysCode.cs:줄 290
+2020-09-16 14:47:49-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::pScodeGrp=[CoType]
+2020-09-16 14:47:49-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::reMsg=[[검색 성공]]
+2020-09-16 14:47:49-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail):: 
+System.InvalidOperationException: DataGridView 컨트롤이 변경 알림을 지원하고 삭제를 허용하는 IBindingList에 데이터 바인딩된 경우가 아니면 행 컬렉션을 프로그래밍 방식으로 지울 수 없습니다.
+   위치: System.Windows.Forms.DataGridViewRowCollection.Clear()
+   위치: EldigmPlusApp.SubForm.Sys.SysCode.FrmSysCode.setDataBind_grideView1(String pScodeGrp) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\SysCode\FrmSysCode.cs:줄 290
+2020-09-16 14:47:49-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::pScodeGrp=[PushType]
+2020-09-16 14:47:49-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::reMsg=[[검색 성공]]
+2020-09-16 14:47:49-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail):: 
+System.InvalidOperationException: DataGridView 컨트롤이 변경 알림을 지원하고 삭제를 허용하는 IBindingList에 데이터 바인딩된 경우가 아니면 행 컬렉션을 프로그래밍 방식으로 지울 수 없습니다.
+   위치: System.Windows.Forms.DataGridViewRowCollection.Clear()
+   위치: EldigmPlusApp.SubForm.Sys.SysCode.FrmSysCode.setDataBind_grideView1(String pScodeGrp) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\SysCode\FrmSysCode.cs:줄 290
+2020-09-16 14:47:50-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::pScodeGrp=[AgreeUInfoCheck]
+2020-09-16 14:47:50-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::reMsg=[[검색 성공]]
+2020-09-16 14:47:50-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail):: 
+System.InvalidOperationException: DataGridView 컨트롤이 변경 알림을 지원하고 삭제를 허용하는 IBindingList에 데이터 바인딩된 경우가 아니면 행 컬렉션을 프로그래밍 방식으로 지울 수 없습니다.
+   위치: System.Windows.Forms.DataGridViewRowCollection.Clear()
+   위치: EldigmPlusApp.SubForm.Sys.SysCode.FrmSysCode.setDataBind_grideView1(String pScodeGrp) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\SysCode\FrmSysCode.cs:줄 290
+2020-09-16 14:47:50-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::pScodeGrp=[AgreeUInfoRequired]
+2020-09-16 14:47:50-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::reMsg=[[검색 성공]]
+2020-09-16 14:47:50-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail):: 
+System.InvalidOperationException: DataGridView 컨트롤이 변경 알림을 지원하고 삭제를 허용하는 IBindingList에 데이터 바인딩된 경우가 아니면 행 컬렉션을 프로그래밍 방식으로 지울 수 없습니다.
+   위치: System.Windows.Forms.DataGridViewRowCollection.Clear()
+   위치: EldigmPlusApp.SubForm.Sys.SysCode.FrmSysCode.setDataBind_grideView1(String pScodeGrp) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\SysCode\FrmSysCode.cs:줄 290
+2020-09-16 14:47:51-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::pScodeGrp=[LoginDvcType]
+2020-09-16 14:47:51-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::reMsg=[[검색 성공]]
+2020-09-16 14:47:51-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail):: 
+System.InvalidOperationException: DataGridView 컨트롤이 변경 알림을 지원하고 삭제를 허용하는 IBindingList에 데이터 바인딩된 경우가 아니면 행 컬렉션을 프로그래밍 방식으로 지울 수 없습니다.
+   위치: System.Windows.Forms.DataGridViewRowCollection.Clear()
+   위치: EldigmPlusApp.SubForm.Sys.SysCode.FrmSysCode.setDataBind_grideView1(String pScodeGrp) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\SysCode\FrmSysCode.cs:줄 290
+2020-09-16 14:47:51-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::pScodeGrp=[PC]
+2020-09-16 14:47:51-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::reMsg=[[검색 성공]]
+2020-09-16 14:47:51-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail):: 
+System.InvalidOperationException: DataGridView 컨트롤이 변경 알림을 지원하고 삭제를 허용하는 IBindingList에 데이터 바인딩된 경우가 아니면 행 컬렉션을 프로그래밍 방식으로 지울 수 없습니다.
+   위치: System.Windows.Forms.DataGridViewRowCollection.Clear()
+   위치: EldigmPlusApp.SubForm.Sys.SysCode.FrmSysCode.treeView1_AfterSelect(Object sender, TreeViewEventArgs e) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\SysCode\FrmSysCode.cs:줄 211
+2020-09-16 14:47:51-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::pScodeGrp=[AgreeUInfoCheck]
+2020-09-16 14:47:51-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::reMsg=[[검색 성공]]
+2020-09-16 14:47:51-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail):: 
+System.InvalidOperationException: DataGridView 컨트롤이 변경 알림을 지원하고 삭제를 허용하는 IBindingList에 데이터 바인딩된 경우가 아니면 행 컬렉션을 프로그래밍 방식으로 지울 수 없습니다.
+   위치: System.Windows.Forms.DataGridViewRowCollection.Clear()
+   위치: EldigmPlusApp.SubForm.Sys.SysCode.FrmSysCode.setDataBind_grideView1(String pScodeGrp) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\SysCode\FrmSysCode.cs:줄 290
+2020-09-16 14:48:15-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::pScodeGrp=[LoginDvcType]
+2020-09-16 14:48:15-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::reMsg=[[검색 성공]]
+2020-09-16 14:48:15-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail):: 
+System.InvalidOperationException: DataGridView 컨트롤이 변경 알림을 지원하고 삭제를 허용하는 IBindingList에 데이터 바인딩된 경우가 아니면 행 컬렉션을 프로그래밍 방식으로 지울 수 없습니다.
+   위치: System.Windows.Forms.DataGridViewRowCollection.Clear()
+   위치: EldigmPlusApp.SubForm.Sys.SysCode.FrmSysCode.setDataBind_grideView1(String pScodeGrp) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\SysCode\FrmSysCode.cs:줄 290
+2020-09-16 14:48:15-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::pScodeGrp=[p]
+2020-09-16 14:48:15-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::reMsg=[[검색 성공]]
+2020-09-16 14:48:15-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail):: 
+System.InvalidOperationException: DataGridView 컨트롤이 변경 알림을 지원하고 삭제를 허용하는 IBindingList에 데이터 바인딩된 경우가 아니면 행 컬렉션을 프로그래밍 방식으로 지울 수 없습니다.
+   위치: System.Windows.Forms.DataGridViewRowCollection.Clear()
+   위치: EldigmPlusApp.SubForm.Sys.SysCode.FrmSysCode.treeView1_AfterSelect(Object sender, TreeViewEventArgs e) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\SysCode\FrmSysCode.cs:줄 211
+2020-09-16 14:48:15-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::pScodeGrp=[AlarmTime]
+2020-09-16 14:48:15-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::reMsg=[[검색 성공]]
+2020-09-16 14:48:15-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail):: 
+System.InvalidOperationException: DataGridView 컨트롤이 변경 알림을 지원하고 삭제를 허용하는 IBindingList에 데이터 바인딩된 경우가 아니면 행 컬렉션을 프로그래밍 방식으로 지울 수 없습니다.
+   위치: System.Windows.Forms.DataGridViewRowCollection.Clear()
+   위치: EldigmPlusApp.SubForm.Sys.SysCode.FrmSysCode.setDataBind_grideView1(String pScodeGrp) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\SysCode\FrmSysCode.cs:줄 290
+2020-09-16 14:48:17-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::pScodeGrp=[LabInfoType]
+2020-09-16 14:48:17-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::reMsg=[[검색 성공]]
+2020-09-16 14:48:17-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail):: 
+System.InvalidOperationException: DataGridView 컨트롤이 변경 알림을 지원하고 삭제를 허용하는 IBindingList에 데이터 바인딩된 경우가 아니면 행 컬렉션을 프로그래밍 방식으로 지울 수 없습니다.
+   위치: System.Windows.Forms.DataGridViewRowCollection.Clear()
+   위치: EldigmPlusApp.SubForm.Sys.SysCode.FrmSysCode.setDataBind_grideView1(String pScodeGrp) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\SysCode\FrmSysCode.cs:줄 290
+2020-09-16 14:48:17-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::pScodeGrp=[AlarmTime]
+2020-09-16 14:48:17-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::reMsg=[[검색 성공]]
+2020-09-16 14:48:17-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail):: 
+System.InvalidOperationException: DataGridView 컨트롤이 변경 알림을 지원하고 삭제를 허용하는 IBindingList에 데이터 바인딩된 경우가 아니면 행 컬렉션을 프로그래밍 방식으로 지울 수 없습니다.
+   위치: System.Windows.Forms.DataGridViewRowCollection.Clear()
+   위치: EldigmPlusApp.SubForm.Sys.SysCode.FrmSysCode.setDataBind_grideView1(String pScodeGrp) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\SysCode\FrmSysCode.cs:줄 290
+2020-09-16 14:48:18-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::pScodeGrp=[LoginDvcType]
+2020-09-16 14:48:18-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::reMsg=[[검색 성공]]
+2020-09-16 14:48:18-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail):: 
+System.InvalidOperationException: DataGridView 컨트롤이 변경 알림을 지원하고 삭제를 허용하는 IBindingList에 데이터 바인딩된 경우가 아니면 행 컬렉션을 프로그래밍 방식으로 지울 수 없습니다.
+   위치: System.Windows.Forms.DataGridViewRowCollection.Clear()
+   위치: EldigmPlusApp.SubForm.Sys.SysCode.FrmSysCode.setDataBind_grideView1(String pScodeGrp) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\SysCode\FrmSysCode.cs:줄 290
+2020-09-16 14:48:18-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::pScodeGrp=[p]
+2020-09-16 14:48:18-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::reMsg=[[검색 성공]]
+2020-09-16 14:48:18-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail):: 
+System.InvalidOperationException: DataGridView 컨트롤이 변경 알림을 지원하고 삭제를 허용하는 IBindingList에 데이터 바인딩된 경우가 아니면 행 컬렉션을 프로그래밍 방식으로 지울 수 없습니다.
+   위치: System.Windows.Forms.DataGridViewRowCollection.Clear()
+   위치: EldigmPlusApp.SubForm.Sys.SysCode.FrmSysCode.treeView1_AfterSelect(Object sender, TreeViewEventArgs e) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\SysCode\FrmSysCode.cs:줄 211
+2020-09-16 14:48:18-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::pScodeGrp=[AgreeUInfoRequired]
+2020-09-16 14:48:18-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::reMsg=[[검색 성공]]
+2020-09-16 14:48:18-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail):: 
+System.InvalidOperationException: DataGridView 컨트롤이 변경 알림을 지원하고 삭제를 허용하는 IBindingList에 데이터 바인딩된 경우가 아니면 행 컬렉션을 프로그래밍 방식으로 지울 수 없습니다.
+   위치: System.Windows.Forms.DataGridViewRowCollection.Clear()
+   위치: EldigmPlusApp.SubForm.Sys.SysCode.FrmSysCode.setDataBind_grideView1(String pScodeGrp) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\SysCode\FrmSysCode.cs:줄 290
+2020-09-16 14:48:18-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::pScodeGrp=[AgreeUInfoCheck]
+2020-09-16 14:48:18-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::reMsg=[[검색 성공]]
+2020-09-16 14:48:18-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail):: 
+System.InvalidOperationException: DataGridView 컨트롤이 변경 알림을 지원하고 삭제를 허용하는 IBindingList에 데이터 바인딩된 경우가 아니면 행 컬렉션을 프로그래밍 방식으로 지울 수 없습니다.
+   위치: System.Windows.Forms.DataGridViewRowCollection.Clear()
+   위치: EldigmPlusApp.SubForm.Sys.SysCode.FrmSysCode.setDataBind_grideView1(String pScodeGrp) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\SysCode\FrmSysCode.cs:줄 290
+2020-09-16 14:48:19-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::pScodeGrp=[AgreeUInfoRequired]
+2020-09-16 14:48:19-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::reMsg=[[검색 성공]]
+2020-09-16 14:48:19-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail):: 
+System.InvalidOperationException: DataGridView 컨트롤이 변경 알림을 지원하고 삭제를 허용하는 IBindingList에 데이터 바인딩된 경우가 아니면 행 컬렉션을 프로그래밍 방식으로 지울 수 없습니다.
+   위치: System.Windows.Forms.DataGridViewRowCollection.Clear()
+   위치: EldigmPlusApp.SubForm.Sys.SysCode.FrmSysCode.setDataBind_grideView1(String pScodeGrp) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\SysCode\FrmSysCode.cs:줄 290
+2020-09-16 14:48:20-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::pScodeGrp=[LoginDvcType]
+2020-09-16 14:48:20-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::reMsg=[[검색 성공]]
+2020-09-16 14:48:20-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail):: 
+System.InvalidOperationException: DataGridView 컨트롤이 변경 알림을 지원하고 삭제를 허용하는 IBindingList에 데이터 바인딩된 경우가 아니면 행 컬렉션을 프로그래밍 방식으로 지울 수 없습니다.
+   위치: System.Windows.Forms.DataGridViewRowCollection.Clear()
+   위치: EldigmPlusApp.SubForm.Sys.SysCode.FrmSysCode.setDataBind_grideView1(String pScodeGrp) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\SysCode\FrmSysCode.cs:줄 290
+2020-09-16 14:48:20-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::pScodeGrp=[p]
+2020-09-16 14:48:20-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::reMsg=[[검색 성공]]
+2020-09-16 14:48:20-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail):: 
+System.InvalidOperationException: DataGridView 컨트롤이 변경 알림을 지원하고 삭제를 허용하는 IBindingList에 데이터 바인딩된 경우가 아니면 행 컬렉션을 프로그래밍 방식으로 지울 수 없습니다.
+   위치: System.Windows.Forms.DataGridViewRowCollection.Clear()
+   위치: EldigmPlusApp.SubForm.Sys.SysCode.FrmSysCode.treeView1_AfterSelect(Object sender, TreeViewEventArgs e) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\SysCode\FrmSysCode.cs:줄 211
+2020-09-16 14:48:20-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::pScodeGrp=[AlarmTime]
+2020-09-16 14:48:20-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::reMsg=[[검색 성공]]
+2020-09-16 14:48:20-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail):: 
+System.InvalidOperationException: DataGridView 컨트롤이 변경 알림을 지원하고 삭제를 허용하는 IBindingList에 데이터 바인딩된 경우가 아니면 행 컬렉션을 프로그래밍 방식으로 지울 수 없습니다.
+   위치: System.Windows.Forms.DataGridViewRowCollection.Clear()
+   위치: EldigmPlusApp.SubForm.Sys.SysCode.FrmSysCode.setDataBind_grideView1(String pScodeGrp) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\SysCode\FrmSysCode.cs:줄 290
+2020-09-16 14:48:23-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::pScodeGrp=[AgreeUInfoCheck]
+2020-09-16 14:48:23-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::reMsg=[[검색 성공]]
+2020-09-16 14:48:23-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail):: 
+System.InvalidOperationException: DataGridView 컨트롤이 변경 알림을 지원하고 삭제를 허용하는 IBindingList에 데이터 바인딩된 경우가 아니면 행 컬렉션을 프로그래밍 방식으로 지울 수 없습니다.
+   위치: System.Windows.Forms.DataGridViewRowCollection.Clear()
+   위치: EldigmPlusApp.SubForm.Sys.SysCode.FrmSysCode.setDataBind_grideView1(String pScodeGrp) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\SysCode\FrmSysCode.cs:줄 290
+2020-09-16 14:48:23-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::pScodeGrp=[CoType]
+2020-09-16 14:48:23-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::reMsg=[[검색 성공]]
+2020-09-16 14:48:23-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail):: 
+System.InvalidOperationException: DataGridView 컨트롤이 변경 알림을 지원하고 삭제를 허용하는 IBindingList에 데이터 바인딩된 경우가 아니면 행 컬렉션을 프로그래밍 방식으로 지울 수 없습니다.
+   위치: System.Windows.Forms.DataGridViewRowCollection.Clear()
+   위치: EldigmPlusApp.SubForm.Sys.SysCode.FrmSysCode.setDataBind_grideView1(String pScodeGrp) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\SysCode\FrmSysCode.cs:줄 290
+2020-09-16 14:48:24-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::pScodeGrp=[PushType]
+2020-09-16 14:48:24-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::reMsg=[[검색 성공]]
+2020-09-16 14:48:24-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail):: 
+System.InvalidOperationException: DataGridView 컨트롤이 변경 알림을 지원하고 삭제를 허용하는 IBindingList에 데이터 바인딩된 경우가 아니면 행 컬렉션을 프로그래밍 방식으로 지울 수 없습니다.
+   위치: System.Windows.Forms.DataGridViewRowCollection.Clear()
+   위치: EldigmPlusApp.SubForm.Sys.SysCode.FrmSysCode.setDataBind_grideView1(String pScodeGrp) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\SysCode\FrmSysCode.cs:줄 290
+2020-09-16 14:48:25-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::pScodeGrp=[LoginDvcType]
+2020-09-16 14:48:25-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::reMsg=[[검색 성공]]
+2020-09-16 14:48:25-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail):: 
+System.InvalidOperationException: DataGridView 컨트롤이 변경 알림을 지원하고 삭제를 허용하는 IBindingList에 데이터 바인딩된 경우가 아니면 행 컬렉션을 프로그래밍 방식으로 지울 수 없습니다.
+   위치: System.Windows.Forms.DataGridViewRowCollection.Clear()
+   위치: EldigmPlusApp.SubForm.Sys.SysCode.FrmSysCode.setDataBind_grideView1(String pScodeGrp) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\SysCode\FrmSysCode.cs:줄 290
+2020-09-16 14:48:25-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::pScodeGrp=[p]
+2020-09-16 14:48:25-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::reMsg=[[검색 성공]]
+2020-09-16 14:48:25-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail):: 
+System.InvalidOperationException: DataGridView 컨트롤이 변경 알림을 지원하고 삭제를 허용하는 IBindingList에 데이터 바인딩된 경우가 아니면 행 컬렉션을 프로그래밍 방식으로 지울 수 없습니다.
+   위치: System.Windows.Forms.DataGridViewRowCollection.Clear()
+   위치: EldigmPlusApp.SubForm.Sys.SysCode.FrmSysCode.treeView1_AfterSelect(Object sender, TreeViewEventArgs e) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\SysCode\FrmSysCode.cs:줄 211
+2020-09-16 14:48:25-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::pScodeGrp=[AlarmTime]
+2020-09-16 14:48:25-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::reMsg=[[검색 성공]]
+2020-09-16 14:48:25-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail):: 
+System.InvalidOperationException: DataGridView 컨트롤이 변경 알림을 지원하고 삭제를 허용하는 IBindingList에 데이터 바인딩된 경우가 아니면 행 컬렉션을 프로그래밍 방식으로 지울 수 없습니다.
+   위치: System.Windows.Forms.DataGridViewRowCollection.Clear()
+   위치: EldigmPlusApp.SubForm.Sys.SysCode.FrmSysCode.setDataBind_grideView1(String pScodeGrp) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\SysCode\FrmSysCode.cs:줄 290
+2020-09-16 14:48:25-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::pScodeGrp=[LabInfoType]
+2020-09-16 14:48:25-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::reMsg=[[검색 성공]]
+2020-09-16 14:48:25-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail):: 
+System.InvalidOperationException: DataGridView 컨트롤이 변경 알림을 지원하고 삭제를 허용하는 IBindingList에 데이터 바인딩된 경우가 아니면 행 컬렉션을 프로그래밍 방식으로 지울 수 없습니다.
+   위치: System.Windows.Forms.DataGridViewRowCollection.Clear()
+   위치: EldigmPlusApp.SubForm.Sys.SysCode.FrmSysCode.setDataBind_grideView1(String pScodeGrp) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\SysCode\FrmSysCode.cs:줄 290
+2020-09-16 14:48:31-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::pScodeGrp=[AlarmTime]
+2020-09-16 14:48:31-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::reMsg=[[검색 성공]]
+2020-09-16 14:48:31-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail):: 
+System.InvalidOperationException: DataGridView 컨트롤이 변경 알림을 지원하고 삭제를 허용하는 IBindingList에 데이터 바인딩된 경우가 아니면 행 컬렉션을 프로그래밍 방식으로 지울 수 없습니다.
+   위치: System.Windows.Forms.DataGridViewRowCollection.Clear()
+   위치: EldigmPlusApp.SubForm.Sys.SysCode.FrmSysCode.setDataBind_grideView1(String pScodeGrp) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\SysCode\FrmSysCode.cs:줄 290
+2020-09-16 14:48:32-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::pScodeGrp=[LoginDvcType]
+2020-09-16 14:48:32-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::reMsg=[[검색 성공]]
+2020-09-16 14:48:32-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail):: 
+System.InvalidOperationException: DataGridView 컨트롤이 변경 알림을 지원하고 삭제를 허용하는 IBindingList에 데이터 바인딩된 경우가 아니면 행 컬렉션을 프로그래밍 방식으로 지울 수 없습니다.
+   위치: System.Windows.Forms.DataGridViewRowCollection.Clear()
+   위치: EldigmPlusApp.SubForm.Sys.SysCode.FrmSysCode.setDataBind_grideView1(String pScodeGrp) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\SysCode\FrmSysCode.cs:줄 290
+2020-09-16 14:48:40-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::pScodeGrp=[p]
+2020-09-16 14:48:40-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::reMsg=[[검색 성공]]
+2020-09-16 14:48:40-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail):: 
+System.InvalidOperationException: DataGridView 컨트롤이 변경 알림을 지원하고 삭제를 허용하는 IBindingList에 데이터 바인딩된 경우가 아니면 행 컬렉션을 프로그래밍 방식으로 지울 수 없습니다.
+   위치: System.Windows.Forms.DataGridViewRowCollection.Clear()
+   위치: EldigmPlusApp.SubForm.Sys.SysCode.FrmSysCode.treeView1_AfterSelect(Object sender, TreeViewEventArgs e) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\SysCode\FrmSysCode.cs:줄 211
+2020-09-16 14:48:40-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::pScodeGrp=[AgreeUInfoRequired]
+2020-09-16 14:48:40-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::reMsg=[[검색 성공]]
+2020-09-16 14:48:40-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail):: 
+System.InvalidOperationException: DataGridView 컨트롤이 변경 알림을 지원하고 삭제를 허용하는 IBindingList에 데이터 바인딩된 경우가 아니면 행 컬렉션을 프로그래밍 방식으로 지울 수 없습니다.
+   위치: System.Windows.Forms.DataGridViewRowCollection.Clear()
+   위치: EldigmPlusApp.SubForm.Sys.SysCode.FrmSysCode.setDataBind_grideView1(String pScodeGrp) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\SysCode\FrmSysCode.cs:줄 290
+2020-09-16 14:48:50-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::pScodeGrp=[AlarmTime]
+2020-09-16 14:48:50-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::reMsg=[[검색 성공]]
+2020-09-16 14:48:50-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail):: 
+System.InvalidOperationException: DataGridView 컨트롤이 변경 알림을 지원하고 삭제를 허용하는 IBindingList에 데이터 바인딩된 경우가 아니면 행 컬렉션을 프로그래밍 방식으로 지울 수 없습니다.
+   위치: System.Windows.Forms.DataGridViewRowCollection.Clear()
+   위치: EldigmPlusApp.SubForm.Sys.SysCode.FrmSysCode.setDataBind_grideView1(String pScodeGrp) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\SysCode\FrmSysCode.cs:줄 290
+2020-09-16 14:48:50-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::pScodeGrp=[AlarmTime]
+2020-09-16 14:48:50-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::reMsg=[[검색 성공]]
+2020-09-16 14:48:50-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail):: 
+System.InvalidOperationException: DataGridView 컨트롤이 변경 알림을 지원하고 삭제를 허용하는 IBindingList에 데이터 바인딩된 경우가 아니면 행 컬렉션을 프로그래밍 방식으로 지울 수 없습니다.
+   위치: System.Windows.Forms.DataGridViewRowCollection.Clear()
+   위치: EldigmPlusApp.SubForm.Sys.SysCode.FrmSysCode.setDataBind_grideView1(String pScodeGrp) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\SysCode\FrmSysCode.cs:줄 290
+2020-09-16 14:48:50-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::pScodeGrp=[LabInfoType]
+2020-09-16 14:48:50-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::reMsg=[[검색 성공]]
+2020-09-16 14:48:50-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail):: 
+System.InvalidOperationException: DataGridView 컨트롤이 변경 알림을 지원하고 삭제를 허용하는 IBindingList에 데이터 바인딩된 경우가 아니면 행 컬렉션을 프로그래밍 방식으로 지울 수 없습니다.
+   위치: System.Windows.Forms.DataGridViewRowCollection.Clear()
+   위치: EldigmPlusApp.SubForm.Sys.SysCode.FrmSysCode.setDataBind_grideView1(String pScodeGrp) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\SysCode\FrmSysCode.cs:줄 290
+2020-09-16 14:48:50-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::pScodeGrp=[LabInfoType]
+2020-09-16 14:48:50-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::reMsg=[[검색 성공]]
+2020-09-16 14:48:50-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail):: 
+System.InvalidOperationException: DataGridView 컨트롤이 변경 알림을 지원하고 삭제를 허용하는 IBindingList에 데이터 바인딩된 경우가 아니면 행 컬렉션을 프로그래밍 방식으로 지울 수 없습니다.
+   위치: System.Windows.Forms.DataGridViewRowCollection.Clear()
+   위치: EldigmPlusApp.SubForm.Sys.SysCode.FrmSysCode.setDataBind_grideView1(String pScodeGrp) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\SysCode\FrmSysCode.cs:줄 290
+2020-09-16 14:48:51-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::pScodeGrp=[LoginDvcType]
+2020-09-16 14:48:51-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::reMsg=[[검색 성공]]
+2020-09-16 14:48:51-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail):: 
+System.InvalidOperationException: DataGridView 컨트롤이 변경 알림을 지원하고 삭제를 허용하는 IBindingList에 데이터 바인딩된 경우가 아니면 행 컬렉션을 프로그래밍 방식으로 지울 수 없습니다.
+   위치: System.Windows.Forms.DataGridViewRowCollection.Clear()
+   위치: EldigmPlusApp.SubForm.Sys.SysCode.FrmSysCode.setDataBind_grideView1(String pScodeGrp) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\SysCode\FrmSysCode.cs:줄 290
+2020-09-16 14:48:51-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::pScodeGrp=[LoginDvcType]
+2020-09-16 14:48:51-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::reMsg=[[검색 성공]]
+2020-09-16 14:48:51-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail):: 
+System.InvalidOperationException: DataGridView 컨트롤이 변경 알림을 지원하고 삭제를 허용하는 IBindingList에 데이터 바인딩된 경우가 아니면 행 컬렉션을 프로그래밍 방식으로 지울 수 없습니다.
+   위치: System.Windows.Forms.DataGridViewRowCollection.Clear()
+   위치: EldigmPlusApp.SubForm.Sys.SysCode.FrmSysCode.setDataBind_grideView1(String pScodeGrp) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\SysCode\FrmSysCode.cs:줄 290
+2020-09-16 14:48:51-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::pScodeGrp=[AgreeUInfoRequired]
+2020-09-16 14:48:51-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::reMsg=[[검색 성공]]
+2020-09-16 14:48:51-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail):: 
+System.InvalidOperationException: DataGridView 컨트롤이 변경 알림을 지원하고 삭제를 허용하는 IBindingList에 데이터 바인딩된 경우가 아니면 행 컬렉션을 프로그래밍 방식으로 지울 수 없습니다.
+   위치: System.Windows.Forms.DataGridViewRowCollection.Clear()
+   위치: EldigmPlusApp.SubForm.Sys.SysCode.FrmSysCode.setDataBind_grideView1(String pScodeGrp) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\SysCode\FrmSysCode.cs:줄 290
+2020-09-16 14:48:51-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::pScodeGrp=[AgreeUInfoRequired]
+2020-09-16 14:48:51-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::reMsg=[[검색 성공]]
+2020-09-16 14:48:51-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail):: 
+System.InvalidOperationException: DataGridView 컨트롤이 변경 알림을 지원하고 삭제를 허용하는 IBindingList에 데이터 바인딩된 경우가 아니면 행 컬렉션을 프로그래밍 방식으로 지울 수 없습니다.
+   위치: System.Windows.Forms.DataGridViewRowCollection.Clear()
+   위치: EldigmPlusApp.SubForm.Sys.SysCode.FrmSysCode.setDataBind_grideView1(String pScodeGrp) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\SysCode\FrmSysCode.cs:줄 290
+2020-09-16 14:48:52-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::pScodeGrp=[CoType]
+2020-09-16 14:48:52-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::reMsg=[[검색 성공]]
+2020-09-16 14:48:52-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail):: 
+System.InvalidOperationException: DataGridView 컨트롤이 변경 알림을 지원하고 삭제를 허용하는 IBindingList에 데이터 바인딩된 경우가 아니면 행 컬렉션을 프로그래밍 방식으로 지울 수 없습니다.
+   위치: System.Windows.Forms.DataGridViewRowCollection.Clear()
+   위치: EldigmPlusApp.SubForm.Sys.SysCode.FrmSysCode.setDataBind_grideView1(String pScodeGrp) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\SysCode\FrmSysCode.cs:줄 290
+2020-09-16 14:48:52-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::pScodeGrp=[CoType]
+2020-09-16 14:48:52-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::reMsg=[[검색 성공]]
+2020-09-16 14:48:52-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail):: 
+System.InvalidOperationException: DataGridView 컨트롤이 변경 알림을 지원하고 삭제를 허용하는 IBindingList에 데이터 바인딩된 경우가 아니면 행 컬렉션을 프로그래밍 방식으로 지울 수 없습니다.
+   위치: System.Windows.Forms.DataGridViewRowCollection.Clear()
+   위치: EldigmPlusApp.SubForm.Sys.SysCode.FrmSysCode.setDataBind_grideView1(String pScodeGrp) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\SysCode\FrmSysCode.cs:줄 290
+2020-09-16 14:48:52-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::pScodeGrp=[PushType]
+2020-09-16 14:48:52-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::reMsg=[[검색 성공]]
+2020-09-16 14:48:52-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail):: 
+System.InvalidOperationException: DataGridView 컨트롤이 변경 알림을 지원하고 삭제를 허용하는 IBindingList에 데이터 바인딩된 경우가 아니면 행 컬렉션을 프로그래밍 방식으로 지울 수 없습니다.
+   위치: System.Windows.Forms.DataGridViewRowCollection.Clear()
+   위치: EldigmPlusApp.SubForm.Sys.SysCode.FrmSysCode.setDataBind_grideView1(String pScodeGrp) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\SysCode\FrmSysCode.cs:줄 290
+2020-09-16 14:48:52-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::pScodeGrp=[PushType]
+2020-09-16 14:48:52-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::reMsg=[[검색 성공]]
+2020-09-16 14:48:52-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail):: 
+System.InvalidOperationException: DataGridView 컨트롤이 변경 알림을 지원하고 삭제를 허용하는 IBindingList에 데이터 바인딩된 경우가 아니면 행 컬렉션을 프로그래밍 방식으로 지울 수 없습니다.
+   위치: System.Windows.Forms.DataGridViewRowCollection.Clear()
+   위치: EldigmPlusApp.SubForm.Sys.SysCode.FrmSysCode.setDataBind_grideView1(String pScodeGrp) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\SysCode\FrmSysCode.cs:줄 290
+2020-09-16 14:48:52-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::pScodeGrp=[AgreeUInfoCheck]
+2020-09-16 14:48:52-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::reMsg=[[검색 성공]]
+2020-09-16 14:48:52-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail):: 
+System.InvalidOperationException: DataGridView 컨트롤이 변경 알림을 지원하고 삭제를 허용하는 IBindingList에 데이터 바인딩된 경우가 아니면 행 컬렉션을 프로그래밍 방식으로 지울 수 없습니다.
+   위치: System.Windows.Forms.DataGridViewRowCollection.Clear()
+   위치: EldigmPlusApp.SubForm.Sys.SysCode.FrmSysCode.setDataBind_grideView1(String pScodeGrp) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\SysCode\FrmSysCode.cs:줄 290
+2020-09-16 14:48:52-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::pScodeGrp=[AgreeUInfoCheck]
+2020-09-16 14:48:52-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::reMsg=[[검색 성공]]
+2020-09-16 14:48:52-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail):: 
+System.InvalidOperationException: DataGridView 컨트롤이 변경 알림을 지원하고 삭제를 허용하는 IBindingList에 데이터 바인딩된 경우가 아니면 행 컬렉션을 프로그래밍 방식으로 지울 수 없습니다.
+   위치: System.Windows.Forms.DataGridViewRowCollection.Clear()
+   위치: EldigmPlusApp.SubForm.Sys.SysCode.FrmSysCode.setDataBind_grideView1(String pScodeGrp) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\SysCode\FrmSysCode.cs:줄 290
+2020-09-16 14:48:53-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::pScodeGrp=[AlarmTime]
+2020-09-16 14:48:53-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::reMsg=[[검색 성공]]
+2020-09-16 14:48:53-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail):: 
+System.InvalidOperationException: DataGridView 컨트롤이 변경 알림을 지원하고 삭제를 허용하는 IBindingList에 데이터 바인딩된 경우가 아니면 행 컬렉션을 프로그래밍 방식으로 지울 수 없습니다.
+   위치: System.Windows.Forms.DataGridViewRowCollection.Clear()
+   위치: EldigmPlusApp.SubForm.Sys.SysCode.FrmSysCode.setDataBind_grideView1(String pScodeGrp) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\SysCode\FrmSysCode.cs:줄 290
+2020-09-16 14:48:53-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::pScodeGrp=[AlarmTime]
+2020-09-16 14:48:53-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::reMsg=[[검색 성공]]
+2020-09-16 14:48:53-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail):: 
+System.InvalidOperationException: DataGridView 컨트롤이 변경 알림을 지원하고 삭제를 허용하는 IBindingList에 데이터 바인딩된 경우가 아니면 행 컬렉션을 프로그래밍 방식으로 지울 수 없습니다.
+   위치: System.Windows.Forms.DataGridViewRowCollection.Clear()
+   위치: EldigmPlusApp.SubForm.Sys.SysCode.FrmSysCode.setDataBind_grideView1(String pScodeGrp) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\SysCode\FrmSysCode.cs:줄 290
+2020-09-16 14:48:53-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::pScodeGrp=[LabInfoType]
+2020-09-16 14:48:53-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::reMsg=[[검색 성공]]
+2020-09-16 14:48:53-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail):: 
+System.InvalidOperationException: DataGridView 컨트롤이 변경 알림을 지원하고 삭제를 허용하는 IBindingList에 데이터 바인딩된 경우가 아니면 행 컬렉션을 프로그래밍 방식으로 지울 수 없습니다.
+   위치: System.Windows.Forms.DataGridViewRowCollection.Clear()
+   위치: EldigmPlusApp.SubForm.Sys.SysCode.FrmSysCode.setDataBind_grideView1(String pScodeGrp) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\SysCode\FrmSysCode.cs:줄 290
+2020-09-16 14:48:53-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::pScodeGrp=[LabInfoType]
+2020-09-16 14:48:53-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail)::reMsg=[[검색 성공]]
+2020-09-16 14:48:53-->  [error]  (page)::FrmSysCodeGrp.cs  (Function)::setDataBind_grideView1  (Detail):: 
+System.InvalidOperationException: DataGridView 컨트롤이 변경 알림을 지원하고 삭제를 허용하는 IBindingList에 데이터 바인딩된 경우가 아니면 행 컬렉션을 프로그래밍 방식으로 지울 수 없습니다.
+   위치: System.Windows.Forms.DataGridViewRowCollection.Clear()
+   위치: EldigmPlusApp.SubForm.Sys.SysCode.FrmSysCode.setDataBind_grideView1(String pScodeGrp) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\SysCode\FrmSysCode.cs:줄 290
+2020-09-17 09:35:06-->  [error]  (page)::FrmMain.cs  (Function)::GetDbNm  (Detail)::reCode=[], reMsg=[]
+2020-09-17 09:35:06-->  [error]  (page)::FrmMain.cs  (Function)::GetDbNm  (Detail)::
+System.Net.WebException: 작업 시간이 초과되었습니다.
+   위치: System.Web.Services.Protocols.WebClientProtocol.GetWebResponse(WebRequest request)
+   위치: System.Web.Services.Protocols.HttpWebClientProtocol.GetWebResponse(WebRequest request)
+   위치: System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke(String methodName, Object[] parameters)
+   위치: EldigmPlusApp.WsMHome.WsMainHome.sDbNm(String pMemcoCd, String& reData, String& reMsg) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\Web References\WsMHome\Reference.cs:줄 94
+   위치: EldigmPlusApp.SubForm.MainHome.FrmMain.GetDbNm() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\MainHome\FrmMain.cs:줄 158
