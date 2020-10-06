@@ -77,7 +77,8 @@ namespace EldigmPlusApp.SubForm.MainHome
 
                 IniFile ini = new IniFile(filePath + "EldigmPlusApp.ini");
 
-                AppInfo.SsServer = ini.IniReadValue("WEBSERVICE", "Server");
+                AppInfo.SsWsvcServer1 = ini.IniReadValue("WEBSERVICE", "WsvcServer1");
+                AppInfo.SsWsvcServer2 = ini.IniReadValue("WEBSERVICE", "WsvcServer2");
 
                 AppInfo.SsLanguage = ini.IniReadValue("INFO", "Language");
                 AppInfo.SsMemcoCd = ini.IniReadValue("INFO", "MemcoCd");
@@ -111,20 +112,20 @@ namespace EldigmPlusApp.SubForm.MainHome
 
         //private void GetDbNm()
         //{
-        //    WsMHome.WsMainHomeClient wsMHome = null;
-            
+        //    WsMHome.WsMainHome wsMHome = null;
+
         //    string reCode = "";
         //    string reMsg = "";
         //    string reData = "";
         //    try
         //    {
-        //        wsMHome = new WsMHome.WsMainHomeClient();
+        //        wsMHome = new WsMHome.WsMainHome();
         //        string wsUrl = "http://localhost:49501/WebSvc/MainHome/WsMainHome.svc";
         //        wsMHome.Endpoint.Address = new System.ServiceModel.EndpointAddress(wsUrl);
         //        wsMHome.Open();
 
         //        reCode = wsMHome.sDbNm(AppInfo.SsMemcoCd, out reData, out reMsg);
-                
+
         //        if (reCode == "Y")
         //        {
         //            if (!string.IsNullOrEmpty(reData))
@@ -145,14 +146,14 @@ namespace EldigmPlusApp.SubForm.MainHome
 
         private void GetDbNm()
         {
-            WsMHome.WsMainHome wSvc = null;
+            Mem_WsMHome.WsMainHome wSvc = null;
             string reCode = "";
             string reMsg = "";
             string reData = "";
             try
             {
-                wSvc = new WsMHome.WsMainHome();
-                wSvc.Url = "http://" + AppInfo.SsServer + "/WebSvc/MainHome/WsMainHome.svc";
+                wSvc = new Mem_WsMHome.WsMainHome();
+                wSvc.Url = "http://" + AppInfo.SsWsvcServer1 + "/WebSvc/MainHome/WsMainHome.svc";
                 wSvc.Timeout = 1000;
 
                 reCode = wSvc.sDbNm(AppInfo.SsMemcoCd, out reData, out reMsg);
@@ -178,14 +179,14 @@ namespace EldigmPlusApp.SubForm.MainHome
         // ** 상단 메뉴 **
         private void SetTopMenu()
         {
-            WsMHome.WsMainHome wSvc = null;
+            Mem_WsMHome.WsMainHome wSvc = null;
             string reCode = "";
             string reMsg = "";
-            WsMHome.DataTopMenu[] getData = null;
+            Mem_WsMHome.DataTopMenu[] getData = null;
             try
             {
-                wSvc = new WsMHome.WsMainHome();
-                wSvc.Url = "http://" + AppInfo.SsServer + "/WebSvc/MainHome/WsMainHome.svc";
+                wSvc = new Mem_WsMHome.WsMainHome();
+                wSvc.Url = "http://" + AppInfo.SsWsvcServer1 + "/WebSvc/MainHome/WsMainHome.svc";
                 wSvc.Timeout = 1000;
 
                 reCode = wSvc.sSiteMenu(AppInfo.SsDbNm, AppInfo.SsSiteCd, out getData, out reMsg);
@@ -248,18 +249,18 @@ namespace EldigmPlusApp.SubForm.MainHome
         // ** 좌측 메뉴 **
         private void SetLeftMenu(string pTopMenuCd)
         {
-            WsMHome.WsMainHome wSvc = null;
+            Mem_WsMHome.WsMainHome wSvc = null;
             string reCode1 = "";
             string reMsg1 = "";
-            WsMHome.DataSubMenu1[] getData1 = null;
+            Mem_WsMHome.DataSubMenu1[] getData1 = null;
 
             string reCode2 = "";
             string reMsg2 = "";
-            WsMHome.DataSubMenu2[] getData2 = null;
+            Mem_WsMHome.DataSubMenu2[] getData2 = null;
             try
             {
-                wSvc = new WsMHome.WsMainHome();
-                wSvc.Url = "http://" + AppInfo.SsServer + "/WebSvc/MainHome/WsMainHome.svc";
+                wSvc = new Mem_WsMHome.WsMainHome();
+                wSvc.Url = "http://" + AppInfo.SsWsvcServer1 + "/WebSvc/MainHome/WsMainHome.svc";
                 wSvc.Timeout = 1000;
 
                 reCode1 = wSvc.sSiteSubMenu1(AppInfo.SsDbNm, AppInfo.SsSiteCd, pTopMenuCd, out getData1, out reMsg1);

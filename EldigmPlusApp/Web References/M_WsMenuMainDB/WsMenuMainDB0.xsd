@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/EldigmPlusSvc_Main.WebSvc.Sys.Menu" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/EldigmPlusSvc_Main.WebSvc.Sys.Menu" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="ArrayOfDataMenuTop">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DataMenuTop" nillable="true" type="tns:DataMenuTop" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDataMenuTop" nillable="true" type="tns:ArrayOfDataMenuTop" />
+  <xs:complexType name="DataMenuTop">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="TOP_MENU_CD" type="xs:int" />
+      <xs:element minOccurs="0" name="TOP_MENU_NM" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="APP_FLAG" type="xs:int" />
+      <xs:element minOccurs="0" name="USING_FLAG" type="xs:int" />
+      <xs:element minOccurs="0" name="SORT_NO" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DataMenuTop" nillable="true" type="tns:DataMenuTop" />
+  <xs:complexType name="ArrayOfDataMenuSub">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DataMenuSub" nillable="true" type="tns:DataMenuSub" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDataMenuSub" nillable="true" type="tns:ArrayOfDataMenuSub" />
+  <xs:complexType name="DataMenuSub">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="SUB_MENU_CD" type="xs:int" />
+      <xs:element minOccurs="0" name="TOP_MENU_CD" type="xs:int" />
+      <xs:element minOccurs="0" name="SUB_MENU_NM" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="USING_FLAG" type="xs:int" />
+      <xs:element minOccurs="0" name="SORT_NO" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DataMenuSub" nillable="true" type="tns:DataMenuSub" />
+  <xs:complexType name="ArrayOfDataMenu">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DataMenu" nillable="true" type="tns:DataMenu" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDataMenu" nillable="true" type="tns:ArrayOfDataMenu" />
+  <xs:complexType name="DataMenu">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="MENU_CD" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TOP_MENU_CD" type="xs:int" />
+      <xs:element minOccurs="0" name="SUB_MENU_CD" type="xs:int" />
+      <xs:element minOccurs="0" name="MENU_NM" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="USING_FLAG" type="xs:int" />
+      <xs:element minOccurs="0" name="SORT_NO" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DataMenu" nillable="true" type="tns:DataMenu" />
+</xs:schema>

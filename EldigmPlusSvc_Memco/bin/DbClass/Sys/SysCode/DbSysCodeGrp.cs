@@ -1,40 +1,32 @@
-﻿using Framework.Data;
+﻿using EldigmPlusDb.DbClass.Common;
+using Framework.Data;
 using System;
-using System.Collections.Generic;
 using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace EldigmPlusClassLibrary.DbClass.Sys.SysCode
 {
     public class DbSysCodeGrp
     {
-        DataObj sqlHelper = null;
+        DataObj _sqlHelper = null;
 
-        public DbSysCodeGrp()
+        public DbSysCodeGrp(string pCon_IP, string pCon_DB, string pCon_USER)
         {
-            sqlHelper = new DataObj();
-            sqlHelper.SetConnect(dbConStr());
-        }
+            string mainKey_E256 = "6LL/J2V3x6N8kXK3qj5FOxZpRR20xWFlgnscFikXwy0=";
 
-        private string dbConStr()
-        {
-            string server = "192.168.0.77";
-            string dbPort = "61433";
-            string dataBase = "PLUS_MAIN";
-            string uid = "eldigmplus";
-            string pwd = "!@#Plus1203";
+            EncDecClass edc = new EncDecClass();
+            string mainKey_D256 = edc.AESDecrypt256(mainKey_E256, "eldigm");
+            string strDbconn = pCon_IP + edc.AESDecrypt256(pCon_DB, mainKey_D256) + edc.AESDecrypt256(pCon_USER, mainKey_D256);
 
-            return "server=" + server + "," + dbPort + ";database=" + dataBase + ";uid=" + uid + ";pwd=" + pwd + ";";
+            _sqlHelper = new DataObj();
+            _sqlHelper.SetConnect(strDbconn);
         }
 
         public void DisConnect()
         {
-            if (sqlHelper != null)
+            if (_sqlHelper != null)
             {
-                sqlHelper.DisConnect();
-                sqlHelper = null;
+                _sqlHelper.DisConnect();
+                _sqlHelper = null;
             }
         }
 
@@ -43,50 +35,78 @@ namespace EldigmPlusClassLibrary.DbClass.Sys.SysCode
         public DataSet sSysCodeGrp(string SCODE_GRP)
         {
             string sql = "" +
-                " SELECT SCODE_GRP, SCODE_NM, USING_FLAG, SORT_NO, MEMO " +
+                " SELECT SCODE_GRP, SCODE_GRP_NM, USING_FLAG, SORT_NO, MEMO " +
                 " FROM [PLUS_MAIN].dbo.TM00_CODE_SYS_GRP ";
 
             if (SCODE_GRP != "")
                 sql += " WHERE SCODE_GRP = '" + SCODE_GRP + "'";
 
             sql += "" +
-                " ORDER BY SORT_NO, SCODE_NM ";
+                " ORDER BY SORT_NO, SCODE_GRP_NM ";
 
             DataSet ds = null;
-            if (sqlHelper != null)
-                ds = sqlHelper.ExecuteFill(sql);
+            if (_sqlHelper != null)
+                ds = _sqlHelper.ExecuteFill(sql);
 
             return ds;
         }
 
-        public int mSysCodeGrp(string SCODE_GRP, string SCODE_NM, string USING_FLAG, string SORT_NO, string MEMO)
+        public int mSysCodeGrp(string SCODE_GRP, string SCODE_GRP_NM, string USING_FLAG, string SORT_NO, string MEMO)
         {
             string sql = "" +
-                " UPDATE [PLUS_MAIN].dbo.TM00_CODE_SYS_GRP SET SCODE_NM = '" + SCODE_NM + "', USING_FLAG = " + USING_FLAG + ", SORT_NO = " + SORT_NO + ", MEMO = '" + MEMO + "' " +
+                " UPDATE [PLUS_MAIN].dbo.TM00_CODE_SYS_GRP SET SCODE_GRP_NM = '" + SCODE_GRP_NM + "', USING_FLAG = " + USING_FLAG + ", SORT_NO = " + SORT_NO + ", MEMO = '" + MEMO + "' " +
                 " WHERE SCODE_GRP = '" + SCODE_GRP + "' ";
 
             int reCnt = 0;
-            if (sqlHelper != null)
-                reCnt = sqlHelper.ExecuteCommand(sql);
+            if (_sqlHelper != null)
+                reCnt = _sqlHelper.ExecuteCommand(sql);
 
             return reCnt;
         }
 
+        public int exSysCodeGrp(string SCODE_GRP)
+        {
+            string sql = "" +
+                " SELECT COUNT(*) CNT " +
+                " FROM [PLUS_MAIN].dbo.TM00_CODE_SYS_GRP " +
+                " WHERE SCODE_GRP = '" + SCODE_GRP + "' ";
+
+            object reObj = 0;
+            if (_sqlHelper != null)
+                reObj = _sqlHelper.ExecuteScalar(sql);
+
+            return Convert.ToInt16(reObj);
+        }
+
+        public int aSysCodeGrp(string SCODE_GRP, string SCODE_GRP_NM, string USING_FLAG, string SORT_NO, string MEMO, string INPUT_ID)
+        {
+            string sql = "" +
+                " INSERT INTO [PLUS_MAIN].dbo.TM00_CODE_SYS_GRP (SCODE_GRP, SCODE_GRP_NM, USING_FLAG, SORT_NO, MEMO, INPUT_ID, INPUT_DT) " +
+                " VALUES ('" + SCODE_GRP + "', '" + SCODE_GRP_NM + "', " + USING_FLAG + ", " + SORT_NO + ", '" + MEMO + "', " + INPUT_ID + ", GETDATE()) ";
+
+            int reCnt = 0;
+            if (_sqlHelper != null)
+                reCnt = _sqlHelper.ExecuteCommand(sql);
+
+            return reCnt;
+        }
+
+
         public DataSet sSysCodeGrp_UsingFlag(string USING_FLAG)
         {
             string sql = "" +
-                " SELECT SCODE_GRP, SCODE_NM, USING_FLAG, SORT_NO, MEMO " +
+                " SELECT SCODE_GRP, SCODE_GRP_NM, USING_FLAG, SORT_NO, MEMO " +
                 " FROM [PLUS_MAIN].dbo.TM00_CODE_SYS_GRP ";
 
             if (USING_FLAG != "")
-                sql += " WHERE USING_FLAG = '" + USING_FLAG + "'";
+                sql += " WHERE USING_FLAG = " + USING_FLAG + "";
 
             sql += "" +
-                " ORDER BY SORT_NO, SCODE_NM ";
+                " ORDER BY SORT_NO, SCODE_GRP_NM ";
 
             DataSet ds = null;
-            if (sqlHelper != null)
-                ds = sqlHelper.ExecuteFill(sql);
+            if (_sqlHelper != null)
+                ds = _sqlHelper.ExecuteFill(sql);
 
             return ds;
         }
@@ -111,8 +131,8 @@ namespace EldigmPlusClassLibrary.DbClass.Sys.SysCode
                 " ORDER BY SORT_NO, SCODE_NM ";
 
             DataSet ds = null;
-            if (sqlHelper != null)
-                ds = sqlHelper.ExecuteFill(sql);
+            if (_sqlHelper != null)
+                ds = _sqlHelper.ExecuteFill(sql);
 
             return ds;
         }
@@ -124,8 +144,8 @@ namespace EldigmPlusClassLibrary.DbClass.Sys.SysCode
                 " WHERE SCODE = '" + SCODE + "' ";
 
             int reCnt = 0;
-            if (sqlHelper != null)
-                reCnt = sqlHelper.ExecuteCommand(sql);
+            if (_sqlHelper != null)
+                reCnt = _sqlHelper.ExecuteCommand(sql);
 
             return reCnt;
         }
@@ -134,12 +154,12 @@ namespace EldigmPlusClassLibrary.DbClass.Sys.SysCode
         {
             string sql = "" +
                 " SELECT COUNT(*) CNT " +
-                " FROM TM00_CODE_SYS " +
+                " FROM [PLUS_MAIN].dbo.TM00_CODE_SYS " +
                 " WHERE SCODE = '" + SCODE + "' ";
 
             object reObj = 0;
-            if (sqlHelper != null)
-                reObj = sqlHelper.ExecuteScalar(sql);
+            if (_sqlHelper != null)
+                reObj = _sqlHelper.ExecuteScalar(sql);
 
             return Convert.ToInt16(reObj);
         }
@@ -151,8 +171,8 @@ namespace EldigmPlusClassLibrary.DbClass.Sys.SysCode
                 " VALUES ('" + SCODE + "', '" + SCODE_GRP + "', '" + SCODE_NM + "', " + USING_FLAG + ", '" + MEMO + "', " + SORT_NO + ", " + INPUT_ID + ", GETDATE()) ";
 
             int reCnt = 0;
-            if (sqlHelper != null)
-                reCnt = sqlHelper.ExecuteCommand(sql);
+            if (_sqlHelper != null)
+                reCnt = _sqlHelper.ExecuteCommand(sql);
 
             return reCnt;
         }
@@ -165,37 +185,11 @@ namespace EldigmPlusClassLibrary.DbClass.Sys.SysCode
                 " , '" + MEMO + "', " + INPUT_ID + ", GETDATE()) ";
 
             int reCnt = 0;
-            if (sqlHelper != null)
-                reCnt = sqlHelper.ExecuteCommand(sql);
+            if (_sqlHelper != null)
+                reCnt = _sqlHelper.ExecuteCommand(sql);
 
             return reCnt;
         }
-
-        public DataSet fSysCodeSearch(string SCODE_GRP, string SCODE_NM)
-        {
-            string sql = "" +
-            " SELECT SCODE, SCODE_NM, USING_FLAG, MEMO, SORT_NO" +
-            " FROM[PLUS_MAIN].dbo.TM00_CODE_SYS ";
-
-            //if (SCODE_NM != "")
-            sql += " WHERE SCODE_NM Like '%" + SCODE_NM + "%' AND SCODE_GRP = '" + SCODE_GRP +"'";
-
-            sql += "" +
-               " ORDER BY SORT_NO, SCODE_NM ";
-
-
-            //" Where SCODE_NM Like '%" + SCODE_NM +"%' ";
-
-            DataSet ds = null;
-            if (sqlHelper != null)
-                ds = sqlHelper.ExecuteFill(sql);
-
-            return ds;
-
-
-        }
-
-
 
 
     }

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/EldigmPlusSvc_Main.WebSvc.Sys.ComnCode" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/EldigmPlusSvc_Main.WebSvc.Sys.ComnCode" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="ArrayOfDataComnCodeGrp">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DataComnCodeGrp" nillable="true" type="tns:DataComnCodeGrp" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDataComnCodeGrp" nillable="true" type="tns:ArrayOfDataComnCodeGrp" />
+  <xs:complexType name="DataComnCodeGrp">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CCODE_GRP" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CCODE_NM" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="USING_FLAG" type="xs:int" />
+      <xs:element minOccurs="0" name="SORT_NO" type="xs:int" />
+      <xs:element minOccurs="0" name="MEMO" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DataComnCodeGrp" nillable="true" type="tns:DataComnCodeGrp" />
+</xs:schema>

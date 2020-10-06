@@ -26,6 +26,46 @@ namespace EldigmPlusApp.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.WebServiceUrl)]
+        [global::System.Configuration.DefaultSettingValueAttribute("http://localhost:49469/WebSvc/Sys/ComnCode/WsComnCodeGrp.svc")]
+        public string EldigmPlusApp_WsCCodeGrp_WsComnCodeGrp {
+            get {
+                return ((string)(this["EldigmPlusApp_WsCCodeGrp_WsComnCodeGrp"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.WebServiceUrl)]
+        [global::System.Configuration.DefaultSettingValueAttribute("http://localhost:49501/WebSvc/MainHome/WsMainHome.svc")]
+        public string EldigmPlusApp_Mem_WsMHome_WsMainHome {
+            get {
+                return ((string)(this["EldigmPlusApp_Mem_WsMHome_WsMainHome"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.WebServiceUrl)]
+        [global::System.Configuration.DefaultSettingValueAttribute("http://localhost:49469/WebSvc/Sys/SysCode/WsSysCodeGrp.svc")]
+        public string EldigmPlusApp_WsSCodeGrp_WsSysCodeGrp {
+            get {
+                return ((string)(this["EldigmPlusApp_WsSCodeGrp_WsSysCodeGrp"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.WebServiceUrl)]
+        [global::System.Configuration.DefaultSettingValueAttribute("http://localhost:49469/WebSvc/Sys/SysAuth/WsSysAuthMainDB.svc")]
+        public string EldigmPlusApp_WsSAuthMainDB_WsSysAuthMainDB {
+            get {
+                return ((string)(this["EldigmPlusApp_WsSAuthMainDB_WsSysAuthMainDB"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.WebServiceUrl)]
         [global::System.Configuration.DefaultSettingValueAttribute("http://localhost:49501/WebSvc/MainHome/WsMainHome.svc")]
         public string EldigmPlusApp_WsMHome_WsMainHome {
             get {
@@ -36,20 +76,30 @@ namespace EldigmPlusApp.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.WebServiceUrl)]
-        [global::System.Configuration.DefaultSettingValueAttribute("http://localhost:49501/WebSvc/Sys/SysCode/WsSysCodeGrpPra.svc")]
-        public string EldigmPlusApp_WsSCodeGrpPra_WsSysCodeGrpPra {
+        [global::System.Configuration.DefaultSettingValueAttribute("http://localhost:49469/WebSvc/Sys/Menu/WsMenuMainDB.svc")]
+        public string EldigmPlusApp_M_WsMenuMainDB_WsMenuMainDB {
             get {
-                return ((string)(this["EldigmPlusApp_WsSCodeGrpPra_WsSysCodeGrpPra"]));
+                return ((string)(this["EldigmPlusApp_M_WsMenuMainDB_WsMenuMainDB"]));
             }
         }
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.WebServiceUrl)]
-        [global::System.Configuration.DefaultSettingValueAttribute("http://localhost:49501/WebSvc/Sys/SysCode/WsSysCodeGrp.svc")]
-        public string EldigmPlusApp_WsSCodeGrp_WsSysCodeGrp {
+        [global::System.Configuration.DefaultSettingValueAttribute("http://localhost:49501/WebSvc/Sys/SysAuth/WsSysAuthMemberDB.svc")]
+        public string EldigmPlusApp_Mem_WsSysAuthMemberDB_WsSysAuthMemberDB {
             get {
-                return ((string)(this["EldigmPlusApp_WsSCodeGrp_WsSysCodeGrp"]));
+                return ((string)(this["EldigmPlusApp_Mem_WsSysAuthMemberDB_WsSysAuthMemberDB"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.WebServiceUrl)]
+        [global::System.Configuration.DefaultSettingValueAttribute("http://localhost:49469/WebSvc/Sys/MemberSite/WsMember.svc")]
+        public string EldigmPlusApp_M_WsMember_WsMember {
+            get {
+                return ((string)(this["EldigmPlusApp_M_WsMember_WsMember"]));
             }
         }
     }

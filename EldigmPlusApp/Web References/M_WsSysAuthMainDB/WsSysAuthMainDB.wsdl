@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="WsSysAuthMainDB" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:49469/WebSvc/Sys/SysAuth/WsSysAuthMainDB.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:49469/WebSvc/Sys/SysAuth/WsSysAuthMainDB.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:49469/WebSvc/Sys/SysAuth/WsSysAuthMainDB.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/EldigmPlusSvc_Main.WebSvc.Sys.SysAuth" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IWsSysAuthMainDB_sSysAuthMainDB_InputMessage">
+    <wsdl:part name="parameters" element="tns:sSysAuthMainDB" />
+  </wsdl:message>
+  <wsdl:message name="IWsSysAuthMainDB_sSysAuthMainDB_OutputMessage">
+    <wsdl:part name="parameters" element="tns:sSysAuthMainDBResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWsSysAuthMainDB_mSysAuthMainDB_InputMessage">
+    <wsdl:part name="parameters" element="tns:mSysAuthMainDB" />
+  </wsdl:message>
+  <wsdl:message name="IWsSysAuthMainDB_mSysAuthMainDB_OutputMessage">
+    <wsdl:part name="parameters" element="tns:mSysAuthMainDBResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWsSysAuthMainDB_exSysAuthMainDB_InputMessage">
+    <wsdl:part name="parameters" element="tns:exSysAuthMainDB" />
+  </wsdl:message>
+  <wsdl:message name="IWsSysAuthMainDB_exSysAuthMainDB_OutputMessage">
+    <wsdl:part name="parameters" element="tns:exSysAuthMainDBResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWsSysAuthMainDB_aSysAuthMainDB_InputMessage">
+    <wsdl:part name="parameters" element="tns:aSysAuthMainDB" />
+  </wsdl:message>
+  <wsdl:message name="IWsSysAuthMainDB_aSysAuthMainDB_OutputMessage">
+    <wsdl:part name="parameters" element="tns:aSysAuthMainDBResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IWsSysAuthMainDB">
+    <wsdl:operation name="sSysAuthMainDB">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWsSysAuthMainDB/sSysAuthMainDB" message="tns:IWsSysAuthMainDB_sSysAuthMainDB_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWsSysAuthMainDB/sSysAuthMainDBResponse" message="tns:IWsSysAuthMainDB_sSysAuthMainDB_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="mSysAuthMainDB">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWsSysAuthMainDB/mSysAuthMainDB" message="tns:IWsSysAuthMainDB_mSysAuthMainDB_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWsSysAuthMainDB/mSysAuthMainDBResponse" message="tns:IWsSysAuthMainDB_mSysAuthMainDB_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="exSysAuthMainDB">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWsSysAuthMainDB/exSysAuthMainDB" message="tns:IWsSysAuthMainDB_exSysAuthMainDB_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWsSysAuthMainDB/exSysAuthMainDBResponse" message="tns:IWsSysAuthMainDB_exSysAuthMainDB_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="aSysAuthMainDB">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWsSysAuthMainDB/aSysAuthMainDB" message="tns:IWsSysAuthMainDB_aSysAuthMainDB_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWsSysAuthMainDB/aSysAuthMainDBResponse" message="tns:IWsSysAuthMainDB_aSysAuthMainDB_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IWsSysAuthMainDB" type="tns:IWsSysAuthMainDB">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="sSysAuthMainDB">
+      <soap:operation soapAction="http://tempuri.org/IWsSysAuthMainDB/sSysAuthMainDB" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mSysAuthMainDB">
+      <soap:operation soapAction="http://tempuri.org/IWsSysAuthMainDB/mSysAuthMainDB" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="exSysAuthMainDB">
+      <soap:operation soapAction="http://tempuri.org/IWsSysAuthMainDB/exSysAuthMainDB" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="aSysAuthMainDB">
+      <soap:operation soapAction="http://tempuri.org/IWsSysAuthMainDB/aSysAuthMainDB" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="WsSysAuthMainDB">
+    <wsdl:port name="BasicHttpBinding_IWsSysAuthMainDB" binding="tns:BasicHttpBinding_IWsSysAuthMainDB">
+      <soap:address location="http://localhost:49469/WebSvc/Sys/SysAuth/WsSysAuthMainDB.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DiscoveryClientResultsFile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Results>
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://localhost:49469/WebSvc/Sys/MemberSite/WsMember.svc?xsd=xsd0" filename="WsMember.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://localhost:49469/WebSvc/Sys/MemberSite/WsMember.svc?xsd=xsd1" filename="WsMember0.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://localhost:49469/WebSvc/Sys/MemberSite/WsMember.svc?xsd=xsd2" filename="WsMember1.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://localhost:49469/WebSvc/Sys/MemberSite/WsMember.svc?xsd=xsd3" filename="WsMember2.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.ContractReference" url="http://localhost:49469/WebSvc/Sys/MemberSite/WsMember.svc?wsdl" filename="WsMember.wsdl" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.DiscoveryDocumentReference" url="http://localhost:49469/WebSvc/Sys/MemberSite/WsMember.svc?disco" filename="WsMember.disco" />
+  </Results>
+</DiscoveryClientResultsFile>

@@ -2,14 +2,29 @@
 <SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="EldigmPlusApp.Properties" GeneratedClassName="Settings">
   <Profiles />
   <Settings>
+    <Setting Name="EldigmPlusApp_WsCCodeGrp_WsComnCodeGrp" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://localhost:49469/WebSvc/Sys/ComnCode/WsComnCodeGrp.svc</Value>
+    </Setting>
+    <Setting Name="EldigmPlusApp_Mem_WsMHome_WsMainHome" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://localhost:49501/WebSvc/MainHome/WsMainHome.svc</Value>
+    </Setting>
+    <Setting Name="EldigmPlusApp_WsSCodeGrp_WsSysCodeGrp" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://localhost:49469/WebSvc/Sys/SysCode/WsSysCodeGrp.svc</Value>
+    </Setting>
+    <Setting Name="EldigmPlusApp_WsSAuthMainDB_WsSysAuthMainDB" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://localhost:49469/WebSvc/Sys/SysAuth/WsSysAuthMainDB.svc</Value>
+    </Setting>
     <Setting Name="EldigmPlusApp_WsMHome_WsMainHome" Type="(Web Service URL)" Scope="Application">
       <Value Profile="(Default)">http://localhost:49501/WebSvc/MainHome/WsMainHome.svc</Value>
     </Setting>
-    <Setting Name="EldigmPlusApp_WsSCodeGrpPra_WsSysCodeGrpPra" Type="(Web Service URL)" Scope="Application">
-      <Value Profile="(Default)">http://localhost:49501/WebSvc/Sys/SysCode/WsSysCodeGrpPra.svc</Value>
+    <Setting Name="EldigmPlusApp_M_WsMenuMainDB_WsMenuMainDB" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://localhost:49469/WebSvc/Sys/Menu/WsMenuMainDB.svc</Value>
     </Setting>
-    <Setting Name="EldigmPlusApp_WsSCodeGrp_WsSysCodeGrp" Type="(Web Service URL)" Scope="Application">
-      <Value Profile="(Default)">http://localhost:49501/WebSvc/Sys/SysCode/WsSysCodeGrp.svc</Value>
+    <Setting Name="EldigmPlusApp_Mem_WsSysAuthMemberDB_WsSysAuthMemberDB" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://localhost:49501/WebSvc/Sys/SysAuth/WsSysAuthMemberDB.svc</Value>
+    </Setting>
+    <Setting Name="EldigmPlusApp_M_WsMember_WsMember" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://localhost:49469/WebSvc/Sys/MemberSite/WsMember.svc</Value>
     </Setting>
   </Settings>
 </SettingsFile>

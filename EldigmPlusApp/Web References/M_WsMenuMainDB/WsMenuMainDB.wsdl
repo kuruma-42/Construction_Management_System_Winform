@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="WsMenuMainDB" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:49469/WebSvc/Sys/Menu/WsMenuMainDB.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:49469/WebSvc/Sys/Menu/WsMenuMainDB.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:49469/WebSvc/Sys/Menu/WsMenuMainDB.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/EldigmPlusSvc_Main.WebSvc.Sys.Menu" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IWsMenuMainDB_sManuTopTreeView_InputMessage">
+    <wsdl:part name="parameters" element="tns:sManuTopTreeView" />
+  </wsdl:message>
+  <wsdl:message name="IWsMenuMainDB_sManuTopTreeView_OutputMessage">
+    <wsdl:part name="parameters" element="tns:sManuTopTreeViewResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWsMenuMainDB_sManuSubTreeView_InputMessage">
+    <wsdl:part name="parameters" element="tns:sManuSubTreeView" />
+  </wsdl:message>
+  <wsdl:message name="IWsMenuMainDB_sManuSubTreeView_OutputMessage">
+    <wsdl:part name="parameters" element="tns:sManuSubTreeViewResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWsMenuMainDB_sManuTreeView_InputMessage">
+    <wsdl:part name="parameters" element="tns:sManuTreeView" />
+  </wsdl:message>
+  <wsdl:message name="IWsMenuMainDB_sManuTreeView_OutputMessage">
+    <wsdl:part name="parameters" element="tns:sManuTreeViewResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWsMenuMainDB_sManuTreeView2_InputMessage">
+    <wsdl:part name="parameters" element="tns:sManuTreeView2" />
+  </wsdl:message>
+  <wsdl:message name="IWsMenuMainDB_sManuTreeView2_OutputMessage">
+    <wsdl:part name="parameters" element="tns:sManuTreeView2Response" />
+  </wsdl:message>
+  <wsdl:message name="IWsMenuMainDB_exMenuTop_InputMessage">
+    <wsdl:part name="parameters" element="tns:exMenuTop" />
+  </wsdl:message>
+  <wsdl:message name="IWsMenuMainDB_exMenuTop_OutputMessage">
+    <wsdl:part name="parameters" element="tns:exMenuTopResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWsMenuMainDB_exMenuSub_InputMessage">
+    <wsdl:part name="parameters" element="tns:exMenuSub" />
+  </wsdl:message>
+  <wsdl:message name="IWsMenuMainDB_exMenuSub_OutputMessage">
+    <wsdl:part name="parameters" element="tns:exMenuSubResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWsMenuMainDB_exMenu_InputMessage">
+    <wsdl:part name="parameters" element="tns:exMenu" />
+  </wsdl:message>
+  <wsdl:message name="IWsMenuMainDB_exMenu_OutputMessage">
+    <wsdl:part name="parameters" element="tns:exMenuResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWsMenuMainDB_aMenuTop_InputMessage">
+    <wsdl:part name="parameters" element="tns:aMenuTop" />
+  </wsdl:message>
+  <wsdl:message name="IWsMenuMainDB_aMenuTop_OutputMessage">
+    <wsdl:part name="parameters" element="tns:aMenuTopResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWsMenuMainDB_aMenuSub_InputMessage">
+    <wsdl:part name="parameters" element="tns:aMenuSub" />
+  </wsdl:message>
+  <wsdl:message name="IWsMenuMainDB_aMenuSub_OutputMessage">
+    <wsdl:part name="parameters" element="tns:aMenuSubResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWsMenuMainDB_aMenu_InputMessage">
+    <wsdl:part name="parameters" element="tns:aMenu" />
+  </wsdl:message>
+  <wsdl:message name="IWsMenuMainDB_aMenu_OutputMessage">
+    <wsdl:part name="parameters" element="tns:aMenuResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IWsMenuMainDB">
+    <wsdl:operation name="sManuTopTreeView">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWsMenuMainDB/sManuTopTreeView" message="tns:IWsMenuMainDB_sManuTopTreeView_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWsMenuMainDB/sManuTopTreeViewResponse" message="tns:IWsMenuMainDB_sManuTopTreeView_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="sManuSubTreeView">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWsMenuMainDB/sManuSubTreeView" message="tns:IWsMenuMainDB_sManuSubTreeView_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWsMenuMainDB/sManuSubTreeViewResponse" message="tns:IWsMenuMainDB_sManuSubTreeView_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="sManuTreeView">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWsMenuMainDB/sManuTreeView" message="tns:IWsMenuMainDB_sManuTreeView_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWsMenuMainDB/sManuTreeViewResponse" message="tns:IWsMenuMainDB_sManuTreeView_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="sManuTreeView2">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWsMenuMainDB/sManuTreeView2" message="tns:IWsMenuMainDB_sManuTreeView2_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWsMenuMainDB/sManuTreeView2Response" message="tns:IWsMenuMainDB_sManuTreeView2_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="exMenuTop">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWsMenuMainDB/exMenuTop" message="tns:IWsMenuMainDB_exMenuTop_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWsMenuMainDB/exMenuTopResponse" message="tns:IWsMenuMainDB_exMenuTop_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="exMenuSub">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWsMenuMainDB/exMenuSub" message="tns:IWsMenuMainDB_exMenuSub_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWsMenuMainDB/exMenuSubResponse" message="tns:IWsMenuMainDB_exMenuSub_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="exMenu">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWsMenuMainDB/exMenu" message="tns:IWsMenuMainDB_exMenu_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWsMenuMainDB/exMenuResponse" message="tns:IWsMenuMainDB_exMenu_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="aMenuTop">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWsMenuMainDB/aMenuTop" message="tns:IWsMenuMainDB_aMenuTop_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWsMenuMainDB/aMenuTopResponse" message="tns:IWsMenuMainDB_aMenuTop_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="aMenuSub">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWsMenuMainDB/aMenuSub" message="tns:IWsMenuMainDB_aMenuSub_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWsMenuMainDB/aMenuSubResponse" message="tns:IWsMenuMainDB_aMenuSub_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="aMenu">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWsMenuMainDB/aMenu" message="tns:IWsMenuMainDB_aMenu_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWsMenuMainDB/aMenuResponse" message="tns:IWsMenuMainDB_aMenu_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IWsMenuMainDB" type="tns:IWsMenuMainDB">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="sManuTopTreeView">
+      <soap:operation soapAction="http://tempuri.org/IWsMenuMainDB/sManuTopTreeView" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="sManuSubTreeView">
+      <soap:operation soapAction="http://tempuri.org/IWsMenuMainDB/sManuSubTreeView" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="sManuTreeView">
+      <soap:operation soapAction="http://tempuri.org/IWsMenuMainDB/sManuTreeView" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="sManuTreeView2">
+      <soap:operation soapAction="http://tempuri.org/IWsMenuMainDB/sManuTreeView2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="exMenuTop">
+      <soap:operation soapAction="http://tempuri.org/IWsMenuMainDB/exMenuTop" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="exMenuSub">
+      <soap:operation soapAction="http://tempuri.org/IWsMenuMainDB/exMenuSub" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="exMenu">
+      <soap:operation soapAction="http://tempuri.org/IWsMenuMainDB/exMenu" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="aMenuTop">
+      <soap:operation soapAction="http://tempuri.org/IWsMenuMainDB/aMenuTop" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="aMenuSub">
+      <soap:operation soapAction="http://tempuri.org/IWsMenuMainDB/aMenuSub" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="aMenu">
+      <soap:operation soapAction="http://tempuri.org/IWsMenuMainDB/aMenu" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="WsMenuMainDB">
+    <wsdl:port name="BasicHttpBinding_IWsMenuMainDB" binding="tns:BasicHttpBinding_IWsMenuMainDB">
+      <soap:address location="http://localhost:49469/WebSvc/Sys/Menu/WsMenuMainDB.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

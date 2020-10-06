@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="WsMember" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:49469/WebSvc/Sys/MemberSite/WsMember.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:49469/WebSvc/Sys/MemberSite/WsMember.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:49469/WebSvc/Sys/MemberSite/WsMember.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/EldigmPlusSvc_Main.WebSvc.Sys.MemberSite" />
+      <xsd:import schemaLocation="http://localhost:49469/WebSvc/Sys/MemberSite/WsMember.svc?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IWsMember_sMember_UsingFlag_InputMessage">
+    <wsdl:part name="parameters" element="tns:sMember_UsingFlag" />
+  </wsdl:message>
+  <wsdl:message name="IWsMember_sMember_UsingFlag_OutputMessage">
+    <wsdl:part name="parameters" element="tns:sMember_UsingFlagResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWsMember_sMember_InputMessage">
+    <wsdl:part name="parameters" element="tns:sMember" />
+  </wsdl:message>
+  <wsdl:message name="IWsMember_sMember_OutputMessage">
+    <wsdl:part name="parameters" element="tns:sMemberResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWsMember_mMember_InputMessage">
+    <wsdl:part name="parameters" element="tns:mMember" />
+  </wsdl:message>
+  <wsdl:message name="IWsMember_mMember_OutputMessage">
+    <wsdl:part name="parameters" element="tns:mMemberResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWsMember_exMember_InputMessage">
+    <wsdl:part name="parameters" element="tns:exMember" />
+  </wsdl:message>
+  <wsdl:message name="IWsMember_exMember_OutputMessage">
+    <wsdl:part name="parameters" element="tns:exMemberResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWsMember_aMember_InputMessage">
+    <wsdl:part name="parameters" element="tns:aMember" />
+  </wsdl:message>
+  <wsdl:message name="IWsMember_aMember_OutputMessage">
+    <wsdl:part name="parameters" element="tns:aMemberResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWsMember_sMemberMainDB_InputMessage">
+    <wsdl:part name="parameters" element="tns:sMemberMainDB" />
+  </wsdl:message>
+  <wsdl:message name="IWsMember_sMemberMainDB_OutputMessage">
+    <wsdl:part name="parameters" element="tns:sMemberMainDBResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWsMember_sSite_InputMessage">
+    <wsdl:part name="parameters" element="tns:sSite" />
+  </wsdl:message>
+  <wsdl:message name="IWsMember_sSite_OutputMessage">
+    <wsdl:part name="parameters" element="tns:sSiteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWsMember_mSite_InputMessage">
+    <wsdl:part name="parameters" element="tns:mSite" />
+  </wsdl:message>
+  <wsdl:message name="IWsMember_mSite_OutputMessage">
+    <wsdl:part name="parameters" element="tns:mSiteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWsMember_exSite_InputMessage">
+    <wsdl:part name="parameters" element="tns:exSite" />
+  </wsdl:message>
+  <wsdl:message name="IWsMember_exSite_OutputMessage">
+    <wsdl:part name="parameters" element="tns:exSiteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWsMember_aSite_InputMessage">
+    <wsdl:part name="parameters" element="tns:aSite" />
+  </wsdl:message>
+  <wsdl:message name="IWsMember_aSite_OutputMessage">
+    <wsdl:part name="parameters" element="tns:aSiteResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IWsMember">
+    <wsdl:operation name="sMember_UsingFlag">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWsMember/sMember_UsingFlag" message="tns:IWsMember_sMember_UsingFlag_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWsMember/sMember_UsingFlagResponse" message="tns:IWsMember_sMember_UsingFlag_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="sMember">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWsMember/sMember" message="tns:IWsMember_sMember_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWsMember/sMemberResponse" message="tns:IWsMember_sMember_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="mMember">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWsMember/mMember" message="tns:IWsMember_mMember_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWsMember/mMemberResponse" message="tns:IWsMember_mMember_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="exMember">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWsMember/exMember" message="tns:IWsMember_exMember_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWsMember/exMemberResponse" message="tns:IWsMember_exMember_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="aMember">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWsMember/aMember" message="tns:IWsMember_aMember_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWsMember/aMemberResponse" message="tns:IWsMember_aMember_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="sMemberMainDB">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWsMember/sMemberMainDB" message="tns:IWsMember_sMemberMainDB_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWsMember/sMemberMainDBResponse" message="tns:IWsMember_sMemberMainDB_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="sSite">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWsMember/sSite" message="tns:IWsMember_sSite_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWsMember/sSiteResponse" message="tns:IWsMember_sSite_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="mSite">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWsMember/mSite" message="tns:IWsMember_mSite_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWsMember/mSiteResponse" message="tns:IWsMember_mSite_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="exSite">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWsMember/exSite" message="tns:IWsMember_exSite_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWsMember/exSiteResponse" message="tns:IWsMember_exSite_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="aSite">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWsMember/aSite" message="tns:IWsMember_aSite_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWsMember/aSiteResponse" message="tns:IWsMember_aSite_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IWsMember" type="tns:IWsMember">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="sMember_UsingFlag">
+      <soap:operation soapAction="http://tempuri.org/IWsMember/sMember_UsingFlag" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="sMember">
+      <soap:operation soapAction="http://tempuri.org/IWsMember/sMember" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mMember">
+      <soap:operation soapAction="http://tempuri.org/IWsMember/mMember" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="exMember">
+      <soap:operation soapAction="http://tempuri.org/IWsMember/exMember" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="aMember">
+      <soap:operation soapAction="http://tempuri.org/IWsMember/aMember" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="sMemberMainDB">
+      <soap:operation soapAction="http://tempuri.org/IWsMember/sMemberMainDB" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="sSite">
+      <soap:operation soapAction="http://tempuri.org/IWsMember/sSite" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mSite">
+      <soap:operation soapAction="http://tempuri.org/IWsMember/mSite" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="exSite">
+      <soap:operation soapAction="http://tempuri.org/IWsMember/exSite" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="aSite">
+      <soap:operation soapAction="http://tempuri.org/IWsMember/aSite" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="WsMember">
+    <wsdl:port name="BasicHttpBinding_IWsMember" binding="tns:BasicHttpBinding_IWsMember">
+      <soap:address location="http://localhost:49469/WebSvc/Sys/MemberSite/WsMember.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

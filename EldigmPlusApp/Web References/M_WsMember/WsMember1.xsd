@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/EldigmPlusSvc_Main.WebSvc.Sys.MemberSite" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/EldigmPlusSvc_Main.WebSvc.Sys.MemberSite" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="ArrayOfDataMemberDB">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DataMemberDB" nillable="true" type="tns:DataMemberDB" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDataMemberDB" nillable="true" type="tns:ArrayOfDataMemberDB" />
+  <xs:complexType name="DataMemberDB">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="MEMCO_CD" type="xs:int" />
+      <xs:element minOccurs="0" name="MEMCO_NM" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DB_NM" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="USING_FLAG" type="xs:int" />
+      <xs:element minOccurs="0" name="SORT_NO" type="xs:int" />
+      <xs:element minOccurs="0" name="MEMO" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DataMemberDB" nillable="true" type="tns:DataMemberDB" />
+  <xs:complexType name="ArrayOfDataMemberMainDB">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DataMemberMainDB" nillable="true" type="tns:DataMemberMainDB" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDataMemberMainDB" nillable="true" type="tns:ArrayOfDataMemberMainDB" />
+  <xs:complexType name="DataMemberMainDB">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="MEMCO_CD" type="xs:int" />
+      <xs:element minOccurs="0" name="MEMCO_NM" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DataMemberMainDB" nillable="true" type="tns:DataMemberMainDB" />
+  <xs:complexType name="ArrayOfDataSiteDB">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DataSiteDB" nillable="true" type="tns:DataSiteDB" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDataSiteDB" nillable="true" type="tns:ArrayOfDataSiteDB" />
+  <xs:complexType name="DataSiteDB">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="SITE_CD" type="xs:int" />
+      <xs:element minOccurs="0" name="MEMCO_CD" type="xs:int" />
+      <xs:element minOccurs="0" name="SITE_NM" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="USING_FLAG" type="xs:int" />
+      <xs:element minOccurs="0" name="SORT_NO" type="xs:int" />
+      <xs:element minOccurs="0" name="MEMO" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DataSiteDB" nillable="true" type="tns:DataSiteDB" />
+</xs:schema>

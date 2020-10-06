@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:49469/WebSvc/Sys/Menu/WsMenuMainDB.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/EldigmPlusSvc_Main.WebSvc.Sys.Menu" />
+  <xs:element name="sManuTopTreeView">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="USING_FLAG" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="sManuTopTreeViewResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sManuTopTreeViewResult" nillable="true" type="xs:string" />
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/EldigmPlusSvc_Main.WebSvc.Sys.Menu" minOccurs="0" name="reList" nillable="true" type="q1:ArrayOfDataMenuTop" />
+        <xs:element minOccurs="0" name="reMsg" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="sManuSubTreeView">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="TOP_MENU_CD" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="USING_FLAG" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="sManuSubTreeViewResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sManuSubTreeViewResult" nillable="true" type="xs:string" />
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/EldigmPlusSvc_Main.WebSvc.Sys.Menu" minOccurs="0" name="reList" nillable="true" type="q2:ArrayOfDataMenuSub" />
+        <xs:element minOccurs="0" name="reMsg" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="sManuTreeView">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="TOP_MENU_CD" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="SUB_MENU_CD" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="USING_FLAG" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="sManuTreeViewResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sManuTreeViewResult" nillable="true" type="xs:string" />
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/EldigmPlusSvc_Main.WebSvc.Sys.Menu" minOccurs="0" name="reList" nillable="true" type="q3:ArrayOfDataMenu" />
+        <xs:element minOccurs="0" name="reMsg" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="sManuTreeView2">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="TOP_MENU_CD" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="SUB_MENU_CD" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="MENU_CD" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="USING_FLAG" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="sManuTreeView2Response">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sManuTreeView2Result" nillable="true" type="xs:string" />
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/EldigmPlusSvc_Main.WebSvc.Sys.Menu" minOccurs="0" name="reList" nillable="true" type="q4:ArrayOfDataMenu" />
+        <xs:element minOccurs="0" name="reMsg" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="exMenuTop">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="TOP_MENU_CD" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="TOP_MENU_NM" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="exMenuTopResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="exMenuTopResult" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="reMsg" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="reData" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="exMenuSub">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SUB_MENU_CD" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="TOP_MENU_CD" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="SUB_MENU_NM" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="exMenuSubResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="exMenuSubResult" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="reMsg" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="reData" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="exMenu">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="MENU_CD" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="TOP_MENU_CD" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="SUB_MENU_CD" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="MENU_NM" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="exMenuResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="exMenuResult" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="reMsg" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="reData" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="aMenuTop">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="TOP_MENU_NM" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="APP_FLAG" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="USING_FLAG" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="SORT_NO" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="INPUT_ID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="aMenuTopResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="aMenuTopResult" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="reMsg" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="reData" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="aMenuSub">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="TOP_MENU_CD" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="SUB_MENU_NM" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="USING_FLAG" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="SORT_NO" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="INPUT_ID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="aMenuSubResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="aMenuSubResult" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="reMsg" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="reData" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="aMenu">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="MENU_CD" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="TOP_MENU_CD" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="SUB_MENU_CD" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="MENU_NM" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="USING_FLAG" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="SORT_NO" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="INPUT_ID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="aMenuResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="aMenuResult" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="reMsg" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="reData" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

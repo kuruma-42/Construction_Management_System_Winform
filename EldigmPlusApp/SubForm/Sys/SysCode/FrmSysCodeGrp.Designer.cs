@@ -39,7 +39,7 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.dgv1_CHK = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.dgv1_SCODE_GRP = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgv1_SCODE_NM = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgv1_SCODE_GRP_NM = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgv1_USING_FLAG = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.dgv1_SORT_NO = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgv1_MEMO = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -53,10 +53,11 @@
             this.splitContainer3 = new System.Windows.Forms.SplitContainer();
             this.splitContainer4 = new System.Windows.Forms.SplitContainer();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.dgv2_SCODE_NM = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgv2_SCODE_GRP = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgv2_SCODE_GRP_NM = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgv2_SORT_NO = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgv2_MEMO = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Btn_Add = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.dgv2_BTNADD = new System.Windows.Forms.DataGridViewButtonColumn();
             this.btnSave = new System.Windows.Forms.Button();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -144,7 +145,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(833, 25);
+            this.panel2.Size = new System.Drawing.Size(853, 25);
             this.panel2.TabIndex = 3;
             // 
             // dataGridView1
@@ -155,7 +156,7 @@
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dgv1_CHK,
             this.dgv1_SCODE_GRP,
-            this.dgv1_SCODE_NM,
+            this.dgv1_SCODE_GRP_NM,
             this.dgv1_USING_FLAG,
             this.dgv1_SORT_NO,
             this.dgv1_MEMO});
@@ -163,9 +164,9 @@
             this.dataGridView1.Location = new System.Drawing.Point(0, 0);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 23;
-            this.dataGridView1.Size = new System.Drawing.Size(833, 416);
+            this.dataGridView1.Size = new System.Drawing.Size(853, 475);
             this.dataGridView1.TabIndex = 0;
-            this.dataGridView1.CellBeginEdit += new System.Windows.Forms.DataGridViewCellCancelEventHandler(this.dataGridView1_CellBeginEdit);
+            this.dataGridView1.CellBeginEdit += new System.Windows.Forms.DataGridViewCellCancelEventHandler(this.dataGridView1_CellBeginEdit);           
             this.dataGridView1.ColumnHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView1_ColumnHeaderMouseClick);
             this.dataGridView1.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.dataGridView1_DataBindingComplete);
             // 
@@ -182,27 +183,23 @@
             // 
             // dgv1_SCODE_GRP
             // 
-            this.dgv1_SCODE_GRP.DataPropertyName = "SCODE_GRP";
             this.dgv1_SCODE_GRP.HeaderText = "SCODE_GRP";
             this.dgv1_SCODE_GRP.MaxInputLength = 100;
             this.dgv1_SCODE_GRP.MinimumWidth = 100;
             this.dgv1_SCODE_GRP.Name = "dgv1_SCODE_GRP";
             this.dgv1_SCODE_GRP.ReadOnly = true;
-            this.dgv1_SCODE_GRP.Visible = false;
             // 
-            // dgv1_SCODE_NM
+            // dgv1_SCODE_GRP_NM
             // 
-            this.dgv1_SCODE_NM.DataPropertyName = "SCODE_NM";
-            this.dgv1_SCODE_NM.HeaderText = "SCODE_NM";
-            this.dgv1_SCODE_NM.MaxInputLength = 100;
-            this.dgv1_SCODE_NM.MinimumWidth = 150;
-            this.dgv1_SCODE_NM.Name = "dgv1_SCODE_NM";
-            this.dgv1_SCODE_NM.ReadOnly = true;
-            this.dgv1_SCODE_NM.Width = 150;
+            this.dgv1_SCODE_GRP_NM.HeaderText = "SCODE_NM";
+            this.dgv1_SCODE_GRP_NM.MaxInputLength = 100;
+            this.dgv1_SCODE_GRP_NM.MinimumWidth = 150;
+            this.dgv1_SCODE_GRP_NM.Name = "dgv1_SCODE_GRP_NM";
+            this.dgv1_SCODE_GRP_NM.ReadOnly = true;
+            this.dgv1_SCODE_GRP_NM.Width = 150;
             // 
             // dgv1_USING_FLAG
             // 
-            this.dgv1_USING_FLAG.DataPropertyName = "USING_FLAG";
             this.dgv1_USING_FLAG.FalseValue = "0";
             this.dgv1_USING_FLAG.HeaderText = "USING_FLAG";
             this.dgv1_USING_FLAG.IndeterminateValue = "0";
@@ -213,7 +210,6 @@
             // 
             // dgv1_SORT_NO
             // 
-            this.dgv1_SORT_NO.DataPropertyName = "SORT_NO";
             this.dgv1_SORT_NO.HeaderText = "SORT_NO";
             this.dgv1_SORT_NO.MinimumWidth = 80;
             this.dgv1_SORT_NO.Name = "dgv1_SORT_NO";
@@ -223,7 +219,6 @@
             // dgv1_MEMO
             // 
             this.dgv1_MEMO.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dgv1_MEMO.DataPropertyName = "MEMO";
             this.dgv1_MEMO.HeaderText = "MEMO";
             this.dgv1_MEMO.MaxInputLength = 100;
             this.dgv1_MEMO.MinimumWidth = 100;
@@ -275,7 +270,7 @@
             this.treeView1.Font = new System.Drawing.Font("굴림", 9.75F, System.Drawing.FontStyle.Bold);
             this.treeView1.Location = new System.Drawing.Point(0, 25);
             this.treeView1.Name = "treeView1";
-            this.treeView1.Size = new System.Drawing.Size(200, 532);
+            this.treeView1.Size = new System.Drawing.Size(180, 532);
             this.treeView1.TabIndex = 0;
             this.treeView1.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.treeView1_AfterSelect);
             // 
@@ -289,7 +284,7 @@
             this.toolStripButton3});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(200, 25);
+            this.toolStrip1.Size = new System.Drawing.Size(180, 25);
             this.toolStrip1.TabIndex = 2;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -309,12 +304,13 @@
             this.splitContainer3.Panel2.Controls.Add(this.splitContainer4);
             this.splitContainer3.Panel2.Controls.Add(this.panel2);
             this.splitContainer3.Size = new System.Drawing.Size(1037, 557);
-            this.splitContainer3.SplitterDistance = 200;
+            this.splitContainer3.SplitterDistance = 180;
             this.splitContainer3.TabIndex = 0;
             // 
             // splitContainer4
             // 
             this.splitContainer4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer4.FixedPanel = System.Windows.Forms.FixedPanel.Panel2;
             this.splitContainer4.Location = new System.Drawing.Point(0, 25);
             this.splitContainer4.Name = "splitContainer4";
             this.splitContainer4.Orientation = System.Windows.Forms.Orientation.Horizontal;
@@ -326,8 +322,8 @@
             // splitContainer4.Panel2
             // 
             this.splitContainer4.Panel2.Controls.Add(this.dataGridView2);
-            this.splitContainer4.Size = new System.Drawing.Size(833, 532);
-            this.splitContainer4.SplitterDistance = 416;
+            this.splitContainer4.Size = new System.Drawing.Size(853, 532);
+            this.splitContainer4.SplitterDistance = 475;
             this.splitContainer4.TabIndex = 4;
             // 
             // dataGridView2
@@ -335,28 +331,33 @@
             this.dataGridView2.AllowUserToAddRows = false;
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dgv2_SCODE_NM,
+            this.dgv2_SCODE_GRP,
+            this.dgv2_SCODE_GRP_NM,
             this.dgv2_SORT_NO,
             this.dgv2_MEMO,
-            this.Btn_Add});
+            this.dgv2_BTNADD});
             this.dataGridView2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView2.Location = new System.Drawing.Point(0, 0);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.RowTemplate.Height = 23;
-            this.dataGridView2.Size = new System.Drawing.Size(833, 112);
+            this.dataGridView2.Size = new System.Drawing.Size(853, 53);
             this.dataGridView2.TabIndex = 0;
             this.dataGridView2.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellClick);
             // 
-            // dgv2_SCODE_NM
+            // dgv2_SCODE_GRP
             // 
-            this.dgv2_SCODE_NM.DataPropertyName = "SCODE_NM";
-            this.dgv2_SCODE_NM.HeaderText = "SCODE_NM";
-            this.dgv2_SCODE_NM.MaxInputLength = 100;
-            this.dgv2_SCODE_NM.Name = "dgv2_SCODE_NM";
+            this.dgv2_SCODE_GRP.HeaderText = "SCODE_GRP";
+            this.dgv2_SCODE_GRP.MaxInputLength = 100;
+            this.dgv2_SCODE_GRP.Name = "dgv2_SCODE_GRP";
+            // 
+            // dgv2_SCODE_GRP_NM
+            // 
+            this.dgv2_SCODE_GRP_NM.HeaderText = "SCODE_GRP_NM";
+            this.dgv2_SCODE_GRP_NM.MaxInputLength = 100;
+            this.dgv2_SCODE_GRP_NM.Name = "dgv2_SCODE_GRP_NM";
             // 
             // dgv2_SORT_NO
             // 
-            this.dgv2_SORT_NO.DataPropertyName = "SORT_NO";
             this.dgv2_SORT_NO.HeaderText = "SORT_NO";
             this.dgv2_SORT_NO.MaxInputLength = 100;
             this.dgv2_SORT_NO.Name = "dgv2_SORT_NO";
@@ -364,18 +365,17 @@
             // dgv2_MEMO
             // 
             this.dgv2_MEMO.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dgv2_MEMO.DataPropertyName = "MEMO";
             this.dgv2_MEMO.HeaderText = "MEMO";
             this.dgv2_MEMO.MaxInputLength = 1000;
             this.dgv2_MEMO.Name = "dgv2_MEMO";
             // 
-            // Btn_Add
+            // dgv2_BTNADD
             // 
-            this.Btn_Add.HeaderText = "";
-            this.Btn_Add.Name = "Btn_Add";
-            this.Btn_Add.ReadOnly = true;
-            this.Btn_Add.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.Btn_Add.Text = "Add";
+            this.dgv2_BTNADD.HeaderText = "";
+            this.dgv2_BTNADD.Name = "dgv2_BTNADD";
+            this.dgv2_BTNADD.ReadOnly = true;
+            this.dgv2_BTNADD.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgv2_BTNADD.Text = "Add";
             // 
             // btnSave
             // 
@@ -489,17 +489,18 @@
         private System.Windows.Forms.SplitContainer splitContainer2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
         private System.Windows.Forms.SplitContainer splitContainer1;
+        private System.Windows.Forms.SplitContainer splitContainer4;
+        private System.Windows.Forms.DataGridView dataGridView2;
         private System.Windows.Forms.DataGridViewCheckBoxColumn dgv1_CHK;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgv1_SCODE_GRP;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgv1_SCODE_NM;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgv1_SCODE_GRP_NM;
         private System.Windows.Forms.DataGridViewCheckBoxColumn dgv1_USING_FLAG;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgv1_SORT_NO;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgv1_MEMO;
-        private System.Windows.Forms.SplitContainer splitContainer4;
-        private System.Windows.Forms.DataGridView dataGridView2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgv2_SCODE_NM;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgv2_SCODE_GRP;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgv2_SCODE_GRP_NM;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgv2_SORT_NO;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgv2_MEMO;
-        private System.Windows.Forms.DataGridViewButtonColumn Btn_Add;
+        private System.Windows.Forms.DataGridViewButtonColumn dgv2_BTNADD;
     }
 }

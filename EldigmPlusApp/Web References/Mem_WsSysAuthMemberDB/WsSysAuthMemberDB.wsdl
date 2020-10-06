@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="WsSysAuthMemberDB" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:49501/WebSvc/Sys/SysAuth/WsSysAuthMemberDB.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:49501/WebSvc/Sys/SysAuth/WsSysAuthMemberDB.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:49501/WebSvc/Sys/SysAuth/WsSysAuthMemberDB.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/EldigmPlusSvc_Memco.WebSvc.Sys.SysAuth" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IWsSysAuthMemberDB_sDbNm_InputMessage">
+    <wsdl:part name="parameters" element="tns:sDbNm" />
+  </wsdl:message>
+  <wsdl:message name="IWsSysAuthMemberDB_sDbNm_OutputMessage">
+    <wsdl:part name="parameters" element="tns:sDbNmResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWsSysAuthMemberDB_sMemberMainDB_InputMessage">
+    <wsdl:part name="parameters" element="tns:sMemberMainDB" />
+  </wsdl:message>
+  <wsdl:message name="IWsSysAuthMemberDB_sMemberMainDB_OutputMessage">
+    <wsdl:part name="parameters" element="tns:sMemberMainDBResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWsSysAuthMemberDB_sSysAuthMemberDB_InputMessage">
+    <wsdl:part name="parameters" element="tns:sSysAuthMemberDB" />
+  </wsdl:message>
+  <wsdl:message name="IWsSysAuthMemberDB_sSysAuthMemberDB_OutputMessage">
+    <wsdl:part name="parameters" element="tns:sSysAuthMemberDBResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWsSysAuthMemberDB_mSysAuthMemberDB_InputMessage">
+    <wsdl:part name="parameters" element="tns:mSysAuthMemberDB" />
+  </wsdl:message>
+  <wsdl:message name="IWsSysAuthMemberDB_mSysAuthMemberDB_OutputMessage">
+    <wsdl:part name="parameters" element="tns:mSysAuthMemberDBResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWsSysAuthMemberDB_exSysAuthMainDB_InputMessage">
+    <wsdl:part name="parameters" element="tns:exSysAuthMainDB" />
+  </wsdl:message>
+  <wsdl:message name="IWsSysAuthMemberDB_exSysAuthMainDB_OutputMessage">
+    <wsdl:part name="parameters" element="tns:exSysAuthMainDBResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWsSysAuthMemberDB_aSysAuthMemberDB_InputMessage">
+    <wsdl:part name="parameters" element="tns:aSysAuthMemberDB" />
+  </wsdl:message>
+  <wsdl:message name="IWsSysAuthMemberDB_aSysAuthMemberDB_OutputMessage">
+    <wsdl:part name="parameters" element="tns:aSysAuthMemberDBResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWsSysAuthMemberDB_aSysAuthMainDB_InputMessage">
+    <wsdl:part name="parameters" element="tns:aSysAuthMainDB" />
+  </wsdl:message>
+  <wsdl:message name="IWsSysAuthMemberDB_aSysAuthMainDB_OutputMessage">
+    <wsdl:part name="parameters" element="tns:aSysAuthMainDBResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWsSysAuthMemberDB_sSiteMainDB_InputMessage">
+    <wsdl:part name="parameters" element="tns:sSiteMainDB" />
+  </wsdl:message>
+  <wsdl:message name="IWsSysAuthMemberDB_sSiteMainDB_OutputMessage">
+    <wsdl:part name="parameters" element="tns:sSiteMainDBResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWsSysAuthMemberDB_siteDbNm_InputMessage">
+    <wsdl:part name="parameters" element="tns:siteDbNm" />
+  </wsdl:message>
+  <wsdl:message name="IWsSysAuthMemberDB_siteDbNm_OutputMessage">
+    <wsdl:part name="parameters" element="tns:siteDbNmResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWsSysAuthMemberDB_sSysAuthSiteDB_InputMessage">
+    <wsdl:part name="parameters" element="tns:sSysAuthSiteDB" />
+  </wsdl:message>
+  <wsdl:message name="IWsSysAuthMemberDB_sSysAuthSiteDB_OutputMessage">
+    <wsdl:part name="parameters" element="tns:sSysAuthSiteDBResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWsSysAuthMemberDB_mSysAuthSiteDB_InputMessage">
+    <wsdl:part name="parameters" element="tns:mSysAuthSiteDB" />
+  </wsdl:message>
+  <wsdl:message name="IWsSysAuthMemberDB_mSysAuthSiteDB_OutputMessage">
+    <wsdl:part name="parameters" element="tns:mSysAuthSiteDBResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWsSysAuthMemberDB_aSysAuthSiteDB_InputMessage">
+    <wsdl:part name="parameters" element="tns:aSysAuthSiteDB" />
+  </wsdl:message>
+  <wsdl:message name="IWsSysAuthMemberDB_aSysAuthSiteDB_OutputMessage">
+    <wsdl:part name="parameters" element="tns:aSysAuthSiteDBResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IWsSysAuthMemberDB">
+    <wsdl:operation name="sDbNm">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWsSysAuthMemberDB/sDbNm" message="tns:IWsSysAuthMemberDB_sDbNm_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWsSysAuthMemberDB/sDbNmResponse" message="tns:IWsSysAuthMemberDB_sDbNm_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="sMemberMainDB">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWsSysAuthMemberDB/sMemberMainDB" message="tns:IWsSysAuthMemberDB_sMemberMainDB_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWsSysAuthMemberDB/sMemberMainDBResponse" message="tns:IWsSysAuthMemberDB_sMemberMainDB_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="sSysAuthMemberDB">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWsSysAuthMemberDB/sSysAuthMemberDB" message="tns:IWsSysAuthMemberDB_sSysAuthMemberDB_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWsSysAuthMemberDB/sSysAuthMemberDBResponse" message="tns:IWsSysAuthMemberDB_sSysAuthMemberDB_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="mSysAuthMemberDB">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWsSysAuthMemberDB/mSysAuthMemberDB" message="tns:IWsSysAuthMemberDB_mSysAuthMemberDB_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWsSysAuthMemberDB/mSysAuthMemberDBResponse" message="tns:IWsSysAuthMemberDB_mSysAuthMemberDB_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="exSysAuthMainDB">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWsSysAuthMemberDB/exSysAuthMainDB" message="tns:IWsSysAuthMemberDB_exSysAuthMainDB_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWsSysAuthMemberDB/exSysAuthMainDBResponse" message="tns:IWsSysAuthMemberDB_exSysAuthMainDB_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="aSysAuthMemberDB">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWsSysAuthMemberDB/aSysAuthMemberDB" message="tns:IWsSysAuthMemberDB_aSysAuthMemberDB_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWsSysAuthMemberDB/aSysAuthMemberDBResponse" message="tns:IWsSysAuthMemberDB_aSysAuthMemberDB_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="aSysAuthMainDB">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWsSysAuthMemberDB/aSysAuthMainDB" message="tns:IWsSysAuthMemberDB_aSysAuthMainDB_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWsSysAuthMemberDB/aSysAuthMainDBResponse" message="tns:IWsSysAuthMemberDB_aSysAuthMainDB_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="sSiteMainDB">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWsSysAuthMemberDB/sSiteMainDB" message="tns:IWsSysAuthMemberDB_sSiteMainDB_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWsSysAuthMemberDB/sSiteMainDBResponse" message="tns:IWsSysAuthMemberDB_sSiteMainDB_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="siteDbNm">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWsSysAuthMemberDB/siteDbNm" message="tns:IWsSysAuthMemberDB_siteDbNm_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWsSysAuthMemberDB/siteDbNmResponse" message="tns:IWsSysAuthMemberDB_siteDbNm_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="sSysAuthSiteDB">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWsSysAuthMemberDB/sSysAuthSiteDB" message="tns:IWsSysAuthMemberDB_sSysAuthSiteDB_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWsSysAuthMemberDB/sSysAuthSiteDBResponse" message="tns:IWsSysAuthMemberDB_sSysAuthSiteDB_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="mSysAuthSiteDB">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWsSysAuthMemberDB/mSysAuthSiteDB" message="tns:IWsSysAuthMemberDB_mSysAuthSiteDB_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWsSysAuthMemberDB/mSysAuthSiteDBResponse" message="tns:IWsSysAuthMemberDB_mSysAuthSiteDB_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="aSysAuthSiteDB">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWsSysAuthMemberDB/aSysAuthSiteDB" message="tns:IWsSysAuthMemberDB_aSysAuthSiteDB_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWsSysAuthMemberDB/aSysAuthSiteDBResponse" message="tns:IWsSysAuthMemberDB_aSysAuthSiteDB_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IWsSysAuthMemberDB" type="tns:IWsSysAuthMemberDB">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="sDbNm">
+      <soap:operation soapAction="http://tempuri.org/IWsSysAuthMemberDB/sDbNm" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="sMemberMainDB">
+      <soap:operation soapAction="http://tempuri.org/IWsSysAuthMemberDB/sMemberMainDB" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="sSysAuthMemberDB">
+      <soap:operation soapAction="http://tempuri.org/IWsSysAuthMemberDB/sSysAuthMemberDB" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mSysAuthMemberDB">
+      <soap:operation soapAction="http://tempuri.org/IWsSysAuthMemberDB/mSysAuthMemberDB" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="exSysAuthMainDB">
+      <soap:operation soapAction="http://tempuri.org/IWsSysAuthMemberDB/exSysAuthMainDB" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="aSysAuthMemberDB">
+      <soap:operation soapAction="http://tempuri.org/IWsSysAuthMemberDB/aSysAuthMemberDB" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="aSysAuthMainDB">
+      <soap:operation soapAction="http://tempuri.org/IWsSysAuthMemberDB/aSysAuthMainDB" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="sSiteMainDB">
+      <soap:operation soapAction="http://tempuri.org/IWsSysAuthMemberDB/sSiteMainDB" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="siteDbNm">
+      <soap:operation soapAction="http://tempuri.org/IWsSysAuthMemberDB/siteDbNm" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="sSysAuthSiteDB">
+      <soap:operation soapAction="http://tempuri.org/IWsSysAuthMemberDB/sSysAuthSiteDB" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mSysAuthSiteDB">
+      <soap:operation soapAction="http://tempuri.org/IWsSysAuthMemberDB/mSysAuthSiteDB" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="aSysAuthSiteDB">
+      <soap:operation soapAction="http://tempuri.org/IWsSysAuthMemberDB/aSysAuthSiteDB" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="WsSysAuthMemberDB">
+    <wsdl:port name="BasicHttpBinding_IWsSysAuthMemberDB" binding="tns:BasicHttpBinding_IWsSysAuthMemberDB">
+      <soap:address location="http://localhost:49501/WebSvc/Sys/SysAuth/WsSysAuthMemberDB.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,39 @@
+
+2020-09-23 22:06:41-->  [error]  (page)::FrmSysAuthMemberDB.cs  (Function)::SetDataBind_CmbMember  (Detail):: 
+System.Net.WebException: HTTP 상태 404: Not Found(으)로 인해 요청하지 못했습니다.
+   위치: System.Web.Services.Protocols.SoapHttpClientProtocol.ReadResponse(SoapClientMessage message, WebResponse response, Stream responseStream, Boolean asyncCall)
+   위치: System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke(String methodName, Object[] parameters)
+   위치: EldigmPlusApp.Mem_WsSysAuthMemberDB.WsSysAuthMemberDB.sMemberMainDB(DataMemberMainDB[]& reList, String& reMsg) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\Web References\Mem_WsSysAuthMemberDB\Reference.cs:줄 141
+   위치: EldigmPlusApp.SubForm.Sys.SysAuth.FrmSysAuthMemberDB.SetDataBind_CmbMember() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\SysAuth\FrmSysAuthMemberDB.cs:줄 123
+2020-09-23 22:07:38-->  [error]  (page)::FrmSysAuthMemberDB.cs  (Function)::SetDataBind_CmbMember  (Detail):: 
+System.Net.WebException: HTTP 상태 404: Not Found(으)로 인해 요청하지 못했습니다.
+   위치: System.Web.Services.Protocols.SoapHttpClientProtocol.ReadResponse(SoapClientMessage message, WebResponse response, Stream responseStream, Boolean asyncCall)
+   위치: System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke(String methodName, Object[] parameters)
+   위치: EldigmPlusApp.Mem_WsSysAuthMemberDB.WsSysAuthMemberDB.sMemberMainDB(DataMemberMainDB[]& reList, String& reMsg) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\Web References\Mem_WsSysAuthMemberDB\Reference.cs:줄 141
+   위치: EldigmPlusApp.SubForm.Sys.SysAuth.FrmSysAuthMemberDB.SetDataBind_CmbMember() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\SysAuth\FrmSysAuthMemberDB.cs:줄 123
+2020-09-23 22:07:40-->  [error]  (page)::FrmSysAuthMemberDB.cs  (Function)::SetDataBind_CmbMember  (Detail):: 
+System.Net.WebException: HTTP 상태 404: Not Found(으)로 인해 요청하지 못했습니다.
+   위치: System.Web.Services.Protocols.SoapHttpClientProtocol.ReadResponse(SoapClientMessage message, WebResponse response, Stream responseStream, Boolean asyncCall)
+   위치: System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke(String methodName, Object[] parameters)
+   위치: EldigmPlusApp.Mem_WsSysAuthMemberDB.WsSysAuthMemberDB.sMemberMainDB(DataMemberMainDB[]& reList, String& reMsg) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\Web References\Mem_WsSysAuthMemberDB\Reference.cs:줄 141
+   위치: EldigmPlusApp.SubForm.Sys.SysAuth.FrmSysAuthMemberDB.SetDataBind_CmbMember() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\SysAuth\FrmSysAuthMemberDB.cs:줄 123
+2020-09-23 22:11:36-->  [error]  (page)::FrmSysAuthMemberDB.cs  (Function)::SetDataBind_CmbMember  (Detail):: 
+System.Net.WebException: HTTP 상태 404: Not Found(으)로 인해 요청하지 못했습니다.
+   위치: System.Web.Services.Protocols.SoapHttpClientProtocol.ReadResponse(SoapClientMessage message, WebResponse response, Stream responseStream, Boolean asyncCall)
+   위치: System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke(String methodName, Object[] parameters)
+   위치: EldigmPlusApp.Mem_WsSysAuthMemberDB.WsSysAuthMemberDB.sMemberMainDB(DataMemberMainDB[]& reList, String& reMsg) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\Web References\Mem_WsSysAuthMemberDB\Reference.cs:줄 141
+   위치: EldigmPlusApp.SubForm.Sys.SysAuth.FrmSysAuthMemberDB.SetDataBind_CmbMember() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\SysAuth\FrmSysAuthMemberDB.cs:줄 123
+2020-09-23 22:13:49-->  [error]  (page)::FrmSysAuthMemberDB.cs  (Function)::SetDataBind_CmbMember  (Detail):: 
+System.Net.WebException: HTTP 상태 404: Not Found(으)로 인해 요청하지 못했습니다.
+   위치: System.Web.Services.Protocols.SoapHttpClientProtocol.ReadResponse(SoapClientMessage message, WebResponse response, Stream responseStream, Boolean asyncCall)
+   위치: System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke(String methodName, Object[] parameters)
+   위치: EldigmPlusApp.Mem_WsSysAuthMemberDB.WsSysAuthMemberDB.sMemberMainDB(DataMemberMainDB[]& reList, String& reMsg) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\Web References\Mem_WsSysAuthMemberDB\Reference.cs:줄 141
+   위치: EldigmPlusApp.SubForm.Sys.SysAuth.FrmSysAuthMemberDB.SetDataBind_CmbMember() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\SysAuth\FrmSysAuthMemberDB.cs:줄 123
+2020-09-23 22:21:48-->  [error]  (page)::FrmSysAuthMemberDB.cs  (Function)::SetDataBind_CmbMember  (Detail):: 
+System.Data.DuplicateNameException: 이름이 'text'인 열이 이 DataTable에 이미 속해 있습니다.
+   위치: System.Data.DataColumnCollection.RegisterColumnName(String name, DataColumn column)
+   위치: System.Data.DataColumnCollection.BaseAdd(DataColumn column)
+   위치: System.Data.DataColumnCollection.AddAt(Int32 index, DataColumn column)
+   위치: System.Data.DataColumnCollection.Add(String columnName)
+   위치: EldigmPlusApp.Class.Common.ComboBoxItemSet.AddColumn() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\Class\Common\ComboBoxItemSet.cs:줄 16
+   위치: EldigmPlusApp.SubForm.Sys.SysAuth.FrmSysAuthMemberDB.SetDataBind_CmbMember() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\SysAuth\FrmSysAuthMemberDB.cs:줄 134

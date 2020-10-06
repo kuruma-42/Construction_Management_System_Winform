@@ -1,4 +1,5 @@
-﻿using Framework.Data;
+﻿using EldigmPlusDb.DbClass.Common;
+using Framework.Data;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -10,31 +11,43 @@ namespace EldigmPlusClassLibrary.DbClass.MainHome
 {
     public class DbMainHome
     {
-        DataObj sqlHelper = null;
+        DataObj _sqlHelper = null;
 
-        public DbMainHome()
+        //public DbMainHome()
+        //{
+        //    _sqlHelper = new DataObj();
+        //    _sqlHelper.SetConnect(dbConStr());
+        //}
+
+        //private string dbConStr()
+        //{
+        //    string server = "192.168.0.77";
+        //    string dbPort = "61433";
+        //    string dataBase = "PLUS_MAIN";
+        //    string uid = "eldigmplus";
+        //    string pwd = "!@#Plus1203";
+
+        //    return "server=" + server + "," + dbPort + ";database=" + dataBase + ";uid=" + uid + ";pwd=" + pwd + ";";
+        //}
+
+        public DbMainHome(string pCon_IP, string pCon_DB, string pCon_USER)
         {
-            sqlHelper = new DataObj();
-            sqlHelper.SetConnect(dbConStr());
-        }
+            string mainKey_E256 = "6LL/J2V3x6N8kXK3qj5FOxZpRR20xWFlgnscFikXwy0=";
 
-        private string dbConStr()
-        {
-            string server = "192.168.0.77";
-            string dbPort = "61433";
-            string dataBase = "PLUS_MAIN";
-            string uid = "eldigmplus";
-            string pwd = "!@#Plus1203";
+            EncDecClass edc = new EncDecClass();
+            string mainKey_D256 = edc.AESDecrypt256(mainKey_E256, "eldigm");
+            string strDbconn = pCon_IP + edc.AESDecrypt256(pCon_DB, mainKey_D256) + edc.AESDecrypt256(pCon_USER, mainKey_D256);
 
-            return "server=" + server + "," + dbPort + ";database=" + dataBase + ";uid=" + uid + ";pwd=" + pwd + ";";
+            _sqlHelper = new DataObj();
+            _sqlHelper.SetConnect(strDbconn);
         }
 
         public void DisConnect()
         {
-            if (sqlHelper != null)
+            if (_sqlHelper != null)
             {
-                sqlHelper.DisConnect();
-                sqlHelper = null;
+                _sqlHelper.DisConnect();
+                _sqlHelper = null;
             }
         }
 
@@ -49,8 +62,8 @@ namespace EldigmPlusClassLibrary.DbClass.MainHome
 
             object reVal = null;
 
-            if (sqlHelper != null)
-                reVal = sqlHelper.ExecuteScalar(sql);
+            if (_sqlHelper != null)
+                reVal = _sqlHelper.ExecuteScalar(sql);
 
             return reVal.ToString();
         }
@@ -68,8 +81,8 @@ namespace EldigmPlusClassLibrary.DbClass.MainHome
 
             DataSet ds = null;
 
-            if (sqlHelper != null)
-                ds = sqlHelper.ExecuteFill(sql);
+            if (_sqlHelper != null)
+                ds = _sqlHelper.ExecuteFill(sql);
 
             return ds;
         }
@@ -87,8 +100,8 @@ namespace EldigmPlusClassLibrary.DbClass.MainHome
 
             DataSet ds = null;
 
-            if (sqlHelper != null)
-                ds = sqlHelper.ExecuteFill(sql);
+            if (_sqlHelper != null)
+                ds = _sqlHelper.ExecuteFill(sql);
 
             return ds;
         }
@@ -107,8 +120,8 @@ namespace EldigmPlusClassLibrary.DbClass.MainHome
 
             DataSet ds = null;
 
-            if (sqlHelper != null)
-                ds = sqlHelper.ExecuteFill(sql);
+            if (_sqlHelper != null)
+                ds = _sqlHelper.ExecuteFill(sql);
 
             return ds;
         }

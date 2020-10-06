@@ -104,11 +104,47 @@
     <Compile Include="SubForm\MainHome\FrmMain.Designer.cs">
       <DependentUpon>FrmMain.cs</DependentUpon>
     </Compile>
-    <Compile Include="SubForm\Sys\Menu\FrmMenu.cs">
+    <Compile Include="SubForm\Sys\ComnCode\FrmComnCodeGrpMainDB.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="SubForm\Sys\Menu\FrmMenu.Designer.cs">
-      <DependentUpon>FrmMenu.cs</DependentUpon>
+    <Compile Include="SubForm\Sys\ComnCode\FrmComnCodeGrpMainDB.Designer.cs">
+      <DependentUpon>FrmComnCodeGrpMainDB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubForm\Sys\MemberSite\FrmMember.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubForm\Sys\MemberSite\FrmMember.Designer.cs">
+      <DependentUpon>FrmMember.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubForm\Sys\MemberSite\FrmSite.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubForm\Sys\MemberSite\FrmSite.Designer.cs">
+      <DependentUpon>FrmSite.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubForm\Sys\Menu\FrmMenuMainDB.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubForm\Sys\Menu\FrmMenuMainDB.Designer.cs">
+      <DependentUpon>FrmMenuMainDB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubForm\Sys\SysAuth\FrmSysAuthMainDB.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubForm\Sys\SysAuth\FrmSysAuthMainDB.Designer.cs">
+      <DependentUpon>FrmSysAuthMainDB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubForm\Sys\SysAuth\FrmSysAuthMemberDB.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubForm\Sys\SysAuth\FrmSysAuthMemberDB.Designer.cs">
+      <DependentUpon>FrmSysAuthMemberDB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubForm\Sys\SysAuth\FrmSysAuthSiteDB.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubForm\Sys\SysAuth\FrmSysAuthSiteDB.Designer.cs">
+      <DependentUpon>FrmSysAuthSiteDB.cs</DependentUpon>
     </Compile>
     <Compile Include="SubForm\Sys\SysCode\FrmSysCode.cs">
       <SubType>Form</SubType>
@@ -122,12 +158,42 @@
     <Compile Include="SubForm\Sys\SysCode\FrmSysCodeGrp.Designer.cs">
       <DependentUpon>FrmSysCodeGrp.cs</DependentUpon>
     </Compile>
-    <Compile Include="Web References\WsMHome\Reference.cs">
+    <Compile Include="Web References\Mem_WsMHome\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.map</DependentUpon>
     </Compile>
-    <Compile Include="Web References\WsSCodeGrp\Reference.cs">
+    <Compile Include="Web References\Mem_WsSysAuthMemberDB\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\M_WsMember\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\M_WsMenuMainDB\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\M_WsMHome\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\M_WsSysAuthMainDB\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\M_WsSysCodeGrp\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\M_WsCCodeGrp\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.map</DependentUpon>
@@ -146,8 +212,26 @@
     <EmbeddedResource Include="strLanguage.en-US.resx" />
     <EmbeddedResource Include="strLanguage.ko-KR.resx" />
     <EmbeddedResource Include="strLanguage.zh-CN.resx" />
-    <EmbeddedResource Include="SubForm\Sys\Menu\FrmMenu.resx">
-      <DependentUpon>FrmMenu.cs</DependentUpon>
+    <EmbeddedResource Include="SubForm\Sys\ComnCode\FrmComnCodeGrpMainDB.resx">
+      <DependentUpon>FrmComnCodeGrpMainDB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubForm\Sys\MemberSite\FrmMember.resx">
+      <DependentUpon>FrmMember.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubForm\Sys\MemberSite\FrmSite.resx">
+      <DependentUpon>FrmSite.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubForm\Sys\Menu\FrmMenuMainDB.resx">
+      <DependentUpon>FrmMenuMainDB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubForm\Sys\SysAuth\FrmSysAuthMainDB.resx">
+      <DependentUpon>FrmSysAuthMainDB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubForm\Sys\SysAuth\FrmSysAuthMemberDB.resx">
+      <DependentUpon>FrmSysAuthMemberDB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubForm\Sys\SysAuth\FrmSysAuthSiteDB.resx">
+      <DependentUpon>FrmSysAuthSiteDB.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SubForm\Sys\SysCode\FrmSysCode.resx">
       <DependentUpon>FrmSysCode.cs</DependentUpon>
@@ -167,47 +251,185 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <None Include="Web References\WsMHome\DataSubMenu1.datasource">
+    <None Include="Web References\Mem_WsMHome\DataSubMenu1.datasource">
       <DependentUpon>Reference.map</DependentUpon>
     </None>
-    <None Include="Web References\WsMHome\DataSubMenu2.datasource">
+    <None Include="Web References\Mem_WsMHome\DataSubMenu2.datasource">
       <DependentUpon>Reference.map</DependentUpon>
     </None>
-    <None Include="Web References\WsMHome\DataTopMenu.datasource">
+    <None Include="Web References\Mem_WsMHome\DataTopMenu.datasource">
       <DependentUpon>Reference.map</DependentUpon>
     </None>
-    <None Include="Web References\WsMHome\Reference.map">
+    <None Include="Web References\Mem_WsMHome\Reference.map">
       <Generator>MSDiscoCodeGenerator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
-    <None Include="Web References\WsMHome\WsMainHome.wsdl" />
-    <None Include="Web References\WsMHome\WsMainHome.xsd">
+    <None Include="Web References\Mem_WsMHome\WsMainHome.wsdl" />
+    <None Include="Web References\Mem_WsMHome\WsMainHome.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Web References\WsMHome\WsMainHome0.xsd">
+    <None Include="Web References\Mem_WsMHome\WsMainHome0.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Web References\WsMHome\WsMainHome1.xsd">
+    <None Include="Web References\Mem_WsMHome\WsMainHome1.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Web References\WsSCodeGrp\DataSysCode.datasource">
+    <None Include="Web References\Mem_WsSysAuthMemberDB\DataMemberMainDB.datasource">
       <DependentUpon>Reference.map</DependentUpon>
     </None>
-    <None Include="Web References\WsSCodeGrp\DataSysCodeGrp.datasource">
+    <None Include="Web References\Mem_WsSysAuthMemberDB\DataSiteMainDB.datasource">
       <DependentUpon>Reference.map</DependentUpon>
     </None>
-    <None Include="Web References\WsSCodeGrp\Reference.map">
+    <None Include="Web References\Mem_WsSysAuthMemberDB\DataSysAuthMemberDB.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\Mem_WsSysAuthMemberDB\DataSysAuthSiteDB.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\Mem_WsSysAuthMemberDB\Reference.map">
       <Generator>MSDiscoCodeGenerator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
-    <None Include="Web References\WsSCodeGrp\WsSysCodeGrp.wsdl" />
-    <None Include="Web References\WsSCodeGrp\WsSysCodeGrp.xsd">
+    <None Include="Web References\Mem_WsSysAuthMemberDB\WsSysAuthMemberDB.wsdl" />
+    <None Include="Web References\Mem_WsSysAuthMemberDB\WsSysAuthMemberDB.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Web References\WsSCodeGrp\WsSysCodeGrp0.xsd">
+    <None Include="Web References\Mem_WsSysAuthMemberDB\WsSysAuthMemberDB0.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Web References\WsSCodeGrp\WsSysCodeGrp1.xsd">
+    <None Include="Web References\Mem_WsSysAuthMemberDB\WsSysAuthMemberDB1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\M_WsCCodeGrp\DataComnCodeGrp1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\M_WsMember\DataMemberDB.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\M_WsMember\DataMemberMainDB.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\M_WsMember\DataSiteDB.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\M_WsMember\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\M_WsMember\WsMember.wsdl" />
+    <None Include="Web References\M_WsMember\WsMember.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\M_WsMember\WsMember0.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\M_WsMember\WsMember1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\M_WsMember\WsMember2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\M_WsMenuMainDB\DataMenu.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\M_WsMenuMainDB\DataMenuSub.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\M_WsMenuMainDB\DataMenuTop.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\M_WsMenuMainDB\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\M_WsMenuMainDB\WsMenuMainDB.wsdl" />
+    <None Include="Web References\M_WsMenuMainDB\WsMenuMainDB.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\M_WsMenuMainDB\WsMenuMainDB0.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\M_WsMenuMainDB\WsMenuMainDB1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\M_WsMHome\DataSubMenu11.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\M_WsMHome\DataSubMenu21.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\M_WsMHome\DataTopMenu1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\M_WsMHome\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\M_WsMHome\WsMainHome.wsdl" />
+    <None Include="Web References\M_WsMHome\WsMainHome.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\M_WsMHome\WsMainHome0.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\M_WsMHome\WsMainHome1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\M_WsSysAuthMainDB\DataSysAuthMainDB1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\M_WsSysCodeGrp\DataSysCode.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\M_WsSysCodeGrp\DataSysCode1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\M_WsSysAuthMainDB\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\M_WsSysAuthMainDB\WsSysAuthMainDB.wsdl" />
+    <None Include="Web References\M_WsSysAuthMainDB\WsSysAuthMainDB.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\M_WsSysAuthMainDB\WsSysAuthMainDB0.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\M_WsSysAuthMainDB\WsSysAuthMainDB1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\M_WsSysCodeGrp\DataSysCodeGrp.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\M_WsSysCodeGrp\DataSysCodeGrp1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\M_WsSysCodeGrp\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\M_WsSysCodeGrp\WsSysCodeGrp.wsdl" />
+    <None Include="Web References\M_WsSysCodeGrp\WsSysCodeGrp.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\M_WsSysCodeGrp\WsSysCodeGrp0.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\M_WsSysCodeGrp\WsSysCodeGrp1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\M_WsCCodeGrp\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\M_WsCCodeGrp\WsComnCodeGrp.wsdl" />
+    <None Include="Web References\M_WsCCodeGrp\WsComnCodeGrp.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\M_WsCCodeGrp\WsComnCodeGrp0.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\M_WsCCodeGrp\WsComnCodeGrp1.xsd">
       <SubType>Designer</SubType>
     </None>
   </ItemGroup>
@@ -251,13 +473,42 @@
     <Content Include="Image\treeicon1.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <None Include="Web References\WsSCodeGrp\WsSysCodeGrp.disco" />
-    <None Include="Web References\WsMHome\WsMainHome.disco" />
+    <None Include="Web References\M_WsMember\WsMember.disco" />
+    <None Include="Web References\Mem_WsSysAuthMemberDB\WsSysAuthMemberDB.disco" />
+    <None Include="Web References\M_WsMenuMainDB\WsMenuMainDB.disco" />
+    <None Include="Web References\M_WsCCodeGrp\WsComnCodeGrp.disco" />
+    <None Include="Web References\Mem_WsMHome\WsMainHome.disco" />
+    <None Include="Web References\M_WsSysCodeGrp\WsSysCodeGrp.disco" />
+    <None Include="Web References\M_WsSysAuthMainDB\WsSysAuthMainDB.disco" />
+    <None Include="Web References\M_WsMHome\WsMainHome.disco" />
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
+    <WebReferenceUrl Include="http://localhost:49469/WebSvc/Sys/MemberSite/WsMember.svc">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\M_WsMember\</RelPath>
+      <UpdateFromURL>http://localhost:49469/WebSvc/Sys/MemberSite/WsMember.svc</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>EldigmPlusApp_M_WsMember_WsMember</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://localhost:49469/WebSvc/Sys/Menu/WsMenuMainDB.svc">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\M_WsMenuMainDB\</RelPath>
+      <UpdateFromURL>http://localhost:49469/WebSvc/Sys/Menu/WsMenuMainDB.svc</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>EldigmPlusApp_M_WsMenuMainDB_WsMenuMainDB</CachedSettingsPropName>
+    </WebReferenceUrl>
     <WebReferenceUrl Include="http://localhost:49501/WebSvc/MainHome/WsMainHome.svc">
       <UrlBehavior>Dynamic</UrlBehavior>
-      <RelPath>Web References\WsMHome\</RelPath>
+      <RelPath>Web References\M_WsMHome\</RelPath>
       <UpdateFromURL>http://localhost:49501/WebSvc/MainHome/WsMainHome.svc</UpdateFromURL>
       <ServiceLocationURL>
       </ServiceLocationURL>
@@ -266,16 +517,60 @@
       <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
       <CachedSettingsPropName>EldigmPlusApp_WsMHome_WsMainHome</CachedSettingsPropName>
     </WebReferenceUrl>
-    <WebReferenceUrl Include="http://localhost:49501/WebSvc/Sys/SysCode/WsSysCodeGrp.svc">
+    <WebReferenceUrl Include="http://localhost:49469/WebSvc/Sys/SysAuth/WsSysAuthMainDB.svc">
       <UrlBehavior>Dynamic</UrlBehavior>
-      <RelPath>Web References\WsSCodeGrp\</RelPath>
-      <UpdateFromURL>http://localhost:49501/WebSvc/Sys/SysCode/WsSysCodeGrp.svc</UpdateFromURL>
+      <RelPath>Web References\M_WsSysAuthMainDB\</RelPath>
+      <UpdateFromURL>http://localhost:49469/WebSvc/Sys/SysAuth/WsSysAuthMainDB.svc</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>EldigmPlusApp_WsSAuthMainDB_WsSysAuthMainDB</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://localhost:49469/WebSvc/Sys/SysCode/WsSysCodeGrp.svc">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\M_WsSysCodeGrp\</RelPath>
+      <UpdateFromURL>http://localhost:49469/WebSvc/Sys/SysCode/WsSysCodeGrp.svc</UpdateFromURL>
       <ServiceLocationURL>
       </ServiceLocationURL>
       <CachedDynamicPropName>
       </CachedDynamicPropName>
       <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
       <CachedSettingsPropName>EldigmPlusApp_WsSCodeGrp_WsSysCodeGrp</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://localhost:49501/WebSvc/MainHome/WsMainHome.svc">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\Mem_WsMHome\</RelPath>
+      <UpdateFromURL>http://localhost:49501/WebSvc/MainHome/WsMainHome.svc</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>EldigmPlusApp_Mem_WsMHome_WsMainHome</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://localhost:49469/WebSvc/Sys/ComnCode/WsComnCodeGrp.svc">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\M_WsCCodeGrp\</RelPath>
+      <UpdateFromURL>http://localhost:49469/WebSvc/Sys/ComnCode/WsComnCodeGrp.svc</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>EldigmPlusApp_WsCCodeGrp_WsComnCodeGrp</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://localhost:49501/WebSvc/Sys/SysAuth/WsSysAuthMemberDB.svc">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\Mem_WsSysAuthMemberDB\</RelPath>
+      <UpdateFromURL>http://localhost:49501/WebSvc/Sys/SysAuth/WsSysAuthMemberDB.svc</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>EldigmPlusApp_Mem_WsSysAuthMemberDB_WsSysAuthMemberDB</CachedSettingsPropName>
     </WebReferenceUrl>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

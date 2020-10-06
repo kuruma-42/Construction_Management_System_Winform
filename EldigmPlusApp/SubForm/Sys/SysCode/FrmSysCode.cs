@@ -47,8 +47,8 @@ namespace EldigmPlusApp.SubForm.Sys.SysCode
                 dataGridView1.Columns["dgv1_SORT_NO"].HeaderText = "정렬";
                 dataGridView1.Columns["dgv1_MEMO"].HeaderText = "메모";
 
-                dataGridView2.Columns["dgv2_SCODE"].HeaderText = "코드";
-                dataGridView2.Columns["dgv2_SCODE_NM"].HeaderText = "이름";
+                dataGridView2.Columns["dgv2_SCODE"].HeaderText = "*코드";
+                dataGridView2.Columns["dgv2_SCODE_NM"].HeaderText = "*이름";
                 dataGridView2.Columns["dgv2_SORT_NO"].HeaderText = "정렬";
                 dataGridView2.Columns["dgv2_MEMO"].HeaderText = "메모";
 
@@ -86,10 +86,10 @@ namespace EldigmPlusApp.SubForm.Sys.SysCode
         {
             try
             {
-                setDataBind_Combo();
+                SetDataBind_Combo();
 
-                setDataBind_treeView1();
-                setDataBind_grideView2();
+                SetDataBind_treeView1();
+                SetDataBind_grideView2();
             }
             catch (Exception ex)
             {
@@ -97,7 +97,7 @@ namespace EldigmPlusApp.SubForm.Sys.SysCode
             }
         }
 
-        private void setDataBind_Combo()
+        private void SetDataBind_Combo()
         {
             try
             {
@@ -121,18 +121,18 @@ namespace EldigmPlusApp.SubForm.Sys.SysCode
 
         }
 
-        private void setDataBind_treeView1()
+        private void SetDataBind_treeView1()
         {
             treeView1.Nodes.Clear();
 
-            WsSCodeGrp.WsSysCodeGrp wSvc = null;
+            M_WsSysCodeGrp.WsSysCodeGrp wSvc = null;
             string reCode = "";
             string reMsg = "";
-            WsSCodeGrp.DataSysCodeGrp[] getData = null;
+            M_WsSysCodeGrp.DataSysCodeGrp[] getData = null;
             try
             {
-                wSvc = new WsSCodeGrp.WsSysCodeGrp();
-                wSvc.Url = "http://" + AppInfo.SsServer + "/WebSvc/Sys/SysCode/WsSysCodeGrp.svc";
+                wSvc = new M_WsSysCodeGrp.WsSysCodeGrp();
+                wSvc.Url = "http://" + AppInfo.SsWsvcServer2 + "/WebSvc/Sys/SysCode/WsSysCodeGrp.svc";
                 wSvc.Timeout = 1000;
 
                 ImageList myimageList = new ImageList();
@@ -153,7 +153,7 @@ namespace EldigmPlusApp.SubForm.Sys.SysCode
                         for (int i = 0; i < getData.Length; i++)
                         {
                             string scodeGrp_val = getData[i].SCODE_GRP.ToString();
-                            string scodeNm_val = getData[i].SCODE_NM.ToString();
+                            string scodeNm_val = getData[i].SCODE_GRP_NM.ToString();
 
                             TreeNode node1 = new TreeNode();
                             node1.Tag = scodeGrp_val;
@@ -194,7 +194,7 @@ namespace EldigmPlusApp.SubForm.Sys.SysCode
                 _scodeGrp = e.Node.Tag.ToString();
                 lblName.Text = "** " + e.Node.Text;
 
-                setDataBind_grideView1(_scodeGrp);
+                SetDataBind_gridView1(_scodeGrp);
             }
             catch (Exception ex)
             {
@@ -202,22 +202,7 @@ namespace EldigmPlusApp.SubForm.Sys.SysCode
             }
         }
 
-        private void toolStripButton1_Click(object sender, EventArgs e)
-        {
-            setDataBind_treeView1();
-        }
-
-        private void toolStripButton2_Click(object sender, EventArgs e)
-        {
-            treeView1.ExpandAll();
-        }
-
-        private void toolStripButton3_Click(object sender, EventArgs e)
-        {
-            treeView1.CollapseAll();
-        }
-
-        private void setDataBind_grideView1(string pScodeGrp) //웹서비스 추가 
+        private void SetDataBind_gridView1(string pScodeGrp)
         {
             if (_scodeGrp == "")
                 return;
@@ -228,17 +213,17 @@ namespace EldigmPlusApp.SubForm.Sys.SysCode
                 searchTxt_val = txtSearch.Text;
             }
 
-            WsSCodeGrp.WsSysCodeGrp wSvc = null;
+            M_WsSysCodeGrp.WsSysCodeGrp wSvc = null;
             string reCode = "";
             string reMsg = "";
-            WsSCodeGrp.DataSysCode[] getData = null;
+            M_WsSysCodeGrp.DataSysCode[] getData = null;
             try
             {
-                wSvc = new WsSCodeGrp.WsSysCodeGrp(); // 시스템 코드 보여주기 
-                wSvc.Url = "http://" + AppInfo.SsServer + "/WebSvc/Sys/SysCode/WsSysCodeGrp.svc";
+                wSvc = new M_WsSysCodeGrp.WsSysCodeGrp(); // 시스템 코드 보여주기 
+                wSvc.Url = "http://" + AppInfo.SsWsvcServer2 + "/WebSvc/Sys/SysCode/WsSysCodeGrp.svc";
                 wSvc.Timeout = 1000;
 
-                reCode = wSvc.sSysCode(_scodeGrp, cmbUse.SelectedValue.ToString(), searchTxt_val, out getData, out reMsg);                
+                reCode = wSvc.sSysCode(_scodeGrp, cmbUse.SelectedValue.ToString(), searchTxt_val, out getData, out reMsg);
 
                 if (reCode == "Y")
                 {
@@ -267,29 +252,15 @@ namespace EldigmPlusApp.SubForm.Sys.SysCode
             }
             catch (Exception ex)
             {
-                logs.SaveLog("[error]  (page)::FrmSysCode.cs  (Function)::setDataBind_grideView1  (Detail)::pScodeGrp=[" + pScodeGrp + "]", "Error");
-                logs.SaveLog("[error]  (page)::FrmSysCode.cs  (Function)::setDataBind_grideView1  (Detail)::reMsg=[" + reMsg + "]", "Error");
-                logs.SaveLog("[error]  (page)::FrmSysCode.cs  (Function)::setDataBind_grideView1  (Detail):: " + "\r\n" + ex.ToString(), "Error");
+                logs.SaveLog("[error]  (page)::FrmSysCode.cs  (Function)::SetDataBind_gridView1  (Detail)::pScodeGrp=[" + pScodeGrp + "]", "Error");
+                logs.SaveLog("[error]  (page)::FrmSysCode.cs  (Function)::SetDataBind_gridView1  (Detail)::reMsg=[" + reMsg + "]", "Error");
+                logs.SaveLog("[error]  (page)::FrmSysCode.cs  (Function)::SetDataBind_gridView1  (Detail):: " + "\r\n" + ex.ToString(), "Error");
             }
             finally
             {
                 if (wSvc != null)
                     wSvc.Dispose();
             }
-        }
-
-        private void setDataBind_grideView2()
-        {           
-            try
-            {
-                dataGridView2.Rows.Add();
-                dataGridView2.Rows[0].Cells["Btn_Add"].Value = "추가";                         
-            }
-            catch (Exception ex)
-            {              
-                logs.SaveLog("[error]  (page)::FrmSysCode.cs  (Function)::setDataBind_grideView1  (Detail):: " + "\r\n" + ex.ToString(), "Error");
-            }
-          
         }
 
 
@@ -343,6 +314,142 @@ namespace EldigmPlusApp.SubForm.Sys.SysCode
             }
         }
 
+        private void dataGridView1_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
+        {
+            SetRowNumber(dataGridView1);
+        }
+
+        private void SetDataBind_grideView2()
+        {
+            try
+            {
+                dataGridView2.Rows.Add();
+                dataGridView2.Rows[0].Cells["dgv2_SORT_NO"].Value = "1";
+                dataGridView2.Rows[0].Cells["dgv2_BTNADD"].Value = "추가";
+            }
+            catch (Exception ex)
+            {
+                logs.SaveLog("[error]  (page)::FrmSysCode.cs  (Function)::SetDataBind_grideView2  (Detail):: " + "\r\n" + ex.ToString(), "Error");
+            }
+
+        }
+
+        private void dataGridView2_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            string colNm = dataGridView2.Columns[e.ColumnIndex].Name;
+
+            if (colNm == "dgv2_BTNADD")
+            {
+                string reVal = ChkDgv2Param();
+
+                if (reVal != "")
+                    MessageBox.Show("데이터 확인 :: " + reVal);
+                else
+                {
+                    string scode_val = dataGridView2.Rows[0].Cells["dgv2_SCODE"].Value.ToString();
+                    string scodeNm_val = dataGridView2.Rows[0].Cells["dgv2_SCODE_NM"].Value.ToString();
+
+                    string sortNo_val = "1";
+                    if (dataGridView2.Rows[0].Cells["dgv2_SORT_NO"].Value != null)
+                        sortNo_val = dataGridView2.Rows[0].Cells["dgv2_SORT_NO"].Value.ToString();
+
+                    string memo_val = "";
+                    if (dataGridView2.Rows[0].Cells["dgv2_MEMO"].Value != null)
+                        memo_val = dataGridView2.Rows[0].Cells["dgv2_MEMO"].Value.ToString();
+
+                    string pInputId = "1";
+
+                    M_WsSysCodeGrp.WsSysCodeGrp wSvc = null;
+                    string reCode = "";
+                    string reMsg = "";
+                    string reData = "";
+                    try
+                    {
+                        wSvc = new M_WsSysCodeGrp.WsSysCodeGrp();
+                        wSvc.Url = "http://" + AppInfo.SsWsvcServer2 + "/WebSvc/Sys/SysCode/WsSysCodeGrp.svc";
+                        wSvc.Timeout = 1000;
+
+                        int reCnt = 0;
+
+                        reCode = wSvc.exSysCode(scode_val, out reMsg, out reData);
+                        if (reCode == "Y" && reData != "0")
+                        {
+                            MessageBox.Show("중복 데이터 입니다.");
+                        }
+                        else
+                        {
+                            reCode = "";
+                            reCode = wSvc.aSysCode(scode_val, _scodeGrp, scodeNm_val, "1", memo_val, sortNo_val, pInputId, out reMsg, out reData);
+
+                            if (reCode == "Y" && reData != "")
+                                reCnt = Convert.ToInt16(reData);
+
+                            if (reCnt > 0)
+                                MessageBox.Show("저장 성공" + " : " + reCnt.ToString());
+                            else
+                                MessageBox.Show("저장 실패");
+                        }
+
+                       
+
+                        SetDataBind_gridView1(_scodeGrp);
+                    }
+                    catch (Exception ex)
+                    {
+                        logs.SaveLog("[error]  (page)::FrmSysCode.cs  (Function)::dataGridView2_CellClick  (Detail):: " + "\r\n" + ex.ToString(), "Error");
+                    }
+                    finally
+                    {
+                        if (wSvc != null)
+                            wSvc.Dispose();
+                    }
+                }
+            }
+        }
+
+        private string ChkDgv2Param()
+        {
+            string reVal = "";
+
+            try
+            {
+                if (dataGridView2.Rows[0].Cells["dgv2_SCODE"].Value != null)
+                {
+                    if (dataGridView2.Rows[0].Cells["dgv2_SCODE"].Value.ToString() == "")
+                    {
+                        reVal = "코드";
+                        return reVal;
+                    }
+                }
+                else
+                {
+                    reVal = "코드";
+                    return reVal;
+                }
+
+                if (dataGridView2.Rows[0].Cells["dgv2_SCODE_NM"].Value != null)
+                {
+                    if (dataGridView2.Rows[0].Cells["dgv2_SCODE_NM"].Value.ToString() == "")
+                    {
+                        reVal = "이름";
+                        return reVal;
+                    }
+                }
+                else
+                {
+                    reVal = "이름";
+                    return reVal;
+                }
+            }
+            catch (Exception ex)
+            {
+                reVal = "에러";
+                logs.SaveLog("[error]  (page)::FrmSysCode.cs  (Function)::ChkDgv2Param  (Detail):: " + "\r\n" + ex.ToString(), "Error");
+            }
+
+            return reVal;
+        }
+
         // dataGridView 선택값 없애기
         private void NoSelectGrideView(DataGridView dgv)
         {
@@ -358,21 +465,16 @@ namespace EldigmPlusApp.SubForm.Sys.SysCode
             dgv.AutoResizeRowHeadersWidth(DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders);
         }
 
-        private void dataGridView1_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
-        {
-            SetRowNumber(dataGridView1);
-        }
-
         private void btnSave_Click(object sender, EventArgs e)
         {
-            WsSCodeGrp.WsSysCodeGrp wSvc = null;
+            M_WsSysCodeGrp.WsSysCodeGrp wSvc = null;
             string reCode = "";
             string reMsg = "";
             string reData = "";
             try
             {
-                wSvc = new WsSCodeGrp.WsSysCodeGrp();
-                wSvc.Url = "http://" + AppInfo.SsServer + "/WebSvc/Sys/SysCode/WsSysCodeGrp.svc";
+                wSvc = new M_WsSysCodeGrp.WsSysCodeGrp();
+                wSvc.Url = "http://" + AppInfo.SsWsvcServer2 + "/WebSvc/Sys/SysCode/WsSysCodeGrp.svc";
                 wSvc.Timeout = 1000;
 
                 int reCnt = 0;
@@ -392,15 +494,18 @@ namespace EldigmPlusApp.SubForm.Sys.SysCode
                             if (dataGridView1.Rows[i].Cells["dgv1_SORT_NO"].Value != null)
                             {
                                 sortNo_val = dataGridView1.Rows[i].Cells["dgv1_SORT_NO"].Value.ToString();
-                            }       
+                            }
 
 
                             string memo_val = "";
-                            if(dataGridView1.Rows[i].Cells["dgv1_MEMO"].Value != null)
+                            if (dataGridView1.Rows[i].Cells["dgv1_MEMO"].Value != null)
                             {
                                 memo_val = dataGridView1.Rows[i].Cells["dgv1_MEMO"].Value.ToString();
                             }
-                            reCode = wSvc.mSysCode(scode_val, scodeNm_val, usingFlag_val, sortNo_val, memo_val, out reMsg, out reData);
+
+                            string inputId_val = "1";
+
+                            reCode = wSvc.mSysCode(scode_val, scodeNm_val, usingFlag_val, sortNo_val, memo_val, inputId_val, out reMsg, out reData);
 
                             if (reCode == "Y" && reData != "")
                                 reCnt += Convert.ToInt16(reData);
@@ -413,11 +518,11 @@ namespace EldigmPlusApp.SubForm.Sys.SysCode
                 else
                     MessageBox.Show("저장 실패");
 
-                setDataBind_grideView1(_scodeGrp);
+                SetDataBind_gridView1(_scodeGrp);
             }
             catch (Exception ex)
             {
-            
+
                 logs.SaveLog("[error]  (page)::FrmSysCode.cs  (Function)::btnSave_Click  (Detail):: " + "\r\n" + ex.ToString(), "Error");
             }
             finally
@@ -437,71 +542,7 @@ namespace EldigmPlusApp.SubForm.Sys.SysCode
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
-            setDataBind_grideView1(_scodeGrp);
-        }
-
-        private void dataGridView2_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            string colNm = dataGridView2.Columns[e.ColumnIndex].Name;
-
-            if (colNm == "Btn_Add")
-            {
-                string scode_val = dataGridView2.Rows[0].Cells["dgv2_SCODE"].Value.ToString();
-                string scodeNm_val = dataGridView2.Rows[0].Cells["dgv2_SCODE_NM"].Value.ToString();
-
-                string sortNo_val = "1";
-                if (dataGridView2.Rows[0].Cells["dgv2_SORT_NO"].Value != null)
-                    sortNo_val = dataGridView2.Rows[0].Cells["dgv2_SORT_NO"].Value.ToString();
-
-                string memo_val = "";
-                if (dataGridView2.Rows[0].Cells["dgv2_MEMO"].Value != null)
-                    memo_val = dataGridView2.Rows[0].Cells["dgv2_MEMO"].Value.ToString();
-
-                string pInputId = "1";
-
-                WsSCodeGrp.WsSysCodeGrp wSvc = null;
-                string reCode = "";
-                string reMsg = "";
-                string reData = "";
-                try
-                {
-                    wSvc = new WsSCodeGrp.WsSysCodeGrp();
-                    wSvc.Url = "http://" + AppInfo.SsServer + "/WebSvc/Sys/SysCode/WsSysCodeGrp.svc";
-                    wSvc.Timeout = 1000;
-
-                    int reCnt = 0;
-
-                    reCode = wSvc.exSysCode(scode_val, out reMsg, out reData);
-                    if (reCode == "Y" && reData != "0")
-                    {
-                        MessageBox.Show("중복 데이터 입니다.");
-                    }
-                    else
-                    {
-                        reCode = "";
-                        reCode = wSvc.aSysCode(scode_val, _scodeGrp, scodeNm_val, "1", memo_val, sortNo_val, pInputId, out reMsg, out reData);
-                    }
-
-                    if (reCode == "Y" && reData != "")
-                        reCnt = Convert.ToInt16(reData);
-
-                    if (reCnt > 0)
-                        MessageBox.Show("저장 성공" + " : " + reCnt.ToString());
-                    else
-                        MessageBox.Show("저장 실패");
-
-                    setDataBind_grideView1(_scodeGrp);
-                }
-                catch (Exception ex)
-                {
-                    logs.SaveLog("[error]  (page)::FrmSysCode.cs  (Function)::dataGridView2_CellClick  (Detail):: " + "\r\n" + ex.ToString(), "Error");
-                }
-                finally
-                {
-                    if (wSvc != null)
-                        wSvc.Dispose();
-                }
-            }
+            SetDataBind_gridView1(_scodeGrp);
         }
     }
 }

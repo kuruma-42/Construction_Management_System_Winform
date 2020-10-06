@@ -55,7 +55,13 @@
     <Compile Include="DbClass\MainHome\DbMainHome.cs">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Compile>
-    <Compile Include="DbClass\Sys\SysCode\DbPractice.cs" />
+    <Compile Include="DbClass\Sys\ComnCode\DbComnCodeGrpMainDB.cs" />
+    <Compile Include="DbClass\Sys\MemberSite\DbMember.cs" />
+    <Compile Include="DbClass\Sys\MemberSite\DbSite.cs" />
+    <Compile Include="DbClass\Sys\Menu\DbMenuMainDB.cs" />
+    <Compile Include="DbClass\Sys\SysAuth\DbSysAuthMainDB.cs" />
+    <Compile Include="DbClass\Sys\SysAuth\DbSysAuthMemberDB.cs" />
+    <Compile Include="DbClass\Sys\SysAuth\DbSysAuthSiteDB.cs" />
     <Compile Include="DbClass\Sys\SysCode\DbSysCodeGrp.cs">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Compile>

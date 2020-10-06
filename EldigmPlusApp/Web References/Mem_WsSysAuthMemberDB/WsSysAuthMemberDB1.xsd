@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:49501/WebSvc/Sys/SysAuth/WsSysAuthMemberDB.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/EldigmPlusSvc_Memco.WebSvc.Sys.SysAuth" />
+  <xs:element name="sDbNm">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="pMemcoCd" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="sDbNmResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sDbNmResult" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="reData" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="reMsg" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="sMemberMainDB">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="sMemberMainDBResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sMemberMainDBResult" nillable="true" type="xs:string" />
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/EldigmPlusSvc_Memco.WebSvc.Sys.SysAuth" minOccurs="0" name="reList" nillable="true" type="q1:ArrayOfDataMemberMainDB" />
+        <xs:element minOccurs="0" name="reMsg" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="sSysAuthMemberDB">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="pDbnm" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pUsingFlag" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="sSysAuthMemberDBResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sSysAuthMemberDBResult" nillable="true" type="xs:string" />
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/EldigmPlusSvc_Memco.WebSvc.Sys.SysAuth" minOccurs="0" name="reList" nillable="true" type="q2:ArrayOfDataSysAuthMemberDB" />
+        <xs:element minOccurs="0" name="reMsg" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="mSysAuthMemberDB">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="pDbnm" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="sauthCd_val" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="sauthNm_val" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="myblockFlag_val" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="myconFlag_val" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="mycomFlag_val" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="myteamFlag_val" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="usingFlag_val" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="memo_val" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="mSysAuthMemberDBResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="mSysAuthMemberDBResult" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="reMsg" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="reData" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="exSysAuthMainDB">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sauthCd_val" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="sauthNm_val" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="exSysAuthMainDBResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="exSysAuthMainDBResult" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="reMsg" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="reData" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="aSysAuthMemberDB">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="pDbnm" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="sauthCd_val" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="sauthNm_val" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="myblockFlag_val" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="myconFlag_val" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="mycomFlag_val" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="myteamFlag_val" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="usingFlag_val" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="sauthLevel_val" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="memo_val" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pInputId" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="aSysAuthMemberDBResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="aSysAuthMemberDBResult" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="reMsg" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="reData" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="aSysAuthMainDB">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sauthCd_val" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="sauthNm_val" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="myblockFlag_val" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="myconFlag_val" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="mycomFlag_val" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="myteamFlag_val" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="usingFlag_val" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="sauthLevel_val" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="memo_val" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pInputId" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="aSysAuthMainDBResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="aSysAuthMainDBResult" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="reMsg" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="reData" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="sSiteMainDB">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="pMemcoCd" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="sSiteMainDBResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sSiteMainDBResult" nillable="true" type="xs:string" />
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/EldigmPlusSvc_Memco.WebSvc.Sys.SysAuth" minOccurs="0" name="reList" nillable="true" type="q3:ArrayOfDataSiteMainDB" />
+        <xs:element minOccurs="0" name="reMsg" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="siteDbNm">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="pSiteCd" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="siteDbNmResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="siteDbNmResult" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="reData" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="reMsg" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="sSysAuthSiteDB">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="pSiteCd" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pDbnm" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pUsingFlag" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="sSysAuthSiteDBResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sSysAuthSiteDBResult" nillable="true" type="xs:string" />
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/EldigmPlusSvc_Memco.WebSvc.Sys.SysAuth" minOccurs="0" name="reList" nillable="true" type="q4:ArrayOfDataSysAuthSiteDB" />
+        <xs:element minOccurs="0" name="reMsg" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="mSysAuthSiteDB">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="pDbnm" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pSiteCd" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="sauthCd_val" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="lab_aprv_Flag_val" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="usingFlag_val" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="memo_val" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="mSysAuthSiteDBResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="mSysAuthSiteDBResult" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="reMsg" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="reData" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="aSysAuthSiteDB">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="pDbnm" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pSiteCd" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="sauthCd_val" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="lab_aprv_Flag_val" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="usingFlag_val" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="sauthLevel_val" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="memo_val" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pInputId" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="aSysAuthSiteDBResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="aSysAuthSiteDBResult" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="reMsg" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="reData" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

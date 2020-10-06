@@ -5,12 +5,13 @@ using System.Collections.Generic;
 using System.Data;
 using System.Linq;
 using System.Web;
+using System.Web.Configuration;
 
 namespace EldigmPlusSvc_Memco.Biz.MainHome
 {
     public class BizMainHome
     {
-        LogClass logs = new LogClass();
+        LogClass _logs = new LogClass();
 
         public string sDbNm(string pMemcoCd)
         {
@@ -19,13 +20,17 @@ namespace EldigmPlusSvc_Memco.Biz.MainHome
             DbMainHome db = null;
             try
             {
-                db = new DbMainHome();
+                string dbCon_IP = WebConfigurationManager.ConnectionStrings["ConnectionStr_IP"].ConnectionString;
+                string dbCon_DB = WebConfigurationManager.ConnectionStrings["ConnectionStr_DB"].ConnectionString;
+                string dbCon_USER = WebConfigurationManager.ConnectionStrings["ConnectionStr_USER"].ConnectionString;
+
+                db = new DbMainHome(dbCon_IP, dbCon_DB, dbCon_USER);
                 reVal = db.sDbNm(pMemcoCd);
             }
             catch (Exception ex)
             {
-                logs.SaveLog("[error]  (page)::BizSystem.cs  (Function)::sSiteMenu  (Detail)::pMemcoCd=[" + pMemcoCd + "]", "Error");
-                logs.SaveLog("[error]  (page)::BizSystem.cs  (Function)::sSiteMenu  (Detail)::" + "\r\n" + ex.ToString(), "Error");
+                _logs.SaveLog("[error]  (page)::BizSystem.cs  (Function)::sSiteMenu  (Detail)::pMemcoCd=[" + pMemcoCd + "]", "Error");
+                _logs.SaveLog("[error]  (page)::BizSystem.cs  (Function)::sSiteMenu  (Detail)::" + "\r\n" + ex.ToString(), "Error");
             }
             finally
             {
@@ -43,13 +48,17 @@ namespace EldigmPlusSvc_Memco.Biz.MainHome
             DbMainHome db = null;
             try
             {
-                db = new DbMainHome();
+                string dbCon_IP = WebConfigurationManager.ConnectionStrings["ConnectionStr_IP"].ConnectionString;
+                string dbCon_DB = WebConfigurationManager.ConnectionStrings["ConnectionStr_DB"].ConnectionString;
+                string dbCon_USER = WebConfigurationManager.ConnectionStrings["ConnectionStr_USER"].ConnectionString;
+
+                db = new DbMainHome(dbCon_IP, dbCon_DB, dbCon_USER);
                 ds = db.sSiteMenu(pDbNm, pSiteCd);
             }
             catch (Exception ex)
             {
-                logs.SaveLog("[error]  (page)::BizSystem.cs  (Function)::sSiteMenu  (Detail)::pDbNm=[" + pDbNm + "], pSiteCd=[" + pSiteCd + "]", "Error");
-                logs.SaveLog("[error]  (page)::BizSystem.cs  (Function)::sSiteMenu  (Detail)::" + "\r\n" + ex.ToString(), "Error");
+                _logs.SaveLog("[error]  (page)::BizSystem.cs  (Function)::sSiteMenu  (Detail)::pDbNm=[" + pDbNm + "], pSiteCd=[" + pSiteCd + "]", "Error");
+                _logs.SaveLog("[error]  (page)::BizSystem.cs  (Function)::sSiteMenu  (Detail)::" + "\r\n" + ex.ToString(), "Error");
             }
             finally
             {
@@ -67,13 +76,17 @@ namespace EldigmPlusSvc_Memco.Biz.MainHome
             DbMainHome db = null;
             try
             {
-                db = new DbMainHome();
+                string dbCon_IP = WebConfigurationManager.ConnectionStrings["ConnectionStr_IP"].ConnectionString;
+                string dbCon_DB = WebConfigurationManager.ConnectionStrings["ConnectionStr_DB"].ConnectionString;
+                string dbCon_USER = WebConfigurationManager.ConnectionStrings["ConnectionStr_USER"].ConnectionString;
+
+                db = new DbMainHome(dbCon_IP, dbCon_DB, dbCon_USER);
                 ds = db.sSiteSubMenu1(pDbNm, pSiteCd, pTopMenuCd);
             }
             catch (Exception ex)
             {
-                logs.SaveLog("[error]  (page)::BizSystem.cs  (Function)::sSiteSubMenu1  (Detail)::pDbNm=[" + pDbNm + "], pSiteCd=[" + pSiteCd + "], pTopMenuCd=[" + pTopMenuCd + "]", "Error");
-                logs.SaveLog("[error]  (page)::BizSystem.cs  (Function)::sSiteSubMenu1  (Detail)::" + "\r\n" + ex.ToString(), "Error");
+                _logs.SaveLog("[error]  (page)::BizSystem.cs  (Function)::sSiteSubMenu1  (Detail)::pDbNm=[" + pDbNm + "], pSiteCd=[" + pSiteCd + "], pTopMenuCd=[" + pTopMenuCd + "]", "Error");
+                _logs.SaveLog("[error]  (page)::BizSystem.cs  (Function)::sSiteSubMenu1  (Detail)::" + "\r\n" + ex.ToString(), "Error");
             }
             finally
             {
@@ -91,14 +104,18 @@ namespace EldigmPlusSvc_Memco.Biz.MainHome
             DbMainHome db = null;
             try
             {
-                db = new DbMainHome();
+                string dbCon_IP = WebConfigurationManager.ConnectionStrings["ConnectionStr_IP"].ConnectionString;
+                string dbCon_DB = WebConfigurationManager.ConnectionStrings["ConnectionStr_DB"].ConnectionString;
+                string dbCon_USER = WebConfigurationManager.ConnectionStrings["ConnectionStr_USER"].ConnectionString;
+
+                db = new DbMainHome(dbCon_IP, dbCon_DB, dbCon_USER);
                 ds = db.sSiteSubMenu2(pDbNm, pSiteCd, pTopMenuCd, pSubMenuCd);
             }
             catch (Exception ex)
             {
-                logs.SaveLog("[error]  (page)::BizSystem.cs  (Function)::sSiteSubMenu2  (Detail)::pDbNm=[" + pDbNm + "], pSiteCd=[" + pSiteCd + "], pTopMenuCd=[" + pTopMenuCd + "]" +
+                _logs.SaveLog("[error]  (page)::BizSystem.cs  (Function)::sSiteSubMenu2  (Detail)::pDbNm=[" + pDbNm + "], pSiteCd=[" + pSiteCd + "], pTopMenuCd=[" + pTopMenuCd + "]" +
                     ", pSubMenuCd=[" + pSubMenuCd + "]", "Error");
-                logs.SaveLog("[error]  (page)::BizSystem.cs  (Function)::sSiteSubMenu2  (Detail)::" + "\r\n" + ex.ToString(), "Error");
+                _logs.SaveLog("[error]  (page)::BizSystem.cs  (Function)::sSiteSubMenu2  (Detail)::" + "\r\n" + ex.ToString(), "Error");
             }
             finally
             {

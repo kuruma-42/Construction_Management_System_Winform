@@ -8,8 +8,8 @@ namespace EldigmPlusApp.Config
 {
     class AppInfo
     {
-        public static string SsServer { get; set; }
-
+        public static string SsWsvcServer1 { get; set; }
+        public static string SsWsvcServer2 { get; set; } //메인
 
 
         public static string SsLanguage { get; set; }

@@ -1,0 +1,1 @@
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="EldigmPlusSvc_Main.WebSvc.Sys.ComnCode.WsComnCodeGrp" CodeBehind="WsComnCodeGrp.svc.cs" %>

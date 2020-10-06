@@ -1,0 +1,7 @@
+
+2020-09-28 19:39:47-->  [error]  (page)::FrmSysAuthMemberDB.cs  (Function)::SetDataBind_CmbMember  (Detail):: 
+System.Web.Services.Protocols.SoapHeaderException: EndpointDispatcher에서 ContractFilter가 일치하지 않으므로 수신자 쪽에서 동작 'http://tempuri.org/IWsSysAuthMemberDB/sMemberMainDB'이(가) 있는 메시지를 처리할 수 없습니다. 발신자와 수신자 사이에 계약 불일치(발신자와 수신자 사이의 동작 불일치) 또는 바인딩/보안 불일치가 있기 때문일 수 있습니다. 발신자와 수신자의 계약 및 바인딩(메시지, 전송, 없음 등의 보안 요구 사항 포함)이 같은지 확인하십시오.
+   위치: System.Web.Services.Protocols.SoapHttpClientProtocol.ReadResponse(SoapClientMessage message, WebResponse response, Stream responseStream, Boolean asyncCall)
+   위치: System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke(String methodName, Object[] parameters)
+   위치: EldigmPlusApp.Mem_WsSysAuthMemberDB.WsSysAuthMemberDB.sMemberMainDB(DataMemberMainDB[]& reList, String& reMsg) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\Web References\Mem_WsSysAuthMemberDB\Reference.cs:줄 166
+   위치: EldigmPlusApp.SubForm.Sys.MemberSite.FrmSite.SetDataBind_CmbMember() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\MemberSite\FrmSite.cs:줄 117

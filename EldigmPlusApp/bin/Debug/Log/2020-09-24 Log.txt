@@ -1,0 +1,37 @@
+
+2020-09-24 15:56:16-->  [error]  (page)::FrmSysAuthMemberDB.cs  (Function)::SetDataBind_CmbMember  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Sys.SysAuth.FrmSysAuthSiteDB.SetDataBind_CmbSite() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\SysAuth\FrmSysAuthSiteDB.cs:줄 128
+2020-09-24 15:56:30-->  [error]  (page)::FrmSysAuthMemberDB.cs  (Function)::SetDataBind_CmbMember  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Sys.SysAuth.FrmSysAuthSiteDB.SetDataBind_CmbSite() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\SysAuth\FrmSysAuthSiteDB.cs:줄 128
+2020-09-24 15:57:24-->  [error]  (page)::FrmSysAuthMemberDB.cs  (Function)::SetDataBind_CmbMember  (Detail):: 
+System.Net.WebException: 작업 시간이 초과되었습니다.
+   위치: System.Web.Services.Protocols.WebClientProtocol.GetWebResponse(WebRequest request)
+   위치: System.Web.Services.Protocols.HttpWebClientProtocol.GetWebResponse(WebRequest request)
+   위치: System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke(String methodName, Object[] parameters)
+   위치: EldigmPlusApp.Mem_WsSysAuthMemberDB.WsSysAuthMemberDB.sSiteMainDB(DataSiteMainDB[]& reList, String& reMsg) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\Web References\Mem_WsSysAuthMemberDB\Reference.cs:줄 394
+   위치: EldigmPlusApp.SubForm.Sys.SysAuth.FrmSysAuthSiteDB.SetDataBind_CmbSite() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\SysAuth\FrmSysAuthSiteDB.cs:줄 116
+2020-09-24 16:07:43-->  [error]  (page)::FrmSysAuthMemberDB.cs  (Function)::SetDataBind_CmbMember  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Sys.SysAuth.FrmSysAuthSiteDB.SetDataBind_CmbSite() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\SysAuth\FrmSysAuthSiteDB.cs:줄 128
+2020-09-24 16:08:02-->  [error]  (page)::FrmSysAuthMemberDB.cs  (Function)::SetDataBind_CmbMember  (Detail):: 
+System.Net.WebException: 작업 시간이 초과되었습니다.
+   위치: System.Web.Services.Protocols.WebClientProtocol.GetWebResponse(WebRequest request)
+   위치: System.Web.Services.Protocols.HttpWebClientProtocol.GetWebResponse(WebRequest request)
+   위치: System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke(String methodName, Object[] parameters)
+   위치: EldigmPlusApp.Mem_WsSysAuthMemberDB.WsSysAuthMemberDB.sSiteMainDB(DataSiteMainDB[]& reList, String& reMsg) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\Web References\Mem_WsSysAuthMemberDB\Reference.cs:줄 394
+   위치: EldigmPlusApp.SubForm.Sys.SysAuth.FrmSysAuthSiteDB.SetDataBind_CmbSite() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\SysAuth\FrmSysAuthSiteDB.cs:줄 116
+2020-09-24 16:08:18-->  [error]  (page)::FrmSysAuthMemberDB.cs  (Function)::SetDataBind_CmbMember  (Detail):: 
+System.Net.WebException: 작업 시간이 초과되었습니다.
+   위치: System.Web.Services.Protocols.WebClientProtocol.GetWebResponse(WebRequest request)
+   위치: System.Web.Services.Protocols.HttpWebClientProtocol.GetWebResponse(WebRequest request)
+   위치: System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke(String methodName, Object[] parameters)
+   위치: EldigmPlusApp.Mem_WsSysAuthMemberDB.WsSysAuthMemberDB.sSiteMainDB(DataSiteMainDB[]& reList, String& reMsg) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\Web References\Mem_WsSysAuthMemberDB\Reference.cs:줄 394
+   위치: EldigmPlusApp.SubForm.Sys.SysAuth.FrmSysAuthSiteDB.SetDataBind_CmbSite() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\SysAuth\FrmSysAuthSiteDB.cs:줄 116
+2020-09-24 16:12:53-->  [error]  (page)::FrmSysAuthMemberDB.cs  (Function)::SetDataBind_CmbMember  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Sys.SysAuth.FrmSysAuthSiteDB.SetDataBind_CmbSite() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\SysAuth\FrmSysAuthSiteDB.cs:줄 128
+2020-09-24 16:12:55-->  [error]  (page)::FrmSysAuthMemberDB.cs  (Function)::SetDataBind_CmbMember  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Sys.SysAuth.FrmSysAuthSiteDB.SetDataBind_CmbSite() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\SysAuth\FrmSysAuthSiteDB.cs:줄 128

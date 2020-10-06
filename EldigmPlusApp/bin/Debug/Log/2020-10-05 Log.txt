@@ -1,0 +1,8 @@
+
+2020-10-05 11:04:22-->  [error]  (page)::FrmSite.cs  (Function)::SetDataBind_CmbMember  (Detail):: 
+System.Net.WebException: 요청이 중단되었습니다. 작업 시간이 초과되었습니다.
+   위치: System.Web.Services.Protocols.WebClientProtocol.GetWebResponse(WebRequest request)
+   위치: System.Web.Services.Protocols.HttpWebClientProtocol.GetWebResponse(WebRequest request)
+   위치: System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke(String methodName, Object[] parameters)
+   위치: EldigmPlusApp.M_WsMember.WsMember.sMemberMainDB(DataMemberMainDB[]& reList, String& reMsg) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\Web References\M_WsMember\Reference.cs:줄 304
+   위치: EldigmPlusApp.SubForm.Sys.MemberSite.FrmSite.SetDataBind_CmbMember() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\MemberSite\FrmSite.cs:줄 114

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/EldigmPlusSvc_Main.WebSvc.Sys.SysCode" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/EldigmPlusSvc_Main.WebSvc.Sys.SysCode" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="ArrayOfDataSysCodeGrp">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DataSysCodeGrp" nillable="true" type="tns:DataSysCodeGrp" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDataSysCodeGrp" nillable="true" type="tns:ArrayOfDataSysCodeGrp" />
+  <xs:complexType name="DataSysCodeGrp">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="SCODE_GRP" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SCODE_GRP_NM" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="USING_FLAG" type="xs:int" />
+      <xs:element minOccurs="0" name="SORT_NO" type="xs:int" />
+      <xs:element minOccurs="0" name="MEMO" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DataSysCodeGrp" nillable="true" type="tns:DataSysCodeGrp" />
+  <xs:complexType name="ArrayOfDataSysCode">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DataSysCode" nillable="true" type="tns:DataSysCode" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDataSysCode" nillable="true" type="tns:ArrayOfDataSysCode" />
+  <xs:complexType name="DataSysCode">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="SCODE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SCODE_NM" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="USING_FLAG" type="xs:int" />
+      <xs:element minOccurs="0" name="SORT_NO" type="xs:int" />
+      <xs:element minOccurs="0" name="MEMO" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DataSysCode" nillable="true" type="tns:DataSysCode" />
+</xs:schema>

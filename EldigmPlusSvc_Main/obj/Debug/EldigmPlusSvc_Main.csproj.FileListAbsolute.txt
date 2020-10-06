@@ -5,3 +5,10 @@ D:\3.DevOps\Eldigm_Plus\EldigmPlusSvc_Main\obj\Debug\EldigmPlusSvc_Main.csprojAs
 D:\3.DevOps\Eldigm_Plus\EldigmPlusSvc_Main\obj\Debug\EldigmPlusSvc_Main.csproj.CoreCompileInputs.cache
 D:\3.DevOps\Eldigm_Plus\EldigmPlusSvc_Main\obj\Debug\EldigmPlusSvc_Main.dll
 D:\3.DevOps\Eldigm_Plus\EldigmPlusSvc_Main\obj\Debug\EldigmPlusSvc_Main.pdb
+D:\3.DevOps\Eldigm_Plus\EldigmPlusSvc_Main\bin\DbClass\Common\EncDecClass.cs
+D:\3.DevOps\Eldigm_Plus\EldigmPlusSvc_Main\bin\DbClass\MainHome\DbMainHome.cs
+D:\3.DevOps\Eldigm_Plus\EldigmPlusSvc_Main\bin\DbClass\Sys\SysCode\DbSysCodeGrp.cs
+D:\3.DevOps\Eldigm_Plus\EldigmPlusSvc_Main\bin\EldigmPlusClassLibrary.dll
+D:\3.DevOps\Eldigm_Plus\EldigmPlusSvc_Main\bin\Framework.dll
+D:\3.DevOps\Eldigm_Plus\EldigmPlusSvc_Main\bin\EldigmPlusClassLibrary.pdb
+D:\3.DevOps\Eldigm_Plus\EldigmPlusSvc_Main\obj\Debug\EldigmPlusSvc_Main.csproj.CopyComplete
