@@ -44,8 +44,8 @@ namespace EldigmPlusSvc_Main.WebSvc.Sys.MemberSite
         [OperationContract]
         string exSite(string pSiteNm, out string reMsg, out string reData);
 
-        [OperationContract]
-        string aSite(string pDbNm, string[] param, out string reData, out string reMsg);
+        [OperationContract] 
+        string aSite(string pDbNm, string[] param, out string reMsg, out string reData);
 
         //[OperationContract]
         //string aSite(string memcoCd_val, string siteNm_val, string usingFlag_val, string sortNo_val, string memo_val, string pInputId, out string reMsg, out string reData);

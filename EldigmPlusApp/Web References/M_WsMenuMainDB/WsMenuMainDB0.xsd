@@ -46,7 +46,75 @@
       <xs:element minOccurs="0" name="MENU_NM" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="USING_FLAG" type="xs:int" />
       <xs:element minOccurs="0" name="SORT_NO" type="xs:int" />
+      <xs:element minOccurs="0" name="MENU_PATH" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FILE_FOLDER" nillable="true" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
   <xs:element name="DataMenu" nillable="true" type="tns:DataMenu" />
+  <xs:complexType name="ArrayOfDataSiteMainDB">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DataSiteMainDB" nillable="true" type="tns:DataSiteMainDB" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDataSiteMainDB" nillable="true" type="tns:ArrayOfDataSiteMainDB" />
+  <xs:complexType name="DataSiteMainDB">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="SITE_CD" type="xs:int" />
+      <xs:element minOccurs="0" name="SITE_NM" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DataSiteMainDB" nillable="true" type="tns:DataSiteMainDB" />
+  <xs:complexType name="ArrayOfDataMenuSite">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DataMenuSite" nillable="true" type="tns:DataMenuSite" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDataMenuSite" nillable="true" type="tns:ArrayOfDataMenuSite" />
+  <xs:complexType name="DataMenuSite">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="MENU_CD" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TOP_MENU_CD" type="xs:int" />
+      <xs:element minOccurs="0" name="SUB_MENU_CD" type="xs:int" />
+      <xs:element minOccurs="0" name="MENU_NM" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="USING_FLAG" type="xs:int" />
+      <xs:element minOccurs="0" name="SORT_NO" type="xs:int" />
+      <xs:element minOccurs="0" name="MEMO" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MENU_PATH" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FILE_FOLDER" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DataMenuSite" nillable="true" type="tns:DataMenuSite" />
+  <xs:complexType name="ArrayOfDataCodeAuthSiteMemberDB">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DataCodeAuthSiteMemberDB" nillable="true" type="tns:DataCodeAuthSiteMemberDB" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDataCodeAuthSiteMemberDB" nillable="true" type="tns:ArrayOfDataCodeAuthSiteMemberDB" />
+  <xs:complexType name="DataCodeAuthSiteMemberDB">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AUTH_CD" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="AUTH_NM" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DataCodeAuthSiteMemberDB" nillable="true" type="tns:DataCodeAuthSiteMemberDB" />
+  <xs:complexType name="ArrayOfDataSetAuthSiteMemberDB">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DataSetAuthSiteMemberDB" nillable="true" type="tns:DataSetAuthSiteMemberDB" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDataSetAuthSiteMemberDB" nillable="true" type="tns:ArrayOfDataSetAuthSiteMemberDB" />
+  <xs:complexType name="DataSetAuthSiteMemberDB">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="MENU_CD" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MENU_NM" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="VIEW_FLAG" type="xs:short" />
+      <xs:element minOccurs="0" name="NEW_FLAG" type="xs:short" />
+      <xs:element minOccurs="0" name="MODIFY_FLAG" type="xs:short" />
+      <xs:element minOccurs="0" name="DEL_FLAG" type="xs:short" />
+      <xs:element minOccurs="0" name="REPORT_FLAG" type="xs:short" />
+      <xs:element minOccurs="0" name="PRINT_FLAG" type="xs:short" />
+      <xs:element minOccurs="0" name="DOWNLOAD_FLAG" type="xs:short" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DataSetAuthSiteMemberDB" nillable="true" type="tns:DataSetAuthSiteMemberDB" />
 </xs:schema>

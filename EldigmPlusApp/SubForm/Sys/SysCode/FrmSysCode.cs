@@ -323,6 +323,7 @@ namespace EldigmPlusApp.SubForm.Sys.SysCode
         {
             try
             {
+                dataGridView2.Rows.Clear();
                 dataGridView2.Rows.Add();
                 dataGridView2.Rows[0].Cells["dgv2_SORT_NO"].Value = "1";
                 dataGridView2.Rows[0].Cells["dgv2_BTNADD"].Value = "추가";

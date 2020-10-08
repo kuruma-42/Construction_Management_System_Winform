@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/EldigmPlusSvc_Main.WebSvc.Sys.CodeT" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/EldigmPlusSvc_Main.WebSvc.Sys.CodeT" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="ArrayOfDataSysCode">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DataSysCode" nillable="true" type="tns:DataSysCode" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDataSysCode" nillable="true" type="tns:ArrayOfDataSysCode" />
+  <xs:complexType name="DataSysCode">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="SCODE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SCODE_NM" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DataSysCode" nillable="true" type="tns:DataSysCode" />
+  <xs:complexType name="ArrayOfDataCodeT">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DataCodeT" nillable="true" type="tns:DataCodeT" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDataCodeT" nillable="true" type="tns:ArrayOfDataCodeT" />
+  <xs:complexType name="DataCodeT">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="TCODE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TTYPE_SCD" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TCODE_NM" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LIST_FLAG" type="xs:int" />
+      <xs:element minOccurs="0" name="REQUIRED_FLAG" type="xs:int" />
+      <xs:element minOccurs="0" name="NUMERIC_FLAG" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DataCodeT" nillable="true" type="tns:DataCodeT" />
+  <xs:complexType name="ArrayOfDataCodeTSub">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DataCodeTSub" nillable="true" type="tns:DataCodeTSub" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDataCodeTSub" nillable="true" type="tns:ArrayOfDataCodeTSub" />
+  <xs:complexType name="DataCodeTSub">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="TSCODE" type="xs:int" />
+      <xs:element minOccurs="0" name="TCODE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TSCODE_NM" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="USING_CNT" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DataCodeTSub" nillable="true" type="tns:DataCodeTSub" />
+</xs:schema>

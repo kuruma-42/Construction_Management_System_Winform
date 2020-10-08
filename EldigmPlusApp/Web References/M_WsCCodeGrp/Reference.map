@@ -2,9 +2,10 @@
 <DiscoveryClientResultsFile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <Results>
     <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://localhost:49469/WebSvc/Sys/ComnCode/WsComnCodeGrp.svc?xsd=xsd0" filename="WsComnCodeGrp.xsd" />
-    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://localhost:49469/WebSvc/Sys/ComnCode/WsComnCodeGrp.svc?xsd=xsd1" filename="WsComnCodeGrp0.xsd" />
     <DiscoveryClientResult referenceType="System.Web.Services.Discovery.ContractReference" url="http://localhost:49469/WebSvc/Sys/ComnCode/WsComnCodeGrp.svc?wsdl" filename="WsComnCodeGrp.wsdl" />
-    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://localhost:49469/WebSvc/Sys/ComnCode/WsComnCodeGrp.svc?xsd=xsd2" filename="WsComnCodeGrp1.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://localhost:49469/WebSvc/Sys/ComnCode/WsComnCodeGrp.svc?xsd=xsd2" filename="WsComnCodeGrp0.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://localhost:49469/WebSvc/Sys/ComnCode/WsComnCodeGrp.svc?xsd=xsd3" filename="WsComnCodeGrp1.xsd" />
     <DiscoveryClientResult referenceType="System.Web.Services.Discovery.DiscoveryDocumentReference" url="http://localhost:49469/WebSvc/Sys/ComnCode/WsComnCodeGrp.svc?disco" filename="WsComnCodeGrp.disco" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://localhost:49469/WebSvc/Sys/ComnCode/WsComnCodeGrp.svc?xsd=xsd1" filename="WsComnCodeGrp2.xsd" />
   </Results>
 </DiscoveryClientResultsFile>

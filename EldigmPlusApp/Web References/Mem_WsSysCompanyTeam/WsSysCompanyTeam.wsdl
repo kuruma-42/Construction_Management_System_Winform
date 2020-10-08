@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="WsSysCompanyTeam" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:49501/WebSvc/Sys/CompanyTeam/WsSysCompanyTeam.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:49501/WebSvc/Sys/CompanyTeam/WsSysCompanyTeam.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:49501/WebSvc/Sys/CompanyTeam/WsSysCompanyTeam.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/EldigmPlusSvc_Memco.WebSvc.Sys.CompanyTeam" />
+      <xsd:import schemaLocation="http://localhost:49501/WebSvc/Sys/CompanyTeam/WsSysCompanyTeam.svc?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IWsSysCompanyTeam_constCmb_InputMessage">
+    <wsdl:part name="parameters" element="tns:constCmb" />
+  </wsdl:message>
+  <wsdl:message name="IWsSysCompanyTeam_constCmb_OutputMessage">
+    <wsdl:part name="parameters" element="tns:constCmbResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWsSysCompanyTeam_cotype_Cmb_InputMessage">
+    <wsdl:part name="parameters" element="tns:cotype_Cmb" />
+  </wsdl:message>
+  <wsdl:message name="IWsSysCompanyTeam_cotype_Cmb_OutputMessage">
+    <wsdl:part name="parameters" element="tns:cotype_CmbResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWsSysCompanyTeam_constCmb2_InputMessage">
+    <wsdl:part name="parameters" element="tns:constCmb2" />
+  </wsdl:message>
+  <wsdl:message name="IWsSysCompanyTeam_constCmb2_OutputMessage">
+    <wsdl:part name="parameters" element="tns:constCmb2Response" />
+  </wsdl:message>
+  <wsdl:message name="IWsSysCompanyTeam_cotype_Cmb2_InputMessage">
+    <wsdl:part name="parameters" element="tns:cotype_Cmb2" />
+  </wsdl:message>
+  <wsdl:message name="IWsSysCompanyTeam_cotype_Cmb2_OutputMessage">
+    <wsdl:part name="parameters" element="tns:cotype_Cmb2Response" />
+  </wsdl:message>
+  <wsdl:message name="IWsSysCompanyTeam_sCompany_InputMessage">
+    <wsdl:part name="parameters" element="tns:sCompany" />
+  </wsdl:message>
+  <wsdl:message name="IWsSysCompanyTeam_sCompany_OutputMessage">
+    <wsdl:part name="parameters" element="tns:sCompanyResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWsSysCompanyTeam_mCompanyMain_InputMessage">
+    <wsdl:part name="parameters" element="tns:mCompanyMain" />
+  </wsdl:message>
+  <wsdl:message name="IWsSysCompanyTeam_mCompanyMain_OutputMessage">
+    <wsdl:part name="parameters" element="tns:mCompanyMainResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWsSysCompanyTeam_mCompanyMemco_InputMessage">
+    <wsdl:part name="parameters" element="tns:mCompanyMemco" />
+  </wsdl:message>
+  <wsdl:message name="IWsSysCompanyTeam_mCompanyMemco_OutputMessage">
+    <wsdl:part name="parameters" element="tns:mCompanyMemcoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWsSysCompanyTeam_mCompanyMemcoSite_InputMessage">
+    <wsdl:part name="parameters" element="tns:mCompanyMemcoSite" />
+  </wsdl:message>
+  <wsdl:message name="IWsSysCompanyTeam_mCompanyMemcoSite_OutputMessage">
+    <wsdl:part name="parameters" element="tns:mCompanyMemcoSiteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWsSysCompanyTeam_aCompanyMemcoSite_InputMessage">
+    <wsdl:part name="parameters" element="tns:aCompanyMemcoSite" />
+  </wsdl:message>
+  <wsdl:message name="IWsSysCompanyTeam_aCompanyMemcoSite_OutputMessage">
+    <wsdl:part name="parameters" element="tns:aCompanyMemcoSiteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWsSysCompanyTeam_aCompanyPro_InputMessage">
+    <wsdl:part name="parameters" element="tns:aCompanyPro" />
+  </wsdl:message>
+  <wsdl:message name="IWsSysCompanyTeam_aCompanyPro_OutputMessage">
+    <wsdl:part name="parameters" element="tns:aCompanyProResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWsSysCompanyTeam_mConpanyMainLog_InputMessage">
+    <wsdl:part name="parameters" element="tns:mConpanyMainLog" />
+  </wsdl:message>
+  <wsdl:message name="IWsSysCompanyTeam_mConpanyMainLog_OutputMessage">
+    <wsdl:part name="parameters" element="tns:mConpanyMainLogResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWsSysCompanyTeam_mCompanySiteLog_InputMessage">
+    <wsdl:part name="parameters" element="tns:mCompanySiteLog" />
+  </wsdl:message>
+  <wsdl:message name="IWsSysCompanyTeam_mCompanySiteLog_OutputMessage">
+    <wsdl:part name="parameters" element="tns:mCompanySiteLogResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IWsSysCompanyTeam">
+    <wsdl:operation name="constCmb">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWsSysCompanyTeam/constCmb" message="tns:IWsSysCompanyTeam_constCmb_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWsSysCompanyTeam/constCmbResponse" message="tns:IWsSysCompanyTeam_constCmb_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="cotype_Cmb">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWsSysCompanyTeam/cotype_Cmb" message="tns:IWsSysCompanyTeam_cotype_Cmb_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWsSysCompanyTeam/cotype_CmbResponse" message="tns:IWsSysCompanyTeam_cotype_Cmb_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="constCmb2">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWsSysCompanyTeam/constCmb2" message="tns:IWsSysCompanyTeam_constCmb2_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWsSysCompanyTeam/constCmb2Response" message="tns:IWsSysCompanyTeam_constCmb2_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="cotype_Cmb2">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWsSysCompanyTeam/cotype_Cmb2" message="tns:IWsSysCompanyTeam_cotype_Cmb2_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWsSysCompanyTeam/cotype_Cmb2Response" message="tns:IWsSysCompanyTeam_cotype_Cmb2_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="sCompany">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWsSysCompanyTeam/sCompany" message="tns:IWsSysCompanyTeam_sCompany_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWsSysCompanyTeam/sCompanyResponse" message="tns:IWsSysCompanyTeam_sCompany_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="mCompanyMain">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWsSysCompanyTeam/mCompanyMain" message="tns:IWsSysCompanyTeam_mCompanyMain_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWsSysCompanyTeam/mCompanyMainResponse" message="tns:IWsSysCompanyTeam_mCompanyMain_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="mCompanyMemco">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWsSysCompanyTeam/mCompanyMemco" message="tns:IWsSysCompanyTeam_mCompanyMemco_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWsSysCompanyTeam/mCompanyMemcoResponse" message="tns:IWsSysCompanyTeam_mCompanyMemco_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="mCompanyMemcoSite">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWsSysCompanyTeam/mCompanyMemcoSite" message="tns:IWsSysCompanyTeam_mCompanyMemcoSite_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWsSysCompanyTeam/mCompanyMemcoSiteResponse" message="tns:IWsSysCompanyTeam_mCompanyMemcoSite_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="aCompanyMemcoSite">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWsSysCompanyTeam/aCompanyMemcoSite" message="tns:IWsSysCompanyTeam_aCompanyMemcoSite_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWsSysCompanyTeam/aCompanyMemcoSiteResponse" message="tns:IWsSysCompanyTeam_aCompanyMemcoSite_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="aCompanyPro">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWsSysCompanyTeam/aCompanyPro" message="tns:IWsSysCompanyTeam_aCompanyPro_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWsSysCompanyTeam/aCompanyProResponse" message="tns:IWsSysCompanyTeam_aCompanyPro_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="mConpanyMainLog">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWsSysCompanyTeam/mConpanyMainLog" message="tns:IWsSysCompanyTeam_mConpanyMainLog_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWsSysCompanyTeam/mConpanyMainLogResponse" message="tns:IWsSysCompanyTeam_mConpanyMainLog_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="mCompanySiteLog">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWsSysCompanyTeam/mCompanySiteLog" message="tns:IWsSysCompanyTeam_mCompanySiteLog_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWsSysCompanyTeam/mCompanySiteLogResponse" message="tns:IWsSysCompanyTeam_mCompanySiteLog_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IWsSysCompanyTeam" type="tns:IWsSysCompanyTeam">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="constCmb">
+      <soap:operation soapAction="http://tempuri.org/IWsSysCompanyTeam/constCmb" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="cotype_Cmb">
+      <soap:operation soapAction="http://tempuri.org/IWsSysCompanyTeam/cotype_Cmb" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="constCmb2">
+      <soap:operation soapAction="http://tempuri.org/IWsSysCompanyTeam/constCmb2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="cotype_Cmb2">
+      <soap:operation soapAction="http://tempuri.org/IWsSysCompanyTeam/cotype_Cmb2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="sCompany">
+      <soap:operation soapAction="http://tempuri.org/IWsSysCompanyTeam/sCompany" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mCompanyMain">
+      <soap:operation soapAction="http://tempuri.org/IWsSysCompanyTeam/mCompanyMain" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mCompanyMemco">
+      <soap:operation soapAction="http://tempuri.org/IWsSysCompanyTeam/mCompanyMemco" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mCompanyMemcoSite">
+      <soap:operation soapAction="http://tempuri.org/IWsSysCompanyTeam/mCompanyMemcoSite" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="aCompanyMemcoSite">
+      <soap:operation soapAction="http://tempuri.org/IWsSysCompanyTeam/aCompanyMemcoSite" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="aCompanyPro">
+      <soap:operation soapAction="http://tempuri.org/IWsSysCompanyTeam/aCompanyPro" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mConpanyMainLog">
+      <soap:operation soapAction="http://tempuri.org/IWsSysCompanyTeam/mConpanyMainLog" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mCompanySiteLog">
+      <soap:operation soapAction="http://tempuri.org/IWsSysCompanyTeam/mCompanySiteLog" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="WsSysCompanyTeam">
+    <wsdl:port name="BasicHttpBinding_IWsSysCompanyTeam" binding="tns:BasicHttpBinding_IWsSysCompanyTeam">
+      <soap:address location="http://localhost:49501/WebSvc/Sys/CompanyTeam/WsSysCompanyTeam.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

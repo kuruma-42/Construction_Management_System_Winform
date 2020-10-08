@@ -68,6 +68,7 @@
       <SubType>Designer</SubType>
     </Content>
     <Content Include="WebSvc\MainHome\WsMainHome.svc" />
+    <Content Include="WebSvc\Sys\CompanyTeam\WsSysCompanyTeam.svc" />
     <Content Include="WebSvc\Sys\SysAuth\WsSysAuthMemberDB.svc" />
   </ItemGroup>
   <ItemGroup>
@@ -75,12 +76,18 @@
     <Compile Include="Biz\Common\ListClass.cs" />
     <Compile Include="Biz\Common\LogClass.cs" />
     <Compile Include="Biz\MainHome\BizMainHome.cs" />
+    <Compile Include="Biz\Sys\CompanyTeam\BizCompany.cs" />
+    <Compile Include="Biz\Sys\CompanyTeam\BizTeam.cs" />
     <Compile Include="Biz\Sys\SysAuth\BizSysAuthMemberDB.cs" />
     <Compile Include="Biz\Sys\SysAuth\BizSysSiteDB.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="WebSvc\MainHome\IWsMainHome.cs" />
     <Compile Include="WebSvc\MainHome\WsMainHome.svc.cs">
       <DependentUpon>WsMainHome.svc</DependentUpon>
+    </Compile>
+    <Compile Include="WebSvc\Sys\CompanyTeam\IWsSysCompanyTeam.cs" />
+    <Compile Include="WebSvc\Sys\CompanyTeam\WsSysCompanyTeam.svc.cs">
+      <DependentUpon>WsSysCompanyTeam.svc</DependentUpon>
     </Compile>
     <Compile Include="WebSvc\Sys\SysAuth\IWsSysAuthMemberDB.cs" />
     <Compile Include="WebSvc\Sys\SysAuth\WsSysAuthMemberDB.svc.cs">

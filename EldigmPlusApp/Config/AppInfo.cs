@@ -16,8 +16,13 @@ namespace EldigmPlusApp.Config
         public static string SsMemcoCd { get; set; }
         public static string SsSiteCd { get; set; }
 
+        public static string SsUserId { get; set; }
 
+        public static string SsUserAuth { get; set; }
 
         public static string SsDbNm { get; set; }
+
+       
+
     }
 }

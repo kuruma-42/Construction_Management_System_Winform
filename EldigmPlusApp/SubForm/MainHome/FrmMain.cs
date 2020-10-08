@@ -84,6 +84,9 @@ namespace EldigmPlusApp.SubForm.MainHome
                 AppInfo.SsMemcoCd = ini.IniReadValue("INFO", "MemcoCd");
                 AppInfo.SsSiteCd = ini.IniReadValue("INFO", "SiteCd");
 
+                AppInfo.SsUserId = ini.IniReadValue("INFO", "UserId");
+                AppInfo.SsUserAuth = ini.IniReadValue("INFO", "UserAuth");
+
                 AppInfo.SsDbNm = "";
             }
             catch (Exception ex)

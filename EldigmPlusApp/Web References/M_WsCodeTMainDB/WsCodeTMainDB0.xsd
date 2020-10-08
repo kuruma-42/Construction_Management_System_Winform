@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:49469/WebSvc/Sys/CodeT/WsCodeTMainDB.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/EldigmPlusSvc_Main.WebSvc.Sys.CodeT" />
+  <xs:element name="sSysCode">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="sSysCodeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sSysCodeResult" nillable="true" type="xs:string" />
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/EldigmPlusSvc_Main.WebSvc.Sys.CodeT" minOccurs="0" name="reList" nillable="true" type="q1:ArrayOfDataSysCode" />
+        <xs:element minOccurs="0" name="reMsg" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="sCodeTTreeView">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="pScode" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="sCodeTTreeViewResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sCodeTTreeViewResult" nillable="true" type="xs:string" />
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/EldigmPlusSvc_Main.WebSvc.Sys.CodeT" minOccurs="0" name="reList" nillable="true" type="q2:ArrayOfDataCodeT" />
+        <xs:element minOccurs="0" name="reMsg" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="sCodeT">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="pScode" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="sCodeTResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sCodeTResult" nillable="true" type="xs:string" />
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/EldigmPlusSvc_Main.WebSvc.Sys.CodeT" minOccurs="0" name="reList" nillable="true" type="q3:ArrayOfDataCodeT" />
+        <xs:element minOccurs="0" name="reMsg" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="sCodeTSubTreeView">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="pTcode" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="sCodeTSubTreeViewResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sCodeTSubTreeViewResult" nillable="true" type="xs:string" />
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/EldigmPlusSvc_Main.WebSvc.Sys.CodeT" minOccurs="0" name="reList" nillable="true" type="q4:ArrayOfDataCodeTSub" />
+        <xs:element minOccurs="0" name="reMsg" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="sCodeTSub">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="pTcode" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="sCodeTSubResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sCodeTSubResult" nillable="true" type="xs:string" />
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/EldigmPlusSvc_Main.WebSvc.Sys.CodeT" minOccurs="0" name="reList" nillable="true" type="q5:ArrayOfDataCodeTSub" />
+        <xs:element minOccurs="0" name="reMsg" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

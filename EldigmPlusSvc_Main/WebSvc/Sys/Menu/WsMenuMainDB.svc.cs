@@ -12,19 +12,19 @@ namespace EldigmPlusSvc_Main.WebSvc.Sys.Menu
     {
         LogClass logs = new LogClass();
 
-        public string sManuTopTreeView(string USING_FLAG, out List<DataMenuTop> reList, out string reMsg)
+        public string sMenuTopTreeView(out List<DataMenuTop> reList, out string reMsg)
         {
             string reCode = "N";
 
             DataSet ds = null;
-            BizMenuMainDB bizManu = null;
+            BizMenuMainDB bizMenu = null;
             try
             {
-                bizManu = new BizMenuMainDB();
+                bizMenu = new BizMenuMainDB();
 
                 try
                 {
-                    ds = bizManu.sManuTopTreeView(USING_FLAG);
+                    ds = bizMenu.sMenuTopTreeView();
 
                     reMsg = "[검색 성공]";
                     reCode = "Y";
@@ -48,7 +48,7 @@ namespace EldigmPlusSvc_Main.WebSvc.Sys.Menu
             }
             catch (Exception ex)
             {
-                logs.SaveLog("[error]  (page)::WsMenuMainDB.svc  (Function)::sManuTopTreeView  (Detail)::ConvertDataTableToList " + "\r\n" + ex.ToString(), "Error");
+                logs.SaveLog("[error]  (page)::WsMenuMainDB.svc  (Function)::sMenuTopTreeView  (Detail)::ConvertDataTableToList " + "\r\n" + ex.ToString(), "Error");
                 reMsg += "/[List 에러]" + ex.ToString();
                 reCode = "N";
             }
@@ -58,19 +58,19 @@ namespace EldigmPlusSvc_Main.WebSvc.Sys.Menu
             return reCode;
         }
 
-        public string sManuSubTreeView(string TOP_MENU_CD, string USING_FLAG, out List<DataMenuSub> reList, out string reMsg)
+        public string sMenuSubTreeView(string pTopMenuCd, out List<DataMenuSub> reList, out string reMsg)
         {
             string reCode = "N";
 
             DataSet ds = null;
-            BizMenuMainDB bizManu = null;
+            BizMenuMainDB bizMenu = null;
             try
             {
-                bizManu = new BizMenuMainDB();
+                bizMenu = new BizMenuMainDB();
 
                 try
                 {
-                    ds = bizManu.sManuSubTreeView(TOP_MENU_CD, USING_FLAG);
+                    ds = bizMenu.sMenuSubTreeView(pTopMenuCd);
 
                     reMsg = "[검색 성공]";
                     reCode = "Y";
@@ -94,7 +94,7 @@ namespace EldigmPlusSvc_Main.WebSvc.Sys.Menu
             }
             catch (Exception ex)
             {
-                logs.SaveLog("[error]  (page)::WsMenuMainDB.svc  (Function)::sManuSubTreeView  (Detail)::ConvertDataTableToList " + "\r\n" + ex.ToString(), "Error");
+                logs.SaveLog("[error]  (page)::WsMenuMainDB.svc  (Function)::sMenuSubTreeView  (Detail)::ConvertDataTableToList " + "\r\n" + ex.ToString(), "Error");
                 reMsg += "/[List 에러]" + ex.ToString();
                 reCode = "N";
             }
@@ -104,19 +104,19 @@ namespace EldigmPlusSvc_Main.WebSvc.Sys.Menu
             return reCode;
         }
 
-        public string sManuTreeView(string TOP_MENU_CD, string SUB_MENU_CD, string USING_FLAG, out List<DataMenu> reList, out string reMsg)
+        public string sMenuTreeView(string pTopMenuCd, string pSubMenuCd, out List<DataMenu> reList, out string reMsg)
         {
             string reCode = "N";
 
             DataSet ds = null;
-            BizMenuMainDB bizManu = null;
+            BizMenuMainDB bizMenu = null;
             try
             {
-                bizManu = new BizMenuMainDB();
+                bizMenu = new BizMenuMainDB();
 
                 try
                 {
-                    ds = bizManu.sManuTreeView(TOP_MENU_CD, SUB_MENU_CD, USING_FLAG);
+                    ds = bizMenu.sMenuTreeView(pTopMenuCd, pSubMenuCd);
 
                     reMsg = "[검색 성공]";
                     reCode = "Y";
@@ -140,7 +140,7 @@ namespace EldigmPlusSvc_Main.WebSvc.Sys.Menu
             }
             catch (Exception ex)
             {
-                logs.SaveLog("[error]  (page)::WsMenuMainDB.svc  (Function)::sManuTreeView  (Detail)::ConvertDataTableToList " + "\r\n" + ex.ToString(), "Error");
+                logs.SaveLog("[error]  (page)::WsMenuMainDB.svc  (Function)::sMenuTreeView  (Detail)::ConvertDataTableToList " + "\r\n" + ex.ToString(), "Error");
                 reMsg += "/[List 에러]" + ex.ToString();
                 reCode = "N";
             }
@@ -150,19 +150,19 @@ namespace EldigmPlusSvc_Main.WebSvc.Sys.Menu
             return reCode;
         }
 
-        public string sManuTreeView2(string TOP_MENU_CD, string SUB_MENU_CD, string MENU_CD, string USING_FLAG, out List<DataMenu> reList, out string reMsg)
+        public string sMenuTreeView2(string pTopMenuCd, string pSubMenuCd, string pMenuCd, out List<DataMenu> reList, out string reMsg)
         {
             string reCode = "N";
 
             DataSet ds = null;
-            BizMenuMainDB bizManu = null;
+            BizMenuMainDB bizMenu = null;
             try
             {
-                bizManu = new BizMenuMainDB();
+                bizMenu = new BizMenuMainDB();
 
                 try
                 {
-                    ds = bizManu.sManuTreeView2(TOP_MENU_CD, SUB_MENU_CD, MENU_CD, USING_FLAG);
+                    ds = bizMenu.sMenuTreeView2(pTopMenuCd, pSubMenuCd, pMenuCd);
 
                     reMsg = "[검색 성공]";
                     reCode = "Y";
@@ -186,7 +186,7 @@ namespace EldigmPlusSvc_Main.WebSvc.Sys.Menu
             }
             catch (Exception ex)
             {
-                logs.SaveLog("[error]  (page)::WsMenuMainDB.svc  (Function)::sManuTreeView  (Detail)::ConvertDataTableToList " + "\r\n" + ex.ToString(), "Error");
+                logs.SaveLog("[error]  (page)::WsMenuMainDB.svc  (Function)::sMenuTreeView2  (Detail)::ConvertDataTableToList " + "\r\n" + ex.ToString(), "Error");
                 reMsg += "/[List 에러]" + ex.ToString();
                 reCode = "N";
             }
@@ -196,17 +196,17 @@ namespace EldigmPlusSvc_Main.WebSvc.Sys.Menu
             return reCode;
         }
 
-        public string exMenuTop(string TOP_MENU_CD, string TOP_MENU_NM, out string reMsg, out string reData)
+        public string exMenuTop(string pTopMenuCd, string pTopMenuNm, out string reMsg, out string reData)
         {
             string reCode = "N";
             reData = "0";
 
-            BizMenuMainDB bizManu = null;
+            BizMenuMainDB bizMenu = null;
             try
             {
-                bizManu = new BizMenuMainDB();
+                bizMenu = new BizMenuMainDB();
 
-                int reCnt = bizManu.exMenuTop(TOP_MENU_CD, TOP_MENU_NM);
+                int reCnt = bizMenu.exMenuTop(pTopMenuCd, pTopMenuNm);
 
                 if (reCnt > 0)
                 {
@@ -230,17 +230,17 @@ namespace EldigmPlusSvc_Main.WebSvc.Sys.Menu
             return reCode;
         }
 
-        public string exMenuSub(string SUB_MENU_CD, string TOP_MENU_CD, string SUB_MENU_NM, out string reMsg, out string reData)
+        public string exMenuSub(string pSubMenuCd, string pTopMenuCd, string pSubMenuNm, out string reMsg, out string reData)
         {
             string reCode = "N";
             reData = "0";
 
-            BizMenuMainDB bizManu = null;
+            BizMenuMainDB bizMenu = null;
             try
             {
-                bizManu = new BizMenuMainDB();
+                bizMenu = new BizMenuMainDB();
 
-                int reCnt = bizManu.exMenuSub(SUB_MENU_CD, TOP_MENU_CD, SUB_MENU_NM);
+                int reCnt = bizMenu.exMenuSub(pSubMenuCd, pTopMenuCd, pSubMenuNm);
 
                 if (reCnt > 0)
                 {
@@ -264,17 +264,17 @@ namespace EldigmPlusSvc_Main.WebSvc.Sys.Menu
             return reCode;
         }
 
-        public string exMenu(string MENU_CD, string TOP_MENU_CD, string SUB_MENU_CD, string MENU_NM, out string reMsg, out string reData)
+        public string exMenu(string pMenuCd, string pTopMenuCd, string pSubMenuCd, out string reMsg, out string reData)
         {
             string reCode = "N";
             reData = "0";
 
-            BizMenuMainDB bizManu = null;
+            BizMenuMainDB bizMenu = null;
             try
             {
-                bizManu = new BizMenuMainDB();
+                bizMenu = new BizMenuMainDB();
 
-                int reCnt = bizManu.exMenu(MENU_CD, TOP_MENU_CD, SUB_MENU_CD, MENU_NM);
+                int reCnt = bizMenu.exMenu(pMenuCd, pTopMenuCd, pSubMenuCd);
 
                 if (reCnt > 0)
                 {
@@ -298,17 +298,17 @@ namespace EldigmPlusSvc_Main.WebSvc.Sys.Menu
             return reCode;
         }
 
-        public string aMenuTop(string TOP_MENU_NM, string APP_FLAG, string USING_FLAG, string SORT_NO, string INPUT_ID, out string reMsg, out string reData)
+        public string aMenuTop(string pTopMenuNm, string pAppFlag, string pUsingFlag, string pSortNo, string pInputId, out string reMsg, out string reData)
         {
             string reCode = "N";
             reData = "0";
 
-            BizMenuMainDB bizManu = null;
+            BizMenuMainDB bizMenu = null;
             try
             {
-                bizManu = new BizMenuMainDB();
+                bizMenu = new BizMenuMainDB();
 
-                int reCnt = bizManu.aMenuTop(TOP_MENU_NM, APP_FLAG, USING_FLAG, SORT_NO, INPUT_ID);
+                int reCnt = bizMenu.aMenuTop(pTopMenuNm, pAppFlag, pUsingFlag, pSortNo, pInputId);
 
                 if (reCnt > 0)
                 {
@@ -332,17 +332,17 @@ namespace EldigmPlusSvc_Main.WebSvc.Sys.Menu
             return reCode;
         }
 
-        public string aMenuSub(string TOP_MENU_CD, string SUB_MENU_NM, string USING_FLAG, string SORT_NO, string INPUT_ID, out string reMsg, out string reData)
+        public string aMenuSub(string pTopMenuCd, string pSubMenuNm, string pUsingFlag, string pSortNo, string pInputId, out string reMsg, out string reData)
         {
             string reCode = "N";
             reData = "0";
 
-            BizMenuMainDB bizManu = null;
+            BizMenuMainDB bizMenu = null;
             try
             {
-                bizManu = new BizMenuMainDB();
+                bizMenu = new BizMenuMainDB();
 
-                int reCnt = bizManu.aMenuSub(TOP_MENU_CD, SUB_MENU_NM, USING_FLAG, SORT_NO, INPUT_ID);
+                int reCnt = bizMenu.aMenuSub(pTopMenuCd, pSubMenuNm, pUsingFlag, pSortNo, pInputId);
 
                 if (reCnt > 0)
                 {
@@ -366,17 +366,17 @@ namespace EldigmPlusSvc_Main.WebSvc.Sys.Menu
             return reCode;
         }
 
-        public string aMenu(string MENU_CD, string TOP_MENU_CD, string SUB_MENU_CD, string MENU_NM, string USING_FLAG, string SORT_NO, string INPUT_ID, out string reMsg, out string reData)
+        public string aMenu(string pTopMenuCd, string pSubMenuCd, string pMenuCd, string pMenuNm, string pUsingFlag, string pSortNo, string pMenuPath, string pFileFolder, string pInputId, out string reMsg, out string reData)
         {
             string reCode = "N";
             reData = "0";
 
-            BizMenuMainDB bizManu = null;
+            BizMenuMainDB bizMenu = null;
             try
             {
-                bizManu = new BizMenuMainDB();
+                bizMenu = new BizMenuMainDB();
 
-                int reCnt = bizManu.aMenu(MENU_CD, TOP_MENU_CD, SUB_MENU_CD, MENU_NM, USING_FLAG, SORT_NO, INPUT_ID);
+                int reCnt = bizMenu.aMenu(pTopMenuCd, pSubMenuCd, pMenuCd, pMenuNm, pUsingFlag, pSortNo, pMenuPath, pFileFolder, pInputId);
 
                 if (reCnt > 0)
                 {
@@ -393,6 +393,468 @@ namespace EldigmPlusSvc_Main.WebSvc.Sys.Menu
             catch (Exception ex)
             {
                 logs.SaveLog("[error]  (page)::WsMenuMainDB.svc  (Function)::aMenu  (Detail)::" + "\r\n" + ex.ToString(), "Error");
+                reMsg = "[검색 에러] :: " + ex.ToString();
+                reCode = "N";
+            }
+
+            return reCode;
+        }
+
+        public string mMenuTop(string pTopMenuCd, string pUsingFlag, string pSortNo, out string reMsg, out string reData)
+        {
+            string reCode = "N";
+            reData = "0";
+
+            BizMenuMainDB bizMenu = null;
+            try
+            {
+                bizMenu = new BizMenuMainDB();
+
+                int reCnt = bizMenu.mMenuTop(pTopMenuCd, pUsingFlag, pSortNo);
+
+                if (reCnt > 0)
+                {
+                    reMsg = "[저장 성공]";
+                    reCode = "Y";
+                    reData = reCnt.ToString();
+                }
+                else
+                {
+                    reMsg = "[저장 성공] - 정보 없음";
+                    reCode = "Y";
+                }
+            }
+            catch (Exception ex)
+            {
+                logs.SaveLog("[error]  (page)::WsMenuMainDB.svc  (Function)::mMenuTop  (Detail)::" + "\r\n" + ex.ToString(), "Error");
+                reMsg = "[저장 에러] :: " + ex.ToString();
+                reCode = "N";
+            }
+
+            return reCode;
+        }
+
+        public string mMenuSub(string pTopMenuCd, string pSubMenuCd, string pUsingFlag, string pSortNo, out string reMsg, out string reData)
+        {
+            string reCode = "N";
+            reData = "0";
+
+            BizMenuMainDB bizMenu = null;
+            try
+            {
+                bizMenu = new BizMenuMainDB();
+
+                int reCnt = bizMenu.mMenuSub(pTopMenuCd, pSubMenuCd, pUsingFlag, pSortNo);
+
+                if (reCnt > 0)
+                {
+                    reMsg = "[저장 성공]";
+                    reCode = "Y";
+                    reData = reCnt.ToString();
+                }
+                else
+                {
+                    reMsg = "[저장 성공] - 정보 없음";
+                    reCode = "Y";
+                }
+            }
+            catch (Exception ex)
+            {
+                logs.SaveLog("[error]  (page)::WsMenuMainDB.svc  (Function)::mMenuSub  (Detail)::" + "\r\n" + ex.ToString(), "Error");
+                reMsg = "[저장 에러] :: " + ex.ToString();
+                reCode = "N";
+            }
+
+            return reCode;
+        }
+
+        public string mMenu(string pTopMenuCd, string pSubMenuCd, string pMenuCd, string pUsingFlag, string pSortNo, string pMenuPath, string pFileFolder, out string reMsg, out string reData)
+        {
+            string reCode = "N";
+            reData = "0";
+
+            BizMenuMainDB bizMenu = null;
+            try
+            {
+                bizMenu = new BizMenuMainDB();
+
+                int reCnt = bizMenu.mMenu(pTopMenuCd, pSubMenuCd, pMenuCd, pUsingFlag, pSortNo, pMenuPath, pFileFolder);
+
+                if (reCnt > 0)
+                {
+                    reMsg = "[저장 성공]";
+                    reCode = "Y";
+                    reData = reCnt.ToString();
+                }
+                else
+                {
+                    reMsg = "[저장 성공] - 정보 없음";
+                    reCode = "Y";
+                }
+            }
+            catch (Exception ex)
+            {
+                logs.SaveLog("[error]  (page)::WsMenuMainDB.svc  (Function)::mMenu  (Detail)::" + "\r\n" + ex.ToString(), "Error");
+                reMsg = "[저장 에러] :: " + ex.ToString();
+                reCode = "N";
+            }
+
+            return reCode;
+
+        }
+
+        public string sSiteMainDB(string pMemcoCd, out List<DataSiteMainDB> reList, out string reMsg)
+        {
+            string reCode = "N";
+
+            DataSet ds = null;
+            BizMenuMainDB bizMenu = null;
+            try
+            {
+                bizMenu = new BizMenuMainDB();
+
+                try
+                {
+                    ds = bizMenu.sSiteMainDB(pMemcoCd);
+
+                    reMsg = "[검색 성공]";
+                    reCode = "Y";
+                }
+                catch (Exception ex)
+                {
+                    reMsg = "[검색 실패]" + ex.ToString();
+                    reCode = "N";
+                }
+            }
+            catch (Exception ex)
+            {
+                reMsg = "[검색 에러] :: " + ex.ToString();
+                reCode = "N";
+            }
+
+            List<DataSiteMainDB> data = new List<DataSiteMainDB>();
+            try
+            {
+                data = ListClass.ConvertDataTableToList<DataSiteMainDB>(ds.Tables[0]);
+            }
+            catch (Exception ex)
+            {
+                logs.SaveLog("[error]  (page)::WsMenuMainDB.svc  (Function)::sSiteMainDB  (Detail)::ConvertDataTableToList " + "\r\n" + ex.ToString(), "Error");
+                reMsg += "/[List 에러]" + ex.ToString();
+                reCode = "N";
+            }
+
+            reList = data;
+
+            return reCode;
+        }
+
+        //SITE -> DBNM 가져오기 
+        public string siteDbNm(string pSiteCd, out string reData, out string reMsg)
+        {
+            string reCode = "N";
+
+            string reVal = "";
+            BizMenuMainDB bizMenu = null;
+            try
+            {
+                bizMenu = new BizMenuMainDB();
+
+                try
+                {
+                    reVal = bizMenu.siteDbNm(pSiteCd);
+
+                    reMsg = "[검색 성공]";
+                    reCode = "Y";
+                }
+                catch (Exception ex)
+                {
+                    reMsg = "[검색 실패]" + ex.ToString();
+                    reCode = "N";
+                }
+            }
+            catch (Exception ex)
+            {
+                logs.SaveLog("[error]  (page)::WsMenuMainDB.svc  (Function)::siteDbNm  (Detail)::ConvertDataTableToList " + "\r\n" + ex.ToString(), "Error");
+                reMsg = "[검색 에러 - BizSystem 연결 실패] :: " + ex.ToString();
+                reCode = "N";
+            }
+
+            reData = reVal;
+
+            return reCode;
+        }
+
+        public string sMenuMemberDB(string pDbnm, string pSiteCd, string pTopMenuCd, string pSubMenuCd, out List<DataMenuSite> reList, out string reMsg)
+        {
+            string reCode = "N";
+
+            DataSet ds = null;
+            BizMenuMainDB bizMenu = null;
+            try
+            {
+                bizMenu = new BizMenuMainDB();
+
+                try
+                {
+                    ds = bizMenu.sMenuMemberDB(pDbnm, pSiteCd, pTopMenuCd, pSubMenuCd);
+
+                    reMsg = "[검색 성공]";
+                    reCode = "Y";
+                }
+                catch (Exception ex)
+                {
+                    reMsg = "[검색 실패]" + ex.ToString();
+                    reCode = "N";
+                }
+            }
+            catch (Exception ex)
+            {
+                reMsg = "[검색 에러] :: " + ex.ToString();
+                reCode = "N";
+            }
+
+            List<DataMenuSite> data = new List<DataMenuSite>();
+            try
+            {
+                data = ListClass.ConvertDataTableToList<DataMenuSite>(ds.Tables[0]);
+            }
+            catch (Exception ex)
+            {
+                logs.SaveLog("[error]  (page)::WsMenuMainDB.svc  (Function)::sMenuMemberDB  (Detail)::ConvertDataTableToList " + "\r\n" + ex.ToString(), "Error");
+                reMsg += "/[List 에러]" + ex.ToString();
+                reCode = "N";
+            }
+
+            reList = data;
+
+            return reCode;
+        }
+
+        public string mMenuMemberDB(string pDbnm, string pSiteCd, string pMenuCd, string pUsingFlag, string pSortNo, string pMemo, out string reMsg, out string reData)
+        {
+            string reCode = "N";
+            reData = "0";
+
+            BizMenuMainDB bizMenu = null;
+            try
+            {
+                bizMenu = new BizMenuMainDB();
+
+                int reCnt = bizMenu.mMenuMemberDB(pDbnm, pSiteCd, pMenuCd, pUsingFlag, pSortNo, pMemo);
+
+                if (reCnt > 0)
+                {
+                    reMsg = "[저장 성공]";
+                    reCode = "Y";
+                    reData = reCnt.ToString();
+                }
+                else
+                {
+                    reMsg = "[저장 성공] - 정보 없음";
+                    reCode = "Y";
+                }
+            }
+            catch (Exception ex)
+            {
+                logs.SaveLog("[error]  (page)::WsMenuMainDB.svc  (Function)::mMenuMemberDB  (Detail)::" + "\r\n" + ex.ToString(), "Error");
+                reMsg = "[저장 에러] :: " + ex.ToString();
+                reCode = "N";
+            }
+
+            return reCode;
+
+        }
+
+        public string aMenuMemberDB(string pDbnm, string pSiteCd, string pMenuCd, string pTopMenuCd, string pSubMenuCd, string pMenuNm, string pUsingFlag, string pSortNo, string pMemo, string pInputId, out string reMsg, out string reData)
+        {
+            string reCode = "N";
+            reData = "0";
+
+            BizMenuMainDB bizMenu = null;
+            try
+            {
+                bizMenu = new BizMenuMainDB();
+
+                int reCnt = bizMenu.aMenuMemberDB(pDbnm, pSiteCd, pMenuCd, pTopMenuCd, pSubMenuCd, pMenuNm, pUsingFlag, pSortNo, pMemo, pInputId);
+
+                if (reCnt > 0)
+                {
+                    reMsg = "[검색 성공]";
+                    reCode = "Y";
+                    reData = reCnt.ToString();
+                }
+                else
+                {
+                    reMsg = "[검색 성공] - 정보 없음";
+                    reCode = "Y";
+                }
+            }
+            catch (Exception ex)
+            {
+                logs.SaveLog("[error]  (page)::WsMenuMainDB.svc  (Function)::aMenuMemberDB  (Detail)::" + "\r\n" + ex.ToString(), "Error");
+                reMsg = "[검색 에러] :: " + ex.ToString();
+                reCode = "N";
+            }
+
+            return reCode;
+        }
+
+        public string sCodeAuthSiteMemberDB(string pDbnm, out List<DataCodeAuthSiteMemberDB> reList, out string reMsg)
+        {
+            string reCode = "N";
+
+            DataSet ds = null;
+            BizMenuMainDB bizMenu = null;
+            try
+            {
+                bizMenu = new BizMenuMainDB();
+
+                try
+                {
+                    ds = bizMenu.sCodeAuthSiteMemberDB(pDbnm);
+
+                    reMsg = "[검색 성공]";
+                    reCode = "Y";
+                }
+                catch (Exception ex)
+                {
+                    reMsg = "[검색 실패]" + ex.ToString();
+                    reCode = "N";
+                }
+            }
+            catch (Exception ex)
+            {
+                reMsg = "[검색 에러] :: " + ex.ToString();
+                reCode = "N";
+            }
+
+            List<DataCodeAuthSiteMemberDB> data = new List<DataCodeAuthSiteMemberDB>();
+            try
+            {
+                data = ListClass.ConvertDataTableToList<DataCodeAuthSiteMemberDB>(ds.Tables[0]);
+            }
+            catch (Exception ex)
+            {
+                logs.SaveLog("[error]  (page)::WsMenuMainDB.svc  (Function)::sSiteMainDB  (Detail)::ConvertDataTableToList " + "\r\n" + ex.ToString(), "Error");
+                reMsg += "/[List 에러]" + ex.ToString();
+                reCode = "N";
+            }
+
+            reList = data;
+
+            return reCode;
+        }
+
+        public string sSetAuthSiteMemberDB(string pDbnm, string pSiteCd, string pTopMenuCd, string pSubMenuCd, string pAuthCd, out List<DataSetAuthSiteMemberDB> reList, out string reMsg)
+        {
+            string reCode = "N";
+
+            DataSet ds = null;
+            BizMenuMainDB bizMenu = null;
+            try
+            {
+                bizMenu = new BizMenuMainDB();
+
+                try
+                {
+                    ds = bizMenu.sSetAuthSiteMemberDB(pDbnm, pSiteCd, pTopMenuCd, pSubMenuCd, pAuthCd);
+
+                    reMsg = "[검색 성공]";
+                    reCode = "Y";
+                }
+                catch (Exception ex)
+                {
+                    reMsg = "[검색 실패]" + ex.ToString();
+                    reCode = "N";
+                }
+            }
+            catch (Exception ex)
+            {
+                reMsg = "[검색 에러] :: " + ex.ToString();
+                reCode = "N";
+            }
+
+            List<DataSetAuthSiteMemberDB> data = new List<DataSetAuthSiteMemberDB>();
+            try
+            {
+                data = ListClass.ConvertDataTableToList<DataSetAuthSiteMemberDB>(ds.Tables[0]);
+            }
+            catch (Exception ex)
+            {
+                logs.SaveLog("[error]  (page)::WsMenuMainDB.svc  (Function)::sSiteMainDB  (Detail)::ConvertDataTableToList " + "\r\n" + ex.ToString(), "Error");
+                reMsg += "/[List 에러]" + ex.ToString();
+                reCode = "N";
+            }
+
+            reList = data;
+
+            return reCode;
+        }
+
+        public string mSetAuthSiteMemberDB(string pDbnm, string pSiteCd, string pMenuCd, string pAuthCd, string pViewFlag, string pNewFlag, string pModifyFlag, string pDelFlag, string pReportFlag, string pPrintFlag, string pDownloadFlag, string pInputId, out string reMsg, out string reData)
+        {
+            string reCode = "N";
+            reData = "0";
+
+            BizMenuMainDB bizMenu = null;
+            try
+            {
+                bizMenu = new BizMenuMainDB();
+
+                int reCnt = bizMenu.mSetAuthSiteMemberDB(pDbnm, pSiteCd, pMenuCd, pAuthCd, pViewFlag, pNewFlag, pModifyFlag, pDelFlag, pReportFlag, pPrintFlag, pDownloadFlag);
+                int reCntLog = bizMenu.aSetAuthSiteMemberDBLog(pDbnm, pSiteCd, pMenuCd, pAuthCd, pViewFlag, pNewFlag, pModifyFlag, pDelFlag, pReportFlag, pPrintFlag, pDownloadFlag, pInputId);
+
+                if (reCnt > 0)
+                {
+                    reMsg = "[저장 성공]";
+                    reCode = "Y";
+                    reData = reCnt.ToString();
+                }
+                else
+                {
+                    reMsg = "[저장 성공] - 정보 없음";
+                    reCode = "Y";
+                }
+            }
+            catch (Exception ex)
+            {
+                logs.SaveLog("[error]  (page)::WsMenuMainDB.svc  (Function)::mMenuMemberDB  (Detail)::" + "\r\n" + ex.ToString(), "Error");
+                reMsg = "[저장 에러] :: " + ex.ToString();
+                reCode = "N";
+            }
+
+            return reCode;
+        }
+
+        public string aSetAuthSiteMemberDB(string pDbnm, string pSiteCd, string pMenuCd, string pAuthCd, string pViewFlag, string pNewFlag, string pModifyFlag, string pDelFlag, string pReportFlag, string pPrintFlag, string pDownloadFlag, string pInputId, out string reMsg, out string reData)
+        {
+            string reCode = "N";
+            reData = "0";
+
+            BizMenuMainDB bizMenu = null;
+            try
+            {
+                bizMenu = new BizMenuMainDB();
+
+                int reCnt = bizMenu.aSetAuthSiteMemberDB(pDbnm, pSiteCd, pMenuCd, pAuthCd, pViewFlag, pNewFlag, pModifyFlag, pDelFlag, pReportFlag, pPrintFlag, pDownloadFlag, pInputId);
+                int reCntLog = bizMenu.aSetAuthSiteMemberDBLog(pDbnm, pSiteCd, pMenuCd, pAuthCd, pViewFlag, pNewFlag, pModifyFlag, pDelFlag, pReportFlag, pPrintFlag, pDownloadFlag, pInputId);
+
+                if (reCnt > 0)
+                {
+                    reMsg = "[검색 성공]";
+                    reCode = "Y";
+                    reData = reCnt.ToString();
+                }
+                else
+                {
+                    reMsg = "[검색 성공] - 정보 없음";
+                    reCode = "Y";
+                }
+            }
+            catch (Exception ex)
+            {
+                logs.SaveLog("[error]  (page)::WsMenuMainDB.svc  (Function)::aMenuMemberDB  (Detail)::" + "\r\n" + ex.ToString(), "Error");
                 reMsg = "[검색 에러] :: " + ex.ToString();
                 reCode = "N";
             }

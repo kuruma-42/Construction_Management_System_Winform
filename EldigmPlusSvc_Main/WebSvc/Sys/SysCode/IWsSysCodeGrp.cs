@@ -68,15 +68,18 @@ namespace EldigmPlusSvc_Main.WebSvc.Sys.SysCode
         public string SCODE { get; set; }
 
         [DataMember(Order = 1)]
-        public string SCODE_NM { get; set; }
+        public string SCODE_GRP { get; set; }
 
         [DataMember(Order = 2)]
-        public int USING_FLAG { get; set; }
+        public string SCODE_NM { get; set; }
 
         [DataMember(Order = 3)]
-        public int SORT_NO { get; set; }
+        public int USING_FLAG { get; set; }
 
         [DataMember(Order = 4)]
+        public int SORT_NO { get; set; }
+
+        [DataMember(Order = 5)]
         public string MEMO { get; set; }
     }
 

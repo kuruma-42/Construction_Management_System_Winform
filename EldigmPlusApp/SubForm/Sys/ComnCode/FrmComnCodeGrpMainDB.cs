@@ -34,18 +34,18 @@ namespace EldigmPlusApp.SubForm.Sys.ComnCode
 
                 dataGridView1.Columns["dgv1_CHK"].HeaderText = "선택";
                 dataGridView1.Columns["dgv1_CCODE_GRP"].HeaderText = "코드";
-                dataGridView1.Columns["dgv1_CCODE_NM"].HeaderText = "이름";
+                dataGridView1.Columns["dgv1_CCODE_GRP_NM"].HeaderText = "이름";
                 dataGridView1.Columns["dgv1_USING_FLAG"].HeaderText = "사용";
                 dataGridView1.Columns["dgv1_SORT_NO"].HeaderText = "정렬";
                 dataGridView1.Columns["dgv1_MEMO"].HeaderText = "메모";
 
                 dataGridView2.Columns["dgv2_CCODE_GRP"].HeaderText = "*코드";
-                dataGridView2.Columns["dgv2_CCODE_NM"].HeaderText = "*이름";
+                dataGridView2.Columns["dgv2_CCODE_GRP_NM"].HeaderText = "*이름";
                 dataGridView2.Columns["dgv2_SORT_NO"].HeaderText = "정렬";
                 dataGridView2.Columns["dgv2_MEMO"].HeaderText = "메모";
 
                 dataGridView2.Columns["dgv2_CCODE_GRP"].HeaderCell.Style.ForeColor = Color.Maroon; // 헤더 필수 항목 빨강색
-                dataGridView2.Columns["dgv2_CCODE_NM"].HeaderCell.Style.ForeColor = Color.Maroon; // 헤더 필수 항목 빨강색
+                dataGridView2.Columns["dgv2_CCODE_GRP_NM"].HeaderCell.Style.ForeColor = Color.Maroon; // 헤더 필수 항목 빨강색
 
                 Control.CheckForIllegalCrossThreadCalls = false;
 
@@ -104,7 +104,7 @@ namespace EldigmPlusApp.SubForm.Sys.ComnCode
                             dataGridView1.Rows.Add();
                             dataGridView1.Rows[i].Cells["dgv1_CHK"].Value = "0";
                             dataGridView1.Rows[i].Cells["dgv1_CCODE_GRP"].Value = getData[i].CCODE_GRP.ToString();
-                            dataGridView1.Rows[i].Cells["dgv1_CCODE_NM"].Value = getData[i].CCODE_NM.ToString();
+                            dataGridView1.Rows[i].Cells["dgv1_CCODE_GRP_NM"].Value = getData[i].CCODE_GRP_NM.ToString();
                             dataGridView1.Rows[i].Cells["dgv1_USING_FLAG"].Value = getData[i].USING_FLAG.ToString();
                             dataGridView1.Rows[i].Cells["dgv1_SORT_NO"].Value = getData[i].SORT_NO.ToString();
                             dataGridView1.Rows[i].Cells["dgv1_MEMO"].Value = getData[i].MEMO.ToString();
@@ -225,7 +225,7 @@ namespace EldigmPlusApp.SubForm.Sys.ComnCode
                 else
                 {
                     string ccodeGrp_val = dataGridView2.Rows[0].Cells["dgv2_CCODE_GRP"].Value.ToString();
-                    string ccodeNm_val = dataGridView2.Rows[0].Cells["dgv2_CCODE_NM"].Value.ToString();
+                    string ccodeNm_val = dataGridView2.Rows[0].Cells["dgv2_CCODE_GRP_NM"].Value.ToString();
                     string usingFlag_val = "1";
 
                     string sortNo_val = "1";
@@ -307,9 +307,9 @@ namespace EldigmPlusApp.SubForm.Sys.ComnCode
                     return reVal;
                 }
 
-                if (dataGridView2.Rows[0].Cells["dgv2_CCODE_NM"].Value != null)
+                if (dataGridView2.Rows[0].Cells["dgv2_CCODE_GRP_NM"].Value != null)
                 {
-                    if (dataGridView2.Rows[0].Cells["dgv2_CCODE_NM"].Value.ToString() == "")
+                    if (dataGridView2.Rows[0].Cells["dgv2_CCODE_GRP_NM"].Value.ToString() == "")
                     {
                         reVal = "이름";
                         return reVal;
@@ -358,7 +358,7 @@ namespace EldigmPlusApp.SubForm.Sys.ComnCode
                         if (dataGridView1.Rows[i].Cells["dgv1_CHK"].Value.ToString() == "1")
                         {
                             string ccode_val = dataGridView1.Rows[i].Cells["dgv1_CCODE_GRP"].Value.ToString();
-                            string ccodeNm_val = dataGridView1.Rows[i].Cells["dgv1_CCODE_NM"].Value.ToString();
+                            string ccodeNm_val = dataGridView1.Rows[i].Cells["dgv1_CCODE_GRP_NM"].Value.ToString();
                             string usingFlag_val = dataGridView1.Rows[i].Cells["dgv1_USING_FLAG"].Value.ToString();
 
 

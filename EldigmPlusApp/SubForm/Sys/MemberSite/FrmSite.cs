@@ -196,9 +196,9 @@ namespace EldigmPlusApp.SubForm.Sys.MemberSite
                 logs.SaveLog("[error]  (page)::FrmSysAuthMainDB.cs  (Function)::setDataBind_Combo  (Detail):: " + "\r\n" + ex.ToString());
             }
 
-        }        
+        }
 
-      
+
 
         private void SetDataBind_gridView1()
         {
@@ -218,7 +218,7 @@ namespace EldigmPlusApp.SubForm.Sys.MemberSite
                     //CMB BOX SELECTED                     
                     reCode = wSvc.sSite(cmbMember.SelectedValue.ToString(), pUsing_Flag, out getData, out reMsg);
                 }
-             
+
 
 
                 if (reCode == "Y")
@@ -370,7 +370,7 @@ namespace EldigmPlusApp.SubForm.Sys.MemberSite
             try
             {
                 dataGridView2.Rows.Clear();
-                dataGridView2.Rows.Add();                
+                dataGridView2.Rows.Add();
                 dataGridView2.Rows[0].Cells["dgv2_SORT_NO"].Value = "1";
                 dataGridView2.Rows[0].Cells["dgv2_MEMO"].Value = "";
                 dataGridView2.Rows[0].Cells["dgv2_BTNADD"].Value = "추가";
@@ -385,6 +385,7 @@ namespace EldigmPlusApp.SubForm.Sys.MemberSite
         //추가버튼 클릭 
         private void dataGridView2_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            int reCnt = 0;
             string colNm = dataGridView2.Columns[e.ColumnIndex].Name;
 
             if (colNm == "dgv2_BTNADD")
@@ -394,9 +395,9 @@ namespace EldigmPlusApp.SubForm.Sys.MemberSite
                 if (reVal != "")
                     MessageBox.Show("데이터 확인 :: " + reVal);
                 else
-                {                                        
-                    string memcoCd_val = cmbMember.SelectedValue.ToString();                   
-                    string siteNm_val = dataGridView2.Rows[0].Cells["dgv2_SITE_NM"].Value.ToString();                           
+                {
+                    string memcoCd_val = cmbMember.SelectedValue.ToString();
+                    string siteNm_val = dataGridView2.Rows[0].Cells["dgv2_SITE_NM"].Value.ToString();
                     string usingFlag_val = "1";
                     string sortNo_val = dataGridView2.Rows[0].Cells["dgv2_SORT_NO"].Value.ToString();
 
@@ -423,23 +424,6 @@ namespace EldigmPlusApp.SubForm.Sys.MemberSite
                         wSvc.Timeout = 1000;
 
 
-
-                        //Hashtable param = new Hashtable();
-                        //param.Add("@pMemco_Cd", memcoCd_val);
-                        //param.Add("@pSite_Nm", siteNm_val);
-                        //param.Add("@pSort_No", sortNo_val);
-                        //param.Add("@pMemo", memo_val);
-                        //param.Add("@pInput_Id", pInputId);
-                        //param.Add("@pHeadco_Cd", headcoCd_val);
-
-                        //List<string> param = new List<string>();
-                        //param.Add(memcoCd_val);
-                        //param.Add(siteNm_val);
-                        //param.Add(sortNo_val);
-                        //param.Add(memo_val);
-                        //param.Add(pInputId);
-                        //param.Add(headcoCd_val);
-
                         string[] param = new string[6];
                         param[0] = memcoCd_val;
                         param[1] = siteNm_val;
@@ -451,61 +435,25 @@ namespace EldigmPlusApp.SubForm.Sys.MemberSite
                         reCode = wSvc.aSite(_dbNm, param, out reMsg, out reData);
 
 
+
+                        if (reCode == "Y" && reData != "0")
+                            reCnt += Convert.ToInt16(reData);
+
+                        if (reCnt > 0)
+                        {
+                            MessageBox.Show("저장 성공");
+                        }
+                        else
+                        {
+                            MessageBox.Show("저장 실패");
+                        }
+
                         SetDataBind_gridView1();
                         SetDataBind_gridView2();
 
 
                     }
-                    //{
-                    //    int reCnt = 0;
 
-                    //    wSvc = new M_WsMember.WsMember();
-                    //    wSvc.Url = "http://" + AppInfo.SsWsvcServer2 + "/WebSvc/Sys/MemberSite/WsMember.svc";
-                    //    wSvc.Timeout = 1000;
-
-                    //    //현장 이름으로 중복체크 SITE_CD RETURN 
-                    //    reCode = wSvc.exSite(siteNm_val, out reMsg, out reData);
-                    //    string pSsiteCd = reData;
-
-                    //    if (reCode == "Y" && reData != "0")
-                    //    {                             
-                    //        //중복데이터 체크 후 USING FLAG 1로 업데이트 
-                    //        reCode = wSvc.mSite(pSsiteCd, siteNm_val, usingFlag_val, sortNo_val, memo_val, out reMsg, out reData);                          
-                    //        MessageBox.Show("중복 데이터 입니다. 사용으로 전환합니다. ");
-
-                    //        //회원사 현장 INSERT 
-                    //        reCode = wSvc.aSite_Member(pSsiteCd, memcoCd_val, siteNm_val, headcoCd_val, out reMsg, out reData);
-
-                    //        //회원사 현장 정보 INSERT  
-                    //        reCode = wSvc.aSiteInfo_Member(pSsiteCd, memcoCd_val, out reMsg, out reData);
-                    //    }
-                    //    else
-                    //    {
-
-                    //        //중복 없으면 인서트 
-                    //        reCode = "";
-
-                    //        //MAIN DB SITE INSERT 
-                    //        reCode = wSvc.aSite(memcoCd_val, siteNm_val, usingFlag_val, sortNo_val, memo_val, pInputId, out reMsg, out reData);
-
-                    //        //회원사 현장 INSERT 
-                    //        reCode = wSvc.aSite_Member(pSsiteCd, memcoCd_val, siteNm_val, headcoCd_val, out reMsg, out reData);
-
-                    //        //회원사 현장 정보 INSERT  
-                    //        reCode = wSvc.aSiteInfo_Member(pSsiteCd, memcoCd_val, out reMsg, out reData);
-
-
-                    //        if (reCode == "Y" && reData != "0")
-                    //            reCnt = Convert.ToInt16(reData);
-
-                    //        if (reCnt > 0)
-                    //            MessageBox.Show("저장 성공" + " : " + reCnt.ToString());
-                    //        else
-                    //            MessageBox.Show("저장 실패");
-                    //    }
-
-
-                    //}
                     catch (Exception ex)
                     {
                         logs.SaveLog("[error]  (page)::FrmMember.cs  (Function)::dataGridView2_CellClick  (Detail):: " + "\r\n" + ex.ToString(), "Error");
@@ -538,7 +486,7 @@ namespace EldigmPlusApp.SubForm.Sys.MemberSite
                     reVal = "현장 이름";
                     return reVal;
                 }
-                
+
             }
             catch (Exception ex)
             {
@@ -607,7 +555,7 @@ namespace EldigmPlusApp.SubForm.Sys.MemberSite
 
 
         private void cmbMember_SelectedIndexChanged(object sender, EventArgs e)
-        {            
+        {
             SetDataBind_gridView1();
         }
 

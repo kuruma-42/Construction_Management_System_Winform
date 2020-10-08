@@ -98,17 +98,48 @@
     <Compile Include="Config\AppInfo.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Settings.cs" />
     <Compile Include="SubForm\MainHome\FrmMain.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="SubForm\MainHome\FrmMain.Designer.cs">
       <DependentUpon>FrmMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="SubForm\Sys\CodeT\FrmCodeTMainDB.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubForm\Sys\CodeT\FrmCodeTMainDB.Designer.cs">
+      <DependentUpon>FrmCodeTMainDB.cs</DependentUpon>
+    </Compile>
     <Compile Include="SubForm\Sys\ComnCode\FrmComnCodeGrpMainDB.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="SubForm\Sys\ComnCode\FrmComnCodeGrpMainDB.Designer.cs">
       <DependentUpon>FrmComnCodeGrpMainDB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubForm\Sys\ComnCode\FrmComnCodeGrpSetAuthSite.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubForm\Sys\ComnCode\FrmComnCodeGrpSetAuthSite.Designer.cs">
+      <DependentUpon>FrmComnCodeGrpSetAuthSite.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubForm\Sys\ComnCode\FrmComnCodeSite.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubForm\Sys\ComnCode\FrmComnCodeSite.Designer.cs">
+      <DependentUpon>FrmComnCodeSite.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubForm\Sys\CompanyTeam\FrmCompany.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubForm\Sys\CompanyTeam\FrmCompany.Designer.cs">
+      <DependentUpon>FrmCompany.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubForm\Sys\CompanyTeam\FrmTeam.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubForm\Sys\CompanyTeam\FrmTeam.designer.cs">
+      <DependentUpon>FrmTeam.cs</DependentUpon>
     </Compile>
     <Compile Include="SubForm\Sys\MemberSite\FrmMember.cs">
       <SubType>Form</SubType>
@@ -127,6 +158,18 @@
     </Compile>
     <Compile Include="SubForm\Sys\Menu\FrmMenuMainDB.Designer.cs">
       <DependentUpon>FrmMenuMainDB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubForm\Sys\Menu\FrmMenuSetAuthSite.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubForm\Sys\Menu\FrmMenuSetAuthSite.Designer.cs">
+      <DependentUpon>FrmMenuSetAuthSite.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubForm\Sys\Menu\FrmMenuSite.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubForm\Sys\Menu\FrmMenuSite.Designer.cs">
+      <DependentUpon>FrmMenuSite.cs</DependentUpon>
     </Compile>
     <Compile Include="SubForm\Sys\SysAuth\FrmSysAuthMainDB.cs">
       <SubType>Form</SubType>
@@ -164,6 +207,16 @@
       <DependentUpon>Reference.map</DependentUpon>
     </Compile>
     <Compile Include="Web References\Mem_WsSysAuthMemberDB\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\Mem_WsSysCompanyTeam\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\M_WsCodeTMainDB\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.map</DependentUpon>
@@ -212,8 +265,23 @@
     <EmbeddedResource Include="strLanguage.en-US.resx" />
     <EmbeddedResource Include="strLanguage.ko-KR.resx" />
     <EmbeddedResource Include="strLanguage.zh-CN.resx" />
+    <EmbeddedResource Include="SubForm\Sys\CodeT\FrmCodeTMainDB.resx">
+      <DependentUpon>FrmCodeTMainDB.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="SubForm\Sys\ComnCode\FrmComnCodeGrpMainDB.resx">
       <DependentUpon>FrmComnCodeGrpMainDB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubForm\Sys\ComnCode\FrmComnCodeGrpSetAuthSite.resx">
+      <DependentUpon>FrmComnCodeGrpSetAuthSite.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubForm\Sys\ComnCode\FrmComnCodeSite.resx">
+      <DependentUpon>FrmComnCodeSite.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubForm\Sys\CompanyTeam\FrmCompany.resx">
+      <DependentUpon>FrmCompany.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubForm\Sys\CompanyTeam\FrmTeam.resx">
+      <DependentUpon>FrmTeam.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SubForm\Sys\MemberSite\FrmMember.resx">
       <DependentUpon>FrmMember.cs</DependentUpon>
@@ -223,6 +291,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="SubForm\Sys\Menu\FrmMenuMainDB.resx">
       <DependentUpon>FrmMenuMainDB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubForm\Sys\Menu\FrmMenuSetAuthSite.resx">
+      <DependentUpon>FrmMenuSetAuthSite.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubForm\Sys\Menu\FrmMenuSite.resx">
+      <DependentUpon>FrmMenuSite.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SubForm\Sys\SysAuth\FrmSysAuthMainDB.resx">
       <DependentUpon>FrmSysAuthMainDB.cs</DependentUpon>
@@ -239,6 +313,8 @@
     <EmbeddedResource Include="SubForm\Sys\SysCode\FrmSysCodeGrp.resx">
       <DependentUpon>FrmSysCodeGrp.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="Class\Common\Eldigm_Plus\.vs\config\applicationhost.config" />
+    <None Include="Class\Common\Eldigm_Plus\.vs\EldigmPlus\v15\.suo" />
     <None Include="Config\EldigmPlusApp.ini">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
@@ -300,8 +376,75 @@
     <None Include="Web References\Mem_WsSysAuthMemberDB\WsSysAuthMemberDB1.xsd">
       <SubType>Designer</SubType>
     </None>
+    <None Include="Web References\Mem_WsSysCompanyTeam\DataCompany.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\Mem_WsSysCompanyTeam\DataConstCmb.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\Mem_WsSysCompanyTeam\DataConstCmb2.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\Mem_WsSysCompanyTeam\DataCotypeCmb.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\Mem_WsSysCompanyTeam\DataCotypeCmb2.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\Mem_WsSysCompanyTeam\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\Mem_WsSysCompanyTeam\WsSysCompanyTeam.wsdl" />
+    <None Include="Web References\Mem_WsSysCompanyTeam\WsSysCompanyTeam.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\Mem_WsSysCompanyTeam\WsSysCompanyTeam0.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\Mem_WsSysCompanyTeam\WsSysCompanyTeam1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\M_WsCCodeGrp\DataCodeAuthSiteMemberDB1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\M_WsCCodeGrp\DataComecodeSite.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\Mem_WsSysCompanyTeam\WsSysCompanyTeam2.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Web References\M_WsCCodeGrp\DataComnCodeGrp1.datasource">
       <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\M_WsCCodeGrp\DataSetAuthSiteMemberDB1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\M_WsCCodeGrp\WsComnCodeGrp2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\M_WsCodeTMainDB\DataCodeT.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\M_WsCodeTMainDB\DataCodeTSub.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\M_WsCodeTMainDB\DataSysCode.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\M_WsCodeTMainDB\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\M_WsCodeTMainDB\WsCodeTMainDB.wsdl" />
+    <None Include="Web References\M_WsCodeTMainDB\WsCodeTMainDB.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\M_WsCodeTMainDB\WsCodeTMainDB0.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\M_WsCodeTMainDB\WsCodeTMainDB1.xsd">
+      <SubType>Designer</SubType>
     </None>
     <None Include="Web References\M_WsMember\DataMemberDB.datasource">
       <DependentUpon>Reference.map</DependentUpon>
@@ -434,7 +577,9 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />
@@ -473,6 +618,8 @@
     <Content Include="Image\treeicon1.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <None Include="Web References\M_WsCodeTMainDB\WsCodeTMainDB.disco" />
+    <None Include="Web References\Mem_WsSysCompanyTeam\WsSysCompanyTeam.disco" />
     <None Include="Web References\M_WsMember\WsMember.disco" />
     <None Include="Web References\Mem_WsSysAuthMemberDB\WsSysAuthMemberDB.disco" />
     <None Include="Web References\M_WsMenuMainDB\WsMenuMainDB.disco" />
@@ -482,8 +629,21 @@
     <None Include="Web References\M_WsSysAuthMainDB\WsSysAuthMainDB.disco" />
     <None Include="Web References\M_WsMHome\WsMainHome.disco" />
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
+    <Folder Include="Class\Common\Eldigm_Plus\.vs\EldigmPlus\v15\Server\sqlite3\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="http://localhost:49469/WebSvc/Sys/CodeT/WsCodeTMainDB.svc">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\M_WsCodeTMainDB\</RelPath>
+      <UpdateFromURL>http://localhost:49469/WebSvc/Sys/CodeT/WsCodeTMainDB.svc</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>EldigmPlusApp_M_WsCodeTMainDB_WsCodeTMainDB</CachedSettingsPropName>
+    </WebReferenceUrl>
     <WebReferenceUrl Include="http://localhost:49469/WebSvc/Sys/MemberSite/WsMember.svc">
       <UrlBehavior>Dynamic</UrlBehavior>
       <RelPath>Web References\M_WsMember\</RelPath>
@@ -560,6 +720,17 @@
       </CachedDynamicPropName>
       <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
       <CachedSettingsPropName>EldigmPlusApp_WsCCodeGrp_WsComnCodeGrp</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://localhost:49501/WebSvc/Sys/CompanyTeam/WsSysCompanyTeam.svc">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\Mem_WsSysCompanyTeam\</RelPath>
+      <UpdateFromURL>http://localhost:49501/WebSvc/Sys/CompanyTeam/WsSysCompanyTeam.svc</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>EldigmPlusApp_Mem_WsSysCompanyTeam_WsSysCompanyTeam</CachedSettingsPropName>
     </WebReferenceUrl>
     <WebReferenceUrl Include="http://localhost:49501/WebSvc/Sys/SysAuth/WsSysAuthMemberDB.svc">
       <UrlBehavior>Dynamic</UrlBehavior>

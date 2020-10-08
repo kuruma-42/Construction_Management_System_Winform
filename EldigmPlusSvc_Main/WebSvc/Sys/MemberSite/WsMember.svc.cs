@@ -422,7 +422,7 @@ namespace EldigmPlusSvc_Main.WebSvc.Sys.MemberSite
                     {
                         foreach (DictionaryEntry dictionaryEntry in outVal)
                         {
-                            string[] row = new string[] { dictionaryEntry.Key.ToString(), dictionaryEntry.Value.ToString() , "" };
+                            string[] row = new string[] { dictionaryEntry.Key.ToString(), dictionaryEntry.Value.ToString(), "" };
                             //string rowCount = row.Length.ToString();
                             //string rowKey = row[0].ToString();
                             reVal = row[1].ToString();

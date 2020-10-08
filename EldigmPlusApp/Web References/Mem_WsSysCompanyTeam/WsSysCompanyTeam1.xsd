@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:49501/WebSvc/Sys/CompanyTeam/WsSysCompanyTeam.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/EldigmPlusSvc_Memco.WebSvc.Sys.CompanyTeam" />
+  <xs:import schemaLocation="http://localhost:49501/WebSvc/Sys/CompanyTeam/WsSysCompanyTeam.svc?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:element name="constCmb">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="pSiteCd" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="constCmbResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="constCmbResult" nillable="true" type="xs:string" />
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/EldigmPlusSvc_Memco.WebSvc.Sys.CompanyTeam" minOccurs="0" name="reList" nillable="true" type="q1:ArrayOfDataConstCmb" />
+        <xs:element minOccurs="0" name="reMsg" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="cotype_Cmb">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="cotype_CmbResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="cotype_CmbResult" nillable="true" type="xs:string" />
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/EldigmPlusSvc_Memco.WebSvc.Sys.CompanyTeam" minOccurs="0" name="reList" nillable="true" type="q2:ArrayOfDataCotypeCmb" />
+        <xs:element minOccurs="0" name="reMsg" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="constCmb2">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="pSiteCd" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="constCmb2Response">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="constCmb2Result" nillable="true" type="xs:string" />
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/EldigmPlusSvc_Memco.WebSvc.Sys.CompanyTeam" minOccurs="0" name="reList" nillable="true" type="q3:ArrayOfDataConstCmb2" />
+        <xs:element minOccurs="0" name="reMsg" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="cotype_Cmb2">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="cotype_Cmb2Response">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="cotype_Cmb2Result" nillable="true" type="xs:string" />
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/EldigmPlusSvc_Memco.WebSvc.Sys.CompanyTeam" minOccurs="0" name="reList" nillable="true" type="q4:ArrayOfDataCotypeCmb2" />
+        <xs:element minOccurs="0" name="reMsg" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="sCompany">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="pSiteCd" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pUsingFlag" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pCoNm" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="sCompanyResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sCompanyResult" nillable="true" type="xs:string" />
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/EldigmPlusSvc_Memco.WebSvc.Sys.CompanyTeam" minOccurs="0" name="reList" nillable="true" type="q5:ArrayOfDataCompany" />
+        <xs:element minOccurs="0" name="reMsg" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="mCompanyMain">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="pCoCd" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pCoNm" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pBizNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pConstCcd" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pCoTypeScd" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pOwnerNm" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pTel" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pAddr" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="mCompanyMainResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="mCompanyMainResult" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="reMsg" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="reData" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="mCompanyMemco">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="pSiteCd" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pCoCd" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pCoNm" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pHeadcoCd" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pConstCcd" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pCoTypeScd" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pSortNo" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="mCompanyMemcoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="mCompanyMemcoResult" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="reMsg" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="reData" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="mCompanyMemcoSite">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="pSiteCd" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pCoCd" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pStartDate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pEndDate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pUsingFlag" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pSortNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pMemo" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="mCompanyMemcoSiteResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="mCompanyMemcoSiteResult" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="reMsg" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="reData" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="aCompanyMemcoSite">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="pSiteCd" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pCoCd" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pStartDate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pEndDate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pUsingFlag" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pSortNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pMemo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pInputId" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="aCompanyMemcoSiteResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="aCompanyMemcoSiteResult" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="reMsg" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="reData" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="aCompanyPro">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="pDbNm" nillable="true" type="xs:string" />
+        <xs:element xmlns:q6="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="param" nillable="true" type="q6:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="aCompanyProResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="aCompanyProResult" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="reMsg" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="reData" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="mConpanyMainLog">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="pCoCd" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pCoNm" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pBizNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pConstCcd" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pCoTypeScd" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pOwnerNm" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pTel" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pAddr" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pUsingCnt" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pInputId" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="mConpanyMainLogResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="mConpanyMainLogResult" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="reMsg" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="reData" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="mCompanySiteLog">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="pCoCd" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pSiteCd" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pCoNm" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pConstCcd" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pCoTypeScd" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pStartDate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pEndDate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pUsingFlag" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pSortNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pMemo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pInputId" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="mCompanySiteLogResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="mCompanySiteLogResult" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="reMsg" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="reData" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

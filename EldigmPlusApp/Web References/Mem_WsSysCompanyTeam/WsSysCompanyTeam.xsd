@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/EldigmPlusSvc_Memco.WebSvc.Sys.CompanyTeam" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/EldigmPlusSvc_Memco.WebSvc.Sys.CompanyTeam" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="ArrayOfDataConstCmb">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DataConstCmb" nillable="true" type="tns:DataConstCmb" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDataConstCmb" nillable="true" type="tns:ArrayOfDataConstCmb" />
+  <xs:complexType name="DataConstCmb">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="VALUE" type="xs:int" />
+      <xs:element minOccurs="0" name="TEXT" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DataConstCmb" nillable="true" type="tns:DataConstCmb" />
+  <xs:complexType name="ArrayOfDataCotypeCmb">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DataCotypeCmb" nillable="true" type="tns:DataCotypeCmb" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDataCotypeCmb" nillable="true" type="tns:ArrayOfDataCotypeCmb" />
+  <xs:complexType name="DataCotypeCmb">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="VALUE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TEXT" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DataCotypeCmb" nillable="true" type="tns:DataCotypeCmb" />
+  <xs:complexType name="ArrayOfDataConstCmb2">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DataConstCmb2" nillable="true" type="tns:DataConstCmb2" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDataConstCmb2" nillable="true" type="tns:ArrayOfDataConstCmb2" />
+  <xs:complexType name="DataConstCmb2">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CCODE" type="xs:int" />
+      <xs:element minOccurs="0" name="CCODE_NM" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DataConstCmb2" nillable="true" type="tns:DataConstCmb2" />
+  <xs:complexType name="ArrayOfDataCotypeCmb2">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DataCotypeCmb2" nillable="true" type="tns:DataCotypeCmb2" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDataCotypeCmb2" nillable="true" type="tns:ArrayOfDataCotypeCmb2" />
+  <xs:complexType name="DataCotypeCmb2">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="SCODE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SCODE_NM" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DataCotypeCmb2" nillable="true" type="tns:DataCotypeCmb2" />
+  <xs:complexType name="ArrayOfDataCompany">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DataCompany" nillable="true" type="tns:DataCompany" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDataCompany" nillable="true" type="tns:ArrayOfDataCompany" />
+  <xs:complexType name="DataCompany">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CO_CD" type="xs:int" />
+      <xs:element minOccurs="0" name="CO_NM" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="USING_FLAG" type="xs:int" />
+      <xs:element minOccurs="0" name="HEADCO_CD" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CONST_CCD" type="xs:int" />
+      <xs:element minOccurs="0" name="CO_TYPE_SCD" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SITE_CD" type="xs:int" />
+      <xs:element minOccurs="0" name="START_DATE" type="xs:int" />
+      <xs:element minOccurs="0" name="END_DATE" type="xs:int" />
+      <xs:element minOccurs="0" name="BIZ_NO" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OWNER_NM" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TEL" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ADDR" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="USING_CNT" type="xs:int" />
+      <xs:element minOccurs="0" name="SORT_NO" type="xs:int" />
+      <xs:element minOccurs="0" name="MEMO" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DataCompany" nillable="true" type="tns:DataCompany" />
+</xs:schema>

@@ -31,11 +31,33 @@ namespace EldigmPlusApp.M_WsCCodeGrp {
         
         private System.Threading.SendOrPostCallback sComnCodeGrpOperationCompleted;
         
+        private System.Threading.SendOrPostCallback sComnCodeGrpUsingFlagOperationCompleted;
+        
         private System.Threading.SendOrPostCallback aComnCodeGrpOperationCompleted;
         
         private System.Threading.SendOrPostCallback exComnCodeGrpOperationCompleted;
         
         private System.Threading.SendOrPostCallback mComnCodeGrpOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback siteDbNmOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback sCodeAuthSiteMemberDBOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback sSetAuthSiteMemberDBOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback sSetAuthSiteMemberDBSubOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback mSetAuthSiteMemberDBOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback aSetAuthSiteMemberDBOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback sComnSiteTreeViewOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback sComnSiteOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback mComnSiteOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback aComnSiteOperationCompleted;
         
         private bool useDefaultCredentialsSetExplicitly;
         
@@ -79,6 +101,9 @@ namespace EldigmPlusApp.M_WsCCodeGrp {
         public event sComnCodeGrpCompletedEventHandler sComnCodeGrpCompleted;
         
         /// <remarks/>
+        public event sComnCodeGrpUsingFlagCompletedEventHandler sComnCodeGrpUsingFlagCompleted;
+        
+        /// <remarks/>
         public event aComnCodeGrpCompletedEventHandler aComnCodeGrpCompleted;
         
         /// <remarks/>
@@ -86,6 +111,36 @@ namespace EldigmPlusApp.M_WsCCodeGrp {
         
         /// <remarks/>
         public event mComnCodeGrpCompletedEventHandler mComnCodeGrpCompleted;
+        
+        /// <remarks/>
+        public event siteDbNmCompletedEventHandler siteDbNmCompleted;
+        
+        /// <remarks/>
+        public event sCodeAuthSiteMemberDBCompletedEventHandler sCodeAuthSiteMemberDBCompleted;
+        
+        /// <remarks/>
+        public event sSetAuthSiteMemberDBCompletedEventHandler sSetAuthSiteMemberDBCompleted;
+        
+        /// <remarks/>
+        public event sSetAuthSiteMemberDBSubCompletedEventHandler sSetAuthSiteMemberDBSubCompleted;
+        
+        /// <remarks/>
+        public event mSetAuthSiteMemberDBCompletedEventHandler mSetAuthSiteMemberDBCompleted;
+        
+        /// <remarks/>
+        public event aSetAuthSiteMemberDBCompletedEventHandler aSetAuthSiteMemberDBCompleted;
+        
+        /// <remarks/>
+        public event sComnSiteTreeViewCompletedEventHandler sComnSiteTreeViewCompleted;
+        
+        /// <remarks/>
+        public event sComnSiteCompletedEventHandler sComnSiteCompleted;
+        
+        /// <remarks/>
+        public event mComnSiteCompletedEventHandler mComnSiteCompleted;
+        
+        /// <remarks/>
+        public event aComnSiteCompletedEventHandler aComnSiteCompleted;
         
         /// <remarks/>
         [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IWsComnCodeGrp/sComnCodeGrp", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
@@ -114,6 +169,36 @@ namespace EldigmPlusApp.M_WsCCodeGrp {
             if ((this.sComnCodeGrpCompleted != null)) {
                 System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
                 this.sComnCodeGrpCompleted(this, new sComnCodeGrpCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IWsComnCodeGrp/sComnCodeGrpUsingFlag", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [return: System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string sComnCodeGrpUsingFlag([System.Xml.Serialization.XmlArrayAttribute(IsNullable=true)] [System.Xml.Serialization.XmlArrayItemAttribute(Namespace="http://schemas.datacontract.org/2004/07/EldigmPlusSvc_Main.WebSvc.Sys.ComnCode")] out DataComnCodeGrp[] reList, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] out string reMsg) {
+            object[] results = this.Invoke("sComnCodeGrpUsingFlag", new object[0]);
+            reList = ((DataComnCodeGrp[])(results[1]));
+            reMsg = ((string)(results[2]));
+            return ((string)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void sComnCodeGrpUsingFlagAsync() {
+            this.sComnCodeGrpUsingFlagAsync(null);
+        }
+        
+        /// <remarks/>
+        public void sComnCodeGrpUsingFlagAsync(object userState) {
+            if ((this.sComnCodeGrpUsingFlagOperationCompleted == null)) {
+                this.sComnCodeGrpUsingFlagOperationCompleted = new System.Threading.SendOrPostCallback(this.OnsComnCodeGrpUsingFlagOperationCompleted);
+            }
+            this.InvokeAsync("sComnCodeGrpUsingFlag", new object[0], this.sComnCodeGrpUsingFlagOperationCompleted, userState);
+        }
+        
+        private void OnsComnCodeGrpUsingFlagOperationCompleted(object arg) {
+            if ((this.sComnCodeGrpUsingFlagCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.sComnCodeGrpUsingFlagCompleted(this, new sComnCodeGrpUsingFlagCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
             }
         }
         
@@ -233,6 +318,406 @@ namespace EldigmPlusApp.M_WsCCodeGrp {
         }
         
         /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IWsComnCodeGrp/siteDbNm", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [return: System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string siteDbNm([System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pSiteCd, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] out string reData, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] out string reMsg) {
+            object[] results = this.Invoke("siteDbNm", new object[] {
+                        pSiteCd});
+            reData = ((string)(results[1]));
+            reMsg = ((string)(results[2]));
+            return ((string)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void siteDbNmAsync(string pSiteCd) {
+            this.siteDbNmAsync(pSiteCd, null);
+        }
+        
+        /// <remarks/>
+        public void siteDbNmAsync(string pSiteCd, object userState) {
+            if ((this.siteDbNmOperationCompleted == null)) {
+                this.siteDbNmOperationCompleted = new System.Threading.SendOrPostCallback(this.OnsiteDbNmOperationCompleted);
+            }
+            this.InvokeAsync("siteDbNm", new object[] {
+                        pSiteCd}, this.siteDbNmOperationCompleted, userState);
+        }
+        
+        private void OnsiteDbNmOperationCompleted(object arg) {
+            if ((this.siteDbNmCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.siteDbNmCompleted(this, new siteDbNmCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IWsComnCodeGrp/sCodeAuthSiteMemberDB", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [return: System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string sCodeAuthSiteMemberDB([System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pDbnm, [System.Xml.Serialization.XmlArrayAttribute(IsNullable=true)] [System.Xml.Serialization.XmlArrayItemAttribute(Namespace="http://schemas.datacontract.org/2004/07/EldigmPlusSvc_Main.WebSvc.Sys.ComnCode")] out DataCodeAuthSiteMemberDB[] reList, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] out string reMsg) {
+            object[] results = this.Invoke("sCodeAuthSiteMemberDB", new object[] {
+                        pDbnm});
+            reList = ((DataCodeAuthSiteMemberDB[])(results[1]));
+            reMsg = ((string)(results[2]));
+            return ((string)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void sCodeAuthSiteMemberDBAsync(string pDbnm) {
+            this.sCodeAuthSiteMemberDBAsync(pDbnm, null);
+        }
+        
+        /// <remarks/>
+        public void sCodeAuthSiteMemberDBAsync(string pDbnm, object userState) {
+            if ((this.sCodeAuthSiteMemberDBOperationCompleted == null)) {
+                this.sCodeAuthSiteMemberDBOperationCompleted = new System.Threading.SendOrPostCallback(this.OnsCodeAuthSiteMemberDBOperationCompleted);
+            }
+            this.InvokeAsync("sCodeAuthSiteMemberDB", new object[] {
+                        pDbnm}, this.sCodeAuthSiteMemberDBOperationCompleted, userState);
+        }
+        
+        private void OnsCodeAuthSiteMemberDBOperationCompleted(object arg) {
+            if ((this.sCodeAuthSiteMemberDBCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.sCodeAuthSiteMemberDBCompleted(this, new sCodeAuthSiteMemberDBCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IWsComnCodeGrp/sSetAuthSiteMemberDB", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [return: System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string sSetAuthSiteMemberDB([System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pDbnm, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pSiteCd, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pAuthCd, [System.Xml.Serialization.XmlArrayAttribute(IsNullable=true)] [System.Xml.Serialization.XmlArrayItemAttribute(Namespace="http://schemas.datacontract.org/2004/07/EldigmPlusSvc_Main.WebSvc.Sys.ComnCode")] out DataSetAuthSiteMemberDB[] reList, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] out string reMsg) {
+            object[] results = this.Invoke("sSetAuthSiteMemberDB", new object[] {
+                        pDbnm,
+                        pSiteCd,
+                        pAuthCd});
+            reList = ((DataSetAuthSiteMemberDB[])(results[1]));
+            reMsg = ((string)(results[2]));
+            return ((string)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void sSetAuthSiteMemberDBAsync(string pDbnm, string pSiteCd, string pAuthCd) {
+            this.sSetAuthSiteMemberDBAsync(pDbnm, pSiteCd, pAuthCd, null);
+        }
+        
+        /// <remarks/>
+        public void sSetAuthSiteMemberDBAsync(string pDbnm, string pSiteCd, string pAuthCd, object userState) {
+            if ((this.sSetAuthSiteMemberDBOperationCompleted == null)) {
+                this.sSetAuthSiteMemberDBOperationCompleted = new System.Threading.SendOrPostCallback(this.OnsSetAuthSiteMemberDBOperationCompleted);
+            }
+            this.InvokeAsync("sSetAuthSiteMemberDB", new object[] {
+                        pDbnm,
+                        pSiteCd,
+                        pAuthCd}, this.sSetAuthSiteMemberDBOperationCompleted, userState);
+        }
+        
+        private void OnsSetAuthSiteMemberDBOperationCompleted(object arg) {
+            if ((this.sSetAuthSiteMemberDBCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.sSetAuthSiteMemberDBCompleted(this, new sSetAuthSiteMemberDBCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IWsComnCodeGrp/sSetAuthSiteMemberDBSub", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [return: System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string sSetAuthSiteMemberDBSub([System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pCcodeGrp, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pDbnm, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pSiteCd, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pAuthCd, [System.Xml.Serialization.XmlArrayAttribute(IsNullable=true)] [System.Xml.Serialization.XmlArrayItemAttribute(Namespace="http://schemas.datacontract.org/2004/07/EldigmPlusSvc_Main.WebSvc.Sys.ComnCode")] out DataSetAuthSiteMemberDB[] reList, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] out string reMsg) {
+            object[] results = this.Invoke("sSetAuthSiteMemberDBSub", new object[] {
+                        pCcodeGrp,
+                        pDbnm,
+                        pSiteCd,
+                        pAuthCd});
+            reList = ((DataSetAuthSiteMemberDB[])(results[1]));
+            reMsg = ((string)(results[2]));
+            return ((string)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void sSetAuthSiteMemberDBSubAsync(string pCcodeGrp, string pDbnm, string pSiteCd, string pAuthCd) {
+            this.sSetAuthSiteMemberDBSubAsync(pCcodeGrp, pDbnm, pSiteCd, pAuthCd, null);
+        }
+        
+        /// <remarks/>
+        public void sSetAuthSiteMemberDBSubAsync(string pCcodeGrp, string pDbnm, string pSiteCd, string pAuthCd, object userState) {
+            if ((this.sSetAuthSiteMemberDBSubOperationCompleted == null)) {
+                this.sSetAuthSiteMemberDBSubOperationCompleted = new System.Threading.SendOrPostCallback(this.OnsSetAuthSiteMemberDBSubOperationCompleted);
+            }
+            this.InvokeAsync("sSetAuthSiteMemberDBSub", new object[] {
+                        pCcodeGrp,
+                        pDbnm,
+                        pSiteCd,
+                        pAuthCd}, this.sSetAuthSiteMemberDBSubOperationCompleted, userState);
+        }
+        
+        private void OnsSetAuthSiteMemberDBSubOperationCompleted(object arg) {
+            if ((this.sSetAuthSiteMemberDBSubCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.sSetAuthSiteMemberDBSubCompleted(this, new sSetAuthSiteMemberDBSubCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IWsComnCodeGrp/mSetAuthSiteMemberDB", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [return: System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string mSetAuthSiteMemberDB([System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pDbnm, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pSiteCd, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pAuthCd, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pCcodeGrp, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pViewFlag, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pNewFlag, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pModifyFlag, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pDelFlag, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pReportFlag, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pPrintFlag, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pDownloadFlag, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pInputId, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] out string reMsg, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] out string reData) {
+            object[] results = this.Invoke("mSetAuthSiteMemberDB", new object[] {
+                        pDbnm,
+                        pSiteCd,
+                        pAuthCd,
+                        pCcodeGrp,
+                        pViewFlag,
+                        pNewFlag,
+                        pModifyFlag,
+                        pDelFlag,
+                        pReportFlag,
+                        pPrintFlag,
+                        pDownloadFlag,
+                        pInputId});
+            reMsg = ((string)(results[1]));
+            reData = ((string)(results[2]));
+            return ((string)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void mSetAuthSiteMemberDBAsync(string pDbnm, string pSiteCd, string pAuthCd, string pCcodeGrp, string pViewFlag, string pNewFlag, string pModifyFlag, string pDelFlag, string pReportFlag, string pPrintFlag, string pDownloadFlag, string pInputId) {
+            this.mSetAuthSiteMemberDBAsync(pDbnm, pSiteCd, pAuthCd, pCcodeGrp, pViewFlag, pNewFlag, pModifyFlag, pDelFlag, pReportFlag, pPrintFlag, pDownloadFlag, pInputId, null);
+        }
+        
+        /// <remarks/>
+        public void mSetAuthSiteMemberDBAsync(string pDbnm, string pSiteCd, string pAuthCd, string pCcodeGrp, string pViewFlag, string pNewFlag, string pModifyFlag, string pDelFlag, string pReportFlag, string pPrintFlag, string pDownloadFlag, string pInputId, object userState) {
+            if ((this.mSetAuthSiteMemberDBOperationCompleted == null)) {
+                this.mSetAuthSiteMemberDBOperationCompleted = new System.Threading.SendOrPostCallback(this.OnmSetAuthSiteMemberDBOperationCompleted);
+            }
+            this.InvokeAsync("mSetAuthSiteMemberDB", new object[] {
+                        pDbnm,
+                        pSiteCd,
+                        pAuthCd,
+                        pCcodeGrp,
+                        pViewFlag,
+                        pNewFlag,
+                        pModifyFlag,
+                        pDelFlag,
+                        pReportFlag,
+                        pPrintFlag,
+                        pDownloadFlag,
+                        pInputId}, this.mSetAuthSiteMemberDBOperationCompleted, userState);
+        }
+        
+        private void OnmSetAuthSiteMemberDBOperationCompleted(object arg) {
+            if ((this.mSetAuthSiteMemberDBCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.mSetAuthSiteMemberDBCompleted(this, new mSetAuthSiteMemberDBCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IWsComnCodeGrp/aSetAuthSiteMemberDB", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [return: System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string aSetAuthSiteMemberDB([System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pDbnm, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pSiteCd, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pAuthCd, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pCcodeGrp, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pViewFlag, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pNewFlag, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pModifyFlag, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pDelFlag, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pReportFlag, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pPrintFlag, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pDownloadFlag, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pInputId, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] out string reMsg, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] out string reData) {
+            object[] results = this.Invoke("aSetAuthSiteMemberDB", new object[] {
+                        pDbnm,
+                        pSiteCd,
+                        pAuthCd,
+                        pCcodeGrp,
+                        pViewFlag,
+                        pNewFlag,
+                        pModifyFlag,
+                        pDelFlag,
+                        pReportFlag,
+                        pPrintFlag,
+                        pDownloadFlag,
+                        pInputId});
+            reMsg = ((string)(results[1]));
+            reData = ((string)(results[2]));
+            return ((string)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void aSetAuthSiteMemberDBAsync(string pDbnm, string pSiteCd, string pAuthCd, string pCcodeGrp, string pViewFlag, string pNewFlag, string pModifyFlag, string pDelFlag, string pReportFlag, string pPrintFlag, string pDownloadFlag, string pInputId) {
+            this.aSetAuthSiteMemberDBAsync(pDbnm, pSiteCd, pAuthCd, pCcodeGrp, pViewFlag, pNewFlag, pModifyFlag, pDelFlag, pReportFlag, pPrintFlag, pDownloadFlag, pInputId, null);
+        }
+        
+        /// <remarks/>
+        public void aSetAuthSiteMemberDBAsync(string pDbnm, string pSiteCd, string pAuthCd, string pCcodeGrp, string pViewFlag, string pNewFlag, string pModifyFlag, string pDelFlag, string pReportFlag, string pPrintFlag, string pDownloadFlag, string pInputId, object userState) {
+            if ((this.aSetAuthSiteMemberDBOperationCompleted == null)) {
+                this.aSetAuthSiteMemberDBOperationCompleted = new System.Threading.SendOrPostCallback(this.OnaSetAuthSiteMemberDBOperationCompleted);
+            }
+            this.InvokeAsync("aSetAuthSiteMemberDB", new object[] {
+                        pDbnm,
+                        pSiteCd,
+                        pAuthCd,
+                        pCcodeGrp,
+                        pViewFlag,
+                        pNewFlag,
+                        pModifyFlag,
+                        pDelFlag,
+                        pReportFlag,
+                        pPrintFlag,
+                        pDownloadFlag,
+                        pInputId}, this.aSetAuthSiteMemberDBOperationCompleted, userState);
+        }
+        
+        private void OnaSetAuthSiteMemberDBOperationCompleted(object arg) {
+            if ((this.aSetAuthSiteMemberDBCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.aSetAuthSiteMemberDBCompleted(this, new aSetAuthSiteMemberDBCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IWsComnCodeGrp/sComnSiteTreeView", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [return: System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string sComnSiteTreeView([System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pDbnm, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pSiteCd, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pAuthCd, [System.Xml.Serialization.XmlArrayAttribute(IsNullable=true)] [System.Xml.Serialization.XmlArrayItemAttribute(Namespace="http://schemas.datacontract.org/2004/07/EldigmPlusSvc_Main.WebSvc.Sys.ComnCode")] out DataSetAuthSiteMemberDB[] reList, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] out string reMsg) {
+            object[] results = this.Invoke("sComnSiteTreeView", new object[] {
+                        pDbnm,
+                        pSiteCd,
+                        pAuthCd});
+            reList = ((DataSetAuthSiteMemberDB[])(results[1]));
+            reMsg = ((string)(results[2]));
+            return ((string)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void sComnSiteTreeViewAsync(string pDbnm, string pSiteCd, string pAuthCd) {
+            this.sComnSiteTreeViewAsync(pDbnm, pSiteCd, pAuthCd, null);
+        }
+        
+        /// <remarks/>
+        public void sComnSiteTreeViewAsync(string pDbnm, string pSiteCd, string pAuthCd, object userState) {
+            if ((this.sComnSiteTreeViewOperationCompleted == null)) {
+                this.sComnSiteTreeViewOperationCompleted = new System.Threading.SendOrPostCallback(this.OnsComnSiteTreeViewOperationCompleted);
+            }
+            this.InvokeAsync("sComnSiteTreeView", new object[] {
+                        pDbnm,
+                        pSiteCd,
+                        pAuthCd}, this.sComnSiteTreeViewOperationCompleted, userState);
+        }
+        
+        private void OnsComnSiteTreeViewOperationCompleted(object arg) {
+            if ((this.sComnSiteTreeViewCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.sComnSiteTreeViewCompleted(this, new sComnSiteTreeViewCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IWsComnCodeGrp/sComnSite", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [return: System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string sComnSite([System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pDbnm, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pSiteCd, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pCcodeGrp, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pUsingFlag, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pCcodeNm, [System.Xml.Serialization.XmlArrayAttribute(IsNullable=true)] [System.Xml.Serialization.XmlArrayItemAttribute(Namespace="http://schemas.datacontract.org/2004/07/EldigmPlusSvc_Main.WebSvc.Sys.ComnCode")] out DataComecodeSite[] reList, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] out string reMsg) {
+            object[] results = this.Invoke("sComnSite", new object[] {
+                        pDbnm,
+                        pSiteCd,
+                        pCcodeGrp,
+                        pUsingFlag,
+                        pCcodeNm});
+            reList = ((DataComecodeSite[])(results[1]));
+            reMsg = ((string)(results[2]));
+            return ((string)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void sComnSiteAsync(string pDbnm, string pSiteCd, string pCcodeGrp, string pUsingFlag, string pCcodeNm) {
+            this.sComnSiteAsync(pDbnm, pSiteCd, pCcodeGrp, pUsingFlag, pCcodeNm, null);
+        }
+        
+        /// <remarks/>
+        public void sComnSiteAsync(string pDbnm, string pSiteCd, string pCcodeGrp, string pUsingFlag, string pCcodeNm, object userState) {
+            if ((this.sComnSiteOperationCompleted == null)) {
+                this.sComnSiteOperationCompleted = new System.Threading.SendOrPostCallback(this.OnsComnSiteOperationCompleted);
+            }
+            this.InvokeAsync("sComnSite", new object[] {
+                        pDbnm,
+                        pSiteCd,
+                        pCcodeGrp,
+                        pUsingFlag,
+                        pCcodeNm}, this.sComnSiteOperationCompleted, userState);
+        }
+        
+        private void OnsComnSiteOperationCompleted(object arg) {
+            if ((this.sComnSiteCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.sComnSiteCompleted(this, new sComnSiteCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IWsComnCodeGrp/mComnSite", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [return: System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string mComnSite([System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pDbnm, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pSiteCd, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pCcode, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pUsingFlag, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pSortNo, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pMemo, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pInputId, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] out string reMsg, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] out string reData) {
+            object[] results = this.Invoke("mComnSite", new object[] {
+                        pDbnm,
+                        pSiteCd,
+                        pCcode,
+                        pUsingFlag,
+                        pSortNo,
+                        pMemo,
+                        pInputId});
+            reMsg = ((string)(results[1]));
+            reData = ((string)(results[2]));
+            return ((string)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void mComnSiteAsync(string pDbnm, string pSiteCd, string pCcode, string pUsingFlag, string pSortNo, string pMemo, string pInputId) {
+            this.mComnSiteAsync(pDbnm, pSiteCd, pCcode, pUsingFlag, pSortNo, pMemo, pInputId, null);
+        }
+        
+        /// <remarks/>
+        public void mComnSiteAsync(string pDbnm, string pSiteCd, string pCcode, string pUsingFlag, string pSortNo, string pMemo, string pInputId, object userState) {
+            if ((this.mComnSiteOperationCompleted == null)) {
+                this.mComnSiteOperationCompleted = new System.Threading.SendOrPostCallback(this.OnmComnSiteOperationCompleted);
+            }
+            this.InvokeAsync("mComnSite", new object[] {
+                        pDbnm,
+                        pSiteCd,
+                        pCcode,
+                        pUsingFlag,
+                        pSortNo,
+                        pMemo,
+                        pInputId}, this.mComnSiteOperationCompleted, userState);
+        }
+        
+        private void OnmComnSiteOperationCompleted(object arg) {
+            if ((this.mComnSiteCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.mComnSiteCompleted(this, new mComnSiteCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IWsComnCodeGrp/aComnSite", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [return: System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string aComnSite([System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pDbNm, [System.Xml.Serialization.XmlArrayAttribute(IsNullable=true)] [System.Xml.Serialization.XmlArrayItemAttribute(Namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays")] string[] param, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] out string reMsg, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] out string reData) {
+            object[] results = this.Invoke("aComnSite", new object[] {
+                        pDbNm,
+                        param});
+            reMsg = ((string)(results[1]));
+            reData = ((string)(results[2]));
+            return ((string)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void aComnSiteAsync(string pDbNm, string[] param) {
+            this.aComnSiteAsync(pDbNm, param, null);
+        }
+        
+        /// <remarks/>
+        public void aComnSiteAsync(string pDbNm, string[] param, object userState) {
+            if ((this.aComnSiteOperationCompleted == null)) {
+                this.aComnSiteOperationCompleted = new System.Threading.SendOrPostCallback(this.OnaComnSiteOperationCompleted);
+            }
+            this.InvokeAsync("aComnSite", new object[] {
+                        pDbNm,
+                        param}, this.aComnSiteOperationCompleted, userState);
+        }
+        
+        private void OnaComnSiteOperationCompleted(object arg) {
+            if ((this.aComnSiteCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.aComnSiteCompleted(this, new aComnSiteCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
         public new void CancelAsync(object userState) {
             base.CancelAsync(userState);
         }
@@ -261,7 +746,7 @@ namespace EldigmPlusApp.M_WsCCodeGrp {
         
         private string cCODE_GRPField;
         
-        private string cCODE_NMField;
+        private string cCODE_GRP_NMField;
         
         private int uSING_FLAGField;
         
@@ -286,12 +771,12 @@ namespace EldigmPlusApp.M_WsCCodeGrp {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public string CCODE_NM {
+        public string CCODE_GRP_NM {
             get {
-                return this.cCODE_NMField;
+                return this.cCODE_GRP_NMField;
             }
             set {
-                this.cCODE_NMField = value;
+                this.cCODE_GRP_NMField = value;
             }
         }
         
@@ -350,6 +835,374 @@ namespace EldigmPlusApp.M_WsCCodeGrp {
     }
     
     /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.datacontract.org/2004/07/EldigmPlusSvc_Main.WebSvc.Sys.ComnCode")]
+    public partial class DataComecodeSite {
+        
+        private int cCODEField;
+        
+        private bool cCODEFieldSpecified;
+        
+        private string cCODE_GRPField;
+        
+        private string cCODE_NMField;
+        
+        private string mEMOField;
+        
+        private int uSING_FLAGField;
+        
+        private bool uSING_FLAGFieldSpecified;
+        
+        private int sORT_NOField;
+        
+        private bool sORT_NOFieldSpecified;
+        
+        /// <remarks/>
+        public int CCODE {
+            get {
+                return this.cCODEField;
+            }
+            set {
+                this.cCODEField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool CCODESpecified {
+            get {
+                return this.cCODEFieldSpecified;
+            }
+            set {
+                this.cCODEFieldSpecified = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string CCODE_GRP {
+            get {
+                return this.cCODE_GRPField;
+            }
+            set {
+                this.cCODE_GRPField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string CCODE_NM {
+            get {
+                return this.cCODE_NMField;
+            }
+            set {
+                this.cCODE_NMField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string MEMO {
+            get {
+                return this.mEMOField;
+            }
+            set {
+                this.mEMOField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public int USING_FLAG {
+            get {
+                return this.uSING_FLAGField;
+            }
+            set {
+                this.uSING_FLAGField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool USING_FLAGSpecified {
+            get {
+                return this.uSING_FLAGFieldSpecified;
+            }
+            set {
+                this.uSING_FLAGFieldSpecified = value;
+            }
+        }
+        
+        /// <remarks/>
+        public int SORT_NO {
+            get {
+                return this.sORT_NOField;
+            }
+            set {
+                this.sORT_NOField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool SORT_NOSpecified {
+            get {
+                return this.sORT_NOFieldSpecified;
+            }
+            set {
+                this.sORT_NOFieldSpecified = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.datacontract.org/2004/07/EldigmPlusSvc_Main.WebSvc.Sys.ComnCode")]
+    public partial class DataSetAuthSiteMemberDB {
+        
+        private string cCODE_GRPField;
+        
+        private string cCODE_GRP_NMField;
+        
+        private short vIEW_FLAGField;
+        
+        private bool vIEW_FLAGFieldSpecified;
+        
+        private short nEW_FLAGField;
+        
+        private bool nEW_FLAGFieldSpecified;
+        
+        private short mODIFY_FLAGField;
+        
+        private bool mODIFY_FLAGFieldSpecified;
+        
+        private short dEL_FLAGField;
+        
+        private bool dEL_FLAGFieldSpecified;
+        
+        private short rEPORT_FLAGField;
+        
+        private bool rEPORT_FLAGFieldSpecified;
+        
+        private short pRINT_FLAGField;
+        
+        private bool pRINT_FLAGFieldSpecified;
+        
+        private short dOWNLOAD_FLAGField;
+        
+        private bool dOWNLOAD_FLAGFieldSpecified;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string CCODE_GRP {
+            get {
+                return this.cCODE_GRPField;
+            }
+            set {
+                this.cCODE_GRPField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string CCODE_GRP_NM {
+            get {
+                return this.cCODE_GRP_NMField;
+            }
+            set {
+                this.cCODE_GRP_NMField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public short VIEW_FLAG {
+            get {
+                return this.vIEW_FLAGField;
+            }
+            set {
+                this.vIEW_FLAGField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool VIEW_FLAGSpecified {
+            get {
+                return this.vIEW_FLAGFieldSpecified;
+            }
+            set {
+                this.vIEW_FLAGFieldSpecified = value;
+            }
+        }
+        
+        /// <remarks/>
+        public short NEW_FLAG {
+            get {
+                return this.nEW_FLAGField;
+            }
+            set {
+                this.nEW_FLAGField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool NEW_FLAGSpecified {
+            get {
+                return this.nEW_FLAGFieldSpecified;
+            }
+            set {
+                this.nEW_FLAGFieldSpecified = value;
+            }
+        }
+        
+        /// <remarks/>
+        public short MODIFY_FLAG {
+            get {
+                return this.mODIFY_FLAGField;
+            }
+            set {
+                this.mODIFY_FLAGField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool MODIFY_FLAGSpecified {
+            get {
+                return this.mODIFY_FLAGFieldSpecified;
+            }
+            set {
+                this.mODIFY_FLAGFieldSpecified = value;
+            }
+        }
+        
+        /// <remarks/>
+        public short DEL_FLAG {
+            get {
+                return this.dEL_FLAGField;
+            }
+            set {
+                this.dEL_FLAGField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool DEL_FLAGSpecified {
+            get {
+                return this.dEL_FLAGFieldSpecified;
+            }
+            set {
+                this.dEL_FLAGFieldSpecified = value;
+            }
+        }
+        
+        /// <remarks/>
+        public short REPORT_FLAG {
+            get {
+                return this.rEPORT_FLAGField;
+            }
+            set {
+                this.rEPORT_FLAGField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool REPORT_FLAGSpecified {
+            get {
+                return this.rEPORT_FLAGFieldSpecified;
+            }
+            set {
+                this.rEPORT_FLAGFieldSpecified = value;
+            }
+        }
+        
+        /// <remarks/>
+        public short PRINT_FLAG {
+            get {
+                return this.pRINT_FLAGField;
+            }
+            set {
+                this.pRINT_FLAGField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool PRINT_FLAGSpecified {
+            get {
+                return this.pRINT_FLAGFieldSpecified;
+            }
+            set {
+                this.pRINT_FLAGFieldSpecified = value;
+            }
+        }
+        
+        /// <remarks/>
+        public short DOWNLOAD_FLAG {
+            get {
+                return this.dOWNLOAD_FLAGField;
+            }
+            set {
+                this.dOWNLOAD_FLAGField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool DOWNLOAD_FLAGSpecified {
+            get {
+                return this.dOWNLOAD_FLAGFieldSpecified;
+            }
+            set {
+                this.dOWNLOAD_FLAGFieldSpecified = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.datacontract.org/2004/07/EldigmPlusSvc_Main.WebSvc.Sys.ComnCode")]
+    public partial class DataCodeAuthSiteMemberDB {
+        
+        private string aUTH_CDField;
+        
+        private string aUTH_NMField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string AUTH_CD {
+            get {
+                return this.aUTH_CDField;
+            }
+            set {
+                this.aUTH_CDField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string AUTH_NM {
+            get {
+                return this.aUTH_NMField;
+            }
+            set {
+                this.aUTH_NMField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
     public delegate void sComnCodeGrpCompletedEventHandler(object sender, sComnCodeGrpCompletedEventArgs e);
     
@@ -362,6 +1215,48 @@ namespace EldigmPlusApp.M_WsCCodeGrp {
         private object[] results;
         
         internal sComnCodeGrpCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public string Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[0]));
+            }
+        }
+        
+        /// <remarks/>
+        public DataComnCodeGrp[] reList {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((DataComnCodeGrp[])(this.results[1]));
+            }
+        }
+        
+        /// <remarks/>
+        public string reMsg {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[2]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
+    public delegate void sComnCodeGrpUsingFlagCompletedEventHandler(object sender, sComnCodeGrpUsingFlagCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class sComnCodeGrpUsingFlagCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal sComnCodeGrpUsingFlagCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
                 base(exception, cancelled, userState) {
             this.results = results;
         }
@@ -521,6 +1416,426 @@ namespace EldigmPlusApp.M_WsCCodeGrp {
             get {
                 this.RaiseExceptionIfNecessary();
                 return ((bool)(this.results[3]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
+    public delegate void siteDbNmCompletedEventHandler(object sender, siteDbNmCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class siteDbNmCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal siteDbNmCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public string Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[0]));
+            }
+        }
+        
+        /// <remarks/>
+        public string reData {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[1]));
+            }
+        }
+        
+        /// <remarks/>
+        public string reMsg {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[2]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
+    public delegate void sCodeAuthSiteMemberDBCompletedEventHandler(object sender, sCodeAuthSiteMemberDBCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class sCodeAuthSiteMemberDBCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal sCodeAuthSiteMemberDBCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public string Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[0]));
+            }
+        }
+        
+        /// <remarks/>
+        public DataCodeAuthSiteMemberDB[] reList {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((DataCodeAuthSiteMemberDB[])(this.results[1]));
+            }
+        }
+        
+        /// <remarks/>
+        public string reMsg {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[2]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
+    public delegate void sSetAuthSiteMemberDBCompletedEventHandler(object sender, sSetAuthSiteMemberDBCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class sSetAuthSiteMemberDBCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal sSetAuthSiteMemberDBCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public string Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[0]));
+            }
+        }
+        
+        /// <remarks/>
+        public DataSetAuthSiteMemberDB[] reList {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((DataSetAuthSiteMemberDB[])(this.results[1]));
+            }
+        }
+        
+        /// <remarks/>
+        public string reMsg {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[2]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
+    public delegate void sSetAuthSiteMemberDBSubCompletedEventHandler(object sender, sSetAuthSiteMemberDBSubCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class sSetAuthSiteMemberDBSubCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal sSetAuthSiteMemberDBSubCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public string Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[0]));
+            }
+        }
+        
+        /// <remarks/>
+        public DataSetAuthSiteMemberDB[] reList {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((DataSetAuthSiteMemberDB[])(this.results[1]));
+            }
+        }
+        
+        /// <remarks/>
+        public string reMsg {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[2]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
+    public delegate void mSetAuthSiteMemberDBCompletedEventHandler(object sender, mSetAuthSiteMemberDBCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class mSetAuthSiteMemberDBCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal mSetAuthSiteMemberDBCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public string Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[0]));
+            }
+        }
+        
+        /// <remarks/>
+        public string reMsg {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[1]));
+            }
+        }
+        
+        /// <remarks/>
+        public string reData {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[2]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
+    public delegate void aSetAuthSiteMemberDBCompletedEventHandler(object sender, aSetAuthSiteMemberDBCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class aSetAuthSiteMemberDBCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal aSetAuthSiteMemberDBCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public string Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[0]));
+            }
+        }
+        
+        /// <remarks/>
+        public string reMsg {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[1]));
+            }
+        }
+        
+        /// <remarks/>
+        public string reData {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[2]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
+    public delegate void sComnSiteTreeViewCompletedEventHandler(object sender, sComnSiteTreeViewCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class sComnSiteTreeViewCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal sComnSiteTreeViewCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public string Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[0]));
+            }
+        }
+        
+        /// <remarks/>
+        public DataSetAuthSiteMemberDB[] reList {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((DataSetAuthSiteMemberDB[])(this.results[1]));
+            }
+        }
+        
+        /// <remarks/>
+        public string reMsg {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[2]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
+    public delegate void sComnSiteCompletedEventHandler(object sender, sComnSiteCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class sComnSiteCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal sComnSiteCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public string Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[0]));
+            }
+        }
+        
+        /// <remarks/>
+        public DataComecodeSite[] reList {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((DataComecodeSite[])(this.results[1]));
+            }
+        }
+        
+        /// <remarks/>
+        public string reMsg {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[2]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
+    public delegate void mComnSiteCompletedEventHandler(object sender, mComnSiteCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class mComnSiteCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal mComnSiteCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public string Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[0]));
+            }
+        }
+        
+        /// <remarks/>
+        public string reMsg {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[1]));
+            }
+        }
+        
+        /// <remarks/>
+        public string reData {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[2]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
+    public delegate void aComnSiteCompletedEventHandler(object sender, aComnSiteCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class aComnSiteCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal aComnSiteCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public string Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[0]));
+            }
+        }
+        
+        /// <remarks/>
+        public string reMsg {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[1]));
+            }
+        }
+        
+        /// <remarks/>
+        public string reData {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[2]));
             }
         }
     }

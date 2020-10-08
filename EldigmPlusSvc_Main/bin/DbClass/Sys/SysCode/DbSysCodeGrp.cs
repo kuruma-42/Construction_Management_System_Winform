@@ -82,7 +82,7 @@ namespace EldigmPlusClassLibrary.DbClass.Sys.SysCode
         {
             string sql = "" +
                 " INSERT INTO [PLUS_MAIN].dbo.TM00_CODE_SYS_GRP (SCODE_GRP, SCODE_GRP_NM, USING_FLAG, SORT_NO, MEMO, INPUT_ID, INPUT_DT) " +
-                " VALUES ('" + SCODE_GRP + "', '" + SCODE_GRP_NM + "', " + USING_FLAG + ", " + SORT_NO + ", '" + MEMO + "', " + INPUT_ID + ", GETDATE()) ";
+                " VALUES ('" + SCODE_GRP + "', '" + SCODE_GRP_NM + "', " + USING_FLAG + ", " + SORT_NO + ", '" + MEMO + "', '" + INPUT_ID + "', GETDATE()) ";
 
             int reCnt = 0;
             if (_sqlHelper != null)
@@ -168,7 +168,7 @@ namespace EldigmPlusClassLibrary.DbClass.Sys.SysCode
         {
             string sql = "" +
                 " INSERT INTO [PLUS_MAIN].dbo.TM00_CODE_SYS (SCODE, SCODE_GRP, SCODE_NM, USING_FLAG, MEMO, SORT_NO, INPUT_ID, INPUT_DT) " +
-                " VALUES ('" + SCODE + "', '" + SCODE_GRP + "', '" + SCODE_NM + "', " + USING_FLAG + ", '" + MEMO + "', " + SORT_NO + ", " + INPUT_ID + ", GETDATE()) ";
+                " VALUES ('" + SCODE + "', '" + SCODE_GRP + "', '" + SCODE_NM + "', " + USING_FLAG + ", '" + MEMO + "', " + SORT_NO + ", '" + INPUT_ID + "', GETDATE()) ";
 
             int reCnt = 0;
             if (_sqlHelper != null)
@@ -182,7 +182,7 @@ namespace EldigmPlusClassLibrary.DbClass.Sys.SysCode
             string sql = "" +
                 " INSERT INTO [PLUS_MAIN].dbo.TM00_CODE_SYS_LOG (SCODE, SNO, SCODE_NM, USING_FLAG, SORT_NO, MEMO, INPUT_ID, INPUT_DT) " +
                 " VALUES ('" + SCODE + "', (SELECT ISNULL(MAX(SNO),0)+1 FROM TM00_CODE_SYS_LOG WHERE SCODE = '" + SCODE + "'), '" + SCODE_NM + "', " + USING_FLAG + ", " + SORT_NO + "" +
-                " , '" + MEMO + "', " + INPUT_ID + ", GETDATE()) ";
+                " , '" + MEMO + "', '" + INPUT_ID + "', GETDATE()) ";
 
             int reCnt = 0;
             if (_sqlHelper != null)

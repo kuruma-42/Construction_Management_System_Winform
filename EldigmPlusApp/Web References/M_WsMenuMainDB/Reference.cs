@@ -29,13 +29,13 @@ namespace EldigmPlusApp.M_WsMenuMainDB {
     [System.Web.Services.WebServiceBindingAttribute(Name="BasicHttpBinding_IWsMenuMainDB", Namespace="http://tempuri.org/")]
     public partial class WsMenuMainDB : System.Web.Services.Protocols.SoapHttpClientProtocol {
         
-        private System.Threading.SendOrPostCallback sManuTopTreeViewOperationCompleted;
+        private System.Threading.SendOrPostCallback sMenuTopTreeViewOperationCompleted;
         
-        private System.Threading.SendOrPostCallback sManuSubTreeViewOperationCompleted;
+        private System.Threading.SendOrPostCallback sMenuSubTreeViewOperationCompleted;
         
-        private System.Threading.SendOrPostCallback sManuTreeViewOperationCompleted;
+        private System.Threading.SendOrPostCallback sMenuTreeViewOperationCompleted;
         
-        private System.Threading.SendOrPostCallback sManuTreeView2OperationCompleted;
+        private System.Threading.SendOrPostCallback sMenuTreeView2OperationCompleted;
         
         private System.Threading.SendOrPostCallback exMenuTopOperationCompleted;
         
@@ -48,6 +48,30 @@ namespace EldigmPlusApp.M_WsMenuMainDB {
         private System.Threading.SendOrPostCallback aMenuSubOperationCompleted;
         
         private System.Threading.SendOrPostCallback aMenuOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback mMenuTopOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback mMenuSubOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback mMenuOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback sSiteMainDBOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback siteDbNmOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback sMenuMemberDBOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback mMenuMemberDBOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback aMenuMemberDBOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback sCodeAuthSiteMemberDBOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback sSetAuthSiteMemberDBOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback mSetAuthSiteMemberDBOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback aSetAuthSiteMemberDBOperationCompleted;
         
         private bool useDefaultCredentialsSetExplicitly;
         
@@ -88,16 +112,16 @@ namespace EldigmPlusApp.M_WsMenuMainDB {
         }
         
         /// <remarks/>
-        public event sManuTopTreeViewCompletedEventHandler sManuTopTreeViewCompleted;
+        public event sMenuTopTreeViewCompletedEventHandler sMenuTopTreeViewCompleted;
         
         /// <remarks/>
-        public event sManuSubTreeViewCompletedEventHandler sManuSubTreeViewCompleted;
+        public event sMenuSubTreeViewCompletedEventHandler sMenuSubTreeViewCompleted;
         
         /// <remarks/>
-        public event sManuTreeViewCompletedEventHandler sManuTreeViewCompleted;
+        public event sMenuTreeViewCompletedEventHandler sMenuTreeViewCompleted;
         
         /// <remarks/>
-        public event sManuTreeView2CompletedEventHandler sManuTreeView2Completed;
+        public event sMenuTreeView2CompletedEventHandler sMenuTreeView2Completed;
         
         /// <remarks/>
         public event exMenuTopCompletedEventHandler exMenuTopCompleted;
@@ -118,170 +142,198 @@ namespace EldigmPlusApp.M_WsMenuMainDB {
         public event aMenuCompletedEventHandler aMenuCompleted;
         
         /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IWsMenuMainDB/sManuTopTreeView", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public event mMenuTopCompletedEventHandler mMenuTopCompleted;
+        
+        /// <remarks/>
+        public event mMenuSubCompletedEventHandler mMenuSubCompleted;
+        
+        /// <remarks/>
+        public event mMenuCompletedEventHandler mMenuCompleted;
+        
+        /// <remarks/>
+        public event sSiteMainDBCompletedEventHandler sSiteMainDBCompleted;
+        
+        /// <remarks/>
+        public event siteDbNmCompletedEventHandler siteDbNmCompleted;
+        
+        /// <remarks/>
+        public event sMenuMemberDBCompletedEventHandler sMenuMemberDBCompleted;
+        
+        /// <remarks/>
+        public event mMenuMemberDBCompletedEventHandler mMenuMemberDBCompleted;
+        
+        /// <remarks/>
+        public event aMenuMemberDBCompletedEventHandler aMenuMemberDBCompleted;
+        
+        /// <remarks/>
+        public event sCodeAuthSiteMemberDBCompletedEventHandler sCodeAuthSiteMemberDBCompleted;
+        
+        /// <remarks/>
+        public event sSetAuthSiteMemberDBCompletedEventHandler sSetAuthSiteMemberDBCompleted;
+        
+        /// <remarks/>
+        public event mSetAuthSiteMemberDBCompletedEventHandler mSetAuthSiteMemberDBCompleted;
+        
+        /// <remarks/>
+        public event aSetAuthSiteMemberDBCompletedEventHandler aSetAuthSiteMemberDBCompleted;
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IWsMenuMainDB/sMenuTopTreeView", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
         [return: System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public string sManuTopTreeView([System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string USING_FLAG, [System.Xml.Serialization.XmlArrayAttribute(IsNullable=true)] [System.Xml.Serialization.XmlArrayItemAttribute(Namespace="http://schemas.datacontract.org/2004/07/EldigmPlusSvc_Main.WebSvc.Sys.Menu")] out DataMenuTop[] reList, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] out string reMsg) {
-            object[] results = this.Invoke("sManuTopTreeView", new object[] {
-                        USING_FLAG});
+        public string sMenuTopTreeView([System.Xml.Serialization.XmlArrayAttribute(IsNullable=true)] [System.Xml.Serialization.XmlArrayItemAttribute(Namespace="http://schemas.datacontract.org/2004/07/EldigmPlusSvc_Main.WebSvc.Sys.Menu")] out DataMenuTop[] reList, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] out string reMsg) {
+            object[] results = this.Invoke("sMenuTopTreeView", new object[0]);
             reList = ((DataMenuTop[])(results[1]));
             reMsg = ((string)(results[2]));
             return ((string)(results[0]));
         }
         
         /// <remarks/>
-        public void sManuTopTreeViewAsync(string USING_FLAG) {
-            this.sManuTopTreeViewAsync(USING_FLAG, null);
+        public void sMenuTopTreeViewAsync() {
+            this.sMenuTopTreeViewAsync(null);
         }
         
         /// <remarks/>
-        public void sManuTopTreeViewAsync(string USING_FLAG, object userState) {
-            if ((this.sManuTopTreeViewOperationCompleted == null)) {
-                this.sManuTopTreeViewOperationCompleted = new System.Threading.SendOrPostCallback(this.OnsManuTopTreeViewOperationCompleted);
+        public void sMenuTopTreeViewAsync(object userState) {
+            if ((this.sMenuTopTreeViewOperationCompleted == null)) {
+                this.sMenuTopTreeViewOperationCompleted = new System.Threading.SendOrPostCallback(this.OnsMenuTopTreeViewOperationCompleted);
             }
-            this.InvokeAsync("sManuTopTreeView", new object[] {
-                        USING_FLAG}, this.sManuTopTreeViewOperationCompleted, userState);
+            this.InvokeAsync("sMenuTopTreeView", new object[0], this.sMenuTopTreeViewOperationCompleted, userState);
         }
         
-        private void OnsManuTopTreeViewOperationCompleted(object arg) {
-            if ((this.sManuTopTreeViewCompleted != null)) {
+        private void OnsMenuTopTreeViewOperationCompleted(object arg) {
+            if ((this.sMenuTopTreeViewCompleted != null)) {
                 System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
-                this.sManuTopTreeViewCompleted(this, new sManuTopTreeViewCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+                this.sMenuTopTreeViewCompleted(this, new sMenuTopTreeViewCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
             }
         }
         
         /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IWsMenuMainDB/sManuSubTreeView", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IWsMenuMainDB/sMenuSubTreeView", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
         [return: System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public string sManuSubTreeView([System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string TOP_MENU_CD, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string USING_FLAG, [System.Xml.Serialization.XmlArrayAttribute(IsNullable=true)] [System.Xml.Serialization.XmlArrayItemAttribute(Namespace="http://schemas.datacontract.org/2004/07/EldigmPlusSvc_Main.WebSvc.Sys.Menu")] out DataMenuSub[] reList, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] out string reMsg) {
-            object[] results = this.Invoke("sManuSubTreeView", new object[] {
-                        TOP_MENU_CD,
-                        USING_FLAG});
+        public string sMenuSubTreeView([System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pTopMenuCd, [System.Xml.Serialization.XmlArrayAttribute(IsNullable=true)] [System.Xml.Serialization.XmlArrayItemAttribute(Namespace="http://schemas.datacontract.org/2004/07/EldigmPlusSvc_Main.WebSvc.Sys.Menu")] out DataMenuSub[] reList, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] out string reMsg) {
+            object[] results = this.Invoke("sMenuSubTreeView", new object[] {
+                        pTopMenuCd});
             reList = ((DataMenuSub[])(results[1]));
             reMsg = ((string)(results[2]));
             return ((string)(results[0]));
         }
         
         /// <remarks/>
-        public void sManuSubTreeViewAsync(string TOP_MENU_CD, string USING_FLAG) {
-            this.sManuSubTreeViewAsync(TOP_MENU_CD, USING_FLAG, null);
+        public void sMenuSubTreeViewAsync(string pTopMenuCd) {
+            this.sMenuSubTreeViewAsync(pTopMenuCd, null);
         }
         
         /// <remarks/>
-        public void sManuSubTreeViewAsync(string TOP_MENU_CD, string USING_FLAG, object userState) {
-            if ((this.sManuSubTreeViewOperationCompleted == null)) {
-                this.sManuSubTreeViewOperationCompleted = new System.Threading.SendOrPostCallback(this.OnsManuSubTreeViewOperationCompleted);
+        public void sMenuSubTreeViewAsync(string pTopMenuCd, object userState) {
+            if ((this.sMenuSubTreeViewOperationCompleted == null)) {
+                this.sMenuSubTreeViewOperationCompleted = new System.Threading.SendOrPostCallback(this.OnsMenuSubTreeViewOperationCompleted);
             }
-            this.InvokeAsync("sManuSubTreeView", new object[] {
-                        TOP_MENU_CD,
-                        USING_FLAG}, this.sManuSubTreeViewOperationCompleted, userState);
+            this.InvokeAsync("sMenuSubTreeView", new object[] {
+                        pTopMenuCd}, this.sMenuSubTreeViewOperationCompleted, userState);
         }
         
-        private void OnsManuSubTreeViewOperationCompleted(object arg) {
-            if ((this.sManuSubTreeViewCompleted != null)) {
+        private void OnsMenuSubTreeViewOperationCompleted(object arg) {
+            if ((this.sMenuSubTreeViewCompleted != null)) {
                 System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
-                this.sManuSubTreeViewCompleted(this, new sManuSubTreeViewCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+                this.sMenuSubTreeViewCompleted(this, new sMenuSubTreeViewCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
             }
         }
         
         /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IWsMenuMainDB/sManuTreeView", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IWsMenuMainDB/sMenuTreeView", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
         [return: System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public string sManuTreeView([System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string TOP_MENU_CD, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string SUB_MENU_CD, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string USING_FLAG, [System.Xml.Serialization.XmlArrayAttribute(IsNullable=true)] [System.Xml.Serialization.XmlArrayItemAttribute(Namespace="http://schemas.datacontract.org/2004/07/EldigmPlusSvc_Main.WebSvc.Sys.Menu")] out DataMenu[] reList, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] out string reMsg) {
-            object[] results = this.Invoke("sManuTreeView", new object[] {
-                        TOP_MENU_CD,
-                        SUB_MENU_CD,
-                        USING_FLAG});
+        public string sMenuTreeView([System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pTopMenuCd, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pSubMenuCd, [System.Xml.Serialization.XmlArrayAttribute(IsNullable=true)] [System.Xml.Serialization.XmlArrayItemAttribute(Namespace="http://schemas.datacontract.org/2004/07/EldigmPlusSvc_Main.WebSvc.Sys.Menu")] out DataMenu[] reList, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] out string reMsg) {
+            object[] results = this.Invoke("sMenuTreeView", new object[] {
+                        pTopMenuCd,
+                        pSubMenuCd});
             reList = ((DataMenu[])(results[1]));
             reMsg = ((string)(results[2]));
             return ((string)(results[0]));
         }
         
         /// <remarks/>
-        public void sManuTreeViewAsync(string TOP_MENU_CD, string SUB_MENU_CD, string USING_FLAG) {
-            this.sManuTreeViewAsync(TOP_MENU_CD, SUB_MENU_CD, USING_FLAG, null);
+        public void sMenuTreeViewAsync(string pTopMenuCd, string pSubMenuCd) {
+            this.sMenuTreeViewAsync(pTopMenuCd, pSubMenuCd, null);
         }
         
         /// <remarks/>
-        public void sManuTreeViewAsync(string TOP_MENU_CD, string SUB_MENU_CD, string USING_FLAG, object userState) {
-            if ((this.sManuTreeViewOperationCompleted == null)) {
-                this.sManuTreeViewOperationCompleted = new System.Threading.SendOrPostCallback(this.OnsManuTreeViewOperationCompleted);
+        public void sMenuTreeViewAsync(string pTopMenuCd, string pSubMenuCd, object userState) {
+            if ((this.sMenuTreeViewOperationCompleted == null)) {
+                this.sMenuTreeViewOperationCompleted = new System.Threading.SendOrPostCallback(this.OnsMenuTreeViewOperationCompleted);
             }
-            this.InvokeAsync("sManuTreeView", new object[] {
-                        TOP_MENU_CD,
-                        SUB_MENU_CD,
-                        USING_FLAG}, this.sManuTreeViewOperationCompleted, userState);
+            this.InvokeAsync("sMenuTreeView", new object[] {
+                        pTopMenuCd,
+                        pSubMenuCd}, this.sMenuTreeViewOperationCompleted, userState);
         }
         
-        private void OnsManuTreeViewOperationCompleted(object arg) {
-            if ((this.sManuTreeViewCompleted != null)) {
+        private void OnsMenuTreeViewOperationCompleted(object arg) {
+            if ((this.sMenuTreeViewCompleted != null)) {
                 System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
-                this.sManuTreeViewCompleted(this, new sManuTreeViewCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+                this.sMenuTreeViewCompleted(this, new sMenuTreeViewCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
             }
         }
         
         /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IWsMenuMainDB/sManuTreeView2", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IWsMenuMainDB/sMenuTreeView2", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
         [return: System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public string sManuTreeView2([System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string TOP_MENU_CD, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string SUB_MENU_CD, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string MENU_CD, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string USING_FLAG, [System.Xml.Serialization.XmlArrayAttribute(IsNullable=true)] [System.Xml.Serialization.XmlArrayItemAttribute(Namespace="http://schemas.datacontract.org/2004/07/EldigmPlusSvc_Main.WebSvc.Sys.Menu")] out DataMenu[] reList, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] out string reMsg) {
-            object[] results = this.Invoke("sManuTreeView2", new object[] {
-                        TOP_MENU_CD,
-                        SUB_MENU_CD,
-                        MENU_CD,
-                        USING_FLAG});
+        public string sMenuTreeView2([System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pTopMenuCd, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pSubMenuCd, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pMenuCd, [System.Xml.Serialization.XmlArrayAttribute(IsNullable=true)] [System.Xml.Serialization.XmlArrayItemAttribute(Namespace="http://schemas.datacontract.org/2004/07/EldigmPlusSvc_Main.WebSvc.Sys.Menu")] out DataMenu[] reList, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] out string reMsg) {
+            object[] results = this.Invoke("sMenuTreeView2", new object[] {
+                        pTopMenuCd,
+                        pSubMenuCd,
+                        pMenuCd});
             reList = ((DataMenu[])(results[1]));
             reMsg = ((string)(results[2]));
             return ((string)(results[0]));
         }
         
         /// <remarks/>
-        public void sManuTreeView2Async(string TOP_MENU_CD, string SUB_MENU_CD, string MENU_CD, string USING_FLAG) {
-            this.sManuTreeView2Async(TOP_MENU_CD, SUB_MENU_CD, MENU_CD, USING_FLAG, null);
+        public void sMenuTreeView2Async(string pTopMenuCd, string pSubMenuCd, string pMenuCd) {
+            this.sMenuTreeView2Async(pTopMenuCd, pSubMenuCd, pMenuCd, null);
         }
         
         /// <remarks/>
-        public void sManuTreeView2Async(string TOP_MENU_CD, string SUB_MENU_CD, string MENU_CD, string USING_FLAG, object userState) {
-            if ((this.sManuTreeView2OperationCompleted == null)) {
-                this.sManuTreeView2OperationCompleted = new System.Threading.SendOrPostCallback(this.OnsManuTreeView2OperationCompleted);
+        public void sMenuTreeView2Async(string pTopMenuCd, string pSubMenuCd, string pMenuCd, object userState) {
+            if ((this.sMenuTreeView2OperationCompleted == null)) {
+                this.sMenuTreeView2OperationCompleted = new System.Threading.SendOrPostCallback(this.OnsMenuTreeView2OperationCompleted);
             }
-            this.InvokeAsync("sManuTreeView2", new object[] {
-                        TOP_MENU_CD,
-                        SUB_MENU_CD,
-                        MENU_CD,
-                        USING_FLAG}, this.sManuTreeView2OperationCompleted, userState);
+            this.InvokeAsync("sMenuTreeView2", new object[] {
+                        pTopMenuCd,
+                        pSubMenuCd,
+                        pMenuCd}, this.sMenuTreeView2OperationCompleted, userState);
         }
         
-        private void OnsManuTreeView2OperationCompleted(object arg) {
-            if ((this.sManuTreeView2Completed != null)) {
+        private void OnsMenuTreeView2OperationCompleted(object arg) {
+            if ((this.sMenuTreeView2Completed != null)) {
                 System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
-                this.sManuTreeView2Completed(this, new sManuTreeView2CompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+                this.sMenuTreeView2Completed(this, new sMenuTreeView2CompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
             }
         }
         
         /// <remarks/>
         [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IWsMenuMainDB/exMenuTop", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
         [return: System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public string exMenuTop([System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string TOP_MENU_CD, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string TOP_MENU_NM, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] out string reMsg, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] out string reData) {
+        public string exMenuTop([System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pTopMenuCd, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pTopMenuNm, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] out string reMsg, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] out string reData) {
             object[] results = this.Invoke("exMenuTop", new object[] {
-                        TOP_MENU_CD,
-                        TOP_MENU_NM});
+                        pTopMenuCd,
+                        pTopMenuNm});
             reMsg = ((string)(results[1]));
             reData = ((string)(results[2]));
             return ((string)(results[0]));
         }
         
         /// <remarks/>
-        public void exMenuTopAsync(string TOP_MENU_CD, string TOP_MENU_NM) {
-            this.exMenuTopAsync(TOP_MENU_CD, TOP_MENU_NM, null);
+        public void exMenuTopAsync(string pTopMenuCd, string pTopMenuNm) {
+            this.exMenuTopAsync(pTopMenuCd, pTopMenuNm, null);
         }
         
         /// <remarks/>
-        public void exMenuTopAsync(string TOP_MENU_CD, string TOP_MENU_NM, object userState) {
+        public void exMenuTopAsync(string pTopMenuCd, string pTopMenuNm, object userState) {
             if ((this.exMenuTopOperationCompleted == null)) {
                 this.exMenuTopOperationCompleted = new System.Threading.SendOrPostCallback(this.OnexMenuTopOperationCompleted);
             }
             this.InvokeAsync("exMenuTop", new object[] {
-                        TOP_MENU_CD,
-                        TOP_MENU_NM}, this.exMenuTopOperationCompleted, userState);
+                        pTopMenuCd,
+                        pTopMenuNm}, this.exMenuTopOperationCompleted, userState);
         }
         
         private void OnexMenuTopOperationCompleted(object arg) {
@@ -294,30 +346,30 @@ namespace EldigmPlusApp.M_WsMenuMainDB {
         /// <remarks/>
         [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IWsMenuMainDB/exMenuSub", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
         [return: System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public string exMenuSub([System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string SUB_MENU_CD, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string TOP_MENU_CD, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string SUB_MENU_NM, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] out string reMsg, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] out string reData) {
+        public string exMenuSub([System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pSubMenuCd, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pTopMenuCd, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pSubMenuNm, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] out string reMsg, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] out string reData) {
             object[] results = this.Invoke("exMenuSub", new object[] {
-                        SUB_MENU_CD,
-                        TOP_MENU_CD,
-                        SUB_MENU_NM});
+                        pSubMenuCd,
+                        pTopMenuCd,
+                        pSubMenuNm});
             reMsg = ((string)(results[1]));
             reData = ((string)(results[2]));
             return ((string)(results[0]));
         }
         
         /// <remarks/>
-        public void exMenuSubAsync(string SUB_MENU_CD, string TOP_MENU_CD, string SUB_MENU_NM) {
-            this.exMenuSubAsync(SUB_MENU_CD, TOP_MENU_CD, SUB_MENU_NM, null);
+        public void exMenuSubAsync(string pSubMenuCd, string pTopMenuCd, string pSubMenuNm) {
+            this.exMenuSubAsync(pSubMenuCd, pTopMenuCd, pSubMenuNm, null);
         }
         
         /// <remarks/>
-        public void exMenuSubAsync(string SUB_MENU_CD, string TOP_MENU_CD, string SUB_MENU_NM, object userState) {
+        public void exMenuSubAsync(string pSubMenuCd, string pTopMenuCd, string pSubMenuNm, object userState) {
             if ((this.exMenuSubOperationCompleted == null)) {
                 this.exMenuSubOperationCompleted = new System.Threading.SendOrPostCallback(this.OnexMenuSubOperationCompleted);
             }
             this.InvokeAsync("exMenuSub", new object[] {
-                        SUB_MENU_CD,
-                        TOP_MENU_CD,
-                        SUB_MENU_NM}, this.exMenuSubOperationCompleted, userState);
+                        pSubMenuCd,
+                        pTopMenuCd,
+                        pSubMenuNm}, this.exMenuSubOperationCompleted, userState);
         }
         
         private void OnexMenuSubOperationCompleted(object arg) {
@@ -330,32 +382,30 @@ namespace EldigmPlusApp.M_WsMenuMainDB {
         /// <remarks/>
         [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IWsMenuMainDB/exMenu", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
         [return: System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public string exMenu([System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string MENU_CD, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string TOP_MENU_CD, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string SUB_MENU_CD, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string MENU_NM, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] out string reMsg, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] out string reData) {
+        public string exMenu([System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pMenuCd, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pTopMenuCd, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pSubMenuCd, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] out string reMsg, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] out string reData) {
             object[] results = this.Invoke("exMenu", new object[] {
-                        MENU_CD,
-                        TOP_MENU_CD,
-                        SUB_MENU_CD,
-                        MENU_NM});
+                        pMenuCd,
+                        pTopMenuCd,
+                        pSubMenuCd});
             reMsg = ((string)(results[1]));
             reData = ((string)(results[2]));
             return ((string)(results[0]));
         }
         
         /// <remarks/>
-        public void exMenuAsync(string MENU_CD, string TOP_MENU_CD, string SUB_MENU_CD, string MENU_NM) {
-            this.exMenuAsync(MENU_CD, TOP_MENU_CD, SUB_MENU_CD, MENU_NM, null);
+        public void exMenuAsync(string pMenuCd, string pTopMenuCd, string pSubMenuCd) {
+            this.exMenuAsync(pMenuCd, pTopMenuCd, pSubMenuCd, null);
         }
         
         /// <remarks/>
-        public void exMenuAsync(string MENU_CD, string TOP_MENU_CD, string SUB_MENU_CD, string MENU_NM, object userState) {
+        public void exMenuAsync(string pMenuCd, string pTopMenuCd, string pSubMenuCd, object userState) {
             if ((this.exMenuOperationCompleted == null)) {
                 this.exMenuOperationCompleted = new System.Threading.SendOrPostCallback(this.OnexMenuOperationCompleted);
             }
             this.InvokeAsync("exMenu", new object[] {
-                        MENU_CD,
-                        TOP_MENU_CD,
-                        SUB_MENU_CD,
-                        MENU_NM}, this.exMenuOperationCompleted, userState);
+                        pMenuCd,
+                        pTopMenuCd,
+                        pSubMenuCd}, this.exMenuOperationCompleted, userState);
         }
         
         private void OnexMenuOperationCompleted(object arg) {
@@ -368,34 +418,34 @@ namespace EldigmPlusApp.M_WsMenuMainDB {
         /// <remarks/>
         [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IWsMenuMainDB/aMenuTop", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
         [return: System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public string aMenuTop([System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string TOP_MENU_NM, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string APP_FLAG, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string USING_FLAG, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string SORT_NO, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string INPUT_ID, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] out string reMsg, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] out string reData) {
+        public string aMenuTop([System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pTopMenuNm, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pAppFlag, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pUsingFlag, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pSortNo, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pInputId, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] out string reMsg, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] out string reData) {
             object[] results = this.Invoke("aMenuTop", new object[] {
-                        TOP_MENU_NM,
-                        APP_FLAG,
-                        USING_FLAG,
-                        SORT_NO,
-                        INPUT_ID});
+                        pTopMenuNm,
+                        pAppFlag,
+                        pUsingFlag,
+                        pSortNo,
+                        pInputId});
             reMsg = ((string)(results[1]));
             reData = ((string)(results[2]));
             return ((string)(results[0]));
         }
         
         /// <remarks/>
-        public void aMenuTopAsync(string TOP_MENU_NM, string APP_FLAG, string USING_FLAG, string SORT_NO, string INPUT_ID) {
-            this.aMenuTopAsync(TOP_MENU_NM, APP_FLAG, USING_FLAG, SORT_NO, INPUT_ID, null);
+        public void aMenuTopAsync(string pTopMenuNm, string pAppFlag, string pUsingFlag, string pSortNo, string pInputId) {
+            this.aMenuTopAsync(pTopMenuNm, pAppFlag, pUsingFlag, pSortNo, pInputId, null);
         }
         
         /// <remarks/>
-        public void aMenuTopAsync(string TOP_MENU_NM, string APP_FLAG, string USING_FLAG, string SORT_NO, string INPUT_ID, object userState) {
+        public void aMenuTopAsync(string pTopMenuNm, string pAppFlag, string pUsingFlag, string pSortNo, string pInputId, object userState) {
             if ((this.aMenuTopOperationCompleted == null)) {
                 this.aMenuTopOperationCompleted = new System.Threading.SendOrPostCallback(this.OnaMenuTopOperationCompleted);
             }
             this.InvokeAsync("aMenuTop", new object[] {
-                        TOP_MENU_NM,
-                        APP_FLAG,
-                        USING_FLAG,
-                        SORT_NO,
-                        INPUT_ID}, this.aMenuTopOperationCompleted, userState);
+                        pTopMenuNm,
+                        pAppFlag,
+                        pUsingFlag,
+                        pSortNo,
+                        pInputId}, this.aMenuTopOperationCompleted, userState);
         }
         
         private void OnaMenuTopOperationCompleted(object arg) {
@@ -408,34 +458,34 @@ namespace EldigmPlusApp.M_WsMenuMainDB {
         /// <remarks/>
         [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IWsMenuMainDB/aMenuSub", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
         [return: System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public string aMenuSub([System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string TOP_MENU_CD, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string SUB_MENU_NM, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string USING_FLAG, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string SORT_NO, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string INPUT_ID, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] out string reMsg, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] out string reData) {
+        public string aMenuSub([System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pTopMenuCd, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pSubMenuNm, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pUsingFlag, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pSortNo, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pInputId, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] out string reMsg, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] out string reData) {
             object[] results = this.Invoke("aMenuSub", new object[] {
-                        TOP_MENU_CD,
-                        SUB_MENU_NM,
-                        USING_FLAG,
-                        SORT_NO,
-                        INPUT_ID});
+                        pTopMenuCd,
+                        pSubMenuNm,
+                        pUsingFlag,
+                        pSortNo,
+                        pInputId});
             reMsg = ((string)(results[1]));
             reData = ((string)(results[2]));
             return ((string)(results[0]));
         }
         
         /// <remarks/>
-        public void aMenuSubAsync(string TOP_MENU_CD, string SUB_MENU_NM, string USING_FLAG, string SORT_NO, string INPUT_ID) {
-            this.aMenuSubAsync(TOP_MENU_CD, SUB_MENU_NM, USING_FLAG, SORT_NO, INPUT_ID, null);
+        public void aMenuSubAsync(string pTopMenuCd, string pSubMenuNm, string pUsingFlag, string pSortNo, string pInputId) {
+            this.aMenuSubAsync(pTopMenuCd, pSubMenuNm, pUsingFlag, pSortNo, pInputId, null);
         }
         
         /// <remarks/>
-        public void aMenuSubAsync(string TOP_MENU_CD, string SUB_MENU_NM, string USING_FLAG, string SORT_NO, string INPUT_ID, object userState) {
+        public void aMenuSubAsync(string pTopMenuCd, string pSubMenuNm, string pUsingFlag, string pSortNo, string pInputId, object userState) {
             if ((this.aMenuSubOperationCompleted == null)) {
                 this.aMenuSubOperationCompleted = new System.Threading.SendOrPostCallback(this.OnaMenuSubOperationCompleted);
             }
             this.InvokeAsync("aMenuSub", new object[] {
-                        TOP_MENU_CD,
-                        SUB_MENU_NM,
-                        USING_FLAG,
-                        SORT_NO,
-                        INPUT_ID}, this.aMenuSubOperationCompleted, userState);
+                        pTopMenuCd,
+                        pSubMenuNm,
+                        pUsingFlag,
+                        pSortNo,
+                        pInputId}, this.aMenuSubOperationCompleted, userState);
         }
         
         private void OnaMenuSubOperationCompleted(object arg) {
@@ -448,44 +498,540 @@ namespace EldigmPlusApp.M_WsMenuMainDB {
         /// <remarks/>
         [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IWsMenuMainDB/aMenu", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
         [return: System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public string aMenu([System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string MENU_CD, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string TOP_MENU_CD, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string SUB_MENU_CD, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string MENU_NM, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string USING_FLAG, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string SORT_NO, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string INPUT_ID, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] out string reMsg, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] out string reData) {
+        public string aMenu([System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pTopMenuCd, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pSubMenuCd, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pMenuCd, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pMenuNm, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pUsingFlag, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pSortNo, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pMenuPath, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pFileFolder, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pInputId, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] out string reMsg, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] out string reData) {
             object[] results = this.Invoke("aMenu", new object[] {
-                        MENU_CD,
-                        TOP_MENU_CD,
-                        SUB_MENU_CD,
-                        MENU_NM,
-                        USING_FLAG,
-                        SORT_NO,
-                        INPUT_ID});
+                        pTopMenuCd,
+                        pSubMenuCd,
+                        pMenuCd,
+                        pMenuNm,
+                        pUsingFlag,
+                        pSortNo,
+                        pMenuPath,
+                        pFileFolder,
+                        pInputId});
             reMsg = ((string)(results[1]));
             reData = ((string)(results[2]));
             return ((string)(results[0]));
         }
         
         /// <remarks/>
-        public void aMenuAsync(string MENU_CD, string TOP_MENU_CD, string SUB_MENU_CD, string MENU_NM, string USING_FLAG, string SORT_NO, string INPUT_ID) {
-            this.aMenuAsync(MENU_CD, TOP_MENU_CD, SUB_MENU_CD, MENU_NM, USING_FLAG, SORT_NO, INPUT_ID, null);
+        public void aMenuAsync(string pTopMenuCd, string pSubMenuCd, string pMenuCd, string pMenuNm, string pUsingFlag, string pSortNo, string pMenuPath, string pFileFolder, string pInputId) {
+            this.aMenuAsync(pTopMenuCd, pSubMenuCd, pMenuCd, pMenuNm, pUsingFlag, pSortNo, pMenuPath, pFileFolder, pInputId, null);
         }
         
         /// <remarks/>
-        public void aMenuAsync(string MENU_CD, string TOP_MENU_CD, string SUB_MENU_CD, string MENU_NM, string USING_FLAG, string SORT_NO, string INPUT_ID, object userState) {
+        public void aMenuAsync(string pTopMenuCd, string pSubMenuCd, string pMenuCd, string pMenuNm, string pUsingFlag, string pSortNo, string pMenuPath, string pFileFolder, string pInputId, object userState) {
             if ((this.aMenuOperationCompleted == null)) {
                 this.aMenuOperationCompleted = new System.Threading.SendOrPostCallback(this.OnaMenuOperationCompleted);
             }
             this.InvokeAsync("aMenu", new object[] {
-                        MENU_CD,
-                        TOP_MENU_CD,
-                        SUB_MENU_CD,
-                        MENU_NM,
-                        USING_FLAG,
-                        SORT_NO,
-                        INPUT_ID}, this.aMenuOperationCompleted, userState);
+                        pTopMenuCd,
+                        pSubMenuCd,
+                        pMenuCd,
+                        pMenuNm,
+                        pUsingFlag,
+                        pSortNo,
+                        pMenuPath,
+                        pFileFolder,
+                        pInputId}, this.aMenuOperationCompleted, userState);
         }
         
         private void OnaMenuOperationCompleted(object arg) {
             if ((this.aMenuCompleted != null)) {
                 System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
                 this.aMenuCompleted(this, new aMenuCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IWsMenuMainDB/mMenuTop", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [return: System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string mMenuTop([System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pTopMenuCd, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pUsingFlag, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pSortNo, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] out string reMsg, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] out string reData) {
+            object[] results = this.Invoke("mMenuTop", new object[] {
+                        pTopMenuCd,
+                        pUsingFlag,
+                        pSortNo});
+            reMsg = ((string)(results[1]));
+            reData = ((string)(results[2]));
+            return ((string)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void mMenuTopAsync(string pTopMenuCd, string pUsingFlag, string pSortNo) {
+            this.mMenuTopAsync(pTopMenuCd, pUsingFlag, pSortNo, null);
+        }
+        
+        /// <remarks/>
+        public void mMenuTopAsync(string pTopMenuCd, string pUsingFlag, string pSortNo, object userState) {
+            if ((this.mMenuTopOperationCompleted == null)) {
+                this.mMenuTopOperationCompleted = new System.Threading.SendOrPostCallback(this.OnmMenuTopOperationCompleted);
+            }
+            this.InvokeAsync("mMenuTop", new object[] {
+                        pTopMenuCd,
+                        pUsingFlag,
+                        pSortNo}, this.mMenuTopOperationCompleted, userState);
+        }
+        
+        private void OnmMenuTopOperationCompleted(object arg) {
+            if ((this.mMenuTopCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.mMenuTopCompleted(this, new mMenuTopCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IWsMenuMainDB/mMenuSub", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [return: System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string mMenuSub([System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pTopMenuCd, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pSubMenuCd, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pUsingFlag, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pSortNo, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] out string reMsg, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] out string reData) {
+            object[] results = this.Invoke("mMenuSub", new object[] {
+                        pTopMenuCd,
+                        pSubMenuCd,
+                        pUsingFlag,
+                        pSortNo});
+            reMsg = ((string)(results[1]));
+            reData = ((string)(results[2]));
+            return ((string)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void mMenuSubAsync(string pTopMenuCd, string pSubMenuCd, string pUsingFlag, string pSortNo) {
+            this.mMenuSubAsync(pTopMenuCd, pSubMenuCd, pUsingFlag, pSortNo, null);
+        }
+        
+        /// <remarks/>
+        public void mMenuSubAsync(string pTopMenuCd, string pSubMenuCd, string pUsingFlag, string pSortNo, object userState) {
+            if ((this.mMenuSubOperationCompleted == null)) {
+                this.mMenuSubOperationCompleted = new System.Threading.SendOrPostCallback(this.OnmMenuSubOperationCompleted);
+            }
+            this.InvokeAsync("mMenuSub", new object[] {
+                        pTopMenuCd,
+                        pSubMenuCd,
+                        pUsingFlag,
+                        pSortNo}, this.mMenuSubOperationCompleted, userState);
+        }
+        
+        private void OnmMenuSubOperationCompleted(object arg) {
+            if ((this.mMenuSubCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.mMenuSubCompleted(this, new mMenuSubCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IWsMenuMainDB/mMenu", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [return: System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string mMenu([System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pTopMenuCd, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pSubMenuCd, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pMenuCd, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pUsingFlag, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pSortNo, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pMenuPath, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pFileFolder, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] out string reMsg, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] out string reData) {
+            object[] results = this.Invoke("mMenu", new object[] {
+                        pTopMenuCd,
+                        pSubMenuCd,
+                        pMenuCd,
+                        pUsingFlag,
+                        pSortNo,
+                        pMenuPath,
+                        pFileFolder});
+            reMsg = ((string)(results[1]));
+            reData = ((string)(results[2]));
+            return ((string)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void mMenuAsync(string pTopMenuCd, string pSubMenuCd, string pMenuCd, string pUsingFlag, string pSortNo, string pMenuPath, string pFileFolder) {
+            this.mMenuAsync(pTopMenuCd, pSubMenuCd, pMenuCd, pUsingFlag, pSortNo, pMenuPath, pFileFolder, null);
+        }
+        
+        /// <remarks/>
+        public void mMenuAsync(string pTopMenuCd, string pSubMenuCd, string pMenuCd, string pUsingFlag, string pSortNo, string pMenuPath, string pFileFolder, object userState) {
+            if ((this.mMenuOperationCompleted == null)) {
+                this.mMenuOperationCompleted = new System.Threading.SendOrPostCallback(this.OnmMenuOperationCompleted);
+            }
+            this.InvokeAsync("mMenu", new object[] {
+                        pTopMenuCd,
+                        pSubMenuCd,
+                        pMenuCd,
+                        pUsingFlag,
+                        pSortNo,
+                        pMenuPath,
+                        pFileFolder}, this.mMenuOperationCompleted, userState);
+        }
+        
+        private void OnmMenuOperationCompleted(object arg) {
+            if ((this.mMenuCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.mMenuCompleted(this, new mMenuCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IWsMenuMainDB/sSiteMainDB", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [return: System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string sSiteMainDB([System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pMemcoCd, [System.Xml.Serialization.XmlArrayAttribute(IsNullable=true)] [System.Xml.Serialization.XmlArrayItemAttribute(Namespace="http://schemas.datacontract.org/2004/07/EldigmPlusSvc_Main.WebSvc.Sys.Menu")] out DataSiteMainDB[] reList, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] out string reMsg) {
+            object[] results = this.Invoke("sSiteMainDB", new object[] {
+                        pMemcoCd});
+            reList = ((DataSiteMainDB[])(results[1]));
+            reMsg = ((string)(results[2]));
+            return ((string)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void sSiteMainDBAsync(string pMemcoCd) {
+            this.sSiteMainDBAsync(pMemcoCd, null);
+        }
+        
+        /// <remarks/>
+        public void sSiteMainDBAsync(string pMemcoCd, object userState) {
+            if ((this.sSiteMainDBOperationCompleted == null)) {
+                this.sSiteMainDBOperationCompleted = new System.Threading.SendOrPostCallback(this.OnsSiteMainDBOperationCompleted);
+            }
+            this.InvokeAsync("sSiteMainDB", new object[] {
+                        pMemcoCd}, this.sSiteMainDBOperationCompleted, userState);
+        }
+        
+        private void OnsSiteMainDBOperationCompleted(object arg) {
+            if ((this.sSiteMainDBCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.sSiteMainDBCompleted(this, new sSiteMainDBCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IWsMenuMainDB/siteDbNm", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [return: System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string siteDbNm([System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pSiteCd, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] out string reData, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] out string reMsg) {
+            object[] results = this.Invoke("siteDbNm", new object[] {
+                        pSiteCd});
+            reData = ((string)(results[1]));
+            reMsg = ((string)(results[2]));
+            return ((string)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void siteDbNmAsync(string pSiteCd) {
+            this.siteDbNmAsync(pSiteCd, null);
+        }
+        
+        /// <remarks/>
+        public void siteDbNmAsync(string pSiteCd, object userState) {
+            if ((this.siteDbNmOperationCompleted == null)) {
+                this.siteDbNmOperationCompleted = new System.Threading.SendOrPostCallback(this.OnsiteDbNmOperationCompleted);
+            }
+            this.InvokeAsync("siteDbNm", new object[] {
+                        pSiteCd}, this.siteDbNmOperationCompleted, userState);
+        }
+        
+        private void OnsiteDbNmOperationCompleted(object arg) {
+            if ((this.siteDbNmCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.siteDbNmCompleted(this, new siteDbNmCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IWsMenuMainDB/sMenuMemberDB", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [return: System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string sMenuMemberDB([System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pDbnm, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pSiteCd, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pTopMenuCd, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pSubMenuCd, [System.Xml.Serialization.XmlArrayAttribute(IsNullable=true)] [System.Xml.Serialization.XmlArrayItemAttribute(Namespace="http://schemas.datacontract.org/2004/07/EldigmPlusSvc_Main.WebSvc.Sys.Menu")] out DataMenuSite[] reList, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] out string reMsg) {
+            object[] results = this.Invoke("sMenuMemberDB", new object[] {
+                        pDbnm,
+                        pSiteCd,
+                        pTopMenuCd,
+                        pSubMenuCd});
+            reList = ((DataMenuSite[])(results[1]));
+            reMsg = ((string)(results[2]));
+            return ((string)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void sMenuMemberDBAsync(string pDbnm, string pSiteCd, string pTopMenuCd, string pSubMenuCd) {
+            this.sMenuMemberDBAsync(pDbnm, pSiteCd, pTopMenuCd, pSubMenuCd, null);
+        }
+        
+        /// <remarks/>
+        public void sMenuMemberDBAsync(string pDbnm, string pSiteCd, string pTopMenuCd, string pSubMenuCd, object userState) {
+            if ((this.sMenuMemberDBOperationCompleted == null)) {
+                this.sMenuMemberDBOperationCompleted = new System.Threading.SendOrPostCallback(this.OnsMenuMemberDBOperationCompleted);
+            }
+            this.InvokeAsync("sMenuMemberDB", new object[] {
+                        pDbnm,
+                        pSiteCd,
+                        pTopMenuCd,
+                        pSubMenuCd}, this.sMenuMemberDBOperationCompleted, userState);
+        }
+        
+        private void OnsMenuMemberDBOperationCompleted(object arg) {
+            if ((this.sMenuMemberDBCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.sMenuMemberDBCompleted(this, new sMenuMemberDBCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IWsMenuMainDB/mMenuMemberDB", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [return: System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string mMenuMemberDB([System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pDbnm, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pSiteCd, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pMenuCd, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pUsingFlag, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pSortNo, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pMemo, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] out string reMsg, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] out string reData) {
+            object[] results = this.Invoke("mMenuMemberDB", new object[] {
+                        pDbnm,
+                        pSiteCd,
+                        pMenuCd,
+                        pUsingFlag,
+                        pSortNo,
+                        pMemo});
+            reMsg = ((string)(results[1]));
+            reData = ((string)(results[2]));
+            return ((string)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void mMenuMemberDBAsync(string pDbnm, string pSiteCd, string pMenuCd, string pUsingFlag, string pSortNo, string pMemo) {
+            this.mMenuMemberDBAsync(pDbnm, pSiteCd, pMenuCd, pUsingFlag, pSortNo, pMemo, null);
+        }
+        
+        /// <remarks/>
+        public void mMenuMemberDBAsync(string pDbnm, string pSiteCd, string pMenuCd, string pUsingFlag, string pSortNo, string pMemo, object userState) {
+            if ((this.mMenuMemberDBOperationCompleted == null)) {
+                this.mMenuMemberDBOperationCompleted = new System.Threading.SendOrPostCallback(this.OnmMenuMemberDBOperationCompleted);
+            }
+            this.InvokeAsync("mMenuMemberDB", new object[] {
+                        pDbnm,
+                        pSiteCd,
+                        pMenuCd,
+                        pUsingFlag,
+                        pSortNo,
+                        pMemo}, this.mMenuMemberDBOperationCompleted, userState);
+        }
+        
+        private void OnmMenuMemberDBOperationCompleted(object arg) {
+            if ((this.mMenuMemberDBCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.mMenuMemberDBCompleted(this, new mMenuMemberDBCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IWsMenuMainDB/aMenuMemberDB", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [return: System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string aMenuMemberDB([System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pDbnm, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pSiteCd, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pMenuCd, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pTopMenuCd, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pSubMenuCd, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pMenuNm, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pUsingFlag, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pSortNo, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pMemo, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pInputId, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] out string reMsg, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] out string reData) {
+            object[] results = this.Invoke("aMenuMemberDB", new object[] {
+                        pDbnm,
+                        pSiteCd,
+                        pMenuCd,
+                        pTopMenuCd,
+                        pSubMenuCd,
+                        pMenuNm,
+                        pUsingFlag,
+                        pSortNo,
+                        pMemo,
+                        pInputId});
+            reMsg = ((string)(results[1]));
+            reData = ((string)(results[2]));
+            return ((string)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void aMenuMemberDBAsync(string pDbnm, string pSiteCd, string pMenuCd, string pTopMenuCd, string pSubMenuCd, string pMenuNm, string pUsingFlag, string pSortNo, string pMemo, string pInputId) {
+            this.aMenuMemberDBAsync(pDbnm, pSiteCd, pMenuCd, pTopMenuCd, pSubMenuCd, pMenuNm, pUsingFlag, pSortNo, pMemo, pInputId, null);
+        }
+        
+        /// <remarks/>
+        public void aMenuMemberDBAsync(string pDbnm, string pSiteCd, string pMenuCd, string pTopMenuCd, string pSubMenuCd, string pMenuNm, string pUsingFlag, string pSortNo, string pMemo, string pInputId, object userState) {
+            if ((this.aMenuMemberDBOperationCompleted == null)) {
+                this.aMenuMemberDBOperationCompleted = new System.Threading.SendOrPostCallback(this.OnaMenuMemberDBOperationCompleted);
+            }
+            this.InvokeAsync("aMenuMemberDB", new object[] {
+                        pDbnm,
+                        pSiteCd,
+                        pMenuCd,
+                        pTopMenuCd,
+                        pSubMenuCd,
+                        pMenuNm,
+                        pUsingFlag,
+                        pSortNo,
+                        pMemo,
+                        pInputId}, this.aMenuMemberDBOperationCompleted, userState);
+        }
+        
+        private void OnaMenuMemberDBOperationCompleted(object arg) {
+            if ((this.aMenuMemberDBCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.aMenuMemberDBCompleted(this, new aMenuMemberDBCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IWsMenuMainDB/sCodeAuthSiteMemberDB", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [return: System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string sCodeAuthSiteMemberDB([System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pDbnm, [System.Xml.Serialization.XmlArrayAttribute(IsNullable=true)] [System.Xml.Serialization.XmlArrayItemAttribute(Namespace="http://schemas.datacontract.org/2004/07/EldigmPlusSvc_Main.WebSvc.Sys.Menu")] out DataCodeAuthSiteMemberDB[] reList, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] out string reMsg) {
+            object[] results = this.Invoke("sCodeAuthSiteMemberDB", new object[] {
+                        pDbnm});
+            reList = ((DataCodeAuthSiteMemberDB[])(results[1]));
+            reMsg = ((string)(results[2]));
+            return ((string)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void sCodeAuthSiteMemberDBAsync(string pDbnm) {
+            this.sCodeAuthSiteMemberDBAsync(pDbnm, null);
+        }
+        
+        /// <remarks/>
+        public void sCodeAuthSiteMemberDBAsync(string pDbnm, object userState) {
+            if ((this.sCodeAuthSiteMemberDBOperationCompleted == null)) {
+                this.sCodeAuthSiteMemberDBOperationCompleted = new System.Threading.SendOrPostCallback(this.OnsCodeAuthSiteMemberDBOperationCompleted);
+            }
+            this.InvokeAsync("sCodeAuthSiteMemberDB", new object[] {
+                        pDbnm}, this.sCodeAuthSiteMemberDBOperationCompleted, userState);
+        }
+        
+        private void OnsCodeAuthSiteMemberDBOperationCompleted(object arg) {
+            if ((this.sCodeAuthSiteMemberDBCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.sCodeAuthSiteMemberDBCompleted(this, new sCodeAuthSiteMemberDBCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IWsMenuMainDB/sSetAuthSiteMemberDB", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [return: System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string sSetAuthSiteMemberDB([System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pDbnm, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pSiteCd, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pTopMenuCd, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pSubMenuCd, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pAuthCd, [System.Xml.Serialization.XmlArrayAttribute(IsNullable=true)] [System.Xml.Serialization.XmlArrayItemAttribute(Namespace="http://schemas.datacontract.org/2004/07/EldigmPlusSvc_Main.WebSvc.Sys.Menu")] out DataSetAuthSiteMemberDB[] reList, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] out string reMsg) {
+            object[] results = this.Invoke("sSetAuthSiteMemberDB", new object[] {
+                        pDbnm,
+                        pSiteCd,
+                        pTopMenuCd,
+                        pSubMenuCd,
+                        pAuthCd});
+            reList = ((DataSetAuthSiteMemberDB[])(results[1]));
+            reMsg = ((string)(results[2]));
+            return ((string)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void sSetAuthSiteMemberDBAsync(string pDbnm, string pSiteCd, string pTopMenuCd, string pSubMenuCd, string pAuthCd) {
+            this.sSetAuthSiteMemberDBAsync(pDbnm, pSiteCd, pTopMenuCd, pSubMenuCd, pAuthCd, null);
+        }
+        
+        /// <remarks/>
+        public void sSetAuthSiteMemberDBAsync(string pDbnm, string pSiteCd, string pTopMenuCd, string pSubMenuCd, string pAuthCd, object userState) {
+            if ((this.sSetAuthSiteMemberDBOperationCompleted == null)) {
+                this.sSetAuthSiteMemberDBOperationCompleted = new System.Threading.SendOrPostCallback(this.OnsSetAuthSiteMemberDBOperationCompleted);
+            }
+            this.InvokeAsync("sSetAuthSiteMemberDB", new object[] {
+                        pDbnm,
+                        pSiteCd,
+                        pTopMenuCd,
+                        pSubMenuCd,
+                        pAuthCd}, this.sSetAuthSiteMemberDBOperationCompleted, userState);
+        }
+        
+        private void OnsSetAuthSiteMemberDBOperationCompleted(object arg) {
+            if ((this.sSetAuthSiteMemberDBCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.sSetAuthSiteMemberDBCompleted(this, new sSetAuthSiteMemberDBCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IWsMenuMainDB/mSetAuthSiteMemberDB", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [return: System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string mSetAuthSiteMemberDB([System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pDbnm, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pSiteCd, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pMenuCd, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pAuthCd, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pViewFlag, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pNewFlag, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pModifyFlag, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pDelFlag, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pReportFlag, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pPrintFlag, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pDownloadFlag, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pInputId, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] out string reMsg, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] out string reData) {
+            object[] results = this.Invoke("mSetAuthSiteMemberDB", new object[] {
+                        pDbnm,
+                        pSiteCd,
+                        pMenuCd,
+                        pAuthCd,
+                        pViewFlag,
+                        pNewFlag,
+                        pModifyFlag,
+                        pDelFlag,
+                        pReportFlag,
+                        pPrintFlag,
+                        pDownloadFlag,
+                        pInputId});
+            reMsg = ((string)(results[1]));
+            reData = ((string)(results[2]));
+            return ((string)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void mSetAuthSiteMemberDBAsync(string pDbnm, string pSiteCd, string pMenuCd, string pAuthCd, string pViewFlag, string pNewFlag, string pModifyFlag, string pDelFlag, string pReportFlag, string pPrintFlag, string pDownloadFlag, string pInputId) {
+            this.mSetAuthSiteMemberDBAsync(pDbnm, pSiteCd, pMenuCd, pAuthCd, pViewFlag, pNewFlag, pModifyFlag, pDelFlag, pReportFlag, pPrintFlag, pDownloadFlag, pInputId, null);
+        }
+        
+        /// <remarks/>
+        public void mSetAuthSiteMemberDBAsync(string pDbnm, string pSiteCd, string pMenuCd, string pAuthCd, string pViewFlag, string pNewFlag, string pModifyFlag, string pDelFlag, string pReportFlag, string pPrintFlag, string pDownloadFlag, string pInputId, object userState) {
+            if ((this.mSetAuthSiteMemberDBOperationCompleted == null)) {
+                this.mSetAuthSiteMemberDBOperationCompleted = new System.Threading.SendOrPostCallback(this.OnmSetAuthSiteMemberDBOperationCompleted);
+            }
+            this.InvokeAsync("mSetAuthSiteMemberDB", new object[] {
+                        pDbnm,
+                        pSiteCd,
+                        pMenuCd,
+                        pAuthCd,
+                        pViewFlag,
+                        pNewFlag,
+                        pModifyFlag,
+                        pDelFlag,
+                        pReportFlag,
+                        pPrintFlag,
+                        pDownloadFlag,
+                        pInputId}, this.mSetAuthSiteMemberDBOperationCompleted, userState);
+        }
+        
+        private void OnmSetAuthSiteMemberDBOperationCompleted(object arg) {
+            if ((this.mSetAuthSiteMemberDBCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.mSetAuthSiteMemberDBCompleted(this, new mSetAuthSiteMemberDBCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IWsMenuMainDB/aSetAuthSiteMemberDB", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [return: System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string aSetAuthSiteMemberDB([System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pDbnm, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pSiteCd, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pMenuCd, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pAuthCd, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pViewFlag, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pNewFlag, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pModifyFlag, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pDelFlag, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pReportFlag, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pPrintFlag, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pDownloadFlag, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pInputId, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] out string reMsg, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] out string reData) {
+            object[] results = this.Invoke("aSetAuthSiteMemberDB", new object[] {
+                        pDbnm,
+                        pSiteCd,
+                        pMenuCd,
+                        pAuthCd,
+                        pViewFlag,
+                        pNewFlag,
+                        pModifyFlag,
+                        pDelFlag,
+                        pReportFlag,
+                        pPrintFlag,
+                        pDownloadFlag,
+                        pInputId});
+            reMsg = ((string)(results[1]));
+            reData = ((string)(results[2]));
+            return ((string)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void aSetAuthSiteMemberDBAsync(string pDbnm, string pSiteCd, string pMenuCd, string pAuthCd, string pViewFlag, string pNewFlag, string pModifyFlag, string pDelFlag, string pReportFlag, string pPrintFlag, string pDownloadFlag, string pInputId) {
+            this.aSetAuthSiteMemberDBAsync(pDbnm, pSiteCd, pMenuCd, pAuthCd, pViewFlag, pNewFlag, pModifyFlag, pDelFlag, pReportFlag, pPrintFlag, pDownloadFlag, pInputId, null);
+        }
+        
+        /// <remarks/>
+        public void aSetAuthSiteMemberDBAsync(string pDbnm, string pSiteCd, string pMenuCd, string pAuthCd, string pViewFlag, string pNewFlag, string pModifyFlag, string pDelFlag, string pReportFlag, string pPrintFlag, string pDownloadFlag, string pInputId, object userState) {
+            if ((this.aSetAuthSiteMemberDBOperationCompleted == null)) {
+                this.aSetAuthSiteMemberDBOperationCompleted = new System.Threading.SendOrPostCallback(this.OnaSetAuthSiteMemberDBOperationCompleted);
+            }
+            this.InvokeAsync("aSetAuthSiteMemberDB", new object[] {
+                        pDbnm,
+                        pSiteCd,
+                        pMenuCd,
+                        pAuthCd,
+                        pViewFlag,
+                        pNewFlag,
+                        pModifyFlag,
+                        pDelFlag,
+                        pReportFlag,
+                        pPrintFlag,
+                        pDownloadFlag,
+                        pInputId}, this.aSetAuthSiteMemberDBOperationCompleted, userState);
+        }
+        
+        private void OnaSetAuthSiteMemberDBOperationCompleted(object arg) {
+            if ((this.aSetAuthSiteMemberDBCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.aSetAuthSiteMemberDBCompleted(this, new aSetAuthSiteMemberDBCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
             }
         }
         
@@ -636,7 +1182,252 @@ namespace EldigmPlusApp.M_WsMenuMainDB {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.datacontract.org/2004/07/EldigmPlusSvc_Main.WebSvc.Sys.Menu")]
-    public partial class DataMenu {
+    public partial class DataSetAuthSiteMemberDB {
+        
+        private string mENU_CDField;
+        
+        private string mENU_NMField;
+        
+        private short vIEW_FLAGField;
+        
+        private bool vIEW_FLAGFieldSpecified;
+        
+        private short nEW_FLAGField;
+        
+        private bool nEW_FLAGFieldSpecified;
+        
+        private short mODIFY_FLAGField;
+        
+        private bool mODIFY_FLAGFieldSpecified;
+        
+        private short dEL_FLAGField;
+        
+        private bool dEL_FLAGFieldSpecified;
+        
+        private short rEPORT_FLAGField;
+        
+        private bool rEPORT_FLAGFieldSpecified;
+        
+        private short pRINT_FLAGField;
+        
+        private bool pRINT_FLAGFieldSpecified;
+        
+        private short dOWNLOAD_FLAGField;
+        
+        private bool dOWNLOAD_FLAGFieldSpecified;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string MENU_CD {
+            get {
+                return this.mENU_CDField;
+            }
+            set {
+                this.mENU_CDField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string MENU_NM {
+            get {
+                return this.mENU_NMField;
+            }
+            set {
+                this.mENU_NMField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public short VIEW_FLAG {
+            get {
+                return this.vIEW_FLAGField;
+            }
+            set {
+                this.vIEW_FLAGField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool VIEW_FLAGSpecified {
+            get {
+                return this.vIEW_FLAGFieldSpecified;
+            }
+            set {
+                this.vIEW_FLAGFieldSpecified = value;
+            }
+        }
+        
+        /// <remarks/>
+        public short NEW_FLAG {
+            get {
+                return this.nEW_FLAGField;
+            }
+            set {
+                this.nEW_FLAGField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool NEW_FLAGSpecified {
+            get {
+                return this.nEW_FLAGFieldSpecified;
+            }
+            set {
+                this.nEW_FLAGFieldSpecified = value;
+            }
+        }
+        
+        /// <remarks/>
+        public short MODIFY_FLAG {
+            get {
+                return this.mODIFY_FLAGField;
+            }
+            set {
+                this.mODIFY_FLAGField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool MODIFY_FLAGSpecified {
+            get {
+                return this.mODIFY_FLAGFieldSpecified;
+            }
+            set {
+                this.mODIFY_FLAGFieldSpecified = value;
+            }
+        }
+        
+        /// <remarks/>
+        public short DEL_FLAG {
+            get {
+                return this.dEL_FLAGField;
+            }
+            set {
+                this.dEL_FLAGField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool DEL_FLAGSpecified {
+            get {
+                return this.dEL_FLAGFieldSpecified;
+            }
+            set {
+                this.dEL_FLAGFieldSpecified = value;
+            }
+        }
+        
+        /// <remarks/>
+        public short REPORT_FLAG {
+            get {
+                return this.rEPORT_FLAGField;
+            }
+            set {
+                this.rEPORT_FLAGField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool REPORT_FLAGSpecified {
+            get {
+                return this.rEPORT_FLAGFieldSpecified;
+            }
+            set {
+                this.rEPORT_FLAGFieldSpecified = value;
+            }
+        }
+        
+        /// <remarks/>
+        public short PRINT_FLAG {
+            get {
+                return this.pRINT_FLAGField;
+            }
+            set {
+                this.pRINT_FLAGField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool PRINT_FLAGSpecified {
+            get {
+                return this.pRINT_FLAGFieldSpecified;
+            }
+            set {
+                this.pRINT_FLAGFieldSpecified = value;
+            }
+        }
+        
+        /// <remarks/>
+        public short DOWNLOAD_FLAG {
+            get {
+                return this.dOWNLOAD_FLAGField;
+            }
+            set {
+                this.dOWNLOAD_FLAGField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool DOWNLOAD_FLAGSpecified {
+            get {
+                return this.dOWNLOAD_FLAGFieldSpecified;
+            }
+            set {
+                this.dOWNLOAD_FLAGFieldSpecified = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.datacontract.org/2004/07/EldigmPlusSvc_Main.WebSvc.Sys.Menu")]
+    public partial class DataCodeAuthSiteMemberDB {
+        
+        private string aUTH_CDField;
+        
+        private string aUTH_NMField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string AUTH_CD {
+            get {
+                return this.aUTH_CDField;
+            }
+            set {
+                this.aUTH_CDField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string AUTH_NM {
+            get {
+                return this.aUTH_NMField;
+            }
+            set {
+                this.aUTH_NMField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.datacontract.org/2004/07/EldigmPlusSvc_Main.WebSvc.Sys.Menu")]
+    public partial class DataMenuSite {
         
         private string mENU_CDField;
         
@@ -657,6 +1448,12 @@ namespace EldigmPlusApp.M_WsMenuMainDB {
         private int sORT_NOField;
         
         private bool sORT_NOFieldSpecified;
+        
+        private string mEMOField;
+        
+        private string mENU_PATHField;
+        
+        private string fILE_FOLDERField;
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
@@ -761,6 +1558,247 @@ namespace EldigmPlusApp.M_WsMenuMainDB {
             }
             set {
                 this.sORT_NOFieldSpecified = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string MEMO {
+            get {
+                return this.mEMOField;
+            }
+            set {
+                this.mEMOField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string MENU_PATH {
+            get {
+                return this.mENU_PATHField;
+            }
+            set {
+                this.mENU_PATHField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string FILE_FOLDER {
+            get {
+                return this.fILE_FOLDERField;
+            }
+            set {
+                this.fILE_FOLDERField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.datacontract.org/2004/07/EldigmPlusSvc_Main.WebSvc.Sys.Menu")]
+    public partial class DataSiteMainDB {
+        
+        private int sITE_CDField;
+        
+        private bool sITE_CDFieldSpecified;
+        
+        private string sITE_NMField;
+        
+        /// <remarks/>
+        public int SITE_CD {
+            get {
+                return this.sITE_CDField;
+            }
+            set {
+                this.sITE_CDField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool SITE_CDSpecified {
+            get {
+                return this.sITE_CDFieldSpecified;
+            }
+            set {
+                this.sITE_CDFieldSpecified = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string SITE_NM {
+            get {
+                return this.sITE_NMField;
+            }
+            set {
+                this.sITE_NMField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.datacontract.org/2004/07/EldigmPlusSvc_Main.WebSvc.Sys.Menu")]
+    public partial class DataMenu {
+        
+        private string mENU_CDField;
+        
+        private int tOP_MENU_CDField;
+        
+        private bool tOP_MENU_CDFieldSpecified;
+        
+        private int sUB_MENU_CDField;
+        
+        private bool sUB_MENU_CDFieldSpecified;
+        
+        private string mENU_NMField;
+        
+        private int uSING_FLAGField;
+        
+        private bool uSING_FLAGFieldSpecified;
+        
+        private int sORT_NOField;
+        
+        private bool sORT_NOFieldSpecified;
+        
+        private string mENU_PATHField;
+        
+        private string fILE_FOLDERField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string MENU_CD {
+            get {
+                return this.mENU_CDField;
+            }
+            set {
+                this.mENU_CDField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public int TOP_MENU_CD {
+            get {
+                return this.tOP_MENU_CDField;
+            }
+            set {
+                this.tOP_MENU_CDField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool TOP_MENU_CDSpecified {
+            get {
+                return this.tOP_MENU_CDFieldSpecified;
+            }
+            set {
+                this.tOP_MENU_CDFieldSpecified = value;
+            }
+        }
+        
+        /// <remarks/>
+        public int SUB_MENU_CD {
+            get {
+                return this.sUB_MENU_CDField;
+            }
+            set {
+                this.sUB_MENU_CDField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool SUB_MENU_CDSpecified {
+            get {
+                return this.sUB_MENU_CDFieldSpecified;
+            }
+            set {
+                this.sUB_MENU_CDFieldSpecified = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string MENU_NM {
+            get {
+                return this.mENU_NMField;
+            }
+            set {
+                this.mENU_NMField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public int USING_FLAG {
+            get {
+                return this.uSING_FLAGField;
+            }
+            set {
+                this.uSING_FLAGField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool USING_FLAGSpecified {
+            get {
+                return this.uSING_FLAGFieldSpecified;
+            }
+            set {
+                this.uSING_FLAGFieldSpecified = value;
+            }
+        }
+        
+        /// <remarks/>
+        public int SORT_NO {
+            get {
+                return this.sORT_NOField;
+            }
+            set {
+                this.sORT_NOField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool SORT_NOSpecified {
+            get {
+                return this.sORT_NOFieldSpecified;
+            }
+            set {
+                this.sORT_NOFieldSpecified = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string MENU_PATH {
+            get {
+                return this.mENU_PATHField;
+            }
+            set {
+                this.mENU_PATHField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string FILE_FOLDER {
+            get {
+                return this.fILE_FOLDERField;
+            }
+            set {
+                this.fILE_FOLDERField = value;
             }
         }
     }
@@ -889,17 +1927,17 @@ namespace EldigmPlusApp.M_WsMenuMainDB {
     
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
-    public delegate void sManuTopTreeViewCompletedEventHandler(object sender, sManuTopTreeViewCompletedEventArgs e);
+    public delegate void sMenuTopTreeViewCompletedEventHandler(object sender, sMenuTopTreeViewCompletedEventArgs e);
     
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class sManuTopTreeViewCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+    public partial class sMenuTopTreeViewCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
         
         private object[] results;
         
-        internal sManuTopTreeViewCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+        internal sMenuTopTreeViewCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
                 base(exception, cancelled, userState) {
             this.results = results;
         }
@@ -931,17 +1969,17 @@ namespace EldigmPlusApp.M_WsMenuMainDB {
     
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
-    public delegate void sManuSubTreeViewCompletedEventHandler(object sender, sManuSubTreeViewCompletedEventArgs e);
+    public delegate void sMenuSubTreeViewCompletedEventHandler(object sender, sMenuSubTreeViewCompletedEventArgs e);
     
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class sManuSubTreeViewCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+    public partial class sMenuSubTreeViewCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
         
         private object[] results;
         
-        internal sManuSubTreeViewCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+        internal sMenuSubTreeViewCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
                 base(exception, cancelled, userState) {
             this.results = results;
         }
@@ -973,17 +2011,17 @@ namespace EldigmPlusApp.M_WsMenuMainDB {
     
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
-    public delegate void sManuTreeViewCompletedEventHandler(object sender, sManuTreeViewCompletedEventArgs e);
+    public delegate void sMenuTreeViewCompletedEventHandler(object sender, sMenuTreeViewCompletedEventArgs e);
     
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class sManuTreeViewCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+    public partial class sMenuTreeViewCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
         
         private object[] results;
         
-        internal sManuTreeViewCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+        internal sMenuTreeViewCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
                 base(exception, cancelled, userState) {
             this.results = results;
         }
@@ -1015,17 +2053,17 @@ namespace EldigmPlusApp.M_WsMenuMainDB {
     
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
-    public delegate void sManuTreeView2CompletedEventHandler(object sender, sManuTreeView2CompletedEventArgs e);
+    public delegate void sMenuTreeView2CompletedEventHandler(object sender, sMenuTreeView2CompletedEventArgs e);
     
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class sManuTreeView2CompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+    public partial class sMenuTreeView2CompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
         
         private object[] results;
         
-        internal sManuTreeView2CompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+        internal sMenuTreeView2CompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
                 base(exception, cancelled, userState) {
             this.results = results;
         }
@@ -1278,6 +2316,510 @@ namespace EldigmPlusApp.M_WsMenuMainDB {
         private object[] results;
         
         internal aMenuCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public string Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[0]));
+            }
+        }
+        
+        /// <remarks/>
+        public string reMsg {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[1]));
+            }
+        }
+        
+        /// <remarks/>
+        public string reData {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[2]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
+    public delegate void mMenuTopCompletedEventHandler(object sender, mMenuTopCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class mMenuTopCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal mMenuTopCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public string Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[0]));
+            }
+        }
+        
+        /// <remarks/>
+        public string reMsg {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[1]));
+            }
+        }
+        
+        /// <remarks/>
+        public string reData {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[2]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
+    public delegate void mMenuSubCompletedEventHandler(object sender, mMenuSubCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class mMenuSubCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal mMenuSubCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public string Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[0]));
+            }
+        }
+        
+        /// <remarks/>
+        public string reMsg {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[1]));
+            }
+        }
+        
+        /// <remarks/>
+        public string reData {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[2]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
+    public delegate void mMenuCompletedEventHandler(object sender, mMenuCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class mMenuCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal mMenuCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public string Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[0]));
+            }
+        }
+        
+        /// <remarks/>
+        public string reMsg {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[1]));
+            }
+        }
+        
+        /// <remarks/>
+        public string reData {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[2]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
+    public delegate void sSiteMainDBCompletedEventHandler(object sender, sSiteMainDBCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class sSiteMainDBCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal sSiteMainDBCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public string Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[0]));
+            }
+        }
+        
+        /// <remarks/>
+        public DataSiteMainDB[] reList {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((DataSiteMainDB[])(this.results[1]));
+            }
+        }
+        
+        /// <remarks/>
+        public string reMsg {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[2]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
+    public delegate void siteDbNmCompletedEventHandler(object sender, siteDbNmCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class siteDbNmCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal siteDbNmCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public string Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[0]));
+            }
+        }
+        
+        /// <remarks/>
+        public string reData {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[1]));
+            }
+        }
+        
+        /// <remarks/>
+        public string reMsg {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[2]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
+    public delegate void sMenuMemberDBCompletedEventHandler(object sender, sMenuMemberDBCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class sMenuMemberDBCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal sMenuMemberDBCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public string Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[0]));
+            }
+        }
+        
+        /// <remarks/>
+        public DataMenuSite[] reList {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((DataMenuSite[])(this.results[1]));
+            }
+        }
+        
+        /// <remarks/>
+        public string reMsg {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[2]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
+    public delegate void mMenuMemberDBCompletedEventHandler(object sender, mMenuMemberDBCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class mMenuMemberDBCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal mMenuMemberDBCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public string Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[0]));
+            }
+        }
+        
+        /// <remarks/>
+        public string reMsg {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[1]));
+            }
+        }
+        
+        /// <remarks/>
+        public string reData {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[2]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
+    public delegate void aMenuMemberDBCompletedEventHandler(object sender, aMenuMemberDBCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class aMenuMemberDBCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal aMenuMemberDBCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public string Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[0]));
+            }
+        }
+        
+        /// <remarks/>
+        public string reMsg {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[1]));
+            }
+        }
+        
+        /// <remarks/>
+        public string reData {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[2]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
+    public delegate void sCodeAuthSiteMemberDBCompletedEventHandler(object sender, sCodeAuthSiteMemberDBCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class sCodeAuthSiteMemberDBCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal sCodeAuthSiteMemberDBCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public string Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[0]));
+            }
+        }
+        
+        /// <remarks/>
+        public DataCodeAuthSiteMemberDB[] reList {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((DataCodeAuthSiteMemberDB[])(this.results[1]));
+            }
+        }
+        
+        /// <remarks/>
+        public string reMsg {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[2]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
+    public delegate void sSetAuthSiteMemberDBCompletedEventHandler(object sender, sSetAuthSiteMemberDBCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class sSetAuthSiteMemberDBCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal sSetAuthSiteMemberDBCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public string Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[0]));
+            }
+        }
+        
+        /// <remarks/>
+        public DataSetAuthSiteMemberDB[] reList {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((DataSetAuthSiteMemberDB[])(this.results[1]));
+            }
+        }
+        
+        /// <remarks/>
+        public string reMsg {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[2]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
+    public delegate void mSetAuthSiteMemberDBCompletedEventHandler(object sender, mSetAuthSiteMemberDBCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class mSetAuthSiteMemberDBCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal mSetAuthSiteMemberDBCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public string Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[0]));
+            }
+        }
+        
+        /// <remarks/>
+        public string reMsg {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[1]));
+            }
+        }
+        
+        /// <remarks/>
+        public string reData {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[2]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
+    public delegate void aSetAuthSiteMemberDBCompletedEventHandler(object sender, aSetAuthSiteMemberDBCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class aSetAuthSiteMemberDBCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal aSetAuthSiteMemberDBCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
                 base(exception, cancelled, userState) {
             this.results = results;
         }

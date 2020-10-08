@@ -5,6 +5,7 @@
       <xsd:import schemaLocation="http://localhost:49469/WebSvc/Sys/ComnCode/WsComnCodeGrp.svc?xsd=xsd0" namespace="http://tempuri.org/" />
       <xsd:import schemaLocation="http://localhost:49469/WebSvc/Sys/ComnCode/WsComnCodeGrp.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
       <xsd:import schemaLocation="http://localhost:49469/WebSvc/Sys/ComnCode/WsComnCodeGrp.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/EldigmPlusSvc_Main.WebSvc.Sys.ComnCode" />
+      <xsd:import schemaLocation="http://localhost:49469/WebSvc/Sys/ComnCode/WsComnCodeGrp.svc?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
     </xsd:schema>
   </wsdl:types>
   <wsdl:message name="IWsComnCodeGrp_sComnCodeGrp_InputMessage">
@@ -12,6 +13,12 @@
   </wsdl:message>
   <wsdl:message name="IWsComnCodeGrp_sComnCodeGrp_OutputMessage">
     <wsdl:part name="parameters" element="tns:sComnCodeGrpResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWsComnCodeGrp_sComnCodeGrpUsingFlag_InputMessage">
+    <wsdl:part name="parameters" element="tns:sComnCodeGrpUsingFlag" />
+  </wsdl:message>
+  <wsdl:message name="IWsComnCodeGrp_sComnCodeGrpUsingFlag_OutputMessage">
+    <wsdl:part name="parameters" element="tns:sComnCodeGrpUsingFlagResponse" />
   </wsdl:message>
   <wsdl:message name="IWsComnCodeGrp_aComnCodeGrp_InputMessage">
     <wsdl:part name="parameters" element="tns:aComnCodeGrp" />
@@ -31,10 +38,74 @@
   <wsdl:message name="IWsComnCodeGrp_mComnCodeGrp_OutputMessage">
     <wsdl:part name="parameters" element="tns:mComnCodeGrpResponse" />
   </wsdl:message>
+  <wsdl:message name="IWsComnCodeGrp_siteDbNm_InputMessage">
+    <wsdl:part name="parameters" element="tns:siteDbNm" />
+  </wsdl:message>
+  <wsdl:message name="IWsComnCodeGrp_siteDbNm_OutputMessage">
+    <wsdl:part name="parameters" element="tns:siteDbNmResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWsComnCodeGrp_sCodeAuthSiteMemberDB_InputMessage">
+    <wsdl:part name="parameters" element="tns:sCodeAuthSiteMemberDB" />
+  </wsdl:message>
+  <wsdl:message name="IWsComnCodeGrp_sCodeAuthSiteMemberDB_OutputMessage">
+    <wsdl:part name="parameters" element="tns:sCodeAuthSiteMemberDBResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWsComnCodeGrp_sSetAuthSiteMemberDB_InputMessage">
+    <wsdl:part name="parameters" element="tns:sSetAuthSiteMemberDB" />
+  </wsdl:message>
+  <wsdl:message name="IWsComnCodeGrp_sSetAuthSiteMemberDB_OutputMessage">
+    <wsdl:part name="parameters" element="tns:sSetAuthSiteMemberDBResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWsComnCodeGrp_sSetAuthSiteMemberDBSub_InputMessage">
+    <wsdl:part name="parameters" element="tns:sSetAuthSiteMemberDBSub" />
+  </wsdl:message>
+  <wsdl:message name="IWsComnCodeGrp_sSetAuthSiteMemberDBSub_OutputMessage">
+    <wsdl:part name="parameters" element="tns:sSetAuthSiteMemberDBSubResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWsComnCodeGrp_mSetAuthSiteMemberDB_InputMessage">
+    <wsdl:part name="parameters" element="tns:mSetAuthSiteMemberDB" />
+  </wsdl:message>
+  <wsdl:message name="IWsComnCodeGrp_mSetAuthSiteMemberDB_OutputMessage">
+    <wsdl:part name="parameters" element="tns:mSetAuthSiteMemberDBResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWsComnCodeGrp_aSetAuthSiteMemberDB_InputMessage">
+    <wsdl:part name="parameters" element="tns:aSetAuthSiteMemberDB" />
+  </wsdl:message>
+  <wsdl:message name="IWsComnCodeGrp_aSetAuthSiteMemberDB_OutputMessage">
+    <wsdl:part name="parameters" element="tns:aSetAuthSiteMemberDBResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWsComnCodeGrp_sComnSiteTreeView_InputMessage">
+    <wsdl:part name="parameters" element="tns:sComnSiteTreeView" />
+  </wsdl:message>
+  <wsdl:message name="IWsComnCodeGrp_sComnSiteTreeView_OutputMessage">
+    <wsdl:part name="parameters" element="tns:sComnSiteTreeViewResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWsComnCodeGrp_sComnSite_InputMessage">
+    <wsdl:part name="parameters" element="tns:sComnSite" />
+  </wsdl:message>
+  <wsdl:message name="IWsComnCodeGrp_sComnSite_OutputMessage">
+    <wsdl:part name="parameters" element="tns:sComnSiteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWsComnCodeGrp_mComnSite_InputMessage">
+    <wsdl:part name="parameters" element="tns:mComnSite" />
+  </wsdl:message>
+  <wsdl:message name="IWsComnCodeGrp_mComnSite_OutputMessage">
+    <wsdl:part name="parameters" element="tns:mComnSiteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWsComnCodeGrp_aComnSite_InputMessage">
+    <wsdl:part name="parameters" element="tns:aComnSite" />
+  </wsdl:message>
+  <wsdl:message name="IWsComnCodeGrp_aComnSite_OutputMessage">
+    <wsdl:part name="parameters" element="tns:aComnSiteResponse" />
+  </wsdl:message>
   <wsdl:portType name="IWsComnCodeGrp">
     <wsdl:operation name="sComnCodeGrp">
       <wsdl:input wsaw:Action="http://tempuri.org/IWsComnCodeGrp/sComnCodeGrp" message="tns:IWsComnCodeGrp_sComnCodeGrp_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IWsComnCodeGrp/sComnCodeGrpResponse" message="tns:IWsComnCodeGrp_sComnCodeGrp_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="sComnCodeGrpUsingFlag">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWsComnCodeGrp/sComnCodeGrpUsingFlag" message="tns:IWsComnCodeGrp_sComnCodeGrpUsingFlag_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWsComnCodeGrp/sComnCodeGrpUsingFlagResponse" message="tns:IWsComnCodeGrp_sComnCodeGrpUsingFlag_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="aComnCodeGrp">
       <wsdl:input wsaw:Action="http://tempuri.org/IWsComnCodeGrp/aComnCodeGrp" message="tns:IWsComnCodeGrp_aComnCodeGrp_InputMessage" />
@@ -48,11 +119,60 @@
       <wsdl:input wsaw:Action="http://tempuri.org/IWsComnCodeGrp/mComnCodeGrp" message="tns:IWsComnCodeGrp_mComnCodeGrp_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IWsComnCodeGrp/mComnCodeGrpResponse" message="tns:IWsComnCodeGrp_mComnCodeGrp_OutputMessage" />
     </wsdl:operation>
+    <wsdl:operation name="siteDbNm">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWsComnCodeGrp/siteDbNm" message="tns:IWsComnCodeGrp_siteDbNm_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWsComnCodeGrp/siteDbNmResponse" message="tns:IWsComnCodeGrp_siteDbNm_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="sCodeAuthSiteMemberDB">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWsComnCodeGrp/sCodeAuthSiteMemberDB" message="tns:IWsComnCodeGrp_sCodeAuthSiteMemberDB_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWsComnCodeGrp/sCodeAuthSiteMemberDBResponse" message="tns:IWsComnCodeGrp_sCodeAuthSiteMemberDB_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="sSetAuthSiteMemberDB">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWsComnCodeGrp/sSetAuthSiteMemberDB" message="tns:IWsComnCodeGrp_sSetAuthSiteMemberDB_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWsComnCodeGrp/sSetAuthSiteMemberDBResponse" message="tns:IWsComnCodeGrp_sSetAuthSiteMemberDB_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="sSetAuthSiteMemberDBSub">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWsComnCodeGrp/sSetAuthSiteMemberDBSub" message="tns:IWsComnCodeGrp_sSetAuthSiteMemberDBSub_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWsComnCodeGrp/sSetAuthSiteMemberDBSubResponse" message="tns:IWsComnCodeGrp_sSetAuthSiteMemberDBSub_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="mSetAuthSiteMemberDB">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWsComnCodeGrp/mSetAuthSiteMemberDB" message="tns:IWsComnCodeGrp_mSetAuthSiteMemberDB_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWsComnCodeGrp/mSetAuthSiteMemberDBResponse" message="tns:IWsComnCodeGrp_mSetAuthSiteMemberDB_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="aSetAuthSiteMemberDB">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWsComnCodeGrp/aSetAuthSiteMemberDB" message="tns:IWsComnCodeGrp_aSetAuthSiteMemberDB_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWsComnCodeGrp/aSetAuthSiteMemberDBResponse" message="tns:IWsComnCodeGrp_aSetAuthSiteMemberDB_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="sComnSiteTreeView">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWsComnCodeGrp/sComnSiteTreeView" message="tns:IWsComnCodeGrp_sComnSiteTreeView_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWsComnCodeGrp/sComnSiteTreeViewResponse" message="tns:IWsComnCodeGrp_sComnSiteTreeView_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="sComnSite">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWsComnCodeGrp/sComnSite" message="tns:IWsComnCodeGrp_sComnSite_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWsComnCodeGrp/sComnSiteResponse" message="tns:IWsComnCodeGrp_sComnSite_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="mComnSite">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWsComnCodeGrp/mComnSite" message="tns:IWsComnCodeGrp_mComnSite_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWsComnCodeGrp/mComnSiteResponse" message="tns:IWsComnCodeGrp_mComnSite_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="aComnSite">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWsComnCodeGrp/aComnSite" message="tns:IWsComnCodeGrp_aComnSite_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWsComnCodeGrp/aComnSiteResponse" message="tns:IWsComnCodeGrp_aComnSite_OutputMessage" />
+    </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IWsComnCodeGrp" type="tns:IWsComnCodeGrp">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
     <wsdl:operation name="sComnCodeGrp">
       <soap:operation soapAction="http://tempuri.org/IWsComnCodeGrp/sComnCodeGrp" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="sComnCodeGrpUsingFlag">
+      <soap:operation soapAction="http://tempuri.org/IWsComnCodeGrp/sComnCodeGrpUsingFlag" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -80,6 +200,96 @@
     </wsdl:operation>
     <wsdl:operation name="mComnCodeGrp">
       <soap:operation soapAction="http://tempuri.org/IWsComnCodeGrp/mComnCodeGrp" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="siteDbNm">
+      <soap:operation soapAction="http://tempuri.org/IWsComnCodeGrp/siteDbNm" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="sCodeAuthSiteMemberDB">
+      <soap:operation soapAction="http://tempuri.org/IWsComnCodeGrp/sCodeAuthSiteMemberDB" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="sSetAuthSiteMemberDB">
+      <soap:operation soapAction="http://tempuri.org/IWsComnCodeGrp/sSetAuthSiteMemberDB" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="sSetAuthSiteMemberDBSub">
+      <soap:operation soapAction="http://tempuri.org/IWsComnCodeGrp/sSetAuthSiteMemberDBSub" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mSetAuthSiteMemberDB">
+      <soap:operation soapAction="http://tempuri.org/IWsComnCodeGrp/mSetAuthSiteMemberDB" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="aSetAuthSiteMemberDB">
+      <soap:operation soapAction="http://tempuri.org/IWsComnCodeGrp/aSetAuthSiteMemberDB" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="sComnSiteTreeView">
+      <soap:operation soapAction="http://tempuri.org/IWsComnCodeGrp/sComnSiteTreeView" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="sComnSite">
+      <soap:operation soapAction="http://tempuri.org/IWsComnCodeGrp/sComnSite" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mComnSite">
+      <soap:operation soapAction="http://tempuri.org/IWsComnCodeGrp/mComnSite" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="aComnSite">
+      <soap:operation soapAction="http://tempuri.org/IWsComnCodeGrp/aComnSite" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

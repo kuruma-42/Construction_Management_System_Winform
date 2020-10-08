@@ -33,15 +33,15 @@
             this.btnSave = new System.Windows.Forms.Button();
             this.splitContainer3 = new System.Windows.Forms.SplitContainer();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.dgv1_CHK = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.dgv1_CCODE_GRP = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgv1_CCODE_NM = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgv1_CCODE_GRP_NM = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgv1_USING_FLAG = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.dgv1_SORT_NO = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgv1_MEMO = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.dgv2_CCODE_GRP = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgv2_CCODE_NM = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgv2_CCODE_GRP_NM = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgv2_SORT_NO = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgv2_MEMO = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgv2_BTNADD = new System.Windows.Forms.DataGridViewButtonColumn();
@@ -63,6 +63,7 @@
             // splitContainer1
             // 
             this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer1.FixedPanel = System.Windows.Forms.FixedPanel.Panel1;
             this.splitContainer1.Location = new System.Drawing.Point(0, 0);
             this.splitContainer1.Name = "splitContainer1";
             this.splitContainer1.Orientation = System.Windows.Forms.Orientation.Horizontal;
@@ -70,6 +71,7 @@
             // splitContainer1.Panel1
             // 
             this.splitContainer1.Panel1.Controls.Add(this.splitContainer2);
+            this.splitContainer1.Panel1MinSize = 40;
             // 
             // splitContainer1.Panel2
             // 
@@ -126,7 +128,7 @@
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dgv1_CHK,
             this.dgv1_CCODE_GRP,
-            this.dgv1_CCODE_NM,
+            this.dgv1_CCODE_GRP_NM,
             this.dgv1_USING_FLAG,
             this.dgv1_SORT_NO,
             this.dgv1_MEMO});
@@ -140,7 +142,25 @@
             this.dataGridView1.ColumnHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView1_ColumnHeaderMouseClick);
             this.dataGridView1.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.dataGridView1_DataBindingComplete);
             // 
-            // dgv1_CHK-
+            // dataGridView2
+            // 
+            this.dataGridView2.AllowUserToAddRows = false;
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgv2_CCODE_GRP,
+            this.dgv2_CCODE_GRP_NM,
+            this.dgv2_SORT_NO,
+            this.dgv2_MEMO,
+            this.dgv2_BTNADD});
+            this.dataGridView2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridView2.Location = new System.Drawing.Point(0, 0);
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.RowTemplate.Height = 23;
+            this.dataGridView2.Size = new System.Drawing.Size(1037, 50);
+            this.dataGridView2.TabIndex = 0;
+            this.dataGridView2.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellClick);
+            // 
+            // dgv1_CHK
             // 
             this.dgv1_CHK.DataPropertyName = "CHK";
             this.dgv1_CHK.FalseValue = "0";
@@ -161,15 +181,15 @@
             this.dgv1_CCODE_GRP.Name = "dgv1_CCODE_GRP";
             this.dgv1_CCODE_GRP.ReadOnly = true;
             // 
-            // dgv1_CCODE_NM
+            // dgv1_CCODE_GRP_NM
             // 
-            this.dgv1_CCODE_NM.DataPropertyName = "CCODE_NM";
-            this.dgv1_CCODE_NM.HeaderText = "CCODE_NM";
-            this.dgv1_CCODE_NM.MaxInputLength = 100;
-            this.dgv1_CCODE_NM.MinimumWidth = 150;
-            this.dgv1_CCODE_NM.Name = "dgv1_CCODE_NM";
-            this.dgv1_CCODE_NM.ReadOnly = true;
-            this.dgv1_CCODE_NM.Width = 150;
+            this.dgv1_CCODE_GRP_NM.DataPropertyName = "CCODE_GRP_NM";
+            this.dgv1_CCODE_GRP_NM.HeaderText = "CCODE_GRP_NM";
+            this.dgv1_CCODE_GRP_NM.MaxInputLength = 100;
+            this.dgv1_CCODE_GRP_NM.MinimumWidth = 150;
+            this.dgv1_CCODE_GRP_NM.Name = "dgv1_CCODE_GRP_NM";
+            this.dgv1_CCODE_GRP_NM.ReadOnly = true;
+            this.dgv1_CCODE_GRP_NM.Width = 150;
             // 
             // dgv1_USING_FLAG
             // 
@@ -201,24 +221,6 @@
             this.dgv1_MEMO.MaxInputLength = 100;
             this.dgv1_MEMO.Name = "dgv1_MEMO";
             // 
-            // dataGridView2
-            // 
-            this.dataGridView2.AllowUserToAddRows = false;
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dgv2_CCODE_GRP,
-            this.dgv2_CCODE_NM,
-            this.dgv2_SORT_NO,
-            this.dgv2_MEMO,
-            this.dgv2_BTNADD});
-            this.dataGridView2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView2.Location = new System.Drawing.Point(0, 0);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.RowTemplate.Height = 23;
-            this.dataGridView2.Size = new System.Drawing.Size(1037, 50);
-            this.dataGridView2.TabIndex = 0;
-            this.dataGridView2.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellClick);
-            // 
             // dgv2_CCODE_GRP
             // 
             this.dgv2_CCODE_GRP.DataPropertyName = "CCODE_GRP";
@@ -226,12 +228,12 @@
             this.dgv2_CCODE_GRP.MaxInputLength = 1000;
             this.dgv2_CCODE_GRP.Name = "dgv2_CCODE_GRP";
             // 
-            // dgv2_CCODE_NM
+            // dgv2_CCODE_GRP_NM
             // 
-            this.dgv2_CCODE_NM.DataPropertyName = "CCODE_NM";
-            this.dgv2_CCODE_NM.HeaderText = "CCODE_NM";
-            this.dgv2_CCODE_NM.MaxInputLength = 1000;
-            this.dgv2_CCODE_NM.Name = "dgv2_CCODE_NM";
+            this.dgv2_CCODE_GRP_NM.DataPropertyName = "CCODE_GRP_NM";
+            this.dgv2_CCODE_GRP_NM.HeaderText = "CCODE_GRP_NM";
+            this.dgv2_CCODE_GRP_NM.MaxInputLength = 1000;
+            this.dgv2_CCODE_GRP_NM.Name = "dgv2_CCODE_GRP_NM";
             // 
             // dgv2_SORT_NO
             // 
@@ -287,16 +289,16 @@
         private System.Windows.Forms.DataGridView dataGridView2;
         private System.Windows.Forms.SplitContainer splitContainer2;
         private System.Windows.Forms.Button btnSave;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgv2_CCODE_GRP;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgv2_CCODE_NM;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgv2_SORT_NO;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgv2_MEMO;
-        private System.Windows.Forms.DataGridViewButtonColumn dgv2_BTNADD;
         private System.Windows.Forms.DataGridViewCheckBoxColumn dgv1_CHK;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgv1_CCODE_GRP;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgv1_CCODE_NM;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgv1_CCODE_GRP_NM;
         private System.Windows.Forms.DataGridViewCheckBoxColumn dgv1_USING_FLAG;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgv1_SORT_NO;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgv1_MEMO;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgv2_CCODE_GRP;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgv2_CCODE_GRP_NM;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgv2_SORT_NO;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgv2_MEMO;
+        private System.Windows.Forms.DataGridViewButtonColumn dgv2_BTNADD;
     }
 }

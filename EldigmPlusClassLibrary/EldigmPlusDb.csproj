@@ -55,7 +55,9 @@
     <Compile Include="DbClass\MainHome\DbMainHome.cs">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Compile>
+    <Compile Include="DbClass\Sys\CodeT\DbCodeT.cs" />
     <Compile Include="DbClass\Sys\ComnCode\DbComnCodeGrpMainDB.cs" />
+    <Compile Include="DbClass\Sys\CompanyTeam\DbCompany.cs" />
     <Compile Include="DbClass\Sys\MemberSite\DbMember.cs" />
     <Compile Include="DbClass\Sys\MemberSite\DbSite.cs" />
     <Compile Include="DbClass\Sys\Menu\DbMenuMainDB.cs" />

@@ -96,10 +96,40 @@ namespace EldigmPlusApp.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.WebServiceUrl)]
+        [global::System.Configuration.DefaultSettingValueAttribute("http://localhost:49501/WebSvc/Sys/SysAuth/WsSysAuthMemberDB.svc")]
+        public string EldigmPlusApp_Mem_WsSysAuthMemberDB_WsSysAuthMemberDB1 {
+            get {
+                return ((string)(this["EldigmPlusApp_Mem_WsSysAuthMemberDB_WsSysAuthMemberDB1"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.WebServiceUrl)]
         [global::System.Configuration.DefaultSettingValueAttribute("http://localhost:49469/WebSvc/Sys/MemberSite/WsMember.svc")]
         public string EldigmPlusApp_M_WsMember_WsMember {
             get {
                 return ((string)(this["EldigmPlusApp_M_WsMember_WsMember"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.WebServiceUrl)]
+        [global::System.Configuration.DefaultSettingValueAttribute("http://localhost:49501/WebSvc/Sys/CompanyTeam/WsSysCompanyTeam.svc")]
+        public string EldigmPlusApp_Mem_WsSysCompanyTeam_WsSysCompanyTeam {
+            get {
+                return ((string)(this["EldigmPlusApp_Mem_WsSysCompanyTeam_WsSysCompanyTeam"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.WebServiceUrl)]
+        [global::System.Configuration.DefaultSettingValueAttribute("http://localhost:49469/WebSvc/Sys/CodeT/WsCodeTMainDB.svc")]
+        public string EldigmPlusApp_M_WsCodeTMainDB_WsCodeTMainDB {
+            get {
+                return ((string)(this["EldigmPlusApp_M_WsCodeTMainDB_WsCodeTMainDB"]));
             }
         }
     }

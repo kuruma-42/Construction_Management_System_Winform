@@ -53,7 +53,7 @@ namespace EldigmPlusClassLibrary.DbClass.Sys.SysAuth
         {
             string sql = "" +
                " SELECT MEMCO_CD, MEMCO_NM " +
-               " FROM TM00_MEMCO " +
+               " FROM [PLUS_MAIN].dbo.TM00_MEMCO " +
                " WHERE USING_FLAG =1 ";
 
             sql += "" +
