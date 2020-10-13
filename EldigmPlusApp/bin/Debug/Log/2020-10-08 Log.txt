@@ -1,0 +1,31 @@
+
+2020-10-08 17:32:57-->  [error]  (page)::FrmTeam.cs  (Function)::SetDataBind_CmbMember  (Detail):: 
+System.ArgumentException: dgv2_CONST_CCD 열을 찾을 수 없습니다.
+매개 변수 이름: columnName
+   위치: System.Windows.Forms.DataGridViewCellCollection.set_Item(String columnName, DataGridViewCell value)
+   위치: EldigmPlusApp.SubForm.Sys.CompanyTeam.FrmTeam.set_Grideview2Combo1(Int32 rnum, String column_name) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\CompanyTeam\FrmTeam.cs:줄 425
+2020-10-08 17:32:57-->  [error]  (page)::FrmTeam.cs  (Function)::set_Grideview1Combo2  (Detail):: 
+System.ArgumentException: dgv2_CO_TYPE_SCD 열을 찾을 수 없습니다.
+매개 변수 이름: columnName
+   위치: System.Windows.Forms.DataGridViewCellCollection.set_Item(String columnName, DataGridViewCell value)
+   위치: EldigmPlusApp.SubForm.Sys.CompanyTeam.FrmTeam.set_Grideview2Combo2(Int32 rnum, String column_name) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\CompanyTeam\FrmTeam.cs:줄 468
+2020-10-08 17:34:39-->  [error]  (page)::FrmTeam.cs  (Function)::SetDataBind_CmbMember  (Detail):: 
+System.ArgumentException: dgv2_CONST_CCD 열을 찾을 수 없습니다.
+매개 변수 이름: columnName
+   위치: System.Windows.Forms.DataGridViewCellCollection.set_Item(String columnName, DataGridViewCell value)
+   위치: EldigmPlusApp.SubForm.Sys.CompanyTeam.FrmTeam.set_Grideview2Combo1(Int32 rnum, String column_name) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\CompanyTeam\FrmTeam.cs:줄 424
+2020-10-08 17:34:39-->  [error]  (page)::FrmTeam.cs  (Function)::set_Grideview1Combo2  (Detail):: 
+System.ArgumentException: dgv2_CO_TYPE_SCD 열을 찾을 수 없습니다.
+매개 변수 이름: columnName
+   위치: System.Windows.Forms.DataGridViewCellCollection.set_Item(String columnName, DataGridViewCell value)
+   위치: EldigmPlusApp.SubForm.Sys.CompanyTeam.FrmTeam.set_Grideview2Combo2(Int32 rnum, String column_name) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\CompanyTeam\FrmTeam.cs:줄 467
+2020-10-08 17:36:05-->  [error]  (page)::FrmTeam.cs  (Function)::SetDataBind_CmbMember  (Detail):: 
+System.ArgumentException: dgv2_CONST_CCD 열을 찾을 수 없습니다.
+매개 변수 이름: columnName
+   위치: System.Windows.Forms.DataGridViewCellCollection.set_Item(String columnName, DataGridViewCell value)
+   위치: EldigmPlusApp.SubForm.Sys.CompanyTeam.FrmTeam.set_Grideview2Combo1(Int32 rnum, String column_name) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\CompanyTeam\FrmTeam.cs:줄 424
+2020-10-08 17:36:05-->  [error]  (page)::FrmTeam.cs  (Function)::set_Grideview1Combo2  (Detail):: 
+System.ArgumentException: dgv2_CO_TYPE_SCD 열을 찾을 수 없습니다.
+매개 변수 이름: columnName
+   위치: System.Windows.Forms.DataGridViewCellCollection.set_Item(String columnName, DataGridViewCell value)
+   위치: EldigmPlusApp.SubForm.Sys.CompanyTeam.FrmTeam.set_Grideview2Combo2(Int32 rnum, String column_name) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\CompanyTeam\FrmTeam.cs:줄 467

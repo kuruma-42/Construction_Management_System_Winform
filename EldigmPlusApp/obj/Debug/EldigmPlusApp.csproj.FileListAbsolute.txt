@@ -58,3 +58,7 @@ D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\obj\Debug\zh-CN\EldigmPlusApp.resources.dl
 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\obj\Debug\EldigmPlusApp.csproj.CopyComplete
 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\obj\Debug\EldigmPlusApp.exe
 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\obj\Debug\EldigmPlusApp.pdb
+D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\obj\Debug\EldigmPlusApp.csprojAssemblyReference.cache
+D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\obj\Debug\EldigmPlusApp.SubForm.Sys.CompanyTeam.FrmTeam.resources
+D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\obj\Debug\EldigmPlusApp.SubForm.Sys.CodeT.FrmCodeTAuthSite.resources
+D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\obj\Debug\EldigmPlusApp.SubForm.Sys.CodeT.FrmCodeTSite.resources

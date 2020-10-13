@@ -1,0 +1,15 @@
+
+2020-10-13 14:21:01-->  [error]  (page)::FrmMenuSetAuthSite.cs  (Function)::SetDataBind_CmbSite  (Detail):: 
+System.InvalidOperationException: 클라이언트의 응답 콘텐츠 형식이 ''입니다. 'text/xml'여야 합니다.
+빈 응답으로 요청이 실패했습니다.
+   위치: System.Web.Services.Protocols.SoapHttpClientProtocol.ReadResponse(SoapClientMessage message, WebResponse response, Stream responseStream, Boolean asyncCall)
+   위치: System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke(String methodName, Object[] parameters)
+   위치: EldigmPlusApp.M_WsMenuMainDB.WsMenuMainDB.sCodeAuthSiteMemberDB(String pDbnm, DataCodeAuthSiteMemberDB[]& reList, String& reMsg) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\Web References\M_WsMenuMainDB\Reference.cs:줄 862
+   위치: EldigmPlusApp.SubForm.Sys.Menu.FrmMenuSetAuthSite.SetDataBind_CmbSite() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\Menu\FrmMenuSetAuthSite.cs:줄 146
+2020-10-13 14:21:01-->  [error]  (page)::FrmMenuSetAuthSite.cs  (Function)::SetDataBind_CmbMenuTop  (Detail):: 
+System.InvalidOperationException: 클라이언트의 응답 콘텐츠 형식이 ''입니다. 'text/xml'여야 합니다.
+빈 응답으로 요청이 실패했습니다.
+   위치: System.Web.Services.Protocols.SoapHttpClientProtocol.ReadResponse(SoapClientMessage message, WebResponse response, Stream responseStream, Boolean asyncCall)
+   위치: System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke(String methodName, Object[] parameters)
+   위치: EldigmPlusApp.M_WsMenuMainDB.WsMenuMainDB.sMenuTopTreeView(DataMenuTop[]& reList, String& reMsg) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\Web References\M_WsMenuMainDB\Reference.cs:줄 184
+   위치: EldigmPlusApp.SubForm.Sys.Menu.FrmMenuSetAuthSite.SetDataBind_CmbMenuTop() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\Menu\FrmMenuSetAuthSite.cs:줄 106

@@ -327,7 +327,7 @@ namespace EldigmPlusApp.SubForm.Sys.MemberSite
                             string usingFlag_val = dataGridView1.Rows[i].Cells["dgv1_USING_FLAG"].Value.ToString();
 
 
-                            string sortNo_val = "1";
+                            string sortNo_val = "10";
                             if (dataGridView1.Rows[i].Cells["dgv1_SORT_NO"].Value != null)
                             {
                                 sortNo_val = dataGridView1.Rows[i].Cells["dgv1_SORT_NO"].Value.ToString();
@@ -374,8 +374,9 @@ namespace EldigmPlusApp.SubForm.Sys.MemberSite
         {
             try
             {
+                dataGridView2.Rows.Clear();
                 dataGridView2.Rows.Add();
-                dataGridView2.Rows[0].Cells["dgv2_SORT_NO"].Value = "1";
+                dataGridView2.Rows[0].Cells["dgv2_SORT_NO"].Value = "10";
                 dataGridView2.Rows[0].Cells["dgv2_BTNADD"].Value = "추가";
             }
             catch (Exception ex)
@@ -400,7 +401,7 @@ namespace EldigmPlusApp.SubForm.Sys.MemberSite
                     
                     string pMemcoNm = dataGridView2.Rows[0].Cells["dgv2_MEMCO_NM"].Value.ToString();
                     string pDb_Nm = AppInfo.SsDbNm;
-                    string sortNo_val = "1";
+                    string sortNo_val = "10";
                     if (dataGridView2.Rows[0].Cells["dgv2_SORT_NO"].Value != null)
                         sortNo_val = dataGridView2.Rows[0].Cells["dgv2_SORT_NO"].Value.ToString();
 
@@ -408,7 +409,7 @@ namespace EldigmPlusApp.SubForm.Sys.MemberSite
                     if (dataGridView2.Rows[0].Cells["dgv2_MEMO"].Value != null)
                         memo_val = dataGridView2.Rows[0].Cells["dgv2_MEMO"].Value.ToString();
                     string usingFlag_val = "1";
-                    string pInputId = "1";
+                    string pInputId = AppInfo.SsUserId;
 
                     M_WsMember.WsMember wSvc = null;
                     string reCode = "";

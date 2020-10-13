@@ -46,14 +46,6 @@ namespace EldigmPlusApp.SubForm.Sys.SysAuth
                 dataGridView1.Columns["dgv1_MEMO"].HeaderText = "메모";
 
 
-                //dataGridView1.Columns["dgv1_MYBLOCK_FLAG"].HeaderText = "내 구역만 여부";
-                //dataGridView1.Columns["dgv1_MYCON_FLAG"].HeaderText = "내 공종만 여부";
-                //dataGridView1.Columns["dgv1_MYCOM_FLAG"].HeaderText = "내 업체만 여부";     
-
-
-                //dataGridView.Columns["dgv2_AUTH_CD"].HeaderCell.Style.ForeColor = Color.Maroon; // 헤더 필수 항목 빨강색
-                //dataGridView2.Columns["dgv2_AUTH_NM"].HeaderCell.Style.ForeColor = Color.Maroon;
-                //dataGridView2.Columns["dgv2_AUTH_LEVEL"].HeaderCell.Style.ForeColor = Color.Maroon;
 
 
                 Control.CheckForIllegalCrossThreadCalls = false;
@@ -94,7 +86,7 @@ namespace EldigmPlusApp.SubForm.Sys.SysAuth
                 SetDataBind_Combo();
                 GetDbNm();
                 SetDataBind_gridView1();
-                //SetDataBind_gridView2();
+                
             }
             catch (Exception ex)
             {
@@ -185,8 +177,7 @@ namespace EldigmPlusApp.SubForm.Sys.SysAuth
                 if (reCode == "Y")
                 {
                     if (!string.IsNullOrEmpty(reData))
-                        DBNM = reData;
-                        //AppInfo.SsSiteCd = cmbSite.SelectedValue.ToString(); // CMBBOX에서 선택된 SITE_CD 값을 APPINFO.SsSiteCD에 담는다
+                        DBNM = reData;                        
                 }
             }
             catch (Exception ex)
@@ -311,7 +302,7 @@ namespace EldigmPlusApp.SubForm.Sys.SysAuth
                                     //SITE DB 업데이트 실패시 INSERT 해준다.
                                     if (Convert.ToInt16(reData) < 1)
                                     {
-                                        string pInputId = "1";
+                                        string pInputId = AppInfo.SsUserId;
                                         if (usingFlag_val == "1")
                                         {
                                                                                 
@@ -383,7 +374,16 @@ namespace EldigmPlusApp.SubForm.Sys.SysAuth
 
         private void dataGridView1_CellBeginEdit(object sender, DataGridViewCellCancelEventArgs e)
         {
-
+            try
+            {
+                string colName = dataGridView1.Columns[e.ColumnIndex].Name;
+                if (colName != "dgv1_CHK")
+                    dataGridView1.Rows[e.RowIndex].Cells["dgv1_CHK"].Value = "1";
+            }
+            catch (Exception ex)
+            {
+                logs.SaveLog("[error]  (page)::FrmSysAuthMemberDB.cs  (Function)::dataGridView1_CellBeginEdit  (Detail):: " + "\r\n" + ex.ToString(), "Error");
+            }
         }
         bool chkUseAll = false;
         private void dataGridView1_ColumnHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
@@ -437,7 +437,6 @@ namespace EldigmPlusApp.SubForm.Sys.SysAuth
         {
             GetDbNm();
             SetDataBind_gridView1();
-        }
-               
+        }      
     }
 }

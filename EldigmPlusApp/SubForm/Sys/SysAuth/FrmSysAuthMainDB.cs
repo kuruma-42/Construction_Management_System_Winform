@@ -324,7 +324,7 @@ namespace EldigmPlusApp.SubForm.Sys.SysAuth
                     string memo_val = "";
                     if (dataGridView2.Rows[0].Cells["dgv2_MEMO"].Value != null)
                         memo_val = dataGridView2.Rows[0].Cells["dgv2_MEMO"].Value.ToString();
-                    string pInputId = "1";
+                    string pInputId = AppInfo.SsUserId;
 
 
 

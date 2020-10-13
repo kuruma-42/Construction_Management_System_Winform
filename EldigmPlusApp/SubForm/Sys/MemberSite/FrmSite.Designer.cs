@@ -35,9 +35,6 @@
             this.btnSave = new System.Windows.Forms.Button();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.lblName = new System.Windows.Forms.Label();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.dgv1_CHK = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.dgv1_SITE_CD = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgv1_MEMCO_CD = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -45,6 +42,9 @@
             this.dgv1_USING_FLAG = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.dgv1_SORT_NO = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgv1_MEMO = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.lblName = new System.Windows.Forms.Label();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.dgv2_SITE_NM = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgv2_SORT_NO = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgv2_HEADCO_CD = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -174,42 +174,8 @@
             this.dataGridView1.RowTemplate.Height = 23;
             this.dataGridView1.Size = new System.Drawing.Size(1037, 476);
             this.dataGridView1.TabIndex = 1;
+            this.dataGridView1.CellBeginEdit += new System.Windows.Forms.DataGridViewCellCancelEventHandler(this.dataGridView1_CellBeginEdit);
             this.dataGridView1.ColumnHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView1_ColumnHeaderMouseClick);
-            // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.lblName);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1037, 25);
-            this.panel1.TabIndex = 0;
-            // 
-            // lblName
-            // 
-            this.lblName.AutoSize = true;
-            this.lblName.Location = new System.Drawing.Point(12, 11);
-            this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(0, 12);
-            this.lblName.TabIndex = 0;
-            // 
-            // dataGridView2
-            // 
-            this.dataGridView2.AllowUserToAddRows = false;
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dgv2_SITE_NM,
-            this.dgv2_SORT_NO,
-            this.dgv2_HEADCO_CD,
-            this.dgv2_MEMO,
-            this.dgv2_BTNADD});
-            this.dataGridView2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView2.Location = new System.Drawing.Point(0, 0);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.RowTemplate.Height = 23;
-            this.dataGridView2.Size = new System.Drawing.Size(1037, 52);
-            this.dataGridView2.TabIndex = 2;
-            this.dataGridView2.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellClick);
             // 
             // dgv1_CHK
             // 
@@ -263,6 +229,41 @@
             this.dgv1_MEMO.HeaderText = "MEMO";
             this.dgv1_MEMO.MinimumWidth = 100;
             this.dgv1_MEMO.Name = "dgv1_MEMO";
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.lblName);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1037, 25);
+            this.panel1.TabIndex = 0;
+            // 
+            // lblName
+            // 
+            this.lblName.AutoSize = true;
+            this.lblName.Location = new System.Drawing.Point(12, 11);
+            this.lblName.Name = "lblName";
+            this.lblName.Size = new System.Drawing.Size(0, 12);
+            this.lblName.TabIndex = 0;
+            // 
+            // dataGridView2
+            // 
+            this.dataGridView2.AllowUserToAddRows = false;
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgv2_SITE_NM,
+            this.dgv2_SORT_NO,
+            this.dgv2_HEADCO_CD,
+            this.dgv2_MEMO,
+            this.dgv2_BTNADD});
+            this.dataGridView2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridView2.Location = new System.Drawing.Point(0, 0);
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.RowTemplate.Height = 23;
+            this.dataGridView2.Size = new System.Drawing.Size(1037, 52);
+            this.dataGridView2.TabIndex = 2;
+            this.dataGridView2.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellClick);
             // 
             // dgv2_SITE_NM
             // 

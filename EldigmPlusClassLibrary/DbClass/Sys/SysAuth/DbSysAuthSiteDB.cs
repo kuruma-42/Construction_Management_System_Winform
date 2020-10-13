@@ -122,7 +122,7 @@ namespace EldigmPlusClassLibrary.DbClass.Sys.SysAuth
         {
             string sql = "" +
                 " INSERT INTO [PLUS-" + DBNM + "].dbo.T00_CODE_AUTH_SITE (SITE_CD, AUTH_CD, LAB_APRV_FLAG, USING_FLAG, AUTH_LEVEL, MEMO, INPUT_ID, INPUT_DT) " +
-                " VALUES (" + SITE_CD + ", '" + AUTH_CD + "', " + LAB_APRV_FLAG + ", "  + USING_FLAG + ", " + AUTH_LEVEL + ", '" + MEMO + "', '" + INPUT_ID + "', GETDATE()) ";
+                " VALUES (" + SITE_CD + ", '" + AUTH_CD + "', " + LAB_APRV_FLAG + ", "  + USING_FLAG + ", " + AUTH_LEVEL + ", '" + MEMO + "', " + INPUT_ID + ", GETDATE()) ";
 
             int reCnt = 0;
             if (_sqlHelper != null)

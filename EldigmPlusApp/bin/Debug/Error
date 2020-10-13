@@ -66,3 +66,421 @@ System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다
 2020-10-08 15:55:59-->  [error]  (page)::FrmSysAuthSiteDB.cs  (Function)::SetDataBind_gridView1  (Detail):: 
 System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
    위치: EldigmPlusApp.SubForm.Sys.SysAuth.FrmSysAuthSiteDB.SetDataBind_gridView1() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\SysAuth\FrmSysAuthSiteDB.cs:줄 216
+2020-10-08 17:32:57-->  [error]  (page)::FrmTeam.cs  (Function)::FrmCompany  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Sys.CompanyTeam.FrmTeam..ctor() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\CompanyTeam\FrmTeam.cs:줄 51
+2020-10-08 17:32:57-->  [error]  (page)::FrmSysCode.cs  (Function)::SetDataBind_gridView1  (Detail)::reMsg=[[검색 성공]]
+2020-10-08 17:32:57-->  [error]  (page)::FrmSysCode.cs  (Function)::SetDataBind_gridView1  (Detail):: 
+System.ArgumentException: dgv1_CO_CD 열을 찾을 수 없습니다.
+매개 변수 이름: columnName
+   위치: System.Windows.Forms.DataGridViewCellCollection.get_Item(String columnName)
+   위치: EldigmPlusApp.SubForm.Sys.CompanyTeam.FrmTeam.SetDataBind_gridView1() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\CompanyTeam\FrmTeam.cs:줄 277
+2020-10-08 17:34:39-->  [error]  (page)::FrmTeam.cs  (Function)::FrmCompany  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Sys.CompanyTeam.FrmTeam..ctor() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\CompanyTeam\FrmTeam.cs:줄 50
+2020-10-08 17:34:39-->  [error]  (page)::FrmSysCode.cs  (Function)::SetDataBind_gridView1  (Detail)::reMsg=[[검색 성공]]
+2020-10-08 17:34:39-->  [error]  (page)::FrmSysCode.cs  (Function)::SetDataBind_gridView1  (Detail):: 
+System.ArgumentException: dgv1_CO_CD 열을 찾을 수 없습니다.
+매개 변수 이름: columnName
+   위치: System.Windows.Forms.DataGridViewCellCollection.get_Item(String columnName)
+   위치: EldigmPlusApp.SubForm.Sys.CompanyTeam.FrmTeam.SetDataBind_gridView1() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\CompanyTeam\FrmTeam.cs:줄 276
+2020-10-08 17:36:05-->  [error]  (page)::FrmSysCode.cs  (Function)::SetDataBind_gridView1  (Detail)::reMsg=[[검색 성공]]
+2020-10-08 17:36:05-->  [error]  (page)::FrmSysCode.cs  (Function)::SetDataBind_gridView1  (Detail):: 
+System.ArgumentException: dgv1_CO_CD 열을 찾을 수 없습니다.
+매개 변수 이름: columnName
+   위치: System.Windows.Forms.DataGridViewCellCollection.get_Item(String columnName)
+   위치: EldigmPlusApp.SubForm.Sys.CompanyTeam.FrmTeam.SetDataBind_gridView1() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\CompanyTeam\FrmTeam.cs:줄 276
+2020-10-12 09:50:36-->  [error]  (page)::FrmSysCode.cs  (Function)::SetDataBind_gridView1  (Detail)::reMsg=[[검색 성공]]
+2020-10-12 09:50:36-->  [error]  (page)::FrmSysCode.cs  (Function)::SetDataBind_gridView1  (Detail):: 
+System.ArgumentException: dgv1_CO_CD 열을 찾을 수 없습니다.
+매개 변수 이름: columnName
+   위치: System.Windows.Forms.DataGridViewCellCollection.get_Item(String columnName)
+   위치: EldigmPlusApp.SubForm.Sys.CompanyTeam.FrmTeam.SetDataBind_gridView1() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\CompanyTeam\FrmTeam.cs:줄 276
+2020-10-12 09:50:38-->  [error]  (page)::FrmSysCode.cs  (Function)::SetDataBind_gridView1  (Detail)::reMsg=[[검색 성공]]
+2020-10-12 09:50:38-->  [error]  (page)::FrmSysCode.cs  (Function)::SetDataBind_gridView1  (Detail):: 
+System.ArgumentException: dgv1_CO_CD 열을 찾을 수 없습니다.
+매개 변수 이름: columnName
+   위치: System.Windows.Forms.DataGridViewCellCollection.get_Item(String columnName)
+   위치: EldigmPlusApp.SubForm.Sys.CompanyTeam.FrmTeam.SetDataBind_gridView1() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\CompanyTeam\FrmTeam.cs:줄 276
+2020-10-12 09:50:47-->  [error]  (page)::FrmSysCode.cs  (Function)::SetDataBind_gridView1  (Detail)::reMsg=[[검색 성공]]
+2020-10-12 09:50:47-->  [error]  (page)::FrmSysCode.cs  (Function)::SetDataBind_gridView1  (Detail):: 
+System.ArgumentException: dgv1_CO_CD 열을 찾을 수 없습니다.
+매개 변수 이름: columnName
+   위치: System.Windows.Forms.DataGridViewCellCollection.get_Item(String columnName)
+   위치: EldigmPlusApp.SubForm.Sys.CompanyTeam.FrmTeam.SetDataBind_gridView1() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\CompanyTeam\FrmTeam.cs:줄 276
+2020-10-12 09:53:38-->  [error]  (page)::FrmSysCode.cs  (Function)::SetDataBind_gridView1  (Detail)::reMsg=[[검색 성공]]
+2020-10-12 09:53:38-->  [error]  (page)::FrmSysCode.cs  (Function)::SetDataBind_gridView1  (Detail):: 
+System.ArgumentException: dgv1_CO_CD 열을 찾을 수 없습니다.
+매개 변수 이름: columnName
+   위치: System.Windows.Forms.DataGridViewCellCollection.get_Item(String columnName)
+   위치: EldigmPlusApp.SubForm.Sys.CompanyTeam.FrmTeam.SetDataBind_gridView1() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\CompanyTeam\FrmTeam.cs:줄 276
+2020-10-12 09:53:49-->  [error]  (page)::FrmSysCode.cs  (Function)::SetDataBind_gridView1  (Detail)::reMsg=[[검색 성공]]
+2020-10-12 09:53:49-->  [error]  (page)::FrmSysCode.cs  (Function)::SetDataBind_gridView1  (Detail):: 
+System.ArgumentException: dgv1_CO_CD 열을 찾을 수 없습니다.
+매개 변수 이름: columnName
+   위치: System.Windows.Forms.DataGridViewCellCollection.get_Item(String columnName)
+   위치: EldigmPlusApp.SubForm.Sys.CompanyTeam.FrmTeam.SetDataBind_gridView1() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\CompanyTeam\FrmTeam.cs:줄 276
+2020-10-12 09:53:50-->  [error]  (page)::FrmSysCode.cs  (Function)::SetDataBind_gridView1  (Detail)::reMsg=[[검색 성공]]
+2020-10-12 09:53:50-->  [error]  (page)::FrmSysCode.cs  (Function)::SetDataBind_gridView1  (Detail):: 
+System.ArgumentException: dgv1_CO_CD 열을 찾을 수 없습니다.
+매개 변수 이름: columnName
+   위치: System.Windows.Forms.DataGridViewCellCollection.get_Item(String columnName)
+   위치: EldigmPlusApp.SubForm.Sys.CompanyTeam.FrmTeam.SetDataBind_gridView1() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\CompanyTeam\FrmTeam.cs:줄 276
+2020-10-12 09:53:50-->  [error]  (page)::FrmSysCode.cs  (Function)::SetDataBind_gridView1  (Detail)::reMsg=[[검색 성공]]
+2020-10-12 09:53:50-->  [error]  (page)::FrmSysCode.cs  (Function)::SetDataBind_gridView1  (Detail):: 
+System.ArgumentException: dgv1_CO_CD 열을 찾을 수 없습니다.
+매개 변수 이름: columnName
+   위치: System.Windows.Forms.DataGridViewCellCollection.get_Item(String columnName)
+   위치: EldigmPlusApp.SubForm.Sys.CompanyTeam.FrmTeam.SetDataBind_gridView1() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\CompanyTeam\FrmTeam.cs:줄 276
+2020-10-12 09:53:51-->  [error]  (page)::FrmSysCode.cs  (Function)::SetDataBind_gridView1  (Detail)::reMsg=[[검색 성공]]
+2020-10-12 09:53:51-->  [error]  (page)::FrmSysCode.cs  (Function)::SetDataBind_gridView1  (Detail):: 
+System.ArgumentException: dgv1_CO_CD 열을 찾을 수 없습니다.
+매개 변수 이름: columnName
+   위치: System.Windows.Forms.DataGridViewCellCollection.get_Item(String columnName)
+   위치: EldigmPlusApp.SubForm.Sys.CompanyTeam.FrmTeam.SetDataBind_gridView1() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\CompanyTeam\FrmTeam.cs:줄 276
+2020-10-12 09:53:51-->  [error]  (page)::FrmSysCode.cs  (Function)::SetDataBind_gridView1  (Detail)::reMsg=[[검색 성공]]
+2020-10-12 09:53:51-->  [error]  (page)::FrmSysCode.cs  (Function)::SetDataBind_gridView1  (Detail):: 
+System.ArgumentException: dgv1_CO_CD 열을 찾을 수 없습니다.
+매개 변수 이름: columnName
+   위치: System.Windows.Forms.DataGridViewCellCollection.get_Item(String columnName)
+   위치: EldigmPlusApp.SubForm.Sys.CompanyTeam.FrmTeam.SetDataBind_gridView1() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\CompanyTeam\FrmTeam.cs:줄 276
+2020-10-12 09:53:53-->  [error]  (page)::FrmSysCode.cs  (Function)::SetDataBind_gridView1  (Detail)::reMsg=[[검색 성공]]
+2020-10-12 09:53:53-->  [error]  (page)::FrmSysCode.cs  (Function)::SetDataBind_gridView1  (Detail):: 
+System.ArgumentException: dgv1_CO_CD 열을 찾을 수 없습니다.
+매개 변수 이름: columnName
+   위치: System.Windows.Forms.DataGridViewCellCollection.get_Item(String columnName)
+   위치: EldigmPlusApp.SubForm.Sys.CompanyTeam.FrmTeam.SetDataBind_gridView1() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\CompanyTeam\FrmTeam.cs:줄 276
+2020-10-12 09:53:54-->  [error]  (page)::FrmSysCode.cs  (Function)::SetDataBind_gridView1  (Detail)::reMsg=[[검색 성공]]
+2020-10-12 09:53:54-->  [error]  (page)::FrmSysCode.cs  (Function)::SetDataBind_gridView1  (Detail):: 
+System.ArgumentException: dgv1_CO_CD 열을 찾을 수 없습니다.
+매개 변수 이름: columnName
+   위치: System.Windows.Forms.DataGridViewCellCollection.get_Item(String columnName)
+   위치: EldigmPlusApp.SubForm.Sys.CompanyTeam.FrmTeam.SetDataBind_gridView1() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\CompanyTeam\FrmTeam.cs:줄 276
+2020-10-12 11:15:26-->  [error]  (page)::FrmSysCode.cs  (Function)::SetDataBind_gridView1  (Detail)::reMsg=[]
+2020-10-12 11:15:26-->  [error]  (page)::FrmSysCode.cs  (Function)::SetDataBind_gridView1  (Detail):: 
+System.Net.WebException: 요청이 중단되었습니다. 작업 시간이 초과되었습니다.
+   위치: System.Web.Services.Protocols.WebClientProtocol.GetWebResponse(WebRequest request)
+   위치: System.Web.Services.Protocols.HttpWebClientProtocol.GetWebResponse(WebRequest request)
+   위치: System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke(String methodName, Object[] parameters)
+   위치: EldigmPlusApp.Mem_WsSysCompanyTeam.WsSysCompanyTeam.sTeam(String pSiteCd, String pCoCd, String pUsingFlag, String pTeamNm, DataTeam[]& reList, String& reMsg) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\Web References\Mem_WsSysCompanyTeam\Reference.cs:줄 664
+   위치: EldigmPlusApp.SubForm.Sys.CompanyTeam.FrmTeam.SetDataBind_gridView1() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\CompanyTeam\FrmTeam.cs:줄 155
+2020-10-12 11:36:41-->  [error]  (page)::FrmTeam.cs  (Function)::ChkDgv2Param  (Detail):: 
+System.ArgumentException: dgv2_CO_NM 열을 찾을 수 없습니다.
+매개 변수 이름: columnName
+   위치: System.Windows.Forms.DataGridViewCellCollection.get_Item(String columnName)
+   위치: EldigmPlusApp.SubForm.Sys.CompanyTeam.FrmTeam.ChkDgv2Param() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\CompanyTeam\FrmTeam.cs:줄 521
+2020-10-12 11:40:25-->  [error]  (page)::FrmTeam.cs  (Function)::dataGridView2_CellClick  (Detail):: 
+System.Net.WebException: 작업 시간이 초과되었습니다.
+   위치: System.Web.Services.Protocols.WebClientProtocol.GetWebResponse(WebRequest request)
+   위치: System.Web.Services.Protocols.HttpWebClientProtocol.GetWebResponse(WebRequest request)
+   위치: System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke(String methodName, Object[] parameters)
+   위치: EldigmPlusApp.Mem_WsSysCompanyTeam.WsSysCompanyTeam.aTeamPro(String pDbNm, String[] param, String& reMsg, String& reData) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\Web References\Mem_WsSysCompanyTeam\Reference.cs:줄 749
+   위치: EldigmPlusApp.SubForm.Sys.CompanyTeam.FrmTeam.dataGridView2_CellClick(Object sender, DataGridViewCellEventArgs e) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\CompanyTeam\FrmTeam.cs:줄 488
+2020-10-12 11:42:05-->  [error]  (page)::FrmTeam.cs  (Function)::dataGridView2_CellClick  (Detail):: 
+System.Net.WebException: 요청이 중단되었습니다. 작업 시간이 초과되었습니다.
+   위치: System.Web.Services.Protocols.WebClientProtocol.GetWebResponse(WebRequest request)
+   위치: System.Web.Services.Protocols.HttpWebClientProtocol.GetWebResponse(WebRequest request)
+   위치: System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke(String methodName, Object[] parameters)
+   위치: EldigmPlusApp.Mem_WsSysCompanyTeam.WsSysCompanyTeam.aTeamPro(String pDbNm, String[] param, String& reMsg, String& reData) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\Web References\Mem_WsSysCompanyTeam\Reference.cs:줄 749
+   위치: EldigmPlusApp.SubForm.Sys.CompanyTeam.FrmTeam.dataGridView2_CellClick(Object sender, DataGridViewCellEventArgs e) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\CompanyTeam\FrmTeam.cs:줄 488
+2020-10-12 11:44:45-->  [error]  (page)::FrmTeam.cs  (Function)::dataGridView2_CellClick  (Detail):: 
+System.Net.WebException: 작업 시간이 초과되었습니다.
+   위치: System.Web.Services.Protocols.WebClientProtocol.GetWebResponse(WebRequest request)
+   위치: System.Web.Services.Protocols.HttpWebClientProtocol.GetWebResponse(WebRequest request)
+   위치: System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke(String methodName, Object[] parameters)
+   위치: EldigmPlusApp.Mem_WsSysCompanyTeam.WsSysCompanyTeam.aTeamPro(String pDbNm, String[] param, String& reMsg, String& reData) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\Web References\Mem_WsSysCompanyTeam\Reference.cs:줄 749
+   위치: EldigmPlusApp.SubForm.Sys.CompanyTeam.FrmTeam.dataGridView2_CellClick(Object sender, DataGridViewCellEventArgs e) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\CompanyTeam\FrmTeam.cs:줄 488
+2020-10-12 12:08:13-->  [error]  (page)::FrmSysAuthMemberDB.cs  (Function)::SetDataBind_gridView1  (Detail)::reMsg=[]
+2020-10-12 12:08:13-->  [error]  (page)::FrmSysAuthMemberDB.cs  (Function)::SetDataBind_gridView1  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Sys.SysAuth.FrmSysAuthMemberDB.SetDataBind_gridView1() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\SysAuth\FrmSysAuthMemberDB.cs:줄 223
+2020-10-12 12:08:13-->  [error]  (page)::FrmSysAuthSiteDB.cs  (Function)::SetDataBind_gridView1  (Detail)::reMsg=[]
+2020-10-12 12:08:13-->  [error]  (page)::FrmSysAuthSiteDB.cs  (Function)::SetDataBind_gridView1  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Sys.SysAuth.FrmSysAuthSiteDB.SetDataBind_gridView1() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\SysAuth\FrmSysAuthSiteDB.cs:줄 207
+2020-10-12 12:08:15-->  [error]  (page)::FrmSysAuthMemberDB.cs  (Function)::SetDataBind_gridView1  (Detail)::reMsg=[]
+2020-10-12 12:08:15-->  [error]  (page)::FrmSysAuthMemberDB.cs  (Function)::SetDataBind_gridView1  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Sys.SysAuth.FrmSysAuthMemberDB.SetDataBind_gridView1() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\SysAuth\FrmSysAuthMemberDB.cs:줄 223
+2020-10-12 12:08:16-->  [error]  (page)::FrmSysAuthSiteDB.cs  (Function)::SetDataBind_gridView1  (Detail)::reMsg=[]
+2020-10-12 12:08:16-->  [error]  (page)::FrmSysAuthSiteDB.cs  (Function)::SetDataBind_gridView1  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Sys.SysAuth.FrmSysAuthSiteDB.SetDataBind_gridView1() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\SysAuth\FrmSysAuthSiteDB.cs:줄 207
+2020-10-12 12:08:18-->  [error]  (page)::FrmSysAuthMemberDB.cs  (Function)::SetDataBind_gridView1  (Detail)::reMsg=[]
+2020-10-12 12:08:18-->  [error]  (page)::FrmSysAuthMemberDB.cs  (Function)::SetDataBind_gridView1  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Sys.SysAuth.FrmSysAuthMemberDB.SetDataBind_gridView1() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\SysAuth\FrmSysAuthMemberDB.cs:줄 223
+2020-10-12 12:08:19-->  [error]  (page)::FrmSysAuthSiteDB.cs  (Function)::SetDataBind_gridView1  (Detail)::reMsg=[]
+2020-10-12 12:08:19-->  [error]  (page)::FrmSysAuthSiteDB.cs  (Function)::SetDataBind_gridView1  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Sys.SysAuth.FrmSysAuthSiteDB.SetDataBind_gridView1() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\SysAuth\FrmSysAuthSiteDB.cs:줄 207
+2020-10-12 12:25:48-->  [error]  (page)::FrmSysAuthMemberDB.cs  (Function)::SetDataBind_gridView1  (Detail)::reMsg=[]
+2020-10-12 12:25:48-->  [error]  (page)::FrmSysAuthMemberDB.cs  (Function)::SetDataBind_gridView1  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Sys.SysAuth.FrmSysAuthMemberDB.SetDataBind_gridView1() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\SysAuth\FrmSysAuthMemberDB.cs:줄 223
+2020-10-12 12:25:55-->  [error]  (page)::FrmSysAuthSiteDB.cs  (Function)::SetDataBind_gridView1  (Detail)::reMsg=[]
+2020-10-12 12:25:55-->  [error]  (page)::FrmSysAuthSiteDB.cs  (Function)::SetDataBind_gridView1  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Sys.SysAuth.FrmSysAuthSiteDB.SetDataBind_gridView1() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\SysAuth\FrmSysAuthSiteDB.cs:줄 207
+2020-10-12 12:29:46-->  [error]  (page)::FrmSysAuthSiteDB.cs  (Function)::SetDataBind_gridView1  (Detail)::reMsg=[]
+2020-10-12 12:29:46-->  [error]  (page)::FrmSysAuthSiteDB.cs  (Function)::SetDataBind_gridView1  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Sys.SysAuth.FrmSysAuthSiteDB.SetDataBind_gridView1() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\SysAuth\FrmSysAuthSiteDB.cs:줄 207
+2020-10-12 12:29:47-->  [error]  (page)::FrmSysAuthMemberDB.cs  (Function)::SetDataBind_gridView1  (Detail)::reMsg=[]
+2020-10-12 12:29:47-->  [error]  (page)::FrmSysAuthMemberDB.cs  (Function)::SetDataBind_gridView1  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Sys.SysAuth.FrmSysAuthMemberDB.SetDataBind_gridView1() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\SysAuth\FrmSysAuthMemberDB.cs:줄 223
+2020-10-12 12:29:49-->  [error]  (page)::FrmSysAuthSiteDB.cs  (Function)::SetDataBind_gridView1  (Detail)::reMsg=[]
+2020-10-12 12:29:49-->  [error]  (page)::FrmSysAuthSiteDB.cs  (Function)::SetDataBind_gridView1  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Sys.SysAuth.FrmSysAuthSiteDB.SetDataBind_gridView1() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\SysAuth\FrmSysAuthSiteDB.cs:줄 207
+2020-10-12 12:30:01-->  [error]  (page)::FrmSysAuthSiteDB.cs  (Function)::SetDataBind_gridView1  (Detail)::reMsg=[]
+2020-10-12 12:30:01-->  [error]  (page)::FrmSysAuthSiteDB.cs  (Function)::SetDataBind_gridView1  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Sys.SysAuth.FrmSysAuthSiteDB.SetDataBind_gridView1() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\SysAuth\FrmSysAuthSiteDB.cs:줄 207
+2020-10-12 12:31:53-->  [error]  (page)::FrmSysAuthSiteDB.cs  (Function)::SetDataBind_gridView1  (Detail)::reMsg=[]
+2020-10-12 12:31:53-->  [error]  (page)::FrmSysAuthSiteDB.cs  (Function)::SetDataBind_gridView1  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Sys.SysAuth.FrmSysAuthSiteDB.SetDataBind_gridView1() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\SysAuth\FrmSysAuthSiteDB.cs:줄 207
+2020-10-12 12:32:04-->  [error]  (page)::FrmSysAuthMemberDB.cs  (Function)::SetDataBind_gridView1  (Detail)::reMsg=[]
+2020-10-12 12:32:04-->  [error]  (page)::FrmSysAuthMemberDB.cs  (Function)::SetDataBind_gridView1  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Sys.SysAuth.FrmSysAuthMemberDB.SetDataBind_gridView1() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\SysAuth\FrmSysAuthMemberDB.cs:줄 223
+2020-10-12 12:32:05-->  [error]  (page)::FrmSysAuthSiteDB.cs  (Function)::SetDataBind_gridView1  (Detail)::reMsg=[]
+2020-10-12 12:32:05-->  [error]  (page)::FrmSysAuthSiteDB.cs  (Function)::SetDataBind_gridView1  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Sys.SysAuth.FrmSysAuthSiteDB.SetDataBind_gridView1() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\SysAuth\FrmSysAuthSiteDB.cs:줄 207
+2020-10-12 15:23:04-->  [error]  (page)::FrmComnCodeSite.cs  (Function)::SetDataBind_gridView1  (Detail)::pScodeGrp=[Job]
+2020-10-12 15:23:04-->  [error]  (page)::FrmComnCodeSite.cs  (Function)::SetDataBind_gridView1  (Detail)::reMsg=[]
+2020-10-12 15:23:04-->  [error]  (page)::FrmComnCodeSite.cs  (Function)::SetDataBind_gridView1  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Sys.ComnCode.FrmComnCodeSite.SetDataBind_gridView1(String[] codeArr) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\ComnCode\FrmComnCodeSite.cs:줄 233
+2020-10-12 15:23:45-->  [error]  (page)::FrmComnCodeSite.cs  (Function)::SetDataBind_gridView1  (Detail)::pScodeGrp=[Job]
+2020-10-12 15:23:45-->  [error]  (page)::FrmComnCodeSite.cs  (Function)::SetDataBind_gridView1  (Detail)::reMsg=[]
+2020-10-12 15:23:45-->  [error]  (page)::FrmComnCodeSite.cs  (Function)::SetDataBind_gridView1  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Sys.ComnCode.FrmComnCodeSite.SetDataBind_gridView1(String[] codeArr) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\ComnCode\FrmComnCodeSite.cs:줄 233
+2020-10-12 15:24:38-->  [error]  (page)::FrmComnCodeSite.cs  (Function)::SetDataBind_gridView1  (Detail)::pScodeGrp=[Job]
+2020-10-12 15:24:38-->  [error]  (page)::FrmComnCodeSite.cs  (Function)::SetDataBind_gridView1  (Detail)::reMsg=[]
+2020-10-12 15:24:38-->  [error]  (page)::FrmComnCodeSite.cs  (Function)::SetDataBind_gridView1  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Sys.ComnCode.FrmComnCodeSite.SetDataBind_gridView1(String[] codeArr) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\ComnCode\FrmComnCodeSite.cs:줄 233
+2020-10-12 15:24:51-->  [error]  (page)::FrmSysCode.cs  (Function)::SetDataBind_gridView1  (Detail)::reMsg=[]
+2020-10-12 15:24:51-->  [error]  (page)::FrmSysCode.cs  (Function)::SetDataBind_gridView1  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Sys.CompanyTeam.FrmTeam.SetDataBind_gridView1() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\CompanyTeam\FrmTeam.cs:줄 155
+2020-10-12 15:25:02-->  [error]  (page)::FrmSysCode.cs  (Function)::SetDataBind_gridView1  (Detail)::reMsg=[]
+2020-10-12 15:25:02-->  [error]  (page)::FrmSysCode.cs  (Function)::SetDataBind_gridView1  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Sys.CompanyTeam.FrmTeam.SetDataBind_gridView1() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\CompanyTeam\FrmTeam.cs:줄 155
+2020-10-12 15:25:09-->  [error]  (page)::FrmSysCode.cs  (Function)::SetDataBind_gridView1  (Detail)::reMsg=[]
+2020-10-12 15:25:09-->  [error]  (page)::FrmSysCode.cs  (Function)::SetDataBind_gridView1  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Sys.CompanyTeam.FrmTeam.SetDataBind_gridView1() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\CompanyTeam\FrmTeam.cs:줄 155
+2020-10-12 15:25:13-->  [error]  (page)::FrmSysCode.cs  (Function)::SetDataBind_gridView1  (Detail)::reMsg=[]
+2020-10-12 15:25:13-->  [error]  (page)::FrmSysCode.cs  (Function)::SetDataBind_gridView1  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Sys.CompanyTeam.FrmTeam.SetDataBind_gridView1() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\CompanyTeam\FrmTeam.cs:줄 155
+2020-10-12 15:47:22-->  [error]  (page)::FrmComnCodeSite.cs  (Function)::SetDataBind_gridView1  (Detail)::pScodeGrp=[Job]
+2020-10-12 15:47:22-->  [error]  (page)::FrmComnCodeSite.cs  (Function)::SetDataBind_gridView1  (Detail)::reMsg=[]
+2020-10-12 15:47:22-->  [error]  (page)::FrmComnCodeSite.cs  (Function)::SetDataBind_gridView1  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Sys.ComnCode.FrmComnCodeSite.SetDataBind_gridView1(String[] codeArr) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\ComnCode\FrmComnCodeSite.cs:줄 233
+2020-10-12 16:06:20-->  [error]  (page)::FrmComnCodeSite.cs  (Function)::SetDataBind_gridView1  (Detail)::pScodeGrp=[Job]
+2020-10-12 16:06:20-->  [error]  (page)::FrmComnCodeSite.cs  (Function)::SetDataBind_gridView1  (Detail)::reMsg=[]
+2020-10-12 16:06:20-->  [error]  (page)::FrmComnCodeSite.cs  (Function)::SetDataBind_gridView1  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Sys.ComnCode.FrmComnCodeSite.SetDataBind_gridView1(String[] codeArr) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\ComnCode\FrmComnCodeSite.cs:줄 233
+2020-10-12 16:49:15-->  [error]  (page)::FrmMain.cs  (Function)::ultraExplorerBarLeft_ItemClick  (Detail)::
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.MainHome.FrmMain.ultraExplorerBarLeft_ItemClick(Object sender, ItemEventArgs e) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\MainHome\FrmMain.cs:줄 409
+2020-10-12 16:49:17-->  [error]  (page)::FrmMain.cs  (Function)::ultraExplorerBarLeft_ItemClick  (Detail)::
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.MainHome.FrmMain.ultraExplorerBarLeft_ItemClick(Object sender, ItemEventArgs e) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\MainHome\FrmMain.cs:줄 409
+2020-10-12 16:54:36-->  [error]  (page)::FrmMain.cs  (Function)::GetDbNm  (Detail)::reCode=[], reMsg=[]
+2020-10-12 16:54:36-->  [error]  (page)::FrmMain.cs  (Function)::GetDbNm  (Detail)::
+System.Net.WebException: 작업 시간이 초과되었습니다.
+   위치: System.Web.Services.Protocols.WebClientProtocol.GetWebResponse(WebRequest request)
+   위치: System.Web.Services.Protocols.HttpWebClientProtocol.GetWebResponse(WebRequest request)
+   위치: System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke(String methodName, Object[] parameters)
+   위치: EldigmPlusApp.Mem_WsMHome.WsMainHome.sDbNm(String pMemcoCd, String& reData, String& reMsg) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\Web References\Mem_WsMHome\Reference.cs:줄 94
+   위치: EldigmPlusApp.SubForm.MainHome.FrmMain.GetDbNm() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\MainHome\FrmMain.cs:줄 162
+2020-10-12 16:54:53-->  [error]  (page)::FrmMain.cs  (Function)::ultraExplorerBarLeft_ItemClick  (Detail)::
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.MainHome.FrmMain.ultraExplorerBarLeft_ItemClick(Object sender, ItemEventArgs e) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\MainHome\FrmMain.cs:줄 409
+2020-10-12 17:36:24-->  [error]  (page)::FrmMain.cs  (Function)::ultraExplorerBarLeft_ItemClick  (Detail)::
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.MainHome.FrmMain.ultraExplorerBarLeft_ItemClick(Object sender, ItemEventArgs e) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\MainHome\FrmMain.cs:줄 409
+2020-10-12 17:36:25-->  [error]  (page)::FrmMain.cs  (Function)::ultraExplorerBarLeft_ItemClick  (Detail)::
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.MainHome.FrmMain.ultraExplorerBarLeft_ItemClick(Object sender, ItemEventArgs e) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\MainHome\FrmMain.cs:줄 409
+2020-10-12 17:36:45-->  [error]  (page)::FrmMain.cs  (Function)::ultraExplorerBarLeft_ItemClick  (Detail)::
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.MainHome.FrmMain.ultraExplorerBarLeft_ItemClick(Object sender, ItemEventArgs e) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\MainHome\FrmMain.cs:줄 409
+2020-10-12 17:37:14-->  [error]  (page)::FrmCodeTMainDB.cs  (Function)::SetDataBind_treeView1  (Detail):: 
+System.Net.WebException: 요청이 중단되었습니다. 작업 시간이 초과되었습니다.
+   위치: System.Web.Services.Protocols.WebClientProtocol.GetWebResponse(WebRequest request)
+   위치: System.Web.Services.Protocols.HttpWebClientProtocol.GetWebResponse(WebRequest request)
+   위치: System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke(String methodName, Object[] parameters)
+   위치: EldigmPlusApp.M_WsCodeTMainDB.WsCodeTMainDB.sCodeAuthTTreeView(String pScode, String pSiteCd, DataCodeT[]& reList, String& reMsg) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\Web References\M_WsCodeTMainDB\Reference.cs:줄 262
+   위치: EldigmPlusApp.SubForm.Sys.CodeT.FrmCodeTAuthSite.SetDataBind_treeView1() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\CodeT\FrmCodeTAuthSite.cs:줄 143
+2020-10-12 17:48:03-->  [error]  (page)::FrmMain.cs  (Function)::ultraExplorerBarLeft_ItemClick  (Detail)::
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.MainHome.FrmMain.ultraExplorerBarLeft_ItemClick(Object sender, ItemEventArgs e) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\MainHome\FrmMain.cs:줄 409
+2020-10-12 17:48:05-->  [error]  (page)::FrmMain.cs  (Function)::ultraExplorerBarLeft_ItemClick  (Detail)::
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.MainHome.FrmMain.ultraExplorerBarLeft_ItemClick(Object sender, ItemEventArgs e) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\MainHome\FrmMain.cs:줄 409
+2020-10-12 17:48:19-->  [error]  (page)::FrmMain.cs  (Function)::ultraExplorerBarLeft_ItemClick  (Detail)::
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.MainHome.FrmMain.ultraExplorerBarLeft_ItemClick(Object sender, ItemEventArgs e) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\MainHome\FrmMain.cs:줄 409
+2020-10-12 17:48:21-->  [error]  (page)::FrmMain.cs  (Function)::ultraExplorerBarLeft_ItemClick  (Detail)::
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.MainHome.FrmMain.ultraExplorerBarLeft_ItemClick(Object sender, ItemEventArgs e) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\MainHome\FrmMain.cs:줄 409
+2020-10-12 17:48:32-->  [error]  (page)::FrmCodeTMainDB.cs  (Function)::SetDataBind_treeView1  (Detail):: 
+System.Net.WebException: 요청이 중단되었습니다. 작업 시간이 초과되었습니다.
+   위치: System.Web.Services.Protocols.WebClientProtocol.GetWebResponse(WebRequest request)
+   위치: System.Web.Services.Protocols.HttpWebClientProtocol.GetWebResponse(WebRequest request)
+   위치: System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke(String methodName, Object[] parameters)
+   위치: EldigmPlusApp.M_WsCodeTMainDB.WsCodeTMainDB.sCodeAuthTTreeView(String pScode, String pSiteCd, DataCodeT[]& reList, String& reMsg) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\Web References\M_WsCodeTMainDB\Reference.cs:줄 262
+   위치: EldigmPlusApp.SubForm.Sys.CodeT.FrmCodeTAuthSite.SetDataBind_treeView1() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\CodeT\FrmCodeTAuthSite.cs:줄 143
+2020-10-12 18:03:44-->  [error]  (page)::FrmMain.cs  (Function)::ultraExplorerBarLeft_ItemClick  (Detail)::
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.MainHome.FrmMain.ultraExplorerBarLeft_ItemClick(Object sender, ItemEventArgs e) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\MainHome\FrmMain.cs:줄 409
+2020-10-13 12:14:33-->  [error]  (page)::FrmCodeTAuthSite.cs  (Function)::SetDataBind_gridView1  (Detail)::pScodeGrp=[]
+2020-10-13 12:14:33-->  [error]  (page)::FrmCodeTAuthSite.cs  (Function)::SetDataBind_gridView1  (Detail)::reMsg=[]
+2020-10-13 12:14:33-->  [error]  (page)::FrmCodeTAuthSite.cs  (Function)::SetDataBind_gridView1  (Detail):: 
+System.Net.WebException: 작업 시간이 초과되었습니다.
+   위치: System.Web.Services.Protocols.WebClientProtocol.GetWebResponse(WebRequest request)
+   위치: System.Web.Services.Protocols.HttpWebClientProtocol.GetWebResponse(WebRequest request)
+   위치: System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke(String methodName, Object[] parameters)
+   위치: EldigmPlusApp.M_WsCodeTMainDB.WsCodeTMainDB.sCodeTAuthTtype(String pTtypeScd, String pSiteCd, DataCodeTAuthSelect[]& reList, String& reMsg) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\Web References\M_WsCodeTMainDB\Reference.cs:줄 340
+   위치: EldigmPlusApp.SubForm.Sys.CodeT.FrmCodeTAuthSite.SetDataBind_gridView1(String codeGrp, String code_val) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\CodeT\FrmCodeTAuthSite.cs:줄 252
+2020-10-13 14:03:12-->  [error]  (page)::FrmCodeTSite.cs  (Function)::SetDataBind_treeView1  (Detail):: 
+System.Web.Services.Protocols.SoapHeaderException: EndpointDispatcher에서 ContractFilter가 일치하지 않으므로 수신자 쪽에서 동작 'http://tempuri.org/IWsCodeTMainDB/sCodeTSiteTreeView'이(가) 있는 메시지를 처리할 수 없습니다. 발신자와 수신자 사이에 계약 불일치(발신자와 수신자 사이의 동작 불일치) 또는 바인딩/보안 불일치가 있기 때문일 수 있습니다. 발신자와 수신자의 계약 및 바인딩(메시지, 전송, 없음 등의 보안 요구 사항 포함)이 같은지 확인하십시오.
+   위치: System.Web.Services.Protocols.SoapHttpClientProtocol.ReadResponse(SoapClientMessage message, WebResponse response, Stream responseStream, Boolean asyncCall)
+   위치: System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke(String methodName, Object[] parameters)
+   위치: EldigmPlusApp.M_WsCodeTMainDB.WsCodeTMainDB.sCodeTSiteTreeView(String pDbnm, String pSiteCd, String pAuth, DataCodeTSiteTreeView[]& reList, String& reMsg) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\Web References\M_WsCodeTMainDB\Reference.cs:줄 585
+   위치: EldigmPlusApp.SubForm.Sys.CodeT.FrmCodeTSite.SetDataBind_treeView1() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\CodeT\FrmCodeTSite.cs:줄 108
+2020-10-13 14:03:16-->  [error]  (page)::FrmCodeTMainDB.cs  (Function)::SetDataBind_gridView1  (Detail)::codeGrp=[1], code_val=[Text]
+2020-10-13 14:03:16-->  [error]  (page)::FrmCodeTMainDB.cs  (Function)::SetDataBind_gridView1  (Detail)::reMsg=[[검색 성공]]
+2020-10-13 14:03:16-->  [error]  (page)::FrmCodeTMainDB.cs  (Function)::SetDataBind_gridView1  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Sys.CodeT.FrmCodeTMainDB.SetDataBind_gridView1(String codeGrp, String code_val) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\CodeT\FrmCodeTMainDB.cs:줄 267
+2020-10-13 14:03:17-->  [error]  (page)::FrmCodeTSite.cs  (Function)::SetDataBind_treeView1  (Detail):: 
+System.Web.Services.Protocols.SoapHeaderException: EndpointDispatcher에서 ContractFilter가 일치하지 않으므로 수신자 쪽에서 동작 'http://tempuri.org/IWsCodeTMainDB/sCodeTSiteTreeView'이(가) 있는 메시지를 처리할 수 없습니다. 발신자와 수신자 사이에 계약 불일치(발신자와 수신자 사이의 동작 불일치) 또는 바인딩/보안 불일치가 있기 때문일 수 있습니다. 발신자와 수신자의 계약 및 바인딩(메시지, 전송, 없음 등의 보안 요구 사항 포함)이 같은지 확인하십시오.
+   위치: System.Web.Services.Protocols.SoapHttpClientProtocol.ReadResponse(SoapClientMessage message, WebResponse response, Stream responseStream, Boolean asyncCall)
+   위치: System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke(String methodName, Object[] parameters)
+   위치: EldigmPlusApp.M_WsCodeTMainDB.WsCodeTMainDB.sCodeTSiteTreeView(String pDbnm, String pSiteCd, String pAuth, DataCodeTSiteTreeView[]& reList, String& reMsg) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\Web References\M_WsCodeTMainDB\Reference.cs:줄 585
+   위치: EldigmPlusApp.SubForm.Sys.CodeT.FrmCodeTSite.SetDataBind_treeView1() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\CodeT\FrmCodeTSite.cs:줄 108
+2020-10-13 14:20:57-->  [error]  (page)::FrmMenuMainDB.cs  (Function)::SetDataBind_treeView1  (Detail):: 
+System.InvalidOperationException: 클라이언트의 응답 콘텐츠 형식이 ''입니다. 'text/xml'여야 합니다.
+빈 응답으로 요청이 실패했습니다.
+   위치: System.Web.Services.Protocols.SoapHttpClientProtocol.ReadResponse(SoapClientMessage message, WebResponse response, Stream responseStream, Boolean asyncCall)
+   위치: System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke(String methodName, Object[] parameters)
+   위치: EldigmPlusApp.M_WsMenuMainDB.WsMenuMainDB.sMenuTopTreeView(DataMenuTop[]& reList, String& reMsg) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\Web References\M_WsMenuMainDB\Reference.cs:줄 184
+   위치: EldigmPlusApp.SubForm.Sys.Menu.FrmMenuMainDB.SetDataBind_treeView1() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\Menu\FrmMenuMainDB.cs:줄 125
+2020-10-13 14:21:01-->  [error]  (page)::FrmMenuSetAuthSite.cs  (Function)::GetDbNm  (Detail)::reCode=[], reMsg=[]
+2020-10-13 14:21:01-->  [error]  (page)::FrmMenuSetAuthSite.cs  (Function)::GetDbNm  (Detail)::
+System.InvalidOperationException: 클라이언트의 응답 콘텐츠 형식이 ''입니다. 'text/xml'여야 합니다.
+빈 응답으로 요청이 실패했습니다.
+   위치: System.Web.Services.Protocols.SoapHttpClientProtocol.ReadResponse(SoapClientMessage message, WebResponse response, Stream responseStream, Boolean asyncCall)
+   위치: System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke(String methodName, Object[] parameters)
+   위치: EldigmPlusApp.M_WsMenuMainDB.WsMenuMainDB.siteDbNm(String pSiteCd, String& reData, String& reMsg) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\Web References\M_WsMenuMainDB\Reference.cs:줄 700
+   위치: EldigmPlusApp.SubForm.Sys.Menu.FrmMenuSetAuthSite.GetDbNm() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\Menu\FrmMenuSetAuthSite.cs:줄 184
+2020-10-13 14:21:01-->  [error]  (page)::FrmMenuSetAuthSite.cs  (Function)::SetDataBind_treeView1  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Sys.Menu.FrmMenuSetAuthSite.SetDataBind_treeView1() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\Menu\FrmMenuSetAuthSite.cs:줄 244
+2020-10-13 14:21:04-->  [error]  (page)::FrmMenuMainDB.cs  (Function)::SetDataBind_treeView1  (Detail):: 
+System.InvalidOperationException: 클라이언트의 응답 콘텐츠 형식이 ''입니다. 'text/xml'여야 합니다.
+빈 응답으로 요청이 실패했습니다.
+   위치: System.Web.Services.Protocols.SoapHttpClientProtocol.ReadResponse(SoapClientMessage message, WebResponse response, Stream responseStream, Boolean asyncCall)
+   위치: System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke(String methodName, Object[] parameters)
+   위치: EldigmPlusApp.M_WsMenuMainDB.WsMenuMainDB.sMenuTopTreeView(DataMenuTop[]& reList, String& reMsg) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\Web References\M_WsMenuMainDB\Reference.cs:줄 184
+   위치: EldigmPlusApp.SubForm.Sys.Menu.FrmMenuMainDB.SetDataBind_treeView1() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\Menu\FrmMenuMainDB.cs:줄 125
+2020-10-13 14:21:11-->  [error]  (page)::FrmSysAuthMemberDB.cs  (Function)::SetDataBind_gridView1  (Detail)::reMsg=[]
+2020-10-13 14:21:11-->  [error]  (page)::FrmSysAuthMemberDB.cs  (Function)::SetDataBind_gridView1  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Sys.SysAuth.FrmSysAuthMemberDB.SetDataBind_gridView1() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\SysAuth\FrmSysAuthMemberDB.cs:줄 223
+2020-10-13 14:21:31-->  [error]  (page)::FrmMenuMainDB.cs  (Function)::SetDataBind_treeView1  (Detail):: 
+System.InvalidOperationException: 클라이언트의 응답 콘텐츠 형식이 ''입니다. 'text/xml'여야 합니다.
+빈 응답으로 요청이 실패했습니다.
+   위치: System.Web.Services.Protocols.SoapHttpClientProtocol.ReadResponse(SoapClientMessage message, WebResponse response, Stream responseStream, Boolean asyncCall)
+   위치: System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke(String methodName, Object[] parameters)
+   위치: EldigmPlusApp.M_WsMenuMainDB.WsMenuMainDB.sMenuTopTreeView(DataMenuTop[]& reList, String& reMsg) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\Web References\M_WsMenuMainDB\Reference.cs:줄 184
+   위치: EldigmPlusApp.SubForm.Sys.Menu.FrmMenuMainDB.SetDataBind_treeView1() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\Menu\FrmMenuMainDB.cs:줄 125
+2020-10-13 14:57:35-->  [error]  (page)::FrmSysAuthMemberDB.cs  (Function)::SetDataBind_gridView1  (Detail)::reMsg=[]
+2020-10-13 14:57:35-->  [error]  (page)::FrmSysAuthMemberDB.cs  (Function)::SetDataBind_gridView1  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Sys.SysAuth.FrmSysAuthMemberDB.SetDataBind_gridView1() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\SysAuth\FrmSysAuthMemberDB.cs:줄 223
+2020-10-13 14:57:39-->  [error]  (page)::FrmComnCodeSite.cs  (Function)::SetDataBind_gridView1  (Detail)::pScodeGrp=[Job]
+2020-10-13 14:57:39-->  [error]  (page)::FrmComnCodeSite.cs  (Function)::SetDataBind_gridView1  (Detail)::reMsg=[]
+2020-10-13 14:57:39-->  [error]  (page)::FrmComnCodeSite.cs  (Function)::SetDataBind_gridView1  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Sys.ComnCode.FrmComnCodeSite.SetDataBind_gridView1(String[] _codeArr) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\ComnCode\FrmComnCodeSite.cs:줄 232
+2020-10-13 14:57:41-->  [error]  (page)::FrmComnCodeSite.cs  (Function)::SetDataBind_gridView1  (Detail)::pScodeGrp=[Job]
+2020-10-13 14:57:41-->  [error]  (page)::FrmComnCodeSite.cs  (Function)::SetDataBind_gridView1  (Detail)::reMsg=[]
+2020-10-13 14:57:41-->  [error]  (page)::FrmComnCodeSite.cs  (Function)::SetDataBind_gridView1  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Sys.ComnCode.FrmComnCodeSite.SetDataBind_gridView1(String[] _codeArr) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\ComnCode\FrmComnCodeSite.cs:줄 232
+2020-10-13 15:00:11-->  [error]  (page)::FrmSysAuthMemberDB.cs  (Function)::SetDataBind_gridView1  (Detail)::reMsg=[]
+2020-10-13 15:00:12-->  [error]  (page)::FrmSysAuthMemberDB.cs  (Function)::SetDataBind_gridView1  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Sys.SysAuth.FrmSysAuthMemberDB.SetDataBind_gridView1() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\SysAuth\FrmSysAuthMemberDB.cs:줄 223
+2020-10-13 15:00:14-->  [error]  (page)::FrmSysAuthMemberDB.cs  (Function)::SetDataBind_gridView1  (Detail)::reMsg=[]
+2020-10-13 15:00:14-->  [error]  (page)::FrmSysAuthMemberDB.cs  (Function)::SetDataBind_gridView1  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Sys.SysAuth.FrmSysAuthMemberDB.SetDataBind_gridView1() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\SysAuth\FrmSysAuthMemberDB.cs:줄 223
+2020-10-13 15:01:29-->  [error]  (page)::FrmSysCode.cs  (Function)::btnSave_Click  (Detail):: 
+System.Web.Services.Protocols.SoapHeaderException: EndpointDispatcher에서 ContractFilter가 일치하지 않으므로 수신자 쪽에서 동작 'http://tempuri.org/IWsCodeTMainDB/mCodeTAuth'이(가) 있는 메시지를 처리할 수 없습니다. 발신자와 수신자 사이에 계약 불일치(발신자와 수신자 사이의 동작 불일치) 또는 바인딩/보안 불일치가 있기 때문일 수 있습니다. 발신자와 수신자의 계약 및 바인딩(메시지, 전송, 없음 등의 보안 요구 사항 포함)이 같은지 확인하십시오.
+   위치: System.Web.Services.Protocols.SoapHttpClientProtocol.ReadResponse(SoapClientMessage message, WebResponse response, Stream responseStream, Boolean asyncCall)
+   위치: System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke(String methodName, Object[] parameters)
+   위치: EldigmPlusApp.M_WsCodeTMainDB.WsCodeTMainDB.mCodeTAuth(String pTcodeNm, String pSiteCd, String pAuthCd, String pViewFlag, String pNewFlag, String pModifyFlag, String& reMsg, String& reData) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\Web References\M_WsCodeTMainDB\Reference.cs:줄 723
+   위치: EldigmPlusApp.SubForm.Sys.CodeT.FrmCodeTAuthSite.btnSave_Click(Object sender, EventArgs e) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\CodeT\FrmCodeTAuthSite.cs:줄 441
+2020-10-13 15:01:31-->  [error]  (page)::FrmSysCode.cs  (Function)::btnSave_Click  (Detail):: 
+System.Web.Services.Protocols.SoapHeaderException: EndpointDispatcher에서 ContractFilter가 일치하지 않으므로 수신자 쪽에서 동작 'http://tempuri.org/IWsCodeTMainDB/mCodeTAuth'이(가) 있는 메시지를 처리할 수 없습니다. 발신자와 수신자 사이에 계약 불일치(발신자와 수신자 사이의 동작 불일치) 또는 바인딩/보안 불일치가 있기 때문일 수 있습니다. 발신자와 수신자의 계약 및 바인딩(메시지, 전송, 없음 등의 보안 요구 사항 포함)이 같은지 확인하십시오.
+   위치: System.Web.Services.Protocols.SoapHttpClientProtocol.ReadResponse(SoapClientMessage message, WebResponse response, Stream responseStream, Boolean asyncCall)
+   위치: System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke(String methodName, Object[] parameters)
+   위치: EldigmPlusApp.M_WsCodeTMainDB.WsCodeTMainDB.mCodeTAuth(String pTcodeNm, String pSiteCd, String pAuthCd, String pViewFlag, String pNewFlag, String pModifyFlag, String& reMsg, String& reData) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\Web References\M_WsCodeTMainDB\Reference.cs:줄 723
+   위치: EldigmPlusApp.SubForm.Sys.CodeT.FrmCodeTAuthSite.btnSave_Click(Object sender, EventArgs e) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\CodeT\FrmCodeTAuthSite.cs:줄 441
+2020-10-13 15:01:31-->  [error]  (page)::FrmSysCode.cs  (Function)::btnSave_Click  (Detail):: 
+System.Web.Services.Protocols.SoapHeaderException: EndpointDispatcher에서 ContractFilter가 일치하지 않으므로 수신자 쪽에서 동작 'http://tempuri.org/IWsCodeTMainDB/mCodeTAuth'이(가) 있는 메시지를 처리할 수 없습니다. 발신자와 수신자 사이에 계약 불일치(발신자와 수신자 사이의 동작 불일치) 또는 바인딩/보안 불일치가 있기 때문일 수 있습니다. 발신자와 수신자의 계약 및 바인딩(메시지, 전송, 없음 등의 보안 요구 사항 포함)이 같은지 확인하십시오.
+   위치: System.Web.Services.Protocols.SoapHttpClientProtocol.ReadResponse(SoapClientMessage message, WebResponse response, Stream responseStream, Boolean asyncCall)
+   위치: System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke(String methodName, Object[] parameters)
+   위치: EldigmPlusApp.M_WsCodeTMainDB.WsCodeTMainDB.mCodeTAuth(String pTcodeNm, String pSiteCd, String pAuthCd, String pViewFlag, String pNewFlag, String pModifyFlag, String& reMsg, String& reData) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\Web References\M_WsCodeTMainDB\Reference.cs:줄 723
+   위치: EldigmPlusApp.SubForm.Sys.CodeT.FrmCodeTAuthSite.btnSave_Click(Object sender, EventArgs e) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\CodeT\FrmCodeTAuthSite.cs:줄 441
+2020-10-13 15:01:32-->  [error]  (page)::FrmSysCode.cs  (Function)::btnSave_Click  (Detail):: 
+System.Web.Services.Protocols.SoapHeaderException: EndpointDispatcher에서 ContractFilter가 일치하지 않으므로 수신자 쪽에서 동작 'http://tempuri.org/IWsCodeTMainDB/mCodeTAuth'이(가) 있는 메시지를 처리할 수 없습니다. 발신자와 수신자 사이에 계약 불일치(발신자와 수신자 사이의 동작 불일치) 또는 바인딩/보안 불일치가 있기 때문일 수 있습니다. 발신자와 수신자의 계약 및 바인딩(메시지, 전송, 없음 등의 보안 요구 사항 포함)이 같은지 확인하십시오.
+   위치: System.Web.Services.Protocols.SoapHttpClientProtocol.ReadResponse(SoapClientMessage message, WebResponse response, Stream responseStream, Boolean asyncCall)
+   위치: System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke(String methodName, Object[] parameters)
+   위치: EldigmPlusApp.M_WsCodeTMainDB.WsCodeTMainDB.mCodeTAuth(String pTcodeNm, String pSiteCd, String pAuthCd, String pViewFlag, String pNewFlag, String pModifyFlag, String& reMsg, String& reData) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\Web References\M_WsCodeTMainDB\Reference.cs:줄 723
+   위치: EldigmPlusApp.SubForm.Sys.CodeT.FrmCodeTAuthSite.btnSave_Click(Object sender, EventArgs e) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\CodeT\FrmCodeTAuthSite.cs:줄 441
+2020-10-13 15:01:32-->  [error]  (page)::FrmSysCode.cs  (Function)::btnSave_Click  (Detail):: 
+System.Web.Services.Protocols.SoapHeaderException: EndpointDispatcher에서 ContractFilter가 일치하지 않으므로 수신자 쪽에서 동작 'http://tempuri.org/IWsCodeTMainDB/mCodeTAuth'이(가) 있는 메시지를 처리할 수 없습니다. 발신자와 수신자 사이에 계약 불일치(발신자와 수신자 사이의 동작 불일치) 또는 바인딩/보안 불일치가 있기 때문일 수 있습니다. 발신자와 수신자의 계약 및 바인딩(메시지, 전송, 없음 등의 보안 요구 사항 포함)이 같은지 확인하십시오.
+   위치: System.Web.Services.Protocols.SoapHttpClientProtocol.ReadResponse(SoapClientMessage message, WebResponse response, Stream responseStream, Boolean asyncCall)
+   위치: System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke(String methodName, Object[] parameters)
+   위치: EldigmPlusApp.M_WsCodeTMainDB.WsCodeTMainDB.mCodeTAuth(String pTcodeNm, String pSiteCd, String pAuthCd, String pViewFlag, String pNewFlag, String pModifyFlag, String& reMsg, String& reData) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\Web References\M_WsCodeTMainDB\Reference.cs:줄 723
+   위치: EldigmPlusApp.SubForm.Sys.CodeT.FrmCodeTAuthSite.btnSave_Click(Object sender, EventArgs e) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\CodeT\FrmCodeTAuthSite.cs:줄 441
+2020-10-13 15:01:32-->  [error]  (page)::FrmSysCode.cs  (Function)::btnSave_Click  (Detail):: 
+System.Web.Services.Protocols.SoapHeaderException: EndpointDispatcher에서 ContractFilter가 일치하지 않으므로 수신자 쪽에서 동작 'http://tempuri.org/IWsCodeTMainDB/mCodeTAuth'이(가) 있는 메시지를 처리할 수 없습니다. 발신자와 수신자 사이에 계약 불일치(발신자와 수신자 사이의 동작 불일치) 또는 바인딩/보안 불일치가 있기 때문일 수 있습니다. 발신자와 수신자의 계약 및 바인딩(메시지, 전송, 없음 등의 보안 요구 사항 포함)이 같은지 확인하십시오.
+   위치: System.Web.Services.Protocols.SoapHttpClientProtocol.ReadResponse(SoapClientMessage message, WebResponse response, Stream responseStream, Boolean asyncCall)
+   위치: System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke(String methodName, Object[] parameters)
+   위치: EldigmPlusApp.M_WsCodeTMainDB.WsCodeTMainDB.mCodeTAuth(String pTcodeNm, String pSiteCd, String pAuthCd, String pViewFlag, String pNewFlag, String pModifyFlag, String& reMsg, String& reData) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\Web References\M_WsCodeTMainDB\Reference.cs:줄 723
+   위치: EldigmPlusApp.SubForm.Sys.CodeT.FrmCodeTAuthSite.btnSave_Click(Object sender, EventArgs e) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\CodeT\FrmCodeTAuthSite.cs:줄 441
+2020-10-13 15:01:32-->  [error]  (page)::FrmSysCode.cs  (Function)::btnSave_Click  (Detail):: 
+System.Web.Services.Protocols.SoapHeaderException: EndpointDispatcher에서 ContractFilter가 일치하지 않으므로 수신자 쪽에서 동작 'http://tempuri.org/IWsCodeTMainDB/mCodeTAuth'이(가) 있는 메시지를 처리할 수 없습니다. 발신자와 수신자 사이에 계약 불일치(발신자와 수신자 사이의 동작 불일치) 또는 바인딩/보안 불일치가 있기 때문일 수 있습니다. 발신자와 수신자의 계약 및 바인딩(메시지, 전송, 없음 등의 보안 요구 사항 포함)이 같은지 확인하십시오.
+   위치: System.Web.Services.Protocols.SoapHttpClientProtocol.ReadResponse(SoapClientMessage message, WebResponse response, Stream responseStream, Boolean asyncCall)
+   위치: System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke(String methodName, Object[] parameters)
+   위치: EldigmPlusApp.M_WsCodeTMainDB.WsCodeTMainDB.mCodeTAuth(String pTcodeNm, String pSiteCd, String pAuthCd, String pViewFlag, String pNewFlag, String pModifyFlag, String& reMsg, String& reData) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\Web References\M_WsCodeTMainDB\Reference.cs:줄 723
+   위치: EldigmPlusApp.SubForm.Sys.CodeT.FrmCodeTAuthSite.btnSave_Click(Object sender, EventArgs e) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\CodeT\FrmCodeTAuthSite.cs:줄 441
+2020-10-13 15:01:32-->  [error]  (page)::FrmSysCode.cs  (Function)::btnSave_Click  (Detail):: 
+System.Web.Services.Protocols.SoapHeaderException: EndpointDispatcher에서 ContractFilter가 일치하지 않으므로 수신자 쪽에서 동작 'http://tempuri.org/IWsCodeTMainDB/mCodeTAuth'이(가) 있는 메시지를 처리할 수 없습니다. 발신자와 수신자 사이에 계약 불일치(발신자와 수신자 사이의 동작 불일치) 또는 바인딩/보안 불일치가 있기 때문일 수 있습니다. 발신자와 수신자의 계약 및 바인딩(메시지, 전송, 없음 등의 보안 요구 사항 포함)이 같은지 확인하십시오.
+   위치: System.Web.Services.Protocols.SoapHttpClientProtocol.ReadResponse(SoapClientMessage message, WebResponse response, Stream responseStream, Boolean asyncCall)
+   위치: System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke(String methodName, Object[] parameters)
+   위치: EldigmPlusApp.M_WsCodeTMainDB.WsCodeTMainDB.mCodeTAuth(String pTcodeNm, String pSiteCd, String pAuthCd, String pViewFlag, String pNewFlag, String pModifyFlag, String& reMsg, String& reData) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\Web References\M_WsCodeTMainDB\Reference.cs:줄 723
+   위치: EldigmPlusApp.SubForm.Sys.CodeT.FrmCodeTAuthSite.btnSave_Click(Object sender, EventArgs e) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\CodeT\FrmCodeTAuthSite.cs:줄 441
+2020-10-13 15:02:21-->  [error]  (page)::FrmSysCode.cs  (Function)::btnSave_Click  (Detail):: 
+System.Web.Services.Protocols.SoapHeaderException: EndpointDispatcher에서 ContractFilter가 일치하지 않으므로 수신자 쪽에서 동작 'http://tempuri.org/IWsCodeTMainDB/mCodeTAuth'이(가) 있는 메시지를 처리할 수 없습니다. 발신자와 수신자 사이에 계약 불일치(발신자와 수신자 사이의 동작 불일치) 또는 바인딩/보안 불일치가 있기 때문일 수 있습니다. 발신자와 수신자의 계약 및 바인딩(메시지, 전송, 없음 등의 보안 요구 사항 포함)이 같은지 확인하십시오.
+   위치: System.Web.Services.Protocols.SoapHttpClientProtocol.ReadResponse(SoapClientMessage message, WebResponse response, Stream responseStream, Boolean asyncCall)
+   위치: System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke(String methodName, Object[] parameters)
+   위치: EldigmPlusApp.M_WsCodeTMainDB.WsCodeTMainDB.mCodeTAuth(String pTcodeNm, String pSiteCd, String pAuthCd, String pViewFlag, String pNewFlag, String pModifyFlag, String& reMsg, String& reData) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\Web References\M_WsCodeTMainDB\Reference.cs:줄 723
+   위치: EldigmPlusApp.SubForm.Sys.CodeT.FrmCodeTAuthSite.btnSave_Click(Object sender, EventArgs e) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\CodeT\FrmCodeTAuthSite.cs:줄 441

@@ -12,6 +12,125 @@ namespace EldigmPlusSvc_Memco.Biz.Sys.CompanyTeam
     {
         LogClass _logs = new LogClass();
 
+        //COMPANY CMB BOX
+        public DataSet companyCmb(string pSiteCd)
+        {
+            DataSet ds = null;
+
+            DbTeam db = null;
+            try
+            {
+                string dbCon_IP = WebConfigurationManager.ConnectionStrings["ConnectionStr_IP"].ConnectionString;
+                string dbCon_DB = WebConfigurationManager.ConnectionStrings["ConnectionStr_DB"].ConnectionString;
+                string dbCon_USER = WebConfigurationManager.ConnectionStrings["ConnectionStr_USER"].ConnectionString;
+
+                db = new DbTeam(dbCon_IP, dbCon_DB, dbCon_USER, "0");
+                ds = db.companyCmb(pSiteCd);
+            }
+            catch (Exception ex)
+            {
+                _logs.SaveLog("[error]  (page)::BizTeam.cs  (Function)::companyCmb  (Detail)::" + "\r\n" + ex.ToString(), "Error");
+            }
+            finally
+            {
+                if (db != null)
+                    db.DisConnect();
+            }
+
+            return ds;
+        }
+
+        //SELECT TEAM 
+        public DataSet sTeam(string pSiteCd, string pCoCd, string pUsingFlag, string pTeamNm)
+        {
+            DataSet ds = null;
+
+            DbTeam db = null;
+            try
+            {
+                string dbCon_IP = WebConfigurationManager.ConnectionStrings["ConnectionStr_IP"].ConnectionString;
+                string dbCon_DB = WebConfigurationManager.ConnectionStrings["ConnectionStr_DB"].ConnectionString;
+                string dbCon_USER = WebConfigurationManager.ConnectionStrings["ConnectionStr_USER"].ConnectionString;
+
+                db = new DbTeam(dbCon_IP, dbCon_DB, dbCon_USER, "0");
+                ds = db.sTeam(pSiteCd, pCoCd, pUsingFlag, pTeamNm);
+            }
+            catch (Exception ex)
+            {
+                _logs.SaveLog("[error]  (page)::BizTeam.cs  (Function)::sTeam  (Detail)::pSiteCd=[" + pSiteCd + "], pCoCd=[" + pCoCd + "], pUsingFlag=[" + pUsingFlag + "], pTeamNm=[" + pTeamNm + "]"
+                    , "Error");
+                _logs.SaveLog("[error]  (page)::BizTeam.cs  (Function)::sTeam  (Detail)::" + "\r\n" + ex.ToString(), "Error");
+            }
+            finally
+            {
+                if (db != null)
+                    db.DisConnect();
+            }
+
+            return ds;
+        }
+
+        //UPDATE
+        public int mTeamMemco(string pSiteCd, string pTeamCd, string pTeamNm, string pUsingFalg, string pSortNo, string pMemo)
+        {
+            int reCnt = 0;
+
+            DbTeam db = null;
+            try
+            {
+                string dbCon_IP = WebConfigurationManager.ConnectionStrings["ConnectionStr_IP"].ConnectionString;
+                string dbCon_DB = WebConfigurationManager.ConnectionStrings["ConnectionStr_DB"].ConnectionString;
+                string dbCon_USER = WebConfigurationManager.ConnectionStrings["ConnectionStr_USER"].ConnectionString;
+
+                db = new DbTeam(dbCon_IP, dbCon_DB, dbCon_USER, "0");
+                reCnt = db.mTeamMemco(pSiteCd, pTeamCd, pTeamNm, pUsingFalg, pSortNo, pMemo);
+            }
+            catch (Exception ex)
+            {
+                _logs.SaveLog("[error]  (page)::BizTeam.cs  (Function)::mCompanyMemco  (Detail)::pSiteCd=[" + pSiteCd + "], pTeamCd=[" + pTeamCd + "], pTeamNm=[" + pTeamNm + "], pUsingFalg=[" + pUsingFalg + "]" +
+                    ", pSortNo=[" + pSortNo + "], pMemo=[" + pMemo + "]", "Error");
+                _logs.SaveLog("[error]  (page)::BizTeam.cs  (Function)::mCompanyMemco  (Detail)::" + "\r\n" + ex.ToString(), "Error");
+            }
+            finally
+            {
+                if (db != null)
+                    db.DisConnect();
+            }
+
+            return reCnt;
+        }
+
+
+        //INSERT TEAM WITH PROCEDURE
+        public string aTeamPro(string pDbNm, Hashtable param, out Hashtable outVal)
+        {
+            string reVal = "";
+
+            DbTeam db = null;
+            try
+            {
+                string dbCon_IP = WebConfigurationManager.ConnectionStrings["ConnectionStr_IP"].ConnectionString;
+                string dbCon_DB = "Initial Catalog=PLUS-" + pDbNm + ";";
+                string dbCon_USER = WebConfigurationManager.ConnectionStrings["ConnectionStr_USER"].ConnectionString;
+
+                db = new DbTeam(dbCon_IP, dbCon_DB, dbCon_USER, "1");
+                reVal = db.aTeamPro(param, out outVal);
+            }
+            catch (Exception ex)
+            {
+                outVal = null;
+                _logs.SaveLog("[error]  (page)::BizTeam.cs  (Function)::aTeamPro  (Detail)::" + "\r\n" + ex.ToString(), "Error");
+            }
+            finally
+            {
+                if (db != null)
+                    db.DisConnect();
+            }
+
+            return reVal;
+        }
+
+
         //CONST CMB BOX
         public DataSet constCmb(string pSiteCd)
         {

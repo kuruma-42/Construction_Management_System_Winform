@@ -105,11 +105,23 @@
     <Compile Include="SubForm\MainHome\FrmMain.Designer.cs">
       <DependentUpon>FrmMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="SubForm\Sys\CodeT\FrmCodeTAuthSite.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubForm\Sys\CodeT\FrmCodeTAuthSite.Designer.cs">
+      <DependentUpon>FrmCodeTAuthSite.cs</DependentUpon>
+    </Compile>
     <Compile Include="SubForm\Sys\CodeT\FrmCodeTMainDB.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="SubForm\Sys\CodeT\FrmCodeTMainDB.Designer.cs">
       <DependentUpon>FrmCodeTMainDB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubForm\Sys\CodeT\FrmCodeTSite.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubForm\Sys\CodeT\FrmCodeTSite.Designer.cs">
+      <DependentUpon>FrmCodeTSite.cs</DependentUpon>
     </Compile>
     <Compile Include="SubForm\Sys\ComnCode\FrmComnCodeGrpMainDB.cs">
       <SubType>Form</SubType>
@@ -265,8 +277,14 @@
     <EmbeddedResource Include="strLanguage.en-US.resx" />
     <EmbeddedResource Include="strLanguage.ko-KR.resx" />
     <EmbeddedResource Include="strLanguage.zh-CN.resx" />
+    <EmbeddedResource Include="SubForm\Sys\CodeT\FrmCodeTAuthSite.resx">
+      <DependentUpon>FrmCodeTAuthSite.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="SubForm\Sys\CodeT\FrmCodeTMainDB.resx">
       <DependentUpon>FrmCodeTMainDB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubForm\Sys\CodeT\FrmCodeTSite.resx">
+      <DependentUpon>FrmCodeTSite.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SubForm\Sys\ComnCode\FrmComnCodeGrpMainDB.resx">
       <DependentUpon>FrmComnCodeGrpMainDB.cs</DependentUpon>
@@ -379,6 +397,9 @@
     <None Include="Web References\Mem_WsSysCompanyTeam\DataCompany.datasource">
       <DependentUpon>Reference.map</DependentUpon>
     </None>
+    <None Include="Web References\Mem_WsSysCompanyTeam\DataCompanyCmb.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
     <None Include="Web References\Mem_WsSysCompanyTeam\DataConstCmb.datasource">
       <DependentUpon>Reference.map</DependentUpon>
     </None>
@@ -389,6 +410,9 @@
       <DependentUpon>Reference.map</DependentUpon>
     </None>
     <None Include="Web References\Mem_WsSysCompanyTeam\DataCotypeCmb2.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\Mem_WsSysCompanyTeam\DataTeam.datasource">
       <DependentUpon>Reference.map</DependentUpon>
     </None>
     <None Include="Web References\Mem_WsSysCompanyTeam\Reference.map">
@@ -426,6 +450,18 @@
     <None Include="Web References\M_WsCodeTMainDB\DataCodeT.datasource">
       <DependentUpon>Reference.map</DependentUpon>
     </None>
+    <None Include="Web References\M_WsCodeTMainDB\DataCodeTSite.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\M_WsCodeTMainDB\DataCodeTSiteTreeView.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\M_WsCodeTMainDB\DataCodeTAuth.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\M_WsCodeTMainDB\DataCodeTAuthSelect.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
     <None Include="Web References\M_WsCodeTMainDB\DataCodeTSub.datasource">
       <DependentUpon>Reference.map</DependentUpon>
     </None>
@@ -436,7 +472,9 @@
       <Generator>MSDiscoCodeGenerator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
-    <None Include="Web References\M_WsCodeTMainDB\WsCodeTMainDB.wsdl" />
+    <None Include="Web References\M_WsCodeTMainDB\WsCodeTMainDB.wsdl">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Web References\M_WsCodeTMainDB\WsCodeTMainDB.xsd">
       <SubType>Designer</SubType>
     </None>

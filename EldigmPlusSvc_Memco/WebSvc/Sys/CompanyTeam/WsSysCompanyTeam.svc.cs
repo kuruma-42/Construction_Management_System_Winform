@@ -529,7 +529,200 @@ namespace EldigmPlusSvc_Memco.WebSvc.Sys.CompanyTeam
             reData = reVal;
 
             return reCode;
-        }      
+        }
 
+
+
+
+        //**TEAM PART START FROM HERE**
+
+
+
+
+
+        //COMPANY CMB BOX
+        public string companyCmb(string pSiteCd, out List<DataCompanyCmb> reList, out string reMsg)
+        {
+            string reCode = "N";
+
+            DataSet ds = null;
+            BizTeam bizSys = null;
+            try
+            {
+                bizSys = new BizTeam();
+
+                try
+                {
+                    ds = bizSys.companyCmb(pSiteCd);
+
+                    reMsg = "[검색 성공]";
+                    reCode = "Y";
+                }
+                catch (Exception ex)
+                {
+                    reMsg = "[검색 실패]" + ex.ToString();
+                    reCode = "N";
+                }
+            }
+            catch (Exception ex)
+            {
+                reMsg = "[검색 에러] :: " + ex.ToString();
+                reCode = "N";
+            }
+
+            List<DataCompanyCmb> data = new List<DataCompanyCmb>();
+            try
+            {
+                data = ListClass.ConvertDataTableToList<DataCompanyCmb>(ds.Tables[0]);
+            }
+            catch (Exception ex)
+            {
+                logs.SaveLog("[error]  (page)::WsSysCompanyTeam.svc  (Function)::companyCmb  (Detail)::ConvertDataTableToList " + "\r\n" + ex.ToString(), "Error");
+                reMsg += "/[List 에러]" + ex.ToString();
+                reCode = "N";
+            }
+
+            reList = data;
+
+            return reCode;
+        }
+
+        //SELECT
+        public string sTeam(string pSiteCd, string pCoCd, string pUsingFlag, string pTeamNm, out List<DataTeam> reList, out string reMsg)
+        {
+            string reCode = "N";
+
+            DataSet ds = null;
+            BizTeam bizSys = null;
+            try
+            {
+                bizSys = new BizTeam();
+
+                try
+                {
+                    ds = bizSys.sTeam(pSiteCd, pCoCd, pUsingFlag, pTeamNm);
+
+                    reMsg = "[검색 성공]";
+                    reCode = "Y";
+                }
+                catch (Exception ex)
+                {
+                    reMsg = "[검색 실패]" + ex.ToString();
+                    reCode = "N";
+                }
+            }
+            catch (Exception ex)
+            {
+                reMsg = "[검색 에러] :: " + ex.ToString();
+                reCode = "N";
+            }
+
+            List<DataTeam> data = new List<DataTeam>();
+            try
+            {
+                data = ListClass.ConvertDataTableToList<DataTeam>(ds.Tables[0]);
+            }
+            catch (Exception ex)
+            {
+                logs.SaveLog("[error]  (page)::WsSysCompanyTeam.svc  (Function)::sTeam  (Detail)::ConvertDataTableToList " + "\r\n" + ex.ToString(), "Error");
+                reMsg += "/[List 에러]" + ex.ToString();
+                reCode = "N";
+            }
+
+            reList = data;
+
+            return reCode;
+        }
+
+        //MODIFY
+        public string mTeamMemco(string pSiteCd, string pTeamCd, string pTeamNm, string pUsingFalg, string pSortNo, string pMemo, out string reMsg, out string reData)
+        {
+            string reCode = "N";
+            reData = "";
+
+            BizTeam bizSys = null;
+            try
+            {
+                bizSys = new BizTeam();
+
+                int reCnt = bizSys.mTeamMemco(pSiteCd, pTeamCd, pTeamNm, pUsingFalg, pSortNo, pMemo);
+
+                if (reCnt > 0)
+                {
+                    reMsg = "[저장 성공]";
+                    reCode = "Y";
+                    reData = reCnt.ToString();
+                }
+                else
+                {
+                    reMsg = "[저장 성공] - 정보 없음";
+                    reCode = "Y";
+                }
+            }
+            catch (Exception ex)
+            {
+                logs.SaveLog("[error]  (page)::WsSysCompanyTeam.svc  (Function)::mTeamMemco  (Detail)::" + "\r\n" + ex.ToString(), "Error");
+                reMsg = "[저장 에러] :: " + ex.ToString();
+                reCode = "N";
+            }
+
+            return reCode;
+        }
+
+
+        //INSERT WITH PROCEDURE
+        public string aTeamPro(string pDbNm, string[] param, out string reData, out string reMsg)
+        {
+            string reCode = "N";
+
+            string reVal = "";
+            BizTeam bizSys = null;
+            try
+            {
+                bizSys = new BizTeam();
+
+                try
+                {
+                    Hashtable hParam = new Hashtable();
+                    hParam.Add("pSite_Cd", Convert.ToInt32(param[0]));
+                    hParam.Add("pCo_Cd", Convert.ToInt32(param[1]));
+                    hParam.Add("pTeam_Nm", param[2].ToString());                   
+                    hParam.Add("pMemo", param[3].ToString());
+                    hParam.Add("pSort_No", Convert.ToInt32(param[4]));
+                    hParam.Add("pInput_Id", Convert.ToInt32(param[5]));
+                    hParam.Add("@rtnTeam_Cd", "");
+
+                    reVal = bizSys.aTeamPro(pDbNm, hParam, out Hashtable outVal);
+
+                    if (outVal != null)
+                    {
+                        foreach (DictionaryEntry dictionaryEntry in outVal)
+                        {
+                            string[] row = new string[] { dictionaryEntry.Key.ToString(), dictionaryEntry.Value.ToString(), "" };
+                            //string rowCount = row.Length.ToString();
+                            //string rowKey = row[0].ToString();
+                            reVal = row[1].ToString();
+                        }
+                    }
+
+                    reMsg = "[검색 성공]";
+                    reCode = "Y";
+                }
+                catch (Exception ex)
+                {
+                    reMsg = "[검색 실패]" + ex.ToString();
+                    reCode = "N";
+                }
+            }
+            catch (Exception ex)
+            {
+                reMsg = "[검색 에러 - BizSystem 연결 실패] :: " + ex.ToString();
+                reCode = "N";
+            }
+
+            reData = reVal;
+
+            return reCode;
+        }
     }
 }

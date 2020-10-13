@@ -79,4 +79,33 @@
     </xs:sequence>
   </xs:complexType>
   <xs:element name="DataCompany" nillable="true" type="tns:DataCompany" />
+  <xs:complexType name="ArrayOfDataCompanyCmb">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DataCompanyCmb" nillable="true" type="tns:DataCompanyCmb" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDataCompanyCmb" nillable="true" type="tns:ArrayOfDataCompanyCmb" />
+  <xs:complexType name="DataCompanyCmb">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CO_CD" type="xs:int" />
+      <xs:element minOccurs="0" name="CO_NM" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DataCompanyCmb" nillable="true" type="tns:DataCompanyCmb" />
+  <xs:complexType name="ArrayOfDataTeam">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DataTeam" nillable="true" type="tns:DataTeam" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDataTeam" nillable="true" type="tns:ArrayOfDataTeam" />
+  <xs:complexType name="DataTeam">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="TEAM_CD" type="xs:int" />
+      <xs:element minOccurs="0" name="TEAM_NM" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="USING_FLAG" type="xs:int" />
+      <xs:element minOccurs="0" name="SORT_NO" type="xs:int" />
+      <xs:element minOccurs="0" name="MEMO" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DataTeam" nillable="true" type="tns:DataTeam" />
 </xs:schema>

@@ -232,7 +232,7 @@ namespace EldigmPlusClassLibrary.DbClass.Sys.CompanyTeam
             string dbNm = sDbNm(SITE_CD);
             string sql = "" +
                 " INSERT INTO [PLUS-" + dbNm + "].dbo.T00_COMPANY_SITE (CO_CD, SITE_CD, START_DATE, END_DATE, USING_FLAG, SORT_NO, MEMO, INPUT_ID, INPUT_DT) " +
-                " VALUES(" + CO_CD + ", " + SITE_CD + ", " + START_DATE + ", " + END_DATE + ", " + USING_FLAG + ", " + SORT_NO + ", " + MEMO + ", '" + INPUT_ID + "', GETDATE())";
+                " VALUES(" + CO_CD + ", " + SITE_CD + ", " + START_DATE + ", " + END_DATE + ", " + USING_FLAG + ", " + SORT_NO + ", " + MEMO + ", " + INPUT_ID + ", GETDATE())";
 
             int reCnt = 0;
             if (_sqlHelper != null)

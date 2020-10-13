@@ -80,6 +80,30 @@
   <wsdl:message name="IWsSysCompanyTeam_mCompanySiteLog_OutputMessage">
     <wsdl:part name="parameters" element="tns:mCompanySiteLogResponse" />
   </wsdl:message>
+  <wsdl:message name="IWsSysCompanyTeam_companyCmb_InputMessage">
+    <wsdl:part name="parameters" element="tns:companyCmb" />
+  </wsdl:message>
+  <wsdl:message name="IWsSysCompanyTeam_companyCmb_OutputMessage">
+    <wsdl:part name="parameters" element="tns:companyCmbResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWsSysCompanyTeam_sTeam_InputMessage">
+    <wsdl:part name="parameters" element="tns:sTeam" />
+  </wsdl:message>
+  <wsdl:message name="IWsSysCompanyTeam_sTeam_OutputMessage">
+    <wsdl:part name="parameters" element="tns:sTeamResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWsSysCompanyTeam_mTeamMemco_InputMessage">
+    <wsdl:part name="parameters" element="tns:mTeamMemco" />
+  </wsdl:message>
+  <wsdl:message name="IWsSysCompanyTeam_mTeamMemco_OutputMessage">
+    <wsdl:part name="parameters" element="tns:mTeamMemcoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWsSysCompanyTeam_aTeamPro_InputMessage">
+    <wsdl:part name="parameters" element="tns:aTeamPro" />
+  </wsdl:message>
+  <wsdl:message name="IWsSysCompanyTeam_aTeamPro_OutputMessage">
+    <wsdl:part name="parameters" element="tns:aTeamProResponse" />
+  </wsdl:message>
   <wsdl:portType name="IWsSysCompanyTeam">
     <wsdl:operation name="constCmb">
       <wsdl:input wsaw:Action="http://tempuri.org/IWsSysCompanyTeam/constCmb" message="tns:IWsSysCompanyTeam_constCmb_InputMessage" />
@@ -128,6 +152,22 @@
     <wsdl:operation name="mCompanySiteLog">
       <wsdl:input wsaw:Action="http://tempuri.org/IWsSysCompanyTeam/mCompanySiteLog" message="tns:IWsSysCompanyTeam_mCompanySiteLog_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IWsSysCompanyTeam/mCompanySiteLogResponse" message="tns:IWsSysCompanyTeam_mCompanySiteLog_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="companyCmb">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWsSysCompanyTeam/companyCmb" message="tns:IWsSysCompanyTeam_companyCmb_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWsSysCompanyTeam/companyCmbResponse" message="tns:IWsSysCompanyTeam_companyCmb_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="sTeam">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWsSysCompanyTeam/sTeam" message="tns:IWsSysCompanyTeam_sTeam_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWsSysCompanyTeam/sTeamResponse" message="tns:IWsSysCompanyTeam_sTeam_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="mTeamMemco">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWsSysCompanyTeam/mTeamMemco" message="tns:IWsSysCompanyTeam_mTeamMemco_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWsSysCompanyTeam/mTeamMemcoResponse" message="tns:IWsSysCompanyTeam_mTeamMemco_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="aTeamPro">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWsSysCompanyTeam/aTeamPro" message="tns:IWsSysCompanyTeam_aTeamPro_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWsSysCompanyTeam/aTeamProResponse" message="tns:IWsSysCompanyTeam_aTeamPro_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IWsSysCompanyTeam" type="tns:IWsSysCompanyTeam">
@@ -233,6 +273,42 @@
     </wsdl:operation>
     <wsdl:operation name="mCompanySiteLog">
       <soap:operation soapAction="http://tempuri.org/IWsSysCompanyTeam/mCompanySiteLog" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="companyCmb">
+      <soap:operation soapAction="http://tempuri.org/IWsSysCompanyTeam/companyCmb" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="sTeam">
+      <soap:operation soapAction="http://tempuri.org/IWsSysCompanyTeam/sTeam" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mTeamMemco">
+      <soap:operation soapAction="http://tempuri.org/IWsSysCompanyTeam/mTeamMemco" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="aTeamPro">
+      <soap:operation soapAction="http://tempuri.org/IWsSysCompanyTeam/aTeamPro" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

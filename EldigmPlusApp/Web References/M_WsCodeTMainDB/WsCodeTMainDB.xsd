@@ -45,4 +45,64 @@
     </xs:sequence>
   </xs:complexType>
   <xs:element name="DataCodeTSub" nillable="true" type="tns:DataCodeTSub" />
+  <xs:complexType name="ArrayOfDataCodeTSiteTreeView">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DataCodeTSiteTreeView" nillable="true" type="tns:DataCodeTSiteTreeView" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDataCodeTSiteTreeView" nillable="true" type="tns:ArrayOfDataCodeTSiteTreeView" />
+  <xs:complexType name="DataCodeTSiteTreeView">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CCODE" type="xs:int" />
+      <xs:element minOccurs="0" name="CCODE_NM" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DataCodeTSiteTreeView" nillable="true" type="tns:DataCodeTSiteTreeView" />
+  <xs:complexType name="ArrayOfDataCodeTSite">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DataCodeTSite" nillable="true" type="tns:DataCodeTSite" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDataCodeTSite" nillable="true" type="tns:ArrayOfDataCodeTSite" />
+  <xs:complexType name="DataCodeTSite">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="TCODE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TCODE_NM" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DEFAULT_VALUE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="USING_FLAG" type="xs:int" />
+      <xs:element minOccurs="0" name="SORT_NO" type="xs:int" />
+      <xs:element minOccurs="0" name="MEMO" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DataCodeTSite" nillable="true" type="tns:DataCodeTSite" />
+  <xs:complexType name="ArrayOfDataCodeTAuth">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DataCodeTAuth" nillable="true" type="tns:DataCodeTAuth" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDataCodeTAuth" nillable="true" type="tns:ArrayOfDataCodeTAuth" />
+  <xs:complexType name="DataCodeTAuth">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="TCODE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TCODE_NM" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="USING_FLAG" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DataCodeTAuth" nillable="true" type="tns:DataCodeTAuth" />
+  <xs:complexType name="ArrayOfDataCodeTAuthSelect">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DataCodeTAuthSelect" nillable="true" type="tns:DataCodeTAuthSelect" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDataCodeTAuthSelect" nillable="true" type="tns:ArrayOfDataCodeTAuthSelect" />
+  <xs:complexType name="DataCodeTAuthSelect">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AUTH_CD" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TCODE_NM" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="VIEW_FLAG" type="xs:int" />
+      <xs:element minOccurs="0" name="NEW_FLAG" type="xs:int" />
+      <xs:element minOccurs="0" name="MODIFY_FLAG" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DataCodeTAuthSelect" nillable="true" type="tns:DataCodeTAuthSelect" />
 </xs:schema>

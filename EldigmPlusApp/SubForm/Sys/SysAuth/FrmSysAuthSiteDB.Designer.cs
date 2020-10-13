@@ -34,7 +34,6 @@
             this.cmbUse = new System.Windows.Forms.ComboBox();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.dgv1_CHK = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.dgv1_AUTH_CD = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgv1_AUTH_NM = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -42,6 +41,7 @@
             this.dgv1_LAB_APRV_FLAG = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.dgv1_USING_FLAG = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.dgv1_MEMO = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer3)).BeginInit();
             this.splitContainer3.Panel1.SuspendLayout();
             this.splitContainer3.Panel2.SuspendLayout();
@@ -142,15 +142,8 @@
             this.dataGridView1.RowTemplate.Height = 23;
             this.dataGridView1.Size = new System.Drawing.Size(1037, 532);
             this.dataGridView1.TabIndex = 2;
+            this.dataGridView1.CellBeginEdit += new System.Windows.Forms.DataGridViewCellCancelEventHandler(this.dataGridView1_CellBeginEdit);
             this.dataGridView1.ColumnHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView1_ColumnHeaderMouseClick);
-            // 
-            // panel1
-            // 
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1037, 25);
-            this.panel1.TabIndex = 0;
             // 
             // dgv1_CHK
             // 
@@ -210,6 +203,14 @@
             this.dgv1_MEMO.HeaderText = "MEMO";
             this.dgv1_MEMO.MinimumWidth = 150;
             this.dgv1_MEMO.Name = "dgv1_MEMO";
+            // 
+            // panel1
+            // 
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1037, 25);
+            this.panel1.TabIndex = 0;
             // 
             // FrmSysAuthSiteDB
             // 

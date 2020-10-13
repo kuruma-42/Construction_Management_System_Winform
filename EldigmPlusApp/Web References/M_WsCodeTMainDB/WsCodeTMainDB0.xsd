@@ -79,4 +79,228 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
+  <xs:element name="mCodeT">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="pTcode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pListFlag" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pRequiredFlag" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pNumericFlag" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="mCodeTResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="mCodeTResult" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="reMsg" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="reData" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="aCodeT">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="pTcode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pttypeScd" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ptcodeNm" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pListFlag" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pRequiredFlag" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pNumericFlag" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pInputId" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="aCodeTResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="aCodeTResult" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="reMsg" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="reData" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="exCodeT">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="pTcode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ptcodeNm" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="exCodeTResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="exCodeTResult" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="reMsg" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="reData" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="aCodeTSub">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="pTcode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pTscodeNm" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pUsingCnt" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pInputId" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="aCodeTSubResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="aCodeTSubResult" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="reMsg" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="reData" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="exCodeTSub">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="pTcode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pTscodeNm" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="exCodeTSubResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="exCodeTSubResult" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="reMsg" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="reData" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="sCodeTSiteTreeView">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="pDbnm" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pSiteCd" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pAuth" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="sCodeTSiteTreeViewResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sCodeTSiteTreeViewResult" nillable="true" type="xs:string" />
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/EldigmPlusSvc_Main.WebSvc.Sys.CodeT" minOccurs="0" name="reList" nillable="true" type="q6:ArrayOfDataCodeTSiteTreeView" />
+        <xs:element minOccurs="0" name="reMsg" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="sCodeTSite">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="pDbnm" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pSiteCd" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pTgrpCcd" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="sCodeTSiteResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sCodeTSiteResult" nillable="true" type="xs:string" />
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/EldigmPlusSvc_Main.WebSvc.Sys.CodeT" minOccurs="0" name="reList" nillable="true" type="q7:ArrayOfDataCodeTSite" />
+        <xs:element minOccurs="0" name="reMsg" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="mCodeTSite">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="pDbnm" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pSiteCd" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pTcode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pDefaultValue" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pUsingFlag" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pSortNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pMemo" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="mCodeTSiteResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="mCodeTSiteResult" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="reMsg" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="reData" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="sCodeAuthTTreeView">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="pScode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pSiteCd" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="sCodeAuthTTreeViewResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sCodeAuthTTreeViewResult" nillable="true" type="xs:string" />
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/EldigmPlusSvc_Main.WebSvc.Sys.CodeT" minOccurs="0" name="reList" nillable="true" type="q8:ArrayOfDataCodeTAuth" />
+        <xs:element minOccurs="0" name="reMsg" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="sCodeTAuth">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="pTcode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pSiteCd" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="sCodeTAuthResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sCodeTAuthResult" nillable="true" type="xs:string" />
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/EldigmPlusSvc_Main.WebSvc.Sys.CodeT" minOccurs="0" name="reList" nillable="true" type="q9:ArrayOfDataCodeTAuthSelect" />
+        <xs:element minOccurs="0" name="reMsg" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="sCodeTAuthTtype">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="pTtypeScd" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pSiteCd" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="sCodeTAuthTtypeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sCodeTAuthTtypeResult" nillable="true" type="xs:string" />
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/EldigmPlusSvc_Main.WebSvc.Sys.CodeT" minOccurs="0" name="reList" nillable="true" type="q10:ArrayOfDataCodeTAuthSelect" />
+        <xs:element minOccurs="0" name="reMsg" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="mCodeTAuth">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="pTcodeNm" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pSiteCd" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pAuthCd" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pViewFlag" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pNewFlag" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pModifyFlag" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="mCodeTAuthResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="mCodeTAuthResult" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="reMsg" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="reData" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
 </xs:schema>

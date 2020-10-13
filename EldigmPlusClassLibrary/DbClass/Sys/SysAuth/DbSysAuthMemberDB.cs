@@ -128,7 +128,7 @@ namespace EldigmPlusClassLibrary.DbClass.Sys.SysAuth
         {
             string sql = "" +
                 " INSERT INTO [PLUS_MAIN].dbo.TM00_CODE_AUTH (AUTH_CD, AUTH_NM, MYBLOCK_FLAG, MYCON_FLAG, MYCOM_FLAG, MYTEAM_FLAG, USING_FLAG, AUTH_LEVEL, MEMO, INPUT_ID, INPUT_DT) " +
-                " VALUES ('" + AUTH_CD + "', '" + AUTH_NM + "', " + MYBLOCK_FLAG + ", " + MYCON_FLAG + ", " + MYCOM_FLAG + ", " + MYTEAM_FLAG + ", " + USING_FLAG + ", " + AUTH_LEVEL + ", '" + MEMO + "', '" + INPUT_ID + "', GETDATE()) ";
+                " VALUES ('" + AUTH_CD + "', '" + AUTH_NM + "', " + MYBLOCK_FLAG + ", " + MYCON_FLAG + ", " + MYCOM_FLAG + ", " + MYTEAM_FLAG + ", " + USING_FLAG + ", " + AUTH_LEVEL + ", '" + MEMO + "', " + INPUT_ID + ", GETDATE()) ";
 
             int reCnt = 0;
             if (_sqlHelper != null)
@@ -143,7 +143,7 @@ namespace EldigmPlusClassLibrary.DbClass.Sys.SysAuth
         {
             string sql = "" +
                 " INSERT INTO [PLUS-" + DBNM + "].dbo.T00_CODE_AUTH (AUTH_CD, AUTH_NM, MYBLOCK_FLAG, MYCON_FLAG, MYCOM_FLAG, MYTEAM_FLAG, USING_FLAG, AUTH_LEVEL, MEMO, INPUT_ID, INPUT_DT) " +
-                " VALUES ('" + AUTH_CD + "', '" + AUTH_NM + "', " + MYBLOCK_FLAG + ", " + MYCON_FLAG + ", " + MYCOM_FLAG + ", " + MYTEAM_FLAG + ", " + USING_FLAG + ", " + AUTH_LEVEL + ", '" + MEMO + "', '" + INPUT_ID + "', GETDATE()) ";
+                " VALUES ('" + AUTH_CD + "', '" + AUTH_NM + "', " + MYBLOCK_FLAG + ", " + MYCON_FLAG + ", " + MYCOM_FLAG + ", " + MYTEAM_FLAG + ", " + USING_FLAG + ", " + AUTH_LEVEL + ", '" + MEMO + "', " + INPUT_ID + ", GETDATE()) ";
 
             int reCnt = 0;
             if (_sqlHelper != null)

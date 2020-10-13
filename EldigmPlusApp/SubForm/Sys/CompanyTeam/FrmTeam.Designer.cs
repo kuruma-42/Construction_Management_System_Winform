@@ -28,30 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmTeam));
-            this.dgv1_SITE_CD = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgv1_END_DATE = new Infragistics.Win.UltraDataGridView.UltraCalendarComboColumn(this.components);
-            this.dgv1_BIZ_NO = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgv1_OWNER_NM = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgv1_TEL = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgv1_ADDR = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgv1_USING_CNT = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgv1_SORT_NO = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgv1_MEMO = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.dgv2_CO_NM = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgv2_BIZ_NO = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgv2_CONST_CCD = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.dgv2_CO_TYPE_SCD = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.dgv2_OWNER_NM = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgv2_TEL = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgv2_ADDR = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgv2_TEAM_NM = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgv2_SORT_NO = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgv2_MEMO = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgv2_BTNADD = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.dgv1_START_DATE = new Infragistics.Win.UltraDataGridView.UltraCalendarComboColumn(this.components);
-            this.dgv1_CO_TYPE_SCD = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -66,11 +47,11 @@
             this.splitContainer3 = new System.Windows.Forms.SplitContainer();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.dgv1_CHK = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.dgv1_CO_CD = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgv1_CO_NM = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgv1_TEAM_CD = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgv1_TEAM_NM = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgv1_USING_FLAG = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.dgv1_HEADCO_CD = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgv1_CONST_CCD = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.dgv1_SORT_NO = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgv1_MEMO = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).BeginInit();
@@ -88,74 +69,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
-            // dgv1_SITE_CD
-            // 
-            this.dgv1_SITE_CD.HeaderText = "SITE_CD";
-            this.dgv1_SITE_CD.Name = "dgv1_SITE_CD";
-            this.dgv1_SITE_CD.ReadOnly = true;
-            // 
-            // dgv1_END_DATE
-            // 
-            this.dgv1_END_DATE.DefaultNewRowValue = ((object)(resources.GetObject("dgv1_END_DATE.DefaultNewRowValue")));
-            this.dgv1_END_DATE.DisplayStyle = Infragistics.Win.EmbeddableElementDisplayStyle.Default;
-            this.dgv1_END_DATE.HeaderText = "END_DATE";
-            this.dgv1_END_DATE.Name = "dgv1_END_DATE";
-            this.dgv1_END_DATE.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv1_END_DATE.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            // 
-            // dgv1_BIZ_NO
-            // 
-            this.dgv1_BIZ_NO.HeaderText = "BIZ_NO";
-            this.dgv1_BIZ_NO.Name = "dgv1_BIZ_NO";
-            // 
-            // dgv1_OWNER_NM
-            // 
-            this.dgv1_OWNER_NM.HeaderText = "OWNER_NM";
-            this.dgv1_OWNER_NM.Name = "dgv1_OWNER_NM";
-            // 
-            // dgv1_TEL
-            // 
-            this.dgv1_TEL.HeaderText = "TEL";
-            this.dgv1_TEL.Name = "dgv1_TEL";
-            // 
-            // dgv1_ADDR
-            // 
-            this.dgv1_ADDR.HeaderText = "ADDR";
-            this.dgv1_ADDR.Name = "dgv1_ADDR";
-            // 
-            // dgv1_USING_CNT
-            // 
-            this.dgv1_USING_CNT.HeaderText = "USING_CNT";
-            this.dgv1_USING_CNT.Name = "dgv1_USING_CNT";
-            // 
-            // dgv1_SORT_NO
-            // 
-            this.dgv1_SORT_NO.HeaderText = "SORT_NO";
-            this.dgv1_SORT_NO.MinimumWidth = 80;
-            this.dgv1_SORT_NO.Name = "dgv1_SORT_NO";
-            this.dgv1_SORT_NO.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv1_SORT_NO.Width = 80;
-            // 
-            // dgv1_MEMO
-            // 
-            this.dgv1_MEMO.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dgv1_MEMO.HeaderText = "MEMO";
-            this.dgv1_MEMO.MaxInputLength = 100;
-            this.dgv1_MEMO.MinimumWidth = 100;
-            this.dgv1_MEMO.Name = "dgv1_MEMO";
-            // 
             // dataGridView2
             // 
             this.dataGridView2.AllowUserToAddRows = false;
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dgv2_CO_NM,
-            this.dgv2_BIZ_NO,
-            this.dgv2_CONST_CCD,
-            this.dgv2_CO_TYPE_SCD,
-            this.dgv2_OWNER_NM,
-            this.dgv2_TEL,
-            this.dgv2_ADDR,
+            this.dgv2_TEAM_NM,
             this.dgv2_SORT_NO,
             this.dgv2_MEMO,
             this.dgv2_BTNADD});
@@ -165,44 +84,13 @@
             this.dataGridView2.RowTemplate.Height = 23;
             this.dataGridView2.Size = new System.Drawing.Size(1037, 78);
             this.dataGridView2.TabIndex = 1;
+            this.dataGridView2.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellClick);
             // 
-            // dgv2_CO_NM
+            // dgv2_TEAM_NM
             // 
-            this.dgv2_CO_NM.HeaderText = "CO_NM";
-            this.dgv2_CO_NM.MaxInputLength = 50;
-            this.dgv2_CO_NM.Name = "dgv2_CO_NM";
-            // 
-            // dgv2_BIZ_NO
-            // 
-            this.dgv2_BIZ_NO.HeaderText = "BIZ_NO";
-            this.dgv2_BIZ_NO.Name = "dgv2_BIZ_NO";
-            // 
-            // dgv2_CONST_CCD
-            // 
-            this.dgv2_CONST_CCD.HeaderText = "CONST_CCD";
-            this.dgv2_CONST_CCD.Name = "dgv2_CONST_CCD";
-            this.dgv2_CONST_CCD.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv2_CONST_CCD.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            // 
-            // dgv2_CO_TYPE_SCD
-            // 
-            this.dgv2_CO_TYPE_SCD.HeaderText = "CO_TYPE_SCD";
-            this.dgv2_CO_TYPE_SCD.Name = "dgv2_CO_TYPE_SCD";
-            // 
-            // dgv2_OWNER_NM
-            // 
-            this.dgv2_OWNER_NM.HeaderText = "OWNER_NM";
-            this.dgv2_OWNER_NM.Name = "dgv2_OWNER_NM";
-            // 
-            // dgv2_TEL
-            // 
-            this.dgv2_TEL.HeaderText = "TEL";
-            this.dgv2_TEL.Name = "dgv2_TEL";
-            // 
-            // dgv2_ADDR
-            // 
-            this.dgv2_ADDR.HeaderText = "ADDR";
-            this.dgv2_ADDR.Name = "dgv2_ADDR";
+            this.dgv2_TEAM_NM.HeaderText = "TEAM_NM";
+            this.dgv2_TEAM_NM.MaxInputLength = 50;
+            this.dgv2_TEAM_NM.Name = "dgv2_TEAM_NM";
             // 
             // dgv2_SORT_NO
             // 
@@ -223,22 +111,6 @@
             this.dgv2_BTNADD.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.dgv2_BTNADD.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.dgv2_BTNADD.Text = "Add";
-            // 
-            // dgv1_START_DATE
-            // 
-            this.dgv1_START_DATE.DefaultNewRowValue = ((object)(resources.GetObject("dgv1_START_DATE.DefaultNewRowValue")));
-            this.dgv1_START_DATE.DisplayStyle = Infragistics.Win.EmbeddableElementDisplayStyle.Default;
-            this.dgv1_START_DATE.HeaderText = "START_DATE";
-            this.dgv1_START_DATE.Name = "dgv1_START_DATE";
-            this.dgv1_START_DATE.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv1_START_DATE.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            // 
-            // dgv1_CO_TYPE_SCD
-            // 
-            this.dgv1_CO_TYPE_SCD.HeaderText = "CO_TYPE_SCD";
-            this.dgv1_CO_TYPE_SCD.Name = "dgv1_CO_TYPE_SCD";
-            this.dgv1_CO_TYPE_SCD.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv1_CO_TYPE_SCD.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             // 
             // dataGridViewTextBoxColumn6
             // 
@@ -315,6 +187,7 @@
             this.btnSearch.TabIndex = 6;
             this.btnSearch.Text = "Search";
             this.btnSearch.UseVisualStyleBackColor = true;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // txtSearch
             // 
@@ -322,6 +195,7 @@
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.Size = new System.Drawing.Size(130, 21);
             this.txtSearch.TabIndex = 5;
+            this.txtSearch.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSearch_KeyPress);
             // 
             // cmbCom
             // 
@@ -341,6 +215,7 @@
             this.btnSave.TabIndex = 0;
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // splitContainer1
             // 
@@ -387,20 +262,9 @@
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dgv1_CHK,
-            this.dgv1_CO_CD,
-            this.dgv1_CO_NM,
+            this.dgv1_TEAM_CD,
+            this.dgv1_TEAM_NM,
             this.dgv1_USING_FLAG,
-            this.dgv1_HEADCO_CD,
-            this.dgv1_CONST_CCD,
-            this.dgv1_CO_TYPE_SCD,
-            this.dgv1_SITE_CD,
-            this.dgv1_START_DATE,
-            this.dgv1_END_DATE,
-            this.dgv1_BIZ_NO,
-            this.dgv1_OWNER_NM,
-            this.dgv1_TEL,
-            this.dgv1_ADDR,
-            this.dgv1_USING_CNT,
             this.dgv1_SORT_NO,
             this.dgv1_MEMO});
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -409,6 +273,8 @@
             this.dataGridView1.RowTemplate.Height = 23;
             this.dataGridView1.Size = new System.Drawing.Size(1037, 475);
             this.dataGridView1.TabIndex = 1;
+            this.dataGridView1.CellBeginEdit += new System.Windows.Forms.DataGridViewCellCancelEventHandler(this.dataGridView1_CellBeginEdit);
+            this.dataGridView1.ColumnHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView1_ColumnHeaderMouseClick);
             // 
             // dgv1_CHK
             // 
@@ -420,21 +286,21 @@
             this.dgv1_CHK.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.dgv1_CHK.TrueValue = "1";
             // 
-            // dgv1_CO_CD
+            // dgv1_TEAM_CD
             // 
-            this.dgv1_CO_CD.HeaderText = "CO_CD";
-            this.dgv1_CO_CD.MaxInputLength = 100;
-            this.dgv1_CO_CD.MinimumWidth = 100;
-            this.dgv1_CO_CD.Name = "dgv1_CO_CD";
-            this.dgv1_CO_CD.ReadOnly = true;
+            this.dgv1_TEAM_CD.HeaderText = "TEAM_CD";
+            this.dgv1_TEAM_CD.MaxInputLength = 100;
+            this.dgv1_TEAM_CD.MinimumWidth = 100;
+            this.dgv1_TEAM_CD.Name = "dgv1_TEAM_CD";
+            this.dgv1_TEAM_CD.ReadOnly = true;
             // 
-            // dgv1_CO_NM
+            // dgv1_TEAM_NM
             // 
-            this.dgv1_CO_NM.HeaderText = "CO_NM";
-            this.dgv1_CO_NM.MaxInputLength = 100;
-            this.dgv1_CO_NM.MinimumWidth = 150;
-            this.dgv1_CO_NM.Name = "dgv1_CO_NM";
-            this.dgv1_CO_NM.Width = 150;
+            this.dgv1_TEAM_NM.HeaderText = "TEAM_NM";
+            this.dgv1_TEAM_NM.MaxInputLength = 100;
+            this.dgv1_TEAM_NM.MinimumWidth = 150;
+            this.dgv1_TEAM_NM.Name = "dgv1_TEAM_NM";
+            this.dgv1_TEAM_NM.Width = 150;
             // 
             // dgv1_USING_FLAG
             // 
@@ -446,17 +312,21 @@
             this.dgv1_USING_FLAG.TrueValue = "1";
             this.dgv1_USING_FLAG.Width = 60;
             // 
-            // dgv1_HEADCO_CD
+            // dgv1_SORT_NO
             // 
-            this.dgv1_HEADCO_CD.HeaderText = "HEADCO_CD";
-            this.dgv1_HEADCO_CD.Name = "dgv1_HEADCO_CD";
+            this.dgv1_SORT_NO.HeaderText = "SORT_NO";
+            this.dgv1_SORT_NO.MinimumWidth = 80;
+            this.dgv1_SORT_NO.Name = "dgv1_SORT_NO";
+            this.dgv1_SORT_NO.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv1_SORT_NO.Width = 80;
             // 
-            // dgv1_CONST_CCD
+            // dgv1_MEMO
             // 
-            this.dgv1_CONST_CCD.HeaderText = "CONST_CCD";
-            this.dgv1_CONST_CCD.Name = "dgv1_CONST_CCD";
-            this.dgv1_CONST_CCD.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv1_CONST_CCD.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.dgv1_MEMO.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dgv1_MEMO.HeaderText = "MEMO";
+            this.dgv1_MEMO.MaxInputLength = 100;
+            this.dgv1_MEMO.MinimumWidth = 100;
+            this.dgv1_MEMO.Name = "dgv1_MEMO";
             // 
             // dataGridViewTextBoxColumn5
             // 
@@ -476,6 +346,7 @@
             this.Controls.Add(this.splitContainer1);
             this.Name = "FrmTeam";
             this.Text = "FrmTeam";
+            this.Load += new System.EventHandler(this.FrmTeam_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.splitContainer2.Panel1.ResumeLayout(false);
             this.splitContainer2.Panel1.PerformLayout();
@@ -496,29 +367,7 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgv1_SITE_CD;
-        private Infragistics.Win.UltraDataGridView.UltraCalendarComboColumn dgv1_END_DATE;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgv1_BIZ_NO;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgv1_OWNER_NM;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgv1_TEL;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgv1_ADDR;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgv1_USING_CNT;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgv1_SORT_NO;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgv1_MEMO;
         private System.Windows.Forms.DataGridView dataGridView2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgv2_CO_NM;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgv2_BIZ_NO;
-        private System.Windows.Forms.DataGridViewComboBoxColumn dgv2_CONST_CCD;
-        private System.Windows.Forms.DataGridViewComboBoxColumn dgv2_CO_TYPE_SCD;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgv2_OWNER_NM;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgv2_TEL;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgv2_ADDR;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgv2_SORT_NO;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgv2_MEMO;
-        private System.Windows.Forms.DataGridViewButtonColumn dgv2_BTNADD;
-        private Infragistics.Win.UltraDataGridView.UltraCalendarComboColumn dgv1_START_DATE;
-        private System.Windows.Forms.DataGridViewComboBoxColumn dgv1_CO_TYPE_SCD;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
@@ -532,12 +381,16 @@
         private System.Windows.Forms.SplitContainer splitContainer1;
         private System.Windows.Forms.SplitContainer splitContainer3;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn dgv1_CHK;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgv1_CO_CD;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgv1_CO_NM;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn dgv1_USING_FLAG;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgv1_HEADCO_CD;
-        private System.Windows.Forms.DataGridViewComboBoxColumn dgv1_CONST_CCD;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn dgv1_CHK;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgv1_TEAM_CD;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgv1_TEAM_NM;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn dgv1_USING_FLAG;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgv1_SORT_NO;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgv1_MEMO;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgv2_TEAM_NM;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgv2_SORT_NO;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgv2_MEMO;
+        private System.Windows.Forms.DataGridViewButtonColumn dgv2_BTNADD;
     }
 }

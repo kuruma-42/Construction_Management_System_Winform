@@ -436,12 +436,12 @@ namespace EldigmPlusApp.M_WsMember {
         /// <remarks/>
         [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IWsMember/aSite", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
         [return: System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public string aSite([System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pDbNm, [System.Xml.Serialization.XmlArrayAttribute(IsNullable=true)] [System.Xml.Serialization.XmlArrayItemAttribute(Namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays")] string[] param, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] out string reData, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] out string reMsg) {
+        public string aSite([System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pDbNm, [System.Xml.Serialization.XmlArrayAttribute(IsNullable=true)] [System.Xml.Serialization.XmlArrayItemAttribute(Namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays")] string[] param, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] out string reMsg, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] out string reData) {
             object[] results = this.Invoke("aSite", new object[] {
                         pDbNm,
                         param});
-            reData = ((string)(results[1]));
-            reMsg = ((string)(results[2]));
+            reMsg = ((string)(results[1]));
+            reData = ((string)(results[2]));
             return ((string)(results[0]));
         }
         
@@ -1195,7 +1195,7 @@ namespace EldigmPlusApp.M_WsMember {
         }
         
         /// <remarks/>
-        public string reData {
+        public string reMsg {
             get {
                 this.RaiseExceptionIfNecessary();
                 return ((string)(this.results[1]));
@@ -1203,7 +1203,7 @@ namespace EldigmPlusApp.M_WsMember {
         }
         
         /// <remarks/>
-        public string reMsg {
+        public string reData {
             get {
                 this.RaiseExceptionIfNecessary();
                 return ((string)(this.results[2]));

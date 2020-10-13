@@ -277,17 +277,7 @@ namespace EldigmPlusApp.SubForm.Sys.CompanyTeam
                             dataGridView1.Rows[i].Cells["dgv1_ADDR"].Value = getData[i].ADDR.ToString();
                             dataGridView1.Rows[i].Cells["dgv1_USING_CNT"].Value = getData[i].USING_CNT.ToString();
                             dataGridView1.Rows[i].Cells["dgv1_SORT_NO"].Value = getData[i].SORT_NO.ToString();
-                            dataGridView1.Rows[i].Cells["dgv1_MEMO"].Value = getData[i].MEMO.ToString();
-
-                            dataGridView2.Columns["dgv2_CO_NM"].HeaderText = "*업체 이름";
-                            dataGridView2.Columns["dgv2_BIZ_NO"].HeaderText = "사업자 번호";
-                            dataGridView2.Columns["dgv2_CONST_CCD"].HeaderText = "공종";
-                            dataGridView2.Columns["dgv2_CO_TYPE_SCD"].HeaderText = "업체구분";
-                            dataGridView2.Columns["dgv2_OWNER_NM"].HeaderText = "대표자";
-                            dataGridView2.Columns["dgv2_TEL"].HeaderText = "연락처";
-                            dataGridView2.Columns["dgv2_ADDR"].HeaderText = "주소";
-                            dataGridView2.Columns["dgv2_SORT_NO"].HeaderText = "정렬";
-                            dataGridView2.Columns["dgv2_MEMO"].HeaderText = "메모";
+                            dataGridView1.Rows[i].Cells["dgv1_MEMO"].Value = getData[i].MEMO.ToString();                          
 
                         }
 
@@ -463,7 +453,7 @@ namespace EldigmPlusApp.SubForm.Sys.CompanyTeam
                 dataGridView2.Rows.Add();
                 set_Grideview2Combo1(0, "dgv2_CONST_CCD");
                 set_Grideview2Combo2(0, "dgv2_CO_TYPE_SCD");
-                dataGridView2.Rows[0].Cells["dgv2_SORT_NO"].Value = "1";
+                dataGridView2.Rows[0].Cells["dgv2_SORT_NO"].Value = "10";
                 dataGridView2.Rows[0].Cells["dgv2_BTNADD"].Value = "추가";
             }
             catch (Exception ex)
@@ -513,18 +503,6 @@ namespace EldigmPlusApp.SubForm.Sys.CompanyTeam
                         if (dataGridView1.Rows[i].Cells["dgv1_CHK"].Value.ToString() == "1")
                         {
 
-
-                            dataGridView2.Columns["dgv2_CO_NM"].HeaderText = "*업체 이름";
-                            dataGridView2.Columns["dgv2_BIZ_NO"].HeaderText = "사업자 번호";
-                            dataGridView2.Columns["dgv2_CONST_CCD"].HeaderText = "공종";
-                            dataGridView2.Columns["dgv2_CO_TYPE_SCD"].HeaderText = "업체구분";
-                            dataGridView2.Columns["dgv2_OWNER_NM"].HeaderText = "대표자";
-                            dataGridView2.Columns["dgv2_TEL"].HeaderText = "연락처";
-                            dataGridView2.Columns["dgv2_ADDR"].HeaderText = "주소";
-                            dataGridView2.Columns["dgv2_SORT_NO"].HeaderText = "정렬";
-                            dataGridView2.Columns["dgv2_MEMO"].HeaderText = "메모";
-
-
                             string pCoCd = dataGridView1.Rows[i].Cells["dgv1_CO_CD"].Value.ToString();
                             string pCoNm = dataGridView1.Rows[i].Cells["dgv1_CO_NM"].Value.ToString();
                             string pUsingFlag = dataGridView1.Rows[i].Cells["dgv1_USING_FLAG"].Value.ToString();
@@ -558,7 +536,7 @@ namespace EldigmPlusApp.SubForm.Sys.CompanyTeam
 
                             string pUsingCnt = dataGridView1.Rows[i].Cells["dgv1_USING_CNT"].Value.ToString();
 
-                            string pSortNo = "1";
+                            string pSortNo = "10";
                             if (dataGridView1.Rows[i].Cells["dgv1_SORT_NO"].Value != null)
                                 pSortNo = dataGridView1.Rows[i].Cells["dgv1_SORT_NO"].Value.ToString();
 

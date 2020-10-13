@@ -145,57 +145,7 @@ namespace EldigmPlusClassLibrary.DbClass.Sys.MemberSite
             object reObj = _sqlHelper.ExecuteCommandsp(sql, param, out outVal);
 
             return reObj.ToString();
-        }
-
-
-        ////INSERT MAIN SITE
-        //public int aSite(string MEMCO_CD, string SITE_NM, string USING_FLAG, string SORT_NO, string MEMO, string INPUT_ID)
-        //{
-        //    string sql = "" +
-
-        //    " INSERT INTO [PLUS_MAIN].dbo.TM00_SITE (MEMCO_CD, SITE_NM, USING_FLAG, SORT_NO, MEMO, INPUT_ID, INPUT_DT) " +
-        //    " VALUES(" + MEMCO_CD + ", '" + SITE_NM + "', " + USING_FLAG + ", " + SORT_NO + ", '" + MEMO + "', '" + INPUT_ID + "' , GETDATE()) ";
-
-
-        //    int reCnt = 0;
-        //    if (_sqlHelper != null)
-        //        reCnt = _sqlHelper.ExecuteCommand(sql);
-
-        //    return reCnt;
-        //}
-
-        ////INSERT MEMCO SITE 
-        //public int aSite_Member(string SITE_CD, string MEMCO_CD, string SITE_NM, string HEADCO_CD)
-        //{
-        //    string dbNm = sDbNm(MEMCO_CD);
-
-        //    string sql = "" +
-        //    " INSERT INTO [PLUS-" + dbNm + "].dbo.T00_SITE (SITE_CD, MEMCO_CD, SITE_NM, HEADCO_CD) " +
-        //    " VALUES(" + SITE_CD + ", " + MEMCO_CD + ", '" + SITE_NM + "', '" + HEADCO_CD + "' ) ";
-
-        //    int reCnt = 0;
-        //    if (_sqlHelper != null)
-        //        reCnt = _sqlHelper.ExecuteCommand(sql);
-
-        //    return reCnt;
-        //}
-
-        ////INSERT MEMCO SITE INFO 
-        //public int aSiteInfo_Member(string SITE_CD, string MEMCO_CD)
-        //{
-        //    string dbNm = sDbNm(MEMCO_CD);
-
-        //    string sql = "" +
-        //    " INSERT INTO [PLUS-" + dbNm + "].dbo.T00_SITE_INFO (SITE_CD) " +
-        //    " VALUES (" + SITE_CD + ") ";
-
-        //    int reCnt = 0;
-        //    if (_sqlHelper != null)
-        //        reCnt = _sqlHelper.ExecuteCommand(sql);
-
-        //    return reCnt;
-        //}
-
+        }        
     }
 }
 

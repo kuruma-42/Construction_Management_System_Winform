@@ -180,7 +180,6 @@ namespace EldigmPlusApp.SubForm.Sys.Menu
             string reMsg = "";
             M_WsMenuMainDB.DataMenuTop[] getData1 = null;
             M_WsMenuMainDB.DataMenuSub[] getData2 = null;
-            M_WsMenuMainDB.DataMenu[] getData3 = null;
             try
             {
                 wSvc = new M_WsMenuMainDB.WsMenuMainDB();

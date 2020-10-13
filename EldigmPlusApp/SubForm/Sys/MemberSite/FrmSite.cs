@@ -40,7 +40,6 @@ namespace EldigmPlusApp.SubForm.Sys.MemberSite
                 dataGridView1.Columns["dgv1_CHK"].HeaderText = "선택";
                 dataGridView1.Columns["dgv1_SITE_CD"].HeaderText = "현장 코드";
                 dataGridView1.Columns["dgv1_MEMCO_CD"].HeaderText = "회원사 코드";
-                //dataGridView1.Columns["dgv1_MEMCO_NM"].HeaderText = "회원사 이름";
                 dataGridView1.Columns["dgv1_SITE_NM"].HeaderText = "현장 이름";
                 dataGridView1.Columns["dgv1_USING_FLAG"].HeaderText = "사용 여부";
                 dataGridView1.Columns["dgv1_SORT_NO"].HeaderText = "정렬";
@@ -371,7 +370,7 @@ namespace EldigmPlusApp.SubForm.Sys.MemberSite
             {
                 dataGridView2.Rows.Clear();
                 dataGridView2.Rows.Add();
-                dataGridView2.Rows[0].Cells["dgv2_SORT_NO"].Value = "1";
+                dataGridView2.Rows[0].Cells["dgv2_SORT_NO"].Value = "10";
                 dataGridView2.Rows[0].Cells["dgv2_MEMO"].Value = "";
                 dataGridView2.Rows[0].Cells["dgv2_BTNADD"].Value = "추가";
             }
@@ -397,15 +396,17 @@ namespace EldigmPlusApp.SubForm.Sys.MemberSite
                 else
                 {
                     string memcoCd_val = cmbMember.SelectedValue.ToString();
-                    string siteNm_val = dataGridView2.Rows[0].Cells["dgv2_SITE_NM"].Value.ToString();
-                    string usingFlag_val = "1";
-                    string sortNo_val = dataGridView2.Rows[0].Cells["dgv2_SORT_NO"].Value.ToString();
+                    string siteNm_val = dataGridView2.Rows[0].Cells["dgv2_SITE_NM"].Value.ToString();                    
+
+                    string sortNo_val = "10";
+                    if (dataGridView2.Rows[0].Cells["dgv2_SORT_NO"].Value != null)
+                        sortNo_val = dataGridView2.Rows[0].Cells["dgv2_SORT_NO"].Value.ToString();                    
 
                     string memo_val = "";
                     if (dataGridView2.Rows[0].Cells["dgv2_MEMO"].Value != null)
                         memo_val = dataGridView2.Rows[0].Cells["dgv2_MEMO"].Value.ToString();
 
-                    string pInputId = "1";
+                    string pInputId = AppInfo.SsUserId;
 
                     string headcoCd_val = "";
                     if (dataGridView2.Rows[0].Cells["dgv2_HEADCO_CD"].Value != null)
@@ -558,7 +559,7 @@ namespace EldigmPlusApp.SubForm.Sys.MemberSite
         {
             SetDataBind_gridView1();
         }
-
+        
     }
 }
 

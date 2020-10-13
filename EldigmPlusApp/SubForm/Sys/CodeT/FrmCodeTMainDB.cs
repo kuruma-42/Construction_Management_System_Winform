@@ -15,8 +15,6 @@ namespace EldigmPlusApp.SubForm.Sys.CodeT
         ResourceManager lngRM = null;
         ResourceManager msgRM = null;
 
-        string _topMenuCd = "";
-        //string[] _codeArr = new string[2];
         string _codeGrp = "";
         string _code = "";
 
@@ -46,15 +44,14 @@ namespace EldigmPlusApp.SubForm.Sys.CodeT
                 dataGridView1.Columns["dgv1_NUMERIC_FLAG"].HeaderText = "숫자";
                 dataGridView1.Columns["dgv1_USING_CNT"].HeaderText = "사용카운터";
 
-                dataGridView2.Columns["dgv2_MENU_CD"].HeaderText = "메뉴코드";
-                dataGridView2.Columns["dgv2_NM"].HeaderText = "이름";
-                dataGridView2.Columns["dgv2_SORT_NO"].HeaderText = "정렬";
-                dataGridView2.Columns["dgv2_MENU_PATH"].HeaderText = "파일경로";
-                dataGridView2.Columns["dgv2_FILE_FOLDER"].HeaderText = "파일폴더";
+                dataGridView2.Columns["dgv2_TCODE"].HeaderText = "*T코드";
+                dataGridView2.Columns["dgv2_NM"].HeaderText = "*이름";
+                dataGridView2.Columns["dgv2_LIST_FLAG"].HeaderText = "리스트";
+                dataGridView2.Columns["dgv2_REQUIRED_FLAG"].HeaderText = "필수";
+                dataGridView2.Columns["dgv2_NUMERIC_FLAG"].HeaderText = "숫자";
 
-                //dataGridView2.Columns["dgv2_MENU_CD"].HeaderCell.Style.ForeColor = Color.Maroon; // 헤더 필수 항목 빨강색
-                //dataGridView2.Columns["dgv2_SUB_MENU_CD"].HeaderCell.Style.ForeColor = Color.Maroon; // 헤더 필수 항목 빨강색
-                //dataGridView2.Columns["dgv2_TOP_MENU_CD"].HeaderCell.Style.ForeColor = Color.Maroon; // 헤더 필수 항목 빨강색
+                dataGridView2.Columns["dgv2_TCODE"].HeaderCell.Style.ForeColor = Color.Maroon; // 헤더 필수 항목 빨강색
+                dataGridView2.Columns["dgv2_NM"].HeaderCell.Style.ForeColor = Color.Maroon; // 헤더 필수 항목 빨강색
 
                 Control.CheckForIllegalCrossThreadCalls = false;
 
@@ -212,8 +209,8 @@ namespace EldigmPlusApp.SubForm.Sys.CodeT
                 _codeGrp = codeArr[0].ToString();
                 _code = codeArr[1].ToString();
 
-
                 //SetDataBind_gridView1(codeArr[0].ToString(), codeArr[1].ToString(), codeArr[2].ToString(), codeArr[3].ToString());
+                SetDataBind_grideView2();
                 SetDataBind_gridView1(_codeGrp, _code);
 
             }
@@ -238,8 +235,26 @@ namespace EldigmPlusApp.SubForm.Sys.CodeT
                 wSvc.Url = "http://" + AppInfo.SsWsvcServer2 + "/WebSvc/Sys/CodeT/WsCodeTMainDB.svc";
                 wSvc.Timeout = 1000;
 
+                dataGridView2.Enabled = false;
+                btnSave.Enabled = false;
+
                 if (codeGrp == "1")
                 {
+                    dataGridView2.Enabled = true;
+                    btnSave.Enabled = true;
+
+                    dataGridView2.Visible = true;
+                    dataGridView1.Columns["dgv1_TTYPE_SCD"].Visible = true;
+                    dataGridView1.Columns["dgv1_LIST_FLAG"].Visible = true;
+                    dataGridView1.Columns["dgv1_REQUIRED_FLAG"].Visible = true;
+                    dataGridView1.Columns["dgv1_NUMERIC_FLAG"].Visible = true;
+                    dataGridView1.Columns["dgv1_USING_CNT"].Visible = false;
+                    dataGridView2.Columns["dgv2_LIST_FLAG"].Visible = true;
+                    dataGridView2.Columns["dgv2_REQUIRED_FLAG"].Visible = true;
+                    dataGridView2.Columns["dgv2_NUMERIC_FLAG"].Visible = true;
+                    dataGridView2.Columns["dgv2_TCODE"].ReadOnly = false;
+
+
                     reCode = wSvc.sCodeT(code_val, out getData1, out reMsg);
                     if (reCode == "Y")
                     {
@@ -249,6 +264,7 @@ namespace EldigmPlusApp.SubForm.Sys.CodeT
                             for (int i = 0; i < getData1.Length; i++)
                             {
                                 dataGridView1.Rows.Add();
+                                dataGridView1.Rows[i].Cells["dgv1_TCODE"].Value = getData1[i].TCODE.ToString();
                                 dataGridView1.Rows[i].Cells["dgv1_TTYPE_SCD"].Value = getData1[i].TTYPE_SCD.ToString();
                                 dataGridView1.Rows[i].Cells["dgv1_NM"].Value = getData1[i].TCODE_NM.ToString();
                                 dataGridView1.Rows[i].Cells["dgv1_LIST_FLAG"].Value = getData1[i].LIST_FLAG.ToString();
@@ -268,8 +284,23 @@ namespace EldigmPlusApp.SubForm.Sys.CodeT
                 }
                 else if (codeGrp == "2")
                 {
-                    if(code_val == "InspectionMethod" || code_val == "CarSize")
+                    dataGridView1.Columns["dgv1_TTYPE_SCD"].Visible = false;
+                    dataGridView1.Columns["dgv1_LIST_FLAG"].Visible = false;
+                    dataGridView1.Columns["dgv1_REQUIRED_FLAG"].Visible = false;
+                    dataGridView1.Columns["dgv1_NUMERIC_FLAG"].Visible = false;
+                    dataGridView1.Columns["dgv1_USING_CNT"].Visible = true;
+                    dataGridView2.Columns["dgv2_LIST_FLAG"].Visible = false;
+                    dataGridView2.Columns["dgv2_REQUIRED_FLAG"].Visible = false;
+                    dataGridView2.Columns["dgv2_NUMERIC_FLAG"].Visible = false;
+
+                    if (code_val == "InspectionMethod" || code_val == "CarSize")
                     {
+                        dataGridView2.Enabled = true;
+                        btnSave.Enabled = true;
+
+                        dataGridView2.Rows[0].Cells["dgv2_TCODE"].Value = code_val;
+                        dataGridView2.Columns["dgv2_TCODE"].ReadOnly = true;
+
                         reCode = wSvc.sCodeTSub(code_val, out getData2, out reMsg);
                         if (reCode == "Y")
                         {
@@ -293,15 +324,23 @@ namespace EldigmPlusApp.SubForm.Sys.CodeT
                                 MessageBox.Show("데이터가 없습니다");
                             }
                         }
-
                     }
-                   
+                    else
+                    {
+                        dataGridView1.Rows.Clear();
+                        lblName.Text = null;
+                    }
+                }
+                else
+                {
+                    dataGridView1.Rows.Clear();
+                    lblName.Text = null;
                 }
 
             }
             catch (Exception ex)
             {
-                logs.SaveLog("[error]  (page)::FrmCodeTMainDB.cs  (Function)::SetDataBind_gridView1  (Detail)::pScodeGrp=[" + _topMenuCd + "]", "Error");
+                logs.SaveLog("[error]  (page)::FrmCodeTMainDB.cs  (Function)::SetDataBind_gridView1  (Detail)::codeGrp=[" + codeGrp + "], code_val=[" + code_val + "]", "Error");
                 logs.SaveLog("[error]  (page)::FrmCodeTMainDB.cs  (Function)::SetDataBind_gridView1  (Detail)::reMsg=[" + reMsg + "]", "Error");
                 logs.SaveLog("[error]  (page)::FrmCodeTMainDB.cs  (Function)::SetDataBind_gridView1  (Detail):: " + "\r\n" + ex.ToString(), "Error");
             }
@@ -374,7 +413,6 @@ namespace EldigmPlusApp.SubForm.Sys.CodeT
             {
                 dataGridView2.Rows.Clear();
                 dataGridView2.Rows.Add();
-                dataGridView2.Rows[0].Cells["dgv2_SORT_NO"].Value = "1";
                 dataGridView2.Rows[0].Cells["dgv2_BTNADD"].Value = "추가";
             }
             catch (Exception ex)
@@ -386,7 +424,7 @@ namespace EldigmPlusApp.SubForm.Sys.CodeT
 
         private void dataGridView2_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            M_WsMenuMainDB.WsMenuMainDB wSvc = null;
+            M_WsCodeTMainDB.WsCodeTMainDB wSvc = null;
             string reCode = "";
             string reMsg = "";
             string reData = "";
@@ -395,65 +433,91 @@ namespace EldigmPlusApp.SubForm.Sys.CodeT
 
             if (colNm == "dgv2_BTNADD")
             {
+                if (_codeGrp == "1")
+                {
+                    string reVal = ChkDgv2Param();
 
-                //if (codeGrp == "1")
-                //{
-                //    string reVal = ChkDgv2Param();
+                    if (reVal != "")
+                        MessageBox.Show("데이터 확인 :: " + reVal);
+                    else
+                    {
+                        string tCode_val = dataGridView2.Rows[0].Cells["dgv2_TCODE"].Value.ToString();
+                        string tCodeNm_val = dataGridView2.Rows[0].Cells["dgv2_NM"].Value.ToString();
 
-                //    if (reVal != "")
-                //        MessageBox.Show("데이터 확인 :: " + reVal);
-                //    else
-                //    {
-                //        reCode = wSvc.exMenu(menuCd_val, Nm_val, out reMsg, out reData);
-                //    }
+                        string listFlag_val = "0";
+                        if(dataGridView2.Rows[0].Cells["dgv2_LIST_FLAG"].Value != null)
+                            listFlag_val = dataGridView2.Rows[0].Cells["dgv2_LIST_FLAG"].Value.ToString();
 
+                        string requiredFlag_val = "0";
+                        if(dataGridView2.Rows[0].Cells["dgv2_REQUIRED_FLAG"].Value != null)
+                            requiredFlag_val = dataGridView2.Rows[0].Cells["dgv2_REQUIRED_FLAG"].Value.ToString();
 
-                //    if (reCode == "Y" && reData != "0")
-                //    {
-                //        MessageBox.Show("중복 데이터 입니다.");
-                //    }
-                //    else
-                //    {
-                //        reCode = "";
-                //        //reCode = wSvc.aSysCode(menuCd_val, topMenuCd, Nm_val, "1", sortNo_val, pInputId, out reMsg, out reData);
+                        string numericFlag_val = "0";
+                        if(dataGridView2.Rows[0].Cells["dgv2_NUMERIC_FLAG"].Value != null)
+                            numericFlag_val = dataGridView2.Rows[0].Cells["dgv2_NUMERIC_FLAG"].Value.ToString();
 
-                //        int reCnt = 0;
+                        try
+                        {
+                            wSvc = new M_WsCodeTMainDB.WsCodeTMainDB();
+                            wSvc.Url = "http://" + AppInfo.SsWsvcServer2 + "/WebSvc/Sys/CodeT/WsCodeTMainDB.svc";
+                            wSvc.Timeout = 1000;
 
-                //        if (reCode == "Y" && reData != "")
-                //            reCnt = Convert.ToInt16(reData);
+                            reCode = wSvc.exCodeT(tCode_val, tCodeNm_val, out reMsg, out reData);
+                            if (reCode == "Y" && reData != "0")
+                            {
+                                MessageBox.Show("중복 데이터 입니다.");
+                            }
+                            else
+                            {
+                                reCode = "";
+                                reCode = wSvc.aCodeT(tCode_val, _code, tCodeNm_val, listFlag_val, requiredFlag_val, numericFlag_val, AppInfo.SsUserId, out reMsg, out reData);
 
-                //        if (reCnt > 0)
-                //            MessageBox.Show("저장 성공" + " : " + reCnt.ToString());
-                //        else
-                //            MessageBox.Show("저장 실패");
+                                int reCnt = 0;
 
-                //        SetDataBind_gridView1(topMenuCd, "", "", "");
-                ////        SetDataBind_grideView2();
-                //    }
-                //}
+                                if (reCode == "Y" && reData != "")
+                                    reCnt = Convert.ToInt16(reData);
+
+                                if (reCnt > 0)
+                                    MessageBox.Show("저장 성공" + " : " + reCnt.ToString());
+                                else
+                                    MessageBox.Show("저장 실패");
+
+                                SetDataBind_gridView1(_codeGrp, _code);
+
+                            }
+
+                        }
+                        catch (Exception ex)
+                        {
+                            logs.SaveLog("[error]  (page)::FrmCodeTMainDB.cs  (Function)::dataGridView2_CellClick  (Detail):: " + "\r\n" + ex.ToString(), "Error");
+                        }
+                        finally
+                        {
+                            if (wSvc != null)
+                                wSvc.Dispose();
+                        }
+                    }
+
+                }
 
                 if (_codeGrp == "2")
                 {
-                    string reVal = ChkDgv2ParamSubMenu();
+                    string reVal = ChkDgv2Param();
 
                     if (reVal != "")
                         MessageBox.Show("데이터 확인 :: " + reVal);
                     else
                     {
-                        string Nm_val = dataGridView2.Rows[0].Cells["dgv2_NM"].Value.ToString();
-                        string sortNo_val = "1";
-                        if (dataGridView2.Rows[0].Cells["dgv2_SORT_NO"].Value != null)
-                            sortNo_val = dataGridView2.Rows[0].Cells["dgv2_SORT_NO"].Value.ToString();
-
-                        string pInputId = "1";
+                        string tCode_val = dataGridView2.Rows[0].Cells["dgv2_TCODE"].Value.ToString();
+                        string tscodeNm_val = dataGridView2.Rows[0].Cells["dgv2_NM"].Value.ToString();
 
                         try
                         {
-                            wSvc = new M_WsMenuMainDB.WsMenuMainDB();
-                            wSvc.Url = "http://" + AppInfo.SsWsvcServer2 + "/WebSvc/Sys/Menu/WsMenuMainDB.svc";
+                            wSvc = new M_WsCodeTMainDB.WsCodeTMainDB();
+                            wSvc.Url = "http://" + AppInfo.SsWsvcServer2 + "/WebSvc/Sys/CodeT/WsCodeTMainDB.svc";
                             wSvc.Timeout = 1000;
 
-                            //reCode = wSvc.exMenuSub(sMenuCd, tMenuCd, Nm_val, out reMsg, out reData);
+                            reCode = wSvc.exCodeTSub(tCode_val, tscodeNm_val, out reMsg, out reData);
                             if (reCode == "Y" && reData != "0")
                             {
                                 MessageBox.Show("중복 데이터 입니다.");
@@ -461,7 +525,7 @@ namespace EldigmPlusApp.SubForm.Sys.CodeT
                             else
                             {
                                 reCode = "";
-                                reCode = wSvc.aMenuSub(_code, Nm_val, "1", sortNo_val, pInputId, out reMsg, out reData);
+                                reCode = wSvc.aCodeTSub(tCode_val, tscodeNm_val, "0", AppInfo.SsUserId, out reMsg, out reData);
 
                                 int reCnt = 0;
 
@@ -474,7 +538,6 @@ namespace EldigmPlusApp.SubForm.Sys.CodeT
                                     MessageBox.Show("저장 실패");
 
                                 SetDataBind_gridView1(_codeGrp, _code);
-
                             }
 
                         }
@@ -490,85 +553,29 @@ namespace EldigmPlusApp.SubForm.Sys.CodeT
                     }
 
                 }
-
-                if (_codeGrp == "3")
-                {
-                    string reVal = ChkDgv2ParamMenu();
-
-                    if (reVal != "")
-                        MessageBox.Show("데이터 확인 :: " + reVal);
-                    else
-                    {
-                        string menuCd_val = dataGridView2.Rows[0].Cells["dgv2_MENU_CD"].Value.ToString();
-                        string Nm_val = dataGridView2.Rows[0].Cells["dgv2_NM"].Value.ToString();
-
-                        string sortNo_val = "1";
-                        if (dataGridView2.Rows[0].Cells["dgv2_SORT_NO"].Value != null)
-                            sortNo_val = dataGridView2.Rows[0].Cells["dgv2_SORT_NO"].Value.ToString();
-
-                        string menuPath_val = "";
-                        if (dataGridView2.Rows[0].Cells["dgv2_MENU_PATH"].Value != null)
-                            menuPath_val = dataGridView2.Rows[0].Cells["dgv2_MENU_PATH"].Value.ToString();
-
-                        string fileFolder_val = "";
-                        if (dataGridView2.Rows[0].Cells["dgv2_FILE_FOLDER"].Value != null)
-                            fileFolder_val = dataGridView2.Rows[0].Cells["dgv2_FILE_FOLDER"].Value.ToString();
-
-                        string pInputId = "1";
-
-                        try
-                        {
-                            wSvc = new M_WsMenuMainDB.WsMenuMainDB();
-                            wSvc.Url = "http://" + AppInfo.SsWsvcServer2 + "/WebSvc/Sys/Menu/WsMenuMainDB.svc";
-                            wSvc.Timeout = 1000;
-
-                            //reCode = wSvc.exMenu(menuCd_val, tMenuCd, sMenuCd, out reMsg, out reData);
-                            if (reCode == "Y" && reData != "0")
-                            {
-                                MessageBox.Show("중복 데이터 입니다.");
-                            }
-                            else
-                            {
-                                reCode = "";
-                                //reCode = wSvc.aMenu(tMenuCd, sMenuCd, menuCd_val, Nm_val, "1", sortNo_val, menuPath_val, fileFolder_val, pInputId, out reMsg, out reData);
-
-                                int reCnt = 0;
-
-                                if (reCode == "Y" && reData != "")
-                                    reCnt = Convert.ToInt16(reData);
-
-                                if (reCnt > 0)
-                                    MessageBox.Show("저장 성공" + " : " + reCnt.ToString());
-                                else
-                                    MessageBox.Show("저장 실패");
-
-                                SetDataBind_gridView1(_codeGrp, _code);
-
-                            }
-
-                        }
-                        catch (Exception ex)
-                        {
-                            logs.SaveLog("[error]  (page)::FrmCodeTMainDB.cs  (Function)::dataGridView2_CellClick  (Detail):: " + "\r\n" + ex.ToString(), "Error");
-                        }
-                        finally
-                        {
-                            if (wSvc != null)
-                                wSvc.Dispose();
-                        }
-                    }
-
-                }
-
 
             }
         }
 
-        private string ChkDgv2ParamSubMenu()
+        private string ChkDgv2Param()
         {
             string reVal = "";
             try
             {
+                if (dataGridView2.Rows[0].Cells["dgv2_TCODE"].Value != null)
+                {
+                    if (dataGridView2.Rows[0].Cells["dgv2_TCODE"].Value.ToString() == "")
+                    {
+                        reVal = "T코드";
+                        return reVal;
+                    }
+                }
+                else
+                {
+                    reVal = "T코드";
+                    return reVal;
+                }
+
                 if (dataGridView2.Rows[0].Cells["dgv2_NM"].Value != null)
                 {
                     if (dataGridView2.Rows[0].Cells["dgv2_NM"].Value.ToString() == "")
@@ -593,51 +600,6 @@ namespace EldigmPlusApp.SubForm.Sys.CodeT
             return reVal;
         }
 
-        private string ChkDgv2ParamMenu()
-        {
-            string reVal = "";
-
-            try
-            {
-                if (dataGridView2.Rows[0].Cells["dgv2_MENU_CD"].Value != null)
-                {
-                    if (dataGridView2.Rows[0].Cells["dgv2_MENU_CD"].Value.ToString() == "")
-                    {
-                        reVal = "메뉴코드";
-                        return reVal;
-                    }
-                }
-                else
-                {
-                    reVal = "메뉴코드";
-                    return reVal;
-                }
-
-                if (dataGridView2.Rows[0].Cells["dgv2_NM"].Value != null)
-                {
-                    if (dataGridView2.Rows[0].Cells["dgv2_NM"].Value.ToString() == "")
-                    {
-                        reVal = "이름";
-                        return reVal;
-                    }
-                }
-                else
-                {
-                    reVal = "이름";
-                    return reVal;
-                }
-
-            }
-            catch (Exception ex)
-            {
-                reVal = "에러";
-                logs.SaveLog("[error]  (page)::FrmCodeTMainDB.cs  (Function)::ChkDgv2ParamMenu  (Detail):: " + "\r\n" + ex.ToString(), "Error");
-            }
-
-            return reVal;
-        }
-
-
         // dataGridView 선택값 없애기
         private void NoSelectGrideView(DataGridView dgv)
         {
@@ -655,15 +617,15 @@ namespace EldigmPlusApp.SubForm.Sys.CodeT
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            M_WsMenuMainDB.WsMenuMainDB wSvc = null;
+            M_WsCodeTMainDB.WsCodeTMainDB wSvc = null;
             string reCode = "";
             string reMsg = "";
             string reData = "";
 
             try
             {
-                wSvc = new M_WsMenuMainDB.WsMenuMainDB();
-                wSvc.Url = "http://" + AppInfo.SsWsvcServer2 + "/WebSvc/Sys/Menu/WsMenuMainDB.svc";
+                wSvc = new M_WsCodeTMainDB.WsCodeTMainDB();
+                wSvc.Url = "http://" + AppInfo.SsWsvcServer2 + "/WebSvc/Sys/CodeT/WsCodeTMainDB.svc";
                 wSvc.Timeout = 1000;
 
                 int reCnt = 0;
@@ -676,15 +638,12 @@ namespace EldigmPlusApp.SubForm.Sys.CodeT
                         {
                             if (dataGridView1.Rows[i].Cells["dgv1_CHK"].Value.ToString() == "1")
                             {
+                                string tcode_val = dataGridView1.Rows[i].Cells["dgv1_TCODE"].Value.ToString();
+                                string listFlag_val = dataGridView1.Rows[i].Cells["dgv1_LIST_FLAG"].Value.ToString();
+                                string requiredFlag_val = dataGridView1.Rows[i].Cells["dgv1_REQUIRED_FLAG"].Value.ToString();
+                                string numericFlag_val = dataGridView1.Rows[i].Cells["dgv1_NUMERIC_FLAG"].Value.ToString();
 
-                                string sMenuCd_val = dataGridView1.Rows[i].Cells["dgv1_SUB_MENU_CD"].Value.ToString();
-                                string usingFlag_val = dataGridView1.Rows[i].Cells["dgv1_USING_FLAG"].Value.ToString();
-
-                                string sortNo_val = "1";
-                                if (dataGridView1.Rows[i].Cells["dgv1_SORT_NO"].Value != null)
-                                    sortNo_val = dataGridView1.Rows[i].Cells["dgv1_SORT_NO"].Value.ToString();
-
-                                reCode = wSvc.mMenuSub(_code, sMenuCd_val, usingFlag_val, sortNo_val, out reMsg, out reData);
+                                reCode = wSvc.mCodeT(tcode_val, listFlag_val, requiredFlag_val, numericFlag_val, out reMsg, out reData);
 
                                 if (reCode == "Y" && reData != "")
                                     reCnt += Convert.ToInt16(reData);
@@ -698,52 +657,11 @@ namespace EldigmPlusApp.SubForm.Sys.CodeT
 
                     SetDataBind_gridView1(_codeGrp, _code);
                 }
-
-                if (_codeGrp == "3")
-                {
-                    for (int i = 0; i < dataGridView1.Rows.Count; i++)
-                    {
-                        if (dataGridView1.Rows[i].Cells["dgv1_CHK"].Value != null)
-                        {
-                            if (dataGridView1.Rows[i].Cells["dgv1_CHK"].Value.ToString() == "1")
-                            {
-                                string topMenuCd_val = dataGridView1.Rows[i].Cells["dgv1_TOP_MENU_CD"].Value.ToString();
-                                string subMenuCd_val = dataGridView1.Rows[i].Cells["dgv1_SUB_MENU_CD"].Value.ToString();
-                                string menuCd_val = dataGridView1.Rows[i].Cells["dgv1_MENU_CD"].Value.ToString();
-                                string usingFlag_val = dataGridView1.Rows[i].Cells["dgv1_USING_FLAG"].Value.ToString();
-
-                                string sortNo_val = "1";
-                                if (dataGridView1.Rows[i].Cells["dgv1_SORT_NO"].Value != null)
-                                    sortNo_val = dataGridView1.Rows[i].Cells["dgv1_SORT_NO"].Value.ToString();
-
-                                string menuPath_val = "";
-                                if (dataGridView1.Rows[i].Cells["dgv1_MENU_PATH"].Value != null)
-                                    menuPath_val = dataGridView1.Rows[i].Cells["dgv1_MENU_PATH"].Value.ToString();
-
-                                string fileFolder_val = "";
-                                if (dataGridView1.Rows[i].Cells["dgv1_FILE_FOLDER"].Value != null)
-                                    fileFolder_val = dataGridView1.Rows[i].Cells["dgv1_FILE_FOLDER"].Value.ToString();
-
-                                reCode = wSvc.mMenu(topMenuCd_val, subMenuCd_val, menuCd_val, usingFlag_val, sortNo_val, menuPath_val, fileFolder_val, out reMsg, out reData);
-
-                                if (reCode == "Y" && reData != "")
-                                    reCnt += Convert.ToInt16(reData);
-                            }
-                        }
-                    }
-                    if (reCnt > 0)
-                        MessageBox.Show("저장 성공" + " : " + reCnt.ToString());
-                    else
-                        MessageBox.Show("저장 실패");
-
-                    SetDataBind_gridView1(_codeGrp, _code);
-                }
-
 
             }
             catch (Exception ex)
             {
-                logs.SaveLog("[error]  (page)::FrmSysCode.cs  (Function)::btnSave_Click  (Detail):: " + "\r\n" + ex.ToString(), "Error");
+                logs.SaveLog("[error]  (page)::FrmCodeTMainDB.cs  (Function)::btnSave_Click  (Detail):: " + "\r\n" + ex.ToString(), "Error");
 
             }
             finally

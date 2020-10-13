@@ -109,7 +109,7 @@ namespace EldigmPlusClassLibrary.DbClass.Sys.MemberSite
         {
             string sql = "" +
                 " INSERT INTO [PLUS_MAIN].dbo.TM00_MEMCO (MEMCO_NM, DB_NM, USING_FLAG, SORT_NO, MEMO, INPUT_ID, INPUT_DT) " +
-                " VALUES ('" + MEMCO_NM + "', '" + DB_NM + "', " + USING_FLAG + ", " + SORT_NO + ", '" + MEMO + "', '" + INPUT_ID + "', GETDATE()) ";
+                " VALUES ('" + MEMCO_NM + "', '" + DB_NM + "', " + USING_FLAG + ", " + SORT_NO + ", '" + MEMO + "', " + INPUT_ID + ", GETDATE()) ";
 
             int reCnt = 0;
             if (_sqlHelper != null)

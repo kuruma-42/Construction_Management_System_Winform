@@ -39,6 +39,30 @@ namespace EldigmPlusApp.M_WsCodeTMainDB {
         
         private System.Threading.SendOrPostCallback sCodeTSubOperationCompleted;
         
+        private System.Threading.SendOrPostCallback mCodeTOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback aCodeTOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback exCodeTOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback aCodeTSubOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback exCodeTSubOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback sCodeTSiteTreeViewOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback sCodeTSiteOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback mCodeTSiteOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback sCodeAuthTTreeViewOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback sCodeTAuthOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback sCodeTAuthTtypeOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback mCodeTAuthOperationCompleted;
+        
         private bool useDefaultCredentialsSetExplicitly;
         
         /// <remarks/>
@@ -91,6 +115,42 @@ namespace EldigmPlusApp.M_WsCodeTMainDB {
         
         /// <remarks/>
         public event sCodeTSubCompletedEventHandler sCodeTSubCompleted;
+        
+        /// <remarks/>
+        public event mCodeTCompletedEventHandler mCodeTCompleted;
+        
+        /// <remarks/>
+        public event aCodeTCompletedEventHandler aCodeTCompleted;
+        
+        /// <remarks/>
+        public event exCodeTCompletedEventHandler exCodeTCompleted;
+        
+        /// <remarks/>
+        public event aCodeTSubCompletedEventHandler aCodeTSubCompleted;
+        
+        /// <remarks/>
+        public event exCodeTSubCompletedEventHandler exCodeTSubCompleted;
+        
+        /// <remarks/>
+        public event sCodeTSiteTreeViewCompletedEventHandler sCodeTSiteTreeViewCompleted;
+        
+        /// <remarks/>
+        public event sCodeTSiteCompletedEventHandler sCodeTSiteCompleted;
+        
+        /// <remarks/>
+        public event mCodeTSiteCompletedEventHandler mCodeTSiteCompleted;
+        
+        /// <remarks/>
+        public event sCodeAuthTTreeViewCompletedEventHandler sCodeAuthTTreeViewCompleted;
+        
+        /// <remarks/>
+        public event sCodeTAuthCompletedEventHandler sCodeTAuthCompleted;
+        
+        /// <remarks/>
+        public event sCodeTAuthTtypeCompletedEventHandler sCodeTAuthTtypeCompleted;
+        
+        /// <remarks/>
+        public event mCodeTAuthCompletedEventHandler mCodeTAuthCompleted;
         
         /// <remarks/>
         [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IWsCodeTMainDB/sSysCode", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
@@ -251,6 +311,454 @@ namespace EldigmPlusApp.M_WsCodeTMainDB {
         }
         
         /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IWsCodeTMainDB/mCodeT", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [return: System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string mCodeT([System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pTcode, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pListFlag, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pRequiredFlag, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pNumericFlag, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] out string reMsg, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] out string reData) {
+            object[] results = this.Invoke("mCodeT", new object[] {
+                        pTcode,
+                        pListFlag,
+                        pRequiredFlag,
+                        pNumericFlag});
+            reMsg = ((string)(results[1]));
+            reData = ((string)(results[2]));
+            return ((string)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void mCodeTAsync(string pTcode, string pListFlag, string pRequiredFlag, string pNumericFlag) {
+            this.mCodeTAsync(pTcode, pListFlag, pRequiredFlag, pNumericFlag, null);
+        }
+        
+        /// <remarks/>
+        public void mCodeTAsync(string pTcode, string pListFlag, string pRequiredFlag, string pNumericFlag, object userState) {
+            if ((this.mCodeTOperationCompleted == null)) {
+                this.mCodeTOperationCompleted = new System.Threading.SendOrPostCallback(this.OnmCodeTOperationCompleted);
+            }
+            this.InvokeAsync("mCodeT", new object[] {
+                        pTcode,
+                        pListFlag,
+                        pRequiredFlag,
+                        pNumericFlag}, this.mCodeTOperationCompleted, userState);
+        }
+        
+        private void OnmCodeTOperationCompleted(object arg) {
+            if ((this.mCodeTCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.mCodeTCompleted(this, new mCodeTCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IWsCodeTMainDB/aCodeT", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [return: System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string aCodeT([System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pTcode, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pttypeScd, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string ptcodeNm, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pListFlag, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pRequiredFlag, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pNumericFlag, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pInputId, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] out string reMsg, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] out string reData) {
+            object[] results = this.Invoke("aCodeT", new object[] {
+                        pTcode,
+                        pttypeScd,
+                        ptcodeNm,
+                        pListFlag,
+                        pRequiredFlag,
+                        pNumericFlag,
+                        pInputId});
+            reMsg = ((string)(results[1]));
+            reData = ((string)(results[2]));
+            return ((string)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void aCodeTAsync(string pTcode, string pttypeScd, string ptcodeNm, string pListFlag, string pRequiredFlag, string pNumericFlag, string pInputId) {
+            this.aCodeTAsync(pTcode, pttypeScd, ptcodeNm, pListFlag, pRequiredFlag, pNumericFlag, pInputId, null);
+        }
+        
+        /// <remarks/>
+        public void aCodeTAsync(string pTcode, string pttypeScd, string ptcodeNm, string pListFlag, string pRequiredFlag, string pNumericFlag, string pInputId, object userState) {
+            if ((this.aCodeTOperationCompleted == null)) {
+                this.aCodeTOperationCompleted = new System.Threading.SendOrPostCallback(this.OnaCodeTOperationCompleted);
+            }
+            this.InvokeAsync("aCodeT", new object[] {
+                        pTcode,
+                        pttypeScd,
+                        ptcodeNm,
+                        pListFlag,
+                        pRequiredFlag,
+                        pNumericFlag,
+                        pInputId}, this.aCodeTOperationCompleted, userState);
+        }
+        
+        private void OnaCodeTOperationCompleted(object arg) {
+            if ((this.aCodeTCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.aCodeTCompleted(this, new aCodeTCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IWsCodeTMainDB/exCodeT", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [return: System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string exCodeT([System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pTcode, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string ptcodeNm, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] out string reMsg, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] out string reData) {
+            object[] results = this.Invoke("exCodeT", new object[] {
+                        pTcode,
+                        ptcodeNm});
+            reMsg = ((string)(results[1]));
+            reData = ((string)(results[2]));
+            return ((string)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void exCodeTAsync(string pTcode, string ptcodeNm) {
+            this.exCodeTAsync(pTcode, ptcodeNm, null);
+        }
+        
+        /// <remarks/>
+        public void exCodeTAsync(string pTcode, string ptcodeNm, object userState) {
+            if ((this.exCodeTOperationCompleted == null)) {
+                this.exCodeTOperationCompleted = new System.Threading.SendOrPostCallback(this.OnexCodeTOperationCompleted);
+            }
+            this.InvokeAsync("exCodeT", new object[] {
+                        pTcode,
+                        ptcodeNm}, this.exCodeTOperationCompleted, userState);
+        }
+        
+        private void OnexCodeTOperationCompleted(object arg) {
+            if ((this.exCodeTCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.exCodeTCompleted(this, new exCodeTCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IWsCodeTMainDB/aCodeTSub", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [return: System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string aCodeTSub([System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pTcode, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pTscodeNm, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pUsingCnt, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pInputId, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] out string reMsg, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] out string reData) {
+            object[] results = this.Invoke("aCodeTSub", new object[] {
+                        pTcode,
+                        pTscodeNm,
+                        pUsingCnt,
+                        pInputId});
+            reMsg = ((string)(results[1]));
+            reData = ((string)(results[2]));
+            return ((string)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void aCodeTSubAsync(string pTcode, string pTscodeNm, string pUsingCnt, string pInputId) {
+            this.aCodeTSubAsync(pTcode, pTscodeNm, pUsingCnt, pInputId, null);
+        }
+        
+        /// <remarks/>
+        public void aCodeTSubAsync(string pTcode, string pTscodeNm, string pUsingCnt, string pInputId, object userState) {
+            if ((this.aCodeTSubOperationCompleted == null)) {
+                this.aCodeTSubOperationCompleted = new System.Threading.SendOrPostCallback(this.OnaCodeTSubOperationCompleted);
+            }
+            this.InvokeAsync("aCodeTSub", new object[] {
+                        pTcode,
+                        pTscodeNm,
+                        pUsingCnt,
+                        pInputId}, this.aCodeTSubOperationCompleted, userState);
+        }
+        
+        private void OnaCodeTSubOperationCompleted(object arg) {
+            if ((this.aCodeTSubCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.aCodeTSubCompleted(this, new aCodeTSubCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IWsCodeTMainDB/exCodeTSub", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [return: System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string exCodeTSub([System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pTcode, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pTscodeNm, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] out string reMsg, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] out string reData) {
+            object[] results = this.Invoke("exCodeTSub", new object[] {
+                        pTcode,
+                        pTscodeNm});
+            reMsg = ((string)(results[1]));
+            reData = ((string)(results[2]));
+            return ((string)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void exCodeTSubAsync(string pTcode, string pTscodeNm) {
+            this.exCodeTSubAsync(pTcode, pTscodeNm, null);
+        }
+        
+        /// <remarks/>
+        public void exCodeTSubAsync(string pTcode, string pTscodeNm, object userState) {
+            if ((this.exCodeTSubOperationCompleted == null)) {
+                this.exCodeTSubOperationCompleted = new System.Threading.SendOrPostCallback(this.OnexCodeTSubOperationCompleted);
+            }
+            this.InvokeAsync("exCodeTSub", new object[] {
+                        pTcode,
+                        pTscodeNm}, this.exCodeTSubOperationCompleted, userState);
+        }
+        
+        private void OnexCodeTSubOperationCompleted(object arg) {
+            if ((this.exCodeTSubCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.exCodeTSubCompleted(this, new exCodeTSubCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IWsCodeTMainDB/sCodeTSiteTreeView", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [return: System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string sCodeTSiteTreeView([System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pDbnm, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pSiteCd, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pAuth, [System.Xml.Serialization.XmlArrayAttribute(IsNullable=true)] [System.Xml.Serialization.XmlArrayItemAttribute(Namespace="http://schemas.datacontract.org/2004/07/EldigmPlusSvc_Main.WebSvc.Sys.CodeT")] out DataCodeTSiteTreeView[] reList, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] out string reMsg) {
+            object[] results = this.Invoke("sCodeTSiteTreeView", new object[] {
+                        pDbnm,
+                        pSiteCd,
+                        pAuth});
+            reList = ((DataCodeTSiteTreeView[])(results[1]));
+            reMsg = ((string)(results[2]));
+            return ((string)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void sCodeTSiteTreeViewAsync(string pDbnm, string pSiteCd, string pAuth) {
+            this.sCodeTSiteTreeViewAsync(pDbnm, pSiteCd, pAuth, null);
+        }
+        
+        /// <remarks/>
+        public void sCodeTSiteTreeViewAsync(string pDbnm, string pSiteCd, string pAuth, object userState) {
+            if ((this.sCodeTSiteTreeViewOperationCompleted == null)) {
+                this.sCodeTSiteTreeViewOperationCompleted = new System.Threading.SendOrPostCallback(this.OnsCodeTSiteTreeViewOperationCompleted);
+            }
+            this.InvokeAsync("sCodeTSiteTreeView", new object[] {
+                        pDbnm,
+                        pSiteCd,
+                        pAuth}, this.sCodeTSiteTreeViewOperationCompleted, userState);
+        }
+        
+        private void OnsCodeTSiteTreeViewOperationCompleted(object arg) {
+            if ((this.sCodeTSiteTreeViewCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.sCodeTSiteTreeViewCompleted(this, new sCodeTSiteTreeViewCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IWsCodeTMainDB/sCodeTSite", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [return: System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string sCodeTSite([System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pDbnm, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pSiteCd, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pTgrpCcd, [System.Xml.Serialization.XmlArrayAttribute(IsNullable=true)] [System.Xml.Serialization.XmlArrayItemAttribute(Namespace="http://schemas.datacontract.org/2004/07/EldigmPlusSvc_Main.WebSvc.Sys.CodeT")] out DataCodeTSite[] reList, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] out string reMsg) {
+            object[] results = this.Invoke("sCodeTSite", new object[] {
+                        pDbnm,
+                        pSiteCd,
+                        pTgrpCcd});
+            reList = ((DataCodeTSite[])(results[1]));
+            reMsg = ((string)(results[2]));
+            return ((string)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void sCodeTSiteAsync(string pDbnm, string pSiteCd, string pTgrpCcd) {
+            this.sCodeTSiteAsync(pDbnm, pSiteCd, pTgrpCcd, null);
+        }
+        
+        /// <remarks/>
+        public void sCodeTSiteAsync(string pDbnm, string pSiteCd, string pTgrpCcd, object userState) {
+            if ((this.sCodeTSiteOperationCompleted == null)) {
+                this.sCodeTSiteOperationCompleted = new System.Threading.SendOrPostCallback(this.OnsCodeTSiteOperationCompleted);
+            }
+            this.InvokeAsync("sCodeTSite", new object[] {
+                        pDbnm,
+                        pSiteCd,
+                        pTgrpCcd}, this.sCodeTSiteOperationCompleted, userState);
+        }
+        
+        private void OnsCodeTSiteOperationCompleted(object arg) {
+            if ((this.sCodeTSiteCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.sCodeTSiteCompleted(this, new sCodeTSiteCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IWsCodeTMainDB/mCodeTSite", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [return: System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string mCodeTSite([System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pDbnm, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pSiteCd, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pTcode, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pDefaultValue, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pUsingFlag, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pSortNo, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pMemo, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] out string reMsg, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] out string reData) {
+            object[] results = this.Invoke("mCodeTSite", new object[] {
+                        pDbnm,
+                        pSiteCd,
+                        pTcode,
+                        pDefaultValue,
+                        pUsingFlag,
+                        pSortNo,
+                        pMemo});
+            reMsg = ((string)(results[1]));
+            reData = ((string)(results[2]));
+            return ((string)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void mCodeTSiteAsync(string pDbnm, string pSiteCd, string pTcode, string pDefaultValue, string pUsingFlag, string pSortNo, string pMemo) {
+            this.mCodeTSiteAsync(pDbnm, pSiteCd, pTcode, pDefaultValue, pUsingFlag, pSortNo, pMemo, null);
+        }
+        
+        /// <remarks/>
+        public void mCodeTSiteAsync(string pDbnm, string pSiteCd, string pTcode, string pDefaultValue, string pUsingFlag, string pSortNo, string pMemo, object userState) {
+            if ((this.mCodeTSiteOperationCompleted == null)) {
+                this.mCodeTSiteOperationCompleted = new System.Threading.SendOrPostCallback(this.OnmCodeTSiteOperationCompleted);
+            }
+            this.InvokeAsync("mCodeTSite", new object[] {
+                        pDbnm,
+                        pSiteCd,
+                        pTcode,
+                        pDefaultValue,
+                        pUsingFlag,
+                        pSortNo,
+                        pMemo}, this.mCodeTSiteOperationCompleted, userState);
+        }
+        
+        private void OnmCodeTSiteOperationCompleted(object arg) {
+            if ((this.mCodeTSiteCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.mCodeTSiteCompleted(this, new mCodeTSiteCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IWsCodeTMainDB/sCodeAuthTTreeView", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [return: System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string sCodeAuthTTreeView([System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pScode, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pSiteCd, [System.Xml.Serialization.XmlArrayAttribute(IsNullable=true)] [System.Xml.Serialization.XmlArrayItemAttribute(Namespace="http://schemas.datacontract.org/2004/07/EldigmPlusSvc_Main.WebSvc.Sys.CodeT")] out DataCodeTAuth[] reList, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] out string reMsg) {
+            object[] results = this.Invoke("sCodeAuthTTreeView", new object[] {
+                        pScode,
+                        pSiteCd});
+            reList = ((DataCodeTAuth[])(results[1]));
+            reMsg = ((string)(results[2]));
+            return ((string)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void sCodeAuthTTreeViewAsync(string pScode, string pSiteCd) {
+            this.sCodeAuthTTreeViewAsync(pScode, pSiteCd, null);
+        }
+        
+        /// <remarks/>
+        public void sCodeAuthTTreeViewAsync(string pScode, string pSiteCd, object userState) {
+            if ((this.sCodeAuthTTreeViewOperationCompleted == null)) {
+                this.sCodeAuthTTreeViewOperationCompleted = new System.Threading.SendOrPostCallback(this.OnsCodeAuthTTreeViewOperationCompleted);
+            }
+            this.InvokeAsync("sCodeAuthTTreeView", new object[] {
+                        pScode,
+                        pSiteCd}, this.sCodeAuthTTreeViewOperationCompleted, userState);
+        }
+        
+        private void OnsCodeAuthTTreeViewOperationCompleted(object arg) {
+            if ((this.sCodeAuthTTreeViewCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.sCodeAuthTTreeViewCompleted(this, new sCodeAuthTTreeViewCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IWsCodeTMainDB/sCodeTAuth", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [return: System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string sCodeTAuth([System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pTcode, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pSiteCd, [System.Xml.Serialization.XmlArrayAttribute(IsNullable=true)] [System.Xml.Serialization.XmlArrayItemAttribute(Namespace="http://schemas.datacontract.org/2004/07/EldigmPlusSvc_Main.WebSvc.Sys.CodeT")] out DataCodeTAuthSelect[] reList, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] out string reMsg) {
+            object[] results = this.Invoke("sCodeTAuth", new object[] {
+                        pTcode,
+                        pSiteCd});
+            reList = ((DataCodeTAuthSelect[])(results[1]));
+            reMsg = ((string)(results[2]));
+            return ((string)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void sCodeTAuthAsync(string pTcode, string pSiteCd) {
+            this.sCodeTAuthAsync(pTcode, pSiteCd, null);
+        }
+        
+        /// <remarks/>
+        public void sCodeTAuthAsync(string pTcode, string pSiteCd, object userState) {
+            if ((this.sCodeTAuthOperationCompleted == null)) {
+                this.sCodeTAuthOperationCompleted = new System.Threading.SendOrPostCallback(this.OnsCodeTAuthOperationCompleted);
+            }
+            this.InvokeAsync("sCodeTAuth", new object[] {
+                        pTcode,
+                        pSiteCd}, this.sCodeTAuthOperationCompleted, userState);
+        }
+        
+        private void OnsCodeTAuthOperationCompleted(object arg) {
+            if ((this.sCodeTAuthCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.sCodeTAuthCompleted(this, new sCodeTAuthCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IWsCodeTMainDB/sCodeTAuthTtype", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [return: System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string sCodeTAuthTtype([System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pTtypeScd, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pSiteCd, [System.Xml.Serialization.XmlArrayAttribute(IsNullable=true)] [System.Xml.Serialization.XmlArrayItemAttribute(Namespace="http://schemas.datacontract.org/2004/07/EldigmPlusSvc_Main.WebSvc.Sys.CodeT")] out DataCodeTAuthSelect[] reList, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] out string reMsg) {
+            object[] results = this.Invoke("sCodeTAuthTtype", new object[] {
+                        pTtypeScd,
+                        pSiteCd});
+            reList = ((DataCodeTAuthSelect[])(results[1]));
+            reMsg = ((string)(results[2]));
+            return ((string)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void sCodeTAuthTtypeAsync(string pTtypeScd, string pSiteCd) {
+            this.sCodeTAuthTtypeAsync(pTtypeScd, pSiteCd, null);
+        }
+        
+        /// <remarks/>
+        public void sCodeTAuthTtypeAsync(string pTtypeScd, string pSiteCd, object userState) {
+            if ((this.sCodeTAuthTtypeOperationCompleted == null)) {
+                this.sCodeTAuthTtypeOperationCompleted = new System.Threading.SendOrPostCallback(this.OnsCodeTAuthTtypeOperationCompleted);
+            }
+            this.InvokeAsync("sCodeTAuthTtype", new object[] {
+                        pTtypeScd,
+                        pSiteCd}, this.sCodeTAuthTtypeOperationCompleted, userState);
+        }
+        
+        private void OnsCodeTAuthTtypeOperationCompleted(object arg) {
+            if ((this.sCodeTAuthTtypeCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.sCodeTAuthTtypeCompleted(this, new sCodeTAuthTtypeCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IWsCodeTMainDB/mCodeTAuth", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [return: System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string mCodeTAuth([System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pTcodeNm, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pSiteCd, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pAuthCd, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pViewFlag, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pNewFlag, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pModifyFlag, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] out string reMsg, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] out string reData) {
+            object[] results = this.Invoke("mCodeTAuth", new object[] {
+                        pTcodeNm,
+                        pSiteCd,
+                        pAuthCd,
+                        pViewFlag,
+                        pNewFlag,
+                        pModifyFlag});
+            reMsg = ((string)(results[1]));
+            reData = ((string)(results[2]));
+            return ((string)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void mCodeTAuthAsync(string pTcodeNm, string pSiteCd, string pAuthCd, string pViewFlag, string pNewFlag, string pModifyFlag) {
+            this.mCodeTAuthAsync(pTcodeNm, pSiteCd, pAuthCd, pViewFlag, pNewFlag, pModifyFlag, null);
+        }
+        
+        /// <remarks/>
+        public void mCodeTAuthAsync(string pTcodeNm, string pSiteCd, string pAuthCd, string pViewFlag, string pNewFlag, string pModifyFlag, object userState) {
+            if ((this.mCodeTAuthOperationCompleted == null)) {
+                this.mCodeTAuthOperationCompleted = new System.Threading.SendOrPostCallback(this.OnmCodeTAuthOperationCompleted);
+            }
+            this.InvokeAsync("mCodeTAuth", new object[] {
+                        pTcodeNm,
+                        pSiteCd,
+                        pAuthCd,
+                        pViewFlag,
+                        pNewFlag,
+                        pModifyFlag}, this.mCodeTAuthOperationCompleted, userState);
+        }
+        
+        private void OnmCodeTAuthOperationCompleted(object arg) {
+            if ((this.mCodeTAuthCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.mCodeTAuthCompleted(this, new mCodeTAuthCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
         public new void CancelAsync(object userState) {
             base.CancelAsync(userState);
         }
@@ -300,6 +808,334 @@ namespace EldigmPlusApp.M_WsCodeTMainDB {
             }
             set {
                 this.sCODE_NMField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.datacontract.org/2004/07/EldigmPlusSvc_Main.WebSvc.Sys.CodeT")]
+    public partial class DataCodeTAuthSelect {
+        
+        private string aUTH_CDField;
+        
+        private string tCODE_NMField;
+        
+        private int vIEW_FLAGField;
+        
+        private bool vIEW_FLAGFieldSpecified;
+        
+        private int nEW_FLAGField;
+        
+        private bool nEW_FLAGFieldSpecified;
+        
+        private int mODIFY_FLAGField;
+        
+        private bool mODIFY_FLAGFieldSpecified;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string AUTH_CD {
+            get {
+                return this.aUTH_CDField;
+            }
+            set {
+                this.aUTH_CDField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string TCODE_NM {
+            get {
+                return this.tCODE_NMField;
+            }
+            set {
+                this.tCODE_NMField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public int VIEW_FLAG {
+            get {
+                return this.vIEW_FLAGField;
+            }
+            set {
+                this.vIEW_FLAGField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool VIEW_FLAGSpecified {
+            get {
+                return this.vIEW_FLAGFieldSpecified;
+            }
+            set {
+                this.vIEW_FLAGFieldSpecified = value;
+            }
+        }
+        
+        /// <remarks/>
+        public int NEW_FLAG {
+            get {
+                return this.nEW_FLAGField;
+            }
+            set {
+                this.nEW_FLAGField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool NEW_FLAGSpecified {
+            get {
+                return this.nEW_FLAGFieldSpecified;
+            }
+            set {
+                this.nEW_FLAGFieldSpecified = value;
+            }
+        }
+        
+        /// <remarks/>
+        public int MODIFY_FLAG {
+            get {
+                return this.mODIFY_FLAGField;
+            }
+            set {
+                this.mODIFY_FLAGField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool MODIFY_FLAGSpecified {
+            get {
+                return this.mODIFY_FLAGFieldSpecified;
+            }
+            set {
+                this.mODIFY_FLAGFieldSpecified = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.datacontract.org/2004/07/EldigmPlusSvc_Main.WebSvc.Sys.CodeT")]
+    public partial class DataCodeTAuth {
+        
+        private string tCODEField;
+        
+        private string tCODE_NMField;
+        
+        private int uSING_FLAGField;
+        
+        private bool uSING_FLAGFieldSpecified;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string TCODE {
+            get {
+                return this.tCODEField;
+            }
+            set {
+                this.tCODEField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string TCODE_NM {
+            get {
+                return this.tCODE_NMField;
+            }
+            set {
+                this.tCODE_NMField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public int USING_FLAG {
+            get {
+                return this.uSING_FLAGField;
+            }
+            set {
+                this.uSING_FLAGField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool USING_FLAGSpecified {
+            get {
+                return this.uSING_FLAGFieldSpecified;
+            }
+            set {
+                this.uSING_FLAGFieldSpecified = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.datacontract.org/2004/07/EldigmPlusSvc_Main.WebSvc.Sys.CodeT")]
+    public partial class DataCodeTSite {
+        
+        private string tCODEField;
+        
+        private string tCODE_NMField;
+        
+        private string dEFAULT_VALUEField;
+        
+        private int uSING_FLAGField;
+        
+        private bool uSING_FLAGFieldSpecified;
+        
+        private int sORT_NOField;
+        
+        private bool sORT_NOFieldSpecified;
+        
+        private string mEMOField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string TCODE {
+            get {
+                return this.tCODEField;
+            }
+            set {
+                this.tCODEField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string TCODE_NM {
+            get {
+                return this.tCODE_NMField;
+            }
+            set {
+                this.tCODE_NMField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string DEFAULT_VALUE {
+            get {
+                return this.dEFAULT_VALUEField;
+            }
+            set {
+                this.dEFAULT_VALUEField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public int USING_FLAG {
+            get {
+                return this.uSING_FLAGField;
+            }
+            set {
+                this.uSING_FLAGField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool USING_FLAGSpecified {
+            get {
+                return this.uSING_FLAGFieldSpecified;
+            }
+            set {
+                this.uSING_FLAGFieldSpecified = value;
+            }
+        }
+        
+        /// <remarks/>
+        public int SORT_NO {
+            get {
+                return this.sORT_NOField;
+            }
+            set {
+                this.sORT_NOField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool SORT_NOSpecified {
+            get {
+                return this.sORT_NOFieldSpecified;
+            }
+            set {
+                this.sORT_NOFieldSpecified = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string MEMO {
+            get {
+                return this.mEMOField;
+            }
+            set {
+                this.mEMOField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.datacontract.org/2004/07/EldigmPlusSvc_Main.WebSvc.Sys.CodeT")]
+    public partial class DataCodeTSiteTreeView {
+        
+        private int cCODEField;
+        
+        private bool cCODEFieldSpecified;
+        
+        private string cCODE_NMField;
+        
+        /// <remarks/>
+        public int CCODE {
+            get {
+                return this.cCODEField;
+            }
+            set {
+                this.cCODEField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool CCODESpecified {
+            get {
+                return this.cCODEFieldSpecified;
+            }
+            set {
+                this.cCODEFieldSpecified = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string CCODE_NM {
+            get {
+                return this.cCODE_NMField;
+            }
+            set {
+                this.cCODE_NMField = value;
             }
         }
     }
@@ -715,6 +1551,510 @@ namespace EldigmPlusApp.M_WsCodeTMainDB {
         
         /// <remarks/>
         public string reMsg {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[2]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
+    public delegate void mCodeTCompletedEventHandler(object sender, mCodeTCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class mCodeTCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal mCodeTCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public string Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[0]));
+            }
+        }
+        
+        /// <remarks/>
+        public string reMsg {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[1]));
+            }
+        }
+        
+        /// <remarks/>
+        public string reData {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[2]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
+    public delegate void aCodeTCompletedEventHandler(object sender, aCodeTCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class aCodeTCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal aCodeTCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public string Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[0]));
+            }
+        }
+        
+        /// <remarks/>
+        public string reMsg {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[1]));
+            }
+        }
+        
+        /// <remarks/>
+        public string reData {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[2]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
+    public delegate void exCodeTCompletedEventHandler(object sender, exCodeTCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class exCodeTCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal exCodeTCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public string Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[0]));
+            }
+        }
+        
+        /// <remarks/>
+        public string reMsg {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[1]));
+            }
+        }
+        
+        /// <remarks/>
+        public string reData {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[2]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
+    public delegate void aCodeTSubCompletedEventHandler(object sender, aCodeTSubCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class aCodeTSubCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal aCodeTSubCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public string Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[0]));
+            }
+        }
+        
+        /// <remarks/>
+        public string reMsg {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[1]));
+            }
+        }
+        
+        /// <remarks/>
+        public string reData {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[2]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
+    public delegate void exCodeTSubCompletedEventHandler(object sender, exCodeTSubCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class exCodeTSubCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal exCodeTSubCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public string Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[0]));
+            }
+        }
+        
+        /// <remarks/>
+        public string reMsg {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[1]));
+            }
+        }
+        
+        /// <remarks/>
+        public string reData {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[2]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
+    public delegate void sCodeTSiteTreeViewCompletedEventHandler(object sender, sCodeTSiteTreeViewCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class sCodeTSiteTreeViewCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal sCodeTSiteTreeViewCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public string Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[0]));
+            }
+        }
+        
+        /// <remarks/>
+        public DataCodeTSiteTreeView[] reList {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((DataCodeTSiteTreeView[])(this.results[1]));
+            }
+        }
+        
+        /// <remarks/>
+        public string reMsg {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[2]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
+    public delegate void sCodeTSiteCompletedEventHandler(object sender, sCodeTSiteCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class sCodeTSiteCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal sCodeTSiteCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public string Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[0]));
+            }
+        }
+        
+        /// <remarks/>
+        public DataCodeTSite[] reList {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((DataCodeTSite[])(this.results[1]));
+            }
+        }
+        
+        /// <remarks/>
+        public string reMsg {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[2]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
+    public delegate void mCodeTSiteCompletedEventHandler(object sender, mCodeTSiteCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class mCodeTSiteCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal mCodeTSiteCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public string Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[0]));
+            }
+        }
+        
+        /// <remarks/>
+        public string reMsg {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[1]));
+            }
+        }
+        
+        /// <remarks/>
+        public string reData {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[2]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
+    public delegate void sCodeAuthTTreeViewCompletedEventHandler(object sender, sCodeAuthTTreeViewCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class sCodeAuthTTreeViewCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal sCodeAuthTTreeViewCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public string Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[0]));
+            }
+        }
+        
+        /// <remarks/>
+        public DataCodeTAuth[] reList {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((DataCodeTAuth[])(this.results[1]));
+            }
+        }
+        
+        /// <remarks/>
+        public string reMsg {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[2]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
+    public delegate void sCodeTAuthCompletedEventHandler(object sender, sCodeTAuthCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class sCodeTAuthCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal sCodeTAuthCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public string Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[0]));
+            }
+        }
+        
+        /// <remarks/>
+        public DataCodeTAuthSelect[] reList {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((DataCodeTAuthSelect[])(this.results[1]));
+            }
+        }
+        
+        /// <remarks/>
+        public string reMsg {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[2]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
+    public delegate void sCodeTAuthTtypeCompletedEventHandler(object sender, sCodeTAuthTtypeCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class sCodeTAuthTtypeCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal sCodeTAuthTtypeCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public string Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[0]));
+            }
+        }
+        
+        /// <remarks/>
+        public DataCodeTAuthSelect[] reList {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((DataCodeTAuthSelect[])(this.results[1]));
+            }
+        }
+        
+        /// <remarks/>
+        public string reMsg {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[2]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
+    public delegate void mCodeTAuthCompletedEventHandler(object sender, mCodeTAuthCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class mCodeTAuthCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal mCodeTAuthCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public string Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[0]));
+            }
+        }
+        
+        /// <remarks/>
+        public string reMsg {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[1]));
+            }
+        }
+        
+        /// <remarks/>
+        public string reData {
             get {
                 this.RaiseExceptionIfNecessary();
                 return ((string)(this.results[2]));

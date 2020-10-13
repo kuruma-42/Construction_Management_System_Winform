@@ -324,7 +324,7 @@ namespace EldigmPlusApp.SubForm.Sys.SysAuth
                                     //Member DB 업데이트 실패시 INSERT 해준다.
                                     if (Convert.ToInt16(reData) < 1)
                                     {
-                                        string pInputId = "1";
+                                        string pInputId = AppInfo.SsUserId;
                                         if (usingFlag_val == "1")
                                         {
                                             reCode = wSvc.aSysAuthMemberDB(DBNM, sauthCd_val, sauthNm_val, myblockFlag_val, myconFlag_val, mycomFlag_val, myteamFlag_val
@@ -441,7 +441,7 @@ namespace EldigmPlusApp.SubForm.Sys.SysAuth
                     string memo_val = "";
                     if (dataGridView2.Rows[0].Cells["dgv2_MEMO"].Value != null)
                         memo_val = dataGridView2.Rows[0].Cells["dgv2_MEMO"].Value.ToString();
-                    string pInputId = "1";
+                    string pInputId = AppInfo.SsUserId;
 
 
 

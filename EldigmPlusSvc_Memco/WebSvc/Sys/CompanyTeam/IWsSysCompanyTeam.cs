@@ -46,11 +46,65 @@ namespace EldigmPlusSvc_Memco.WebSvc.Sys.CompanyTeam
         string mConpanyMainLog(string pCoCd, string pCoNm, string pBizNo, string pConstCcd, string pCoTypeScd, string pOwnerNm, string pTel, string pAddr, string pUsingCnt, string pInputId, out string reMsg, out string reData);
 
         [OperationContract]
-        string mCompanySiteLog(string pCoCd, string pSiteCd, string pCoNm, string pConstCcd, string pCoTypeScd, string pStartDate, string pEndDate, string pUsingFlag, string pSortNo, string pMemo, string pInputId, out string reMsg, out string reData);                
-      
+        string mCompanySiteLog(string pCoCd, string pSiteCd, string pCoNm, string pConstCcd, string pCoTypeScd, string pStartDate, string pEndDate, string pUsingFlag, string pSortNo, string pMemo, string pInputId, out string reMsg, out string reData);
+
+
+
+
+        // TEAM PART START FROM HERE 
+
+
+
+        [OperationContract]
+        string companyCmb(string pSiteCd, out List<DataCompanyCmb> reList, out string reMsg);
+
+        [OperationContract]
+        string sTeam(string pSiteCd, string pCoCd, string pUsingFlag, string pTeamNm, out List<DataTeam> reList, out string reMsg);
+
+        [OperationContract]
+        string mTeamMemco(string pSiteCd, string pTeamCd, string pTeamNm, string pUsingFalg, string pSortNo, string pMemo, out string reMsg, out string reData);
+
+        [OperationContract]
+        string aTeamPro(string pDbNm, string[] param, out string reMsg, out string reData);
+
+
+
+
 
     }
-          
+
+    //TEAM PART DATA 
+    [DataContract]
+    public class DataCompanyCmb
+    {
+        [DataMember(Order = 0)]
+        public int CO_CD { get; set; }
+
+        [DataMember(Order = 1)]
+        public string CO_NM { get; set; }
+    }
+
+
+    [DataContract]
+    public class DataTeam
+    {
+        [DataMember(Order = 0)]
+        public int TEAM_CD { get; set; }
+
+        [DataMember(Order = 1)]
+        public string TEAM_NM { get; set; }
+
+        [DataMember(Order = 2)]
+        public int USING_FLAG { get; set; }
+
+        [DataMember(Order = 3)]
+        public int SORT_NO { get; set; }
+
+        [DataMember(Order = 4)]
+        public string MEMO { get; set; }
+    }
+
+
 
 
     [DataContract]

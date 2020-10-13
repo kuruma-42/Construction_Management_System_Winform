@@ -171,8 +171,8 @@
     <xs:complexType>
       <xs:sequence>
         <xs:element minOccurs="0" name="aSiteResult" nillable="true" type="xs:string" />
-        <xs:element minOccurs="0" name="reData" nillable="true" type="xs:string" />
         <xs:element minOccurs="0" name="reMsg" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="reData" nillable="true" type="xs:string" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>

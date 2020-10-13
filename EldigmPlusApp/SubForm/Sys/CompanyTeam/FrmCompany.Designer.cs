@@ -46,6 +46,17 @@
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.splitContainer3 = new System.Windows.Forms.SplitContainer();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.dgv2_CO_NM = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgv2_BIZ_NO = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgv2_CONST_CCD = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.dgv2_CO_TYPE_SCD = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.dgv2_OWNER_NM = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgv2_TEL = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgv2_ADDR = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgv2_SORT_NO = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgv2_MEMO = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgv2_BTNADD = new System.Windows.Forms.DataGridViewButtonColumn();
             this.dgv1_CHK = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.dgv1_CO_CD = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgv1_CO_NM = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -63,17 +74,6 @@
             this.dgv1_USING_CNT = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgv1_SORT_NO = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgv1_MEMO = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.dgv2_CO_NM = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgv2_BIZ_NO = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgv2_CONST_CCD = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.dgv2_CO_TYPE_SCD = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.dgv2_OWNER_NM = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgv2_TEL = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgv2_ADDR = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgv2_SORT_NO = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgv2_MEMO = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgv2_BTNADD = new System.Windows.Forms.DataGridViewButtonColumn();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).BeginInit();
             this.splitContainer2.Panel1.SuspendLayout();
             this.splitContainer2.Panel2.SuspendLayout();
@@ -274,6 +274,87 @@
             this.dataGridView1.TabIndex = 1;
             this.dataGridView1.CellBeginEdit += new System.Windows.Forms.DataGridViewCellCancelEventHandler(this.dataGridView1_CellBeginEdit);
             // 
+            // dataGridView2
+            // 
+            this.dataGridView2.AllowUserToAddRows = false;
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgv2_CO_NM,
+            this.dgv2_BIZ_NO,
+            this.dgv2_CONST_CCD,
+            this.dgv2_CO_TYPE_SCD,
+            this.dgv2_OWNER_NM,
+            this.dgv2_TEL,
+            this.dgv2_ADDR,
+            this.dgv2_SORT_NO,
+            this.dgv2_MEMO,
+            this.dgv2_BTNADD});
+            this.dataGridView2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridView2.Location = new System.Drawing.Point(0, 0);
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.RowTemplate.Height = 23;
+            this.dataGridView2.Size = new System.Drawing.Size(1037, 78);
+            this.dataGridView2.TabIndex = 1;
+            this.dataGridView2.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellClick);
+            // 
+            // dgv2_CO_NM
+            // 
+            this.dgv2_CO_NM.HeaderText = "CO_NM";
+            this.dgv2_CO_NM.MaxInputLength = 50;
+            this.dgv2_CO_NM.Name = "dgv2_CO_NM";
+            // 
+            // dgv2_BIZ_NO
+            // 
+            this.dgv2_BIZ_NO.HeaderText = "BIZ_NO";
+            this.dgv2_BIZ_NO.Name = "dgv2_BIZ_NO";
+            // 
+            // dgv2_CONST_CCD
+            // 
+            this.dgv2_CONST_CCD.HeaderText = "CONST_CCD";
+            this.dgv2_CONST_CCD.Name = "dgv2_CONST_CCD";
+            this.dgv2_CONST_CCD.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv2_CONST_CCD.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            // 
+            // dgv2_CO_TYPE_SCD
+            // 
+            this.dgv2_CO_TYPE_SCD.HeaderText = "CO_TYPE_SCD";
+            this.dgv2_CO_TYPE_SCD.Name = "dgv2_CO_TYPE_SCD";
+            // 
+            // dgv2_OWNER_NM
+            // 
+            this.dgv2_OWNER_NM.HeaderText = "OWNER_NM";
+            this.dgv2_OWNER_NM.Name = "dgv2_OWNER_NM";
+            // 
+            // dgv2_TEL
+            // 
+            this.dgv2_TEL.HeaderText = "TEL";
+            this.dgv2_TEL.Name = "dgv2_TEL";
+            // 
+            // dgv2_ADDR
+            // 
+            this.dgv2_ADDR.HeaderText = "ADDR";
+            this.dgv2_ADDR.Name = "dgv2_ADDR";
+            // 
+            // dgv2_SORT_NO
+            // 
+            this.dgv2_SORT_NO.HeaderText = "SORT_NO";
+            this.dgv2_SORT_NO.MaxInputLength = 1000;
+            this.dgv2_SORT_NO.Name = "dgv2_SORT_NO";
+            // 
+            // dgv2_MEMO
+            // 
+            this.dgv2_MEMO.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dgv2_MEMO.HeaderText = "MEMO";
+            this.dgv2_MEMO.Name = "dgv2_MEMO";
+            // 
+            // dgv2_BTNADD
+            // 
+            this.dgv2_BTNADD.HeaderText = "";
+            this.dgv2_BTNADD.Name = "dgv2_BTNADD";
+            this.dgv2_BTNADD.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv2_BTNADD.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.dgv2_BTNADD.Text = "Add";
+            // 
             // dgv1_CHK
             // 
             this.dgv1_CHK.FalseValue = "0";
@@ -377,6 +458,7 @@
             // 
             this.dgv1_USING_CNT.HeaderText = "USING_CNT";
             this.dgv1_USING_CNT.Name = "dgv1_USING_CNT";
+            this.dgv1_USING_CNT.ReadOnly = true;
             // 
             // dgv1_SORT_NO
             // 
@@ -393,87 +475,6 @@
             this.dgv1_MEMO.MaxInputLength = 100;
             this.dgv1_MEMO.MinimumWidth = 100;
             this.dgv1_MEMO.Name = "dgv1_MEMO";
-            // 
-            // dataGridView2
-            // 
-            this.dataGridView2.AllowUserToAddRows = false;
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dgv2_CO_NM,
-            this.dgv2_BIZ_NO,
-            this.dgv2_CONST_CCD,
-            this.dgv2_CO_TYPE_SCD,
-            this.dgv2_OWNER_NM,
-            this.dgv2_TEL,
-            this.dgv2_ADDR,
-            this.dgv2_SORT_NO,
-            this.dgv2_MEMO,
-            this.dgv2_BTNADD});
-            this.dataGridView2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView2.Location = new System.Drawing.Point(0, 0);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.RowTemplate.Height = 23;
-            this.dataGridView2.Size = new System.Drawing.Size(1037, 78);
-            this.dataGridView2.TabIndex = 1;
-            this.dataGridView2.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellClick);
-            // 
-            // dgv2_CO_NM
-            // 
-            this.dgv2_CO_NM.HeaderText = "CO_NM";
-            this.dgv2_CO_NM.MaxInputLength = 50;
-            this.dgv2_CO_NM.Name = "dgv2_CO_NM";
-            // 
-            // dgv2_BIZ_NO
-            // 
-            this.dgv2_BIZ_NO.HeaderText = "BIZ_NO";
-            this.dgv2_BIZ_NO.Name = "dgv2_BIZ_NO";
-            // 
-            // dgv2_CONST_CCD
-            // 
-            this.dgv2_CONST_CCD.HeaderText = "CONST_CCD";
-            this.dgv2_CONST_CCD.Name = "dgv2_CONST_CCD";
-            this.dgv2_CONST_CCD.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv2_CONST_CCD.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            // 
-            // dgv2_CO_TYPE_SCD
-            // 
-            this.dgv2_CO_TYPE_SCD.HeaderText = "CO_TYPE_SCD";
-            this.dgv2_CO_TYPE_SCD.Name = "dgv2_CO_TYPE_SCD";
-            // 
-            // dgv2_OWNER_NM
-            // 
-            this.dgv2_OWNER_NM.HeaderText = "OWNER_NM";
-            this.dgv2_OWNER_NM.Name = "dgv2_OWNER_NM";
-            // 
-            // dgv2_TEL
-            // 
-            this.dgv2_TEL.HeaderText = "TEL";
-            this.dgv2_TEL.Name = "dgv2_TEL";
-            // 
-            // dgv2_ADDR
-            // 
-            this.dgv2_ADDR.HeaderText = "ADDR";
-            this.dgv2_ADDR.Name = "dgv2_ADDR";
-            // 
-            // dgv2_SORT_NO
-            // 
-            this.dgv2_SORT_NO.HeaderText = "SORT_NO";
-            this.dgv2_SORT_NO.MaxInputLength = 1000;
-            this.dgv2_SORT_NO.Name = "dgv2_SORT_NO";
-            // 
-            // dgv2_MEMO
-            // 
-            this.dgv2_MEMO.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dgv2_MEMO.HeaderText = "MEMO";
-            this.dgv2_MEMO.Name = "dgv2_MEMO";
-            // 
-            // dgv2_BTNADD
-            // 
-            this.dgv2_BTNADD.HeaderText = "";
-            this.dgv2_BTNADD.Name = "dgv2_BTNADD";
-            this.dgv2_BTNADD.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv2_BTNADD.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.dgv2_BTNADD.Text = "Add";
             // 
             // FrmCompany
             // 

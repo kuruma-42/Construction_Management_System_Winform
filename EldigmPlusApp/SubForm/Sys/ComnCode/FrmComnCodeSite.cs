@@ -21,8 +21,7 @@ namespace EldigmPlusApp.SubForm.Sys.ComnCode
         ResourceManager lngRM = null;
         ResourceManager msgRM = null;
 
-        string _ccodeGrp = "";
-        string[] codeArr = new string[4];
+        string[] _codeArr = new string[4];
 
         public FrmComnCodeSite()
         {
@@ -193,14 +192,14 @@ namespace EldigmPlusApp.SubForm.Sys.ComnCode
                 eNodeTag = e.Node.Tag.ToString();
                 lblName.Text = "** " + e.Node.Text;
 
-                codeArr = eNodeTag.Split('-');
+                _codeArr = eNodeTag.Split('-');
 
-                string pCcodeGrp = codeArr[0].ToString();
-                string pNewFlag = codeArr[1].ToString();
-                string pModifyFlag = codeArr[2].ToString();
-                string pDelFlag = codeArr[3].ToString();
+                string pCcodeGrp = _codeArr[0].ToString();
+                string pNewFlag = _codeArr[1].ToString();
+                string pModifyFlag = _codeArr[2].ToString();
+                string pDelFlag = _codeArr[3].ToString();
 
-                SetDataBind_gridView1(codeArr);
+                SetDataBind_gridView1(_codeArr);
 
             }
             catch (Exception ex)
@@ -209,7 +208,7 @@ namespace EldigmPlusApp.SubForm.Sys.ComnCode
             }
         }
 
-        private void SetDataBind_gridView1(string[] codeArr)
+        private void SetDataBind_gridView1(string[] _codeArr)
         {
             //if (_ccodeGrp == "")
             //    return;
@@ -230,7 +229,7 @@ namespace EldigmPlusApp.SubForm.Sys.ComnCode
                 wSvc.Url = "http://" + AppInfo.SsWsvcServer2 + "/WebSvc/Sys/ComnCode/WsComnCodeGrp.svc";
                 wSvc.Timeout = 1000;
 
-                reCode = wSvc.sComnSite(AppInfo.SsDbNm, AppInfo.SsSiteCd, codeArr[0].ToString(), cmbUse.SelectedValue.ToString(), searchTxt_val, out getData, out reMsg);
+                reCode = wSvc.sComnSite(AppInfo.SsDbNm, AppInfo.SsSiteCd, _codeArr[0].ToString(), cmbUse.SelectedValue.ToString(), searchTxt_val, out getData, out reMsg);
 
                 if (reCode == "Y")
                 {
@@ -260,7 +259,7 @@ namespace EldigmPlusApp.SubForm.Sys.ComnCode
             }
             catch (Exception ex)
             {
-                logs.SaveLog("[error]  (page)::FrmComnCodeSite.cs  (Function)::SetDataBind_gridView1  (Detail)::pScodeGrp=[" + codeArr[0].ToString() + "]", "Error");
+                logs.SaveLog("[error]  (page)::FrmComnCodeSite.cs  (Function)::SetDataBind_gridView1  (Detail)::pScodeGrp=[" + _codeArr[0].ToString() + "]", "Error");
                 logs.SaveLog("[error]  (page)::FrmComnCodeSite.cs  (Function)::SetDataBind_gridView1  (Detail)::reMsg=[" + reMsg + "]", "Error");
                 logs.SaveLog("[error]  (page)::FrmComnCodeSite.cs  (Function)::SetDataBind_gridView1  (Detail):: " + "\r\n" + ex.ToString(), "Error");
             }
@@ -362,7 +361,7 @@ namespace EldigmPlusApp.SubForm.Sys.ComnCode
                         memo_val = dataGridView2.Rows[0].Cells["dgv2_MEMO"].Value.ToString();
                     }
 
-                    string sortNo_val = "1";
+                    string sortNo_val = "10";
                     if (dataGridView2.Rows[0].Cells["dgv2_SORT_NO"].Value != null)
                     {
                         sortNo_val = dataGridView2.Rows[0].Cells["dgv2_SORT_NO"].Value.ToString();
@@ -382,7 +381,7 @@ namespace EldigmPlusApp.SubForm.Sys.ComnCode
 
                         string[] param = new string[6];
                         param[0] = AppInfo.SsSiteCd;
-                        param[1] = codeArr[0].ToString();
+                        param[1] = _codeArr[0].ToString();
                         param[2] = ccodeNm_val;
                         param[3] = memo_val;
                         param[4] = sortNo_val;
@@ -414,7 +413,7 @@ namespace EldigmPlusApp.SubForm.Sys.ComnCode
                             MessageBox.Show("저장 실패");
                         }
 
-                        SetDataBind_gridView1(codeArr);
+                        SetDataBind_gridView1(_codeArr);
 
                     }
                     catch (Exception ex)
@@ -502,7 +501,7 @@ namespace EldigmPlusApp.SubForm.Sys.ComnCode
                                 usingFlag_val = dataGridView1.Rows[i].Cells["dgv1_USING_FLAG"].Value.ToString();
                             }
 
-                            string sortNo_val = "1";
+                            string sortNo_val = "10";
                             if (dataGridView1.Rows[i].Cells["dgv1_SORT_NO"].Value != null)
                             {
                                 sortNo_val = dataGridView1.Rows[i].Cells["dgv1_SORT_NO"].Value.ToString();
@@ -526,7 +525,7 @@ namespace EldigmPlusApp.SubForm.Sys.ComnCode
                 else
                     MessageBox.Show("저장 실패");
 
-                SetDataBind_gridView1(codeArr);
+                SetDataBind_gridView1(_codeArr);
             }
             catch (Exception ex)
             {
@@ -550,12 +549,12 @@ namespace EldigmPlusApp.SubForm.Sys.ComnCode
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
-            SetDataBind_gridView1(codeArr);
+            SetDataBind_gridView1(_codeArr);
         }
 
         private void cmbUse_SelectedIndexChanged(object sender, EventArgs e)
         {
-            SetDataBind_gridView1(codeArr);
+            SetDataBind_gridView1(_codeArr);
         }
     }
 }
