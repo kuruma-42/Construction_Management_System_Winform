@@ -1,0 +1,1 @@
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="EldigmPlusSvc_Memco.WebSvc.Sys.Device.WsDevice" CodeBehind="WsDevice.svc.cs" %>

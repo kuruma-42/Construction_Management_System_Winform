@@ -572,6 +572,8 @@ namespace EldigmPlusApp.M_WsSysCodeGrp {
         
         private string sCODEField;
         
+        private string sCODE_GRPField;
+        
         private string sCODE_NMField;
         
         private int uSING_FLAGField;
@@ -592,6 +594,17 @@ namespace EldigmPlusApp.M_WsSysCodeGrp {
             }
             set {
                 this.sCODEField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string SCODE_GRP {
+            get {
+                return this.sCODE_GRPField;
+            }
+            set {
+                this.sCODE_GRPField = value;
             }
         }
         

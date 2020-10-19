@@ -22,6 +22,8 @@ namespace EldigmPlusSvc_Main.WebSvc.Sys.CodeT
         [OperationContract]
         string sCodeTSub(string pTcode, out List<DataCodeTSub> reList, out string reMsg);
         [OperationContract]
+        string sCodeTSubTscode(string pTcode, out List<DataCodeTSub> reList, out string reMsg);
+        [OperationContract]
         string mCodeT(string pTcode, string pListFlag, string pRequiredFlag, string pNumericFlag, out string reMsg, out string reData);
         [OperationContract]
         string aCodeT(string pTcode, string pttypeScd, string ptcodeNm, string pListFlag, string pRequiredFlag, string pNumericFlag, string pInputId, out string reMsg, out string reData);
@@ -37,8 +39,12 @@ namespace EldigmPlusSvc_Main.WebSvc.Sys.CodeT
         string sCodeTSite(string pDbnm, string pSiteCd, string pTgrpCcd, out List<DataCodeTSite> reList, out string reMsg);
         [OperationContract]
         string mCodeTSite(string pDbnm, string pSiteCd, string pTcode, string pDefaultValue, string pUsingFlag, string pSortNo, string pMemo, out string reMsg, out string reData);
-
-
+        [OperationContract]
+        string aCodeTSite(string pDbNm, string[] param, out string reMsg, out string reData);
+        [OperationContract]
+        string aCodeTSubSite(string pDbNm, string[] param, out string reMsg, out string reData);
+        [OperationContract]
+        string aCodeTSiteLog(string pDbnm, string pSiteCd, string pTcode, string pTgrpCcd, string pRequiredFlag, string pNumericFlag, string pDefaultValue, string pUsingFlag, string pSortNo, string pMemo, string pInputId, out string reMsg, out string reData);
 
         // ** CodeTAuthSite PART START 
 
@@ -46,15 +52,17 @@ namespace EldigmPlusSvc_Main.WebSvc.Sys.CodeT
         string sCodeAuthTTreeView(string pScode, string pSiteCd, out List<DataCodeTAuth> reList, out string reMsg);
 
         [OperationContract]
-        string sCodeTAuth(string pTcode, string pSiteCd, out List<DataCodeTAuthSelect> reList, out string reMsg);
+        string sCodeTAuth(string pTcode, string pSiteCd, string pAuthCd, out List<DataCodeTAuthSelect> reList, out string reMsg);
 
         [OperationContract]
-        string sCodeTAuthTtype(string pTtypeScd, string pSiteCd, out List<DataCodeTAuthSelect> reList, out string reMsg);
+        string sCodeTAuthTtype(string pTtypeScd, string pSiteCd, string pAuthCd, out List<DataCodeTAuthSelect> reList, out string reMsg);
 
         [OperationContract]
-        string mCodeTAuth(string pTcodeNm, string pSiteCd, string pAuthCd, string pViewFlag, string pNewFlag, string pModifyFlag, out string reMsg, out string reData);
+        string mCodeTAuth(string pTcode, string pSiteCd, string pAuthCd, string pViewFlag, string pNewFlag, string pModifyFlag, out string reMsg, out string reData);
 
         // ** CodeTAuthSite PART END
+
+
 
 
     }
@@ -118,19 +126,23 @@ namespace EldigmPlusSvc_Main.WebSvc.Sys.CodeT
     [DataContract]
     public class DataCodeTAuthSelect
     {
+
         [DataMember(Order = 0)]
-        public string AUTH_CD { get; set; }
+        public string TCODE { get; set; }
 
         [DataMember(Order = 1)]
-        public string TCODE_NM { get; set; }
+        public string AUTH_CD { get; set; }
 
         [DataMember(Order = 2)]
-        public int VIEW_FLAG { get; set; }
+        public string TCODE_NM { get; set; }
 
         [DataMember(Order = 3)]
-        public int NEW_FLAG { get; set; }
+        public int VIEW_FLAG { get; set; }
 
         [DataMember(Order = 4)]
+        public int NEW_FLAG { get; set; }
+
+        [DataMember(Order = 5)]
         public int MODIFY_FLAG { get; set; }
 
     }

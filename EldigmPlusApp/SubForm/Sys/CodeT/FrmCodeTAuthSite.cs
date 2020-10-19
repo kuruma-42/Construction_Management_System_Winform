@@ -23,11 +23,11 @@ namespace EldigmPlusApp.SubForm.Sys.CodeT
 
         string _topMenuCd = "";
         string _codeGrp = "";
-        string _code = "";        
+        string _code = "";
 
         public FrmCodeTAuthSite()
         {
-            // Sets the UI culture
+            // Sets the UI culture //
             Thread.CurrentThread.CurrentUICulture = new CultureInfo(AppInfo.SsLanguage);
             this.AutoScaleMode = AutoScaleMode.Dpi;
 
@@ -42,6 +42,7 @@ namespace EldigmPlusApp.SubForm.Sys.CodeT
                 btnSave.Text = "저장";
 
                 dataGridView1.Columns["dgv1_CHK"].HeaderText = "선택";
+                dataGridView1.Columns["dgv1_TCODE"].HeaderText = "T코드";
                 dataGridView1.Columns["dgv1_AUTH_CD"].HeaderText = "권한 코드";
                 dataGridView1.Columns["dgv1_TCODE_NM"].HeaderText = "T코드 이름";
                 dataGridView1.Columns["dgv1_VIEW_FLAG"].HeaderText = "보기";
@@ -67,6 +68,8 @@ namespace EldigmPlusApp.SubForm.Sys.CodeT
             }
         }
 
+
+
         #region __ panel2 paint_Purple1
         private void paint_Purple1(object sender, PaintEventArgs e)
         {
@@ -80,6 +83,7 @@ namespace EldigmPlusApp.SubForm.Sys.CodeT
             try
             {
                 SetDataBind_treeView1();
+                SetDataBind_CmbSite();
             }
             catch (Exception ex)
             {
@@ -164,6 +168,44 @@ namespace EldigmPlusApp.SubForm.Sys.CodeT
             }
         }
 
+
+        private void SetDataBind_CmbSite()
+        {
+            M_WsCCodeGrp.WsComnCodeGrp wSvc = null;
+            string reCode = "";
+            string reMsg = "";
+            M_WsCCodeGrp.DataCodeAuthSiteMemberDB[] getData = null;
+            try
+            {
+                wSvc = new M_WsCCodeGrp.WsComnCodeGrp();
+                wSvc.Url = "http://" + AppInfo.SsWsvcServer2 + "/WebSvc/Sys/ComnCode/WsComnCodeGrp.svc";
+                wSvc.Timeout = 1000;
+
+                reCode = wSvc.sCodeAuthSiteMemberDB(AppInfo.SsDbNm, out getData, out reMsg);
+                if (reCode == "Y")
+                {
+                    if (getData != null && getData.Length > 0)
+                    {
+                        Class.Common.ComboBoxItemSet setCmb = null;
+
+                        setCmb = new Class.Common.ComboBoxItemSet();
+                        setCmb.AddColumn();
+
+                        for (int i = 0; i < getData.Length; i++)
+                        {
+                            setCmb.AddRow(getData[i].AUTH_NM.ToString(), getData[i].AUTH_CD.ToString());
+                        }
+
+                        setCmb.Bind(cmbSite);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                logs.SaveLog("[error]  (page)::FrmMenuSetAuthSite.cs  (Function)::SetDataBind_CmbSite  (Detail):: " + "\r\n" + ex.ToString());
+            }
+        }
+
         private void treeView1_AfterSelect(object sender, TreeViewEventArgs e)
         {
             try
@@ -206,42 +248,11 @@ namespace EldigmPlusApp.SubForm.Sys.CodeT
                 wSvc.Url = "http://" + AppInfo.SsWsvcServer2 + "/WebSvc/Sys/CodeT/WsCodeTMainDB.svc";
                 wSvc.Timeout = 1000;
 
-                   if (codeGrp == "1")
-                    {
-
-                        //SELECT WHEN USER CLICK TTYPTE (EX : TEXT, CHECK BOX ..)
-                        reCode = wSvc.sCodeTAuthTtype(code_val, AppInfo.SsSiteCd, out getData1, out reMsg);
-
-                        if (reCode == "Y")
-                        {
-                            if (getData1 != null && getData1.Length > 0)
-                            {
-                                dataGridView1.Rows.Clear();
-                                for (int i = 0; i < getData1.Length; i++)
-                                {
-                                    dataGridView1.Rows.Add();
-                                    dataGridView1.Rows[i].Cells["dgv1_AUTH_CD"].Value = getData1[i].AUTH_CD.ToString();
-                                    dataGridView1.Rows[i].Cells["dgv1_TCODE_NM"].Value = getData1[i].TCODE_NM.ToString();
-                                    dataGridView1.Rows[i].Cells["dgv1_VIEW_FLAG"].Value = getData1[i].VIEW_FLAG.ToString();
-                                    dataGridView1.Rows[i].Cells["dgv1_NEW_FLAG"].Value = getData1[i].NEW_FLAG.ToString();
-                                    dataGridView1.Rows[i].Cells["dgv1_MODIFY_FLAG"].Value = getData1[i].MODIFY_FLAG.ToString();
-                                }
-
-                            SetRowNumber(dataGridView1);
-                        }
-                        else
-                        {
-                            dataGridView1.Rows.Clear();
-                            MessageBox.Show("데이터가 없습니다");
-                        }
-                    }
-                }
-
-                else if (codeGrp == "2")
+                if (codeGrp == "1")
                 {
-                    //SELECT WHEN USER CLICK TCODE 
-                    reCode = wSvc.sCodeTAuth(code_val, AppInfo.SsSiteCd, out getData1, out reMsg);
-                   
+
+                    //SELECT WHEN USER CLICK TTYPTE (EX : TEXT, CHECK BOX ..)
+                    reCode = wSvc.sCodeTAuthTtype(code_val, AppInfo.SsSiteCd, cmbSite.SelectedValue.ToString(),out getData1, out reMsg);
 
                     if (reCode == "Y")
                     {
@@ -251,6 +262,39 @@ namespace EldigmPlusApp.SubForm.Sys.CodeT
                             for (int i = 0; i < getData1.Length; i++)
                             {
                                 dataGridView1.Rows.Add();
+                                dataGridView1.Rows[i].Cells["dgv1_TCODE"].Value = getData1[i].TCODE.ToString();
+                                dataGridView1.Rows[i].Cells["dgv1_AUTH_CD"].Value = getData1[i].AUTH_CD.ToString();
+                                dataGridView1.Rows[i].Cells["dgv1_TCODE_NM"].Value = getData1[i].TCODE_NM.ToString();
+                                dataGridView1.Rows[i].Cells["dgv1_VIEW_FLAG"].Value = getData1[i].VIEW_FLAG.ToString();
+                                dataGridView1.Rows[i].Cells["dgv1_NEW_FLAG"].Value = getData1[i].NEW_FLAG.ToString();
+                                dataGridView1.Rows[i].Cells["dgv1_MODIFY_FLAG"].Value = getData1[i].MODIFY_FLAG.ToString();
+                            }
+
+                            SetRowNumber(dataGridView1);
+                        }
+                        else
+                        {
+                            dataGridView1.Rows.Clear();
+                            //MessageBox.Show("데이터가 없습니다");
+                        }
+                    }
+                }
+
+                else if (codeGrp == "2")
+                {
+                    //SELECT WHEN USER CLICK TCODE 
+                    reCode = wSvc.sCodeTAuth(code_val, AppInfo.SsSiteCd, cmbSite.SelectedValue.ToString(), out getData1, out reMsg);
+
+
+                    if (reCode == "Y")
+                    {
+                        if (getData1 != null && getData1.Length > 0)
+                        {
+                            dataGridView1.Rows.Clear();
+                            for (int i = 0; i < getData1.Length; i++)
+                            {
+                                dataGridView1.Rows.Add();
+                                dataGridView1.Rows[i].Cells["dgv1_TCODE"].Value = getData1[i].TCODE.ToString();
                                 dataGridView1.Rows[i].Cells["dgv1_AUTH_CD"].Value = getData1[i].AUTH_CD.ToString();
                                 dataGridView1.Rows[i].Cells["dgv1_TCODE_NM"].Value = getData1[i].TCODE_NM.ToString();
                                 dataGridView1.Rows[i].Cells["dgv1_VIEW_FLAG"].Value = getData1[i].VIEW_FLAG.ToString();
@@ -264,7 +308,7 @@ namespace EldigmPlusApp.SubForm.Sys.CodeT
                         else
                         {
                             dataGridView1.Rows.Clear();
-                            MessageBox.Show("데이터가 없습니다");
+                            //MessageBox.Show("데이터가 없습니다");
                         }
                     }
                 }
@@ -382,34 +426,34 @@ namespace EldigmPlusApp.SubForm.Sys.CodeT
 
                 reCnt = 0;
 
-                
-                    for (int i = 0; i < dataGridView1.Rows.Count; i++)
+
+                for (int i = 0; i < dataGridView1.Rows.Count; i++)
+                {
+                    if (dataGridView1.Rows[i].Cells["dgv1_CHK"].Value != null)
                     {
-                        if (dataGridView1.Rows[i].Cells["dgv1_CHK"].Value != null)
+                        if (dataGridView1.Rows[i].Cells["dgv1_CHK"].Value.ToString() == "1")
                         {
-                            if (dataGridView1.Rows[i].Cells["dgv1_CHK"].Value.ToString() == "1")
-                            {
+                            string pTcode = dataGridView1.Rows[i].Cells["dgv1_TCODE"].Value.ToString();
+                            string pAuthCd = dataGridView1.Rows[i].Cells["dgv1_AUTH_CD"].Value.ToString();
+                            string pTcodeNm = dataGridView1.Rows[i].Cells["dgv1_TCODE_NM"].Value.ToString();
+                            string pViewFlag = dataGridView1.Rows[i].Cells["dgv1_VIEW_FLAG"].Value.ToString();
+                            string pNeweFlag = dataGridView1.Rows[i].Cells["dgv1_NEW_FLAG"].Value.ToString();
+                            string pModifyFlag = dataGridView1.Rows[i].Cells["dgv1_MODIFY_FLAG"].Value.ToString();
+                            string pSiteCd = AppInfo.SsSiteCd;
 
-                                string pAuthCd = dataGridView1.Rows[i].Cells["dgv1_AUTH_CD"].Value.ToString();
-                                string pTcodeNm = dataGridView1.Rows[i].Cells["dgv1_TCODE_NM"].Value.ToString();
-                                string pViewFlag = dataGridView1.Rows[i].Cells["dgv1_VIEW_FLAG"].Value.ToString();
-                                string pNeweFlag = dataGridView1.Rows[i].Cells["dgv1_NEW_FLAG"].Value.ToString();
-                                string pModifyFlag = dataGridView1.Rows[i].Cells["dgv1_MODIFY_FLAG"].Value.ToString();
-                                string pSiteCd = AppInfo.SsSiteCd;
+                            reCode = wSvc.mCodeTAuth(pTcode, pSiteCd, pAuthCd, pViewFlag, pNeweFlag, pModifyFlag, out reMsg, out reData);
 
-                                reCode = wSvc.mCodeTAuth(pTcodeNm, pSiteCd, pAuthCd, pViewFlag, pNeweFlag, pModifyFlag, out reMsg, out reData);
-
-                                if (reCode == "Y" && reData != "")
-                                    reCnt += Convert.ToInt16(reData);
-                            }
+                            if (reCode == "Y" && reData != "")
+                                reCnt += Convert.ToInt16(reData);
                         }
                     }
-                    if (reCnt > 0)
-                        MessageBox.Show("저장 성공" + " : " + reCnt.ToString());
-                    else
-                        MessageBox.Show("저장 실패");
+                }
+                if (reCnt > 0)
+                    MessageBox.Show("저장 성공" + " : " + reCnt.ToString());
+                else
+                    MessageBox.Show("저장 실패");
 
-                    SetDataBind_gridView1(_codeGrp, _code);
+                SetDataBind_gridView1(_codeGrp, _code);
 
 
             }
@@ -424,6 +468,10 @@ namespace EldigmPlusApp.SubForm.Sys.CodeT
                     wSvc.Dispose();
             }
         }
-    
+
+        private void cmbSite_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            SetDataBind_gridView1(_codeGrp, _code);
+        }
     }
 }

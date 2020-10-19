@@ -65,14 +65,14 @@ namespace EldigmPlusApp.SubForm.Sys.CodeT
         }
 
         #region __ panel2 paint_Purple1
-        private void paint_Purple1(object sender, PaintEventArgs e)
+        public void paint_Purple1(object sender, PaintEventArgs e)
         {
             Class.UI.PanelPaint pp = new Class.UI.PanelPaint();
             pp.paint_PanelPurple1(sender, e);
         }
         #endregion
 
-        private void FrmCodeTSite_Load(object sender, EventArgs e)
+        public void FrmCodeTSite_Load(object sender, EventArgs e)
         {
             try
             {
@@ -85,7 +85,7 @@ namespace EldigmPlusApp.SubForm.Sys.CodeT
         }
 
 
-        private void SetDataBind_treeView1()
+        public void SetDataBind_treeView1()
         {
             treeView1.Nodes.Clear();
 
@@ -142,7 +142,7 @@ namespace EldigmPlusApp.SubForm.Sys.CodeT
             }
         }
 
-        private void treeView1_AfterSelect(object sender, TreeViewEventArgs e)
+        public void treeView1_AfterSelect(object sender, TreeViewEventArgs e)
         {
             try
             {
@@ -163,7 +163,7 @@ namespace EldigmPlusApp.SubForm.Sys.CodeT
             }
         }
 
-        private void SetDataBind_gridView1(string _ccode)
+        public void SetDataBind_gridView1(string _ccode)
         {
             M_WsCodeTMainDB.WsCodeTMainDB wSvc = null;
             string reCode = "";
@@ -220,7 +220,7 @@ namespace EldigmPlusApp.SubForm.Sys.CodeT
         }
 
 
-        private void dataGridView1_CellBeginEdit(object sender, DataGridViewCellCancelEventArgs e)
+        public void dataGridView1_CellBeginEdit(object sender, DataGridViewCellCancelEventArgs e)
         {
             try
             {
@@ -235,7 +235,7 @@ namespace EldigmPlusApp.SubForm.Sys.CodeT
         }
 
         bool chkUseAll = false;
-        private void dataGridView1_ColumnHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        public void dataGridView1_ColumnHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
             try
             {
@@ -270,19 +270,19 @@ namespace EldigmPlusApp.SubForm.Sys.CodeT
             }
         }
 
-        private void dataGridView1_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
+        public void dataGridView1_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
         {
             SetRowNumber(dataGridView1);
         }
 
         // dataGridView 선택값 없애기
-        private void NoSelectGrideView(DataGridView dgv)
+        public void NoSelectGrideView(DataGridView dgv)
         {
             dgv.ClearSelection();
             dgv.CurrentCell = null;
         }
 
-        private void SetRowNumber(DataGridView dgv)
+        public void SetRowNumber(DataGridView dgv)
         {
             foreach (DataGridViewRow row in dgv.Rows)
                 row.HeaderCell.Value = String.Format("{0}", row.Index + 1);
@@ -290,7 +290,7 @@ namespace EldigmPlusApp.SubForm.Sys.CodeT
             dgv.AutoResizeRowHeadersWidth(DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders);
         }
 
-        private void btnSave_Click(object sender, EventArgs e)
+        public void btnSave_Click(object sender, EventArgs e)
         {
             M_WsCodeTMainDB.WsCodeTMainDB wSvc = null;
             string reCode = "";
@@ -304,6 +304,24 @@ namespace EldigmPlusApp.SubForm.Sys.CodeT
                 wSvc.Timeout = 1000;
 
                 int reCnt = 0;
+
+                for (int i = 0; i < dataGridView1.Rows.Count; i++)
+                {
+                    if (dataGridView1.Rows[i].Cells["dgv1_CHK"].Value != null)
+                    {
+                        if (dataGridView1.Rows[i].Cells["dgv1_CHK"].Value.ToString() == "1")
+                        {
+                            reCnt++;
+                        }
+                    }
+                }
+                if (reCnt < 1)
+                {
+                    MessageBox.Show("선택된 데이터가 없습니다.");
+                    return;
+                }
+
+                reCnt = 0;
 
                 for (int i = 0; i < dataGridView1.Rows.Count; i++)
                 {
@@ -329,6 +347,16 @@ namespace EldigmPlusApp.SubForm.Sys.CodeT
 
                             reCode = wSvc.mCodeTSite(AppInfo.SsDbNm, AppInfo.SsSiteCd, tcode_val, defaultValue_val, usingFlag_val, sortNo_val, memo_val, out reMsg, out reData);
 
+                            if (reCode == "Y")
+                            {
+                                    reCode = wSvc.aCodeTSiteLog(AppInfo.SsDbNm, AppInfo.SsSiteCd, tcode_val, _ccode, "0", "0", defaultValue_val, usingFlag_val, sortNo_val, memo_val, AppInfo.SsUserId, out reMsg, out reData);
+
+                                if (reCode == "N")
+                                {
+                                    MessageBox.Show("로그 저장 실패");
+                                }
+                            }
+
                             if (reCode == "Y" && reData != "")
                                 reCnt += Convert.ToInt16(reData);
                         }
@@ -340,7 +368,7 @@ namespace EldigmPlusApp.SubForm.Sys.CodeT
                     MessageBox.Show("저장 실패");
 
                 SetDataBind_gridView1(_ccode);
-
+                
 
             }
             catch (Exception ex)
@@ -357,7 +385,7 @@ namespace EldigmPlusApp.SubForm.Sys.CodeT
 
 
 
-        private void txtSearch_KeyPress(object sender, KeyPressEventArgs e)
+        public void txtSearch_KeyPress(object sender, KeyPressEventArgs e)
         {
             //if (e.KeyChar == '\r')
             //{
@@ -365,12 +393,12 @@ namespace EldigmPlusApp.SubForm.Sys.CodeT
             //}
         }
 
-        private void btnSearch_Click(object sender, EventArgs e)
+        public void btnSearch_Click(object sender, EventArgs e)
         {
             //SetDataBind_gridView1("", "", "", "");
         }
 
-        private void cmbUse_SelectedIndexChanged(object sender, EventArgs e)
+        public void cmbUse_SelectedIndexChanged(object sender, EventArgs e)
         {
 
             //string codeGrp = codeArr[0].ToString();
@@ -380,163 +408,33 @@ namespace EldigmPlusApp.SubForm.Sys.CodeT
 
             //SetDataBind_gridView1(codeGrp, tMenuCd, sMenuCd, menuCd);
         }
-
-        private void btnAdd_Click(object sender, EventArgs e)
+        
+        public void btnAdd_Click(object sender, EventArgs e)
         {
-            //    int sub_tmenuCd = 0;
-            //    int sub_menuCd = 0;
+            CodeT.FrmCodeTMainDB frm = new FrmCodeTMainDB(this);
+            frm.StartPosition = FormStartPosition.CenterScreen;
+            frm.ShowInTaskbar = false;
+            frm.FormBorderStyle = FormBorderStyle.FixedToolWindow;
+            frm.TopMost = true;
+            
+            DialogResult result = frm.ShowDialog();
 
-            //    DataSet ds = null;
+            //if(result == DialogResult.Cancel)
+            //{
+            //    SetDataBind_gridView1(_ccode);
+            //}
 
-            //    if (AppInfo.SsUser_Id.ToLower() != "sysadmin" && AppInfo.SsUser_Id.ToLower() != "eldigmadmin")
-            //    {
-            //        if (Hub2Info.hub2SecurityYn == "Y" || Hub2Info.hub2WebConnectYn == "Y")
-            //        {
-            //            WebSvc_Worker.Worker wsWorker = null;
-            //            try
-            //            {
-            //                wsWorker = new WebSvc_Worker.Worker();
-            //                wsWorker.Url = Hub2Info.hub2SslType + AppInfo.SsServer + AppInfo.SsWebPort + "/SubForm/Worker/Worker.asmx";
-            //                //wsLogin.Timeout = 60000;
-
-            //                sub_tmenuCd = wsWorker.sTmenuCd(Hub2Info.hub2LoginKey, AppInfo.SsUser_Id, AppInfo.SsSite_Cd, AppInfo.SsAuth_Cd, "시스템관리");
-            //                if (sub_tmenuCd.ToString() == "-100")
-            //                    accessFail();
-
-            //                sub_menuCd = wsWorker.sMenuCd(Hub2Info.hub2LoginKey, AppInfo.SsUser_Id, sub_tmenuCd.ToString(), AppInfo.SsSite_Cd, AppInfo.SsAuth_Cd, "menuSiteCode");
-            //                if (sub_menuCd.ToString() == "-100")
-            //                    accessFail();
-
-            //                ds = wsWorker.sMenuAuth(Hub2Info.hub2LoginKey, AppInfo.SsUser_Id, AppInfo.SsSite_Cd, AppInfo.SsAuth_Cd, sub_menuCd.ToString());
-            //                if (ds.Tables[0].TableName.ToString() == "ACCESS_FAIL")
-            //                    accessFail();
-            //            }
-            //            catch (Exception ex)
-            //            {
-            //                logs.SaveLog("[error]  (page)::FrmWorkerDetail  (Function)::lblJob_Click  (Detail):: " + "\r\n" + ex.ToString());
-            //            }
-            //            finally
-            //            {
-            //                if (wsWorker != null)
-            //                    wsWorker.Dispose();
-            //            }
-
-            //            if (ds.Tables[0].Rows.Count < 1)
-            //            { // 권한 없음
-            //                MessageBox.Show(msgRM.GetString("msgNoAuthority"));
-            //                return;
-            //            }
-            //            else
-            //            {
-            //                if (ds.Tables[0].Rows[0]["AUTH_ADD_YN"].ToString() != "Y")
-            //                { // 권한 없음
-            //                    MessageBox.Show(msgRM.GetString("msgNoAuthority"));
-            //                    return;
-            //                }
-            //            }
-            //        }
-            //        else
-            //        {
-            //            DbSite db = null;
-            //            try
-            //            {
-            //                db = new DbSite();
-            //                sub_tmenuCd = db.sTmenuCd(AppInfo.SsSite_Cd, AppInfo.SsAuth_Cd, "시스템관리");
-            //                sub_menuCd = db.sMenuCd(sub_tmenuCd.ToString(), AppInfo.SsSite_Cd, AppInfo.SsAuth_Cd, "menuSiteCode");
-
-            //                ds = db.sMenuAuth(AppInfo.SsSite_Cd, AppInfo.SsAuth_Cd, sub_menuCd.ToString());
-            //            }
-            //            catch (Exception ex)
-            //            {
-            //                logs.SaveLog("[error]  (page)::FrmWorkerDetail  (Function)::lblJob_Click  (Detail):: " + "\r\n" + ex.ToString());
-            //            }
-            //            finally
-            //            {
-            //                if (db != null)
-            //                    db.DisConnect();
-            //            }
-
-            //            if (ds.Tables[0].Rows.Count < 1)
-            //            { // 권한 없음
-            //                MessageBox.Show(msgRM.GetString("msgNoAuthority"));
-            //                return;
-            //            }
-            //            else
-            //            {
-            //                if (ds.Tables[0].Rows[0]["AUTH_ADD_YN"].ToString() != "Y")
-            //                { // 권한 없음
-            //                    MessageBox.Show(msgRM.GetString("msgNoAuthority"));
-            //                    return;
-            //                }
-            //            }
-            //        }
-            //    }
-
-            //    if (regCodeBool)
-            //    {
-            //        foreach (Form f in Application.OpenForms)
-            //        {
-            //            if (f.GetType().ToString() == "EldigmHub.SubForm.Sys.FrmCodeSite")
-            //            {
-            //                f.Close();
-            //                break;
-            //            }
-            //        }
-
-            //        Sys.FrmCodeSite frm = new Sys.FrmCodeSite("9");
-            //        frm.StartPosition = FormStartPosition.CenterScreen;
-            //        frm.ShowInTaskbar = false;
-            //        frm.FormBorderStyle = FormBorderStyle.FixedToolWindow;
-            //        frm.TopMost = true;
-            //        //frm.Tag = thisTags;   // 2018.04.11 - 주석처리(권한관련)
-            //        //this.AddOwnedForm(frm);
-
-            //        string menu_Tag = "";
-
-            //        if (AppInfo.SsUser_Id.ToLower() != "sysadmin" && AppInfo.SsUser_Id.ToLower() != "eldigmadmin")
-            //        {
-            //            string add = "N";
-            //            string write = "N";
-            //            string report = "N";
-            //            string del = "N";
-
-            //            if (ds.Tables[0].Rows.Count > 0)
-            //            {
-            //                add = ds.Tables[0].Rows[0]["AUTH_ADD_YN"].ToString();
-            //                write = ds.Tables[0].Rows[0]["AUTH_WRITE_YN"].ToString();
-            //                report = ds.Tables[0].Rows[0]["AUTH_REPORT_YN"].ToString();
-            //                del = ds.Tables[0].Rows[0]["AUTH_DEL_YN"].ToString();
-            //            }
-
-            //            menu_Tag = sub_tmenuCd + "@" + sub_menuCd + "@" + "EldigmHub.SubForm.Sys.FrmCodeSite" + "@" + "Code" + "@" + add + "@" + write + "@" + report + "@" + del;
-            //        }
-            //        else
-            //            menu_Tag = "" + "@" + "" + "@" + "EldigmHub.SubForm.Sys.FrmCodeSite" + "@" + "Code" + "@" + "Y" + "@" + "Y" + "@" + "Y" + "@" + "Y";
-
-            //        frm.Tag = menu_Tag;
-
-            //        DialogResult result = frm.ShowDialog();
-
-            //        if (result == DialogResult.OK)
-            //        {
-            //            // 2016.04.20 - 주석 처리 시작
-            //            //string selectedCode = cmbJob.SelectedValue.ToString();
-            //            //setComboJob();
-            //            //cmbJob.SelectedValue = selectedCode;
-            //            // 2016.04.20 - 주석 처리 끝
-
-            //            string selectedCode = "";
-            //            if (cmbJob.Items.Count > 0)
-            //                selectedCode = cmbJob.SelectedValue.ToString();
-
-            //            setComboJob();
-
-            //            if (selectedCode != "")
-            //                cmbJob.SelectedValue = selectedCode;
-            //        }
-            //    }
         }
 
+        public void Popup_End()
+        {
+            SetDataBind_gridView1(_ccode);
+        }
+
+        public string getTgrpCcd()
+        {
+           return _ccode;
+        }
 
     }
 }

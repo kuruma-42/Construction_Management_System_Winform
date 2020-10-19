@@ -59,6 +59,7 @@
     <Compile Include="DbClass\Sys\ComnCode\DbComnCodeGrpMainDB.cs" />
     <Compile Include="DbClass\Sys\CompanyTeam\DbCompany.cs" />
     <Compile Include="DbClass\Sys\CompanyTeam\DbTeam.cs" />
+    <Compile Include="DbClass\Sys\Device\DbDevice.cs" />
     <Compile Include="DbClass\Sys\MemberSite\DbMember.cs" />
     <Compile Include="DbClass\Sys\MemberSite\DbSite.cs" />
     <Compile Include="DbClass\Sys\Menu\DbMenuMainDB.cs" />
@@ -68,6 +69,8 @@
     <Compile Include="DbClass\Sys\SysCode\DbSysCodeGrp.cs">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Compile>
+    <Compile Include="DbClass\Worker\InOut\DbInOut.cs" />
+    <Compile Include="DbClass\Worker\LaborSearch\DbLaborSearch.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />

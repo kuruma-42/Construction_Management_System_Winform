@@ -115,7 +115,7 @@ namespace EldigmPlusApp.SubForm.Sys.ComnCode
                     else
                     {
                         dataGridView1.Rows.Clear();
-                        MessageBox.Show("데이터가 없습니다");
+                        //MessageBox.Show("데이터가 없습니다");
                     }
                 }
             }

@@ -25,6 +25,7 @@
   <xs:complexType name="DataSysCode">
     <xs:sequence>
       <xs:element minOccurs="0" name="SCODE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SCODE_GRP" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="SCODE_NM" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="USING_FLAG" type="xs:int" />
       <xs:element minOccurs="0" name="SORT_NO" type="xs:int" />

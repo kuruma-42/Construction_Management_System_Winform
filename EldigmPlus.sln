@@ -4,6 +4,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 15.0.28307.1231
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EldigmPlusApp", "EldigmPlusApp\EldigmPlusApp.csproj", "{59307A11-635F-441A-83A3-5B54DD6E913E}"
+	ProjectSection(ProjectDependencies) = postProject
+		{8E67A496-CE9F-4509-BE46-16F526942352} = {8E67A496-CE9F-4509-BE46-16F526942352}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EldigmPlusDb", "EldigmPlusClassLibrary\EldigmPlusDb.csproj", "{B48FCE39-5526-4EF0-88DD-661F64CBE1A4}"
 EndProject

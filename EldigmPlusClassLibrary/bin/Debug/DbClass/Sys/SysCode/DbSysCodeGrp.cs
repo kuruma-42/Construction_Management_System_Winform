@@ -180,8 +180,8 @@ namespace EldigmPlusClassLibrary.DbClass.Sys.SysCode
         public int aSysCodeLog(string SCODE, string SCODE_NM, string USING_FLAG, string SORT_NO, string MEMO, string INPUT_ID)
         {
             string sql = "" +
-                " INSERT INTO [PLUS_MAIN].dbo.TM00_CODE_SYS_LOG (SCODE, SNO, SCODE_NM, USING_FLAG, SORT_NO, MEMO, INPUT_ID, INPUT_DT) " +
-                " VALUES ('" + SCODE + "', (SELECT ISNULL(MAX(SNO),0)+1 FROM TM00_CODE_SYS_LOG WHERE SCODE = '" + SCODE + "'), '" + SCODE_NM + "', " + USING_FLAG + ", " + SORT_NO + "" +
+                " INSERT INTO [PLUS_MAIN].dbo.TM00_CODE_SYS_LOG (SCODE, LOG_NO, SCODE_NM, USING_FLAG, SORT_NO, MEMO, INPUT_ID, INPUT_DT) " +
+                " VALUES ('" + SCODE + "', (SELECT ISNULL(MAX(LOG_NO),0)+1 FROM TM00_CODE_SYS_LOG WHERE SCODE = '" + SCODE + "'), '" + SCODE_NM + "', " + USING_FLAG + ", " + SORT_NO + "" +
                 " , '" + MEMO + "', '" + INPUT_ID + "', GETDATE()) ";
 
             int reCnt = 0;

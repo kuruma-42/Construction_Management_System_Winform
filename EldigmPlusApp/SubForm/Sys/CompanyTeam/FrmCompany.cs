@@ -286,7 +286,7 @@ namespace EldigmPlusApp.SubForm.Sys.CompanyTeam
                     else
                     {
                         dataGridView1.Rows.Clear();
-                        MessageBox.Show("데이터가 없습니다");
+                        //MessageBox.Show("데이터가 없습니다");
                     }
                 }
             }

@@ -391,10 +391,10 @@ namespace EldigmPlusClassLibrary.DbClass.Sys.Menu
         public int aSetAuthSiteMemberDBLog(string DBNM, string SITE_CD, string MENU_CD, string AUTH_CD, string VIEW_FLAG, string NEW_FLAG, string MODIFY_FLAG, string DEL_FLAG, string REPORT_FLAG, string PRINT_FLAG, string DOWNLOAD_FLAG, string INPUT_ID)
         {
             string sql = "" +
-                " INSERT INTO [PLUS-" + DBNM + "].dbo.T00_MENU_SETAUTH_SITE_LOG (SITE_CD, MENU_CD, AUTH_CD, SNO, VIEW_FLAG," +
+                " INSERT INTO [PLUS-" + DBNM + "].dbo.T00_MENU_SETAUTH_SITE_LOG (SITE_CD, MENU_CD, AUTH_CD, LOG_NO, VIEW_FLAG," +
                 " NEW_FLAG, MODIFY_FLAG, DEL_FLAG, REPORT_FLAG, PRINT_FLAG, DOWNLOAD_FLAG, INPUT_ID, INPUT_DT) " +
                 " VALUES (" + SITE_CD + ", '" + MENU_CD + "', '" + AUTH_CD + "'," +
-                " (SELECT ISNULL(MAX(SNO),0)+1 FROM [PLUS-" + DBNM + "].dbo.T00_MENU_SETAUTH_SITE_LOG WHERE SITE_CD = " + SITE_CD + " AND MENU_CD = '" + MENU_CD + "' AND AUTH_CD = '" + AUTH_CD + "')," +
+                " (SELECT ISNULL(MAX(LOG_NO),0)+1 FROM [PLUS-" + DBNM + "].dbo.T00_MENU_SETAUTH_SITE_LOG WHERE SITE_CD = " + SITE_CD + " AND MENU_CD = '" + MENU_CD + "' AND AUTH_CD = '" + AUTH_CD + "')," +
                 " " + VIEW_FLAG + ", " + NEW_FLAG + ", " + MODIFY_FLAG + ", " + DEL_FLAG + ", " + REPORT_FLAG + "," +
                 " " + PRINT_FLAG + ", " + DOWNLOAD_FLAG + ", '" + INPUT_ID +  "', GETDATE()) ";
 

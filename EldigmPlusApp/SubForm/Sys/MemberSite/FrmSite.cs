@@ -295,7 +295,7 @@ namespace EldigmPlusApp.SubForm.Sys.MemberSite
 
                             string siteCd_val = dataGridView1.Rows[i].Cells["dgv1_SITE_CD"].Value.ToString();
                             string memcoCd_val = dataGridView1.Rows[i].Cells["dgv1_MEMCO_CD"].Value.ToString();
-                            string memcoNm_val = dataGridView1.Rows[i].Cells["dgv1_MEMCO_NM"].Value.ToString();
+                            //string memcoNm_val = dataGridView1.Rows[i].Cells["dgv1_SITE_NM"].Value.ToString();
                             string siteNm_val = dataGridView1.Rows[i].Cells["dgv1_SITE_NM"].Value.ToString();
                             string usingFlag_val = dataGridView1.Rows[i].Cells["dgv1_USING_FLAG"].Value.ToString();
 

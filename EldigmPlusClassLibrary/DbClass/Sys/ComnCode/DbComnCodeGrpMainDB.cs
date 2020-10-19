@@ -203,10 +203,10 @@ namespace EldigmPlusClassLibrary.DbClass.Sys.CommonCode
         public int aSetAuthSiteMemberDBLog(string DBNM, string SITE_CD, string AUTH_CD, string CCODE_GRP, string VIEW_FLAG, string NEW_FLAG, string MODIFY_FLAG, string DEL_FLAG, string REPORT_FLAG, string PRINT_FLAG, string DOWNLOAD_FLAG, string INPUT_ID)
         {
             string sql = "" +
-                " INSERT INTO [PLUS-" + DBNM + "].dbo.T00_CODE_GRP_SETAUTH_SITE_LOG (SITE_CD, AUTH_CD, CCODE_GRP, SNO, VIEW_FLAG," +
+                " INSERT INTO [PLUS-" + DBNM + "].dbo.T00_CODE_GRP_SETAUTH_SITE_LOG (SITE_CD, AUTH_CD, CCODE_GRP, LOG_NO, VIEW_FLAG," +
                 " NEW_FLAG, MODIFY_FLAG, DEL_FLAG, REPORT_FLAG, PRINT_FLAG, DOWNLOAD_FLAG, INPUT_ID, INPUT_DT) " +
                 " VALUES (" + SITE_CD + ", '" + AUTH_CD + "', '" + CCODE_GRP + "'," +
-                " (SELECT ISNULL(MAX(SNO),0)+1 FROM [PLUS-" + DBNM + "].dbo.T00_CODE_GRP_SETAUTH_SITE_LOG WHERE SITE_CD = " + SITE_CD + " AND CCODE_GRP = '" + CCODE_GRP + "' AND AUTH_CD = '" + AUTH_CD + "')," +
+                " (SELECT ISNULL(MAX(LOG_NO),0)+1 FROM [PLUS-" + DBNM + "].dbo.T00_CODE_GRP_SETAUTH_SITE_LOG WHERE SITE_CD = " + SITE_CD + " AND CCODE_GRP = '" + CCODE_GRP + "' AND AUTH_CD = '" + AUTH_CD + "')," +
                 " " + VIEW_FLAG + ", " + NEW_FLAG + ", " + MODIFY_FLAG + ", " + DEL_FLAG + ", " + REPORT_FLAG + "," +
                 " " + PRINT_FLAG + ", " + DOWNLOAD_FLAG + ", '" + INPUT_ID + "', GETDATE()) ";
 
@@ -293,9 +293,9 @@ namespace EldigmPlusClassLibrary.DbClass.Sys.CommonCode
         public int aComnSiteLog(string DBNM, string SITE_CD, string CCODE, string USING_FLAG, string SORT_NO, string MEMO, string INPUT_ID)
         {
             string sql = "" +
-                " INSERT INTO [PLUS-" + DBNM + "].dbo.T00_CODE_COMN_SITE_LOG (SITE_CD, CCODE, SNO, USING_FLAG, SORT_NO, MEMO, INPUT_ID, INPUT_DT) " +
+                " INSERT INTO [PLUS-" + DBNM + "].dbo.T00_CODE_COMN_SITE_LOG (SITE_CD, CCODE, LOG_NO, USING_FLAG, SORT_NO, MEMO, INPUT_ID, INPUT_DT) " +
                 " VALUES (" + SITE_CD + ", " + CCODE + "," +
-                " (SELECT ISNULL(MAX(SNO),0)+1 FROM [PLUS-" + DBNM + "].dbo.T00_CODE_COMN_SITE_LOG WHERE SITE_CD = " + SITE_CD + " AND CCODE = '" + CCODE + "')," +
+                " (SELECT ISNULL(MAX(LOG_NO),0)+1 FROM [PLUS-" + DBNM + "].dbo.T00_CODE_COMN_SITE_LOG WHERE SITE_CD = " + SITE_CD + " AND CCODE = '" + CCODE + "')," +
                 " " + USING_FLAG + ", " + SORT_NO + ", '" + MEMO + "', " + INPUT_ID + ", GETDATE())";
 
             int reCnt = 0;

@@ -1,0 +1,85 @@
+
+2020-10-15 14:56:32-->  [error]  (page)::FrmAccessDevice.cs  (Function)::SetDataBind_CmbMember  (Detail):: 
+System.Net.WebException: 작업 시간이 초과되었습니다.
+   위치: System.Web.Services.Protocols.WebClientProtocol.GetWebResponse(WebRequest request)
+   위치: System.Web.Services.Protocols.HttpWebClientProtocol.GetWebResponse(WebRequest request)
+   위치: System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke(String methodName, Object[] parameters)
+   위치: EldigmPlusApp.Mem_WsDevice.WsDevice.devTypeCmb(DataDevCombo[]& reList, String& reMsg) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\Web References\Mem_WsDevice\Reference.cs:줄 114
+   위치: EldigmPlusApp.SubForm.Sys.Device.FrmAccessDevice.set_Grideview1Combo1(Int32 rnum, String column_name) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\Device\FrmAccessDevice.cs:줄 114
+2020-10-15 14:56:33-->  [error]  (page)::FrmAccessDevice.cs  (Function)::set_Grideview1Combo2  (Detail):: 
+System.Net.WebException: 작업 시간이 초과되었습니다.
+   위치: System.Web.Services.Protocols.WebClientProtocol.GetWebResponse(WebRequest request)
+   위치: System.Web.Services.Protocols.HttpWebClientProtocol.GetWebResponse(WebRequest request)
+   위치: System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke(String methodName, Object[] parameters)
+   위치: EldigmPlusApp.Mem_WsDevice.WsDevice.devIOCmb(DataDevCombo[]& reList, String& reMsg) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\Web References\Mem_WsDevice\Reference.cs:줄 144
+   위치: EldigmPlusApp.SubForm.Sys.Device.FrmAccessDevice.set_Grideview1Combo2(Int32 rnum, String column_name) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\Device\FrmAccessDevice.cs:줄 160
+2020-10-15 14:58:10-->  [error]  (page)::FrmAccessDevice.cs  (Function)::SetDataBind_CmbMember  (Detail):: 
+System.Net.WebException: 작업 시간이 초과되었습니다.
+   위치: System.Web.Services.Protocols.WebClientProtocol.GetWebResponse(WebRequest request)
+   위치: System.Web.Services.Protocols.HttpWebClientProtocol.GetWebResponse(WebRequest request)
+   위치: System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke(String methodName, Object[] parameters)
+   위치: EldigmPlusApp.Mem_WsDevice.WsDevice.devTypeCmb(DataDevCombo[]& reList, String& reMsg) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\Web References\Mem_WsDevice\Reference.cs:줄 114
+   위치: EldigmPlusApp.SubForm.Sys.Device.FrmAccessDevice.set_Grideview1Combo1(Int32 rnum, String column_name) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\Device\FrmAccessDevice.cs:줄 114
+2020-10-15 17:32:36-->  [error]  (page)::FrmAccessDevice.cs  (Function)::SetDataBind_CmbMember  (Detail):: 
+System.ArgumentOutOfRangeException: 인덱스가 범위를 벗어났습니다. 인덱스는 음수가 아니어야 하며 컬렉션의 크기보다 작아야 합니다.
+매개 변수 이름: index
+   위치: System.Collections.ArrayList.get_Item(Int32 index)
+   위치: System.Windows.Forms.DataGridViewRowCollection.SharedRow(Int32 rowIndex)
+   위치: System.Windows.Forms.DataGridViewRowCollection.get_Item(Int32 index)
+   위치: EldigmPlusApp.SubForm.Sys.Device.FrmAccessDevice.set_Grideview1Combo1(Int32 rnum, String column_name) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\Device\FrmAccessDevice.cs:줄 139
+2020-10-15 17:32:36-->  [error]  (page)::FrmAccessDevice.cs  (Function)::set_Grideview1Combo2  (Detail):: 
+System.ArgumentOutOfRangeException: 인덱스가 범위를 벗어났습니다. 인덱스는 음수가 아니어야 하며 컬렉션의 크기보다 작아야 합니다.
+매개 변수 이름: index
+   위치: System.Collections.ArrayList.get_Item(Int32 index)
+   위치: System.Windows.Forms.DataGridViewRowCollection.SharedRow(Int32 rowIndex)
+   위치: System.Windows.Forms.DataGridViewRowCollection.get_Item(Int32 index)
+   위치: EldigmPlusApp.SubForm.Sys.Device.FrmAccessDevice.set_Grideview1Combo2(Int32 rnum, String column_name) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\Device\FrmAccessDevice.cs:줄 185
+2020-10-15 17:33:28-->  [error]  (page)::FrmAccessDevice.cs  (Function)::SetDataBind_CmbMember  (Detail):: 
+System.Net.WebException: 작업 시간이 초과되었습니다.
+   위치: System.Web.Services.Protocols.WebClientProtocol.GetWebResponse(WebRequest request)
+   위치: System.Web.Services.Protocols.HttpWebClientProtocol.GetWebResponse(WebRequest request)
+   위치: System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke(String methodName, Object[] parameters)
+   위치: EldigmPlusApp.Mem_WsDevice.WsDevice.devTypeCmb(DataDevCombo[]& reList, String& reMsg) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\Web References\Mem_WsDevice\Reference.cs:줄 129
+   위치: EldigmPlusApp.SubForm.Sys.Device.FrmAccessDevice.set_Grideview1Combo1(Int32 rnum, String column_name) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\Device\FrmAccessDevice.cs:줄 118
+2020-10-15 17:33:28-->  [error]  (page)::FrmAccessDevice.cs  (Function)::set_Grideview1Combo2  (Detail):: 
+System.ArgumentOutOfRangeException: 인덱스가 범위를 벗어났습니다. 인덱스는 음수가 아니어야 하며 컬렉션의 크기보다 작아야 합니다.
+매개 변수 이름: index
+   위치: System.Collections.ArrayList.get_Item(Int32 index)
+   위치: System.Windows.Forms.DataGridViewRowCollection.SharedRow(Int32 rowIndex)
+   위치: System.Windows.Forms.DataGridViewRowCollection.get_Item(Int32 index)
+   위치: EldigmPlusApp.SubForm.Sys.Device.FrmAccessDevice.set_Grideview1Combo2(Int32 rnum, String column_name) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\Device\FrmAccessDevice.cs:줄 185
+2020-10-15 17:34:20-->  [error]  (page)::FrmAccessDevice.cs  (Function)::SetDataBind_CmbMember  (Detail):: 
+System.ArgumentOutOfRangeException: 인덱스가 범위를 벗어났습니다. 인덱스는 음수가 아니어야 하며 컬렉션의 크기보다 작아야 합니다.
+매개 변수 이름: index
+   위치: System.Collections.ArrayList.get_Item(Int32 index)
+   위치: System.Windows.Forms.DataGridViewRowCollection.SharedRow(Int32 rowIndex)
+   위치: System.Windows.Forms.DataGridViewRowCollection.get_Item(Int32 index)
+   위치: EldigmPlusApp.SubForm.Sys.Device.FrmAccessDevice.set_Grideview1Combo1(Int32 rnum, String column_name) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\Device\FrmAccessDevice.cs:줄 139
+2020-10-15 17:39:06-->  [error]  (page)::FrmAccessDevice.cs  (Function)::SetDataBind_CmbMember  (Detail):: 
+System.ArgumentOutOfRangeException: 인덱스가 범위를 벗어났습니다. 인덱스는 음수가 아니어야 하며 컬렉션의 크기보다 작아야 합니다.
+매개 변수 이름: index
+   위치: System.Collections.ArrayList.get_Item(Int32 index)
+   위치: System.Windows.Forms.DataGridViewRowCollection.SharedRow(Int32 rowIndex)
+   위치: System.Windows.Forms.DataGridViewRowCollection.get_Item(Int32 index)
+   위치: EldigmPlusApp.SubForm.Sys.Device.FrmAccessDevice.set_Grideview1Combo1(Int32 rnum, String column_name) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\Device\FrmAccessDevice.cs:줄 139
+2020-10-15 17:39:10-->  [error]  (page)::FrmAccessDevice.cs  (Function)::set_Grideview1Combo2  (Detail):: 
+System.ArgumentOutOfRangeException: 인덱스가 범위를 벗어났습니다. 인덱스는 음수가 아니어야 하며 컬렉션의 크기보다 작아야 합니다.
+매개 변수 이름: index
+   위치: System.Collections.ArrayList.get_Item(Int32 index)
+   위치: System.Windows.Forms.DataGridViewRowCollection.SharedRow(Int32 rowIndex)
+   위치: System.Windows.Forms.DataGridViewRowCollection.get_Item(Int32 index)
+   위치: EldigmPlusApp.SubForm.Sys.Device.FrmAccessDevice.set_Grideview1Combo2(Int32 rnum, String column_name) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\Device\FrmAccessDevice.cs:줄 185
+2020-10-15 17:40:28-->  [error]  (page)::FrmAccessDevice.cs  (Function)::SetDataBind_CmbMember  (Detail):: 
+System.ArgumentOutOfRangeException: 인덱스가 범위를 벗어났습니다. 인덱스는 음수가 아니어야 하며 컬렉션의 크기보다 작아야 합니다.
+매개 변수 이름: index
+   위치: System.Collections.ArrayList.get_Item(Int32 index)
+   위치: System.Windows.Forms.DataGridViewRowCollection.SharedRow(Int32 rowIndex)
+   위치: System.Windows.Forms.DataGridViewRowCollection.get_Item(Int32 index)
+   위치: EldigmPlusApp.SubForm.Sys.Device.FrmAccessDevice.set_Grideview1Combo1(Int32 rnum, String column_name) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\Device\FrmAccessDevice.cs:줄 139
+2020-10-15 17:40:28-->  [error]  (page)::FrmAccessDevice.cs  (Function)::set_Grideview1Combo2  (Detail):: 
+System.ArgumentOutOfRangeException: 인덱스가 범위를 벗어났습니다. 인덱스는 음수가 아니어야 하며 컬렉션의 크기보다 작아야 합니다.
+매개 변수 이름: index
+   위치: System.Collections.ArrayList.get_Item(Int32 index)
+   위치: System.Windows.Forms.DataGridViewRowCollection.SharedRow(Int32 rowIndex)
+   위치: System.Windows.Forms.DataGridViewRowCollection.get_Item(Int32 index)
+   위치: EldigmPlusApp.SubForm.Sys.Device.FrmAccessDevice.set_Grideview1Combo2(Int32 rnum, String column_name) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\Device\FrmAccessDevice.cs:줄 185

@@ -86,7 +86,7 @@ namespace EldigmPlusApp.SubForm.MainHome
 
                 AppInfo.SsUserId = ini.IniReadValue("INFO", "UserId");
                 AppInfo.SsUserAuth = ini.IniReadValue("INFO", "UserAuth");
-
+                AppInfo.SsCoCd = ini.IniReadValue("INFO", "CoCd");
                 AppInfo.SsDbNm = "";
             }
             catch (Exception ex)
@@ -270,6 +270,8 @@ namespace EldigmPlusApp.SubForm.MainHome
 
                 if (reCode1 == "Y")
                 {
+                    ultraExplorerBarLeft.Groups.Clear();
+
                     if (getData1 != null && getData1.Length > 0)
                     {
                         for (int i = 0; i < getData1.Length; i++)

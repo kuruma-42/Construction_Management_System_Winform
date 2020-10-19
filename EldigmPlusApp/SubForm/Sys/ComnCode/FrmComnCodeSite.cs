@@ -22,6 +22,7 @@ namespace EldigmPlusApp.SubForm.Sys.ComnCode
         ResourceManager msgRM = null;
 
         string[] _codeArr = new string[4];
+        string _dbNm = "";
 
         public FrmComnCodeSite()
         {

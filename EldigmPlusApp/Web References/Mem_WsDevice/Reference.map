@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DiscoveryClientResultsFile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Results>
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://localhost:49501/WebSvc/Sys/Device/WsDevice.svc?xsd=xsd2" filename="WsDevice.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://localhost:49501/WebSvc/Sys/Device/WsDevice.svc?xsd=xsd3" filename="WsDevice0.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.DiscoveryDocumentReference" url="http://localhost:49501/WebSvc/Sys/Device/WsDevice.svc?disco" filename="WsDevice.disco" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://localhost:49501/WebSvc/Sys/Device/WsDevice.svc?xsd=xsd1" filename="WsDevice1.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.ContractReference" url="http://localhost:49501/WebSvc/Sys/Device/WsDevice.svc?wsdl" filename="WsDevice.wsdl" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://localhost:49501/WebSvc/Sys/Device/WsDevice.svc?xsd=xsd0" filename="WsDevice2.xsd" />
+  </Results>
+</DiscoveryClientResultsFile>

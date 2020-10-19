@@ -1,6 +1,7 @@
 ﻿using EldigmPlusClassLibrary.DbClass.Sys.CodeT;
 using EldigmPlusSvc_Main.Biz.Common;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
@@ -142,6 +143,35 @@ namespace EldigmPlusSvc_Main.Biz.Sys.CodeT
 
                 db = new DbCodeT(dbCon_IP, dbCon_DB, dbCon_USER, "0");
                 ds = db.sCodeTSub(pTcode);
+            }
+            catch (Exception ex)
+            {
+                _logs.SaveLog("[error]  (page)::BizCodeT.cs  (Function)::sCodeTSub  (Detail):: " +
+                   " pTcode=['" + pTcode + "']", "Error");
+                _logs.SaveLog("[error]  (page)::BizCodeT.cs  (Function)::sCodeTSub  (Detail)::" + "\r\n" + ex.ToString(), "Error");
+            }
+            finally
+            {
+                if (db != null)
+                    db.DisConnect();
+            }
+
+            return ds;
+        }
+
+        public DataSet sCodeTSubTscode(string pTcode)
+        {
+            DataSet ds = null;
+
+            DbCodeT db = null;
+            try
+            {
+                string dbCon_IP = WebConfigurationManager.ConnectionStrings["ConnectionStr_IP"].ConnectionString;
+                string dbCon_DB = WebConfigurationManager.ConnectionStrings["ConnectionStr_DB"].ConnectionString;
+                string dbCon_USER = WebConfigurationManager.ConnectionStrings["ConnectionStr_USER"].ConnectionString;
+
+                db = new DbCodeT(dbCon_IP, dbCon_DB, dbCon_USER, "0");
+                ds = db.sCodeTSubTscode(pTcode);
             }
             catch (Exception ex)
             {
@@ -362,7 +392,8 @@ namespace EldigmPlusSvc_Main.Biz.Sys.CodeT
 
             return ds;
         }
-        
+
+
         public int mCodeTSite(string pDbnm, string pSiteCd, string pTcode, string pDefaultValue, string pUsingFlag, string pSortNo, string pMemo)
         {
             int reCnt = 0;
@@ -379,7 +410,7 @@ namespace EldigmPlusSvc_Main.Biz.Sys.CodeT
             }
             catch (Exception ex)
             {
-                _logs.SaveLog("[error]  (page)::BizCodeT.cs  (Function)::aCodeTSub  (Detail):: " +
+                _logs.SaveLog("[error]  (page)::BizCodeT.cs  (Function)::mCodeTSite  (Detail):: " +
                     ", pDbnm=['" + pDbnm + "'], pSiteCd=[" + pSiteCd + "], pTcode=[" + pTcode + "]" + ", pDefaultValue=[" + pDefaultValue + "]" +
                     ", pUsingFlag=['" + pUsingFlag + "'], pSortNo=[" + pSortNo + "], pMemo=[" + pMemo + "]", "Error");
                 _logs.SaveLog("[error]  (page)::BizCodeT.cs  (Function)::mCodeTSite  (Detail)::" + "\r\n" + ex.ToString(), "Error");
@@ -392,6 +423,99 @@ namespace EldigmPlusSvc_Main.Biz.Sys.CodeT
 
             return reCnt;
         }
+
+        public string aCodeTSite(string pDbNm, Hashtable param, out Hashtable outVal)
+        {
+            string reVal = "";
+
+            DbCodeT db = null;
+            try
+            {
+                string dbCon_IP = WebConfigurationManager.ConnectionStrings["ConnectionStr_IP"].ConnectionString;
+                string dbCon_DB = "Initial Catalog=PLUS-" + pDbNm + ";";
+                string dbCon_USER = WebConfigurationManager.ConnectionStrings["ConnectionStr_USER"].ConnectionString;
+
+                db = new DbCodeT(dbCon_IP, dbCon_DB, dbCon_USER, "1");
+                reVal = db.aCodeTSite(param, out outVal);
+            }
+            catch (Exception ex)
+            {
+                outVal = null;
+                //logs.SaveLog("[error]  (page)::BizCodeT.cs  (Function)::aCodeTSite  (Detail)::memcoCd_val=[" + memcoCd_val + "], siteNm_val=[" + siteNm_val + "], usingFlag_val=[" + usingFlag_val + "]" +
+                //    ", sortNo_val=[" + sortNo_val + "], pInputId=[" + pInputId + "]", "Error");
+                _logs.SaveLog("[error]  (page)::BizSite.cs  (Function)::aCodeTSite  (Detail)::" + "\r\n" + ex.ToString(), "Error");
+            }
+            finally
+            {
+                if (db != null)
+                    db.DisConnect();
+            }
+
+            return reVal;
+        }
+
+        public string aCodeTSubSite(string pDbNm, Hashtable param, out Hashtable outVal)
+        {
+            string reVal = "";
+
+            DbCodeT db = null;
+            try
+            {
+                string dbCon_IP = WebConfigurationManager.ConnectionStrings["ConnectionStr_IP"].ConnectionString;
+                string dbCon_DB = "Initial Catalog=PLUS-" + pDbNm + ";";
+                string dbCon_USER = WebConfigurationManager.ConnectionStrings["ConnectionStr_USER"].ConnectionString;
+
+                db = new DbCodeT(dbCon_IP, dbCon_DB, dbCon_USER, "1");
+                reVal = db.aCodeTSubSite(param, out outVal);
+            }
+            catch (Exception ex)
+            {
+                outVal = null;
+                //logs.SaveLog("[error]  (page)::BizCodeT.cs  (Function)::aCodeTSite  (Detail)::memcoCd_val=[" + memcoCd_val + "], siteNm_val=[" + siteNm_val + "], usingFlag_val=[" + usingFlag_val + "]" +
+                //    ", sortNo_val=[" + sortNo_val + "], pInputId=[" + pInputId + "]", "Error");
+                _logs.SaveLog("[error]  (page)::BizSite.cs  (Function)::aCodeTSite  (Detail)::" + "\r\n" + ex.ToString(), "Error");
+            }
+            finally
+            {
+                if (db != null)
+                    db.DisConnect();
+            }
+
+            return reVal;
+        }
+
+        public int aCodeTSiteLog(string pDbnm, string pSiteCd, string pTcode, string pTgrpCcd, string pRequiredFlag, string pNumericFlag, string pDefaultValue, string pUsingFlag, string pSortNo, string pMemo, string pInputId)
+        {
+            int reCnt = 0;
+
+            DbCodeT db = null;
+            try
+            {
+                string dbCon_IP = WebConfigurationManager.ConnectionStrings["ConnectionStr_IP"].ConnectionString;
+                string dbCon_DB = WebConfigurationManager.ConnectionStrings["ConnectionStr_DB"].ConnectionString;
+                string dbCon_USER = WebConfigurationManager.ConnectionStrings["ConnectionStr_USER"].ConnectionString;
+
+                db = new DbCodeT(dbCon_IP, dbCon_DB, dbCon_USER, "0");
+                reCnt = db.aCodeTSiteLog(pDbnm, pSiteCd, pTcode, pTgrpCcd, pRequiredFlag, pNumericFlag, pDefaultValue, pUsingFlag, pSortNo, pMemo, pInputId);
+            }
+            catch (Exception ex)
+            {
+                _logs.SaveLog("[error]  (page)::BizCodeT.cs  (Function)::aCodeT  (Detail):: " +
+                    ", pDbnm=['" + pDbnm + "'], pSiteCd=[" + pSiteCd + "], pTcode=[" + pTcode + "]" +
+                     ", pTgrpCcd=['" + pTgrpCcd + "'], pRequiredFlag=[" + pRequiredFlag + "], pNumericFlag=[" + pNumericFlag + "]" +
+                      ", pDefaultValue=['" + pDefaultValue + "'], pUsingFlag=[" + pUsingFlag + "], pSortNo=[" + pSortNo + "]" +
+                    ", pMemo=[" + pMemo + "], pInputId=[" + pInputId + "]", "Error");
+                _logs.SaveLog("[error]  (page)::BizCodeT.cs  (Function)::aCodeT  (Detail)::" + "\r\n" + ex.ToString(), "Error");
+            }
+            finally
+            {
+                if (db != null)
+                    db.DisConnect();
+            }
+
+            return reCnt;
+        }
+        
 
         //**AUTH PART START 
 
@@ -425,7 +549,7 @@ namespace EldigmPlusSvc_Main.Biz.Sys.CodeT
         }
 
         //SELECT
-        public DataSet sCodeTAuth(string pTcode, string pSiteCd)
+        public DataSet sCodeTAuth(string pTcode, string pSiteCd, string pAuthCd)
         {
             DataSet ds = null;
 
@@ -437,7 +561,7 @@ namespace EldigmPlusSvc_Main.Biz.Sys.CodeT
                 string dbCon_USER = WebConfigurationManager.ConnectionStrings["ConnectionStr_USER"].ConnectionString;
 
                 db = new DbCodeT(dbCon_IP, dbCon_DB, dbCon_USER, "0");
-                ds = db.sCodeTAuth(pTcode, pSiteCd);
+                ds = db.sCodeTAuth(pTcode, pSiteCd, pAuthCd);
             }
             catch (Exception ex)
             {
@@ -454,7 +578,7 @@ namespace EldigmPlusSvc_Main.Biz.Sys.CodeT
         }
 
         //SELECT : WHEN USER CLICK TTYPE_SCD 
-        public DataSet sCodeTAuthTtype(string pTtypeScd, string pSiteCd)
+        public DataSet sCodeTAuthTtype(string pTtypeScd, string pSiteCd, string pAuthCd)
         {
             DataSet ds = null;
 
@@ -466,7 +590,7 @@ namespace EldigmPlusSvc_Main.Biz.Sys.CodeT
                 string dbCon_USER = WebConfigurationManager.ConnectionStrings["ConnectionStr_USER"].ConnectionString;
 
                 db = new DbCodeT(dbCon_IP, dbCon_DB, dbCon_USER, "0");
-                ds = db.sCodeTAuthTtype(pTtypeScd, pSiteCd);
+                ds = db.sCodeTAuthTtype(pTtypeScd, pSiteCd, pAuthCd);
             }
             catch (Exception ex)
             {

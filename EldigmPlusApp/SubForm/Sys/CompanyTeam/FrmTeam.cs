@@ -168,6 +168,7 @@ namespace EldigmPlusApp.SubForm.Sys.CompanyTeam
                             dataGridView1.Rows[i].Cells["dgv1_TEAM_NM"].Value = getData[i].TEAM_NM.ToString();
                             dataGridView1.Rows[i].Cells["dgv1_USING_FLAG"].Value = getData[i].USING_FLAG.ToString();
                             dataGridView1.Rows[i].Cells["dgv1_SORT_NO"].Value = getData[i].SORT_NO.ToString();
+                            dataGridView1.Rows[i].Cells["dgv1_MEMO"].Value = getData[i].MEMO.ToString();
 
                         }
 
@@ -176,7 +177,7 @@ namespace EldigmPlusApp.SubForm.Sys.CompanyTeam
                     else
                     {
                         dataGridView1.Rows.Clear();
-                        MessageBox.Show("데이터가 없습니다");
+                        //MessageBox.Show("데이터가 없습니다");
                     }
                 }
             }

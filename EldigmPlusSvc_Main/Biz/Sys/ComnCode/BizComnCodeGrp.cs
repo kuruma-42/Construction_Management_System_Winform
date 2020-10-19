@@ -487,9 +487,9 @@ namespace EldigmPlusSvc_Main.Biz.Sys.ComnCode
             catch (Exception ex)
             {
                 outVal = null;
-                //logs.SaveLog("[error]  (page)::BizSite.cs  (Function)::aSite  (Detail)::memcoCd_val=[" + memcoCd_val + "], siteNm_val=[" + siteNm_val + "], usingFlag_val=[" + usingFlag_val + "]" +
+                //logs.SaveLog("[error]  (page)::BizComnCodeGrp.cs  (Function)::aComnSite  (Detail)::memcoCd_val=[" + memcoCd_val + "], siteNm_val=[" + siteNm_val + "], usingFlag_val=[" + usingFlag_val + "]" +
                 //    ", sortNo_val=[" + sortNo_val + "], pInputId=[" + pInputId + "]", "Error");
-                logs.SaveLog("[error]  (page)::BizSite.cs  (Function)::aSite  (Detail)::" + "\r\n" + ex.ToString(), "Error");
+                logs.SaveLog("[error]  (page)::BizComnCodeGrp.cs  (Function)::aComnSite  (Detail)::" + "\r\n" + ex.ToString(), "Error");
             }
             finally
             {

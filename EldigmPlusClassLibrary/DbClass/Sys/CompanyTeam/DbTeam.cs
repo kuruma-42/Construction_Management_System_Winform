@@ -335,8 +335,8 @@ namespace EldigmPlusClassLibrary.DbClass.Sys.CompanyTeam
         public int mConpanyMainLog(string CO_CD, string CO_NM, string BIZ_NO, string CONST_CCD, string CO_TYPE_SCD, string OWNER_NM, string TEL, string ADDR, string USING_CNT, string INPUT_ID)
         {
             string sql = "" +
-                " INSERT INTO [PLUS_MAIN].dbo.TM00_COMPANY_LOG (SNO, CO_CD, CO_NM, BIZ_NO, CONST_CCD, CO_TYPE_SCD, OWNER_NM, TEL, ADDR, USING_CNT, INPUT_ID, INPUT_DT) " +
-                " VALUES ((SELECT ISNULL(MAX(SNO ),0)+1 FROM [PLUS_MAIN].dbo.TM00_COMPANY_LOG WHERE CO_CD = " + CO_CD + "), " + CO_CD + ", '" + CO_NM + "' ,'" + BIZ_NO + "', " + CONST_CCD + ", '" + CO_TYPE_SCD + "', '" + OWNER_NM + "', '" + TEL + "', '" + ADDR + "', " + USING_CNT + ", " + INPUT_ID + ", GETDATE())";
+                " INSERT INTO [PLUS_MAIN].dbo.TM00_COMPANY_LOG (LOG_NO, CO_CD, CO_NM, BIZ_NO, CONST_CCD, CO_TYPE_SCD, OWNER_NM, TEL, ADDR, USING_CNT, INPUT_ID, INPUT_DT) " +
+                " VALUES ((SELECT ISNULL(MAX(LOG_NO ),0)+1 FROM [PLUS_MAIN].dbo.TM00_COMPANY_LOG WHERE CO_CD = " + CO_CD + "), " + CO_CD + ", '" + CO_NM + "' ,'" + BIZ_NO + "', " + CONST_CCD + ", '" + CO_TYPE_SCD + "', '" + OWNER_NM + "', '" + TEL + "', '" + ADDR + "', " + USING_CNT + ", " + INPUT_ID + ", GETDATE())";
 
             int reCnt = 0;
             if (_sqlHelper != null)
@@ -351,8 +351,8 @@ namespace EldigmPlusClassLibrary.DbClass.Sys.CompanyTeam
         {
             string dbNm = sDbNm(SITE_CD);
             string sql = "" +
-            " INSERT INTO [PLUS-" + dbNm + "].dbo.T00_COMPANY_SITE_LOG (CO_CD, SITE_CD, SNO, CO_NM, CONST_CCD, CO_TYPE_SCD, START_DATE, END_DATE, USING_FLAG, SORT_NO, MEMO, INPUT_ID, INPUT_DT) " +
-            " VALUES (" + CO_CD + ", " + SITE_CD + ", (SELECT ISNULL(MAX(SNO),0)+1 FROM [PLUS-" + dbNm + "].dbo.T00_COMPANY_SITE_LOG WHERE SITE_CD = " + SITE_CD + " AND CO_CD = " + CO_CD + ") " +
+            " INSERT INTO [PLUS-" + dbNm + "].dbo.T00_COMPANY_SITE_LOG (CO_CD, SITE_CD, LOG_NO, CO_NM, CONST_CCD, CO_TYPE_SCD, START_DATE, END_DATE, USING_FLAG, SORT_NO, MEMO, INPUT_ID, INPUT_DT) " +
+            " VALUES (" + CO_CD + ", " + SITE_CD + ", (SELECT ISNULL(MAX(LOG_NO),0)+1 FROM [PLUS-" + dbNm + "].dbo.T00_COMPANY_SITE_LOG WHERE SITE_CD = " + SITE_CD + " AND CO_CD = " + CO_CD + ") " +
             " , '" + CO_NM + "', " + CONST_CCD + ", '" + CO_TYPE_SCD + "', " + START_DATE + ", " + END_DATE + ", " + USING_FLAG + ", " + SORT_NO + ", '" + MEMO + "', " + INPUT_ID + ", GETDATE())";
 
 

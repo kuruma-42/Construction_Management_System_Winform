@@ -39,10 +39,12 @@
             this.treeView1 = new System.Windows.Forms.TreeView();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
+            this.cmbSite = new System.Windows.Forms.ComboBox();
             this.btnSave = new System.Windows.Forms.Button();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.dgv1_CHK = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.dgv1_TCODE = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgv1_AUTH_CD = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgv1_TCODE_NM = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgv1_VIEW_FLAG = new System.Windows.Forms.DataGridViewCheckBoxColumn();
@@ -55,6 +57,7 @@
             this.splitContainer3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).BeginInit();
+            this.splitContainer2.Panel1.SuspendLayout();
             this.splitContainer2.Panel2.SuspendLayout();
             this.splitContainer2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
@@ -163,6 +166,7 @@
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dgv1_CHK,
+            this.dgv1_TCODE,
             this.dgv1_AUTH_CD,
             this.dgv1_TCODE_NM,
             this.dgv1_VIEW_FLAG,
@@ -179,16 +183,31 @@
             // 
             // splitContainer2
             // 
+            this.splitContainer2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.splitContainer2.FixedPanel = System.Windows.Forms.FixedPanel.Panel2;
             this.splitContainer2.Location = new System.Drawing.Point(0, 0);
             this.splitContainer2.Name = "splitContainer2";
+            // 
+            // splitContainer2.Panel1
+            // 
+            this.splitContainer2.Panel1.Controls.Add(this.cmbSite);
             // 
             // splitContainer2.Panel2
             // 
             this.splitContainer2.Panel2.Controls.Add(this.btnSave);
             this.splitContainer2.Size = new System.Drawing.Size(1037, 40);
-            this.splitContainer2.SplitterDistance = 750;
+            this.splitContainer2.SplitterDistance = 799;
             this.splitContainer2.TabIndex = 0;
+            // 
+            // cmbSite
+            // 
+            this.cmbSite.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbSite.FormattingEnabled = true;
+            this.cmbSite.Location = new System.Drawing.Point(10, 12);
+            this.cmbSite.Name = "cmbSite";
+            this.cmbSite.Size = new System.Drawing.Size(170, 20);
+            this.cmbSite.TabIndex = 6;
+            this.cmbSite.SelectedIndexChanged += new System.EventHandler(this.cmbSite_SelectedIndexChanged);
             // 
             // btnSave
             // 
@@ -240,6 +259,13 @@
             this.dgv1_CHK.Name = "dgv1_CHK";
             this.dgv1_CHK.TrueValue = "1";
             this.dgv1_CHK.Width = 120;
+            // 
+            // dgv1_TCODE
+            // 
+            this.dgv1_TCODE.HeaderText = "TCODE";
+            this.dgv1_TCODE.Name = "dgv1_TCODE";
+            this.dgv1_TCODE.ReadOnly = true;
+            this.dgv1_TCODE.Visible = false;
             // 
             // dgv1_AUTH_CD
             // 
@@ -308,6 +334,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer3)).EndInit();
             this.splitContainer3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.splitContainer2.Panel1.ResumeLayout(false);
             this.splitContainer2.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).EndInit();
             this.splitContainer2.ResumeLayout(false);
@@ -335,7 +362,9 @@
         private System.Windows.Forms.TreeView treeView1;
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.ComboBox cmbSite;
         private System.Windows.Forms.DataGridViewCheckBoxColumn dgv1_CHK;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgv1_TCODE;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgv1_AUTH_CD;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgv1_TCODE_NM;
         private System.Windows.Forms.DataGridViewCheckBoxColumn dgv1_VIEW_FLAG;

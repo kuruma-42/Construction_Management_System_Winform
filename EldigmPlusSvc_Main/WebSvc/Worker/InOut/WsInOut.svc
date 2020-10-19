@@ -1,0 +1,1 @@
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="EldigmPlusSvc_Main.WebSvc.Worker.InOut.WsInOut" CodeBehind="WsInOut.svc.cs" %>

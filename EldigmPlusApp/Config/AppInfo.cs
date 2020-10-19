@@ -22,7 +22,8 @@ namespace EldigmPlusApp.Config
 
         public static string SsDbNm { get; set; }
 
-       
+        public static string SsCoCd { get; set; }
+
 
     }
 }

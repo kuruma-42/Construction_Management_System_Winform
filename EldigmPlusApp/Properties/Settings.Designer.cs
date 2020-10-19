@@ -132,5 +132,35 @@ namespace EldigmPlusApp.Properties {
                 return ((string)(this["EldigmPlusApp_M_WsCodeTMainDB_WsCodeTMainDB"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.WebServiceUrl)]
+        [global::System.Configuration.DefaultSettingValueAttribute("http://localhost:49469/WebSvc/Worker/InOut/WsInOut.svc")]
+        public string EldigmPlusApp_Mem_WsInOut_WsInOut {
+            get {
+                return ((string)(this["EldigmPlusApp_Mem_WsInOut_WsInOut"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.WebServiceUrl)]
+        [global::System.Configuration.DefaultSettingValueAttribute("http://localhost:49501/WebSvc/Sys/Device/WsDevice.svc")]
+        public string EldigmPlusApp_Mem_WsDevice_WsDevice {
+            get {
+                return ((string)(this["EldigmPlusApp_Mem_WsDevice_WsDevice"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.WebServiceUrl)]
+        [global::System.Configuration.DefaultSettingValueAttribute("http://localhost:49501/WebSvc/Worker/Labor/WsWorkerLaborSearch.svc")]
+        public string EldigmPlusApp_Mem_WsWorkerLaborSearch_WsWorkerLaborSearch {
+            get {
+                return ((string)(this["EldigmPlusApp_Mem_WsWorkerLaborSearch_WsWorkerLaborSearch"]));
+            }
+        }
     }
 }

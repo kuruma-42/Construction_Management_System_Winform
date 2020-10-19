@@ -69,7 +69,9 @@
     </Content>
     <Content Include="WebSvc\MainHome\WsMainHome.svc" />
     <Content Include="WebSvc\Sys\CompanyTeam\WsSysCompanyTeam.svc" />
+    <Content Include="WebSvc\Sys\Device\WsDevice.svc" />
     <Content Include="WebSvc\Sys\SysAuth\WsSysAuthMemberDB.svc" />
+    <Content Include="WebSvc\Worker\Labor\WsWorkerLaborSearch.svc" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Biz\Common\EncDecClass.cs" />
@@ -78,8 +80,10 @@
     <Compile Include="Biz\MainHome\BizMainHome.cs" />
     <Compile Include="Biz\Sys\CompanyTeam\BizCompany.cs" />
     <Compile Include="Biz\Sys\CompanyTeam\BizTeam.cs" />
+    <Compile Include="Biz\Sys\Device\BizDevice.cs" />
     <Compile Include="Biz\Sys\SysAuth\BizSysAuthMemberDB.cs" />
     <Compile Include="Biz\Sys\SysAuth\BizSysSiteDB.cs" />
+    <Compile Include="Biz\Worker\BizLaborSearch.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="WebSvc\MainHome\IWsMainHome.cs" />
     <Compile Include="WebSvc\MainHome\WsMainHome.svc.cs">
@@ -89,9 +93,17 @@
     <Compile Include="WebSvc\Sys\CompanyTeam\WsSysCompanyTeam.svc.cs">
       <DependentUpon>WsSysCompanyTeam.svc</DependentUpon>
     </Compile>
+    <Compile Include="WebSvc\Sys\Device\IWsDevice.cs" />
+    <Compile Include="WebSvc\Sys\Device\WsDevice.svc.cs">
+      <DependentUpon>WsDevice.svc</DependentUpon>
+    </Compile>
     <Compile Include="WebSvc\Sys\SysAuth\IWsSysAuthMemberDB.cs" />
     <Compile Include="WebSvc\Sys\SysAuth\WsSysAuthMemberDB.svc.cs">
       <DependentUpon>WsSysAuthMemberDB.svc</DependentUpon>
+    </Compile>
+    <Compile Include="WebSvc\Worker\Labor\IWsWorkerLaborSearch.cs" />
+    <Compile Include="WebSvc\Worker\Labor\WsWorkerLaborSearch.svc.cs">
+      <DependentUpon>WsWorkerLaborSearch.svc</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

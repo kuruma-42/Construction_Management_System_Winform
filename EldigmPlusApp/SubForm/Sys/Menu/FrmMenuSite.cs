@@ -17,6 +17,7 @@ namespace EldigmPlusApp.SubForm.Sys.Menu
 
         string _topMenuCd = "";
         string[] codeArr = { "2", "1", "0", "0" };
+        string DBNM = "";
 
         public FrmMenuSite()
         {
@@ -155,7 +156,9 @@ namespace EldigmPlusApp.SubForm.Sys.Menu
                 if (reCode == "Y")
                 {
                     if (!string.IsNullOrEmpty(reData))
-                        AppInfo.SsDbNm = reData;
+                        DBNM = reData;
+                        //AppInfo.SsDbNm = reData;
+                    //AppInfo.SsDbNm = reData;
                     //AppInfo.SsSiteCd = cmbSite.SelectedValue.ToString(); // CMBBOX에서 선택된 SITE_CD 값을 APPINFO.SsSiteCD에 담는다
                 }
             }
@@ -357,7 +360,7 @@ namespace EldigmPlusApp.SubForm.Sys.Menu
                         else
                         {
                             dataGridView1.Rows.Clear();
-                            MessageBox.Show("데이터가 없습니다");
+                            //MessageBox.Show("데이터가 없습니다");
                         }
                     }
 
@@ -382,7 +385,7 @@ namespace EldigmPlusApp.SubForm.Sys.Menu
                     dataGridView1.Columns["dgv1_MENU_CD"].ReadOnly = true;
                     dataGridView2.Columns["dgv2_MENU_CD"].ReadOnly = false;
 
-                    reCode = wSvc.sMenuMemberDB(AppInfo.SsDbNm, AppInfo.SsSiteCd, tmenuCd, smenuCd, out getData3, out reMsg);
+                    reCode = wSvc.sMenuMemberDB(DBNM, cmbSite.SelectedValue.ToString(), tmenuCd, smenuCd, out getData3, out reMsg);
                     if (reCode == "Y")
                     {
                         if (getData3 != null && getData3.Length > 0)
@@ -408,7 +411,7 @@ namespace EldigmPlusApp.SubForm.Sys.Menu
                         else
                         {
                             dataGridView1.Rows.Clear();
-                            MessageBox.Show("데이터가 없습니다");
+                            //MessageBox.Show("데이터가 없습니다");
                         }
                     }
                 }
@@ -565,7 +568,7 @@ namespace EldigmPlusApp.SubForm.Sys.Menu
                                     {
                                         reCode = "";
                                         // * 멤버 디비에 인서트를 해준다. 
-                                        reCode = wSvc.aMenuMemberDB(AppInfo.SsDbNm, AppInfo.SsSiteCd, menuCd_val, tMenuCd, sMenuCd, Nm_val, "1", sortNo_val, memo_val, pInputId, out reMsg, out reData);
+                                        reCode = wSvc.aMenuMemberDB(DBNM, cmbSite.SelectedValue.ToString(), menuCd_val, tMenuCd, sMenuCd, Nm_val, "1", sortNo_val, memo_val, pInputId, out reMsg, out reData);
 
 
                                         if (reCode == "Y" && reData != "")
@@ -763,18 +766,19 @@ namespace EldigmPlusApp.SubForm.Sys.Menu
 
                                 if (reCode == "Y")
                                 {
-                                    reCode = wSvc.mMenuMemberDB(AppInfo.SsDbNm, AppInfo.SsSiteCd, menuCd_val, usingFlag_val, sortNo_val, memo_val, out reMsg, out reData);
+                                    reCode = wSvc.mMenuMemberDB(DBNM, cmbSite.SelectedValue.ToString(), menuCd_val, usingFlag_val, sortNo_val, memo_val, out reMsg, out reData);
                                     if (Convert.ToInt16(reData) < 1)
                                     {
                                         if (usingFlag_val == "1")
                                         {
                                             //Member DB 업데이트 실패시 INSERT 해준다.
-                                            reCode = wSvc.aMenuMemberDB(AppInfo.SsDbNm, AppInfo.SsSiteCd, menuCd_val, tMenuCd, sMenuCd, pNm_val, usingFlag_val, sortNo_val, memo_val, pInputId, out reMsg, out reData);
+                                            reCode = wSvc.aMenuMemberDB(DBNM, cmbSite.SelectedValue.ToString(), menuCd_val, tMenuCd, sMenuCd, pNm_val, usingFlag_val, sortNo_val, memo_val, pInputId, out reMsg, out reData);
 
                                         }
                                         else
                                         {
-                                            reCnt3++;
+                                            MessageBox.Show("사용을 눌러주세요.");
+                                            return;
                                         }
                                     }
 
@@ -827,7 +831,7 @@ namespace EldigmPlusApp.SubForm.Sys.Menu
 
         private void cmbSite_SelectedIndexChanged(object sender, EventArgs e)
         {
-            AppInfo.SsSiteCd = cmbSite.SelectedValue.ToString();
+            //AppInfo.SsSiteCd = cmbSite.SelectedValue.ToString();
             string codeGrp = codeArr[0].ToString();
             string tMenuCd = codeArr[1].ToString();
             string sMenuCd = codeArr[2].ToString();

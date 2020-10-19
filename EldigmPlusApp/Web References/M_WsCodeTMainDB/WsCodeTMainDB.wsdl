@@ -5,6 +5,7 @@
       <xsd:import schemaLocation="http://localhost:49469/WebSvc/Sys/CodeT/WsCodeTMainDB.svc?xsd=xsd0" namespace="http://tempuri.org/" />
       <xsd:import schemaLocation="http://localhost:49469/WebSvc/Sys/CodeT/WsCodeTMainDB.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
       <xsd:import schemaLocation="http://localhost:49469/WebSvc/Sys/CodeT/WsCodeTMainDB.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/EldigmPlusSvc_Main.WebSvc.Sys.CodeT" />
+      <xsd:import schemaLocation="http://localhost:49469/WebSvc/Sys/CodeT/WsCodeTMainDB.svc?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
     </xsd:schema>
   </wsdl:types>
   <wsdl:message name="IWsCodeTMainDB_sSysCode_InputMessage">
@@ -36,6 +37,12 @@
   </wsdl:message>
   <wsdl:message name="IWsCodeTMainDB_sCodeTSub_OutputMessage">
     <wsdl:part name="parameters" element="tns:sCodeTSubResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWsCodeTMainDB_sCodeTSubTscode_InputMessage">
+    <wsdl:part name="parameters" element="tns:sCodeTSubTscode" />
+  </wsdl:message>
+  <wsdl:message name="IWsCodeTMainDB_sCodeTSubTscode_OutputMessage">
+    <wsdl:part name="parameters" element="tns:sCodeTSubTscodeResponse" />
   </wsdl:message>
   <wsdl:message name="IWsCodeTMainDB_mCodeT_InputMessage">
     <wsdl:part name="parameters" element="tns:mCodeT" />
@@ -85,6 +92,24 @@
   <wsdl:message name="IWsCodeTMainDB_mCodeTSite_OutputMessage">
     <wsdl:part name="parameters" element="tns:mCodeTSiteResponse" />
   </wsdl:message>
+  <wsdl:message name="IWsCodeTMainDB_aCodeTSite_InputMessage">
+    <wsdl:part name="parameters" element="tns:aCodeTSite" />
+  </wsdl:message>
+  <wsdl:message name="IWsCodeTMainDB_aCodeTSite_OutputMessage">
+    <wsdl:part name="parameters" element="tns:aCodeTSiteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWsCodeTMainDB_aCodeTSubSite_InputMessage">
+    <wsdl:part name="parameters" element="tns:aCodeTSubSite" />
+  </wsdl:message>
+  <wsdl:message name="IWsCodeTMainDB_aCodeTSubSite_OutputMessage">
+    <wsdl:part name="parameters" element="tns:aCodeTSubSiteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWsCodeTMainDB_aCodeTSiteLog_InputMessage">
+    <wsdl:part name="parameters" element="tns:aCodeTSiteLog" />
+  </wsdl:message>
+  <wsdl:message name="IWsCodeTMainDB_aCodeTSiteLog_OutputMessage">
+    <wsdl:part name="parameters" element="tns:aCodeTSiteLogResponse" />
+  </wsdl:message>
   <wsdl:message name="IWsCodeTMainDB_sCodeAuthTTreeView_InputMessage">
     <wsdl:part name="parameters" element="tns:sCodeAuthTTreeView" />
   </wsdl:message>
@@ -130,6 +155,10 @@
       <wsdl:input wsaw:Action="http://tempuri.org/IWsCodeTMainDB/sCodeTSub" message="tns:IWsCodeTMainDB_sCodeTSub_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IWsCodeTMainDB/sCodeTSubResponse" message="tns:IWsCodeTMainDB_sCodeTSub_OutputMessage" />
     </wsdl:operation>
+    <wsdl:operation name="sCodeTSubTscode">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWsCodeTMainDB/sCodeTSubTscode" message="tns:IWsCodeTMainDB_sCodeTSubTscode_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWsCodeTMainDB/sCodeTSubTscodeResponse" message="tns:IWsCodeTMainDB_sCodeTSubTscode_OutputMessage" />
+    </wsdl:operation>
     <wsdl:operation name="mCodeT">
       <wsdl:input wsaw:Action="http://tempuri.org/IWsCodeTMainDB/mCodeT" message="tns:IWsCodeTMainDB_mCodeT_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IWsCodeTMainDB/mCodeTResponse" message="tns:IWsCodeTMainDB_mCodeT_OutputMessage" />
@@ -161,6 +190,18 @@
     <wsdl:operation name="mCodeTSite">
       <wsdl:input wsaw:Action="http://tempuri.org/IWsCodeTMainDB/mCodeTSite" message="tns:IWsCodeTMainDB_mCodeTSite_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IWsCodeTMainDB/mCodeTSiteResponse" message="tns:IWsCodeTMainDB_mCodeTSite_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="aCodeTSite">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWsCodeTMainDB/aCodeTSite" message="tns:IWsCodeTMainDB_aCodeTSite_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWsCodeTMainDB/aCodeTSiteResponse" message="tns:IWsCodeTMainDB_aCodeTSite_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="aCodeTSubSite">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWsCodeTMainDB/aCodeTSubSite" message="tns:IWsCodeTMainDB_aCodeTSubSite_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWsCodeTMainDB/aCodeTSubSiteResponse" message="tns:IWsCodeTMainDB_aCodeTSubSite_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="aCodeTSiteLog">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWsCodeTMainDB/aCodeTSiteLog" message="tns:IWsCodeTMainDB_aCodeTSiteLog_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWsCodeTMainDB/aCodeTSiteLogResponse" message="tns:IWsCodeTMainDB_aCodeTSiteLog_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="sCodeAuthTTreeView">
       <wsdl:input wsaw:Action="http://tempuri.org/IWsCodeTMainDB/sCodeAuthTTreeView" message="tns:IWsCodeTMainDB_sCodeAuthTTreeView_InputMessage" />
@@ -219,6 +260,15 @@
     </wsdl:operation>
     <wsdl:operation name="sCodeTSub">
       <soap:operation soapAction="http://tempuri.org/IWsCodeTMainDB/sCodeTSub" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="sCodeTSubTscode">
+      <soap:operation soapAction="http://tempuri.org/IWsCodeTMainDB/sCodeTSubTscode" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -291,6 +341,33 @@
     </wsdl:operation>
     <wsdl:operation name="mCodeTSite">
       <soap:operation soapAction="http://tempuri.org/IWsCodeTMainDB/mCodeTSite" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="aCodeTSite">
+      <soap:operation soapAction="http://tempuri.org/IWsCodeTMainDB/aCodeTSite" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="aCodeTSubSite">
+      <soap:operation soapAction="http://tempuri.org/IWsCodeTMainDB/aCodeTSubSite" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="aCodeTSiteLog">
+      <soap:operation soapAction="http://tempuri.org/IWsCodeTMainDB/aCodeTSiteLog" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

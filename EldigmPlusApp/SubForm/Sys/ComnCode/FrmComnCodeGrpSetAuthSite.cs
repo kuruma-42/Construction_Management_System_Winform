@@ -16,6 +16,7 @@ namespace EldigmPlusApp.SubForm.Sys.ComnCode
         ResourceManager msgRM = null;
 
         string _ccodeGrp = "";
+        string _dbNm = "";
 
         public FrmComnCodeGrpSetAuthSite()
         {
@@ -89,6 +90,41 @@ namespace EldigmPlusApp.SubForm.Sys.ComnCode
             }
         }
 
+        private void GetDbNm()
+        {
+            M_WsCCodeGrp.WsComnCodeGrp wSvc = null;
+            string reCode = "";
+            string reMsg = "";
+            string reData = "";
+            try
+            {
+                wSvc = new M_WsCCodeGrp.WsComnCodeGrp();
+                wSvc.Url = "http://" + AppInfo.SsWsvcServer2 + "/WebSvc/Sys/ComnCode/WsComnCodeGrp.svc";
+                wSvc.Timeout = 1000;
+
+
+                reCode = wSvc.siteDbNm(AppInfo.SsSiteCd, out reData, out reMsg);
+
+                if (reCode == "Y")
+                {
+                    if (!string.IsNullOrEmpty(reData))
+                        _dbNm = reData;
+                    //AppInfo.SsSiteCd = cmbSite.SelectedValue.ToString(); // CMBBOX에서 선택된 SITE_CD 값을 APPINFO.SsSiteCD에 담는다
+                }
+            }
+            catch (Exception ex)
+            {
+                logs.SaveLog("[error]  (page)::FrmMenuSetAuthSite.cs  (Function)::GetDbNm  (Detail)::reCode=[" + reCode + "], reMsg=[" + reMsg + "]", "Error");
+                logs.SaveLog("[error]  (page)::FrmMenuSetAuthSite.cs  (Function)::GetDbNm  (Detail)::" + "\r\n" + ex.ToString(), "Error");
+            }
+            finally
+            {
+                if (wSvc != null)
+                    wSvc.Dispose();
+            }
+        }
+
+
         private void SetDataBind_CmbSite()
         {
             M_WsCCodeGrp.WsComnCodeGrp wSvc = null;
@@ -101,7 +137,7 @@ namespace EldigmPlusApp.SubForm.Sys.ComnCode
                 wSvc.Url = "http://" + AppInfo.SsWsvcServer2 + "/WebSvc/Sys/ComnCode/WsComnCodeGrp.svc";
                 wSvc.Timeout = 1000;
 
-                reCode = wSvc.sCodeAuthSiteMemberDB(AppInfo.SsDbNm, out getData, out reMsg);
+                reCode = wSvc.sCodeAuthSiteMemberDB(_dbNm, out getData, out reMsg);
                 if (reCode == "Y")
                 {
                     if (getData != null && getData.Length > 0)
@@ -126,39 +162,7 @@ namespace EldigmPlusApp.SubForm.Sys.ComnCode
             }
         }
 
-        private void GetDbNm()
-        {
-            M_WsCCodeGrp.WsComnCodeGrp wSvc = null;
-            string reCode = "";
-            string reMsg = "";
-            string reData = "";
-            try
-            {
-                wSvc = new M_WsCCodeGrp.WsComnCodeGrp();
-                wSvc.Url = "http://" + AppInfo.SsWsvcServer2 + "/WebSvc/Sys/ComnCode/WsComnCodeGrp.svc";
-                wSvc.Timeout = 1000;
-
-
-                reCode = wSvc.siteDbNm(AppInfo.SsSiteCd, out reData, out reMsg);
-
-                if (reCode == "Y")
-                {
-                    if (!string.IsNullOrEmpty(reData))
-                        AppInfo.SsDbNm = reData;
-                    //AppInfo.SsSiteCd = cmbSite.SelectedValue.ToString(); // CMBBOX에서 선택된 SITE_CD 값을 APPINFO.SsSiteCD에 담는다
-                }
-            }
-            catch (Exception ex)
-            {
-                logs.SaveLog("[error]  (page)::FrmMenuSetAuthSite.cs  (Function)::GetDbNm  (Detail)::reCode=[" + reCode + "], reMsg=[" + reMsg + "]", "Error");
-                logs.SaveLog("[error]  (page)::FrmMenuSetAuthSite.cs  (Function)::GetDbNm  (Detail)::" + "\r\n" + ex.ToString(), "Error");
-            }
-            finally
-            {
-                if (wSvc != null)
-                    wSvc.Dispose();
-            }
-        }
+       
 
         private void SetDataBind_treeView1()
         {
@@ -256,7 +260,7 @@ namespace EldigmPlusApp.SubForm.Sys.ComnCode
 
                 if (_ccodeGrp == "All")
                 {
-                    reCode = wSvc.sSetAuthSiteMemberDB(AppInfo.SsDbNm, AppInfo.SsSiteCd, cmbSite.SelectedValue.ToString(), out getData, out reMsg);
+                    reCode = wSvc.sSetAuthSiteMemberDB(_dbNm, AppInfo.SsSiteCd, cmbSite.SelectedValue.ToString(), out getData, out reMsg);
 
                     if (reCode == "Y")
                     {
@@ -289,7 +293,7 @@ namespace EldigmPlusApp.SubForm.Sys.ComnCode
                 }
                 else
                 {
-                    reCode = wSvc.sSetAuthSiteMemberDBSub(_ccodeGrp, AppInfo.SsDbNm, AppInfo.SsSiteCd, cmbSite.SelectedValue.ToString(), out getData, out reMsg);
+                    reCode = wSvc.sSetAuthSiteMemberDBSub(_ccodeGrp, _dbNm, AppInfo.SsSiteCd, cmbSite.SelectedValue.ToString(), out getData, out reMsg);
 
                     if (reCode == "Y")
                     {
@@ -456,13 +460,13 @@ namespace EldigmPlusApp.SubForm.Sys.ComnCode
                             string printFlag_val = dataGridView1.Rows[i].Cells["dgv1_PRINT_FLAG"].Value.ToString();
                             string downloadFlag_val = dataGridView1.Rows[i].Cells["dgv1_DOWNLOAD_FLAG"].Value.ToString();
                             string pInputId = "1";
-                            reCode = wSvc.mSetAuthSiteMemberDB(AppInfo.SsDbNm, AppInfo.SsSiteCd, cmbSite.SelectedValue.ToString(), ccodeGrp_val, viewFlag_val, newFlag_val, modifyFlag_val, delFlag_val, reportFlag_val, printFlag_val, downloadFlag_val, pInputId, out reMsg, out reData);
+                            reCode = wSvc.mSetAuthSiteMemberDB(_dbNm, AppInfo.SsSiteCd, cmbSite.SelectedValue.ToString(), ccodeGrp_val, viewFlag_val, newFlag_val, modifyFlag_val, delFlag_val, reportFlag_val, printFlag_val, downloadFlag_val, pInputId, out reMsg, out reData);
 
                             if (reCode == "Y")
                             {
                                 if (Convert.ToInt16(reData) < 1)
                                 {
-                                    reCode = wSvc.aSetAuthSiteMemberDB(AppInfo.SsDbNm, AppInfo.SsSiteCd, cmbSite.SelectedValue.ToString(), ccodeGrp_val, viewFlag_val, newFlag_val, modifyFlag_val, delFlag_val, reportFlag_val, printFlag_val, downloadFlag_val, pInputId, out reMsg, out reData);
+                                    reCode = wSvc.aSetAuthSiteMemberDB(_dbNm, AppInfo.SsSiteCd, cmbSite.SelectedValue.ToString(), ccodeGrp_val, viewFlag_val, newFlag_val, modifyFlag_val, delFlag_val, reportFlag_val, printFlag_val, downloadFlag_val, pInputId, out reMsg, out reData);
                                 }
 
                             }

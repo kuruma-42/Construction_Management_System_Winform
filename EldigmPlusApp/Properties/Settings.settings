@@ -35,5 +35,14 @@
     <Setting Name="EldigmPlusApp_M_WsCodeTMainDB_WsCodeTMainDB" Type="(Web Service URL)" Scope="Application">
       <Value Profile="(Default)">http://localhost:49469/WebSvc/Sys/CodeT/WsCodeTMainDB.svc</Value>
     </Setting>
+    <Setting Name="EldigmPlusApp_Mem_WsInOut_WsInOut" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://localhost:49469/WebSvc/Worker/InOut/WsInOut.svc</Value>
+    </Setting>
+    <Setting Name="EldigmPlusApp_Mem_WsDevice_WsDevice" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://localhost:49501/WebSvc/Sys/Device/WsDevice.svc</Value>
+    </Setting>
+    <Setting Name="EldigmPlusApp_Mem_WsWorkerLaborSearch_WsWorkerLaborSearch" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://localhost:49501/WebSvc/Worker/Labor/WsWorkerLaborSearch.svc</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

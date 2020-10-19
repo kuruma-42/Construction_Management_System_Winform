@@ -1,0 +1,33 @@
+
+2020-10-16 13:45:06-->  [error]  (page)::FrmAccessDevice.cs  (Function)::SetDataBind_CmbMember  (Detail):: 
+System.Net.WebException: 작업 시간이 초과되었습니다.
+   위치: System.Web.Services.Protocols.WebClientProtocol.GetWebResponse(WebRequest request)
+   위치: System.Web.Services.Protocols.HttpWebClientProtocol.GetWebResponse(WebRequest request)
+   위치: System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke(String methodName, Object[] parameters)
+   위치: EldigmPlusApp.Mem_WsDevice.WsDevice.devTypeCmb(DataDevCombo[]& reList, String& reMsg) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\Web References\Mem_WsDevice\Reference.cs:줄 104
+   위치: EldigmPlusApp.SubForm.Sys.Device.FrmAccessDevice.set_Grideview1Combo1(Int32 rnum, String column_name) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\Device\FrmAccessDevice.cs:줄 118
+2020-10-16 13:45:09-->  [error]  (page)::FrmAccessDevice.cs  (Function)::set_Grideview1Combo2  (Detail):: 
+System.Net.WebException: 작업 시간이 초과되었습니다.
+   위치: System.Web.Services.Protocols.WebClientProtocol.GetWebResponse(WebRequest request)
+   위치: System.Web.Services.Protocols.HttpWebClientProtocol.GetWebResponse(WebRequest request)
+   위치: System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke(String methodName, Object[] parameters)
+   위치: EldigmPlusApp.Mem_WsDevice.WsDevice.devIOCmb(DataDevCombo[]& reList, String& reMsg) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\Web References\Mem_WsDevice\Reference.cs:줄 134
+   위치: EldigmPlusApp.SubForm.Sys.Device.FrmAccessDevice.set_Grideview1Combo2(Int32 rnum, String column_name) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\Device\FrmAccessDevice.cs:줄 164
+2020-10-16 16:57:55-->  [error]  (page)::FrmSite.cs  (Function)::SetDataBind_CmbMember  (Detail):: 
+System.Web.Services.Protocols.SoapHeaderException: EndpointDispatcher에서 ContractFilter가 일치하지 않으므로 수신자 쪽에서 동작 'http://tempuri.org/IWsWorkerLaborSearch/sLaborCompanyList'이(가) 있는 메시지를 처리할 수 없습니다. 발신자와 수신자 사이에 계약 불일치(발신자와 수신자 사이의 동작 불일치) 또는 바인딩/보안 불일치가 있기 때문일 수 있습니다. 발신자와 수신자의 계약 및 바인딩(메시지, 전송, 없음 등의 보안 요구 사항 포함)이 같은지 확인하십시오.
+   위치: System.Web.Services.Protocols.SoapHttpClientProtocol.ReadResponse(SoapClientMessage message, WebResponse response, Stream responseStream, Boolean asyncCall)
+   위치: System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke(String methodName, Object[] parameters)
+   위치: EldigmPlusApp.Mem_WsWorkerLaborSearch.WsWorkerLaborSearch.sLaborCompanyList(String pSiteCd, String pAuthCd, String pCoCd, DataComCombo[]& reList, String& reMsg) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\Web References\Mem_WsWorkerLaborSearch\Reference.cs:줄 109
+   위치: EldigmPlusApp.SubForm.Worker.Labor.FrmLaborSearch.SetDataBind_CompanyCmb() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Worker\Labor\FrmLaborSearch.cs:줄 114
+2020-10-16 16:57:56-->  [error]  (page)::FrmSite.cs  (Function)::SetDataBind_CmbMember  (Detail):: 
+System.Web.Services.Protocols.SoapHeaderException: EndpointDispatcher에서 ContractFilter가 일치하지 않으므로 수신자 쪽에서 동작 'http://tempuri.org/IWsWorkerLaborSearch/sLaborCompanyList'이(가) 있는 메시지를 처리할 수 없습니다. 발신자와 수신자 사이에 계약 불일치(발신자와 수신자 사이의 동작 불일치) 또는 바인딩/보안 불일치가 있기 때문일 수 있습니다. 발신자와 수신자의 계약 및 바인딩(메시지, 전송, 없음 등의 보안 요구 사항 포함)이 같은지 확인하십시오.
+   위치: System.Web.Services.Protocols.SoapHttpClientProtocol.ReadResponse(SoapClientMessage message, WebResponse response, Stream responseStream, Boolean asyncCall)
+   위치: System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke(String methodName, Object[] parameters)
+   위치: EldigmPlusApp.Mem_WsWorkerLaborSearch.WsWorkerLaborSearch.sLaborCompanyList(String pSiteCd, String pAuthCd, String pCoCd, DataComCombo[]& reList, String& reMsg) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\Web References\Mem_WsWorkerLaborSearch\Reference.cs:줄 109
+   위치: EldigmPlusApp.SubForm.Worker.Labor.FrmLaborSearch.SetDataBind_CompanyCmb() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Worker\Labor\FrmLaborSearch.cs:줄 114
+2020-10-16 16:57:57-->  [error]  (page)::FrmSite.cs  (Function)::SetDataBind_CmbMember  (Detail):: 
+System.Web.Services.Protocols.SoapHeaderException: EndpointDispatcher에서 ContractFilter가 일치하지 않으므로 수신자 쪽에서 동작 'http://tempuri.org/IWsWorkerLaborSearch/sLaborCompanyList'이(가) 있는 메시지를 처리할 수 없습니다. 발신자와 수신자 사이에 계약 불일치(발신자와 수신자 사이의 동작 불일치) 또는 바인딩/보안 불일치가 있기 때문일 수 있습니다. 발신자와 수신자의 계약 및 바인딩(메시지, 전송, 없음 등의 보안 요구 사항 포함)이 같은지 확인하십시오.
+   위치: System.Web.Services.Protocols.SoapHttpClientProtocol.ReadResponse(SoapClientMessage message, WebResponse response, Stream responseStream, Boolean asyncCall)
+   위치: System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke(String methodName, Object[] parameters)
+   위치: EldigmPlusApp.Mem_WsWorkerLaborSearch.WsWorkerLaborSearch.sLaborCompanyList(String pSiteCd, String pAuthCd, String pCoCd, DataComCombo[]& reList, String& reMsg) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\Web References\Mem_WsWorkerLaborSearch\Reference.cs:줄 109
+   위치: EldigmPlusApp.SubForm.Worker.Labor.FrmLaborSearch.SetDataBind_CompanyCmb() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Worker\Labor\FrmLaborSearch.cs:줄 114

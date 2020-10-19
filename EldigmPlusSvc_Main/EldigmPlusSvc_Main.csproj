@@ -72,6 +72,7 @@
     <Content Include="WebSvc\Sys\Menu\WsMenuMainDB.svc" />
     <Content Include="WebSvc\Sys\SysAuth\WsSysAuthMainDB.svc" />
     <Content Include="WebSvc\Sys\SysCode\WsSysCodeGrp.svc" />
+    <Content Include="WebSvc\Worker\InOut\WsInOut.svc" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Biz\Common\EncDecClass.cs" />
@@ -84,6 +85,7 @@
     <Compile Include="Biz\Sys\Menu\BizMenuMainDB.cs" />
     <Compile Include="Biz\Sys\SysAuth\BizSysAuthMainDB.cs" />
     <Compile Include="Biz\Sys\SysCode\BizSysCodeGrp.cs" />
+    <Compile Include="Biz\Worker\InOut\BizInOut.cs" />
     <Compile Include="Service1.svc.cs">
       <DependentUpon>Service1.svc</DependentUpon>
     </Compile>
@@ -112,6 +114,10 @@
     <Compile Include="WebSvc\Sys\SysCode\IWsSysCodeGrp.cs" />
     <Compile Include="WebSvc\Sys\SysCode\WsSysCodeGrp.svc.cs">
       <DependentUpon>WsSysCodeGrp.svc</DependentUpon>
+    </Compile>
+    <Compile Include="WebSvc\Worker\InOut\IWsInOut.cs" />
+    <Compile Include="WebSvc\Worker\InOut\WsInOut.svc.cs">
+      <DependentUpon>WsInOut.svc</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

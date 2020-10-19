@@ -247,6 +247,52 @@ namespace EldigmPlusSvc_Main.WebSvc.Sys.CodeT
             return reCode;
         }
 
+        public string sCodeTSubTscode(string pTcode, out List<DataCodeTSub> reList, out string reMsg)
+        {
+            string reCode = "N";
+
+            DataSet ds = null;
+            BizCodeT bizCodeT = null;
+            try
+            {
+                bizCodeT = new BizCodeT();
+
+                try
+                {
+                    ds = bizCodeT.sCodeTSubTscode(pTcode);
+
+                    reMsg = "[검색 성공]";
+                    reCode = "Y";
+                }
+                catch (Exception ex)
+                {
+                    reMsg = "[검색 실패]" + ex.ToString();
+                    reCode = "N";
+                }
+            }
+            catch (Exception ex)
+            {
+                reMsg = "[검색 에러] :: " + ex.ToString();
+                reCode = "N";
+            }
+
+            List<DataCodeTSub> data = new List<DataCodeTSub>();
+            try
+            {
+                data = ListClass.ConvertDataTableToList<DataCodeTSub>(ds.Tables[0]);
+            }
+            catch (Exception ex)
+            {
+                logs.SaveLog("[error]  (page)::WsCodeTMainDB.svc  (Function)::sCodeTSubTreeView  (Detail)::ConvertDataTableToList " + "\r\n" + ex.ToString(), "Error");
+                reMsg += "/[List 에러]" + ex.ToString();
+                reCode = "N";
+            }
+
+            reList = data;
+
+            return reCode;
+        }
+
         public string mCodeT(string pTcode, string pListFlag, string pRequiredFlag, string pNumericFlag, out string reMsg, out string reData)
         {
             string reCode = "N";
@@ -545,6 +591,149 @@ namespace EldigmPlusSvc_Main.WebSvc.Sys.CodeT
             return reCode;
         }
 
+        public string aCodeTSite(string pDbNm, string[] param, out string reMsg, out string reData)
+        {
+            string reCode = "N";
+
+            string reVal = "";
+            BizCodeT bizCodeT = null;
+            try
+            {
+                bizCodeT = new BizCodeT();
+
+                try
+                {
+                    Hashtable hParam = new Hashtable();
+                    hParam.Add("pTcode", param[0].ToString());
+                    hParam.Add("pTtype_scd", param[1].ToString());
+                    hParam.Add("pTcode_Nm", param[2].ToString());
+                    hParam.Add("pRequired_Flag", Convert.ToInt16(param[3]));
+                    hParam.Add("pNumerric_Flag", Convert.ToInt16(param[4]));
+                    hParam.Add("pList_Flag", Convert.ToInt16(param[5]));
+                    hParam.Add("pInput_Id", Convert.ToInt16(param[6]));
+                    hParam.Add("pSite_Cd", Convert.ToInt16(param[7]));
+                    hParam.Add("pTgrp_Ccd", Convert.ToInt16(param[8]));
+                    hParam.Add("@rtnTcode", "");
+
+                    reVal = bizCodeT.aCodeTSite(pDbNm, hParam, out Hashtable outVal);
+
+                    if (outVal != null)
+                    {
+                        foreach (DictionaryEntry dictionaryEntry in outVal)
+                        {
+                            string[] row = new string[] { dictionaryEntry.Key.ToString(), dictionaryEntry.Value.ToString(), "" };
+                            string rowCount = row.Length.ToString();
+                            //string rowKey = row[0].ToString();
+                            reVal = row[1].ToString();
+                        }
+                    }
+
+                    reMsg = "[검색 성공]";
+                    reCode = "Y";
+                }
+                catch (Exception ex)
+                {
+                    reMsg = "[검색 실패]" + ex.ToString();
+                    reCode = "N";
+                }
+            }
+            catch (Exception ex)
+            {
+                reMsg = "[검색 에러 - BizSystem 연결 실패] :: " + ex.ToString();
+                reCode = "N";
+            }
+
+            reData = reVal;
+
+            return reCode;
+        }
+
+        public string aCodeTSubSite(string pDbNm, string[] param, out string reMsg, out string reData)
+        {
+            string reCode = "N";
+
+            string reVal = "";
+            BizCodeT bizCodeT = null;
+            try
+            {
+                bizCodeT = new BizCodeT();
+
+                try
+                {
+                    Hashtable hParam = new Hashtable();
+                    hParam.Add("pTcode", param[0].ToString());
+                    hParam.Add("pTscode", Convert.ToInt32(param[1]));
+                    hParam.Add("pTscode_Nm", param[2].ToString());
+                    hParam.Add("pInput_Id", Convert.ToInt16(param[3]));
+                    hParam.Add("pSite_Cd", Convert.ToInt16(param[4]));
+                    hParam.Add("@rtnTcode", "");
+
+                    reVal = bizCodeT.aCodeTSubSite(pDbNm, hParam, out Hashtable outVal);
+
+                    if (outVal != null)
+                    {
+                        foreach (DictionaryEntry dictionaryEntry in outVal)
+                        {
+                            string[] row = new string[] { dictionaryEntry.Key.ToString(), dictionaryEntry.Value.ToString(), "" };
+                            string rowCount = row.Length.ToString();
+                            //string rowKey = row[0].ToString();
+                            reVal = row[1].ToString();
+                        }
+                    }
+
+                    reMsg = "[검색 성공]";
+                    reCode = "Y";
+                }
+                catch (Exception ex)
+                {
+                    reMsg = "[검색 실패]" + ex.ToString();
+                    reCode = "N";
+                }
+            }
+            catch (Exception ex)
+            {
+                reMsg = "[검색 에러 - BizSystem 연결 실패] :: " + ex.ToString();
+                reCode = "N";
+            }
+
+            reData = reVal;
+
+            return reCode;
+        }
+
+        public string aCodeTSiteLog(string pDbnm, string pSiteCd, string pTcode, string pTgrpCcd, string pRequiredFlag, string pNumericFlag, string pDefaultValue, string pUsingFlag, string pSortNo, string pMemo, string pInputId, out string reMsg, out string reData)
+        {
+            string reCode = "N";
+            reData = "0";
+
+            BizCodeT bizCodeT = null;
+            try
+            {
+                bizCodeT = new BizCodeT();
+
+                int reCnt = bizCodeT.aCodeTSiteLog(pDbnm, pSiteCd, pTcode, pTgrpCcd, pRequiredFlag, pNumericFlag, pDefaultValue, pUsingFlag, pSortNo, pMemo, pInputId);
+
+                if (reCnt > 0)
+                {
+                    reMsg = "[저장 성공]";
+                    reCode = "Y";
+                    reData = reCnt.ToString();
+                }
+                else
+                {
+                    reMsg = "[저장 성공] - 정보 없음";
+                    reCode = "Y";
+                }
+            }
+            catch (Exception ex)
+            {
+                logs.SaveLog("[error]  (page)::WsCodeTMainDB.svc  (Function)::aCodeTSub  (Detail)::" + "\r\n" + ex.ToString(), "Error");
+                reMsg = "[저장 에러] :: " + ex.ToString();
+                reCode = "N";
+            }
+
+            return reCode;
+        }
 
         //** AUTH PART START 
 
@@ -595,8 +784,8 @@ namespace EldigmPlusSvc_Main.WebSvc.Sys.CodeT
             return reCode;
         }
 
-        //SELECT 
-        public string sCodeTAuth(string pTcode, string pSiteCd, out List<DataCodeTAuthSelect> reList, out string reMsg)
+        //SELECT
+        public string sCodeTAuth(string pTcode, string pSiteCd, string pAuthCd, out List<DataCodeTAuthSelect> reList, out string reMsg)
         {
             string reCode = "N";
 
@@ -608,7 +797,7 @@ namespace EldigmPlusSvc_Main.WebSvc.Sys.CodeT
 
                 try
                 {
-                    ds = bizCodeT.sCodeTAuth(pTcode, pSiteCd);
+                    ds = bizCodeT.sCodeTAuth(pTcode, pSiteCd, pAuthCd);
 
                     reMsg = "[검색 성공]";
                     reCode = "Y";
@@ -643,7 +832,7 @@ namespace EldigmPlusSvc_Main.WebSvc.Sys.CodeT
         }
 
         //SELECT : WHEN USER CLICK TTYPE_SCD 
-        public string sCodeTAuthTtype(string pTtypeScd, string pSiteCd, out List<DataCodeTAuthSelect> reList, out string reMsg)
+        public string sCodeTAuthTtype(string pTtypeScd, string pSiteCd, string pAuthCd, out List<DataCodeTAuthSelect> reList, out string reMsg)
         {
             string reCode = "N";
 
@@ -655,7 +844,7 @@ namespace EldigmPlusSvc_Main.WebSvc.Sys.CodeT
 
                 try
                 {
-                    ds = bizCodeT.sCodeTAuthTtype(pTtypeScd, pSiteCd);
+                    ds = bizCodeT.sCodeTAuthTtype(pTtypeScd, pSiteCd, pAuthCd);
 
                     reMsg = "[검색 성공]";
                     reCode = "Y";
@@ -691,7 +880,7 @@ namespace EldigmPlusSvc_Main.WebSvc.Sys.CodeT
 
 
         //AUTH MODIFY
-        public string mCodeTAuth(string pTcodeNm, string pSiteCd, string pAuthCd, string pViewFlag, string pNewFlag, string pModifyFlag, out string reMsg, out string reData)
+        public string mCodeTAuth(string pTcode, string pSiteCd, string pAuthCd, string pViewFlag, string pNewFlag, string pModifyFlag, out string reMsg, out string reData)
         {
             string reCode = "N";
             reData = "0";
@@ -701,7 +890,7 @@ namespace EldigmPlusSvc_Main.WebSvc.Sys.CodeT
             {
                 bizCodeT = new BizCodeT();
 
-                int reCnt = bizCodeT.mCodeTAuth(pTcodeNm, pSiteCd, pAuthCd, pViewFlag, pNewFlag, pModifyFlag);
+                int reCnt = bizCodeT.mCodeTAuth(pTcode, pSiteCd, pAuthCd, pViewFlag, pNewFlag, pModifyFlag);
 
                 if (reCnt > 0)
                 {

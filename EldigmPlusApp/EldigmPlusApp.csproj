@@ -153,6 +153,12 @@
     <Compile Include="SubForm\Sys\CompanyTeam\FrmTeam.designer.cs">
       <DependentUpon>FrmTeam.cs</DependentUpon>
     </Compile>
+    <Compile Include="SubForm\Sys\Device\FrmAccessDevice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubForm\Sys\Device\FrmAccessDevice.designer.cs">
+      <DependentUpon>FrmAccessDevice.cs</DependentUpon>
+    </Compile>
     <Compile Include="SubForm\Sys\MemberSite\FrmMember.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -213,6 +219,34 @@
     <Compile Include="SubForm\Sys\SysCode\FrmSysCodeGrp.Designer.cs">
       <DependentUpon>FrmSysCodeGrp.cs</DependentUpon>
     </Compile>
+    <Compile Include="SubForm\Worker\InOut\FrmInOut.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubForm\Worker\InOut\FrmInOut.Designer.cs">
+      <DependentUpon>FrmInOut.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubForm\Worker\InOut\FrmInOutLog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubForm\Worker\InOut\FrmInOutLog.Designer.cs">
+      <DependentUpon>FrmInOutLog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubForm\Worker\Labor\FrmLaborSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubForm\Worker\Labor\FrmLaborSearch.Designer.cs">
+      <DependentUpon>FrmLaborSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\Mem_WsInOut\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\Mem_WsDevice\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
     <Compile Include="Web References\Mem_WsMHome\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -224,6 +258,11 @@
       <DependentUpon>Reference.map</DependentUpon>
     </Compile>
     <Compile Include="Web References\Mem_WsSysCompanyTeam\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\Mem_WsWorkerLaborSearch\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.map</DependentUpon>
@@ -263,6 +302,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.map</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="GlobalLanguage\msg_Language.en-US.resx" />
+    <EmbeddedResource Include="GlobalLanguage\word_Language.en-US.resx" />
+    <EmbeddedResource Include="GlobalLanguage\msg_Language.ko-KR.resx" />
+    <EmbeddedResource Include="GlobalLanguage\word_Language.ko-KR.resx" />
+    <EmbeddedResource Include="GlobalLanguage\msg_Language.zh-CN.resx" />
+    <EmbeddedResource Include="GlobalLanguage\word_Language.zh-CN.resx" />
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -277,6 +322,9 @@
     <EmbeddedResource Include="strLanguage.en-US.resx" />
     <EmbeddedResource Include="strLanguage.ko-KR.resx" />
     <EmbeddedResource Include="strLanguage.zh-CN.resx" />
+    <EmbeddedResource Include="SubForm\MainHome\FrmMain.resx">
+      <DependentUpon>FrmMain.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="SubForm\Sys\CodeT\FrmCodeTAuthSite.resx">
       <DependentUpon>FrmCodeTAuthSite.cs</DependentUpon>
     </EmbeddedResource>
@@ -300,6 +348,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="SubForm\Sys\CompanyTeam\FrmTeam.resx">
       <DependentUpon>FrmTeam.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubForm\Sys\Device\FrmAccessDevice.resx">
+      <DependentUpon>FrmAccessDevice.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SubForm\Sys\MemberSite\FrmMember.resx">
       <DependentUpon>FrmMember.cs</DependentUpon>
@@ -331,6 +382,15 @@
     <EmbeddedResource Include="SubForm\Sys\SysCode\FrmSysCodeGrp.resx">
       <DependentUpon>FrmSysCodeGrp.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="SubForm\Worker\InOut\FrmInOut.resx">
+      <DependentUpon>FrmInOut.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubForm\Worker\InOut\FrmInOutLog.resx">
+      <DependentUpon>FrmInOutLog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubForm\Worker\Labor\FrmLaborSearch.resx">
+      <DependentUpon>FrmLaborSearch.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Class\Common\Eldigm_Plus\.vs\config\applicationhost.config" />
     <None Include="Class\Common\Eldigm_Plus\.vs\EldigmPlus\v15\.suo" />
     <None Include="Config\EldigmPlusApp.ini">
@@ -345,6 +405,46 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="Web References\Mem_WsDevice\DataDevCombo.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\Mem_WsDevice\DataDevice.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\Mem_WsDevice\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\Mem_WsDevice\WsDevice.wsdl" />
+    <None Include="Web References\Mem_WsDevice\WsDevice.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\Mem_WsDevice\WsDevice0.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\Mem_WsDevice\WsDevice1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\Mem_WsDevice\WsDevice2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\Mem_WsInOut\DataInOut.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\Mem_WsInOut\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\Mem_WsInOut\WsInOut.wsdl" />
+    <None Include="Web References\Mem_WsInOut\WsInOut.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\Mem_WsInOut\WsInOut0.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\Mem_WsInOut\WsInOut1.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Web References\Mem_WsMHome\DataSubMenu1.datasource">
       <DependentUpon>Reference.map</DependentUpon>
     </None>
@@ -429,6 +529,35 @@
     <None Include="Web References\Mem_WsSysCompanyTeam\WsSysCompanyTeam1.xsd">
       <SubType>Designer</SubType>
     </None>
+    <None Include="Web References\Mem_WsWorkerLaborSearch\DataComCombo.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\Mem_WsWorkerLaborSearch\DataDevCombo.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\Mem_WsWorkerLaborSearch\DataDevice.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\Mem_WsWorkerLaborSearch\DataLaborSearch.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\Mem_WsWorkerLaborSearch\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\Mem_WsWorkerLaborSearch\WsWorkerLaborSearch.wsdl" />
+    <None Include="Web References\Mem_WsWorkerLaborSearch\WsWorkerLaborSearch.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\Mem_WsWorkerLaborSearch\WsWorkerLaborSearch0.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\Mem_WsWorkerLaborSearch\WsWorkerLaborSearch1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\Mem_WsWorkerLaborSearch\WsWorkerLaborSearch2.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Web References\M_WsCCodeGrp\DataCodeAuthSiteMemberDB1.datasource">
       <DependentUpon>Reference.map</DependentUpon>
     </None>
@@ -450,6 +579,9 @@
     <None Include="Web References\M_WsCodeTMainDB\DataCodeT.datasource">
       <DependentUpon>Reference.map</DependentUpon>
     </None>
+    <None Include="Web References\M_WsCodeTMainDB\DataCodeTAuthSelect.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
     <None Include="Web References\M_WsCodeTMainDB\DataCodeTSite.datasource">
       <DependentUpon>Reference.map</DependentUpon>
     </None>
@@ -457,9 +589,6 @@
       <DependentUpon>Reference.map</DependentUpon>
     </None>
     <None Include="Web References\M_WsCodeTMainDB\DataCodeTAuth.datasource">
-      <DependentUpon>Reference.map</DependentUpon>
-    </None>
-    <None Include="Web References\M_WsCodeTMainDB\DataCodeTAuthSelect.datasource">
       <DependentUpon>Reference.map</DependentUpon>
     </None>
     <None Include="Web References\M_WsCodeTMainDB\DataCodeTSub.datasource">
@@ -482,6 +611,9 @@
       <SubType>Designer</SubType>
     </None>
     <None Include="Web References\M_WsCodeTMainDB\WsCodeTMainDB1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\M_WsCodeTMainDB\WsCodeTMainDB2.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Web References\M_WsMember\DataMemberDB.datasource">
@@ -510,13 +642,25 @@
     <None Include="Web References\M_WsMember\WsMember2.xsd">
       <SubType>Designer</SubType>
     </None>
+    <None Include="Web References\M_WsMenuMainDB\DataCodeAuthSiteMemberDB1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
     <None Include="Web References\M_WsMenuMainDB\DataMenu.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\M_WsMenuMainDB\DataMenuSite1.datasource">
       <DependentUpon>Reference.map</DependentUpon>
     </None>
     <None Include="Web References\M_WsMenuMainDB\DataMenuSub.datasource">
       <DependentUpon>Reference.map</DependentUpon>
     </None>
     <None Include="Web References\M_WsMenuMainDB\DataMenuTop.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\M_WsMenuMainDB\DataSetAuthSiteMemberDB1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\M_WsMenuMainDB\DataSiteMainDB1.datasource">
       <DependentUpon>Reference.map</DependentUpon>
     </None>
     <None Include="Web References\M_WsMenuMainDB\Reference.map">
@@ -656,6 +800,9 @@
     <Content Include="Image\treeicon1.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <None Include="Web References\Mem_WsWorkerLaborSearch\WsWorkerLaborSearch.disco" />
+    <None Include="Web References\Mem_WsDevice\WsDevice.disco" />
+    <None Include="Web References\Mem_WsInOut\WsInOut.disco" />
     <None Include="Web References\M_WsCodeTMainDB\WsCodeTMainDB.disco" />
     <None Include="Web References\Mem_WsSysCompanyTeam\WsSysCompanyTeam.disco" />
     <None Include="Web References\M_WsMember\WsMember.disco" />
@@ -703,6 +850,17 @@
       </CachedDynamicPropName>
       <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
       <CachedSettingsPropName>EldigmPlusApp_M_WsMenuMainDB_WsMenuMainDB</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://localhost:49469/WebSvc/Worker/InOut/WsInOut.svc">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\Mem_WsInOut\</RelPath>
+      <UpdateFromURL>http://localhost:49469/WebSvc/Worker/InOut/WsInOut.svc</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>EldigmPlusApp_Mem_WsInOut_WsInOut</CachedSettingsPropName>
     </WebReferenceUrl>
     <WebReferenceUrl Include="http://localhost:49501/WebSvc/MainHome/WsMainHome.svc">
       <UrlBehavior>Dynamic</UrlBehavior>
@@ -770,6 +928,17 @@
       <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
       <CachedSettingsPropName>EldigmPlusApp_Mem_WsSysCompanyTeam_WsSysCompanyTeam</CachedSettingsPropName>
     </WebReferenceUrl>
+    <WebReferenceUrl Include="http://localhost:49501/WebSvc/Sys/Device/WsDevice.svc">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\Mem_WsDevice\</RelPath>
+      <UpdateFromURL>http://localhost:49501/WebSvc/Sys/Device/WsDevice.svc</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>EldigmPlusApp_Mem_WsDevice_WsDevice</CachedSettingsPropName>
+    </WebReferenceUrl>
     <WebReferenceUrl Include="http://localhost:49501/WebSvc/Sys/SysAuth/WsSysAuthMemberDB.svc">
       <UrlBehavior>Dynamic</UrlBehavior>
       <RelPath>Web References\Mem_WsSysAuthMemberDB\</RelPath>
@@ -780,6 +949,17 @@
       </CachedDynamicPropName>
       <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
       <CachedSettingsPropName>EldigmPlusApp_Mem_WsSysAuthMemberDB_WsSysAuthMemberDB</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://localhost:49501/WebSvc/Worker/Labor/WsWorkerLaborSearch.svc">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\Mem_WsWorkerLaborSearch\</RelPath>
+      <UpdateFromURL>http://localhost:49501/WebSvc/Worker/Labor/WsWorkerLaborSearch.svc</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>EldigmPlusApp_Mem_WsWorkerLaborSearch_WsWorkerLaborSearch</CachedSettingsPropName>
     </WebReferenceUrl>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

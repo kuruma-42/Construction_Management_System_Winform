@@ -41,7 +41,7 @@ namespace EldigmPlusApp.Mem_WsMHome {
         
         /// <remarks/>
         public WsMainHome() {
-            this.Url = global::EldigmPlusApp.Properties.Settings.Default.EldigmPlusApp_Mem_WsMHome_WsMainHome;
+            this.Url = global::EldigmPlusApp.Properties.Settings.Default.EldigmPlusApp_WsMHome_WsMainHome;
             if ((this.IsLocalFileSystemWebService(this.Url) == true)) {
                 this.UseDefaultCredentials = true;
                 this.useDefaultCredentialsSetExplicitly = false;

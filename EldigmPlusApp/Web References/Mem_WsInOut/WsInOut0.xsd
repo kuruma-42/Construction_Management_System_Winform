@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/EldigmPlusSvc_Main.WebSvc.Worker.InOut" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/EldigmPlusSvc_Main.WebSvc.Worker.InOut" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="ArrayOfDataInOut">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DataInOut" nillable="true" type="tns:DataInOut" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDataInOut" nillable="true" type="tns:ArrayOfDataInOut" />
+  <xs:complexType name="DataInOut">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="LAB_NO" type="xs:int" />
+      <xs:element minOccurs="0" name="LAB_NM" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IN_DT" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="OUT_DT" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="EVENT_DT" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="CO_NM" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TEAM_NM" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DEV_CD" type="xs:int" />
+      <xs:element minOccurs="0" name="DEV_TYPE_SCD" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DEV_IO_SCD" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CODE_NM" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DataInOut" nillable="true" type="tns:DataInOut" />
+</xs:schema>

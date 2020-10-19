@@ -35,16 +35,6 @@
             this.treeView1 = new System.Windows.Forms.TreeView();
             this.splitContainer4 = new System.Windows.Forms.SplitContainer();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.splitContainer2 = new System.Windows.Forms.SplitContainer();
-            this.btnSave = new System.Windows.Forms.Button();
-            this.splitContainer1 = new System.Windows.Forms.SplitContainer();
-            this.dgv2_TCODE = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgv2_NM = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgv2_LIST_FLAG = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.dgv2_REQUIRED_FLAG = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.dgv2_NUMERIC_FLAG = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.dgv2_BTNADD = new System.Windows.Forms.DataGridViewButtonColumn();
             this.dgv1_CHK = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.dgv1_TCODE = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgv1_TTYPE_SCD = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -53,6 +43,16 @@
             this.dgv1_REQUIRED_FLAG = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.dgv1_NUMERIC_FLAG = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.dgv1_USING_CNT = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.dgv2_TCODE = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgv2_NM = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgv2_LIST_FLAG = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.dgv2_REQUIRED_FLAG = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.dgv2_NUMERIC_FLAG = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.dgv2_BTNADD = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.splitContainer2 = new System.Windows.Forms.SplitContainer();
+            this.btnSave = new System.Windows.Forms.Button();
+            this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer3)).BeginInit();
             this.splitContainer3.Panel1.SuspendLayout();
@@ -72,7 +72,6 @@
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
             this.SuspendLayout();
-
             // 
             // lblName
             // 
@@ -163,6 +162,159 @@
             this.dataGridView1.CellBeginEdit += new System.Windows.Forms.DataGridViewCellCancelEventHandler(this.dataGridView1_CellBeginEdit);
             this.dataGridView1.ColumnHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView1_ColumnHeaderMouseClick);
             this.dataGridView1.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.dataGridView1_DataBindingComplete);
+            // 
+            // dgv1_CHK
+            // 
+            this.dgv1_CHK.FalseValue = "0";
+            this.dgv1_CHK.HeaderText = "CHK";
+            this.dgv1_CHK.IndeterminateValue = "0";
+            this.dgv1_CHK.MinimumWidth = 60;
+            this.dgv1_CHK.Name = "dgv1_CHK";
+            this.dgv1_CHK.TrueValue = "1";
+            this.dgv1_CHK.Width = 60;
+            // 
+            // dgv1_TCODE
+            // 
+            this.dgv1_TCODE.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dgv1_TCODE.HeaderText = "TCODE";
+            this.dgv1_TCODE.MaxInputLength = 1000;
+            this.dgv1_TCODE.MinimumWidth = 100;
+            this.dgv1_TCODE.Name = "dgv1_TCODE";
+            // 
+            // dgv1_TTYPE_SCD
+            // 
+            this.dgv1_TTYPE_SCD.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dgv1_TTYPE_SCD.HeaderText = "TTYPE_SCD";
+            this.dgv1_TTYPE_SCD.MaxInputLength = 1000;
+            this.dgv1_TTYPE_SCD.MinimumWidth = 100;
+            this.dgv1_TTYPE_SCD.Name = "dgv1_TTYPE_SCD";
+            // 
+            // dgv1_NM
+            // 
+            this.dgv1_NM.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dgv1_NM.HeaderText = "NM";
+            this.dgv1_NM.MaxInputLength = 1000;
+            this.dgv1_NM.MinimumWidth = 150;
+            this.dgv1_NM.Name = "dgv1_NM";
+            // 
+            // dgv1_LIST_FLAG
+            // 
+            this.dgv1_LIST_FLAG.DataPropertyName = "LIST_FLAG";
+            this.dgv1_LIST_FLAG.FalseValue = "0";
+            this.dgv1_LIST_FLAG.HeaderText = "LIST_FLAG";
+            this.dgv1_LIST_FLAG.IndeterminateValue = "0";
+            this.dgv1_LIST_FLAG.MinimumWidth = 60;
+            this.dgv1_LIST_FLAG.Name = "dgv1_LIST_FLAG";
+            this.dgv1_LIST_FLAG.TrueValue = "1";
+            this.dgv1_LIST_FLAG.Width = 60;
+            // 
+            // dgv1_REQUIRED_FLAG
+            // 
+            this.dgv1_REQUIRED_FLAG.DataPropertyName = "REQUIRED_FLAG";
+            this.dgv1_REQUIRED_FLAG.FalseValue = "0";
+            this.dgv1_REQUIRED_FLAG.HeaderText = "REQUIRED_FLAG";
+            this.dgv1_REQUIRED_FLAG.IndeterminateValue = "0";
+            this.dgv1_REQUIRED_FLAG.MinimumWidth = 60;
+            this.dgv1_REQUIRED_FLAG.Name = "dgv1_REQUIRED_FLAG";
+            this.dgv1_REQUIRED_FLAG.TrueValue = "1";
+            this.dgv1_REQUIRED_FLAG.Width = 60;
+            // 
+            // dgv1_NUMERIC_FLAG
+            // 
+            this.dgv1_NUMERIC_FLAG.DataPropertyName = "NUMERIC_FLAG";
+            this.dgv1_NUMERIC_FLAG.FalseValue = "0";
+            this.dgv1_NUMERIC_FLAG.HeaderText = "NUMERIC_FLAG";
+            this.dgv1_NUMERIC_FLAG.IndeterminateValue = "0";
+            this.dgv1_NUMERIC_FLAG.MinimumWidth = 60;
+            this.dgv1_NUMERIC_FLAG.Name = "dgv1_NUMERIC_FLAG";
+            this.dgv1_NUMERIC_FLAG.TrueValue = "1";
+            this.dgv1_NUMERIC_FLAG.Width = 60;
+            // 
+            // dgv1_USING_CNT
+            // 
+            this.dgv1_USING_CNT.HeaderText = "USING_CNT";
+            this.dgv1_USING_CNT.MaxInputLength = 1000;
+            this.dgv1_USING_CNT.MinimumWidth = 100;
+            this.dgv1_USING_CNT.Name = "dgv1_USING_CNT";
+            this.dgv1_USING_CNT.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            // 
+            // dgv1_CHK
+            // 
+            this.dgv1_CHK.FalseValue = "0";
+            this.dgv1_CHK.HeaderText = "CHK";
+            this.dgv1_CHK.IndeterminateValue = "0";
+            this.dgv1_CHK.MinimumWidth = 60;
+            this.dgv1_CHK.Name = "dgv1_CHK";
+            this.dgv1_CHK.TrueValue = "1";
+            this.dgv1_CHK.Width = 60;
+            // 
+            // dgv1_TCODE
+            // 
+            this.dgv1_TCODE.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dgv1_TCODE.HeaderText = "TCODE";
+            this.dgv1_TCODE.MaxInputLength = 1000;
+            this.dgv1_TCODE.MinimumWidth = 100;
+            this.dgv1_TCODE.Name = "dgv1_TCODE";
+            this.dgv1_TCODE.ReadOnly = true;
+            // 
+            // dgv1_TTYPE_SCD
+            // 
+            this.dgv1_TTYPE_SCD.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dgv1_TTYPE_SCD.HeaderText = "TTYPE_SCD";
+            this.dgv1_TTYPE_SCD.MaxInputLength = 1000;
+            this.dgv1_TTYPE_SCD.MinimumWidth = 100;
+            this.dgv1_TTYPE_SCD.Name = "dgv1_TTYPE_SCD";
+            this.dgv1_TTYPE_SCD.ReadOnly = true;
+            // 
+            // dgv1_NM
+            // 
+            this.dgv1_NM.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dgv1_NM.HeaderText = "NM";
+            this.dgv1_NM.MaxInputLength = 1000;
+            this.dgv1_NM.MinimumWidth = 150;
+            this.dgv1_NM.Name = "dgv1_NM";
+            this.dgv1_NM.ReadOnly = true;
+            // 
+            // dgv1_LIST_FLAG
+            // 
+            this.dgv1_LIST_FLAG.DataPropertyName = "LIST_FLAG";
+            this.dgv1_LIST_FLAG.FalseValue = "0";
+            this.dgv1_LIST_FLAG.HeaderText = "LIST_FLAG";
+            this.dgv1_LIST_FLAG.IndeterminateValue = "0";
+            this.dgv1_LIST_FLAG.MinimumWidth = 60;
+            this.dgv1_LIST_FLAG.Name = "dgv1_LIST_FLAG";
+            this.dgv1_LIST_FLAG.TrueValue = "1";
+            this.dgv1_LIST_FLAG.Width = 60;
+            // 
+            // dgv1_REQUIRED_FLAG
+            // 
+            this.dgv1_REQUIRED_FLAG.DataPropertyName = "REQUIRED_FLAG";
+            this.dgv1_REQUIRED_FLAG.FalseValue = "0";
+            this.dgv1_REQUIRED_FLAG.HeaderText = "REQUIRED_FLAG";
+            this.dgv1_REQUIRED_FLAG.IndeterminateValue = "0";
+            this.dgv1_REQUIRED_FLAG.MinimumWidth = 60;
+            this.dgv1_REQUIRED_FLAG.Name = "dgv1_REQUIRED_FLAG";
+            this.dgv1_REQUIRED_FLAG.TrueValue = "1";
+            this.dgv1_REQUIRED_FLAG.Width = 60;
+            // 
+            // dgv1_NUMERIC_FLAG
+            // 
+            this.dgv1_NUMERIC_FLAG.DataPropertyName = "NUMERIC_FLAG";
+            this.dgv1_NUMERIC_FLAG.FalseValue = "0";
+            this.dgv1_NUMERIC_FLAG.HeaderText = "NUMERIC_FLAG";
+            this.dgv1_NUMERIC_FLAG.IndeterminateValue = "0";
+            this.dgv1_NUMERIC_FLAG.MinimumWidth = 60;
+            this.dgv1_NUMERIC_FLAG.Name = "dgv1_NUMERIC_FLAG";
+            this.dgv1_NUMERIC_FLAG.TrueValue = "1";
+            this.dgv1_NUMERIC_FLAG.Width = 60;
+            // 
+            // dgv1_USING_CNT
+            // 
+            this.dgv1_USING_CNT.HeaderText = "USING_CNT";
+            this.dgv1_USING_CNT.MaxInputLength = 1000;
+            this.dgv1_USING_CNT.MinimumWidth = 100;
+            this.dgv1_USING_CNT.Name = "dgv1_USING_CNT";
+            this.dgv1_USING_CNT.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             // 
             // dataGridView2
             // 
@@ -282,81 +434,6 @@
             this.dgv2_BTNADD.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.dgv2_BTNADD.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.dgv2_BTNADD.Text = "Add";
-            // 
-            // dgv1_CHK
-            // 
-            this.dgv1_CHK.FalseValue = "0";
-            this.dgv1_CHK.HeaderText = "CHK";
-            this.dgv1_CHK.IndeterminateValue = "0";
-            this.dgv1_CHK.MinimumWidth = 60;
-            this.dgv1_CHK.Name = "dgv1_CHK";
-            this.dgv1_CHK.TrueValue = "1";
-            this.dgv1_CHK.Width = 60;
-            // 
-            // dgv1_TCODE
-            // 
-            this.dgv1_TCODE.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dgv1_TCODE.HeaderText = "TCODE";
-            this.dgv1_TCODE.MaxInputLength = 1000;
-            this.dgv1_TCODE.MinimumWidth = 100;
-            this.dgv1_TCODE.Name = "dgv1_TCODE";
-            // 
-            // dgv1_TTYPE_SCD
-            // 
-            this.dgv1_TTYPE_SCD.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dgv1_TTYPE_SCD.HeaderText = "TTYPE_SCD";
-            this.dgv1_TTYPE_SCD.MaxInputLength = 1000;
-            this.dgv1_TTYPE_SCD.MinimumWidth = 100;
-            this.dgv1_TTYPE_SCD.Name = "dgv1_TTYPE_SCD";
-            // 
-            // dgv1_NM
-            // 
-            this.dgv1_NM.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dgv1_NM.HeaderText = "NM";
-            this.dgv1_NM.MaxInputLength = 1000;
-            this.dgv1_NM.MinimumWidth = 150;
-            this.dgv1_NM.Name = "dgv1_NM";
-            // 
-            // dgv1_LIST_FLAG
-            // 
-            this.dgv1_LIST_FLAG.DataPropertyName = "LIST_FLAG";
-            this.dgv1_LIST_FLAG.FalseValue = "0";
-            this.dgv1_LIST_FLAG.HeaderText = "LIST_FLAG";
-            this.dgv1_LIST_FLAG.IndeterminateValue = "0";
-            this.dgv1_LIST_FLAG.MinimumWidth = 60;
-            this.dgv1_LIST_FLAG.Name = "dgv1_LIST_FLAG";
-            this.dgv1_LIST_FLAG.TrueValue = "1";
-            this.dgv1_LIST_FLAG.Width = 60;
-            // 
-            // dgv1_REQUIRED_FLAG
-            // 
-            this.dgv1_REQUIRED_FLAG.DataPropertyName = "REQUIRED_FLAG";
-            this.dgv1_REQUIRED_FLAG.FalseValue = "0";
-            this.dgv1_REQUIRED_FLAG.HeaderText = "REQUIRED_FLAG";
-            this.dgv1_REQUIRED_FLAG.IndeterminateValue = "0";
-            this.dgv1_REQUIRED_FLAG.MinimumWidth = 60;
-            this.dgv1_REQUIRED_FLAG.Name = "dgv1_REQUIRED_FLAG";
-            this.dgv1_REQUIRED_FLAG.TrueValue = "1";
-            this.dgv1_REQUIRED_FLAG.Width = 60;
-            // 
-            // dgv1_NUMERIC_FLAG
-            // 
-            this.dgv1_NUMERIC_FLAG.DataPropertyName = "NUMERIC_FLAG";
-            this.dgv1_NUMERIC_FLAG.FalseValue = "0";
-            this.dgv1_NUMERIC_FLAG.HeaderText = "NUMERIC_FLAG";
-            this.dgv1_NUMERIC_FLAG.IndeterminateValue = "0";
-            this.dgv1_NUMERIC_FLAG.MinimumWidth = 60;
-            this.dgv1_NUMERIC_FLAG.Name = "dgv1_NUMERIC_FLAG";
-            this.dgv1_NUMERIC_FLAG.TrueValue = "1";
-            this.dgv1_NUMERIC_FLAG.Width = 60;
-            // 
-            // dgv1_USING_CNT
-            // 
-            this.dgv1_USING_CNT.HeaderText = "USING_CNT";
-            this.dgv1_USING_CNT.MaxInputLength = 1000;
-            this.dgv1_USING_CNT.MinimumWidth = 100;
-            this.dgv1_USING_CNT.Name = "dgv1_USING_CNT";
-            this.dgv1_USING_CNT.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             // 
             // FrmCodeTMainDB
             // 
