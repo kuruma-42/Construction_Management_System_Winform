@@ -29,6 +29,8 @@ namespace EldigmPlusApp.Mem_WsInOut {
     [System.Web.Services.WebServiceBindingAttribute(Name="BasicHttpBinding_IWsInOut", Namespace="http://tempuri.org/")]
     public partial class WsInOut : System.Web.Services.Protocols.SoapHttpClientProtocol {
         
+        private System.Threading.SendOrPostCallback sLaborCompanyListOperationCompleted;
+        
         private System.Threading.SendOrPostCallback sInOutOperationCompleted;
         
         private System.Threading.SendOrPostCallback sInOutLogOperationCompleted;
@@ -72,32 +74,72 @@ namespace EldigmPlusApp.Mem_WsInOut {
         }
         
         /// <remarks/>
+        public event sLaborCompanyListCompletedEventHandler sLaborCompanyListCompleted;
+        
+        /// <remarks/>
         public event sInOutCompletedEventHandler sInOutCompleted;
         
         /// <remarks/>
         public event sInOutLogCompletedEventHandler sInOutLogCompleted;
         
         /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IWsInOut/sLaborCompanyList", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [return: System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string sLaborCompanyList([System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pSiteCd, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pAuthCd, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pCoCd, [System.Xml.Serialization.XmlArrayAttribute(IsNullable=true)] [System.Xml.Serialization.XmlArrayItemAttribute(Namespace="http://schemas.datacontract.org/2004/07/EldigmPlusSvc_Main.WebSvc.Worker.InOut")] out DataComCombo[] reList, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] out string reMsg) {
+            object[] results = this.Invoke("sLaborCompanyList", new object[] {
+                        pSiteCd,
+                        pAuthCd,
+                        pCoCd});
+            reList = ((DataComCombo[])(results[1]));
+            reMsg = ((string)(results[2]));
+            return ((string)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void sLaborCompanyListAsync(string pSiteCd, string pAuthCd, string pCoCd) {
+            this.sLaborCompanyListAsync(pSiteCd, pAuthCd, pCoCd, null);
+        }
+        
+        /// <remarks/>
+        public void sLaborCompanyListAsync(string pSiteCd, string pAuthCd, string pCoCd, object userState) {
+            if ((this.sLaborCompanyListOperationCompleted == null)) {
+                this.sLaborCompanyListOperationCompleted = new System.Threading.SendOrPostCallback(this.OnsLaborCompanyListOperationCompleted);
+            }
+            this.InvokeAsync("sLaborCompanyList", new object[] {
+                        pSiteCd,
+                        pAuthCd,
+                        pCoCd}, this.sLaborCompanyListOperationCompleted, userState);
+        }
+        
+        private void OnsLaborCompanyListOperationCompleted(object arg) {
+            if ((this.sLaborCompanyListCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.sLaborCompanyListCompleted(this, new sLaborCompanyListCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
         [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IWsInOut/sInOut", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
         [return: System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public string sInOut([System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pDbnm, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pSiteCd, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pDtp1, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pDtp2, [System.Xml.Serialization.XmlArrayAttribute(IsNullable=true)] [System.Xml.Serialization.XmlArrayItemAttribute(Namespace="http://schemas.datacontract.org/2004/07/EldigmPlusSvc_Main.WebSvc.Worker.InOut")] out DataInOut[] reList, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] out string reMsg) {
+        public string sInOut([System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pDbnm, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pSiteCd, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pDtp1, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pDtp2, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pCocd, [System.Xml.Serialization.XmlArrayAttribute(IsNullable=true)] [System.Xml.Serialization.XmlArrayItemAttribute(Namespace="http://schemas.datacontract.org/2004/07/EldigmPlusSvc_Main.WebSvc.Worker.InOut")] out DataInOut[] reList, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] out string reMsg) {
             object[] results = this.Invoke("sInOut", new object[] {
                         pDbnm,
                         pSiteCd,
                         pDtp1,
-                        pDtp2});
+                        pDtp2,
+                        pCocd});
             reList = ((DataInOut[])(results[1]));
             reMsg = ((string)(results[2]));
             return ((string)(results[0]));
         }
         
         /// <remarks/>
-        public void sInOutAsync(string pDbnm, string pSiteCd, string pDtp1, string pDtp2) {
-            this.sInOutAsync(pDbnm, pSiteCd, pDtp1, pDtp2, null);
+        public void sInOutAsync(string pDbnm, string pSiteCd, string pDtp1, string pDtp2, string pCocd) {
+            this.sInOutAsync(pDbnm, pSiteCd, pDtp1, pDtp2, pCocd, null);
         }
         
         /// <remarks/>
-        public void sInOutAsync(string pDbnm, string pSiteCd, string pDtp1, string pDtp2, object userState) {
+        public void sInOutAsync(string pDbnm, string pSiteCd, string pDtp1, string pDtp2, string pCocd, object userState) {
             if ((this.sInOutOperationCompleted == null)) {
                 this.sInOutOperationCompleted = new System.Threading.SendOrPostCallback(this.OnsInOutOperationCompleted);
             }
@@ -105,7 +147,8 @@ namespace EldigmPlusApp.Mem_WsInOut {
                         pDbnm,
                         pSiteCd,
                         pDtp1,
-                        pDtp2}, this.sInOutOperationCompleted, userState);
+                        pDtp2,
+                        pCocd}, this.sInOutOperationCompleted, userState);
         }
         
         private void OnsInOutOperationCompleted(object arg) {
@@ -118,24 +161,25 @@ namespace EldigmPlusApp.Mem_WsInOut {
         /// <remarks/>
         [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IWsInOut/sInOutLog", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
         [return: System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public string sInOutLog([System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pDbnm, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pSiteCd, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pDtp1, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pDtp2, [System.Xml.Serialization.XmlArrayAttribute(IsNullable=true)] [System.Xml.Serialization.XmlArrayItemAttribute(Namespace="http://schemas.datacontract.org/2004/07/EldigmPlusSvc_Main.WebSvc.Worker.InOut")] out DataInOut[] reList, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] out string reMsg) {
+        public string sInOutLog([System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pDbnm, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pSiteCd, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pDtp1, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pDtp2, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pCocd, [System.Xml.Serialization.XmlArrayAttribute(IsNullable=true)] [System.Xml.Serialization.XmlArrayItemAttribute(Namespace="http://schemas.datacontract.org/2004/07/EldigmPlusSvc_Main.WebSvc.Worker.InOut")] out DataInOut[] reList, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] out string reMsg) {
             object[] results = this.Invoke("sInOutLog", new object[] {
                         pDbnm,
                         pSiteCd,
                         pDtp1,
-                        pDtp2});
+                        pDtp2,
+                        pCocd});
             reList = ((DataInOut[])(results[1]));
             reMsg = ((string)(results[2]));
             return ((string)(results[0]));
         }
         
         /// <remarks/>
-        public void sInOutLogAsync(string pDbnm, string pSiteCd, string pDtp1, string pDtp2) {
-            this.sInOutLogAsync(pDbnm, pSiteCd, pDtp1, pDtp2, null);
+        public void sInOutLogAsync(string pDbnm, string pSiteCd, string pDtp1, string pDtp2, string pCocd) {
+            this.sInOutLogAsync(pDbnm, pSiteCd, pDtp1, pDtp2, pCocd, null);
         }
         
         /// <remarks/>
-        public void sInOutLogAsync(string pDbnm, string pSiteCd, string pDtp1, string pDtp2, object userState) {
+        public void sInOutLogAsync(string pDbnm, string pSiteCd, string pDtp1, string pDtp2, string pCocd, object userState) {
             if ((this.sInOutLogOperationCompleted == null)) {
                 this.sInOutLogOperationCompleted = new System.Threading.SendOrPostCallback(this.OnsInOutLogOperationCompleted);
             }
@@ -143,7 +187,8 @@ namespace EldigmPlusApp.Mem_WsInOut {
                         pDbnm,
                         pSiteCd,
                         pDtp1,
-                        pDtp2}, this.sInOutLogOperationCompleted, userState);
+                        pDtp2,
+                        pCocd}, this.sInOutLogOperationCompleted, userState);
         }
         
         private void OnsInOutLogOperationCompleted(object arg) {
@@ -169,6 +214,53 @@ namespace EldigmPlusApp.Mem_WsInOut {
                 return true;
             }
             return false;
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.datacontract.org/2004/07/EldigmPlusSvc_Main.WebSvc.Worker.InOut")]
+    public partial class DataComCombo {
+        
+        private int vALUEField;
+        
+        private bool vALUEFieldSpecified;
+        
+        private string tEXTField;
+        
+        /// <remarks/>
+        public int VALUE {
+            get {
+                return this.vALUEField;
+            }
+            set {
+                this.vALUEField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool VALUESpecified {
+            get {
+                return this.vALUEFieldSpecified;
+            }
+            set {
+                this.vALUEFieldSpecified = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string TEXT {
+            get {
+                return this.tEXTField;
+            }
+            set {
+                this.tEXTField = value;
+            }
         }
     }
     
@@ -380,6 +472,48 @@ namespace EldigmPlusApp.Mem_WsInOut {
             }
             set {
                 this.cODE_NMField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
+    public delegate void sLaborCompanyListCompletedEventHandler(object sender, sLaborCompanyListCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class sLaborCompanyListCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal sLaborCompanyListCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public string Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[0]));
+            }
+        }
+        
+        /// <remarks/>
+        public DataComCombo[] reList {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((DataComCombo[])(this.results[1]));
+            }
+        }
+        
+        /// <remarks/>
+        public string reMsg {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[2]));
             }
         }
     }

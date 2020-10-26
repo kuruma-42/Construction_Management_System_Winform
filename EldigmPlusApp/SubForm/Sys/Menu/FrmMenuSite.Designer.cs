@@ -41,20 +41,6 @@
             this.treeView1 = new System.Windows.Forms.TreeView();
             this.splitContainer4 = new System.Windows.Forms.SplitContainer();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.splitContainer2 = new System.Windows.Forms.SplitContainer();
-            this.btnSave = new System.Windows.Forms.Button();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.splitContainer1 = new System.Windows.Forms.SplitContainer();
-            this.dgv2_CODE_GRP = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgv2_TOP_MENU_CD = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgv2_SUB_MENU_CD = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgv2_MENU_CD = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgv2_NM = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgv2_SORT_NO = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgv2_MENU_PATH = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgv2_FILE_FOLDER = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgv2_BTNADD = new System.Windows.Forms.DataGridViewButtonColumn();
             this.dgv1_CHK = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.dgv1_TOP_MENU_CD = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgv1_SUB_MENU_CD = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -66,6 +52,17 @@
             this.dgv1_MENU_PATH = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgv1_FILE_FOLDER = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgv1_MEMO = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.splitContainer2 = new System.Windows.Forms.SplitContainer();
+            this.btnSave = new System.Windows.Forms.Button();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.dgv2_MENU_CD = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgv2_NM = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgv2_SORT_NO = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgv2_MENU_PATH = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgv2_FILE_FOLDER = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgv2_BTNADD = new System.Windows.Forms.DataGridViewButtonColumn();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer3)).BeginInit();
             this.splitContainer3.Panel1.SuspendLayout();
@@ -236,154 +233,6 @@
             this.dataGridView1.ColumnHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView1_ColumnHeaderMouseClick);
             this.dataGridView1.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.dataGridView1_DataBindingComplete);
             // 
-            // dataGridView2
-            // 
-            this.dataGridView2.AllowUserToAddRows = false;
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dgv2_CODE_GRP,
-            this.dgv2_TOP_MENU_CD,
-            this.dgv2_SUB_MENU_CD,
-            this.dgv2_MENU_CD,
-            this.dgv2_NM,
-            this.dgv2_SORT_NO,
-            this.dgv2_MENU_PATH,
-            this.dgv2_FILE_FOLDER,
-            this.dgv2_BTNADD});
-            this.dataGridView2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView2.Location = new System.Drawing.Point(0, 0);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.RowTemplate.Height = 23;
-            this.dataGridView2.Size = new System.Drawing.Size(853, 53);
-            this.dataGridView2.TabIndex = 0;
-            this.dataGridView2.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellClick);
-            // 
-            // splitContainer2
-            // 
-            this.splitContainer2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainer2.Location = new System.Drawing.Point(0, 0);
-            this.splitContainer2.Name = "splitContainer2";
-            // 
-            // splitContainer2.Panel1
-            // 
-            this.splitContainer2.Panel1.Controls.Add(this.cmbSite);
-            // 
-            // splitContainer2.Panel2
-            // 
-            this.splitContainer2.Panel2.Controls.Add(this.btnSave);
-            this.splitContainer2.Size = new System.Drawing.Size(1037, 40);
-            this.splitContainer2.SplitterDistance = 817;
-            this.splitContainer2.TabIndex = 0;
-            // 
-            // btnSave
-            // 
-            this.btnSave.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnSave.Location = new System.Drawing.Point(7, 12);
-            this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(75, 23);
-            this.btnSave.TabIndex = 0;
-            this.btnSave.Text = "Save";
-            this.btnSave.UseVisualStyleBackColor = true;
-            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
-            // 
-            // dataGridViewTextBoxColumn5
-            // 
-            this.dataGridViewTextBoxColumn5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridViewTextBoxColumn5.DataPropertyName = "MEMO";
-            this.dataGridViewTextBoxColumn5.HeaderText = "Memo";
-            this.dataGridViewTextBoxColumn5.MaxInputLength = 100;
-            this.dataGridViewTextBoxColumn5.MinimumWidth = 150;
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            this.dataGridViewTextBoxColumn5.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            // 
-            // splitContainer1
-            // 
-            this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainer1.FixedPanel = System.Windows.Forms.FixedPanel.Panel1;
-            this.splitContainer1.Location = new System.Drawing.Point(0, 0);
-            this.splitContainer1.Name = "splitContainer1";
-            this.splitContainer1.Orientation = System.Windows.Forms.Orientation.Horizontal;
-            // 
-            // splitContainer1.Panel1
-            // 
-            this.splitContainer1.Panel1.Controls.Add(this.splitContainer2);
-            this.splitContainer1.Panel1MinSize = 40;
-            // 
-            // splitContainer1.Panel2
-            // 
-            this.splitContainer1.Panel2.Controls.Add(this.splitContainer3);
-            this.splitContainer1.Size = new System.Drawing.Size(1037, 601);
-            this.splitContainer1.SplitterDistance = 40;
-            this.splitContainer1.TabIndex = 2;
-            // 
-            // dgv2_CODE_GRP
-            // 
-            this.dgv2_CODE_GRP.HeaderText = "CODE_GRP";
-            this.dgv2_CODE_GRP.MaxInputLength = 50;
-            this.dgv2_CODE_GRP.Name = "dgv2_CODE_GRP";
-            this.dgv2_CODE_GRP.Visible = false;
-            // 
-            // dgv2_TOP_MENU_CD
-            // 
-            this.dgv2_TOP_MENU_CD.HeaderText = "TOP_MENU_CD";
-            this.dgv2_TOP_MENU_CD.MaxInputLength = 1000;
-            this.dgv2_TOP_MENU_CD.MinimumWidth = 100;
-            this.dgv2_TOP_MENU_CD.Name = "dgv2_TOP_MENU_CD";
-            // 
-            // dgv2_SUB_MENU_CD
-            // 
-            this.dgv2_SUB_MENU_CD.HeaderText = "SUB_MENU_CD";
-            this.dgv2_SUB_MENU_CD.MaxInputLength = 1000;
-            this.dgv2_SUB_MENU_CD.MinimumWidth = 110;
-            this.dgv2_SUB_MENU_CD.Name = "dgv2_SUB_MENU_CD";
-            this.dgv2_SUB_MENU_CD.Width = 110;
-            // 
-            // dgv2_MENU_CD
-            // 
-            this.dgv2_MENU_CD.HeaderText = "MENU_CD";
-            this.dgv2_MENU_CD.MaxInputLength = 1000;
-            this.dgv2_MENU_CD.MinimumWidth = 100;
-            this.dgv2_MENU_CD.Name = "dgv2_MENU_CD";
-            // 
-            // dgv2_NM
-            // 
-            this.dgv2_NM.HeaderText = "NM";
-            this.dgv2_NM.MaxInputLength = 1000;
-            this.dgv2_NM.MinimumWidth = 100;
-            this.dgv2_NM.Name = "dgv2_NM";
-            // 
-            // dgv2_SORT_NO
-            // 
-            this.dgv2_SORT_NO.HeaderText = "SORT_NO";
-            this.dgv2_SORT_NO.MaxInputLength = 1000;
-            this.dgv2_SORT_NO.MinimumWidth = 80;
-            this.dgv2_SORT_NO.Name = "dgv2_SORT_NO";
-            // 
-            // dgv2_MENU_PATH
-            // 
-            this.dgv2_MENU_PATH.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dgv2_MENU_PATH.HeaderText = "MENU_PATH";
-            this.dgv2_MENU_PATH.MaxInputLength = 1000;
-            this.dgv2_MENU_PATH.MinimumWidth = 100;
-            this.dgv2_MENU_PATH.Name = "dgv2_MENU_PATH";
-            // 
-            // dgv2_FILE_FOLDER
-            // 
-            this.dgv2_FILE_FOLDER.HeaderText = "FILE_FOLDER";
-            this.dgv2_FILE_FOLDER.MaxInputLength = 1000;
-            this.dgv2_FILE_FOLDER.MinimumWidth = 150;
-            this.dgv2_FILE_FOLDER.Name = "dgv2_FILE_FOLDER";
-            this.dgv2_FILE_FOLDER.Width = 150;
-            // 
-            // dgv2_BTNADD
-            // 
-            this.dgv2_BTNADD.HeaderText = "";
-            this.dgv2_BTNADD.MinimumWidth = 50;
-            this.dgv2_BTNADD.Name = "dgv2_BTNADD";
-            this.dgv2_BTNADD.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv2_BTNADD.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.dgv2_BTNADD.Text = "Add";
-            // 
             // dgv1_CHK
             // 
             this.dgv1_CHK.FalseValue = "0";
@@ -479,6 +328,129 @@
             this.dgv1_MEMO.MinimumWidth = 100;
             this.dgv1_MEMO.Name = "dgv1_MEMO";
             // 
+            // dataGridView2
+            // 
+            this.dataGridView2.AllowUserToAddRows = false;
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgv2_MENU_CD,
+            this.dgv2_NM,
+            this.dgv2_SORT_NO,
+            this.dgv2_MENU_PATH,
+            this.dgv2_FILE_FOLDER,
+            this.dgv2_BTNADD});
+            this.dataGridView2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridView2.Location = new System.Drawing.Point(0, 0);
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.RowTemplate.Height = 23;
+            this.dataGridView2.Size = new System.Drawing.Size(853, 53);
+            this.dataGridView2.TabIndex = 0;
+            this.dataGridView2.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellClick);
+            // 
+            // splitContainer2
+            // 
+            this.splitContainer2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer2.Location = new System.Drawing.Point(0, 0);
+            this.splitContainer2.Name = "splitContainer2";
+            // 
+            // splitContainer2.Panel1
+            // 
+            this.splitContainer2.Panel1.Controls.Add(this.cmbSite);
+            // 
+            // splitContainer2.Panel2
+            // 
+            this.splitContainer2.Panel2.Controls.Add(this.btnSave);
+            this.splitContainer2.Size = new System.Drawing.Size(1037, 40);
+            this.splitContainer2.SplitterDistance = 817;
+            this.splitContainer2.TabIndex = 0;
+            // 
+            // btnSave
+            // 
+            this.btnSave.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.btnSave.Location = new System.Drawing.Point(7, 12);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(75, 23);
+            this.btnSave.TabIndex = 0;
+            this.btnSave.Text = "Save";
+            this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn5.DataPropertyName = "MEMO";
+            this.dataGridViewTextBoxColumn5.HeaderText = "Memo";
+            this.dataGridViewTextBoxColumn5.MaxInputLength = 100;
+            this.dataGridViewTextBoxColumn5.MinimumWidth = 150;
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.dataGridViewTextBoxColumn5.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            // 
+            // splitContainer1
+            // 
+            this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer1.FixedPanel = System.Windows.Forms.FixedPanel.Panel1;
+            this.splitContainer1.Location = new System.Drawing.Point(0, 0);
+            this.splitContainer1.Name = "splitContainer1";
+            this.splitContainer1.Orientation = System.Windows.Forms.Orientation.Horizontal;
+            // 
+            // splitContainer1.Panel1
+            // 
+            this.splitContainer1.Panel1.Controls.Add(this.splitContainer2);
+            this.splitContainer1.Panel1MinSize = 40;
+            // 
+            // splitContainer1.Panel2
+            // 
+            this.splitContainer1.Panel2.Controls.Add(this.splitContainer3);
+            this.splitContainer1.Size = new System.Drawing.Size(1037, 601);
+            this.splitContainer1.SplitterDistance = 40;
+            this.splitContainer1.TabIndex = 2;
+            // 
+            // dgv2_MENU_CD
+            // 
+            this.dgv2_MENU_CD.HeaderText = "MENU_CD";
+            this.dgv2_MENU_CD.MaxInputLength = 1000;
+            this.dgv2_MENU_CD.MinimumWidth = 100;
+            this.dgv2_MENU_CD.Name = "dgv2_MENU_CD";
+            // 
+            // dgv2_NM
+            // 
+            this.dgv2_NM.HeaderText = "NM";
+            this.dgv2_NM.MaxInputLength = 1000;
+            this.dgv2_NM.MinimumWidth = 100;
+            this.dgv2_NM.Name = "dgv2_NM";
+            // 
+            // dgv2_SORT_NO
+            // 
+            this.dgv2_SORT_NO.HeaderText = "SORT_NO";
+            this.dgv2_SORT_NO.MaxInputLength = 1000;
+            this.dgv2_SORT_NO.MinimumWidth = 80;
+            this.dgv2_SORT_NO.Name = "dgv2_SORT_NO";
+            // 
+            // dgv2_MENU_PATH
+            // 
+            this.dgv2_MENU_PATH.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dgv2_MENU_PATH.HeaderText = "MENU_PATH";
+            this.dgv2_MENU_PATH.MaxInputLength = 1000;
+            this.dgv2_MENU_PATH.MinimumWidth = 100;
+            this.dgv2_MENU_PATH.Name = "dgv2_MENU_PATH";
+            // 
+            // dgv2_FILE_FOLDER
+            // 
+            this.dgv2_FILE_FOLDER.HeaderText = "FILE_FOLDER";
+            this.dgv2_FILE_FOLDER.MaxInputLength = 1000;
+            this.dgv2_FILE_FOLDER.MinimumWidth = 150;
+            this.dgv2_FILE_FOLDER.Name = "dgv2_FILE_FOLDER";
+            this.dgv2_FILE_FOLDER.Width = 150;
+            // 
+            // dgv2_BTNADD
+            // 
+            this.dgv2_BTNADD.HeaderText = "";
+            this.dgv2_BTNADD.MinimumWidth = 50;
+            this.dgv2_BTNADD.Name = "dgv2_BTNADD";
+            this.dgv2_BTNADD.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv2_BTNADD.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.dgv2_BTNADD.Text = "Add";
+            // 
             // FrmMenuSite
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
@@ -542,9 +514,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dgv1_MENU_PATH;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgv1_FILE_FOLDER;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgv1_MEMO;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgv2_CODE_GRP;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgv2_TOP_MENU_CD;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgv2_SUB_MENU_CD;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgv2_MENU_CD;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgv2_NM;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgv2_SORT_NO;

@@ -29,8 +29,8 @@ namespace EldigmPlusSvc_Memco.Biz.MainHome
             }
             catch (Exception ex)
             {
-                _logs.SaveLog("[error]  (page)::BizSystem.cs  (Function)::sSiteMenu  (Detail)::pMemcoCd=[" + pMemcoCd + "]", "Error");
-                _logs.SaveLog("[error]  (page)::BizSystem.cs  (Function)::sSiteMenu  (Detail)::" + "\r\n" + ex.ToString(), "Error");
+                _logs.SaveLog("[error]  (page)::BizMainHome.cs  (Function)::sDbNm  (Detail)::pMemcoCd=[" + pMemcoCd + "]", "Error");
+                _logs.SaveLog("[error]  (page)::BizMainHome.cs  (Function)::sDbNm  (Detail)::" + "\r\n" + ex.ToString(), "Error");
             }
             finally
             {
@@ -57,8 +57,8 @@ namespace EldigmPlusSvc_Memco.Biz.MainHome
             }
             catch (Exception ex)
             {
-                _logs.SaveLog("[error]  (page)::BizSystem.cs  (Function)::sSiteMenu  (Detail)::pDbNm=[" + pDbNm + "], pSiteCd=[" + pSiteCd + "]", "Error");
-                _logs.SaveLog("[error]  (page)::BizSystem.cs  (Function)::sSiteMenu  (Detail)::" + "\r\n" + ex.ToString(), "Error");
+                _logs.SaveLog("[error]  (page)::BizMainHome.cs  (Function)::sSiteMenu  (Detail)::pDbNm=[" + pDbNm + "], pSiteCd=[" + pSiteCd + "]", "Error");
+                _logs.SaveLog("[error]  (page)::BizMainHome.cs  (Function)::sSiteMenu  (Detail)::" + "\r\n" + ex.ToString(), "Error");
             }
             finally
             {
@@ -85,8 +85,8 @@ namespace EldigmPlusSvc_Memco.Biz.MainHome
             }
             catch (Exception ex)
             {
-                _logs.SaveLog("[error]  (page)::BizSystem.cs  (Function)::sSiteSubMenu1  (Detail)::pDbNm=[" + pDbNm + "], pSiteCd=[" + pSiteCd + "], pTopMenuCd=[" + pTopMenuCd + "]", "Error");
-                _logs.SaveLog("[error]  (page)::BizSystem.cs  (Function)::sSiteSubMenu1  (Detail)::" + "\r\n" + ex.ToString(), "Error");
+                _logs.SaveLog("[error]  (page)::BizMainHome.cs  (Function)::sSiteSubMenu1  (Detail)::pDbNm=[" + pDbNm + "], pSiteCd=[" + pSiteCd + "], pTopMenuCd=[" + pTopMenuCd + "]", "Error");
+                _logs.SaveLog("[error]  (page)::BizMainHome.cs  (Function)::sSiteSubMenu1  (Detail)::" + "\r\n" + ex.ToString(), "Error");
             }
             finally
             {
@@ -113,9 +113,9 @@ namespace EldigmPlusSvc_Memco.Biz.MainHome
             }
             catch (Exception ex)
             {
-                _logs.SaveLog("[error]  (page)::BizSystem.cs  (Function)::sSiteSubMenu2  (Detail)::pDbNm=[" + pDbNm + "], pSiteCd=[" + pSiteCd + "], pTopMenuCd=[" + pTopMenuCd + "]" +
+                _logs.SaveLog("[error]  (page)::BizMainHome.cs  (Function)::sSiteSubMenu2  (Detail)::pDbNm=[" + pDbNm + "], pSiteCd=[" + pSiteCd + "], pTopMenuCd=[" + pTopMenuCd + "]" +
                     ", pSubMenuCd=[" + pSubMenuCd + "]", "Error");
-                _logs.SaveLog("[error]  (page)::BizSystem.cs  (Function)::sSiteSubMenu2  (Detail)::" + "\r\n" + ex.ToString(), "Error");
+                _logs.SaveLog("[error]  (page)::BizMainHome.cs  (Function)::sSiteSubMenu2  (Detail)::" + "\r\n" + ex.ToString(), "Error");
             }
             finally
             {

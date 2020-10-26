@@ -1,0 +1,10 @@
+D:\3.DevOps\Eldigm_Plus\EldigmPlusApp_UserControl\bin\Debug\EldigmPlusApp_UserControl.dll
+D:\3.DevOps\Eldigm_Plus\EldigmPlusApp_UserControl\bin\Debug\EldigmPlusApp_UserControl.pdb
+D:\3.DevOps\Eldigm_Plus\EldigmPlusApp_UserControl\obj\Debug\EldigmPlusApp_UserControl.csproj.CoreCompileInputs.cache
+D:\3.DevOps\Eldigm_Plus\EldigmPlusApp_UserControl\obj\Debug\EldigmPlusApp_UserControl.dll
+D:\3.DevOps\Eldigm_Plus\EldigmPlusApp_UserControl\obj\Debug\EldigmPlusApp_UserControl.pdb
+D:\3.DevOps\Eldigm_Plus\EldigmPlusApp_UserControl\obj\Debug\EldigmPlusApp_UserControl.SearchCondition1.resources
+D:\3.DevOps\Eldigm_Plus\EldigmPlusApp_UserControl\obj\Debug\EldigmPlusApp_UserControl.csproj.GenerateResource.cache
+D:\3.DevOps\Eldigm_Plus\EldigmPlusApp_UserControl\obj\Debug\EldigmPlusApp_UserControl.csprojAssemblyReference.cache
+D:\3.DevOps\Eldigm_Plus\EldigmPlusApp_UserControl\obj\Debug\EldigmPlusApp_UserControl.SearchCondition2.resources
+D:\3.DevOps\Eldigm_Plus\EldigmPlusApp_UserControl\obj\Debug\EldigmPlusApp_UserControl.LabRegister.resources

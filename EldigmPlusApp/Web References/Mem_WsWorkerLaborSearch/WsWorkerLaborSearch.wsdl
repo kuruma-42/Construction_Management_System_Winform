@@ -5,7 +5,6 @@
       <xsd:import schemaLocation="http://localhost:49501/WebSvc/Worker/Labor/WsWorkerLaborSearch.svc?xsd=xsd0" namespace="http://tempuri.org/" />
       <xsd:import schemaLocation="http://localhost:49501/WebSvc/Worker/Labor/WsWorkerLaborSearch.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
       <xsd:import schemaLocation="http://localhost:49501/WebSvc/Worker/Labor/WsWorkerLaborSearch.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/EldigmPlusSvc_Memco.WebSvc.Sys.Worker" />
-      <xsd:import schemaLocation="http://localhost:49501/WebSvc/Worker/Labor/WsWorkerLaborSearch.svc?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
     </xsd:schema>
   </wsdl:types>
   <wsdl:message name="IWsWorkerLaborSearch_sLaborCompanyList_InputMessage">
@@ -14,80 +13,60 @@
   <wsdl:message name="IWsWorkerLaborSearch_sLaborCompanyList_OutputMessage">
     <wsdl:part name="parameters" element="tns:sLaborCompanyListResponse" />
   </wsdl:message>
+  <wsdl:message name="IWsWorkerLaborSearch_sLaborConstList_InputMessage">
+    <wsdl:part name="parameters" element="tns:sLaborConstList" />
+  </wsdl:message>
+  <wsdl:message name="IWsWorkerLaborSearch_sLaborConstList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:sLaborConstListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWsWorkerLaborSearch_sLaborJobList_InputMessage">
+    <wsdl:part name="parameters" element="tns:sLaborJobList" />
+  </wsdl:message>
+  <wsdl:message name="IWsWorkerLaborSearch_sLaborJobList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:sLaborJobListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWsWorkerLaborSearch_sLaborBlockList_InputMessage">
+    <wsdl:part name="parameters" element="tns:sLaborBlockList" />
+  </wsdl:message>
+  <wsdl:message name="IWsWorkerLaborSearch_sLaborBlockList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:sLaborBlockListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWsWorkerLaborSearch_sLaborTeamList_InputMessage">
+    <wsdl:part name="parameters" element="tns:sLaborTeamList" />
+  </wsdl:message>
+  <wsdl:message name="IWsWorkerLaborSearch_sLaborTeamList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:sLaborTeamListResponse" />
+  </wsdl:message>
   <wsdl:message name="IWsWorkerLaborSearch_sLaborSearch_InputMessage">
     <wsdl:part name="parameters" element="tns:sLaborSearch" />
   </wsdl:message>
   <wsdl:message name="IWsWorkerLaborSearch_sLaborSearch_OutputMessage">
     <wsdl:part name="parameters" element="tns:sLaborSearchResponse" />
   </wsdl:message>
-  <wsdl:message name="IWsWorkerLaborSearch_devTypeCmb_InputMessage">
-    <wsdl:part name="parameters" element="tns:devTypeCmb" />
-  </wsdl:message>
-  <wsdl:message name="IWsWorkerLaborSearch_devTypeCmb_OutputMessage">
-    <wsdl:part name="parameters" element="tns:devTypeCmbResponse" />
-  </wsdl:message>
-  <wsdl:message name="IWsWorkerLaborSearch_devIOCmb_InputMessage">
-    <wsdl:part name="parameters" element="tns:devIOCmb" />
-  </wsdl:message>
-  <wsdl:message name="IWsWorkerLaborSearch_devIOCmb_OutputMessage">
-    <wsdl:part name="parameters" element="tns:devIOCmbResponse" />
-  </wsdl:message>
-  <wsdl:message name="IWsWorkerLaborSearch_sDevice_InputMessage">
-    <wsdl:part name="parameters" element="tns:sDevice" />
-  </wsdl:message>
-  <wsdl:message name="IWsWorkerLaborSearch_sDevice_OutputMessage">
-    <wsdl:part name="parameters" element="tns:sDeviceResponse" />
-  </wsdl:message>
-  <wsdl:message name="IWsWorkerLaborSearch_mDevice_InputMessage">
-    <wsdl:part name="parameters" element="tns:mDevice" />
-  </wsdl:message>
-  <wsdl:message name="IWsWorkerLaborSearch_mDevice_OutputMessage">
-    <wsdl:part name="parameters" element="tns:mDeviceResponse" />
-  </wsdl:message>
-  <wsdl:message name="IWsWorkerLaborSearch_aDevicePro_InputMessage">
-    <wsdl:part name="parameters" element="tns:aDevicePro" />
-  </wsdl:message>
-  <wsdl:message name="IWsWorkerLaborSearch_aDevicePro_OutputMessage">
-    <wsdl:part name="parameters" element="tns:aDeviceProResponse" />
-  </wsdl:message>
-  <wsdl:message name="IWsWorkerLaborSearch_logDevice_InputMessage">
-    <wsdl:part name="parameters" element="tns:logDevice" />
-  </wsdl:message>
-  <wsdl:message name="IWsWorkerLaborSearch_logDevice_OutputMessage">
-    <wsdl:part name="parameters" element="tns:logDeviceResponse" />
-  </wsdl:message>
   <wsdl:portType name="IWsWorkerLaborSearch">
     <wsdl:operation name="sLaborCompanyList">
       <wsdl:input wsaw:Action="http://tempuri.org/IWsWorkerLaborSearch/sLaborCompanyList" message="tns:IWsWorkerLaborSearch_sLaborCompanyList_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IWsWorkerLaborSearch/sLaborCompanyListResponse" message="tns:IWsWorkerLaborSearch_sLaborCompanyList_OutputMessage" />
     </wsdl:operation>
+    <wsdl:operation name="sLaborConstList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWsWorkerLaborSearch/sLaborConstList" message="tns:IWsWorkerLaborSearch_sLaborConstList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWsWorkerLaborSearch/sLaborConstListResponse" message="tns:IWsWorkerLaborSearch_sLaborConstList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="sLaborJobList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWsWorkerLaborSearch/sLaborJobList" message="tns:IWsWorkerLaborSearch_sLaborJobList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWsWorkerLaborSearch/sLaborJobListResponse" message="tns:IWsWorkerLaborSearch_sLaborJobList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="sLaborBlockList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWsWorkerLaborSearch/sLaborBlockList" message="tns:IWsWorkerLaborSearch_sLaborBlockList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWsWorkerLaborSearch/sLaborBlockListResponse" message="tns:IWsWorkerLaborSearch_sLaborBlockList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="sLaborTeamList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWsWorkerLaborSearch/sLaborTeamList" message="tns:IWsWorkerLaborSearch_sLaborTeamList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWsWorkerLaborSearch/sLaborTeamListResponse" message="tns:IWsWorkerLaborSearch_sLaborTeamList_OutputMessage" />
+    </wsdl:operation>
     <wsdl:operation name="sLaborSearch">
       <wsdl:input wsaw:Action="http://tempuri.org/IWsWorkerLaborSearch/sLaborSearch" message="tns:IWsWorkerLaborSearch_sLaborSearch_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IWsWorkerLaborSearch/sLaborSearchResponse" message="tns:IWsWorkerLaborSearch_sLaborSearch_OutputMessage" />
-    </wsdl:operation>
-    <wsdl:operation name="devTypeCmb">
-      <wsdl:input wsaw:Action="http://tempuri.org/IWsWorkerLaborSearch/devTypeCmb" message="tns:IWsWorkerLaborSearch_devTypeCmb_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IWsWorkerLaborSearch/devTypeCmbResponse" message="tns:IWsWorkerLaborSearch_devTypeCmb_OutputMessage" />
-    </wsdl:operation>
-    <wsdl:operation name="devIOCmb">
-      <wsdl:input wsaw:Action="http://tempuri.org/IWsWorkerLaborSearch/devIOCmb" message="tns:IWsWorkerLaborSearch_devIOCmb_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IWsWorkerLaborSearch/devIOCmbResponse" message="tns:IWsWorkerLaborSearch_devIOCmb_OutputMessage" />
-    </wsdl:operation>
-    <wsdl:operation name="sDevice">
-      <wsdl:input wsaw:Action="http://tempuri.org/IWsWorkerLaborSearch/sDevice" message="tns:IWsWorkerLaborSearch_sDevice_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IWsWorkerLaborSearch/sDeviceResponse" message="tns:IWsWorkerLaborSearch_sDevice_OutputMessage" />
-    </wsdl:operation>
-    <wsdl:operation name="mDevice">
-      <wsdl:input wsaw:Action="http://tempuri.org/IWsWorkerLaborSearch/mDevice" message="tns:IWsWorkerLaborSearch_mDevice_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IWsWorkerLaborSearch/mDeviceResponse" message="tns:IWsWorkerLaborSearch_mDevice_OutputMessage" />
-    </wsdl:operation>
-    <wsdl:operation name="aDevicePro">
-      <wsdl:input wsaw:Action="http://tempuri.org/IWsWorkerLaborSearch/aDevicePro" message="tns:IWsWorkerLaborSearch_aDevicePro_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IWsWorkerLaborSearch/aDeviceProResponse" message="tns:IWsWorkerLaborSearch_aDevicePro_OutputMessage" />
-    </wsdl:operation>
-    <wsdl:operation name="logDevice">
-      <wsdl:input wsaw:Action="http://tempuri.org/IWsWorkerLaborSearch/logDevice" message="tns:IWsWorkerLaborSearch_logDevice_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IWsWorkerLaborSearch/logDeviceResponse" message="tns:IWsWorkerLaborSearch_logDevice_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IWsWorkerLaborSearch" type="tns:IWsWorkerLaborSearch">
@@ -101,62 +80,44 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="sLaborConstList">
+      <soap:operation soapAction="http://tempuri.org/IWsWorkerLaborSearch/sLaborConstList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="sLaborJobList">
+      <soap:operation soapAction="http://tempuri.org/IWsWorkerLaborSearch/sLaborJobList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="sLaborBlockList">
+      <soap:operation soapAction="http://tempuri.org/IWsWorkerLaborSearch/sLaborBlockList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="sLaborTeamList">
+      <soap:operation soapAction="http://tempuri.org/IWsWorkerLaborSearch/sLaborTeamList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
     <wsdl:operation name="sLaborSearch">
       <soap:operation soapAction="http://tempuri.org/IWsWorkerLaborSearch/sLaborSearch" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="devTypeCmb">
-      <soap:operation soapAction="http://tempuri.org/IWsWorkerLaborSearch/devTypeCmb" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="devIOCmb">
-      <soap:operation soapAction="http://tempuri.org/IWsWorkerLaborSearch/devIOCmb" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="sDevice">
-      <soap:operation soapAction="http://tempuri.org/IWsWorkerLaborSearch/sDevice" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="mDevice">
-      <soap:operation soapAction="http://tempuri.org/IWsWorkerLaborSearch/mDevice" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="aDevicePro">
-      <soap:operation soapAction="http://tempuri.org/IWsWorkerLaborSearch/aDevicePro" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="logDevice">
-      <soap:operation soapAction="http://tempuri.org/IWsWorkerLaborSearch/logDevice" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

@@ -12,12 +12,13 @@ namespace EldigmPlusApp.SubForm.Sys.Menu
     public partial class FrmMenuSite : Form
     {
         LogUtil logs = null;
-        ResourceManager lngRM = null;
+        ResourceManager wRM = null;
         ResourceManager msgRM = null;
 
-        string _topMenuCd = "";
-        string[] codeArr = { "2", "1", "0", "0" };
-        string DBNM = "";
+        string _codeGrp = "";
+        string _tMenuCd = "";
+        string _sMenuCd = "";
+        string _DBNM = "";
 
         public FrmMenuSite()
         {
@@ -30,35 +31,32 @@ namespace EldigmPlusApp.SubForm.Sys.Menu
             try
             {
                 logs = new LogUtil();
-                lngRM = new ResourceManager("EldigmPlusApp.strLanguage", typeof(FrmMenuSite).Assembly);
-                msgRM = new ResourceManager("EldigmPlusApp.msgLanguage", typeof(FrmMenuSite).Assembly);
+                wRM = new ResourceManager("EldigmPlusApp.GlobalLanguage.word_Language", typeof(FrmMenuSite).Assembly);
+                msgRM = new ResourceManager("EldigmPlusApp.GlobalLanguage.msg_Language", typeof(FrmMenuSite).Assembly);
 
-                //btnSearch.Text = lngRM.GetString("lngSearch");
-                btnSave.Text = "저장";
+                //btnSearch.Text = wRM.GetString("lngSearch");
+                btnSave.Text = wRM.GetString("wSave");
 
-                dataGridView1.Columns["dgv1_CHK"].HeaderText = "선택";
-                dataGridView1.Columns["dgv1_MENU_CD"].HeaderText = "메뉴코드";
-                dataGridView1.Columns["dgv1_SUB_MENU_CD"].HeaderText = "서브메뉴코드";
-                dataGridView1.Columns["dgv1_TOP_MENU_CD"].HeaderText = "탑메뉴코드";
-                dataGridView1.Columns["dgv1_NM"].HeaderText = "이름";
-                dataGridView1.Columns["dgv1_APP_FLAG"].HeaderText = "앱사용";
-                dataGridView1.Columns["dgv1_USING_FLAG"].HeaderText = "사용";
-                dataGridView1.Columns["dgv1_SORT_NO"].HeaderText = "정렬";
-                dataGridView1.Columns["dgv1_MENU_PATH"].HeaderText = "파일경로";
-                dataGridView1.Columns["dgv1_FILE_FOLDER"].HeaderText = "파일폴더";
-                dataGridView1.Columns["dgv1_MEMO"].HeaderText = "메모";
+                dataGridView1.Columns["dgv1_CHK"].HeaderText = wRM.GetString("wSelect");
+                dataGridView1.Columns["dgv1_MENU_CD"].HeaderText = wRM.GetString("wMenu") + wRM.GetString("wCode");
+                dataGridView1.Columns["dgv1_SUB_MENU_CD"].HeaderText = wRM.GetString("wSub") + wRM.GetString("wMenu") + wRM.GetString("wCode");
+                dataGridView1.Columns["dgv1_TOP_MENU_CD"].HeaderText = wRM.GetString("wTop") + wRM.GetString("wMenu") + wRM.GetString("wCode");
+                dataGridView1.Columns["dgv1_NM"].HeaderText = wRM.GetString("wName");
+                dataGridView1.Columns["dgv1_APP_FLAG"].HeaderText = wRM.GetString("wApp") + wRM.GetString("wUse");
+                dataGridView1.Columns["dgv1_USING_FLAG"].HeaderText = wRM.GetString("wUse");
+                dataGridView1.Columns["dgv1_SORT_NO"].HeaderText = wRM.GetString("wSort");
+                dataGridView1.Columns["dgv1_MENU_PATH"].HeaderText = wRM.GetString("wFile") + wRM.GetString("wPath");
+                dataGridView1.Columns["dgv1_FILE_FOLDER"].HeaderText = wRM.GetString("wFile") + wRM.GetString("wFolder");
+                dataGridView1.Columns["dgv1_MEMO"].HeaderText = wRM.GetString("wMemo");
 
-                dataGridView2.Columns["dgv2_MENU_CD"].HeaderText = "메뉴코드";
-                dataGridView2.Columns["dgv2_SUB_MENU_CD"].HeaderText = "서브메뉴코드";
-                dataGridView2.Columns["dgv2_TOP_MENU_CD"].HeaderText = "탑메뉴코드";
-                dataGridView2.Columns["dgv2_NM"].HeaderText = "이름";
-                dataGridView2.Columns["dgv2_SORT_NO"].HeaderText = "정렬";
-                dataGridView2.Columns["dgv2_MENU_PATH"].HeaderText = "파일경로";
-                dataGridView2.Columns["dgv2_FILE_FOLDER"].HeaderText = "파일폴더";
+                dataGridView2.Columns["dgv2_MENU_CD"].HeaderText = "*" + wRM.GetString("wMenu") + wRM.GetString("wCode");
+                dataGridView2.Columns["dgv2_NM"].HeaderText = "*" + wRM.GetString("wName");
+                dataGridView2.Columns["dgv2_SORT_NO"].HeaderText = wRM.GetString("wSort");
+                dataGridView2.Columns["dgv2_MENU_PATH"].HeaderText = wRM.GetString("wFile") + wRM.GetString("wPath");
+                dataGridView2.Columns["dgv2_FILE_FOLDER"].HeaderText = wRM.GetString("wFile") + wRM.GetString("wFolder");
 
-                //dataGridView2.Columns["dgv2_MENU_CD"].HeaderCell.Style.ForeColor = Color.Maroon; // 헤더 필수 항목 빨강색
-                //dataGridView2.Columns["dgv2_SUB_MENU_CD"].HeaderCell.Style.ForeColor = Color.Maroon; // 헤더 필수 항목 빨강색
-                //dataGridView2.Columns["dgv2_TOP_MENU_CD"].HeaderCell.Style.ForeColor = Color.Maroon; // 헤더 필수 항목 빨강색
+                dataGridView2.Columns["dgv2_MENU_CD"].HeaderCell.Style.ForeColor = Color.Maroon; // 헤더 필수 항목 빨강색
+                dataGridView2.Columns["dgv2_NM"].HeaderCell.Style.ForeColor = Color.Maroon; // 헤더 필수 항목 빨강색
 
                 Control.CheckForIllegalCrossThreadCalls = false;
 
@@ -156,8 +154,7 @@ namespace EldigmPlusApp.SubForm.Sys.Menu
                 if (reCode == "Y")
                 {
                     if (!string.IsNullOrEmpty(reData))
-                        DBNM = reData;
-                        //AppInfo.SsDbNm = reData;
+                        _DBNM = reData;
                     //AppInfo.SsDbNm = reData;
                     //AppInfo.SsSiteCd = cmbSite.SelectedValue.ToString(); // CMBBOX에서 선택된 SITE_CD 값을 APPINFO.SsSiteCD에 담는다
                 }
@@ -210,7 +207,7 @@ namespace EldigmPlusApp.SubForm.Sys.Menu
                             string tmenuNm_val = getData1[i].TOP_MENU_NM.ToString();
 
                             TreeNode root = new TreeNode();
-                            root.Tag = "2-" + tmenuCd_val + "-0" + "-0";
+                            root.Tag = "1-" + tmenuCd_val + "-0";
                             root.Text = tmenuNm_val;
 
                             //root.Nodes.Add(node1);
@@ -226,7 +223,7 @@ namespace EldigmPlusApp.SubForm.Sys.Menu
                                         string smenuNm_val = getData2[j].SUB_MENU_NM.ToString();
 
                                         TreeNode node2 = new TreeNode();
-                                        node2.Tag = "3-" + tmenuCd_val + "-" + smenuCd_val + "-0";
+                                        node2.Tag = "2-" + tmenuCd_val + "-" + smenuCd_val;
                                         node2.Text = smenuNm_val;
 
                                         root.Nodes.Add(node2);
@@ -269,28 +266,13 @@ namespace EldigmPlusApp.SubForm.Sys.Menu
                 eNodeTag = e.Node.Tag.ToString();
                 lblName.Text = "** " + e.Node.Text;
 
-                codeArr = eNodeTag.Split('-');
+                string[] codeArr = eNodeTag.Split('-');
 
-                string codeGrp = codeArr[0].ToString();
-                string tMenuCd = codeArr[1].ToString();
-                string sMenuCd = codeArr[2].ToString();
-                string menuCd = codeArr[3].ToString();
+                _codeGrp = codeArr[0].ToString();
+                _tMenuCd = codeArr[1].ToString();
+                _sMenuCd = codeArr[2].ToString();
 
-                if (tMenuCd == "0")
-                {
-                    tMenuCd = null;
-                }
-                if (sMenuCd == "0")
-                {
-                    sMenuCd = null;
-                }
-                if (menuCd == "0")
-                {
-                    menuCd = null;
-                }
-
-                //SetDataBind_gridView1(codeArr[0].ToString(), codeArr[1].ToString(), codeArr[2].ToString(), codeArr[3].ToString());
-                SetDataBind_gridView1(codeGrp, tMenuCd, sMenuCd, menuCd);
+                SetDataBind_gridView1(_codeGrp, _tMenuCd, _sMenuCd);
 
             }
             catch (Exception ex)
@@ -299,14 +281,9 @@ namespace EldigmPlusApp.SubForm.Sys.Menu
             }
         }
 
-        private void SetDataBind_gridView1(string code_grp, string tmenuCd, string smenuCd, string menuCd)
+        private void SetDataBind_gridView1(string code_grp, string tmenuCd, string smenuCd)
         {
             SetDataBind_grideView2();
-            //string searchTxt_val = "";
-            //if (!string.IsNullOrEmpty(txtSearch.Text))
-            //{
-            //    searchTxt_val = txtSearch.Text;
-            //}
 
             M_WsMenuMainDB.WsMenuMainDB wSvc = null;
             string reCode = "";
@@ -320,21 +297,17 @@ namespace EldigmPlusApp.SubForm.Sys.Menu
                 wSvc.Url = "http://" + AppInfo.SsWsvcServer2 + "/WebSvc/Sys/Menu/WsMenuMainDB.svc";
                 wSvc.Timeout = 1000;
 
-                if (code_grp == "2")
+                if (code_grp == "1")
                 {
                     btnSave.Enabled = false;
                     dataGridView1.Enabled = false;
                     dataGridView2.Enabled = false;
 
-                    dataGridView2.Columns["dgv2_TOP_MENU_CD"].Visible = false;
                     dataGridView1.Columns["dgv1_APP_FLAG"].Visible = false;
                     dataGridView1.Columns["dgv1_MENU_CD"].Visible = false;
-                    dataGridView2.Columns["dgv2_MENU_CD"].Visible = false;
 
                     dataGridView1.Columns["dgv1_TOP_MENU_CD"].ReadOnly = true;
-                    dataGridView2.Columns["dgv2_TOP_MENU_CD"].ReadOnly = true;
                     dataGridView1.Columns["dgv1_SUB_MENU_CD"].ReadOnly = true;
-                    dataGridView2.Columns["dgv2_SUB_MENU_CD"].ReadOnly = false;
                     dataGridView1.Columns["dgv1_NM"].ReadOnly = true;
 
                     reCode = wSvc.sMenuSubTreeView(tmenuCd, out getData2, out reMsg);
@@ -366,26 +339,22 @@ namespace EldigmPlusApp.SubForm.Sys.Menu
 
 
                 }
-                else if (code_grp == "3")
+                else if (code_grp == "2")
                 {
                     btnSave.Enabled = true;
                     dataGridView1.Enabled = true;
                     dataGridView2.Enabled = true;
 
-                    dataGridView2.Columns["dgv2_TOP_MENU_CD"].Visible = false;
-                    dataGridView2.Columns["dgv2_SUB_MENU_CD"].Visible = false;
                     dataGridView1.Columns["dgv1_APP_FLAG"].Visible = false;
                     dataGridView1.Columns["dgv1_MENU_CD"].Visible = true;
                     dataGridView2.Columns["dgv2_MENU_CD"].Visible = true;
 
                     dataGridView1.Columns["dgv1_TOP_MENU_CD"].ReadOnly = true;
-                    dataGridView2.Columns["dgv2_TOP_MENU_CD"].ReadOnly = true;
                     dataGridView1.Columns["dgv1_SUB_MENU_CD"].ReadOnly = true;
-                    dataGridView2.Columns["dgv2_SUB_MENU_CD"].ReadOnly = true;
                     dataGridView1.Columns["dgv1_MENU_CD"].ReadOnly = true;
                     dataGridView2.Columns["dgv2_MENU_CD"].ReadOnly = false;
 
-                    reCode = wSvc.sMenuMemberDB(DBNM, cmbSite.SelectedValue.ToString(), tmenuCd, smenuCd, out getData3, out reMsg);
+                    reCode = wSvc.sMenuMemberDB(_DBNM, cmbSite.SelectedValue.ToString(), tmenuCd, smenuCd, out getData3, out reMsg);
                     if (reCode == "Y")
                     {
                         if (getData3 != null && getData3.Length > 0)
@@ -420,7 +389,7 @@ namespace EldigmPlusApp.SubForm.Sys.Menu
             }
             catch (Exception ex)
             {
-                logs.SaveLog("[error]  (page)::FrmMenuSite.cs  (Function)::SetDataBind_gridView1  (Detail)::pScodeGrp=[" + _topMenuCd + "]", "Error");
+                logs.SaveLog("[error]  (page)::FrmMenuSite.cs  (Function)::SetDataBind_gridView1  (Detail)::code_grp=[" + code_grp + "], tmenuCd=[" + tmenuCd + "], smenuCd=[" + smenuCd + "]", "Error");
                 logs.SaveLog("[error]  (page)::FrmMenuSite.cs  (Function)::SetDataBind_gridView1  (Detail)::reMsg=[" + reMsg + "]", "Error");
                 logs.SaveLog("[error]  (page)::FrmMenuSite.cs  (Function)::SetDataBind_gridView1  (Detail):: " + "\r\n" + ex.ToString(), "Error");
             }
@@ -493,8 +462,8 @@ namespace EldigmPlusApp.SubForm.Sys.Menu
             {
                 dataGridView2.Rows.Clear();
                 dataGridView2.Rows.Add();
-                dataGridView2.Rows[0].Cells["dgv2_SORT_NO"].Value = "1";
-                dataGridView2.Rows[0].Cells["dgv2_BTNADD"].Value = "추가";
+                dataGridView2.Rows[0].Cells["dgv2_SORT_NO"].Value = "10";
+                dataGridView2.Rows[0].Cells["dgv2_BTNADD"].Value = wRM.GetString("wAdd");
             }
             catch (Exception ex)
             {
@@ -509,21 +478,17 @@ namespace EldigmPlusApp.SubForm.Sys.Menu
             string reCode = "";
             string reMsg = "";
             string reData = "";
-            string codeGrp = codeArr[0].ToString();
-            string tMenuCd = codeArr[1].ToString();
-            string sMenuCd = codeArr[2].ToString();
-            string menuCd = codeArr[3].ToString();
 
             string colNm = dataGridView2.Columns[e.ColumnIndex].Name;
 
             if (colNm == "dgv2_BTNADD")
             {
-                if (codeGrp == "3")
+                if (_codeGrp == "2")
                 {
-                    string reVal = ChkDgv2ParamMenu();
+                    string reVal = ChkDgv2Param();
 
                     if (reVal != "")
-                        MessageBox.Show("데이터 확인 :: " + reVal);
+                        MessageBox.Show(wRM.GetString("wCheck") + " :: " + reVal);
                     else
                     {
                         string menuCd_val = dataGridView2.Rows[0].Cells["dgv2_MENU_CD"].Value.ToString();
@@ -551,15 +516,15 @@ namespace EldigmPlusApp.SubForm.Sys.Menu
                             wSvc.Url = "http://" + AppInfo.SsWsvcServer2 + "/WebSvc/Sys/Menu/WsMenuMainDB.svc";
                             wSvc.Timeout = 1000;
 
-                            reCode = wSvc.exMenu(menuCd_val, tMenuCd, sMenuCd, out reMsg, out reData);
+                            reCode = wSvc.exMenu(menuCd_val, _tMenuCd, _sMenuCd, out reMsg, out reData);
                             if (reCode == "Y" && reData != "0")
                             {
-                                MessageBox.Show("중복 데이터 입니다.");
+                                MessageBox.Show(msgRM.GetString("msgDuplicated"));
                             }
                             else
                             {
                                 reCode = "";
-                                reCode = wSvc.aMenu(tMenuCd, sMenuCd, menuCd_val, Nm_val, "1", sortNo_val, menuPath_val, fileFolder_val, pInputId, out reMsg, out reData);
+                                reCode = wSvc.aMenu(_tMenuCd, _sMenuCd, menuCd_val, Nm_val, "1", sortNo_val, menuPath_val, fileFolder_val, pInputId, out reMsg, out reData);
                                 int reCnt = 0;
 
                                 if (reCode == "Y")
@@ -568,7 +533,7 @@ namespace EldigmPlusApp.SubForm.Sys.Menu
                                     {
                                         reCode = "";
                                         // * 멤버 디비에 인서트를 해준다. 
-                                        reCode = wSvc.aMenuMemberDB(DBNM, cmbSite.SelectedValue.ToString(), menuCd_val, tMenuCd, sMenuCd, Nm_val, "1", sortNo_val, memo_val, pInputId, out reMsg, out reData);
+                                        reCode = wSvc.aMenuMemberDB(_DBNM, cmbSite.SelectedValue.ToString(), menuCd_val, _tMenuCd, _sMenuCd, Nm_val, "1", sortNo_val, memo_val, pInputId, out reMsg, out reData);
 
 
                                         if (reCode == "Y" && reData != "")
@@ -577,11 +542,11 @@ namespace EldigmPlusApp.SubForm.Sys.Menu
                                 }
 
                                 if (reCnt > 0)
-                                    MessageBox.Show("저장 성공" + " : " + reCnt.ToString());
+                                    MessageBox.Show(wRM.GetString("wSave") + " " + wRM.GetString("wSuccess") + " : " + reCnt.ToString());
                                 else
-                                    MessageBox.Show("저장 실패");
+                                    MessageBox.Show(wRM.GetString("wSave") + " " + wRM.GetString("wFail"));
 
-                                SetDataBind_gridView1(codeGrp, tMenuCd, sMenuCd, menuCd);
+                                SetDataBind_gridView1(_codeGrp, _tMenuCd, _sMenuCd);
 
                             }
 
@@ -603,54 +568,23 @@ namespace EldigmPlusApp.SubForm.Sys.Menu
             }
         }
 
-        private string ChkDgv2ParamMenu()
+        private string ChkDgv2Param()
         {
             string reVal = "";
-            string tMenuCd = codeArr[1].ToString();
-            string sMenuCd = codeArr[2].ToString();
-            string menuCd = codeArr[3].ToString();
 
             try
             {
-                if (menuCd != null)
+                if (dataGridView2.Rows[0].Cells["dgv2_MENU_CD"].Value != null)
                 {
-                    if (menuCd == "")
+                    if (dataGridView2.Rows[0].Cells["dgv2_MENU_CD"].Value.ToString() == "")
                     {
-                        reVal = "메뉴코드";
+                        reVal = wRM.GetString("wMenu") + wRM.GetString("wCode");
                         return reVal;
                     }
                 }
                 else
                 {
-                    reVal = "메뉴코드";
-                    return reVal;
-                }
-
-                if (sMenuCd != null)
-                {
-                    if (sMenuCd == "")
-                    {
-                        reVal = "서브메뉴코드";
-                        return reVal;
-                    }
-                }
-                else
-                {
-                    reVal = "서브메뉴코드";
-                    return reVal;
-                }
-
-                if (tMenuCd != null)
-                {
-                    if (tMenuCd == "")
-                    {
-                        reVal = "탑메뉴코드";
-                        return reVal;
-                    }
-                }
-                else
-                {
-                    reVal = "탑메뉴코드";
+                    reVal = wRM.GetString("wMenu") + wRM.GetString("wCode");
                     return reVal;
                 }
 
@@ -658,21 +592,21 @@ namespace EldigmPlusApp.SubForm.Sys.Menu
                 {
                     if (dataGridView2.Rows[0].Cells["dgv2_NM"].Value.ToString() == "")
                     {
-                        reVal = "이름";
+                        reVal = wRM.GetString("wName");
                         return reVal;
                     }
                 }
                 else
                 {
-                    reVal = "이름";
+                    reVal = wRM.GetString("wName");
                     return reVal;
                 }
 
             }
             catch (Exception ex)
             {
-                reVal = "에러";
-                logs.SaveLog("[error]  (page)::FrmMenuSite.cs  (Function)::ChkDgv2ParamMenu  (Detail):: " + "\r\n" + ex.ToString(), "Error");
+                reVal = wRM.GetString("wError");
+                logs.SaveLog("[error]  (page)::FrmMenuSite.cs  (Function)::ChkDgv2Param  (Detail):: " + "\r\n" + ex.ToString(), "Error");
             }
 
             return reVal;
@@ -700,10 +634,6 @@ namespace EldigmPlusApp.SubForm.Sys.Menu
             string reCode = "";
             string reMsg = "";
             string reData = "";
-            string codeGrp = codeArr[0].ToString();
-            string tMenuCd = codeArr[1].ToString();
-            string sMenuCd = codeArr[2].ToString();
-            string menuCd = codeArr[3].ToString();
 
             try
             {
@@ -724,15 +654,14 @@ namespace EldigmPlusApp.SubForm.Sys.Menu
                 }
                 if (reCnt < 1)
                 {
-                    MessageBox.Show("선택된 데이터가 없습니다.");
+                    MessageBox.Show(msgRM.GetString("msgNotSelected"));
                     return;
                 }
 
                 reCnt = 0;
                 int reCnt2 = 0;
-                int reCnt3 = 0;
 
-                if (codeGrp == "3")
+                if (_codeGrp == "2")
                 {
                     for (int i = 0; i < dataGridView1.Rows.Count; i++)
                     {
@@ -762,22 +691,22 @@ namespace EldigmPlusApp.SubForm.Sys.Menu
 
                                 string pInputId = "1";
 
-                                reCode = wSvc.mMenu(tMenuCd, sMenuCd, menuCd_val, usingFlag_val, sortNo_val, menuPath_val, fileFolder_val, out reMsg, out reData);
+                                reCode = wSvc.mMenu(_tMenuCd, _sMenuCd, menuCd_val, usingFlag_val, sortNo_val, menuPath_val, fileFolder_val, out reMsg, out reData);
 
                                 if (reCode == "Y")
                                 {
-                                    reCode = wSvc.mMenuMemberDB(DBNM, cmbSite.SelectedValue.ToString(), menuCd_val, usingFlag_val, sortNo_val, memo_val, out reMsg, out reData);
+                                    reCode = wSvc.mMenuMemberDB(_DBNM, cmbSite.SelectedValue.ToString(), menuCd_val, usingFlag_val, sortNo_val, memo_val, out reMsg, out reData);
                                     if (Convert.ToInt16(reData) < 1)
                                     {
                                         if (usingFlag_val == "1")
                                         {
                                             //Member DB 업데이트 실패시 INSERT 해준다.
-                                            reCode = wSvc.aMenuMemberDB(DBNM, cmbSite.SelectedValue.ToString(), menuCd_val, tMenuCd, sMenuCd, pNm_val, usingFlag_val, sortNo_val, memo_val, pInputId, out reMsg, out reData);
+                                            reCode = wSvc.aMenuMemberDB(_DBNM, cmbSite.SelectedValue.ToString(), menuCd_val, _tMenuCd, _sMenuCd, pNm_val, usingFlag_val, sortNo_val, memo_val, pInputId, out reMsg, out reData);
 
                                         }
                                         else
                                         {
-                                            MessageBox.Show("사용을 눌러주세요.");
+                                            MessageBox.Show(msgRM.GetString("msgClickUsingFlagPlz"));
                                             return;
                                         }
                                     }
@@ -796,8 +725,8 @@ namespace EldigmPlusApp.SubForm.Sys.Menu
                         }
                     }
 
-                    MessageBox.Show("성공" + "[" + reCnt.ToString() + "], " + "실패" + "[" + reCnt2.ToString() + "], " + "보류(미사용)" + "[" + reCnt3.ToString() + "]");
-                    SetDataBind_gridView1(codeGrp, tMenuCd, sMenuCd, menuCd);
+                    MessageBox.Show(wRM.GetString("wSuccess") + "[" + reCnt.ToString() + "], " + wRM.GetString("wFail") + "[" + reCnt2.ToString() + "]");
+                    SetDataBind_gridView1(_codeGrp, _tMenuCd, _sMenuCd);
 
                 }
 
@@ -814,30 +743,12 @@ namespace EldigmPlusApp.SubForm.Sys.Menu
             }
         }
 
-
-
-        private void txtSearch_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            //if (e.KeyChar == '\r')
-            //{
-            //    btnSearch_Click(null, null);
-            //}
-        }
-
-        private void btnSearch_Click(object sender, EventArgs e)
-        {
-            //SetDataBind_gridView1("", "", "", "");
-        }
-
         private void cmbSite_SelectedIndexChanged(object sender, EventArgs e)
         {
-            //AppInfo.SsSiteCd = cmbSite.SelectedValue.ToString();
-            string codeGrp = codeArr[0].ToString();
-            string tMenuCd = codeArr[1].ToString();
-            string sMenuCd = codeArr[2].ToString();
-            string menuCd = codeArr[3].ToString();
-            SetDataBind_gridView1(codeGrp, tMenuCd, sMenuCd, menuCd);
+            SetDataBind_gridView1(_codeGrp, _tMenuCd, _sMenuCd);
         }
+
+
     }
 }
 

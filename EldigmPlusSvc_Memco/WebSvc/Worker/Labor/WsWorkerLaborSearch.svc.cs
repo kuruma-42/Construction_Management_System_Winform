@@ -19,8 +19,151 @@ namespace EldigmPlusSvc_Memco.WebSvc.Sys.Worker
         LogClass logs = new LogClass();
 
 
+        //Block CMB BOX 
+        public string sLaborBlockList(string pSiteCd, string pAuthCd, string pCcode, out List<DataComCombo> reList, out string reMsg)
+        {
+            string reCode = "N";
 
-        //DEVICE TYPE CMB BOX
+            DataSet ds = null;
+            BizLaborSearch bizSys = null;
+            try
+            {
+                bizSys = new BizLaborSearch();
+
+                try
+                {
+                    ds = bizSys.sLaborBlockList(pSiteCd, pAuthCd, pCcode);
+
+                    reMsg = "[검색 성공]";
+                    reCode = "Y";
+                }
+                catch (Exception ex)
+                {
+                    reMsg = "[검색 실패]" + ex.ToString();
+                    reCode = "N";
+                }
+            }
+            catch (Exception ex)
+            {
+                reMsg = "[검색 에러] :: " + ex.ToString();
+                reCode = "N";
+            }
+
+            List<DataComCombo> data = new List<DataComCombo>();
+            try
+            {
+                data = ListClass.ConvertDataTableToList<DataComCombo>(ds.Tables[0]);
+            }
+            catch (Exception ex)
+            {
+                logs.SaveLog("[error]  (page)::WsWorkerLaborSearch.svc  (Function)::sLaborConstList  (Detail)::ConvertDataTableToList " + "\r\n" + ex.ToString(), "Error");
+                reMsg += "/[List 에러]" + ex.ToString();
+                reCode = "N";
+            }
+
+            reList = data;
+
+            return reCode;
+        }
+
+
+        //Const CMB BOX 
+        public string sLaborConstList(string pSiteCd, string pAuthCd, string pCcode, out List<DataComCombo> reList, out string reMsg)
+        {
+            string reCode = "N";
+
+            DataSet ds = null;
+            BizLaborSearch bizSys = null;
+            try
+            {
+                bizSys = new BizLaborSearch();
+
+                try
+                {
+                    ds = bizSys.sLaborConstList(pSiteCd, pAuthCd, pCcode);
+
+                    reMsg = "[검색 성공]";
+                    reCode = "Y";
+                }
+                catch (Exception ex)
+                {
+                    reMsg = "[검색 실패]" + ex.ToString();
+                    reCode = "N";
+                }
+            }
+            catch (Exception ex)
+            {
+                reMsg = "[검색 에러] :: " + ex.ToString();
+                reCode = "N";
+            }
+
+            List<DataComCombo> data = new List<DataComCombo>();
+            try
+            {
+                data = ListClass.ConvertDataTableToList<DataComCombo>(ds.Tables[0]);
+            }
+            catch (Exception ex)
+            {
+                logs.SaveLog("[error]  (page)::WsWorkerLaborSearch.svc  (Function)::sLaborConstList  (Detail)::ConvertDataTableToList " + "\r\n" + ex.ToString(), "Error");
+                reMsg += "/[List 에러]" + ex.ToString();
+                reCode = "N";
+            }
+
+            reList = data;
+
+            return reCode;
+        }
+
+
+        //JOB CMB BOX 
+        public string sLaborJobList(string pSiteCd, out List<DataComCombo> reList, out string reMsg)
+        {
+            string reCode = "N";
+
+            DataSet ds = null;
+            BizLaborSearch bizSys = null;
+            try
+            {
+                bizSys = new BizLaborSearch();
+
+                try
+                {
+                    ds = bizSys.sLaborJobList(pSiteCd);
+
+                    reMsg = "[검색 성공]";
+                    reCode = "Y";
+                }
+                catch (Exception ex)
+                {
+                    reMsg = "[검색 실패]" + ex.ToString();
+                    reCode = "N";
+                }
+            }
+            catch (Exception ex)
+            {
+                reMsg = "[검색 에러] :: " + ex.ToString();
+                reCode = "N";
+            }
+
+            List<DataComCombo> data = new List<DataComCombo>();
+            try
+            {
+                data = ListClass.ConvertDataTableToList<DataComCombo>(ds.Tables[0]);
+            }
+            catch (Exception ex)
+            {
+                logs.SaveLog("[error]  (page)::WsWorkerLaborSearch.svc  (Function)::sLaborJobList  (Detail)::ConvertDataTableToList " + "\r\n" + ex.ToString(), "Error");
+                reMsg += "/[List 에러]" + ex.ToString();
+                reCode = "N";
+            }
+
+            reList = data;
+
+            return reCode;
+        }
+
+
+        //COMPANY CMB BOX 
         public string sLaborCompanyList(string pSiteCd, string pAuthCd, string pCoCd, out List<DataComCombo> reList, out string reMsg)
         {
             string reCode = "N";
@@ -68,8 +211,10 @@ namespace EldigmPlusSvc_Memco.WebSvc.Sys.Worker
         }
 
 
-        //SELECT 
-        public string sLaborSearch(string pSiteCd, string pCoCd, out List<DataLaborSearch> reList, out string reMsg)
+
+
+        //COMPANY CMB BOX 
+        public string sLaborTeamList(string pSiteCd, string pAuthCd, string pTeamCd, string pCoCd, out List<DataComCombo> reList, out string reMsg)
         {
             string reCode = "N";
 
@@ -81,7 +226,55 @@ namespace EldigmPlusSvc_Memco.WebSvc.Sys.Worker
 
                 try
                 {
-                    ds = bizSys.sLaborSearch(pSiteCd, pCoCd);
+                    ds = bizSys.sLaborTeamList(pSiteCd, pAuthCd, pTeamCd, pCoCd);
+
+                    reMsg = "[검색 성공]";
+                    reCode = "Y";
+                }
+                catch (Exception ex)
+                {
+                    reMsg = "[검색 실패]" + ex.ToString();
+                    reCode = "N";
+                }
+            }
+            catch (Exception ex)
+            {
+                reMsg = "[검색 에러] :: " + ex.ToString();
+                reCode = "N";
+            }
+
+            List<DataComCombo> data = new List<DataComCombo>();
+            try
+            {
+                data = ListClass.ConvertDataTableToList<DataComCombo>(ds.Tables[0]);
+            }
+            catch (Exception ex)
+            {
+                logs.SaveLog("[error]  (page)::WsWorkerLaborSearch.svc  (Function)::sLaborTeamList  (Detail)::ConvertDataTableToList " + "\r\n" + ex.ToString(), "Error");
+                reMsg += "/[List 에러]" + ex.ToString();
+                reCode = "N";
+            }
+
+            reList = data;
+
+            return reCode;
+        }
+
+
+        //SELECT 
+        public string sLaborSearch(string pSiteCd, string pBlockCcd, string pConstCcd, string pCoCd, string pTeamCd, string pSearchCondition, string pSearchTxt, out List<DataLaborSearch> reList, out string reMsg)
+        {
+            string reCode = "N";
+
+            DataSet ds = null;
+            BizLaborSearch bizSys = null;
+            try
+            {
+                bizSys = new BizLaborSearch();
+
+                try
+                {
+                    ds = bizSys.sLaborSearch(pSiteCd, pBlockCcd, pConstCcd, pCoCd, pTeamCd, pSearchCondition, pSearchTxt);
 
                     reMsg = "[검색 성공]";
                     reCode = "Y";
@@ -114,292 +307,5 @@ namespace EldigmPlusSvc_Memco.WebSvc.Sys.Worker
 
             return reCode;
         }
-
-
-
-
-
-
-
-
-
-
-
-        //DEVICE TYPE CMB BOX
-        public string devTypeCmb(out List<DataDevCombo> reList, out string reMsg)
-        {
-            string reCode = "N";
-
-            DataSet ds = null;
-            BizDevice bizSys = null;
-            try
-            {
-                bizSys = new BizDevice();
-
-                try
-                {
-                    ds = bizSys.devTypeCmb();
-
-                    reMsg = "[검색 성공]";
-                    reCode = "Y";
-                }
-                catch (Exception ex)
-                {
-                    reMsg = "[검색 실패]" + ex.ToString();
-                    reCode = "N";
-                }
-            }
-            catch (Exception ex)
-            {
-                reMsg = "[검색 에러] :: " + ex.ToString();
-                reCode = "N";
-            }
-
-            List<DataDevCombo> data = new List<DataDevCombo>();
-            try
-            {
-                data = ListClass.ConvertDataTableToList<DataDevCombo>(ds.Tables[0]);
-            }
-            catch (Exception ex)
-            {
-                logs.SaveLog("[error]  (page)::WsDevice.svc  (Function)::devTypeCmb  (Detail)::ConvertDataTableToList " + "\r\n" + ex.ToString(), "Error");
-                reMsg += "/[List 에러]" + ex.ToString();
-                reCode = "N";
-            }
-
-            reList = data;
-
-            return reCode;
-        }
-
-        //DEVICE I/O CMB BOX
-        public string devIOCmb(out List<DataDevCombo> reList, out string reMsg)
-        {
-            string reCode = "N";
-
-            DataSet ds = null;
-            BizDevice bizSys = null;
-            try
-            {
-                bizSys = new BizDevice();
-
-                try
-                {
-                    ds = bizSys.devIOCmb();
-
-                    reMsg = "[검색 성공]";
-                    reCode = "Y";
-                }
-                catch (Exception ex)
-                {
-                    reMsg = "[검색 실패]" + ex.ToString();
-                    reCode = "N";
-                }
-            }
-            catch (Exception ex)
-            {
-                reMsg = "[검색 에러] :: " + ex.ToString();
-                reCode = "N";
-            }
-
-            List<DataDevCombo> data = new List<DataDevCombo>();
-            try
-            {
-                data = ListClass.ConvertDataTableToList<DataDevCombo>(ds.Tables[0]);
-            }
-            catch (Exception ex)
-            {
-                logs.SaveLog("[error]  (page)::WsSysCompanyTeam.svc  (Function)::cotype_Cmb2  (Detail)::ConvertDataTableToList " + "\r\n" + ex.ToString(), "Error");
-                reMsg += "/[List 에러]" + ex.ToString();
-                reCode = "N";
-            }
-
-            reList = data;
-
-            return reCode;
-        }
-
-
-        //SELECT 
-        public string sDevice(string pDbNm, string pSiteCd, out List<DataDevice> reList, out string reMsg)
-        {
-            string reCode = "N";
-
-            DataSet ds = null;
-            BizDevice bizSys = null;
-            try
-            {
-                bizSys = new BizDevice();
-
-                try
-                {
-                    ds = bizSys.sDevice(pDbNm, pSiteCd);
-
-                    reMsg = "[검색 성공]";
-                    reCode = "Y";
-                }
-                catch (Exception ex)
-                {
-                    reMsg = "[검색 실패]" + ex.ToString();
-                    reCode = "N";
-                }
-            }
-            catch (Exception ex)
-            {
-                reMsg = "[검색 에러] :: " + ex.ToString();
-                reCode = "N";
-            }
-
-            List<DataDevice> data = new List<DataDevice>();
-            try
-            {
-                data = ListClass.ConvertDataTableToList<DataDevice>(ds.Tables[0]);
-            }
-            catch (Exception ex)
-            {
-                logs.SaveLog("[error]  (page)::WsDevice.svc  (Function)::sDevice  (Detail)::ConvertDataTableToList " + "\r\n" + ex.ToString(), "Error");
-                reMsg += "/[List 에러]" + ex.ToString();
-                reCode = "N";
-            }
-
-            reList = data;
-
-            return reCode;
-        }
-
-
-
-        //MODIFY
-        public string mDevice(string pDbNm, string pSiteCd, string pDevCd, string pDeviceId, string pDevTypeScd, string pDevIOScd, string pDevNm, string pIp, string pSortNo, string pUsingFalg, string pMemo, out string reMsg, out string reData)
-        {
-            string reCode = "N";
-            reData = "0";
-
-            BizDevice bizSys = null;
-            try
-            {
-                bizSys = new BizDevice();
-
-                int reCnt = bizSys.mDevice(pDbNm, pSiteCd, pDevCd, pDeviceId, pDevTypeScd, pDevIOScd, pDevNm, pIp, pSortNo, pUsingFalg, pMemo);
-
-                if (reCnt > 0)
-                {
-                    reMsg = "[저장 성공]";
-                    reCode = "Y";
-                    reData = reCnt.ToString();
-                }
-                else
-                {
-                    reMsg = "[저장 성공] - 정보 없음";
-                    reCode = "Y";
-                }
-            }
-            catch (Exception ex)
-            {
-                logs.SaveLog("[error]  (page)::WsDevice.svc  (Function)::mDevice  (Detail)::" + "\r\n" + ex.ToString(), "Error");
-                reMsg = "[저장 에러] :: " + ex.ToString();
-                reCode = "N";
-            }
-
-            return reCode;
-        }
-
-        //INSERT WITH PROCEDURE
-        public string aDevicePro(string pDbNm, string[] param, out string reData, out string reMsg)
-        {
-            string reCode = "N";
-
-            string reVal = "";
-            BizDevice bizSys = null;
-            try
-            {
-                bizSys = new BizDevice();
-
-                try
-                {
-                    Hashtable hParam = new Hashtable();
-                    hParam.Add("pSiteCd", Convert.ToInt32(param[0]));
-                    hParam.Add("pDeviceId", Convert.ToInt32(param[1]));
-                    hParam.Add("pDevTypeScd", param[2].ToString());
-                    hParam.Add("pDevIOScd", param[3].ToString());
-                    hParam.Add("pDevNm", param[4].ToString());
-                    hParam.Add("pIp", param[5].ToString());
-                    hParam.Add("pUsingFlag", Convert.ToInt32(param[6]));
-                    hParam.Add("pSortNo", Convert.ToInt32(param[7]));
-                    hParam.Add("pMemo", param[8].ToString());
-                    hParam.Add("pUserId", Convert.ToInt32(param[9]));
-
-                    hParam.Add("@rtnDevCd", "");
-
-                    reVal = bizSys.aDevicePro(pDbNm, hParam, out Hashtable outVal);
-
-                    if (outVal != null)
-                    {
-                        foreach (DictionaryEntry dictionaryEntry in outVal)
-                        {
-                            string[] row = new string[] { dictionaryEntry.Key.ToString(), dictionaryEntry.Value.ToString(), "" };
-                            //string rowCount = row.Length.ToString();
-                            //string rowKey = row[0].ToString();
-                            reVal = row[1].ToString();
-                        }
-                    }
-
-                    reMsg = "[검색 성공]";
-                    reCode = "Y";
-                }
-                catch (Exception ex)
-                {
-                    reMsg = "[검색 실패]" + ex.ToString();
-                    reCode = "N";
-                }
-            }
-            catch (Exception ex)
-            {
-                reMsg = "[검색 에러 - BizSystem 연결 실패] :: " + ex.ToString();
-                reCode = "N";
-            }
-
-            reData = reVal;
-
-            return reCode;
-        }
-
-
-        //LOG
-        public string logDevice(string pDbNm, string pDevCd, string pSiteCd, string pDeviceId, string pDevTypeScd, string pDevIOScd, string pDevNm, string pIp, string pUsingFalg, string pSortNo, string pMemo, string pInputId, out string reMsg, out string reData)
-        {
-            string reCode = "N";
-            reData = "";
-
-            BizDevice bizSys = null;
-            try
-            {
-                bizSys = new BizDevice();
-
-                int reCnt = bizSys.logDevice(pDbNm, pDevCd, pSiteCd, pDeviceId, pDevTypeScd, pDevIOScd, pDevNm, pIp, pUsingFalg, pSortNo, pMemo, pInputId);
-
-                if (reCnt > 0)
-                {
-                    reMsg = "[저장 성공]";
-                    reCode = "Y";
-                    reData = reCnt.ToString();
-                }
-                else
-                {
-                    reMsg = "[저장 성공] - 정보 없음";
-                    reCode = "Y";
-                }
-            }
-            catch (Exception ex)
-            {
-                logs.SaveLog("[error]  (page)::WsDevice.svc  (Function)::logDevice  (Detail)::" + "\r\n" + ex.ToString(), "Error");
-                reMsg = "[저장 에러] :: " + ex.ToString();
-                reCode = "N";
-            }
-
-            return reCode;
-        }
-
-
     }
 }

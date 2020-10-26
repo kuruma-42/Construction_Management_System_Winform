@@ -12,11 +12,12 @@ namespace EldigmPlusApp.SubForm.Sys.Menu
     public partial class FrmMenuSetAuthSite : Form
     {
         LogUtil logs = null;
-        ResourceManager lngRM = null;
+        ResourceManager wRM = null;
         ResourceManager msgRM = null;
 
-        string _topMenuCd = "";
-        string[] codeArr = { "2", "1", "0", "0" };
+        string _codeGrp = "";
+        string _tMenuCd = "";
+        string _sMenuCd = "";
         string _dbNm = "";
 
         public FrmMenuSetAuthSite()
@@ -30,26 +31,21 @@ namespace EldigmPlusApp.SubForm.Sys.Menu
             try
             {
                 logs = new LogUtil();
-                lngRM = new ResourceManager("EldigmPlusApp.strLanguage", typeof(FrmMenuSetAuthSite).Assembly);
-                msgRM = new ResourceManager("EldigmPlusApp.msgLanguage", typeof(FrmMenuSetAuthSite).Assembly);
+                wRM = new ResourceManager("EldigmPlusApp.GlobalLanguage.word_Language", typeof(FrmMenuSetAuthSite).Assembly);
+                msgRM = new ResourceManager("EldigmPlusApp.GlobalLanguage.msg_Language", typeof(FrmMenuSetAuthSite).Assembly);
 
-                //btnSearch.Text = lngRM.GetString("lngSearch");
-                btnSave.Text = "저장";
+                btnSave.Text = wRM.GetString("wSave");
 
-                dataGridView1.Columns["dgv1_CHK"].HeaderText = "선택";
-                dataGridView1.Columns["dgv1_MENU_CD"].HeaderText = "메뉴코드";
-                dataGridView1.Columns["dgv1_NM"].HeaderText = "이름";
-                dataGridView1.Columns["dgv1_VIEW_FLAG"].HeaderText = "보기";
-                dataGridView1.Columns["dgv1_NEW_FLAG"].HeaderText = "추가";
-                dataGridView1.Columns["dgv1_MODIFY_FLAG"].HeaderText = "수정";
-                dataGridView1.Columns["dgv1_DEL_FLAG"].HeaderText = "삭제";
-                dataGridView1.Columns["dgv1_REPORT_FLAG"].HeaderText = "보고서";
-                dataGridView1.Columns["dgv1_PRINT_FLAG"].HeaderText = "프린트";
-                dataGridView1.Columns["dgv1_DOWNLOAD_FLAG"].HeaderText = "다운로드";
-
-                //dataGridView2.Columns["dgv2_MENU_CD"].HeaderCell.Style.ForeColor = Color.Maroon; // 헤더 필수 항목 빨강색
-                //dataGridView2.Columns["dgv2_SUB_MENU_CD"].HeaderCell.Style.ForeColor = Color.Maroon; // 헤더 필수 항목 빨강색
-                //dataGridView2.Columns["dgv2_TOP_MENU_CD"].HeaderCell.Style.ForeColor = Color.Maroon; // 헤더 필수 항목 빨강색
+                dataGridView1.Columns["dgv1_CHK"].HeaderText = wRM.GetString("wSelect");
+                dataGridView1.Columns["dgv1_MENU_CD"].HeaderText = wRM.GetString("wMenu") + wRM.GetString("wCode");
+                dataGridView1.Columns["dgv1_NM"].HeaderText = wRM.GetString("wName");
+                dataGridView1.Columns["dgv1_VIEW_FLAG"].HeaderText = wRM.GetString("wView");
+                dataGridView1.Columns["dgv1_NEW_FLAG"].HeaderText = wRM.GetString("wAdd");
+                dataGridView1.Columns["dgv1_MODIFY_FLAG"].HeaderText = wRM.GetString("wModify");
+                dataGridView1.Columns["dgv1_DEL_FLAG"].HeaderText = wRM.GetString("wDelete");
+                dataGridView1.Columns["dgv1_REPORT_FLAG"].HeaderText = wRM.GetString("wReport");
+                dataGridView1.Columns["dgv1_PRINT_FLAG"].HeaderText = wRM.GetString("wPrint");
+                dataGridView1.Columns["dgv1_DOWNLOAD_FLAG"].HeaderText = wRM.GetString("wDownload");
 
                 Control.CheckForIllegalCrossThreadCalls = false;
 
@@ -226,25 +222,6 @@ namespace EldigmPlusApp.SubForm.Sys.Menu
                 treeView1.ImageList = myimageList;
                 treeView1.ImageIndex = 0;
 
-                //TreeNode root = new TreeNode();
-                //root.Tag = "";
-                //root.Text = "전체";
-
-                //reCode = wSvc.sMenuTopTreeView(out getData1, out reMsg);
-                //if (reCode == "Y")
-                //{
-                //    if (getData1 != null && getData1.Length > 0)
-                //    {
-                //        for (int i = 0; i < getData1.Length; i++)
-                //        {
-                //            string tmenuCd_val = getData1[i].TOP_MENU_CD.ToString();
-                //            string tmenuNm_val = getData1[i].TOP_MENU_NM.ToString();
-
-                //            TreeNode root = new TreeNode();
-                //            root.Tag = "2-" + tmenuCd_val + "-0" + "-0";
-                //            root.Text = tmenuNm_val;
-
-                //root.Nodes.Add(node1);
                 string tmenuCd_val = cmbMenuTop.SelectedValue.ToString();
 
                 reCode = wSvc.sMenuSubTreeView(tmenuCd_val, out getData2, out reMsg);
@@ -258,7 +235,7 @@ namespace EldigmPlusApp.SubForm.Sys.Menu
                             string smenuNm_val = getData2[j].SUB_MENU_NM.ToString();
 
                             TreeNode node2 = new TreeNode();
-                            node2.Tag = "3-" + tmenuCd_val + "-" + smenuCd_val + "-0";
+                            node2.Tag = "1-" + tmenuCd_val + "-" + smenuCd_val;
                             node2.Text = smenuNm_val;
 
                             treeView1.Nodes.Add(node2);
@@ -270,10 +247,7 @@ namespace EldigmPlusApp.SubForm.Sys.Menu
                 if (treeView1.Nodes.Count > 0)
                     treeView1.SelectedNode = treeView1.GetNodeAt(0, 0);
 
-                //}
                 treeView1.ExpandAll();
-                //        }
-                //    }
 
 
             }
@@ -301,28 +275,13 @@ namespace EldigmPlusApp.SubForm.Sys.Menu
                 eNodeTag = e.Node.Tag.ToString();
                 lblName.Text = "** " + e.Node.Text;
 
-                codeArr = eNodeTag.Split('-');
+                string[] codeArr = eNodeTag.Split('-');
 
-                string codeGrp = codeArr[0].ToString();
-                string tMenuCd = codeArr[1].ToString();
-                string sMenuCd = codeArr[2].ToString();
-                string menuCd = codeArr[3].ToString();
+                _codeGrp = codeArr[0].ToString();
+                _tMenuCd = codeArr[1].ToString();
+                _sMenuCd = codeArr[2].ToString();
 
-                if (tMenuCd == "0")
-                {
-                    tMenuCd = null;
-                }
-                if (sMenuCd == "0")
-                {
-                    sMenuCd = null;
-                }
-                if (menuCd == "0")
-                {
-                    menuCd = null;
-                }
-
-                //SetDataBind_gridView1(codeArr[0].ToString(), codeArr[1].ToString(), codeArr[2].ToString(), codeArr[3].ToString());
-                SetDataBind_gridView1(codeGrp, tMenuCd, sMenuCd, menuCd);
+                SetDataBind_gridView1(_codeGrp, _tMenuCd, _sMenuCd);
 
             }
             catch (Exception ex)
@@ -331,7 +290,7 @@ namespace EldigmPlusApp.SubForm.Sys.Menu
             }
         }
 
-        private void SetDataBind_gridView1(string code_grp, string tmenuCd, string smenuCd, string menuCd)
+        private void SetDataBind_gridView1(string code_grp, string tmenuCd, string smenuCd)
         {
             M_WsMenuMainDB.WsMenuMainDB wSvc = null;
             string reCode = "";
@@ -344,7 +303,7 @@ namespace EldigmPlusApp.SubForm.Sys.Menu
                 wSvc.Url = "http://" + AppInfo.SsWsvcServer2 + "/WebSvc/Sys/Menu/WsMenuMainDB.svc";
                 wSvc.Timeout = 1000;
 
-                if (code_grp == "3")
+                if (code_grp == "1")
                 {
                     reCode = wSvc.sSetAuthSiteMemberDB(_dbNm, AppInfo.SsSiteCd, tmenuCd, smenuCd, cmbSite.SelectedValue.ToString(), out getData, out reMsg);
 
@@ -384,7 +343,7 @@ namespace EldigmPlusApp.SubForm.Sys.Menu
             }
             catch (Exception ex)
             {
-                logs.SaveLog("[error]  (page)::FrmMenuSetAuthSite.cs  (Function)::SetDataBind_gridView1  (Detail)::pScodeGrp=[" + _topMenuCd + "]", "Error");
+                logs.SaveLog("[error]  (page)::FrmMenuSetAuthSite.cs  (Function)::SetDataBind_gridView1  (Detail)::code_grp=[" + code_grp + "], tmenuCd=[" + tmenuCd + "], smenuCd=[" + smenuCd + "]", "Error");
                 logs.SaveLog("[error]  (page)::FrmMenuSetAuthSite.cs  (Function)::SetDataBind_gridView1  (Detail)::reMsg=[" + reMsg + "]", "Error");
                 logs.SaveLog("[error]  (page)::FrmMenuSetAuthSite.cs  (Function)::SetDataBind_gridView1  (Detail):: " + "\r\n" + ex.ToString(), "Error");
             }
@@ -474,10 +433,6 @@ namespace EldigmPlusApp.SubForm.Sys.Menu
             string reCode = "";
             string reMsg = "";
             string reData = "";
-            string codeGrp = codeArr[0].ToString();
-            string tMenuCd = codeArr[1].ToString();
-            string sMenuCd = codeArr[2].ToString();
-            string menuCd = codeArr[3].ToString();
 
             try
             {
@@ -498,15 +453,14 @@ namespace EldigmPlusApp.SubForm.Sys.Menu
                 }
                 if (reCnt < 1)
                 {
-                    MessageBox.Show("선택된 데이터가 없습니다.");
+                    MessageBox.Show(msgRM.GetString("msgNotSelected"));
                     return;
                 }
 
                 reCnt = 0;
                 int reCnt2 = 0;
-                //int reCnt3 = 0;
 
-                if (codeGrp == "3")
+                if (_codeGrp == "1")
                 {
                     for (int i = 0; i < dataGridView1.Rows.Count; i++)
                     {
@@ -546,8 +500,8 @@ namespace EldigmPlusApp.SubForm.Sys.Menu
                         }
                     }
 
-                    MessageBox.Show("성공" + "[" + reCnt.ToString() + "], " + "실패" + "[" + reCnt2.ToString() + "]");
-                    SetDataBind_gridView1(codeGrp, tMenuCd, sMenuCd, menuCd);
+                    MessageBox.Show(wRM.GetString("wSuccess") + "[" + reCnt.ToString() + "], " + wRM.GetString("wFail") + "[" + reCnt2.ToString() + "]");
+                    SetDataBind_gridView1(_codeGrp, _tMenuCd, _sMenuCd);
 
                 }
 
@@ -564,36 +518,15 @@ namespace EldigmPlusApp.SubForm.Sys.Menu
             }
         }
 
-        private void txtSearch_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            //if (e.KeyChar == '\r')
-            //{
-            //    btnSearch_Click(null, null);
-            //}
-        }
-
-        private void btnSearch_Click(object sender, EventArgs e)
-        {
-            //SetDataBind_gridView1("", "", "", "");
-        }
-
         private void cmbSite_SelectedIndexChanged(object sender, EventArgs e)
         {
-            string codeGrp = codeArr[0].ToString();
-            string tMenuCd = codeArr[1].ToString();
-            string sMenuCd = codeArr[2].ToString();
-            string menuCd = codeArr[3].ToString();
-            SetDataBind_gridView1(codeGrp, tMenuCd, sMenuCd, menuCd);
+            SetDataBind_gridView1(_codeGrp, _tMenuCd, _sMenuCd);
         }
 
         private void cmbMenuTop_SelectedIndexChanged(object sender, EventArgs e)
         {
             SetDataBind_treeView1();
-            string codeGrp = codeArr[0].ToString();
-            string tMenuCd = codeArr[1].ToString();
-            string sMenuCd = codeArr[2].ToString();
-            string menuCd = codeArr[3].ToString();
-            SetDataBind_gridView1(codeGrp, tMenuCd, sMenuCd, menuCd);
+            SetDataBind_gridView1(_codeGrp, _tMenuCd, _sMenuCd);
         }
     }
 }

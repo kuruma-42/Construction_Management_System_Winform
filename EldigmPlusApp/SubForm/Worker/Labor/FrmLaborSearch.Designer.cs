@@ -28,28 +28,25 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnSave = new System.Windows.Forms.Button();
             this.splitContainer3 = new System.Windows.Forms.SplitContainer();
-            this.cmbCom = new System.Windows.Forms.ComboBox();
+            this.btnSearch = new System.Windows.Forms.Button();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.dgv1_CHK = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.dgv1_LAB_NO = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgv1_USER_NO = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgv1_LAB_NM = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgv1_BIRTH_DATE = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgv1_MOBILE_NO = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgv1_FACE_PHOTO = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgv1_CO_CD = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgv1_TEAM_CD = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgv1_JOB_CCD = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgv1_BLOCK_CCD = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgv1_LAB_STS = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgv1_AUTH_CD = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnAdd = new System.Windows.Forms.Button();
+            this.searchCondition11 = new EldigmPlusApp_UserControl.SearchCondition1();
+            this.dgv1_AUTH_CD = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgv1_USER_NO = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgv1_MOBILE_NO = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgv1_BIRTH_DATE = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgv1_TEAM_NM = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgv1_JOB_NM = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgv1_LAB_NM = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgv1_CO_NM = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgv1_LAB_NO = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgv1_CHK = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer3)).BeginInit();
             this.splitContainer3.Panel1.SuspendLayout();
-            this.splitContainer3.Panel2.SuspendLayout();
             this.splitContainer3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -57,15 +54,6 @@
             this.splitContainer1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // btnSave
-            // 
-            this.btnSave.Location = new System.Drawing.Point(3, 12);
-            this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(75, 23);
-            this.btnSave.TabIndex = 1;
-            this.btnSave.Text = "Save";
-            this.btnSave.UseVisualStyleBackColor = true;
             // 
             // splitContainer3
             // 
@@ -75,24 +63,24 @@
             // 
             // splitContainer3.Panel1
             // 
-            this.splitContainer3.Panel1.Controls.Add(this.cmbCom);
-            // 
-            // splitContainer3.Panel2
-            // 
-            this.splitContainer3.Panel2.Controls.Add(this.btnSave);
-            this.splitContainer3.Size = new System.Drawing.Size(1037, 40);
+            this.splitContainer3.Panel1.Controls.Add(this.btnAdd);
+            this.splitContainer3.Panel1.Controls.Add(this.searchCondition11);
+            this.splitContainer3.Panel1.Controls.Add(this.btnSearch);
+            this.splitContainer3.Size = new System.Drawing.Size(1037, 75);
             this.splitContainer3.SplitterDistance = 817;
             this.splitContainer3.TabIndex = 0;
             // 
-            // cmbCom
+            // btnSearch
             // 
-            this.cmbCom.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbCom.FormattingEnabled = true;
-            this.cmbCom.Location = new System.Drawing.Point(12, 12);
-            this.cmbCom.Name = "cmbCom";
-            this.cmbCom.Size = new System.Drawing.Size(170, 20);
-            this.cmbCom.TabIndex = 5;
-            this.cmbCom.SelectedIndexChanged += new System.EventHandler(this.cmbCom_SelectedIndexChanged);
+            this.btnSearch.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.btnSearch.Location = new System.Drawing.Point(542, 14);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(120, 20);
+            this.btnSearch.TabIndex = 7;
+            this.btnSearch.Text = "Search";
+            this.btnSearch.UseVisualStyleBackColor = true;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
+            this.btnSearch.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.btnSearch_KeyPress);
             // 
             // splitContainer1
             // 
@@ -111,34 +99,99 @@
             this.splitContainer1.Panel2.Controls.Add(this.dataGridView1);
             this.splitContainer1.Panel2.Controls.Add(this.panel1);
             this.splitContainer1.Size = new System.Drawing.Size(1037, 601);
-            this.splitContainer1.SplitterDistance = 40;
+            this.splitContainer1.SplitterDistance = 75;
             this.splitContainer1.TabIndex = 2;
             // 
-            // dataGridView1
+            // panel1
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dgv1_CHK,
-            this.dgv1_LAB_NO,
-            this.dgv1_USER_NO,
-            this.dgv1_LAB_NM,
-            this.dgv1_BIRTH_DATE,
-            this.dgv1_MOBILE_NO,
-            this.dgv1_FACE_PHOTO,
-            this.dgv1_CO_CD,
-            this.dgv1_TEAM_CD,
-            this.dgv1_JOB_CCD,
-            this.dgv1_BLOCK_CCD,
-            this.dgv1_LAB_STS,
-            this.dgv1_AUTH_CD});
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 25);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowTemplate.Height = 23;
-            this.dataGridView1.Size = new System.Drawing.Size(1037, 532);
-            this.dataGridView1.TabIndex = 4;
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1037, 25);
+            this.panel1.TabIndex = 0;
+            // 
+            // btnAdd
+            // 
+            this.btnAdd.Location = new System.Drawing.Point(668, 14);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(120, 20);
+            this.btnAdd.TabIndex = 5;
+            this.btnAdd.Text = "Add";
+            this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
+            // 
+            // searchCondition11
+            // 
+            this.searchCondition11.Location = new System.Drawing.Point(0, 0);
+            this.searchCondition11.Name = "searchCondition11";
+            this.searchCondition11.Size = new System.Drawing.Size(536, 80);
+            this.searchCondition11.TabIndex = 8;
+            // 
+            // dgv1_AUTH_CD
+            // 
+            this.dgv1_AUTH_CD.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dgv1_AUTH_CD.HeaderText = "AUTH_CD";
+            this.dgv1_AUTH_CD.MinimumWidth = 100;
+            this.dgv1_AUTH_CD.Name = "dgv1_AUTH_CD";
+            // 
+            // dgv1_USER_NO
+            // 
+            this.dgv1_USER_NO.HeaderText = "USER_NO";
+            this.dgv1_USER_NO.MinimumWidth = 100;
+            this.dgv1_USER_NO.Name = "dgv1_USER_NO";
+            // 
+            // dgv1_MOBILE_NO
+            // 
+            this.dgv1_MOBILE_NO.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dgv1_MOBILE_NO.HeaderText = "MOBILE_NO";
+            this.dgv1_MOBILE_NO.MinimumWidth = 100;
+            this.dgv1_MOBILE_NO.Name = "dgv1_MOBILE_NO";
+            // 
+            // dgv1_BIRTH_DATE
+            // 
+            this.dgv1_BIRTH_DATE.HeaderText = "BIRTH_DATE";
+            this.dgv1_BIRTH_DATE.MinimumWidth = 150;
+            this.dgv1_BIRTH_DATE.Name = "dgv1_BIRTH_DATE";
+            this.dgv1_BIRTH_DATE.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv1_BIRTH_DATE.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.dgv1_BIRTH_DATE.Width = 150;
+            // 
+            // dgv1_TEAM_NM
+            // 
+            this.dgv1_TEAM_NM.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dgv1_TEAM_NM.HeaderText = "TEAM_NM";
+            this.dgv1_TEAM_NM.MinimumWidth = 150;
+            this.dgv1_TEAM_NM.Name = "dgv1_TEAM_NM";
+            // 
+            // dgv1_JOB_NM
+            // 
+            this.dgv1_JOB_NM.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dgv1_JOB_NM.HeaderText = "JOB_NM";
+            this.dgv1_JOB_NM.MinimumWidth = 100;
+            this.dgv1_JOB_NM.Name = "dgv1_JOB_NM";
+            // 
+            // dgv1_LAB_NM
+            // 
+            this.dgv1_LAB_NM.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dgv1_LAB_NM.HeaderText = "LAB_NM";
+            this.dgv1_LAB_NM.MinimumWidth = 150;
+            this.dgv1_LAB_NM.Name = "dgv1_LAB_NM";
+            this.dgv1_LAB_NM.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv1_LAB_NM.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // dgv1_CO_NM
+            // 
+            this.dgv1_CO_NM.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dgv1_CO_NM.HeaderText = "CO_NM";
+            this.dgv1_CO_NM.MinimumWidth = 150;
+            this.dgv1_CO_NM.Name = "dgv1_CO_NM";
+            // 
+            // dgv1_LAB_NO
+            // 
+            this.dgv1_LAB_NO.HeaderText = "LAB_NO";
+            this.dgv1_LAB_NO.MinimumWidth = 100;
+            this.dgv1_LAB_NO.Name = "dgv1_LAB_NO";
+            this.dgv1_LAB_NO.ReadOnly = true;
             // 
             // dgv1_CHK
             // 
@@ -151,86 +204,30 @@
             this.dgv1_CHK.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.dgv1_CHK.TrueValue = "1";
             // 
-            // dgv1_LAB_NO
+            // dataGridView1
             // 
-            this.dgv1_LAB_NO.HeaderText = "LAB_NO";
-            this.dgv1_LAB_NO.MinimumWidth = 100;
-            this.dgv1_LAB_NO.Name = "dgv1_LAB_NO";
-            this.dgv1_LAB_NO.ReadOnly = true;
-            // 
-            // dgv1_USER_NO
-            // 
-            this.dgv1_USER_NO.HeaderText = "USER_NO";
-            this.dgv1_USER_NO.MinimumWidth = 100;
-            this.dgv1_USER_NO.Name = "dgv1_USER_NO";
-            // 
-            // dgv1_LAB_NM
-            // 
-            this.dgv1_LAB_NM.HeaderText = "LAB_NM";
-            this.dgv1_LAB_NM.MinimumWidth = 150;
-            this.dgv1_LAB_NM.Name = "dgv1_LAB_NM";
-            this.dgv1_LAB_NM.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv1_LAB_NM.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.dgv1_LAB_NM.Width = 150;
-            // 
-            // dgv1_BIRTH_DATE
-            // 
-            this.dgv1_BIRTH_DATE.HeaderText = "BIRTH_DATE";
-            this.dgv1_BIRTH_DATE.MinimumWidth = 150;
-            this.dgv1_BIRTH_DATE.Name = "dgv1_BIRTH_DATE";
-            this.dgv1_BIRTH_DATE.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv1_BIRTH_DATE.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.dgv1_BIRTH_DATE.Width = 150;
-            // 
-            // dgv1_MOBILE_NO
-            // 
-            this.dgv1_MOBILE_NO.HeaderText = "MOBILE_NO";
-            this.dgv1_MOBILE_NO.Name = "dgv1_MOBILE_NO";
-            // 
-            // dgv1_FACE_PHOTO
-            // 
-            this.dgv1_FACE_PHOTO.HeaderText = "FACE_PHOTO";
-            this.dgv1_FACE_PHOTO.Name = "dgv1_FACE_PHOTO";
-            // 
-            // dgv1_CO_CD
-            // 
-            this.dgv1_CO_CD.HeaderText = "CO_CD";
-            this.dgv1_CO_CD.Name = "dgv1_CO_CD";
-            // 
-            // dgv1_TEAM_CD
-            // 
-            this.dgv1_TEAM_CD.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dgv1_TEAM_CD.HeaderText = "TEAM_CD";
-            this.dgv1_TEAM_CD.MinimumWidth = 150;
-            this.dgv1_TEAM_CD.Name = "dgv1_TEAM_CD";
-            // 
-            // dgv1_JOB_CCD
-            // 
-            this.dgv1_JOB_CCD.HeaderText = "JOB_CCD";
-            this.dgv1_JOB_CCD.Name = "dgv1_JOB_CCD";
-            // 
-            // dgv1_BLOCK_CCD
-            // 
-            this.dgv1_BLOCK_CCD.HeaderText = "BLOCK_CCD";
-            this.dgv1_BLOCK_CCD.Name = "dgv1_BLOCK_CCD";
-            // 
-            // dgv1_LAB_STS
-            // 
-            this.dgv1_LAB_STS.HeaderText = "LAB_STS";
-            this.dgv1_LAB_STS.Name = "dgv1_LAB_STS";
-            // 
-            // dgv1_AUTH_CD
-            // 
-            this.dgv1_AUTH_CD.HeaderText = "AUTH_CD";
-            this.dgv1_AUTH_CD.Name = "dgv1_AUTH_CD";
-            // 
-            // panel1
-            // 
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1037, 25);
-            this.panel1.TabIndex = 0;
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgv1_CHK,
+            this.dgv1_LAB_NO,
+            this.dgv1_CO_NM,
+            this.dgv1_LAB_NM,
+            this.dgv1_JOB_NM,
+            this.dgv1_TEAM_NM,
+            this.dgv1_BIRTH_DATE,
+            this.dgv1_MOBILE_NO,
+            this.dgv1_USER_NO,
+            this.dgv1_AUTH_CD});
+            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridView1.Location = new System.Drawing.Point(0, 25);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowTemplate.Height = 23;
+            this.dataGridView1.Size = new System.Drawing.Size(1037, 497);
+            this.dataGridView1.TabIndex = 4;
+            this.dataGridView1.CellBeginEdit += new System.Windows.Forms.DataGridViewCellCancelEventHandler(this.dataGridView1_CellBeginEdit);
+            this.dataGridView1.ColumnHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView1_ColumnHeaderMouseClick);
             // 
             // FrmLaborSearch
             // 
@@ -242,7 +239,6 @@
             this.Text = "FrmLaborSearch";
             this.Load += new System.EventHandler(this.FrmLaborSearch_Load);
             this.splitContainer3.Panel1.ResumeLayout(false);
-            this.splitContainer3.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer3)).EndInit();
             this.splitContainer3.ResumeLayout(false);
             this.splitContainer1.Panel1.ResumeLayout(false);
@@ -255,25 +251,22 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.SplitContainer splitContainer3;
         private System.Windows.Forms.SplitContainer splitContainer1;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.ComboBox cmbCom;
+        private System.Windows.Forms.Button btnSearch;
+        private EldigmPlusApp_UserControl.SearchCondition1 searchCondition11;
+        private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridViewCheckBoxColumn dgv1_CHK;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgv1_LAB_NO;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgv1_USER_NO;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgv1_CO_NM;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgv1_LAB_NM;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgv1_JOB_NM;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgv1_TEAM_NM;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgv1_BIRTH_DATE;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgv1_MOBILE_NO;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgv1_FACE_PHOTO;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgv1_CO_CD;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgv1_TEAM_CD;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgv1_JOB_CCD;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgv1_BLOCK_CCD;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgv1_LAB_STS;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgv1_USER_NO;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgv1_AUTH_CD;
     }
 }

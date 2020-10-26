@@ -18,7 +18,7 @@ namespace EldigmPlusApp.SubForm.Sys.SysCode
     public partial class FrmSysCodeGrp : Form
     {
         LogUtil logs = null;
-        ResourceManager lngRM = null;
+        ResourceManager wRM = null;
         ResourceManager msgRM = null;
 
         string _scodeGrp = "";
@@ -34,22 +34,22 @@ namespace EldigmPlusApp.SubForm.Sys.SysCode
             try
             {
                 logs = new LogUtil();
-                lngRM = new ResourceManager("EldigmPlusApp.strLanguage", typeof(FrmSysCodeGrp).Assembly);
-                msgRM = new ResourceManager("EldigmPlusApp.msgLanguage", typeof(FrmSysCodeGrp).Assembly);
+                wRM = new ResourceManager("EldigmPlusApp.GlobalLanguage.word_Language", typeof(FrmSysCodeGrp).Assembly);
+                msgRM = new ResourceManager("EldigmPlusApp.GlobalLanguage.msg_Language", typeof(FrmSysCodeGrp).Assembly);
 
-                btnSave.Text = "저장";
-                
-                dataGridView1.Columns["dgv1_CHK"].HeaderText = "선택";
-                dataGridView1.Columns["dgv1_SCODE_GRP"].HeaderText = "코드";
-                dataGridView1.Columns["dgv1_SCODE_GRP_NM"].HeaderText = "이름";
-                dataGridView1.Columns["dgv1_USING_FLAG"].HeaderText = "사용";
-                dataGridView1.Columns["dgv1_SORT_NO"].HeaderText = "정렬";
-                dataGridView1.Columns["dgv1_MEMO"].HeaderText = "메모";
+                btnSave.Text = wRM.GetString("wSave");
 
-                dataGridView2.Columns["dgv2_SCODE_GRP"].HeaderText = "*코드";
-                dataGridView2.Columns["dgv2_SCODE_GRP_NM"].HeaderText = "*이름";
-                dataGridView2.Columns["dgv2_SORT_NO"].HeaderText = "정렬";
-                dataGridView2.Columns["dgv2_MEMO"].HeaderText = "메모";
+                dataGridView1.Columns["dgv1_CHK"].HeaderText = wRM.GetString("wSelect");
+                dataGridView1.Columns["dgv1_SCODE_GRP"].HeaderText = wRM.GetString("wCode");
+                dataGridView1.Columns["dgv1_SCODE_GRP_NM"].HeaderText = wRM.GetString("wName");
+                dataGridView1.Columns["dgv1_USING_FLAG"].HeaderText = wRM.GetString("wUse");
+                dataGridView1.Columns["dgv1_SORT_NO"].HeaderText = wRM.GetString("wSort");
+                dataGridView1.Columns["dgv1_MEMO"].HeaderText = wRM.GetString("wMemo");
+
+                dataGridView2.Columns["dgv2_SCODE_GRP"].HeaderText = "*" + wRM.GetString("wCode");
+                dataGridView2.Columns["dgv2_SCODE_GRP_NM"].HeaderText = "*" + wRM.GetString("wName");
+                dataGridView2.Columns["dgv2_SORT_NO"].HeaderText = wRM.GetString("wSort");
+                dataGridView2.Columns["dgv2_MEMO"].HeaderText = wRM.GetString("wMemo");
 
                 // 헤더 필수 항목 빨강색
                 dataGridView2.Columns["dgv2_SCODE_GRP"].HeaderCell.Style.ForeColor = Color.Maroon;
@@ -118,7 +118,7 @@ namespace EldigmPlusApp.SubForm.Sys.SysCode
 
                 TreeNode root = new TreeNode();
                 root.Tag = "";
-                root.Text = "전체";
+                root.Text = wRM.GetString("wTotal");
 
                 reCode = wSvc.sSysCodeGrp("", out getData, out reMsg);
                 if (reCode == "Y")
@@ -300,8 +300,8 @@ namespace EldigmPlusApp.SubForm.Sys.SysCode
             {
                 dataGridView2.Rows.Clear();
                 dataGridView2.Rows.Add();
-                dataGridView2.Rows[0].Cells["dgv2_SORT_NO"].Value = "1";
-                dataGridView2.Rows[0].Cells["dgv2_BTNADD"].Value = "추가";
+                dataGridView2.Rows[0].Cells["dgv2_SORT_NO"].Value = "10";
+                dataGridView2.Rows[0].Cells["dgv2_BTNADD"].Value = wRM.GetString("wAdd");
             }
             catch (Exception ex)
             {
@@ -319,7 +319,7 @@ namespace EldigmPlusApp.SubForm.Sys.SysCode
                 string reVal = ChkDgv2Param();
 
                 if (reVal != "")
-                    MessageBox.Show("데이터 확인 :: " + reVal);
+                    MessageBox.Show(wRM.GetString("wCheck") + " :: " + reVal);
                 else
                 {
                     string scodeGrp_val = dataGridView2.Rows[0].Cells["dgv2_SCODE_GRP"].Value.ToString();
@@ -349,7 +349,7 @@ namespace EldigmPlusApp.SubForm.Sys.SysCode
                         reCode = wSvc.exSysCodeGrp(scodeGrp_val, out reMsg, out reData);
 
                         if (reCode == "Y" && reData != "0")
-                            MessageBox.Show("중복 데이터 입니다.");
+                            MessageBox.Show(msgRM.GetString("msgDuplicated"));
                         else
                         {
                             int reCnt = 0;
@@ -361,9 +361,9 @@ namespace EldigmPlusApp.SubForm.Sys.SysCode
                                 reCnt = Convert.ToInt16(reData);
 
                             if (reCnt > 0)
-                                MessageBox.Show("저장 성공");
+                                MessageBox.Show(wRM.GetString("wSave") + " " + wRM.GetString("wSuccess") + " : " + reCnt.ToString());
                             else
-                                MessageBox.Show("저장 실패");
+                                MessageBox.Show(wRM.GetString("wSave") + " " + wRM.GetString("wFail"));
 
                         }
 
@@ -371,6 +371,7 @@ namespace EldigmPlusApp.SubForm.Sys.SysCode
 
 
                         SetDataBind_treeView1();
+                        SetDataBind_gridView1(_scodeGrp);
                         SetDataBind_grideView2();
                     }
                     catch (Exception ex)
@@ -397,13 +398,13 @@ namespace EldigmPlusApp.SubForm.Sys.SysCode
                 {
                     if (dataGridView2.Rows[0].Cells["dgv2_SCODE_GRP"].Value.ToString() == "")
                     {
-                        reVal = "코드";
+                        reVal = wRM.GetString("wCode");
                         return reVal;
                     }
                 }
                 else
                 {
-                    reVal = "코드";
+                    reVal = wRM.GetString("wCode");
                     return reVal;
                 }
 
@@ -411,19 +412,19 @@ namespace EldigmPlusApp.SubForm.Sys.SysCode
                 {
                     if (dataGridView2.Rows[0].Cells["dgv2_SCODE_GRP_NM"].Value.ToString() == "")
                     {
-                        reVal = "이름";
+                        reVal = wRM.GetString("wName");
                         return reVal;
                     }
                 }
                 else
                 {
-                    reVal = "이름";
+                    reVal = wRM.GetString("wName");
                     return reVal;
                 }
             }
             catch (Exception ex)
             {
-                reVal = "에러";
+                reVal = wRM.GetString("wError");
                 logs.SaveLog("[error]  (page)::FrmSysCode.cs  (Function)::ChkDgv2Param  (Detail):: " + "\r\n" + ex.ToString(), "Error");
             }
 
@@ -479,15 +480,11 @@ namespace EldigmPlusApp.SubForm.Sys.SysCode
                         }
                     }
                 }
-
+                
                 if (reCnt > 0)
-                {
-                    MessageBox.Show("저장 성공" + " : " + reCnt.ToString());
-                }
+                    MessageBox.Show(wRM.GetString("wSave") + " " + wRM.GetString("wSuccess") + " : " + reCnt.ToString());
                 else
-                {
-                    MessageBox.Show("저장 실패");
-                }
+                    MessageBox.Show(wRM.GetString("wSave") + " " + wRM.GetString("wFail"));
 
                 SetDataBind_gridView1(_scodeGrp);
             }

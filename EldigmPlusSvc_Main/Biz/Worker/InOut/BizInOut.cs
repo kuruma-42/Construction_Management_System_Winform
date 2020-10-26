@@ -13,7 +13,8 @@ namespace EldigmPlusSvc_Main.Biz.Worker.InOut
     {
         LogClass logs = new LogClass();
 
-        public DataSet sInOut(string pDbnm, string pSiteCd, string pDtp1, string pDtp2)
+        //CONST CMB BOX WITHOUT NOSELECT
+        public DataSet sLaborCompanyList(string pSiteCd, string pAuthCd, string pCoCd)
         {
             DataSet ds = null;
 
@@ -25,7 +26,39 @@ namespace EldigmPlusSvc_Main.Biz.Worker.InOut
                 string dbCon_USER = WebConfigurationManager.ConnectionStrings["ConnectionStr_USER"].ConnectionString;
 
                 db = new DbInOut(dbCon_IP, dbCon_DB, dbCon_USER, "0");
-                ds = db.sInOut(pDbnm, pSiteCd, pDtp1, pDtp2);
+
+                //MYCOM_FLAG 값을 구해옴 
+                string pMyComFlag = "";
+                pMyComFlag = db.sMyComFlag(pSiteCd, pAuthCd);
+
+                ds = db.sLaborCompanyList(pSiteCd, Convert.ToInt16(pMyComFlag), Convert.ToInt16(pCoCd));
+            }
+            catch (Exception ex)
+            {
+                logs.SaveLog("[error]  (page)::BizLaborSearch.cs  (Function)::sLaborCompanyList  (Detail)::" + "\r\n" + ex.ToString(), "Error");
+            }
+            finally
+            {
+                if (db != null)
+                    db.DisConnect();
+            }
+
+            return ds;
+        }
+
+        public DataSet sInOut(string pDbnm, string pSiteCd, string pDtp1, string pDtp2, string pCocd)
+        {
+            DataSet ds = null;
+
+            DbInOut db = null;
+            try
+            {
+                string dbCon_IP = WebConfigurationManager.ConnectionStrings["ConnectionStr_IP"].ConnectionString;
+                string dbCon_DB = WebConfigurationManager.ConnectionStrings["ConnectionStr_DB"].ConnectionString;
+                string dbCon_USER = WebConfigurationManager.ConnectionStrings["ConnectionStr_USER"].ConnectionString;
+
+                db = new DbInOut(dbCon_IP, dbCon_DB, dbCon_USER, "0");
+                ds = db.sInOut(pDbnm, pSiteCd, pDtp1, pDtp2, pCocd);
             }
             catch (Exception ex)
             {
@@ -41,7 +74,7 @@ namespace EldigmPlusSvc_Main.Biz.Worker.InOut
             return ds;
         }
 
-        public DataSet sInOutLog(string pDbnm, string pSiteCd, string pDtp1, string pDtp2)
+        public DataSet sInOutLog(string pDbnm, string pSiteCd, string pDtp1, string pDtp2, string pCocd)
         {
             DataSet ds = null;
 
@@ -53,7 +86,7 @@ namespace EldigmPlusSvc_Main.Biz.Worker.InOut
                 string dbCon_USER = WebConfigurationManager.ConnectionStrings["ConnectionStr_USER"].ConnectionString;
 
                 db = new DbInOut(dbCon_IP, dbCon_DB, dbCon_USER, "0");
-                ds = db.sInOutLog(pDbnm, pSiteCd, pDtp1, pDtp2);
+                ds = db.sInOutLog(pDbnm, pSiteCd, pDtp1, pDtp2, pCocd);
             }
             catch (Exception ex)
             {

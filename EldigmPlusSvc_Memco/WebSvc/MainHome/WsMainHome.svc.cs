@@ -37,7 +37,7 @@ namespace EldigmPlusSvc_Memco.WebSvc.MainHome
             }
             catch (Exception ex)
             {
-                reMsg = "[검색 에러 - BizSystem 연결 실패] :: " + ex.ToString();
+                reMsg = "[검색 에러 - BizMainHome 연결 실패] :: " + ex.ToString();
                 reCode = "N";
             }
 
@@ -71,7 +71,7 @@ namespace EldigmPlusSvc_Memco.WebSvc.MainHome
             }
             catch (Exception ex)
             {
-                reMsg = "[검색 에러 - BizSystem 연결 실패] :: " + ex.ToString();
+                reMsg = "[검색 에러 - BizMainHome 연결 실패] :: " + ex.ToString();
                 reCode = "N";
             }
 
@@ -82,7 +82,7 @@ namespace EldigmPlusSvc_Memco.WebSvc.MainHome
             }
             catch (Exception ex)
             {
-                logs.SaveLog("[error]  (page)::WebSvcSystem.svc  (Function)::sSiteMenu  (Detail)::ConvertDataTableToList " + "\r\n" + ex.ToString(), "Error");
+                logs.SaveLog("[error]  (page)::WsMainHome.svc  (Function)::sSiteMenu  (Detail)::ConvertDataTableToList " + "\r\n" + ex.ToString(), "Error");
                 reMsg += "/[List 에러]" + ex.ToString();
                 reCode = "N";
             }
@@ -117,7 +117,7 @@ namespace EldigmPlusSvc_Memco.WebSvc.MainHome
             }
             catch (Exception ex)
             {
-                reMsg = "[검색 에러 - BizSystem 연결 실패] :: " + ex.ToString();
+                reMsg = "[검색 에러 - BizMainHome 연결 실패] :: " + ex.ToString();
                 reCode = "N";
             }
 
@@ -128,7 +128,7 @@ namespace EldigmPlusSvc_Memco.WebSvc.MainHome
             }
             catch (Exception ex)
             {
-                logs.SaveLog("[error]  (page)::WebSvcSystem.svc  (Function)::sSiteSubMenu1  (Detail)::ConvertDataTableToList " + "\r\n" + ex.ToString(), "Error");
+                logs.SaveLog("[error]  (page)::WsMainHome.svc  (Function)::sSiteSubMenu1  (Detail)::ConvertDataTableToList " + "\r\n" + ex.ToString(), "Error");
                 reMsg += "/[List 에러]" + ex.ToString();
                 reCode = "N";
             }
@@ -163,7 +163,7 @@ namespace EldigmPlusSvc_Memco.WebSvc.MainHome
             }
             catch (Exception ex)
             {
-                reMsg = "[검색 에러 - BizSystem 연결 실패] :: " + ex.ToString();
+                reMsg = "[검색 에러 - BizMainHome 연결 실패] :: " + ex.ToString();
                 reCode = "N";
             }
 
@@ -174,7 +174,7 @@ namespace EldigmPlusSvc_Memco.WebSvc.MainHome
             }
             catch (Exception ex)
             {
-                logs.SaveLog("[error]  (page)::WebSvcSystem.svc  (Function)::sSiteSubMenu2  (Detail)::ConvertDataTableToList " + "\r\n" + ex.ToString(), "Error");
+                logs.SaveLog("[error]  (page)::WsMainHome.svc  (Function)::sSiteSubMenu2  (Detail)::ConvertDataTableToList " + "\r\n" + ex.ToString(), "Error");
                 reMsg += "/[List 에러]" + ex.ToString();
                 reCode = "N";
             }

@@ -141,4 +141,64 @@
   <data name="lngSearch" xml:space="preserve">
     <value>검색</value>
   </data>
+  <data name="msgAlreadyUsed" xml:space="preserve">
+    <value>다른 곳에서 이미 사용 중입니다.</value>
+  </data>
+  <data name="msgChangeUsingFlag" xml:space="preserve">
+    <value>사용으로 전환합니다.</value>
+  </data>
+  <data name="msgClickUsingFlagPlz" xml:space="preserve">
+    <value>사용을 눌러주세요.</value>
+  </data>
+  <data name="msgDeviceId" xml:space="preserve">
+    <value>장비아이디</value>
+  </data>
+  <data name="msgDuplicated" xml:space="preserve">
+    <value>중복 데이터 입니다.</value>
+  </data>
+  <data name="msgEndDate" xml:space="preserve">
+    <value>퇴근일시</value>
+  </data>
+  <data name="msgMyCompanyStatus" xml:space="preserve">
+    <value>내 업체만 여부</value>
+  </data>
+  <data name="msgMyConstructionTypesStatus" xml:space="preserve">
+    <value>내 공종만 여부</value>
+  </data>
+  <data name="msgMyTeamStatus" xml:space="preserve">
+    <value>내 팀만 여부</value>
+  </data>
+  <data name="msgMyZoneStatus" xml:space="preserve">
+    <value>내 구역만 여부</value>
+  </data>
+  <data name="msgNoneDeviceId" xml:space="preserve">
+    <value>장비 아이디를 선택해주세요.</value>
+  </data>
+  <data name="msgNoneDeviceInOut" xml:space="preserve">
+    <value>장치 출입을 선택해주세요.</value>
+  </data>
+  <data name="msgNoneDeviceName" xml:space="preserve">
+    <value>장치 이름을 입력해주세요.</value>
+  </data>
+  <data name="msgNoneDeviceType" xml:space="preserve">
+    <value>장치 유형을 선택해주세요.</value>
+  </data>
+  <data name="msgNotSelected" xml:space="preserve">
+    <value>선택된 데이터가 없습니다.</value>
+  </data>
+  <data name="msgSameName" xml:space="preserve">
+    <value>같은 이름이 이미 존재하고 있습니다.</value>
+  </data>
+  <data name="msgStartDate" xml:space="preserve">
+    <value>출근일시</value>
+  </data>
+  <data name="msgUsageStatus" xml:space="preserve">
+    <value>사용 여부</value>
+  </data>
+  <data name="msgWorkerApprovalStatus" xml:space="preserve">
+    <value>근로자 승인 여부</value>
+  </data>
+  <data name="wEventDate" xml:space="preserve">
+    <value>이벤트일시</value>
+  </data>
 </root>

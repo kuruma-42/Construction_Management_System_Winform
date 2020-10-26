@@ -148,7 +148,7 @@ namespace EldigmPlusClassLibrary.DbClass.Sys.CompanyTeam
                     " SELECT '0' AS VALUE, '미선택' AS TEXT, '99999999' AS SORT_NO " +
                     " ) X " +
               " ORDER BY SORT_NO, TEXT ";
-
+            
 
             DataSet ds = null;
             if (_sqlHelper != null)

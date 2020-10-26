@@ -13,7 +13,7 @@ namespace EldigmPlusApp.SubForm.MainHome
     public partial class FrmMain : Form
     {
         LogUtil logs = null;
-        ResourceManager lngRM = null;
+        ResourceManager wRM = null;
 
         string _appPath = "";
 
@@ -35,14 +35,14 @@ namespace EldigmPlusApp.SubForm.MainHome
                 this.AutoScaleMode = AutoScaleMode.Dpi;
 
                 logs = new LogUtil();
-                lngRM = new ResourceManager("EldigmPlusApp.strLanguage", typeof(FrmMain).Assembly);
+                wRM = new ResourceManager("EldigmPlusApp.GlobalLanguage.word_Language", typeof(FrmMain).Assembly);
 
                 //Home 메뉴
-                homeToolStripMenuItem.Text = lngRM.GetString("lngHome");
-                programInfoToolStripMenuItem.Text = lngRM.GetString("lngProgram") + " " + lngRM.GetString("lngInfo");
-                exitToolStripMenuItem.Text = lngRM.GetString("lngEnd");
+                homeToolStripMenuItem.Text = wRM.GetString("wHome");
+                programInfoToolStripMenuItem.Text = wRM.GetString("wProgram") + " " + wRM.GetString("wInfo");
+                exitToolStripMenuItem.Text = wRM.GetString("wEnd");
 
-                //ultraDockManager1.ControlPanes[0].Text = lngRM.GetString("lngMenuItems");
+                //ultraDockManager1.ControlPanes[0].Text = wRM.GetString("lngMenuItems");
                 ultraDockManager1.ControlPanes[0].Text = "";
                 ultraDockManager1.WindowStyle = Infragistics.Win.UltraWinDock.WindowStyle.Office2007;
 
@@ -84,9 +84,13 @@ namespace EldigmPlusApp.SubForm.MainHome
                 AppInfo.SsMemcoCd = ini.IniReadValue("INFO", "MemcoCd");
                 AppInfo.SsSiteCd = ini.IniReadValue("INFO", "SiteCd");
 
-                AppInfo.SsUserId = ini.IniReadValue("INFO", "UserId");
-                AppInfo.SsUserAuth = ini.IniReadValue("INFO", "UserAuth");
+                AppInfo.SsLabNo = ini.IniReadValue("INFO", "LabNo");
+                AppInfo.SsLabAuth = ini.IniReadValue("INFO", "LabAuth");
                 AppInfo.SsCoCd = ini.IniReadValue("INFO", "CoCd");
+                AppInfo.SsBlockCcd = ini.IniReadValue("INFO", "BlockCcd");
+                AppInfo.SsJobCcd = ini.IniReadValue("INFO", "JobCcd");
+                AppInfo.SsTeamCd = ini.IniReadValue("INFO", "TeamCd");
+                AppInfo.SsConstCd = ini.IniReadValue("INFO", "ConstCd");
                 AppInfo.SsDbNm = "";
             }
             catch (Exception ex)

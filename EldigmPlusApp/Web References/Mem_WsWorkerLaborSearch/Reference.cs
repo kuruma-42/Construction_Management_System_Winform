@@ -31,19 +31,15 @@ namespace EldigmPlusApp.Mem_WsWorkerLaborSearch {
         
         private System.Threading.SendOrPostCallback sLaborCompanyListOperationCompleted;
         
+        private System.Threading.SendOrPostCallback sLaborConstListOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback sLaborJobListOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback sLaborBlockListOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback sLaborTeamListOperationCompleted;
+        
         private System.Threading.SendOrPostCallback sLaborSearchOperationCompleted;
-        
-        private System.Threading.SendOrPostCallback devTypeCmbOperationCompleted;
-        
-        private System.Threading.SendOrPostCallback devIOCmbOperationCompleted;
-        
-        private System.Threading.SendOrPostCallback sDeviceOperationCompleted;
-        
-        private System.Threading.SendOrPostCallback mDeviceOperationCompleted;
-        
-        private System.Threading.SendOrPostCallback aDeviceProOperationCompleted;
-        
-        private System.Threading.SendOrPostCallback logDeviceOperationCompleted;
         
         private bool useDefaultCredentialsSetExplicitly;
         
@@ -87,25 +83,19 @@ namespace EldigmPlusApp.Mem_WsWorkerLaborSearch {
         public event sLaborCompanyListCompletedEventHandler sLaborCompanyListCompleted;
         
         /// <remarks/>
+        public event sLaborConstListCompletedEventHandler sLaborConstListCompleted;
+        
+        /// <remarks/>
+        public event sLaborJobListCompletedEventHandler sLaborJobListCompleted;
+        
+        /// <remarks/>
+        public event sLaborBlockListCompletedEventHandler sLaborBlockListCompleted;
+        
+        /// <remarks/>
+        public event sLaborTeamListCompletedEventHandler sLaborTeamListCompleted;
+        
+        /// <remarks/>
         public event sLaborSearchCompletedEventHandler sLaborSearchCompleted;
-        
-        /// <remarks/>
-        public event devTypeCmbCompletedEventHandler devTypeCmbCompleted;
-        
-        /// <remarks/>
-        public event devIOCmbCompletedEventHandler devIOCmbCompleted;
-        
-        /// <remarks/>
-        public event sDeviceCompletedEventHandler sDeviceCompleted;
-        
-        /// <remarks/>
-        public event mDeviceCompletedEventHandler mDeviceCompleted;
-        
-        /// <remarks/>
-        public event aDeviceProCompletedEventHandler aDeviceProCompleted;
-        
-        /// <remarks/>
-        public event logDeviceCompletedEventHandler logDeviceCompleted;
         
         /// <remarks/>
         [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IWsWorkerLaborSearch/sLaborCompanyList", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
@@ -144,270 +134,188 @@ namespace EldigmPlusApp.Mem_WsWorkerLaborSearch {
         }
         
         /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IWsWorkerLaborSearch/sLaborConstList", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [return: System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string sLaborConstList([System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pSiteCd, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pAuthCd, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pCcode, [System.Xml.Serialization.XmlArrayAttribute(IsNullable=true)] [System.Xml.Serialization.XmlArrayItemAttribute(Namespace="http://schemas.datacontract.org/2004/07/EldigmPlusSvc_Memco.WebSvc.Sys.Worker")] out DataComCombo[] reList, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] out string reMsg) {
+            object[] results = this.Invoke("sLaborConstList", new object[] {
+                        pSiteCd,
+                        pAuthCd,
+                        pCcode});
+            reList = ((DataComCombo[])(results[1]));
+            reMsg = ((string)(results[2]));
+            return ((string)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void sLaborConstListAsync(string pSiteCd, string pAuthCd, string pCcode) {
+            this.sLaborConstListAsync(pSiteCd, pAuthCd, pCcode, null);
+        }
+        
+        /// <remarks/>
+        public void sLaborConstListAsync(string pSiteCd, string pAuthCd, string pCcode, object userState) {
+            if ((this.sLaborConstListOperationCompleted == null)) {
+                this.sLaborConstListOperationCompleted = new System.Threading.SendOrPostCallback(this.OnsLaborConstListOperationCompleted);
+            }
+            this.InvokeAsync("sLaborConstList", new object[] {
+                        pSiteCd,
+                        pAuthCd,
+                        pCcode}, this.sLaborConstListOperationCompleted, userState);
+        }
+        
+        private void OnsLaborConstListOperationCompleted(object arg) {
+            if ((this.sLaborConstListCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.sLaborConstListCompleted(this, new sLaborConstListCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IWsWorkerLaborSearch/sLaborJobList", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [return: System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string sLaborJobList([System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pSiteCd, [System.Xml.Serialization.XmlArrayAttribute(IsNullable=true)] [System.Xml.Serialization.XmlArrayItemAttribute(Namespace="http://schemas.datacontract.org/2004/07/EldigmPlusSvc_Memco.WebSvc.Sys.Worker")] out DataComCombo[] reList, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] out string reMsg) {
+            object[] results = this.Invoke("sLaborJobList", new object[] {
+                        pSiteCd});
+            reList = ((DataComCombo[])(results[1]));
+            reMsg = ((string)(results[2]));
+            return ((string)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void sLaborJobListAsync(string pSiteCd) {
+            this.sLaborJobListAsync(pSiteCd, null);
+        }
+        
+        /// <remarks/>
+        public void sLaborJobListAsync(string pSiteCd, object userState) {
+            if ((this.sLaborJobListOperationCompleted == null)) {
+                this.sLaborJobListOperationCompleted = new System.Threading.SendOrPostCallback(this.OnsLaborJobListOperationCompleted);
+            }
+            this.InvokeAsync("sLaborJobList", new object[] {
+                        pSiteCd}, this.sLaborJobListOperationCompleted, userState);
+        }
+        
+        private void OnsLaborJobListOperationCompleted(object arg) {
+            if ((this.sLaborJobListCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.sLaborJobListCompleted(this, new sLaborJobListCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IWsWorkerLaborSearch/sLaborBlockList", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [return: System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string sLaborBlockList([System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pSiteCd, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pAuthCd, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pCcode, [System.Xml.Serialization.XmlArrayAttribute(IsNullable=true)] [System.Xml.Serialization.XmlArrayItemAttribute(Namespace="http://schemas.datacontract.org/2004/07/EldigmPlusSvc_Memco.WebSvc.Sys.Worker")] out DataComCombo[] reList, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] out string reMsg) {
+            object[] results = this.Invoke("sLaborBlockList", new object[] {
+                        pSiteCd,
+                        pAuthCd,
+                        pCcode});
+            reList = ((DataComCombo[])(results[1]));
+            reMsg = ((string)(results[2]));
+            return ((string)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void sLaborBlockListAsync(string pSiteCd, string pAuthCd, string pCcode) {
+            this.sLaborBlockListAsync(pSiteCd, pAuthCd, pCcode, null);
+        }
+        
+        /// <remarks/>
+        public void sLaborBlockListAsync(string pSiteCd, string pAuthCd, string pCcode, object userState) {
+            if ((this.sLaborBlockListOperationCompleted == null)) {
+                this.sLaborBlockListOperationCompleted = new System.Threading.SendOrPostCallback(this.OnsLaborBlockListOperationCompleted);
+            }
+            this.InvokeAsync("sLaborBlockList", new object[] {
+                        pSiteCd,
+                        pAuthCd,
+                        pCcode}, this.sLaborBlockListOperationCompleted, userState);
+        }
+        
+        private void OnsLaborBlockListOperationCompleted(object arg) {
+            if ((this.sLaborBlockListCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.sLaborBlockListCompleted(this, new sLaborBlockListCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IWsWorkerLaborSearch/sLaborTeamList", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [return: System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string sLaborTeamList([System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pSiteCd, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pAuthCd, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pTeamCd, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pCocd, [System.Xml.Serialization.XmlArrayAttribute(IsNullable=true)] [System.Xml.Serialization.XmlArrayItemAttribute(Namespace="http://schemas.datacontract.org/2004/07/EldigmPlusSvc_Memco.WebSvc.Sys.Worker")] out DataComCombo[] reList, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] out string reMsg) {
+            object[] results = this.Invoke("sLaborTeamList", new object[] {
+                        pSiteCd,
+                        pAuthCd,
+                        pTeamCd,
+                        pCocd});
+            reList = ((DataComCombo[])(results[1]));
+            reMsg = ((string)(results[2]));
+            return ((string)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void sLaborTeamListAsync(string pSiteCd, string pAuthCd, string pTeamCd, string pCocd) {
+            this.sLaborTeamListAsync(pSiteCd, pAuthCd, pTeamCd, pCocd, null);
+        }
+        
+        /// <remarks/>
+        public void sLaborTeamListAsync(string pSiteCd, string pAuthCd, string pTeamCd, string pCocd, object userState) {
+            if ((this.sLaborTeamListOperationCompleted == null)) {
+                this.sLaborTeamListOperationCompleted = new System.Threading.SendOrPostCallback(this.OnsLaborTeamListOperationCompleted);
+            }
+            this.InvokeAsync("sLaborTeamList", new object[] {
+                        pSiteCd,
+                        pAuthCd,
+                        pTeamCd,
+                        pCocd}, this.sLaborTeamListOperationCompleted, userState);
+        }
+        
+        private void OnsLaborTeamListOperationCompleted(object arg) {
+            if ((this.sLaborTeamListCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.sLaborTeamListCompleted(this, new sLaborTeamListCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
         [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IWsWorkerLaborSearch/sLaborSearch", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
         [return: System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public string sLaborSearch([System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pSiteCd, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pCoCd, [System.Xml.Serialization.XmlArrayAttribute(IsNullable=true)] [System.Xml.Serialization.XmlArrayItemAttribute(Namespace="http://schemas.datacontract.org/2004/07/EldigmPlusSvc_Memco.WebSvc.Sys.Worker")] out DataLaborSearch[] reList, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] out string reMsg) {
+        public string sLaborSearch([System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pSiteCd, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pBlockCcd, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pConstCcd, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pCoCd, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pTeamCd, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pSearchCondition, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pSearchTxt, [System.Xml.Serialization.XmlArrayAttribute(IsNullable=true)] [System.Xml.Serialization.XmlArrayItemAttribute(Namespace="http://schemas.datacontract.org/2004/07/EldigmPlusSvc_Memco.WebSvc.Sys.Worker")] out DataLaborSearch[] reList, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] out string reMsg) {
             object[] results = this.Invoke("sLaborSearch", new object[] {
                         pSiteCd,
-                        pCoCd});
+                        pBlockCcd,
+                        pConstCcd,
+                        pCoCd,
+                        pTeamCd,
+                        pSearchCondition,
+                        pSearchTxt});
             reList = ((DataLaborSearch[])(results[1]));
             reMsg = ((string)(results[2]));
             return ((string)(results[0]));
         }
         
         /// <remarks/>
-        public void sLaborSearchAsync(string pSiteCd, string pCoCd) {
-            this.sLaborSearchAsync(pSiteCd, pCoCd, null);
+        public void sLaborSearchAsync(string pSiteCd, string pBlockCcd, string pConstCcd, string pCoCd, string pTeamCd, string pSearchCondition, string pSearchTxt) {
+            this.sLaborSearchAsync(pSiteCd, pBlockCcd, pConstCcd, pCoCd, pTeamCd, pSearchCondition, pSearchTxt, null);
         }
         
         /// <remarks/>
-        public void sLaborSearchAsync(string pSiteCd, string pCoCd, object userState) {
+        public void sLaborSearchAsync(string pSiteCd, string pBlockCcd, string pConstCcd, string pCoCd, string pTeamCd, string pSearchCondition, string pSearchTxt, object userState) {
             if ((this.sLaborSearchOperationCompleted == null)) {
                 this.sLaborSearchOperationCompleted = new System.Threading.SendOrPostCallback(this.OnsLaborSearchOperationCompleted);
             }
             this.InvokeAsync("sLaborSearch", new object[] {
                         pSiteCd,
-                        pCoCd}, this.sLaborSearchOperationCompleted, userState);
+                        pBlockCcd,
+                        pConstCcd,
+                        pCoCd,
+                        pTeamCd,
+                        pSearchCondition,
+                        pSearchTxt}, this.sLaborSearchOperationCompleted, userState);
         }
         
         private void OnsLaborSearchOperationCompleted(object arg) {
             if ((this.sLaborSearchCompleted != null)) {
                 System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
                 this.sLaborSearchCompleted(this, new sLaborSearchCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
-            }
-        }
-        
-        /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IWsWorkerLaborSearch/devTypeCmb", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        [return: System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public string devTypeCmb([System.Xml.Serialization.XmlArrayAttribute(IsNullable=true)] [System.Xml.Serialization.XmlArrayItemAttribute(Namespace="http://schemas.datacontract.org/2004/07/EldigmPlusSvc_Memco.WebSvc.Sys.Worker")] out DataDevCombo[] reList, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] out string reMsg) {
-            object[] results = this.Invoke("devTypeCmb", new object[0]);
-            reList = ((DataDevCombo[])(results[1]));
-            reMsg = ((string)(results[2]));
-            return ((string)(results[0]));
-        }
-        
-        /// <remarks/>
-        public void devTypeCmbAsync() {
-            this.devTypeCmbAsync(null);
-        }
-        
-        /// <remarks/>
-        public void devTypeCmbAsync(object userState) {
-            if ((this.devTypeCmbOperationCompleted == null)) {
-                this.devTypeCmbOperationCompleted = new System.Threading.SendOrPostCallback(this.OndevTypeCmbOperationCompleted);
-            }
-            this.InvokeAsync("devTypeCmb", new object[0], this.devTypeCmbOperationCompleted, userState);
-        }
-        
-        private void OndevTypeCmbOperationCompleted(object arg) {
-            if ((this.devTypeCmbCompleted != null)) {
-                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
-                this.devTypeCmbCompleted(this, new devTypeCmbCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
-            }
-        }
-        
-        /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IWsWorkerLaborSearch/devIOCmb", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        [return: System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public string devIOCmb([System.Xml.Serialization.XmlArrayAttribute(IsNullable=true)] [System.Xml.Serialization.XmlArrayItemAttribute(Namespace="http://schemas.datacontract.org/2004/07/EldigmPlusSvc_Memco.WebSvc.Sys.Worker")] out DataDevCombo[] reList, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] out string reMsg) {
-            object[] results = this.Invoke("devIOCmb", new object[0]);
-            reList = ((DataDevCombo[])(results[1]));
-            reMsg = ((string)(results[2]));
-            return ((string)(results[0]));
-        }
-        
-        /// <remarks/>
-        public void devIOCmbAsync() {
-            this.devIOCmbAsync(null);
-        }
-        
-        /// <remarks/>
-        public void devIOCmbAsync(object userState) {
-            if ((this.devIOCmbOperationCompleted == null)) {
-                this.devIOCmbOperationCompleted = new System.Threading.SendOrPostCallback(this.OndevIOCmbOperationCompleted);
-            }
-            this.InvokeAsync("devIOCmb", new object[0], this.devIOCmbOperationCompleted, userState);
-        }
-        
-        private void OndevIOCmbOperationCompleted(object arg) {
-            if ((this.devIOCmbCompleted != null)) {
-                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
-                this.devIOCmbCompleted(this, new devIOCmbCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
-            }
-        }
-        
-        /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IWsWorkerLaborSearch/sDevice", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        [return: System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public string sDevice([System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pDbNm, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pSiteCd, [System.Xml.Serialization.XmlArrayAttribute(IsNullable=true)] [System.Xml.Serialization.XmlArrayItemAttribute(Namespace="http://schemas.datacontract.org/2004/07/EldigmPlusSvc_Memco.WebSvc.Sys.Worker")] out DataDevice[] reList, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] out string reMsg) {
-            object[] results = this.Invoke("sDevice", new object[] {
-                        pDbNm,
-                        pSiteCd});
-            reList = ((DataDevice[])(results[1]));
-            reMsg = ((string)(results[2]));
-            return ((string)(results[0]));
-        }
-        
-        /// <remarks/>
-        public void sDeviceAsync(string pDbNm, string pSiteCd) {
-            this.sDeviceAsync(pDbNm, pSiteCd, null);
-        }
-        
-        /// <remarks/>
-        public void sDeviceAsync(string pDbNm, string pSiteCd, object userState) {
-            if ((this.sDeviceOperationCompleted == null)) {
-                this.sDeviceOperationCompleted = new System.Threading.SendOrPostCallback(this.OnsDeviceOperationCompleted);
-            }
-            this.InvokeAsync("sDevice", new object[] {
-                        pDbNm,
-                        pSiteCd}, this.sDeviceOperationCompleted, userState);
-        }
-        
-        private void OnsDeviceOperationCompleted(object arg) {
-            if ((this.sDeviceCompleted != null)) {
-                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
-                this.sDeviceCompleted(this, new sDeviceCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
-            }
-        }
-        
-        /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IWsWorkerLaborSearch/mDevice", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        [return: System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public string mDevice([System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pDbNm, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pSiteCd, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pDevCd, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pDeviceId, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pDevTypeScd, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pDevIOScd, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pDevNm, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pIp, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pSortNo, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pUsingFalg, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pMemo, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] out string reMsg, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] out string reData) {
-            object[] results = this.Invoke("mDevice", new object[] {
-                        pDbNm,
-                        pSiteCd,
-                        pDevCd,
-                        pDeviceId,
-                        pDevTypeScd,
-                        pDevIOScd,
-                        pDevNm,
-                        pIp,
-                        pSortNo,
-                        pUsingFalg,
-                        pMemo});
-            reMsg = ((string)(results[1]));
-            reData = ((string)(results[2]));
-            return ((string)(results[0]));
-        }
-        
-        /// <remarks/>
-        public void mDeviceAsync(string pDbNm, string pSiteCd, string pDevCd, string pDeviceId, string pDevTypeScd, string pDevIOScd, string pDevNm, string pIp, string pSortNo, string pUsingFalg, string pMemo) {
-            this.mDeviceAsync(pDbNm, pSiteCd, pDevCd, pDeviceId, pDevTypeScd, pDevIOScd, pDevNm, pIp, pSortNo, pUsingFalg, pMemo, null);
-        }
-        
-        /// <remarks/>
-        public void mDeviceAsync(string pDbNm, string pSiteCd, string pDevCd, string pDeviceId, string pDevTypeScd, string pDevIOScd, string pDevNm, string pIp, string pSortNo, string pUsingFalg, string pMemo, object userState) {
-            if ((this.mDeviceOperationCompleted == null)) {
-                this.mDeviceOperationCompleted = new System.Threading.SendOrPostCallback(this.OnmDeviceOperationCompleted);
-            }
-            this.InvokeAsync("mDevice", new object[] {
-                        pDbNm,
-                        pSiteCd,
-                        pDevCd,
-                        pDeviceId,
-                        pDevTypeScd,
-                        pDevIOScd,
-                        pDevNm,
-                        pIp,
-                        pSortNo,
-                        pUsingFalg,
-                        pMemo}, this.mDeviceOperationCompleted, userState);
-        }
-        
-        private void OnmDeviceOperationCompleted(object arg) {
-            if ((this.mDeviceCompleted != null)) {
-                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
-                this.mDeviceCompleted(this, new mDeviceCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
-            }
-        }
-        
-        /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IWsWorkerLaborSearch/aDevicePro", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        [return: System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public string aDevicePro([System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pDbNm, [System.Xml.Serialization.XmlArrayAttribute(IsNullable=true)] [System.Xml.Serialization.XmlArrayItemAttribute(Namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays")] string[] param, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] out string reMsg, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] out string reData) {
-            object[] results = this.Invoke("aDevicePro", new object[] {
-                        pDbNm,
-                        param});
-            reMsg = ((string)(results[1]));
-            reData = ((string)(results[2]));
-            return ((string)(results[0]));
-        }
-        
-        /// <remarks/>
-        public void aDeviceProAsync(string pDbNm, string[] param) {
-            this.aDeviceProAsync(pDbNm, param, null);
-        }
-        
-        /// <remarks/>
-        public void aDeviceProAsync(string pDbNm, string[] param, object userState) {
-            if ((this.aDeviceProOperationCompleted == null)) {
-                this.aDeviceProOperationCompleted = new System.Threading.SendOrPostCallback(this.OnaDeviceProOperationCompleted);
-            }
-            this.InvokeAsync("aDevicePro", new object[] {
-                        pDbNm,
-                        param}, this.aDeviceProOperationCompleted, userState);
-        }
-        
-        private void OnaDeviceProOperationCompleted(object arg) {
-            if ((this.aDeviceProCompleted != null)) {
-                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
-                this.aDeviceProCompleted(this, new aDeviceProCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
-            }
-        }
-        
-        /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IWsWorkerLaborSearch/logDevice", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        [return: System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public string logDevice([System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pDbNm, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pDevCd, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pSiteCd, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pDeviceId, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pDevTypeScd, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pDevIOScd, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pDevNm, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pIp, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pUsingFalg, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pSortNo, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pMemo, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pInputId, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] out string reMsg, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] out string reData) {
-            object[] results = this.Invoke("logDevice", new object[] {
-                        pDbNm,
-                        pDevCd,
-                        pSiteCd,
-                        pDeviceId,
-                        pDevTypeScd,
-                        pDevIOScd,
-                        pDevNm,
-                        pIp,
-                        pUsingFalg,
-                        pSortNo,
-                        pMemo,
-                        pInputId});
-            reMsg = ((string)(results[1]));
-            reData = ((string)(results[2]));
-            return ((string)(results[0]));
-        }
-        
-        /// <remarks/>
-        public void logDeviceAsync(string pDbNm, string pDevCd, string pSiteCd, string pDeviceId, string pDevTypeScd, string pDevIOScd, string pDevNm, string pIp, string pUsingFalg, string pSortNo, string pMemo, string pInputId) {
-            this.logDeviceAsync(pDbNm, pDevCd, pSiteCd, pDeviceId, pDevTypeScd, pDevIOScd, pDevNm, pIp, pUsingFalg, pSortNo, pMemo, pInputId, null);
-        }
-        
-        /// <remarks/>
-        public void logDeviceAsync(string pDbNm, string pDevCd, string pSiteCd, string pDeviceId, string pDevTypeScd, string pDevIOScd, string pDevNm, string pIp, string pUsingFalg, string pSortNo, string pMemo, string pInputId, object userState) {
-            if ((this.logDeviceOperationCompleted == null)) {
-                this.logDeviceOperationCompleted = new System.Threading.SendOrPostCallback(this.OnlogDeviceOperationCompleted);
-            }
-            this.InvokeAsync("logDevice", new object[] {
-                        pDbNm,
-                        pDevCd,
-                        pSiteCd,
-                        pDeviceId,
-                        pDevTypeScd,
-                        pDevIOScd,
-                        pDevNm,
-                        pIp,
-                        pUsingFalg,
-                        pSortNo,
-                        pMemo,
-                        pInputId}, this.logDeviceOperationCompleted, userState);
-        }
-        
-        private void OnlogDeviceOperationCompleted(object arg) {
-            if ((this.logDeviceCompleted != null)) {
-                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
-                this.logDeviceCompleted(this, new logDeviceCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
             }
         }
         
@@ -438,250 +346,41 @@ namespace EldigmPlusApp.Mem_WsWorkerLaborSearch {
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.datacontract.org/2004/07/EldigmPlusSvc_Memco.WebSvc.Sys.Worker")]
     public partial class DataComCombo {
         
-        private int cO_CDField;
+        private int vALUEField;
         
-        private bool cO_CDFieldSpecified;
+        private bool vALUEFieldSpecified;
         
-        private string cO_NMField;
+        private string tEXTField;
         
         /// <remarks/>
-        public int CO_CD {
+        public int VALUE {
             get {
-                return this.cO_CDField;
+                return this.vALUEField;
             }
             set {
-                this.cO_CDField = value;
+                this.vALUEField = value;
             }
         }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool CO_CDSpecified {
+        public bool VALUESpecified {
             get {
-                return this.cO_CDFieldSpecified;
+                return this.vALUEFieldSpecified;
             }
             set {
-                this.cO_CDFieldSpecified = value;
+                this.vALUEFieldSpecified = value;
             }
         }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public string CO_NM {
+        public string TEXT {
             get {
-                return this.cO_NMField;
+                return this.tEXTField;
             }
             set {
-                this.cO_NMField = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.datacontract.org/2004/07/EldigmPlusSvc_Memco.WebSvc.Sys.Worker")]
-    public partial class DataDevice {
-        
-        private int dEV_CDField;
-        
-        private bool dEV_CDFieldSpecified;
-        
-        private int dEVICE_IDField;
-        
-        private bool dEVICE_IDFieldSpecified;
-        
-        private string dEV_TYPE_SCDField;
-        
-        private string dEV_IO_SCDField;
-        
-        private string dEV_NMField;
-        
-        private string ipField;
-        
-        private int uSING_FLAGField;
-        
-        private bool uSING_FLAGFieldSpecified;
-        
-        private int sORT_NOField;
-        
-        private bool sORT_NOFieldSpecified;
-        
-        private string mEMOField;
-        
-        /// <remarks/>
-        public int DEV_CD {
-            get {
-                return this.dEV_CDField;
-            }
-            set {
-                this.dEV_CDField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool DEV_CDSpecified {
-            get {
-                return this.dEV_CDFieldSpecified;
-            }
-            set {
-                this.dEV_CDFieldSpecified = value;
-            }
-        }
-        
-        /// <remarks/>
-        public int DEVICE_ID {
-            get {
-                return this.dEVICE_IDField;
-            }
-            set {
-                this.dEVICE_IDField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool DEVICE_IDSpecified {
-            get {
-                return this.dEVICE_IDFieldSpecified;
-            }
-            set {
-                this.dEVICE_IDFieldSpecified = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public string DEV_TYPE_SCD {
-            get {
-                return this.dEV_TYPE_SCDField;
-            }
-            set {
-                this.dEV_TYPE_SCDField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public string DEV_IO_SCD {
-            get {
-                return this.dEV_IO_SCDField;
-            }
-            set {
-                this.dEV_IO_SCDField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public string DEV_NM {
-            get {
-                return this.dEV_NMField;
-            }
-            set {
-                this.dEV_NMField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public string IP {
-            get {
-                return this.ipField;
-            }
-            set {
-                this.ipField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public int USING_FLAG {
-            get {
-                return this.uSING_FLAGField;
-            }
-            set {
-                this.uSING_FLAGField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool USING_FLAGSpecified {
-            get {
-                return this.uSING_FLAGFieldSpecified;
-            }
-            set {
-                this.uSING_FLAGFieldSpecified = value;
-            }
-        }
-        
-        /// <remarks/>
-        public int SORT_NO {
-            get {
-                return this.sORT_NOField;
-            }
-            set {
-                this.sORT_NOField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool SORT_NOSpecified {
-            get {
-                return this.sORT_NOFieldSpecified;
-            }
-            set {
-                this.sORT_NOFieldSpecified = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public string MEMO {
-            get {
-                return this.mEMOField;
-            }
-            set {
-                this.mEMOField = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.datacontract.org/2004/07/EldigmPlusSvc_Memco.WebSvc.Sys.Worker")]
-    public partial class DataDevCombo {
-        
-        private string sCODEField;
-        
-        private string sCODE_NMField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public string SCODE {
-            get {
-                return this.sCODEField;
-            }
-            set {
-                this.sCODEField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public string SCODE_NM {
-            get {
-                return this.sCODE_NMField;
-            }
-            set {
-                this.sCODE_NMField = value;
+                this.tEXTField = value;
             }
         }
     }
@@ -698,11 +397,13 @@ namespace EldigmPlusApp.Mem_WsWorkerLaborSearch {
         
         private bool lAB_NOFieldSpecified;
         
-        private int uSER_NOField;
-        
-        private bool uSER_NOFieldSpecified;
+        private string cO_NMField;
         
         private string lAB_NMField;
+        
+        private string jOB_NMField;
+        
+        private string tEAM_NMField;
         
         private int bIRTH_DATEField;
         
@@ -710,29 +411,9 @@ namespace EldigmPlusApp.Mem_WsWorkerLaborSearch {
         
         private string mOBILE_NOField;
         
-        private int fACE_PHOTOField;
+        private int uSER_NOField;
         
-        private bool fACE_PHOTOFieldSpecified;
-        
-        private int cO_CDField;
-        
-        private bool cO_CDFieldSpecified;
-        
-        private int tEAM_CDField;
-        
-        private bool tEAM_CDFieldSpecified;
-        
-        private int jOB_CCDField;
-        
-        private bool jOB_CCDFieldSpecified;
-        
-        private int bLOCK_CCDField;
-        
-        private bool bLOCK_CCDFieldSpecified;
-        
-        private int lAB_STSField;
-        
-        private bool lAB_STSFieldSpecified;
+        private bool uSER_NOFieldSpecified;
         
         private string aUTH_CDField;
         
@@ -758,23 +439,13 @@ namespace EldigmPlusApp.Mem_WsWorkerLaborSearch {
         }
         
         /// <remarks/>
-        public int USER_NO {
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string CO_NM {
             get {
-                return this.uSER_NOField;
+                return this.cO_NMField;
             }
             set {
-                this.uSER_NOField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool USER_NOSpecified {
-            get {
-                return this.uSER_NOFieldSpecified;
-            }
-            set {
-                this.uSER_NOFieldSpecified = value;
+                this.cO_NMField = value;
             }
         }
         
@@ -786,6 +457,28 @@ namespace EldigmPlusApp.Mem_WsWorkerLaborSearch {
             }
             set {
                 this.lAB_NMField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string JOB_NM {
+            get {
+                return this.jOB_NMField;
+            }
+            set {
+                this.jOB_NMField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string TEAM_NM {
+            get {
+                return this.tEAM_NMField;
+            }
+            set {
+                this.tEAM_NMField = value;
             }
         }
         
@@ -822,128 +515,23 @@ namespace EldigmPlusApp.Mem_WsWorkerLaborSearch {
         }
         
         /// <remarks/>
-        public int FACE_PHOTO {
+        public int USER_NO {
             get {
-                return this.fACE_PHOTOField;
+                return this.uSER_NOField;
             }
             set {
-                this.fACE_PHOTOField = value;
+                this.uSER_NOField = value;
             }
         }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool FACE_PHOTOSpecified {
+        public bool USER_NOSpecified {
             get {
-                return this.fACE_PHOTOFieldSpecified;
+                return this.uSER_NOFieldSpecified;
             }
             set {
-                this.fACE_PHOTOFieldSpecified = value;
-            }
-        }
-        
-        /// <remarks/>
-        public int CO_CD {
-            get {
-                return this.cO_CDField;
-            }
-            set {
-                this.cO_CDField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool CO_CDSpecified {
-            get {
-                return this.cO_CDFieldSpecified;
-            }
-            set {
-                this.cO_CDFieldSpecified = value;
-            }
-        }
-        
-        /// <remarks/>
-        public int TEAM_CD {
-            get {
-                return this.tEAM_CDField;
-            }
-            set {
-                this.tEAM_CDField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool TEAM_CDSpecified {
-            get {
-                return this.tEAM_CDFieldSpecified;
-            }
-            set {
-                this.tEAM_CDFieldSpecified = value;
-            }
-        }
-        
-        /// <remarks/>
-        public int JOB_CCD {
-            get {
-                return this.jOB_CCDField;
-            }
-            set {
-                this.jOB_CCDField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool JOB_CCDSpecified {
-            get {
-                return this.jOB_CCDFieldSpecified;
-            }
-            set {
-                this.jOB_CCDFieldSpecified = value;
-            }
-        }
-        
-        /// <remarks/>
-        public int BLOCK_CCD {
-            get {
-                return this.bLOCK_CCDField;
-            }
-            set {
-                this.bLOCK_CCDField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool BLOCK_CCDSpecified {
-            get {
-                return this.bLOCK_CCDFieldSpecified;
-            }
-            set {
-                this.bLOCK_CCDFieldSpecified = value;
-            }
-        }
-        
-        /// <remarks/>
-        public int LAB_STS {
-            get {
-                return this.lAB_STSField;
-            }
-            set {
-                this.lAB_STSField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool LAB_STSSpecified {
-            get {
-                return this.lAB_STSFieldSpecified;
-            }
-            set {
-                this.lAB_STSFieldSpecified = value;
+                this.uSER_NOFieldSpecified = value;
             }
         }
         
@@ -972,6 +560,174 @@ namespace EldigmPlusApp.Mem_WsWorkerLaborSearch {
         private object[] results;
         
         internal sLaborCompanyListCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public string Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[0]));
+            }
+        }
+        
+        /// <remarks/>
+        public DataComCombo[] reList {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((DataComCombo[])(this.results[1]));
+            }
+        }
+        
+        /// <remarks/>
+        public string reMsg {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[2]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
+    public delegate void sLaborConstListCompletedEventHandler(object sender, sLaborConstListCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class sLaborConstListCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal sLaborConstListCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public string Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[0]));
+            }
+        }
+        
+        /// <remarks/>
+        public DataComCombo[] reList {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((DataComCombo[])(this.results[1]));
+            }
+        }
+        
+        /// <remarks/>
+        public string reMsg {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[2]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
+    public delegate void sLaborJobListCompletedEventHandler(object sender, sLaborJobListCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class sLaborJobListCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal sLaborJobListCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public string Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[0]));
+            }
+        }
+        
+        /// <remarks/>
+        public DataComCombo[] reList {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((DataComCombo[])(this.results[1]));
+            }
+        }
+        
+        /// <remarks/>
+        public string reMsg {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[2]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
+    public delegate void sLaborBlockListCompletedEventHandler(object sender, sLaborBlockListCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class sLaborBlockListCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal sLaborBlockListCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public string Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[0]));
+            }
+        }
+        
+        /// <remarks/>
+        public DataComCombo[] reList {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((DataComCombo[])(this.results[1]));
+            }
+        }
+        
+        /// <remarks/>
+        public string reMsg {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[2]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
+    public delegate void sLaborTeamListCompletedEventHandler(object sender, sLaborTeamListCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class sLaborTeamListCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal sLaborTeamListCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
                 base(exception, cancelled, userState) {
             this.results = results;
         }
@@ -1036,258 +792,6 @@ namespace EldigmPlusApp.Mem_WsWorkerLaborSearch {
         
         /// <remarks/>
         public string reMsg {
-            get {
-                this.RaiseExceptionIfNecessary();
-                return ((string)(this.results[2]));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
-    public delegate void devTypeCmbCompletedEventHandler(object sender, devTypeCmbCompletedEventArgs e);
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class devTypeCmbCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
-        
-        private object[] results;
-        
-        internal devTypeCmbCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
-        }
-        
-        /// <remarks/>
-        public string Result {
-            get {
-                this.RaiseExceptionIfNecessary();
-                return ((string)(this.results[0]));
-            }
-        }
-        
-        /// <remarks/>
-        public DataDevCombo[] reList {
-            get {
-                this.RaiseExceptionIfNecessary();
-                return ((DataDevCombo[])(this.results[1]));
-            }
-        }
-        
-        /// <remarks/>
-        public string reMsg {
-            get {
-                this.RaiseExceptionIfNecessary();
-                return ((string)(this.results[2]));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
-    public delegate void devIOCmbCompletedEventHandler(object sender, devIOCmbCompletedEventArgs e);
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class devIOCmbCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
-        
-        private object[] results;
-        
-        internal devIOCmbCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
-        }
-        
-        /// <remarks/>
-        public string Result {
-            get {
-                this.RaiseExceptionIfNecessary();
-                return ((string)(this.results[0]));
-            }
-        }
-        
-        /// <remarks/>
-        public DataDevCombo[] reList {
-            get {
-                this.RaiseExceptionIfNecessary();
-                return ((DataDevCombo[])(this.results[1]));
-            }
-        }
-        
-        /// <remarks/>
-        public string reMsg {
-            get {
-                this.RaiseExceptionIfNecessary();
-                return ((string)(this.results[2]));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
-    public delegate void sDeviceCompletedEventHandler(object sender, sDeviceCompletedEventArgs e);
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class sDeviceCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
-        
-        private object[] results;
-        
-        internal sDeviceCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
-        }
-        
-        /// <remarks/>
-        public string Result {
-            get {
-                this.RaiseExceptionIfNecessary();
-                return ((string)(this.results[0]));
-            }
-        }
-        
-        /// <remarks/>
-        public DataDevice[] reList {
-            get {
-                this.RaiseExceptionIfNecessary();
-                return ((DataDevice[])(this.results[1]));
-            }
-        }
-        
-        /// <remarks/>
-        public string reMsg {
-            get {
-                this.RaiseExceptionIfNecessary();
-                return ((string)(this.results[2]));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
-    public delegate void mDeviceCompletedEventHandler(object sender, mDeviceCompletedEventArgs e);
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class mDeviceCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
-        
-        private object[] results;
-        
-        internal mDeviceCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
-        }
-        
-        /// <remarks/>
-        public string Result {
-            get {
-                this.RaiseExceptionIfNecessary();
-                return ((string)(this.results[0]));
-            }
-        }
-        
-        /// <remarks/>
-        public string reMsg {
-            get {
-                this.RaiseExceptionIfNecessary();
-                return ((string)(this.results[1]));
-            }
-        }
-        
-        /// <remarks/>
-        public string reData {
-            get {
-                this.RaiseExceptionIfNecessary();
-                return ((string)(this.results[2]));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
-    public delegate void aDeviceProCompletedEventHandler(object sender, aDeviceProCompletedEventArgs e);
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class aDeviceProCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
-        
-        private object[] results;
-        
-        internal aDeviceProCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
-        }
-        
-        /// <remarks/>
-        public string Result {
-            get {
-                this.RaiseExceptionIfNecessary();
-                return ((string)(this.results[0]));
-            }
-        }
-        
-        /// <remarks/>
-        public string reMsg {
-            get {
-                this.RaiseExceptionIfNecessary();
-                return ((string)(this.results[1]));
-            }
-        }
-        
-        /// <remarks/>
-        public string reData {
-            get {
-                this.RaiseExceptionIfNecessary();
-                return ((string)(this.results[2]));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
-    public delegate void logDeviceCompletedEventHandler(object sender, logDeviceCompletedEventArgs e);
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class logDeviceCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
-        
-        private object[] results;
-        
-        internal logDeviceCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
-        }
-        
-        /// <remarks/>
-        public string Result {
-            get {
-                this.RaiseExceptionIfNecessary();
-                return ((string)(this.results[0]));
-            }
-        }
-        
-        /// <remarks/>
-        public string reMsg {
-            get {
-                this.RaiseExceptionIfNecessary();
-                return ((string)(this.results[1]));
-            }
-        }
-        
-        /// <remarks/>
-        public string reData {
             get {
                 this.RaiseExceptionIfNecessary();
                 return ((string)(this.results[2]));

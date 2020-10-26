@@ -32,9 +32,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmInOut));
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
-            this.btnSearch = new System.Windows.Forms.Button();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.btnSave = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.dgv1_CHK = new System.Windows.Forms.DataGridViewCheckBoxColumn();
@@ -46,6 +43,7 @@
             this.dgv1_TEAM_NM = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgv1_DEV_IO_SCD = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgv1_CODE_NM = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.searchCondition21 = new EldigmPlusApp_UserControl.SearchCondition2();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -85,9 +83,7 @@
             // 
             // splitContainer2.Panel1
             // 
-            this.splitContainer2.Panel1.Controls.Add(this.btnSearch);
-            this.splitContainer2.Panel1.Controls.Add(this.dateTimePicker2);
-            this.splitContainer2.Panel1.Controls.Add(this.dateTimePicker1);
+            this.splitContainer2.Panel1.Controls.Add(this.searchCondition21);
             // 
             // splitContainer2.Panel2
             // 
@@ -95,32 +91,6 @@
             this.splitContainer2.Size = new System.Drawing.Size(1037, 40);
             this.splitContainer2.SplitterDistance = 750;
             this.splitContainer2.TabIndex = 0;
-            // 
-            // btnSearch
-            // 
-            this.btnSearch.Location = new System.Drawing.Point(220, 8);
-            this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(75, 23);
-            this.btnSearch.TabIndex = 2;
-            this.btnSearch.Text = "Search";
-            this.btnSearch.UseVisualStyleBackColor = true;
-            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
-            // 
-            // dateTimePicker2
-            // 
-            this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker2.Location = new System.Drawing.Point(116, 10);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(98, 21);
-            this.dateTimePicker2.TabIndex = 1;
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(12, 10);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(98, 21);
-            this.dateTimePicker1.TabIndex = 0;
             // 
             // btnSave
             // 
@@ -242,6 +212,15 @@
             this.dgv1_CODE_NM.Name = "dgv1_CODE_NM";
             this.dgv1_CODE_NM.ReadOnly = true;
             // 
+            // searchCondition21
+            // 
+            this.searchCondition21.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.searchCondition21.Location = new System.Drawing.Point(0, 0);
+            this.searchCondition21.Name = "searchCondition21";
+            this.searchCondition21.Size = new System.Drawing.Size(750, 40);
+            this.searchCondition21.TabIndex = 1;
+            this.searchCondition21.btnSearchClick += new System.EventHandler(this.searchCondition21_btnSearchClick);
+            // 
             // FrmInOut
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
@@ -270,9 +249,6 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.SplitContainer splitContainer2;
         private System.Windows.Forms.Button btnSave;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.Button btnSearch;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
         private System.Windows.Forms.DataGridViewCheckBoxColumn dgv1_CHK;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgv1_LAB_NO;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgv1_LAB_NM;
@@ -282,5 +258,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dgv1_TEAM_NM;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgv1_DEV_IO_SCD;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgv1_CODE_NM;
+        private EldigmPlusApp_UserControl.SearchCondition2 searchCondition21;
     }
 }

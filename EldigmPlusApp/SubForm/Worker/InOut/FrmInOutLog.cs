@@ -12,7 +12,7 @@ namespace EldigmPlusApp.SubForm.Worker.InOut
     public partial class FrmInOutLog : Form
     {
         LogUtil logs = null;
-        ResourceManager lngRM = null;
+        ResourceManager wRM = null;
         ResourceManager msgRM = null;
 
         //string _ccodeGrp = "";
@@ -27,22 +27,23 @@ namespace EldigmPlusApp.SubForm.Worker.InOut
             try
             {
                 logs = new LogUtil();
-                lngRM = new ResourceManager("EldigmPlusApp.strLanguage", typeof(FrmInOutLog).Assembly);
-                msgRM = new ResourceManager("EldigmPlusApp.msgLanguage", typeof(FrmInOutLog).Assembly);
+                wRM = new ResourceManager("EldigmPlusApp.GlobalLanguage.word_Language", typeof(FrmInOutLog).Assembly);
+                msgRM = new ResourceManager("EldigmPlusApp.GlobalLanguage.msg_Language", typeof(FrmInOutLog).Assembly);
 
-                btnSave.Text = "저장";
-                btnSearch.Text = "검색";
+                btnSearch.Text = wRM.GetString("wSearch");
+                btnSave.Text = wRM.GetString("wSave");
 
-                dataGridView1.Columns["dgv1_CHK"].HeaderText = "선택";
-                dataGridView1.Columns["dgv1_LAB_NO"].HeaderText = "근로자번호";
-                dataGridView1.Columns["dgv1_LAB_NM"].HeaderText = "이름";
-                dataGridView1.Columns["dgv1_EVENT_DT"].HeaderText = "이벤트일시";
-                dataGridView1.Columns["dgv1_CO_NM"].HeaderText = "업체";
-                dataGridView1.Columns["dgv1_TEAM_NM"].HeaderText = "팀";
-                dataGridView1.Columns["dgv1_DEV_CD"].HeaderText = "장치";
-                dataGridView1.Columns["dgv1_DEV_TYPE_SCD"].HeaderText = "장치_유형_S코드";
-                dataGridView1.Columns["dgv1_DEV_IO_SCD"].HeaderText = "장치_IO_S코드";
-                dataGridView1.Columns["dgv1_CODE_NM"].HeaderText = "직종";
+                dataGridView1.Columns["dgv1_CHK"].HeaderText = wRM.GetString("wSelect");
+                dataGridView1.Columns["dgv1_LAB_NO"].HeaderText = wRM.GetString("wWorker") + wRM.GetString("wNumber");
+                dataGridView1.Columns["dgv1_LAB_NM"].HeaderText = wRM.GetString("wName");
+                dataGridView1.Columns["dgv1_EVENT_DT"].HeaderText = msgRM.GetString("wEventDate");
+                dataGridView1.Columns["dgv1_CO_NM"].HeaderText = wRM.GetString("wCompany");
+                dataGridView1.Columns["dgv1_TEAM_NM"].HeaderText = wRM.GetString("wTeam");
+                dataGridView1.Columns["dgv1_DEV_CD"].HeaderText = wRM.GetString("wDevice");
+                dataGridView1.Columns["dgv1_DEV_TYPE_SCD"].HeaderText = wRM.GetString("wDevice") + wRM.GetString("wType") + wRM.GetString("wScode");
+                dataGridView1.Columns["dgv1_DEV_IO_SCD"].HeaderText = wRM.GetString("wDevice") + wRM.GetString("wInOut") + wRM.GetString("wScode");
+                dataGridView1.Columns["dgv1_CODE_NM"].HeaderText = wRM.GetString("wJobType");
+
 
                 Control.CheckForIllegalCrossThreadCalls = false;
 
@@ -64,11 +65,50 @@ namespace EldigmPlusApp.SubForm.Worker.InOut
         {
             try
             {
+                SetDataBind_CompanyCmb();
                 SetDataBind_gridView1();
             }
             catch (Exception ex)
             {
                 logs.SaveLog("[error]  (page)::FrmInOutLog.cs  (Function)::FrmInOutLog_Load  (Detail):: " + "\r\n" + ex.ToString(), "Error");
+            }
+        }
+
+        //업체 콤보 박스 
+        private void SetDataBind_CompanyCmb()
+        {
+            Mem_WsInOut.WsInOut wSvc = null;
+            string reCode = "";
+            string reMsg = "";
+            Mem_WsInOut.DataComCombo[] getData = null;
+            try
+            {
+                wSvc = new Mem_WsInOut.WsInOut();
+                wSvc.Url = "http://" + AppInfo.SsWsvcServer2 + "/WebSvc/Worker/InOut/WsInOut.svc";
+                wSvc.Timeout = 1000;
+
+                reCode = wSvc.sLaborCompanyList(AppInfo.SsSiteCd, AppInfo.SsLabAuth, AppInfo.SsCoCd, out getData, out reMsg);
+                if (reCode == "Y")
+                {
+                    if (getData != null && getData.Length > 0)
+                    {
+                        Class.Common.ComboBoxItemSet setCmb = null;
+
+                        setCmb = new Class.Common.ComboBoxItemSet();
+                        setCmb.AddColumn();
+
+                        for (int i = 0; i < getData.Length; i++)
+                        {
+                            setCmb.AddRow(getData[i].TEXT.ToString(), getData[i].VALUE.ToString());
+                        }
+
+                        setCmb.Bind(searchCondition21.cmbCom);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                logs.SaveLog("[error]  (page)::FrmLaborSearch.cs  (Function)::SetDataBind_CmbMember  (Detail):: " + "\r\n" + ex.ToString());
             }
         }
 
@@ -87,10 +127,10 @@ namespace EldigmPlusApp.SubForm.Worker.InOut
                 wSvc.Url = "http://" + AppInfo.SsWsvcServer2 + "/WebSvc/Worker/InOut/WsInOut.svc";
                 wSvc.Timeout = 1000;
 
-                string dtp1_val = dateTimePicker1.Value.ToString("yyyyMMdd");
-                string dtp2_val = dateTimePicker2.Value.AddDays(1).ToString("yyyyMMdd");
+                string dtp1_val = searchCondition21.dateTimePicker1.Value.ToString("yyyyMMdd");
+                string dtp2_val = searchCondition21.dateTimePicker2.Value.AddDays(1).ToString("yyyyMMdd");
 
-                reCode = wSvc.sInOutLog(AppInfo.SsDbNm, AppInfo.SsSiteCd, dtp1_val, dtp2_val, out getData, out reMsg);
+                reCode = wSvc.sInOutLog(AppInfo.SsDbNm, AppInfo.SsSiteCd, dtp1_val, dtp2_val, searchCondition21.cmbCom.SelectedValue.ToString(), out getData, out reMsg);
 
                 if (reCode == "Y")
                 {
@@ -250,11 +290,11 @@ namespace EldigmPlusApp.SubForm.Worker.InOut
                         }
                     }
                 }
-
+                
                 if (reCnt > 0)
-                    MessageBox.Show("저장 성공" + " : " + reCnt.ToString());
+                    MessageBox.Show(wRM.GetString("wSave") + " " + wRM.GetString("wSuccess") + " : " + reCnt.ToString());
                 else
-                    MessageBox.Show("저장 실패");
+                    MessageBox.Show(wRM.GetString("wSave") + " " + wRM.GetString("wFail"));
 
                 SetDataBind_gridView1();
             }

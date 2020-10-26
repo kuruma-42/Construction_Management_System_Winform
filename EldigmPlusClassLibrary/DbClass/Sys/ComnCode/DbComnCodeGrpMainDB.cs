@@ -236,14 +236,12 @@ namespace EldigmPlusClassLibrary.DbClass.Sys.CommonCode
         public DataSet sComnSiteTreeView(string DBNM, string SITE_CD, string AUTH_CD)
         {
             string sql = "" +
-                 " SELECT A.NEW_FLAG, A.MODIFY_FLAG, A.DEL_FLAG, B.* FROM ( SELECT CCODE_GRP, NEW_FLAG, MODIFY_FLAG, DEL_FLAG " +
+                 " SELECT A.NEW_FLAG, A.MODIFY_FLAG, A.DEL_FLAG, B.CCODE_GRP, B.CCODE_GRP_NM FROM ( SELECT CCODE_GRP, NEW_FLAG, MODIFY_FLAG, DEL_FLAG " +
                  " FROM [PLUS-" + DBNM + "].dbo.T00_CODE_GRP_SETAUTH_SITE " +
                  " WHERE SITE_CD = 1 AND AUTH_CD = 'SysAdmin' AND VIEW_FLAG = 1 ) A INNER JOIN " +
                  " ( SELECT CCODE_GRP, CCODE_GRP_NM FROM [PLUS_MAIN].dbo.TM00_CODE_COMN_GRP WHERE USING_FLAG = 1 ) B " +
-                 " ON A.CCODE_GRP = B.CCODE_GRP ";
-
-            sql += "" +
-              " ORDER BY B.CCODE_GRP_NM, B.CCODE_GRP ";
+                 " ON A.CCODE_GRP = B.CCODE_GRP " +
+                 " ORDER BY B.CCODE_GRP_NM, B.CCODE_GRP ";
             
             DataSet ds = null;
             if (_sqlHelper != null)

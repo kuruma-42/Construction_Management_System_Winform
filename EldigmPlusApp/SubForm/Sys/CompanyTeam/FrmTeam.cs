@@ -18,7 +18,7 @@ namespace EldigmPlusApp.SubForm.Sys.CompanyTeam
     public partial class FrmTeam : Form
     {
         LogUtil logs = null;
-        ResourceManager lngRM = null;
+        ResourceManager wRM = null;
         ResourceManager msgRM = null;
 
 
@@ -33,23 +33,23 @@ namespace EldigmPlusApp.SubForm.Sys.CompanyTeam
             try
             {
                 logs = new LogUtil();
-                lngRM = new ResourceManager("EldigmPlusApp.strLanguage", typeof(FrmTeam).Assembly);
-                msgRM = new ResourceManager("EldigmPlusApp.msgLanguage", typeof(FrmTeam).Assembly);
+                wRM = new ResourceManager("EldigmPlusApp.GlobalLanguage.word_Language", typeof(FrmTeam).Assembly);
+                msgRM = new ResourceManager("EldigmPlusApp.GlobalLanguage.msg_Language", typeof(FrmTeam).Assembly);
 
-                btnSearch.Text = lngRM.GetString("lngSearch");
-                btnSave.Text = "저장";
+                btnSearch.Text = wRM.GetString("wSearch");
+                btnSave.Text = wRM.GetString("wSave");
 
-                dataGridView1.Columns["dgv1_CHK"].HeaderText = "선택";
-                dataGridView1.Columns["dgv1_TEAM_CD"].HeaderText = "팀 코드";
-                dataGridView1.Columns["dgv1_TEAM_NM"].HeaderText = "팀 이름";
-                dataGridView1.Columns["dgv1_USING_FLAG"].HeaderText = "사용";                
-                dataGridView1.Columns["dgv1_SORT_NO"].HeaderText = "정렬";
-                dataGridView1.Columns["dgv1_MEMO"].HeaderText = "메모";
-                
+                dataGridView1.Columns["dgv1_CHK"].HeaderText = wRM.GetString("wSelect");
+                dataGridView1.Columns["dgv1_TEAM_CD"].HeaderText = wRM.GetString("wCode");
+                dataGridView1.Columns["dgv1_TEAM_NM"].HeaderText = wRM.GetString("wName");
+                dataGridView1.Columns["dgv1_USING_FLAG"].HeaderText = wRM.GetString("wUse");
+                dataGridView1.Columns["dgv1_SORT_NO"].HeaderText = wRM.GetString("wSort");
+                dataGridView1.Columns["dgv1_MEMO"].HeaderText = wRM.GetString("wMemo");
 
-                dataGridView2.Columns["dgv2_TEAM_NM"].HeaderText = "*업체 이름";               
-                dataGridView2.Columns["dgv2_SORT_NO"].HeaderText = "정렬";
-                dataGridView2.Columns["dgv2_MEMO"].HeaderText = "메모";
+
+                dataGridView2.Columns["dgv2_TEAM_NM"].HeaderText = "*" + wRM.GetString("wName");
+                dataGridView2.Columns["dgv2_SORT_NO"].HeaderText = wRM.GetString("wSort");
+                dataGridView2.Columns["dgv2_MEMO"].HeaderText = wRM.GetString("wMemo");
 
 
 
@@ -254,7 +254,7 @@ namespace EldigmPlusApp.SubForm.Sys.CompanyTeam
                 dataGridView2.Rows.Clear();
                 dataGridView2.Rows.Add();
                 dataGridView2.Rows[0].Cells["dgv2_SORT_NO"].Value = "10";
-                dataGridView2.Rows[0].Cells["dgv2_BTNADD"].Value = "추가";
+                dataGridView2.Rows[0].Cells["dgv2_BTNADD"].Value = wRM.GetString("wAdd");
             }
             catch (Exception ex)
             {
@@ -289,7 +289,7 @@ namespace EldigmPlusApp.SubForm.Sys.CompanyTeam
                 }
                 if (reCnt < 1)
                 {
-                    MessageBox.Show("선택된 데이터가 없습니다.");
+                    MessageBox.Show(wRM.GetString("msgNotSelected"));
                     return;
                 }
 
@@ -314,7 +314,7 @@ namespace EldigmPlusApp.SubForm.Sys.CompanyTeam
                             if (dataGridView1.Rows[i].Cells["dgv1_MEMO"].Value != null)
                                 pMemo = dataGridView1.Rows[i].Cells["dgv1_MEMO"].Value.ToString();                           
 
-                            string pInputId = AppInfo.SsUserId;
+                            string pInputId = AppInfo.SsLabNo;
                             string pSiteCd = AppInfo.SsSiteCd;
 
                             reCode = wSvc.mTeamMemco( pSiteCd,  pTeamCd,  pTeamNm,  pUsingFlag,  pSortNo,  pMemo, out  reMsg, out  reData);
@@ -326,11 +326,11 @@ namespace EldigmPlusApp.SubForm.Sys.CompanyTeam
                 }
                 if (reCnt > 0)
                 {
-                    MessageBox.Show("저장 성공");
+                    MessageBox.Show(wRM.GetString("wSave") + " " + wRM.GetString("wSuccess"));
                 }
                 else
                 {
-                    MessageBox.Show("저장 실패");
+                    MessageBox.Show(wRM.GetString("wSave") + " " + wRM.GetString("wFail"));
                 }
 
                 SetDataBind_gridView1();
@@ -356,7 +356,7 @@ namespace EldigmPlusApp.SubForm.Sys.CompanyTeam
                 string reVal = ChkDgv2Param();
 
                 if (reVal != "")
-                    MessageBox.Show("데이터 확인 :: " + reVal);
+                    MessageBox.Show(wRM.GetString("wCheck") + " :: " + reVal);
                 else
                 {
 
@@ -372,7 +372,7 @@ namespace EldigmPlusApp.SubForm.Sys.CompanyTeam
                     if (dataGridView2.Rows[0].Cells["dgv2_MEMO"].Value != null)
                         pMemo = dataGridView2.Rows[0].Cells["dgv2_MEMO"].Value.ToString();                                                          
 
-                    string pInputId = AppInfo.SsUserId;
+                    string pInputId = AppInfo.SsLabNo;
 
                     Mem_WsSysCompanyTeam.WsSysCompanyTeam wSvc = null;
                     string reCode = "";
@@ -401,10 +401,10 @@ namespace EldigmPlusApp.SubForm.Sys.CompanyTeam
                             reCnt = Convert.ToInt16(reData);
 
                         if (reCnt != 0)
-                            MessageBox.Show("저장 성공");
+                            MessageBox.Show(wRM.GetString("wSave") + " " + wRM.GetString("wSuccess"));
 
                         else
-                            MessageBox.Show("저장 실패");
+                            MessageBox.Show(wRM.GetString("wSave") + " " + wRM.GetString("wFail"));
 
 
                         SetDataBind_gridView1();
@@ -433,20 +433,20 @@ namespace EldigmPlusApp.SubForm.Sys.CompanyTeam
                 {
                     if (dataGridView2.Rows[0].Cells["dgv2_TEAM_NM"].Value.ToString() == "")
                     {
-                        reVal = "팀 이름";
+                        reVal = wRM.GetString("wName");
                         return reVal;
                     }
                 }
                 else
                 {
-                    reVal = "팀 이름";
+                    reVal = wRM.GetString("wName");
                     return reVal;
                 }
 
             }
             catch (Exception ex)
             {
-                reVal = "에러";
+                reVal = wRM.GetString("wError");
                 logs.SaveLog("[error]  (page)::FrmTeam.cs  (Function)::ChkDgv2Param  (Detail):: " + "\r\n" + ex.ToString(), "Error");
             }
 

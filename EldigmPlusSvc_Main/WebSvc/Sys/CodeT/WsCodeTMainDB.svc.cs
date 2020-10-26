@@ -639,7 +639,7 @@ namespace EldigmPlusSvc_Main.WebSvc.Sys.CodeT
             }
             catch (Exception ex)
             {
-                reMsg = "[검색 에러 - BizSystem 연결 실패] :: " + ex.ToString();
+                reMsg = "[검색 에러 - BizCodeT 연결 실패] :: " + ex.ToString();
                 reCode = "N";
             }
 
@@ -692,7 +692,7 @@ namespace EldigmPlusSvc_Main.WebSvc.Sys.CodeT
             }
             catch (Exception ex)
             {
-                reMsg = "[검색 에러 - BizSystem 연결 실패] :: " + ex.ToString();
+                reMsg = "[검색 에러 - BizCodeT 연결 실패] :: " + ex.ToString();
                 reCode = "N";
             }
 

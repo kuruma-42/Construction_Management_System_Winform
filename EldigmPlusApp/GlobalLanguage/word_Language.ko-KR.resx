@@ -117,10 +117,196 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="wAdd" xml:space="preserve">
+    <value>추가</value>
+  </data>
+  <data name="wAddress" xml:space="preserve">
+    <value>주소</value>
+  </data>
+  <data name="wApp" xml:space="preserve">
+    <value>앱</value>
+  </data>
+  <data name="wApply" xml:space="preserve">
+    <value>적용</value>
+  </data>
+  <data name="wAuthority" xml:space="preserve">
+    <value>권한</value>
+  </data>
+  <data name="wBizNo" xml:space="preserve">
+    <value>사업자번호</value>
+  </data>
+  <data name="wCheck" xml:space="preserve">
+    <value>체크</value>
+  </data>
+  <data name="wClassify" xml:space="preserve">
+    <value>구분</value>
+  </data>
+  <data name="wCode" xml:space="preserve">
+    <value>코드</value>
+  </data>
+  <data name="wCompany" xml:space="preserve">
+    <value>업체</value>
+  </data>
+  <data name="wConstructionTypes" xml:space="preserve">
+    <value>공종</value>
+  </data>
+  <data name="wCounter" xml:space="preserve">
+    <value>카운터</value>
+  </data>
+  <data name="wData" xml:space="preserve">
+    <value>데이터</value>
+  </data>
+  <data name="wDefaultValue" xml:space="preserve">
+    <value>기본값</value>
+  </data>
   <data name="wDelete" xml:space="preserve">
     <value>삭제</value>
   </data>
+  <data name="wDevice" xml:space="preserve">
+    <value>장치</value>
+  </data>
+  <data name="wDownload" xml:space="preserve">
+    <value>다운로드</value>
+  </data>
+  <data name="wEnd" xml:space="preserve">
+    <value>종료</value>
+  </data>
+  <data name="wEndDate" xml:space="preserve">
+    <value>종료일</value>
+  </data>
+  <data name="wError" xml:space="preserve">
+    <value>에러</value>
+  </data>
+  <data name="wFail" xml:space="preserve">
+    <value>실패</value>
+  </data>
+  <data name="wFile" xml:space="preserve">
+    <value>파일</value>
+  </data>
+  <data name="wFolder" xml:space="preserve">
+    <value>폴더</value>
+  </data>
+  <data name="wHeadOffice" xml:space="preserve">
+    <value>본사</value>
+  </data>
+  <data name="wHome" xml:space="preserve">
+    <value>홈</value>
+  </data>
+  <data name="wInfo" xml:space="preserve">
+    <value>정보</value>
+  </data>
+  <data name="wInOut" xml:space="preserve">
+    <value>출입</value>
+  </data>
+  <data name="wIp" xml:space="preserve">
+    <value>IP</value>
+  </data>
+  <data name="wJobType" xml:space="preserve">
+    <value>직종</value>
+  </data>
+  <data name="wLevel" xml:space="preserve">
+    <value>레벨</value>
+  </data>
+  <data name="wList" xml:space="preserve">
+    <value>리스트</value>
+  </data>
+  <data name="wLog" xml:space="preserve">
+    <value>로그</value>
+  </data>
+  <data name="wMember" xml:space="preserve">
+    <value>회원사</value>
+  </data>
+  <data name="wMemo" xml:space="preserve">
+    <value>메모</value>
+  </data>
+  <data name="wMenu" xml:space="preserve">
+    <value>메뉴</value>
+  </data>
+  <data name="wModify" xml:space="preserve">
+    <value>수정</value>
+  </data>
+  <data name="wName" xml:space="preserve">
+    <value>이름</value>
+  </data>
+  <data name="wNotUsing" xml:space="preserve">
+    <value>미사용</value>
+  </data>
+  <data name="wNumber" xml:space="preserve">
+    <value>번호</value>
+  </data>
+  <data name="wNumeric" xml:space="preserve">
+    <value>숫자</value>
+  </data>
+  <data name="wOwner" xml:space="preserve">
+    <value>대표자</value>
+  </data>
+  <data name="wPath" xml:space="preserve">
+    <value>경로</value>
+  </data>
+  <data name="wPrint" xml:space="preserve">
+    <value>프린트</value>
+  </data>
+  <data name="wProgram" xml:space="preserve">
+    <value>프로그램</value>
+  </data>
+  <data name="wReport" xml:space="preserve">
+    <value>보고서</value>
+  </data>
+  <data name="wRequired" xml:space="preserve">
+    <value>필수</value>
+  </data>
   <data name="wSave" xml:space="preserve">
     <value>저장</value>
+  </data>
+  <data name="wScode" xml:space="preserve">
+    <value>S코드</value>
+  </data>
+  <data name="wSearch" xml:space="preserve">
+    <value>검색</value>
+  </data>
+  <data name="wSelect" xml:space="preserve">
+    <value>선택</value>
+  </data>
+  <data name="wSite" xml:space="preserve">
+    <value>현장</value>
+  </data>
+  <data name="wSort" xml:space="preserve">
+    <value>정렬</value>
+  </data>
+  <data name="wStartDate" xml:space="preserve">
+    <value>시작일</value>
+  </data>
+  <data name="wSub" xml:space="preserve">
+    <value>서브</value>
+  </data>
+  <data name="wSuccess" xml:space="preserve">
+    <value>성공</value>
+  </data>
+  <data name="wTcode" xml:space="preserve">
+    <value>T코드</value>
+  </data>
+  <data name="wTeam" xml:space="preserve">
+    <value>팀</value>
+  </data>
+  <data name="wTel" xml:space="preserve">
+    <value>연락처</value>
+  </data>
+  <data name="wTop" xml:space="preserve">
+    <value>탑</value>
+  </data>
+  <data name="wTotal" xml:space="preserve">
+    <value>전체</value>
+  </data>
+  <data name="wType" xml:space="preserve">
+    <value>유형</value>
+  </data>
+  <data name="wUse" xml:space="preserve">
+    <value>사용</value>
+  </data>
+  <data name="wView" xml:space="preserve">
+    <value>보기</value>
+  </data>
+  <data name="wWorker" xml:space="preserve">
+    <value>근로자</value>
   </data>
 </root>

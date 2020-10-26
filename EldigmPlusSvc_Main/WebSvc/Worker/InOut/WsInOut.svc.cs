@@ -16,7 +16,8 @@ namespace EldigmPlusSvc_Main.WebSvc.Worker.InOut
     {
         LogClass logs = new LogClass();
 
-        public string sInOut(string pDbnm, string pSiteCd, string pDtp1, string pDtp2, out List<DataInOut> reList, out string reMsg)
+        //DEVICE TYPE CMB BOX
+        public string sLaborCompanyList(string pSiteCd, string pAuthCd, string pCoCd, out List<DataComCombo> reList, out string reMsg)
         {
             string reCode = "N";
 
@@ -28,7 +29,7 @@ namespace EldigmPlusSvc_Main.WebSvc.Worker.InOut
 
                 try
                 {
-                    ds = bizInOut.sInOut(pDbnm, pSiteCd, pDtp1, pDtp2);
+                    ds = bizInOut.sLaborCompanyList(pSiteCd, pAuthCd, pCoCd);
 
                     reMsg = "[검색 성공]";
                     reCode = "Y";
@@ -45,14 +46,14 @@ namespace EldigmPlusSvc_Main.WebSvc.Worker.InOut
                 reCode = "N";
             }
 
-            List<DataInOut> data = new List<DataInOut>();
+            List<DataComCombo> data = new List<DataComCombo>();
             try
             {
-                data = ListClass.ConvertDataTableToList<DataInOut>(ds.Tables[0]);
+                data = ListClass.ConvertDataTableToList<DataComCombo>(ds.Tables[0]);
             }
             catch (Exception ex)
             {
-                logs.SaveLog("[error]  (page)::WsSysCodeGrp.svc  (Function)::sSysCodeGrp  (Detail)::ConvertDataTableToList " + "\r\n" + ex.ToString(), "Error");
+                logs.SaveLog("[error]  (page)::WsWorkerLaborSearch.svc  (Function)::sLaborCompanyList  (Detail)::ConvertDataTableToList " + "\r\n" + ex.ToString(), "Error");
                 reMsg += "/[List 에러]" + ex.ToString();
                 reCode = "N";
             }
@@ -62,7 +63,8 @@ namespace EldigmPlusSvc_Main.WebSvc.Worker.InOut
             return reCode;
         }
 
-        public string sInOutLog(string pDbnm, string pSiteCd, string pDtp1, string pDtp2, out List<DataInOut> reList, out string reMsg)
+
+        public string sInOut(string pDbnm, string pSiteCd, string pDtp1, string pDtp2, string pCocd, out List<DataInOut> reList, out string reMsg)
         {
             string reCode = "N";
 
@@ -74,7 +76,7 @@ namespace EldigmPlusSvc_Main.WebSvc.Worker.InOut
 
                 try
                 {
-                    ds = bizInOut.sInOutLog(pDbnm, pSiteCd, pDtp1, pDtp2);
+                    ds = bizInOut.sInOut(pDbnm, pSiteCd, pDtp1, pDtp2, pCocd);
 
                     reMsg = "[검색 성공]";
                     reCode = "Y";
@@ -98,7 +100,53 @@ namespace EldigmPlusSvc_Main.WebSvc.Worker.InOut
             }
             catch (Exception ex)
             {
-                logs.SaveLog("[error]  (page)::WsSysCodeGrp.svc  (Function)::sSysCodeGrp  (Detail)::ConvertDataTableToList " + "\r\n" + ex.ToString(), "Error");
+                logs.SaveLog("[error]  (page)::WsInOut.svc  (Function)::sInOut  (Detail)::ConvertDataTableToList " + "\r\n" + ex.ToString(), "Error");
+                reMsg += "/[List 에러]" + ex.ToString();
+                reCode = "N";
+            }
+
+            reList = data;
+
+            return reCode;
+        }
+
+        public string sInOutLog(string pDbnm, string pSiteCd, string pDtp1, string pDtp2, string pCocd, out List<DataInOut> reList, out string reMsg)
+        {
+            string reCode = "N";
+
+            DataSet ds = null;
+            BizInOut bizInOut = null;
+            try
+            {
+                bizInOut = new BizInOut();
+
+                try
+                {
+                    ds = bizInOut.sInOutLog(pDbnm, pSiteCd, pDtp1, pDtp2, pCocd);
+
+                    reMsg = "[검색 성공]";
+                    reCode = "Y";
+                }
+                catch (Exception ex)
+                {
+                    reMsg = "[검색 실패]" + ex.ToString();
+                    reCode = "N";
+                }
+            }
+            catch (Exception ex)
+            {
+                reMsg = "[검색 에러] :: " + ex.ToString();
+                reCode = "N";
+            }
+
+            List<DataInOut> data = new List<DataInOut>();
+            try
+            {
+                data = ListClass.ConvertDataTableToList<DataInOut>(ds.Tables[0]);
+            }
+            catch (Exception ex)
+            {
+                logs.SaveLog("[error]  (page)::WsInOut.svc  (Function)::sInOutLog  (Detail)::ConvertDataTableToList " + "\r\n" + ex.ToString(), "Error");
                 reMsg += "/[List 에러]" + ex.ToString();
                 reCode = "N";
             }

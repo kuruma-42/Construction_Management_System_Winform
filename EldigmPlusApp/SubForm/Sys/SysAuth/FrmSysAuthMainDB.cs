@@ -18,7 +18,7 @@ namespace EldigmPlusApp.SubForm.Sys.SysAuth
     public partial class FrmSysAuthMainDB : Form
     {
         LogUtil logs = null;
-        ResourceManager lngRM = null;
+        ResourceManager wRM = null;
         ResourceManager msgRM = null;
 
         public FrmSysAuthMainDB()
@@ -30,31 +30,31 @@ namespace EldigmPlusApp.SubForm.Sys.SysAuth
             InitializeComponent(); try
             {
                 logs = new LogUtil();
-                lngRM = new ResourceManager("EldigmPlusApp.strLanguage", typeof(FrmSysAuthMainDB).Assembly);
-                msgRM = new ResourceManager("EldigmPlusApp.msgLanguage", typeof(FrmSysAuthMainDB).Assembly);
+                wRM = new ResourceManager("EldigmPlusApp.GlobalLanguage.word_Language", typeof(FrmSysAuthMainDB).Assembly);
+                msgRM = new ResourceManager("EldigmPlusApp.GlobalLanguage.msg_Language", typeof(FrmSysAuthMainDB).Assembly);
+
+                
+                btnSave.Text = wRM.GetString("wSave");
+                dataGridView1.Columns["dgv1_CHK"].HeaderText = wRM.GetString("wSelect");
+                dataGridView1.Columns["dgv1_AUTH_CD"].HeaderText = wRM.GetString("wAuthority") + wRM.GetString("wCode");
+                dataGridView1.Columns["dgv1_AUTH_NM"].HeaderText = wRM.GetString("wName");
+                dataGridView1.Columns["dgv1_MYBLOCK_FLAG"].HeaderText = msgRM.GetString("msgMyZoneStatus");
+                dataGridView1.Columns["dgv1_MYCON_FLAG"].HeaderText = msgRM.GetString("msgMyConstructionTypesStatus");
+                dataGridView1.Columns["dgv1_MYCOM_FLAG"].HeaderText = msgRM.GetString("msgMyCompanyStatus");
+                dataGridView1.Columns["dgv1_MYTEAM_FLAG"].HeaderText = msgRM.GetString("msgMyTeamStatus");
+                dataGridView1.Columns["dgv1_USING_FLAG"].HeaderText = msgRM.GetString("msgUsageStatus");
+                dataGridView1.Columns["dgv1_AUTH_LEVEL"].HeaderText = wRM.GetString("wAuthority") + wRM.GetString("wLevel");
+                dataGridView1.Columns["dgv1_MEMO"].HeaderText = wRM.GetString("wMemo");
 
 
-                btnSave.Text = "저장";
-                dataGridView1.Columns["dgv1_CHK"].HeaderText = "선택";
-                dataGridView1.Columns["dgv1_AUTH_CD"].HeaderText = "권한 코드";
-                dataGridView1.Columns["dgv1_AUTH_NM"].HeaderText = "권한 이름";
-                dataGridView1.Columns["dgv1_MYBLOCK_FLAG"].HeaderText = "내 구역만 여부";
-                dataGridView1.Columns["dgv1_MYCON_FLAG"].HeaderText = "내 공종만 여부";
-                dataGridView1.Columns["dgv1_MYCOM_FLAG"].HeaderText = "내 업체만 여부";
-                dataGridView1.Columns["dgv1_MYTEAM_FLAG"].HeaderText = "내 팀만 여부";
-                dataGridView1.Columns["dgv1_USING_FLAG"].HeaderText = "사용 여부";
-                dataGridView1.Columns["dgv1_AUTH_LEVEL"].HeaderText = "권한 레벨";
-                dataGridView1.Columns["dgv1_MEMO"].HeaderText = "메모";
-
-
-                dataGridView2.Columns["dgv2_AUTH_CD"].HeaderText = "*권한 코드";
-                dataGridView2.Columns["dgv2_AUTH_NM"].HeaderText = "*권한 이름";
-                dataGridView2.Columns["dgv2_MYBLOCK_FLAG"].HeaderText = "내 구역만 여부";
-                dataGridView2.Columns["dgv2_MYCON_FLAG"].HeaderText = "내 공종만 여부";
-                dataGridView2.Columns["dgv2_MYCOM_FLAG"].HeaderText = "내 업체만 여부";
-                dataGridView2.Columns["dgv2_MYTEAM_FLAG"].HeaderText = "내 팀만 여부";
-                dataGridView2.Columns["dgv2_AUTH_LEVEL"].HeaderText = "*권한 레벨";
-                dataGridView2.Columns["dgv2_MEMO"].HeaderText = "메모";
+                dataGridView2.Columns["dgv2_AUTH_CD"].HeaderText = "*" + wRM.GetString("wAuthority") + wRM.GetString("wCode");
+                dataGridView2.Columns["dgv2_AUTH_NM"].HeaderText = "*" + wRM.GetString("wName");
+                dataGridView2.Columns["dgv2_MYBLOCK_FLAG"].HeaderText = msgRM.GetString("msgMyZoneStatus");
+                dataGridView2.Columns["dgv2_MYCON_FLAG"].HeaderText = msgRM.GetString("msgMyConstructionTypesStatus");
+                dataGridView2.Columns["dgv2_MYCOM_FLAG"].HeaderText = msgRM.GetString("msgMyCompanyStatus");
+                dataGridView2.Columns["dgv2_MYTEAM_FLAG"].HeaderText = msgRM.GetString("msgUsageStatus");
+                dataGridView2.Columns["dgv2_AUTH_LEVEL"].HeaderText = "*" + wRM.GetString("wAuthority") + wRM.GetString("wLevel");
+                dataGridView2.Columns["dgv2_MEMO"].HeaderText = wRM.GetString("wMemo");
 
 
                 dataGridView2.Columns["dgv2_AUTH_CD"].HeaderCell.Style.ForeColor = Color.Maroon; // 헤더 필수 항목 빨강색
@@ -117,9 +117,9 @@ namespace EldigmPlusApp.SubForm.Sys.SysAuth
 
                 setCmb.AddColumn();
 
-                setCmb.AddRow("사용", "1");
-                setCmb.AddRow("미사용", "0");
-                setCmb.AddRow("전체", "");
+                setCmb.AddRow(wRM.GetString("wUse"), "1");
+                setCmb.AddRow(wRM.GetString("wNotUsing"), "0");
+                setCmb.AddRow(wRM.GetString("wTotal"), "");
 
                 setCmb.Bind(cmbUse);
 
@@ -209,7 +209,7 @@ namespace EldigmPlusApp.SubForm.Sys.SysAuth
                 }
                 if (reCnt < 1)
                 {
-                    MessageBox.Show("선택된 데이터가 없습니다.");
+                    MessageBox.Show(msgRM.GetString("msgNotSelected"));
                     return;
                 }
 
@@ -243,13 +243,9 @@ namespace EldigmPlusApp.SubForm.Sys.SysAuth
                 }
 
                 if (reCnt > 0)
-                {
-                    MessageBox.Show("저장 성공" + " : " + reCnt.ToString());
-                }
+                    MessageBox.Show(wRM.GetString("wSave") + " " + wRM.GetString("wSuccess") + " : " + reCnt.ToString());
                 else
-                {
-                    MessageBox.Show("저장 실패");
-                }
+                    MessageBox.Show(wRM.GetString("wSave") + " " + wRM.GetString("wFail"));
 
                 SetDataBind_gridView1();
             }
@@ -287,7 +283,7 @@ namespace EldigmPlusApp.SubForm.Sys.SysAuth
             {
                 dataGridView2.Rows.Clear();
                 dataGridView2.Rows.Add();
-                dataGridView2.Rows[0].Cells["dgv2_BTNADD"].Value = "추가";
+                dataGridView2.Rows[0].Cells["dgv2_BTNADD"].Value = wRM.GetString("wAdd");
                 dataGridView2.Rows[0].Cells["dgv2_MYBLOCK_FLAG"].Value = "0";
                 dataGridView2.Rows[0].Cells["dgv2_MYCON_FLAG"].Value = "0";
                 dataGridView2.Rows[0].Cells["dgv2_MYCOM_FLAG"].Value = "0";
@@ -310,7 +306,7 @@ namespace EldigmPlusApp.SubForm.Sys.SysAuth
                 string reVal = ChkDgv2Param();
 
                 if (reVal != "")
-                    MessageBox.Show("데이터 확인 :: " + reVal);
+                    MessageBox.Show(wRM.GetString("wCheck") + " :: " + reVal);
                 else
                 {
                     string sauthCd_val = dataGridView2.Rows[0].Cells["dgv2_AUTH_CD"].Value.ToString();
@@ -324,7 +320,7 @@ namespace EldigmPlusApp.SubForm.Sys.SysAuth
                     string memo_val = "";
                     if (dataGridView2.Rows[0].Cells["dgv2_MEMO"].Value != null)
                         memo_val = dataGridView2.Rows[0].Cells["dgv2_MEMO"].Value.ToString();
-                    string pInputId = AppInfo.SsUserId;
+                    string pInputId = AppInfo.SsLabNo;
 
 
 
@@ -341,7 +337,7 @@ namespace EldigmPlusApp.SubForm.Sys.SysAuth
                         reCode = wSvc.exSysAuthMainDB(sauthCd_val, out reMsg, out reData); //중복 확인 
 
                         if (reCode == "Y" && reData != "0")
-                            MessageBox.Show("중복 데이터 입니다.");
+                            MessageBox.Show(msgRM.GetString("msgDuplicated"));
                         else
                         {
                             reCode = "";
@@ -353,9 +349,9 @@ namespace EldigmPlusApp.SubForm.Sys.SysAuth
                                 reCnt = Convert.ToInt16(reData);
 
                             if (reCnt > 0)
-                                MessageBox.Show("저장 성공");
+                                MessageBox.Show(wRM.GetString("wSave") + " " + wRM.GetString("wSuccess"));
                             else
-                                MessageBox.Show("저장 실패");
+                                MessageBox.Show(wRM.GetString("wSave") + " " + wRM.GetString("wFail"));
                         }
 
                         SetDataBind_gridView1();
@@ -385,13 +381,13 @@ namespace EldigmPlusApp.SubForm.Sys.SysAuth
                 {
                     if (dataGridView2.Rows[0].Cells["dgv2_AUTH_CD"].Value.ToString() == "")
                     {
-                        reVal = "코드";
+                        reVal = wRM.GetString("wCode");
                         return reVal;
                     }
                 }
                 else
                 {
-                    reVal = "코드";
+                    reVal = wRM.GetString("wCode");
                     return reVal;
                 }
 
@@ -399,13 +395,13 @@ namespace EldigmPlusApp.SubForm.Sys.SysAuth
                 {
                     if (dataGridView2.Rows[0].Cells["dgv2_AUTH_NM"].Value.ToString() == "")
                     {
-                        reVal = "이름";
+                        reVal = wRM.GetString("wName");
                         return reVal;
                     }
                 }
                 else
                 {
-                    reVal = "이름";
+                    reVal = wRM.GetString("wName");
                     return reVal;
                 }
 
@@ -413,19 +409,19 @@ namespace EldigmPlusApp.SubForm.Sys.SysAuth
                 {
                     if (dataGridView2.Rows[0].Cells["dgv2_AUTH_LEVEL"].Value.ToString() == "")
                     {
-                        reVal = "권한 레벨";
+                        reVal = wRM.GetString("wAuthority") + wRM.GetString("wLevel");
                         return reVal;
                     }
                 }
                 else
                 {
-                    reVal = "권한 레벨";
+                    reVal = wRM.GetString("wAuthority") + wRM.GetString("wLevel");
                     return reVal;
                 }
             }
             catch (Exception ex)
             {
-                reVal = "에러";
+                reVal = wRM.GetString("wError");
                 logs.SaveLog("[error]  (page)::FrmSysAuthMainDB.cs  (Function)::ChkDgv2Param  (Detail):: " + "\r\n" + ex.ToString(), "Error");
             }
 

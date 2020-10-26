@@ -12,10 +12,21 @@ namespace EldigmPlusSvc_Main.WebSvc.Worker.InOut
     public interface IWsInOut
     {
         [OperationContract]
-        string sInOut(string pDbnm, string pSiteCd, string pDtp1, string pDtp2, out List<DataInOut> reList, out string reMsg);
+        string sLaborCompanyList(string pSiteCd, string pAuthCd, string pCoCd, out List<DataComCombo> reList, out string reMsg);
         [OperationContract]
-        string sInOutLog(string pDbnm, string pSiteCd, string pDtp1, string pDtp2, out List<DataInOut> reList, out string reMsg);
+        string sInOut(string pDbnm, string pSiteCd, string pDtp1, string pDtp2, string pCocd, out List<DataInOut> reList, out string reMsg);
+        [OperationContract]
+        string sInOutLog(string pDbnm, string pSiteCd, string pDtp1, string pDtp2, string pCocd, out List<DataInOut> reList, out string reMsg);
 
+    }
+    [DataContract]
+    public class DataComCombo
+    {
+        [DataMember(Order = 0)]
+        public int VALUE { get; set; }
+
+        [DataMember(Order = 1)]
+        public string TEXT { get; set; }
     }
 
     [DataContract]

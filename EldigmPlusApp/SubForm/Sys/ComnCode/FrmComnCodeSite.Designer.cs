@@ -48,6 +48,10 @@
             this.dgv1_SORT_NO = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgv1_MEMO = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.dgv2_CCODE_NM = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgv2_SORT_NO = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgv2_MEMO = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgv2_BTNADD = new System.Windows.Forms.DataGridViewButtonColumn();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
             this.btnSearch = new System.Windows.Forms.Button();
             this.txtSearch = new System.Windows.Forms.TextBox();
@@ -55,10 +59,6 @@
             this.btnSave = new System.Windows.Forms.Button();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
-            this.dgv2_CCODE_NM = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgv2_SORT_NO = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgv2_MEMO = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgv2_BTNADD = new System.Windows.Forms.DataGridViewButtonColumn();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer3)).BeginInit();
             this.splitContainer3.Panel1.SuspendLayout();
@@ -293,6 +293,33 @@
             this.dataGridView2.TabIndex = 0;
             this.dataGridView2.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellClick);
             // 
+            // dgv2_CCODE_NM
+            // 
+            this.dgv2_CCODE_NM.HeaderText = "CCODE_NM";
+            this.dgv2_CCODE_NM.MaxInputLength = 50;
+            this.dgv2_CCODE_NM.Name = "dgv2_CCODE_NM";
+            // 
+            // dgv2_SORT_NO
+            // 
+            this.dgv2_SORT_NO.HeaderText = "SORT_NO";
+            this.dgv2_SORT_NO.MaxInputLength = 1000;
+            this.dgv2_SORT_NO.Name = "dgv2_SORT_NO";
+            // 
+            // dgv2_MEMO
+            // 
+            this.dgv2_MEMO.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dgv2_MEMO.HeaderText = "MEMO";
+            this.dgv2_MEMO.MaxInputLength = 100;
+            this.dgv2_MEMO.Name = "dgv2_MEMO";
+            // 
+            // dgv2_BTNADD
+            // 
+            this.dgv2_BTNADD.HeaderText = "";
+            this.dgv2_BTNADD.Name = "dgv2_BTNADD";
+            this.dgv2_BTNADD.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv2_BTNADD.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.dgv2_BTNADD.Text = "Add";
+            // 
             // splitContainer2
             // 
             this.splitContainer2.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -383,33 +410,6 @@
             this.splitContainer1.SplitterDistance = 40;
             this.splitContainer1.TabIndex = 2;
             // 
-            // dgv2_CCODE_NM
-            // 
-            this.dgv2_CCODE_NM.HeaderText = "CCODE_NM";
-            this.dgv2_CCODE_NM.MaxInputLength = 50;
-            this.dgv2_CCODE_NM.Name = "dgv2_CCODE_NM";
-            // 
-            // dgv2_SORT_NO
-            // 
-            this.dgv2_SORT_NO.HeaderText = "SORT_NO";
-            this.dgv2_SORT_NO.MaxInputLength = 1000;
-            this.dgv2_SORT_NO.Name = "dgv2_SORT_NO";
-            // 
-            // dgv2_MEMO
-            // 
-            this.dgv2_MEMO.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dgv2_MEMO.HeaderText = "MEMO";
-            this.dgv2_MEMO.MaxInputLength = 100;
-            this.dgv2_MEMO.Name = "dgv2_MEMO";
-            // 
-            // dgv2_BTNADD
-            // 
-            this.dgv2_BTNADD.HeaderText = "";
-            this.dgv2_BTNADD.Name = "dgv2_BTNADD";
-            this.dgv2_BTNADD.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv2_BTNADD.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.dgv2_BTNADD.Text = "Add";
-            // 
             // FrmComnCodeSite
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
@@ -418,7 +418,7 @@
             this.Controls.Add(this.splitContainer1);
             this.Name = "FrmComnCodeSite";
             this.Text = "FrmMenuSetAuthSite";
-            this.Load += new System.EventHandler(this.FrmMenuSetAuthSite_Load);
+            this.Load += new System.EventHandler(this.FrmComnCodeSite_Load);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.splitContainer3.Panel1.ResumeLayout(false);

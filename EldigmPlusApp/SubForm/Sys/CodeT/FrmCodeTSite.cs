@@ -12,7 +12,7 @@ namespace EldigmPlusApp.SubForm.Sys.CodeT
     public partial class FrmCodeTSite : Form
     {
         LogUtil logs = null;
-        ResourceManager lngRM = null;
+        ResourceManager wRM = null;
         ResourceManager msgRM = null;
 
         string _ccode = "";
@@ -28,22 +28,22 @@ namespace EldigmPlusApp.SubForm.Sys.CodeT
             try
             {
                 logs = new LogUtil();
-                lngRM = new ResourceManager("EldigmPlusApp.strLanguage", typeof(FrmCodeTSite).Assembly);
-                msgRM = new ResourceManager("EldigmPlusApp.msgLanguage", typeof(FrmCodeTSite).Assembly);
+                wRM = new ResourceManager("EldigmPlusApp.GlobalLanguage.word_Language", typeof(FrmCodeTSite).Assembly);
+                msgRM = new ResourceManager("EldigmPlusApp.GlobalLanguage.msg_Language", typeof(FrmCodeTSite).Assembly);
 
-                //btnSearch.Text = lngRM.GetString("lngSearch");
-                btnSave.Text = "저장";
-                btnAdd.Text = "추가";
+                //btnSearch.Text = wRM.GetString("lngSearch");
+                btnSave.Text = wRM.GetString("wSave");
+                btnAdd.Text = wRM.GetString("wAdd");
+                
+                dataGridView1.Columns["dgv1_CHK"].HeaderText = wRM.GetString("wSelect");
+                dataGridView1.Columns["dgv1_TCODE"].HeaderText = wRM.GetString("wTcode");
+                dataGridView1.Columns["dgv1_NM"].HeaderText = wRM.GetString("wName");
+                dataGridView1.Columns["dgv1_DEFAULT_VALUE"].HeaderText = wRM.GetString("wDefaultValue");
+                dataGridView1.Columns["dgv1_USING_FLAG"].HeaderText = wRM.GetString("wUse");
+                dataGridView1.Columns["dgv1_SORT_NO"].HeaderText = wRM.GetString("wSort");
+                dataGridView1.Columns["dgv1_MEMO"].HeaderText = wRM.GetString("wMemo");
 
-                dataGridView1.Columns["dgv1_CHK"].HeaderText = "선택";
-                dataGridView1.Columns["dgv1_TCODE"].HeaderText = "T코드";
-                dataGridView1.Columns["dgv1_NM"].HeaderText = "이름";
-                dataGridView1.Columns["dgv1_DEFAULT_VALUE"].HeaderText = "기본값";
-                dataGridView1.Columns["dgv1_USING_FLAG"].HeaderText = "사용";
-                dataGridView1.Columns["dgv1_SORT_NO"].HeaderText = "정렬";
-                dataGridView1.Columns["dgv1_MEMO"].HeaderText = "메모";
 
-               
 
                 Control.CheckForIllegalCrossThreadCalls = false;
 
@@ -105,7 +105,7 @@ namespace EldigmPlusApp.SubForm.Sys.CodeT
                 treeView1.ImageList = myimageList;
                 treeView1.ImageIndex = 0;
 
-                reCode = wSvc.sCodeTSiteTreeView(AppInfo.SsDbNm, AppInfo.SsSiteCd, AppInfo.SsUserAuth, out getData1, out reMsg);
+                reCode = wSvc.sCodeTSiteTreeView(AppInfo.SsDbNm, AppInfo.SsSiteCd, AppInfo.SsLabAuth, out getData1, out reMsg);
                 if (reCode == "Y")
                 {
                     if (getData1 != null && getData1.Length > 0)
@@ -317,10 +317,10 @@ namespace EldigmPlusApp.SubForm.Sys.CodeT
                 }
                 if (reCnt < 1)
                 {
-                    MessageBox.Show("선택된 데이터가 없습니다.");
+                    MessageBox.Show(msgRM.GetString("msgNotSelected"));
                     return;
                 }
-
+                
                 reCnt = 0;
 
                 for (int i = 0; i < dataGridView1.Rows.Count; i++)
@@ -349,11 +349,11 @@ namespace EldigmPlusApp.SubForm.Sys.CodeT
 
                             if (reCode == "Y")
                             {
-                                    reCode = wSvc.aCodeTSiteLog(AppInfo.SsDbNm, AppInfo.SsSiteCd, tcode_val, _ccode, "0", "0", defaultValue_val, usingFlag_val, sortNo_val, memo_val, AppInfo.SsUserId, out reMsg, out reData);
+                                    reCode = wSvc.aCodeTSiteLog(AppInfo.SsDbNm, AppInfo.SsSiteCd, tcode_val, _ccode, "0", "0", defaultValue_val, usingFlag_val, sortNo_val, memo_val, AppInfo.SsLabNo, out reMsg, out reData);
 
                                 if (reCode == "N")
                                 {
-                                    MessageBox.Show("로그 저장 실패");
+                                    MessageBox.Show(wRM.GetString("wLog ") + wRM.GetString("wSave") + wRM.GetString("wFail"));
                                 }
                             }
 
@@ -363,9 +363,9 @@ namespace EldigmPlusApp.SubForm.Sys.CodeT
                     }
                 }
                 if (reCnt > 0)
-                    MessageBox.Show("저장 성공" + " : " + reCnt.ToString());
+                    MessageBox.Show(wRM.GetString("wSave") + " " + wRM.GetString("wSuccess") + " : " + reCnt.ToString());
                 else
-                    MessageBox.Show("저장 실패");
+                    MessageBox.Show(wRM.GetString("wSave") + " " + wRM.GetString("wFail"));
 
                 SetDataBind_gridView1(_ccode);
                 
@@ -382,47 +382,17 @@ namespace EldigmPlusApp.SubForm.Sys.CodeT
                     wSvc.Dispose();
             }
         }
-
-
-
-        public void txtSearch_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            //if (e.KeyChar == '\r')
-            //{
-            //    btnSearch_Click(null, null);
-            //}
-        }
-
-        public void btnSearch_Click(object sender, EventArgs e)
-        {
-            //SetDataBind_gridView1("", "", "", "");
-        }
-
-        public void cmbUse_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-            //string codeGrp = codeArr[0].ToString();
-            //string tMenuCd = codeArr[1].ToString();
-            //string sMenuCd = codeArr[2].ToString();
-            //string menuCd = codeArr[3].ToString();
-
-            //SetDataBind_gridView1(codeGrp, tMenuCd, sMenuCd, menuCd);
-        }
-        
+     
         public void btnAdd_Click(object sender, EventArgs e)
         {
-            CodeT.FrmCodeTMainDB frm = new FrmCodeTMainDB(this);
+            FrmCodeTMainDB frm = new FrmCodeTMainDB(this);
             frm.StartPosition = FormStartPosition.CenterScreen;
             frm.ShowInTaskbar = false;
             frm.FormBorderStyle = FormBorderStyle.FixedToolWindow;
             frm.TopMost = true;
-            
-            DialogResult result = frm.ShowDialog();
 
-            //if(result == DialogResult.Cancel)
-            //{
-            //    SetDataBind_gridView1(_ccode);
-            //}
+            //DialogResult result =
+            frm.Show();
 
         }
 

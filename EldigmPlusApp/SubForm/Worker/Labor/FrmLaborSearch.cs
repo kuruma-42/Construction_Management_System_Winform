@@ -15,6 +15,7 @@ namespace EldigmPlusApp.SubForm.Worker.Labor
         LogUtil logs = null;
         ResourceManager wRM = null;
         ResourceManager msgRM = null;
+       
 
 
         public FrmLaborSearch()
@@ -31,20 +32,24 @@ namespace EldigmPlusApp.SubForm.Worker.Labor
                 wRM = new ResourceManager("EldigmPlusApp.GlobalLanguage.word_Language", typeof(FrmLaborSearch).Assembly);
                 msgRM = new ResourceManager("EldigmPlusApp.GlobalLanguage.msg_Language", typeof(FrmLaborSearch).Assembly);
 
-                btnSave.Text = wRM.GetString("wSave");
                 dataGridView1.Columns["dgv1_CHK"].HeaderText = "선택";
                 dataGridView1.Columns["dgv1_LAB_NO"].HeaderText = "근로자 번호";
-                dataGridView1.Columns["dgv1_USER_NO"].HeaderText = "사용자 번호";
-                dataGridView1.Columns["dgv1_LAB_NM"].HeaderText = "근로자 이름";
+                dataGridView1.Columns["dgv1_CO_NM"].HeaderText = "업체 이름";
+                dataGridView1.Columns["dgv1_LAB_NM"].HeaderText = "근로자 이름";                                              
+                dataGridView1.Columns["dgv1_TEAM_NM"].HeaderText = "팀 이름";
+                dataGridView1.Columns["dgv1_JOB_NM"].HeaderText = "직종";
                 dataGridView1.Columns["dgv1_BIRTH_DATE"].HeaderText = "생년월일";
                 dataGridView1.Columns["dgv1_MOBILE_NO"].HeaderText = "휴대폰 번호";
-                dataGridView1.Columns["dgv1_FACE_PHOTO"].HeaderText = "얼굴 사진";              
-                dataGridView1.Columns["dgv1_CO_CD"].HeaderText = "업체 코드";
-                dataGridView1.Columns["dgv1_TEAM_CD"].HeaderText = "팀 코드";
-                dataGridView1.Columns["dgv1_JOB_CCD"].HeaderText = "직종 C코드";
-                dataGridView1.Columns["dgv1_BLOCK_CCD"].HeaderText = "구역 C코드";
-                dataGridView1.Columns["dgv1_LAB_STS"].HeaderText = "근로자 상태";
+                dataGridView1.Columns["dgv1_USER_NO"].HeaderText = "사용자 번호";
                 dataGridView1.Columns["dgv1_AUTH_CD"].HeaderText = "권한";
+
+
+
+
+                //dataGridView1.Columns["dgv1_BLOCK_CCD"].HeaderText = "구역 C코드";
+                //dataGridView1.Columns["dgv1_FACE_PHOTO"].HeaderText = "얼굴 사진";
+                //dataGridView1.Columns["dgv1_LAB_STS"].HeaderText = "근로자 상태";
+                
 
 
 
@@ -87,6 +92,10 @@ namespace EldigmPlusApp.SubForm.Worker.Labor
         {
             try
             {
+                SetDataBind_LabSearchCondition();
+                SetDataBind_TeamCmb();
+                SetDataBind_BlockCmb();
+                SetDataBind_ConstCmb();
                 SetDataBind_CompanyCmb();
                 SetDataBind_gridView1();
             }
@@ -98,7 +107,88 @@ namespace EldigmPlusApp.SubForm.Worker.Labor
 
 
 
-        //업체 콤보 박스 
+        //BLOCK COMBO BOX 
+        private void SetDataBind_BlockCmb()
+        {
+            Mem_WsWorkerLaborSearch.WsWorkerLaborSearch wSvc = null;
+            string reCode = "";
+            string reMsg = "";
+            Mem_WsWorkerLaborSearch.DataComCombo[] getData = null;
+            try
+            {
+                wSvc = new Mem_WsWorkerLaborSearch.WsWorkerLaborSearch();
+                wSvc.Url = "http://" + AppInfo.SsWsvcServer1 + "/WebSvc/Worker/Labor/WsWorkerLaborSearch.svc";
+                wSvc.Timeout = 1000;
+
+                reCode = wSvc.sLaborBlockList(AppInfo.SsSiteCd, AppInfo.SsLabAuth, AppInfo.SsBlockCcd, out getData, out reMsg);
+                if (reCode == "Y")
+                {
+                    if (getData != null && getData.Length > 0)
+                    {
+                        Class.Common.ComboBoxItemSet setCmb = null;
+
+                        setCmb = new Class.Common.ComboBoxItemSet();
+                        setCmb.AddColumn();
+
+                        for (int i = 0; i < getData.Length; i++)
+                        {
+                            setCmb.AddRow(getData[i].TEXT.ToString(), getData[i].VALUE.ToString());
+                        }
+
+                        setCmb.Bind(searchCondition11.comboBox1);
+                        searchCondition11.comboBox1.SelectedValue = "0";
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                logs.SaveLog("[error]  (page)::FrmLaborSearch.cs  (Function)::SetDataBind_CmbMember  (Detail):: " + "\r\n" + ex.ToString());
+            }
+        }
+
+        //직종인지 공종인지 확실히 체크할 것 
+        //CONST COMBO BOX 
+        private void SetDataBind_ConstCmb()
+        {
+            Mem_WsWorkerLaborSearch.WsWorkerLaborSearch wSvc = null;
+            string reCode = "";
+            string reMsg = "";
+            Mem_WsWorkerLaborSearch.DataComCombo[] getData = null;
+            try
+            {
+                wSvc = new Mem_WsWorkerLaborSearch.WsWorkerLaborSearch();
+                wSvc.Url = "http://" + AppInfo.SsWsvcServer1 + "/WebSvc/Worker/Labor/WsWorkerLaborSearch.svc";
+                wSvc.Timeout = 1000;
+
+                reCode = wSvc.sLaborConstList(AppInfo.SsSiteCd, AppInfo.SsLabAuth, AppInfo.SsConstCd, out getData, out reMsg);
+                if (reCode == "Y")
+                {
+                    if (getData != null && getData.Length > 0)
+                    {
+                        Class.Common.ComboBoxItemSet setCmb = null;
+
+                        setCmb = new Class.Common.ComboBoxItemSet();
+                        setCmb.AddColumn();
+
+                        for (int i = 0; i < getData.Length; i++)
+                        {
+                            setCmb.AddRow(getData[i].TEXT.ToString(), getData[i].VALUE.ToString());
+                        }
+
+                        setCmb.Bind(searchCondition11.comboBox2);
+                        searchCondition11.comboBox2.SelectedValue = "0";
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                logs.SaveLog("[error]  (page)::FrmLaborSearch.cs  (Function)::SetDataBind_CmbMember  (Detail):: " + "\r\n" + ex.ToString());
+            }
+        }
+
+
+
+        //COMPANY CMB BOX
         private void SetDataBind_CompanyCmb()
         {
             Mem_WsWorkerLaborSearch.WsWorkerLaborSearch wSvc = null;
@@ -111,7 +201,7 @@ namespace EldigmPlusApp.SubForm.Worker.Labor
                 wSvc.Url = "http://" + AppInfo.SsWsvcServer1 + "/WebSvc/Worker/Labor/WsWorkerLaborSearch.svc";
                 wSvc.Timeout = 1000;
 
-                reCode = wSvc.sLaborCompanyList(AppInfo.SsSiteCd, AppInfo.SsUserAuth, AppInfo.SsCoCd, out getData, out reMsg);
+                reCode = wSvc.sLaborCompanyList(AppInfo.SsSiteCd, AppInfo.SsLabAuth, AppInfo.SsCoCd, out getData, out reMsg);
                 if (reCode == "Y")
                 {
                     if (getData != null && getData.Length > 0)
@@ -123,10 +213,10 @@ namespace EldigmPlusApp.SubForm.Worker.Labor
 
                         for (int i = 0; i < getData.Length; i++)
                         {
-                            setCmb.AddRow(getData[i].CO_NM.ToString(), getData[i].CO_CD.ToString());
+                            setCmb.AddRow(getData[i].TEXT.ToString(), getData[i].VALUE.ToString());
                         }
-
-                        setCmb.Bind(cmbCom);
+                        setCmb.Bind(searchCondition11.comboBox3);
+                        searchCondition11.comboBox3.SelectedValue = "0";
                     }
                 }
             }
@@ -138,22 +228,20 @@ namespace EldigmPlusApp.SubForm.Worker.Labor
 
 
 
-
-
-        //DEV TYPE COMBO 
-        private void set_Grideview1Combo1(int rnum, string column_name)
+        //TEAM COMBO BOX 
+        private void SetDataBind_TeamCmb()
         {
-            Mem_WsDevice.WsDevice wSvc = null;
+            Mem_WsWorkerLaborSearch.WsWorkerLaborSearch wSvc = null;
             string reCode = "";
             string reMsg = "";
-            Mem_WsDevice.DataDevCombo[] getData = null;
+            Mem_WsWorkerLaborSearch.DataComCombo[] getData = null;
             try
             {
-                wSvc = new Mem_WsDevice.WsDevice();
-                wSvc.Url = "http://" + AppInfo.SsWsvcServer1 + "/WebSvc/Sys/Device/WsDevice.svc";
+                wSvc = new Mem_WsWorkerLaborSearch.WsWorkerLaborSearch();
+                wSvc.Url = "http://" + AppInfo.SsWsvcServer1 + "/WebSvc/Worker/Labor/WsWorkerLaborSearch.svc";
                 wSvc.Timeout = 1000;
 
-                reCode = wSvc.devTypeCmb(out getData, out reMsg);
+                reCode = wSvc.sLaborTeamList(AppInfo.SsSiteCd, AppInfo.SsLabAuth, AppInfo.SsTeamCd, AppInfo.SsCoCd, out getData, out reMsg);
                 if (reCode == "Y")
                 {
                     if (getData != null && getData.Length > 0)
@@ -165,75 +253,64 @@ namespace EldigmPlusApp.SubForm.Worker.Labor
 
                         for (int i = 0; i < getData.Length; i++)
                         {
-                            setCmb.AddRow(getData[i].SCODE_NM.ToString(), getData[i].SCODE.ToString());
+                            setCmb.AddRow(getData[i].TEXT.ToString(), getData[i].VALUE.ToString());
                         }
-                        DataGridViewComboBoxCell constCombo1 = new DataGridViewComboBoxCell();
 
-                        constCombo1.DisplayMember = "TEXT";
-                        constCombo1.ValueMember = "VALUE";
-
-                        constCombo1.DataSource = setCmb.GetDataTable();
-
-                        dataGridView1.Rows[rnum].Cells[column_name] = constCombo1;
+                        setCmb.Bind(searchCondition11.comboBox4);
+                        searchCondition11.comboBox4.SelectedValue = "0";
                     }
                 }
             }
             catch (Exception ex)
             {
-                logs.SaveLog("[error]  (page)::FrmAccessDevice.cs  (Function)::SetDataBind_CmbMember  (Detail):: " + "\r\n" + ex.ToString());
+                logs.SaveLog("[error]  (page)::FrmLaborSearch.cs  (Function)::SetDataBind_CmbMember  (Detail):: " + "\r\n" + ex.ToString());
             }
         }
 
 
 
-        //DEV I/O COMBO
-        private void set_Grideview1Combo2(int rnum, string column_name)
+        private void SetDataBind_LabSearchCondition()
         {
-            Mem_WsDevice.WsDevice wSvc = null;
-            string reCode = "";
-            string reMsg = "";
-            Mem_WsDevice.DataDevCombo[] getData = null;
             try
             {
-                wSvc = new Mem_WsDevice.WsDevice();
-                wSvc.Url = "http://" + AppInfo.SsWsvcServer1 + "/WebSvc/Sys/Device/WsDevice.svc";
-                wSvc.Timeout = 1000;
+                Class.Common.ComboBoxItemSet setCmb = null;
 
-                reCode = wSvc.devIOCmb(out getData, out reMsg);
-                if (reCode == "Y")
-                {
-                    if (getData != null && getData.Length > 0)
-                    {
-                        Class.Common.ComboBoxItemSet setCmb = null;
+                setCmb = new Class.Common.ComboBoxItemSet();
 
-                        setCmb = new Class.Common.ComboBoxItemSet();
-                        setCmb.AddColumn();
+                setCmb.AddColumn();
 
-                        for (int i = 0; i < getData.Length; i++)
-                        {
-                            setCmb.AddRow(getData[i].SCODE_NM.ToString(), getData[i].SCODE.ToString());
-                        }
-                        DataGridViewComboBoxCell cotype_Combo1 = new DataGridViewComboBoxCell();
+                setCmb.AddRow("근로자 이름", "1");
+                setCmb.AddRow("휴대폰 번호", "2");
+                setCmb.AddRow("생년월일", "3");
+                setCmb.AddRow("직종 이름", "4");
 
-                        cotype_Combo1.DisplayMember = "TEXT";
-                        cotype_Combo1.ValueMember = "VALUE";
+                setCmb.Bind(searchCondition11.comboBox5);
 
-                        cotype_Combo1.DataSource = setCmb.GetDataTable();
-
-                        dataGridView1.Rows[rnum].Cells[column_name] = cotype_Combo1;
-                    }
-                }
             }
             catch (Exception ex)
             {
-                logs.SaveLog("[error]  (page)::FrmAccessDevice.cs  (Function)::set_Grideview1Combo2  (Detail):: " + "\r\n" + ex.ToString());
+                logs.SaveLog("[error]  (page)::FrmSysAuthMainDB_Load.cs  (Function)::setDataBind_Combo  (Detail):: " + "\r\n" + ex.ToString());
             }
+
         }
-
-
+      
+        
 
         private void SetDataBind_gridView1()
         {
+            string pSearchTxt = "";
+            if (!string.IsNullOrEmpty(searchCondition11.textSearch.Text))
+            {
+                pSearchTxt = searchCondition11.textSearch.Text;
+            }
+
+            string pBlockCcd = searchCondition11.comboBox1.SelectedValue.ToString();
+            string pConstCcd = searchCondition11.comboBox2.SelectedValue.ToString();
+            string pCodCd = searchCondition11.comboBox3.SelectedValue.ToString();
+            string pTeamCd = searchCondition11.comboBox4.SelectedValue.ToString();
+            string pSearchCondition = searchCondition11.comboBox5.SelectedValue.ToString();
+
+
             Mem_WsWorkerLaborSearch.WsWorkerLaborSearch wSvc = null;
             string reCode = "";
             string reMsg = "";
@@ -244,8 +321,10 @@ namespace EldigmPlusApp.SubForm.Worker.Labor
                 wSvc.Url = "http://" + AppInfo.SsWsvcServer1 + "/WebSvc/Worker/Labor/WsWorkerLaborSearch.svc";
                 wSvc.Timeout = 1000;
 
-                //SELECT 
-                reCode = wSvc.sLaborSearch(AppInfo.SsSiteCd, cmbCom.SelectedValue.ToString(), out getData, out reMsg); //AppInfo.SsSiteCD
+
+
+                //SELECT
+                reCode = wSvc.sLaborSearch(AppInfo.SsSiteCd, pBlockCcd , pConstCcd, pCodCd, pTeamCd, pSearchCondition, pSearchTxt, out getData, out reMsg); //AppInfo.SsSiteCD
 
                 if (reCode == "Y")
                 {
@@ -256,20 +335,33 @@ namespace EldigmPlusApp.SubForm.Worker.Labor
                         {
                             dataGridView1.Rows.Add();
                             dataGridView1.Rows[i].Cells["dgv1_LAB_NO"].Value = getData[i].LAB_NO.ToString();
-                            dataGridView1.Rows[i].Cells["dgv1_USER_NO"].Value = getData[i].USER_NO.ToString();                            
-                            dataGridView1.Rows[i].Cells["dgv1_LAB_NM"].Value = getData[i].LAB_NM.ToString();                                                 
+                            dataGridView1.Rows[i].Cells["dgv1_CO_NM"].Value = getData[i].CO_NM.ToString();
+                            dataGridView1.Rows[i].Cells["dgv1_LAB_NM"].Value = getData[i].LAB_NM.ToString();
+                            dataGridView1.Rows[i].Cells["dgv1_JOB_NM"].Value = getData[i].JOB_NM.ToString();
+                            dataGridView1.Rows[i].Cells["dgv1_TEAM_NM"].Value = getData[i].TEAM_NM.ToString();
                             dataGridView1.Rows[i].Cells["dgv1_BIRTH_DATE"].Value = getData[i].BIRTH_DATE.ToString();
                             dataGridView1.Rows[i].Cells["dgv1_MOBILE_NO"].Value = getData[i].MOBILE_NO.ToString();
-                            dataGridView1.Rows[i].Cells["dgv1_FACE_PHOTO"].Value = getData[i].FACE_PHOTO.ToString();
-                            dataGridView1.Rows[i].Cells["dgv1_CO_CD"].Value = getData[i].CO_CD.ToString();
-                            dataGridView1.Rows[i].Cells["dgv1_TEAM_CD"].Value = getData[i].TEAM_CD.ToString();
-                            dataGridView1.Rows[i].Cells["dgv1_JOB_CCD"].Value = getData[i].JOB_CCD.ToString();
-                            dataGridView1.Rows[i].Cells["dgv1_BLOCK_CCD"].Value = getData[i].BLOCK_CCD.ToString();
-                            dataGridView1.Rows[i].Cells["dgv1_LAB_STS"].Value = getData[i].LAB_STS.ToString();
-                            dataGridView1.Rows[i].Cells["dgv1_AUTH_CD"].Value = getData[i].AUTH_CD.ToString();
+                            dataGridView1.Rows[i].Cells["dgv1_USER_NO"].Value = getData[i].USER_NO.ToString();
+                            dataGridView1.Rows[i].Cells["dgv1_AUTH_CD"].Value = getData[i].AUTH_CD.ToString();                          
+
+
+                            //dataGridView1.Rows[i].Cells["dgv1_FACE_PHOTO"].Value = getData[i].FACE_PHOTO.ToString();      
+                            //dataGridView1.Rows[i].Cells["dgv1_BLOCK_CCD"].Value = getData[i].BLOCK_CCD.ToString();
+                            //dataGridView1.Rows[i].Cells["dgv1_LAB_STS"].Value = getData[i].LAB_STS.ToString();
+                            
                         }
 
                         SetRowNumber(dataGridView1);
+                    }
+
+                    else
+                    {
+                        MessageBox.Show("검색된 데이터가 없습니다.");
+                        //SetDataBind_LabSearchCondition();
+                        //SetDataBind_TeamCmb();
+                        //SetDataBind_BlockCmb();
+                        //SetDataBind_ConstCmb();
+                        //SetDataBind_CompanyCmb();
                     }
                 }
             }
@@ -285,204 +377,15 @@ namespace EldigmPlusApp.SubForm.Worker.Labor
             }
         }
 
-
-
-        //수정
-        private void btnSave_Click(object sender, EventArgs e)
+        private void btnSearch_KeyPress(object sender, KeyPressEventArgs e)
         {
-
-
-            Mem_WsDevice.WsDevice wSvc = null;
-            string reCode = "";
-            string reMsg = "";
-            string reData = "0";
-            try
+            if (e.KeyChar == '\r')
             {
-                wSvc = new Mem_WsDevice.WsDevice();
-                wSvc.Url = "http://" + AppInfo.SsWsvcServer1 + "/WebSvc/Sys/Device/WsDevice.svc";
-                wSvc.Timeout = 1000;
-
-                int reCnt = 0;
-                for (int i = 0; i < dataGridView1.Rows.Count; i++)
-                {
-                    if (dataGridView1.Rows[i].Cells["dgv1_CHK"].Value != null)
-                    {
-                        if (dataGridView1.Rows[i].Cells["dgv1_CHK"].Value.ToString() == "1")
-                        {
-                            reCnt++;
-                        }
-                    }
-                }
-                if (reCnt < 1)
-                {
-                    MessageBox.Show("선택된 데이터가 없습니다.");
-                    return;
-                }
-
-                reCnt = 0;
-
-                for (int i = 0; i < dataGridView1.Rows.Count; i++)
-                {
-                    if (dataGridView1.Rows[i].Cells["dgv1_DEV_CD"].Value != null)
-                    {
-                        if (dataGridView1.Rows[i].Cells["dgv1_CHK"].Value != null)
-                        {
-                            if (dataGridView1.Rows[i].Cells["dgv1_CHK"].Value.ToString() == "1")
-                            {
-                                string pDbNm = AppInfo.SsDbNm;
-                                string pSiteCd = AppInfo.SsSiteCd;
-                                string pDevCd = dataGridView1.Rows[i].Cells["dgv1_DEV_CD"].Value.ToString(); //Invisible
-
-                                string pDeviceId = "";
-                                if (dataGridView1.Rows[i].Cells["dgv1_DEVICE_ID"].Value == null)
-                                {
-                                    MessageBox.Show("장치 이름을 입력해주세요");
-                                    return;
-                                }
-                                else
-                                {
-                                    pDeviceId = dataGridView1.Rows[i].Cells["dgv1_DEVICE_ID"].Value.ToString();
-                                }
-
-                                string pDevTypeScd = dataGridView1.Rows[i].Cells["dgv1_DEV_TYPE_SCD"].Value.ToString();
-                                string pDevIOScd = dataGridView1.Rows[i].Cells["dgv1_DEV_IO_SCD"].Value.ToString();
-                                string pDevNm = "";
-                                if (dataGridView1.Rows[i].Cells["dgv1_DEV_NM"].Value != null)
-                                    pDevNm = dataGridView1.Rows[i].Cells["dgv1_DEV_NM"].Value.ToString();
-
-                                string pIp = "";
-                                if (dataGridView1.Rows[i].Cells["dgv1_IP"].Value != null)
-                                    pIp = dataGridView1.Rows[i].Cells["dgv1_IP"].Value.ToString();
-
-                                string pSortNo = "10";
-                                if (dataGridView1.Rows[i].Cells["dgv1_SORT_NO"].Value != null)
-                                    pSortNo = dataGridView1.Rows[i].Cells["dgv1_SORT_NO"].Value.ToString();
-
-                                string pUsingFlag = dataGridView1.Rows[i].Cells["dgv1_USING_FLAG"].Value.ToString();
-
-                                string pMemo = "";
-                                if (dataGridView1.Rows[i].Cells["dgv1_MEMO"].Value != null)
-                                    pMemo = dataGridView1.Rows[i].Cells["dgv1_MEMO"].Value.ToString();
-
-                                //UPDATE 
-                                reCode = wSvc.mDevice(pDbNm, pSiteCd, pDevCd, pDeviceId, pDevTypeScd, pDevIOScd, pDevNm, pIp, pSortNo, pUsingFlag, pMemo, out reMsg, out reData);
-
-                                //UPDATE LOG 
-                                wSvc.logDevice(pDbNm, pDevCd, pSiteCd, pDeviceId, pDevTypeScd, pDevIOScd, pDevNm, pIp, pUsingFlag, pSortNo, pMemo, AppInfo.SsUserId, out reMsg, out reData);
-
-                                if (reCode == "Y" && reData != "0")
-                                    reCnt += Convert.ToInt16(reData);
-                            }
-                        }
-                    }
-                    //DEV_CD 저장 버튼에서 추가가 일어난다. (DEV_CD 를 INVISIBLE로 해놨기 때문에 추가에는 DEV_CD가 NULL)
-                    else if (dataGridView1.Rows[i].Cells["dgv1_DEV_CD"].Value == null)
-                    {
-                        if (dataGridView1.Rows[i].Cells["dgv1_CHK"].Value != null)
-                        {
-                            if (dataGridView1.Rows[i].Cells["dgv1_CHK"].Value.ToString() == "1")
-                            {
-                                string pDbNm = AppInfo.SsDbNm;
-                                string pSiteCd = AppInfo.SsSiteCd;
-
-                                string pDeviceId = "";
-                                if (dataGridView1.Rows[i].Cells["dgv1_DEVICE_ID"].Value == null)
-                                {
-                                    MessageBox.Show("장치 이름을 입력해주세요");
-                                    return;
-                                }
-                                else
-                                {
-                                    pDeviceId = dataGridView1.Rows[i].Cells["dgv1_DEVICE_ID"].Value.ToString();
-                                }
-
-                                string pDevTypeScd = "";
-                                if (dataGridView1.Rows[i].Cells["dgv1_DEV_TYPE_SCD"].Value == null)
-                                {
-                                    MessageBox.Show("장치 유형을 선택해주세요");
-                                    return;
-                                }
-                                else
-                                {
-                                    pDevTypeScd = dataGridView1.Rows[i].Cells["dgv1_DEV_TYPE_SCD"].Value.ToString();
-                                }
-
-                                string pDevIOScd = "";
-                                if (dataGridView1.Rows[i].Cells["dgv1_DEV_IO_SCD"].Value == null)
-                                {
-                                    MessageBox.Show("장치 IO 선택해주세요");
-                                    return;
-                                }
-                                else
-                                {
-                                    pDevIOScd = dataGridView1.Rows[i].Cells["dgv1_DEV_IO_SCD"].Value.ToString();
-                                }
-
-
-                                string pDevNm = "";
-                                if (dataGridView1.Rows[i].Cells["dgv1_DEV_NM"].Value != null)
-                                    pDevNm = dataGridView1.Rows[i].Cells["dgv1_DEV_NM"].Value.ToString();
-
-                                string pIp = "";
-                                if (dataGridView1.Rows[i].Cells["dgv1_IP"].Value != null)
-                                    pIp = dataGridView1.Rows[i].Cells["dgv1_IP"].Value.ToString();
-
-                                string pSortNo = "10";
-                                if (dataGridView1.Rows[i].Cells["dgv1_SORT_NO"].Value != null)
-                                    pSortNo = dataGridView1.Rows[i].Cells["dgv1_SORT_NO"].Value.ToString();
-
-                                string pUsingFlag = "1";
-
-                                string pMemo = "";
-                                if (dataGridView1.Rows[i].Cells["dgv1_MEMO"].Value != null)
-                                    pMemo = dataGridView1.Rows[i].Cells["dgv1_MEMO"].Value.ToString();
-
-
-
-                                string[] param = new string[10];
-                                param[0] = AppInfo.SsSiteCd;
-                                param[1] = pDeviceId;
-                                param[2] = pDevTypeScd;
-                                param[3] = pDevIOScd;
-                                param[4] = pDevNm;
-                                param[5] = pIp;
-                                param[6] = pUsingFlag;
-                                param[7] = pSortNo;
-                                param[8] = pMemo;
-                                param[9] = AppInfo.SsUserId;
-
-                                //INSERT WITH PROCEDURE 
-                                reCode = wSvc.aDevicePro(AppInfo.SsDbNm, param, out reData, out reMsg);
-
-
-                                if (reCode == "Y" && reData != "0")
-                                    reCnt += Convert.ToInt16(reData);
-                            }
-                        }
-                    }
-                }
-                if (reCnt > 0)
-                {
-                    MessageBox.Show("저장 성공");
-                }
-                else
-                {
-                    MessageBox.Show("저장 실패");
-                }
-
-                SetDataBind_gridView1();
-            }
-            catch (Exception ex)
-            {
-                logs.SaveLog("[error]  (page)::FrmSysAuthSiteDB.cs  (Function)::btnSave_Click  (Detail):: " + "\r\n" + ex.ToString(), "Error");
-            }
-            finally
-            {
-                if (wSvc != null)
-                    wSvc.Dispose();
+                btnSearch_Click(null, null);
             }
         }
 
+     
         //열번호 자동 
         private void SetRowNumber(DataGridView dgv)
         {
@@ -495,12 +398,48 @@ namespace EldigmPlusApp.SubForm.Worker.Labor
 
         private void dataGridView1_CellBeginEdit(object sender, DataGridViewCellCancelEventArgs e)
         {
-
+            try
+            {
+                string colName = dataGridView1.Columns[e.ColumnIndex].Name;
+                if (colName != "dgv1_CHK")
+                    dataGridView1.Rows[e.RowIndex].Cells["dgv1_CHK"].Value = "1";
+            }
+            catch (Exception ex)
+            {
+                logs.SaveLog("[error]  (page)::FrmSysCode.cs  (Function)::dataGridView1_CellBeginEdit  (Detail):: " + "\r\n" + ex.ToString(), "Error");
+            }
         }
+
         bool chkUseAll = false;
         private void dataGridView1_ColumnHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
+            try
+            {
+                string columnNm = dataGridView1.Columns[e.ColumnIndex].Name;
+                if (columnNm == "dgv1_CHK" )
+                {
+                    for (int i = 0; i < dataGridView1.Rows.Count; i++)
+                    {
+                        if (chkUseAll)
+                            dataGridView1.Rows[i].Cells[columnNm].Value = "0";
+                        else
+                            dataGridView1.Rows[i].Cells[columnNm].Value = "1";
+                    }
 
+                    if (chkUseAll)
+                        chkUseAll = false;
+                    else
+                        chkUseAll = true;
+                }
+                else
+                    SetRowNumber(dataGridView1);
+
+                NoSelectGrideView(dataGridView1);
+            }
+            catch (Exception ex)
+            {
+                logs.SaveLog("[error]  (page)::FrmSysCode.cs  (Function)::dataGridView1_ColumnHeaderMouseClick  (Detail):: " + "\r\n" + ex.ToString(), "Error");
+            }
         }
 
         private void NoSelectGrideView(DataGridView dgv)
@@ -509,14 +448,23 @@ namespace EldigmPlusApp.SubForm.Worker.Labor
             dgv.CurrentCell = null;
         }
 
-        private void dataGridView1_RowsAdded(object sender, DataGridViewRowsAddedEventArgs e)
-        {
 
-        }
 
-        private void cmbCom_SelectedIndexChanged(object sender, EventArgs e)
+        private void btnSearch_Click(object sender, EventArgs e)
         {
             SetDataBind_gridView1();
+        }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            FrmLaborSearchPop frm = new FrmLaborSearchPop();
+            frm.StartPosition = FormStartPosition.CenterScreen;
+            frm.ShowInTaskbar = false;
+            frm.FormBorderStyle = FormBorderStyle.FixedToolWindow;
+            frm.TopMost = true;
+
+            //DialogResult result =
+            frm.Show();
         }
     }
 }

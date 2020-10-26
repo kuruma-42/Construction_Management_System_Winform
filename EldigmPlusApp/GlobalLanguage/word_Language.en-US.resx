@@ -117,10 +117,196 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="wAdd" xml:space="preserve">
+    <value>Add</value>
+  </data>
+  <data name="wAddress" xml:space="preserve">
+    <value>Address</value>
+  </data>
+  <data name="wApp" xml:space="preserve">
+    <value>App</value>
+  </data>
+  <data name="wApply" xml:space="preserve">
+    <value>Apply</value>
+  </data>
+  <data name="wAuthority" xml:space="preserve">
+    <value>Authority</value>
+  </data>
+  <data name="wBizNo" xml:space="preserve">
+    <value>CompanyNumber</value>
+  </data>
+  <data name="wCheck" xml:space="preserve">
+    <value>Check</value>
+  </data>
+  <data name="wClassify" xml:space="preserve">
+    <value>Classify</value>
+  </data>
+  <data name="wCode" xml:space="preserve">
+    <value>Code</value>
+  </data>
+  <data name="wCompany" xml:space="preserve">
+    <value>Company</value>
+  </data>
+  <data name="wConstructionTypes" xml:space="preserve">
+    <value>ConstructionTypes</value>
+  </data>
+  <data name="wCounter" xml:space="preserve">
+    <value>Counter</value>
+  </data>
+  <data name="wData" xml:space="preserve">
+    <value>Data</value>
+  </data>
+  <data name="wDefaultValue" xml:space="preserve">
+    <value>DefaultValue</value>
+  </data>
   <data name="wDelete" xml:space="preserve">
-    <value>DELETE</value>
+    <value>Delete</value>
+  </data>
+  <data name="wDevice" xml:space="preserve">
+    <value>Device</value>
+  </data>
+  <data name="wDownload" xml:space="preserve">
+    <value>Download</value>
+  </data>
+  <data name="wEnd" xml:space="preserve">
+    <value>End</value>
+  </data>
+  <data name="wEndDate" xml:space="preserve">
+    <value>EndDate</value>
+  </data>
+  <data name="wError" xml:space="preserve">
+    <value>Error</value>
+  </data>
+  <data name="wFail" xml:space="preserve">
+    <value>Failed</value>
+  </data>
+  <data name="wFile" xml:space="preserve">
+    <value>File</value>
+  </data>
+  <data name="wFolder" xml:space="preserve">
+    <value>Folder</value>
+  </data>
+  <data name="wHeadOffice" xml:space="preserve">
+    <value>HeadOffice</value>
+  </data>
+  <data name="wHome" xml:space="preserve">
+    <value>Home</value>
+  </data>
+  <data name="wInfo" xml:space="preserve">
+    <value>Info</value>
+  </data>
+  <data name="wInOut" xml:space="preserve">
+    <value>InOut</value>
+  </data>
+  <data name="wIp" xml:space="preserve">
+    <value>IP</value>
+  </data>
+  <data name="wJobType" xml:space="preserve">
+    <value>JobType</value>
+  </data>
+  <data name="wLevel" xml:space="preserve">
+    <value>Level</value>
+  </data>
+  <data name="wList" xml:space="preserve">
+    <value>List</value>
+  </data>
+  <data name="wLog" xml:space="preserve">
+    <value>Log</value>
+  </data>
+  <data name="wMember" xml:space="preserve">
+    <value>Member</value>
+  </data>
+  <data name="wMemo" xml:space="preserve">
+    <value>Memo</value>
+  </data>
+  <data name="wMenu" xml:space="preserve">
+    <value>Menu</value>
+  </data>
+  <data name="wModify" xml:space="preserve">
+    <value>Modify</value>
+  </data>
+  <data name="wName" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="wNotUsing" xml:space="preserve">
+    <value>NotUsing</value>
+  </data>
+  <data name="wNumber" xml:space="preserve">
+    <value>Number</value>
+  </data>
+  <data name="wNumeric" xml:space="preserve">
+    <value>Numeric</value>
+  </data>
+  <data name="wOwner" xml:space="preserve">
+    <value>Owner</value>
+  </data>
+  <data name="wPath" xml:space="preserve">
+    <value>Path</value>
+  </data>
+  <data name="wPrint" xml:space="preserve">
+    <value>Print</value>
+  </data>
+  <data name="wProgram" xml:space="preserve">
+    <value>Program</value>
+  </data>
+  <data name="wReport" xml:space="preserve">
+    <value>Report</value>
+  </data>
+  <data name="wRequired" xml:space="preserve">
+    <value>Required</value>
   </data>
   <data name="wSave" xml:space="preserve">
-    <value>SAVE</value>
+    <value>Save</value>
+  </data>
+  <data name="wScode" xml:space="preserve">
+    <value>Scode</value>
+  </data>
+  <data name="wSearch" xml:space="preserve">
+    <value>Search</value>
+  </data>
+  <data name="wSelect" xml:space="preserve">
+    <value>Select</value>
+  </data>
+  <data name="wSite" xml:space="preserve">
+    <value>Site</value>
+  </data>
+  <data name="wSort" xml:space="preserve">
+    <value>Sort</value>
+  </data>
+  <data name="wStartDate" xml:space="preserve">
+    <value>StartDate</value>
+  </data>
+  <data name="wSub" xml:space="preserve">
+    <value>Sub</value>
+  </data>
+  <data name="wSuccess" xml:space="preserve">
+    <value>Success</value>
+  </data>
+  <data name="wTcode" xml:space="preserve">
+    <value>Tcode</value>
+  </data>
+  <data name="wTeam" xml:space="preserve">
+    <value>Team</value>
+  </data>
+  <data name="wTel" xml:space="preserve">
+    <value>Tel</value>
+  </data>
+  <data name="wTop" xml:space="preserve">
+    <value>Top</value>
+  </data>
+  <data name="wTotal" xml:space="preserve">
+    <value>Total</value>
+  </data>
+  <data name="wType" xml:space="preserve">
+    <value>Type</value>
+  </data>
+  <data name="wUse" xml:space="preserve">
+    <value>Using</value>
+  </data>
+  <data name="wView" xml:space="preserve">
+    <value>View</value>
+  </data>
+  <data name="wWorker" xml:space="preserve">
+    <value>Worker</value>
   </data>
 </root>

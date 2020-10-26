@@ -51,6 +51,8 @@ namespace EldigmPlusClassLibrary.DbClass.MainHome
             }
         }
 
+       
+
 
 
         public string sDbNm(string MEMCO_CD)
@@ -70,6 +72,7 @@ namespace EldigmPlusClassLibrary.DbClass.MainHome
 
         public DataSet sSiteMenu(string DBNM, string SITE_CD)
         {
+            //string dbNm = siteDbNm(SITE_CD);
             string con = "[PLUS-" + DBNM + "].dbo.";
             string sql = "" +
                 " SELECT A.TOP_MENU_CD, B.TOP_MENU_NM " +

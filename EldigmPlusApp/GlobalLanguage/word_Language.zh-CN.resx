@@ -117,7 +117,196 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="wAdd" xml:space="preserve">
+    <value>追加</value>
+  </data>
+  <data name="wAddress" xml:space="preserve">
+    <value>地址</value>
+  </data>
+  <data name="wApp" xml:space="preserve">
+    <value>应用程序</value>
+  </data>
+  <data name="wApply" xml:space="preserve">
+    <value>申请</value>
+  </data>
+  <data name="wAuthority" xml:space="preserve">
+    <value>权限</value>
+  </data>
+  <data name="wBizNo" xml:space="preserve">
+    <value>公司注册号码</value>
+  </data>
+  <data name="wCheck" xml:space="preserve">
+    <value>检查</value>
+  </data>
+  <data name="wClassify" xml:space="preserve">
+    <value>区分</value>
+  </data>
+  <data name="wCode" xml:space="preserve">
+    <value>号码</value>
+  </data>
+  <data name="wCompany" xml:space="preserve">
+    <value>企业</value>
+  </data>
+  <data name="wConstructionTypes" xml:space="preserve">
+    <value>工种</value>
+  </data>
+  <data name="wCounter" xml:space="preserve">
+    <value>积累</value>
+  </data>
+  <data name="wData" xml:space="preserve">
+    <value>数据</value>
+  </data>
+  <data name="wDefaultValue" xml:space="preserve">
+    <value>默认值</value>
+  </data>
+  <data name="wDelete" xml:space="preserve">
+    <value>删除</value>
+  </data>
+  <data name="wDevice" xml:space="preserve">
+    <value>装备</value>
+  </data>
+  <data name="wDownload" xml:space="preserve">
+    <value>下载</value>
+  </data>
+  <data name="wEnd" xml:space="preserve">
+    <value>结束</value>
+  </data>
+  <data name="wEndDate" xml:space="preserve">
+    <value>结束日期</value>
+  </data>
+  <data name="wError" xml:space="preserve">
+    <value>系统错误</value>
+  </data>
+  <data name="wFail" xml:space="preserve">
+    <value>失败</value>
+  </data>
+  <data name="wFile" xml:space="preserve">
+    <value>文件</value>
+  </data>
+  <data name="wFolder" xml:space="preserve">
+    <value>夹</value>
+  </data>
+  <data name="wHeadOffice" xml:space="preserve">
+    <value>总公司</value>
+  </data>
+  <data name="wHome" xml:space="preserve">
+    <value>首页</value>
+  </data>
+  <data name="wInfo" xml:space="preserve">
+    <value>情报</value>
+  </data>
+  <data name="wInOut" xml:space="preserve">
+    <value>出入</value>
+  </data>
+  <data name="wIp" xml:space="preserve">
+    <value>IP地址</value>
+  </data>
+  <data name="wJobType" xml:space="preserve">
+    <value>工作类型</value>
+  </data>
+  <data name="wLevel" xml:space="preserve">
+    <value>水平</value>
+  </data>
+  <data name="wList" xml:space="preserve">
+    <value>列表</value>
+  </data>
+  <data name="wLog" xml:space="preserve">
+    <value>运行记录</value>
+  </data>
+  <data name="wMember" xml:space="preserve">
+    <value>会员公司</value>
+  </data>
+  <data name="wMemo" xml:space="preserve">
+    <value>摘要</value>
+  </data>
+  <data name="wMenu" xml:space="preserve">
+    <value>选单</value>
+  </data>
+  <data name="wModify" xml:space="preserve">
+    <value>修改</value>
+  </data>
+  <data name="wName" xml:space="preserve">
+    <value>名字</value>
+  </data>
+  <data name="wNotUsing" xml:space="preserve">
+    <value>未使用</value>
+  </data>
+  <data name="wNumber" xml:space="preserve">
+    <value>号码</value>
+  </data>
+  <data name="wNumeric" xml:space="preserve">
+    <value>数字</value>
+  </data>
+  <data name="wOwner" xml:space="preserve">
+    <value>所有者</value>
+  </data>
+  <data name="wPath" xml:space="preserve">
+    <value>路径</value>
+  </data>
+  <data name="wPrint" xml:space="preserve">
+    <value>打印</value>
+  </data>
+  <data name="wProgram" xml:space="preserve">
+    <value>程序</value>
+  </data>
+  <data name="wReport" xml:space="preserve">
+    <value>报告书</value>
+  </data>
+  <data name="wRequired" xml:space="preserve">
+    <value>必要</value>
+  </data>
   <data name="wSave" xml:space="preserve">
-    <value>SAVE</value>
+    <value>保存</value>
+  </data>
+  <data name="wScode" xml:space="preserve">
+    <value>S号</value>
+  </data>
+  <data name="wSearch" xml:space="preserve">
+    <value>搜查</value>
+  </data>
+  <data name="wSelect" xml:space="preserve">
+    <value>选择</value>
+  </data>
+  <data name="wSite" xml:space="preserve">
+    <value>现场</value>
+  </data>
+  <data name="wSort" xml:space="preserve">
+    <value>排序</value>
+  </data>
+  <data name="wStartDate" xml:space="preserve">
+    <value>开始日期</value>
+  </data>
+  <data name="wSub" xml:space="preserve">
+    <value>中部</value>
+  </data>
+  <data name="wSuccess" xml:space="preserve">
+    <value>成功</value>
+  </data>
+  <data name="wTcode" xml:space="preserve">
+    <value>T号</value>
+  </data>
+  <data name="wTeam" xml:space="preserve">
+    <value>团队</value>
+  </data>
+  <data name="wTel" xml:space="preserve">
+    <value>联系</value>
+  </data>
+  <data name="wTop" xml:space="preserve">
+    <value>上部</value>
+  </data>
+  <data name="wTotal" xml:space="preserve">
+    <value>整体</value>
+  </data>
+  <data name="wType" xml:space="preserve">
+    <value>类型</value>
+  </data>
+  <data name="wUse" xml:space="preserve">
+    <value>使用</value>
+  </data>
+  <data name="wView" xml:space="preserve">
+    <value>预览</value>
+  </data>
+  <data name="wWorker" xml:space="preserve">
+    <value>工人</value>
   </data>
 </root>

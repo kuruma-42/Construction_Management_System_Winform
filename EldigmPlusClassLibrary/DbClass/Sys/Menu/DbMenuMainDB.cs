@@ -265,10 +265,8 @@ namespace EldigmPlusClassLibrary.DbClass.Sys.Menu
             string sql = "" +
                 " SELECT ISNULL(MAX(A.DB_NM), '') DB_NM " +
                 " FROM [PLUS_MAIN].dbo.TM00_MEMCO A " +
-                " INNER JOIN[PLUS_MAIN].dbo.TM00_SITE B ON A.MEMCO_CD = B.MEMCO_CD ";
-
-            sql += "" +
-            "WHERE SITE_CD = '" + SITE_CD + "' ";
+                " INNER JOIN[PLUS_MAIN].dbo.TM00_SITE B ON A.MEMCO_CD = B.MEMCO_CD " +
+                " WHERE SITE_CD = " + SITE_CD + "";
 
             object reVal = null;
 
@@ -282,22 +280,13 @@ namespace EldigmPlusClassLibrary.DbClass.Sys.Menu
         public DataSet sMenuMemberDB(string DBNM, string SITE_CD, string TOP_MENU_CD, string SUB_MENU_CD)
         {
             string sql = "" +
-               " SELECT A.MENU_CD, A.MENU_NM, A.TOP_MENU_CD, A.SUB_MENU_CD, ISNULL(B.USING_FLAG, 0) USING_FLAG " +
-               " , CASE WHEN B.MENU_CD IS NOT NULL THEN B.SORT_NO ELSE A.SORT_NO END SORT_NO " +
-               " , ISNULL(A.MENU_PATH, '') MENU_PATH, ISNULL(A.FILE_FOLDER, '') FILE_FOLDER, ISNULL(B.MEMO, '') MEMO " +
+               " SELECT A.MENU_CD, A.MENU_NM, A.TOP_MENU_CD, A.SUB_MENU_CD, ISNULL(B.USING_FLAG, 0) USING_FLAG, " +
+               " CASE WHEN B.MENU_CD IS NOT NULL THEN B.SORT_NO ELSE A.SORT_NO END SORT_NO, " +
+               " ISNULL(A.MENU_PATH, '') MENU_PATH, ISNULL(A.FILE_FOLDER, '') FILE_FOLDER, ISNULL(B.MEMO, '') MEMO " +
                " FROM [PLUS_MAIN].dbo.TM00_MENU A " +
-               " LEFT OUTER JOIN [PLUS-" + DBNM + "].dbo.T00_MENU_SITE B ON A.MENU_CD = B.MENU_CD AND B.SITE_CD = " + SITE_CD + "";
-
-            sql += "" +
-            " WHERE A.TOP_MENU_CD = " + TOP_MENU_CD + " AND A.SUB_MENU_CD = " + SUB_MENU_CD + "";
-
-            //if (USING_FLAG != "")
-            //{
-            //    sql += " AND B.USING_FLAG = '" + USING_FLAG + "' ";
-            //}
-
-            sql += "" +
-           " ORDER BY A.SORT_NO, A.MENU_NM ";
+               " LEFT OUTER JOIN [PLUS-" + DBNM + "].dbo.T00_MENU_SITE B ON A.MENU_CD = B.MENU_CD AND B.SITE_CD = " + SITE_CD +
+               " WHERE A.TOP_MENU_CD = " + TOP_MENU_CD + " AND A.SUB_MENU_CD = " + SUB_MENU_CD +
+               " ORDER BY A.SORT_NO, A.MENU_NM ";
 
             DataSet ds = null;
             if (_sqlHelper != null)
@@ -396,7 +385,7 @@ namespace EldigmPlusClassLibrary.DbClass.Sys.Menu
                 " VALUES (" + SITE_CD + ", '" + MENU_CD + "', '" + AUTH_CD + "'," +
                 " (SELECT ISNULL(MAX(LOG_NO),0)+1 FROM [PLUS-" + DBNM + "].dbo.T00_MENU_SETAUTH_SITE_LOG WHERE SITE_CD = " + SITE_CD + " AND MENU_CD = '" + MENU_CD + "' AND AUTH_CD = '" + AUTH_CD + "')," +
                 " " + VIEW_FLAG + ", " + NEW_FLAG + ", " + MODIFY_FLAG + ", " + DEL_FLAG + ", " + REPORT_FLAG + "," +
-                " " + PRINT_FLAG + ", " + DOWNLOAD_FLAG + ", '" + INPUT_ID +  "', GETDATE()) ";
+                " " + PRINT_FLAG + ", " + DOWNLOAD_FLAG + ", '" + INPUT_ID + "', GETDATE()) ";
 
             int reCnt = 0;
             if (_sqlHelper != null)

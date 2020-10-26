@@ -7,6 +7,12 @@
       <xsd:import schemaLocation="http://localhost:49469/WebSvc/Worker/InOut/WsInOut.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/EldigmPlusSvc_Main.WebSvc.Worker.InOut" />
     </xsd:schema>
   </wsdl:types>
+  <wsdl:message name="IWsInOut_sLaborCompanyList_InputMessage">
+    <wsdl:part name="parameters" element="tns:sLaborCompanyList" />
+  </wsdl:message>
+  <wsdl:message name="IWsInOut_sLaborCompanyList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:sLaborCompanyListResponse" />
+  </wsdl:message>
   <wsdl:message name="IWsInOut_sInOut_InputMessage">
     <wsdl:part name="parameters" element="tns:sInOut" />
   </wsdl:message>
@@ -20,6 +26,10 @@
     <wsdl:part name="parameters" element="tns:sInOutLogResponse" />
   </wsdl:message>
   <wsdl:portType name="IWsInOut">
+    <wsdl:operation name="sLaborCompanyList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWsInOut/sLaborCompanyList" message="tns:IWsInOut_sLaborCompanyList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWsInOut/sLaborCompanyListResponse" message="tns:IWsInOut_sLaborCompanyList_OutputMessage" />
+    </wsdl:operation>
     <wsdl:operation name="sInOut">
       <wsdl:input wsaw:Action="http://tempuri.org/IWsInOut/sInOut" message="tns:IWsInOut_sInOut_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IWsInOut/sInOutResponse" message="tns:IWsInOut_sInOut_OutputMessage" />
@@ -31,6 +41,15 @@
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IWsInOut" type="tns:IWsInOut">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="sLaborCompanyList">
+      <soap:operation soapAction="http://tempuri.org/IWsInOut/sLaborCompanyList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
     <wsdl:operation name="sInOut">
       <soap:operation soapAction="http://tempuri.org/IWsInOut/sInOut" style="document" />
       <wsdl:input>

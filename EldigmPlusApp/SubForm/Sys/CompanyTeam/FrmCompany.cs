@@ -18,7 +18,7 @@ namespace EldigmPlusApp.SubForm.Sys.CompanyTeam
     public partial class FrmCompany : Form
     {
         LogUtil logs = null;
-        ResourceManager lngRM = null;
+        ResourceManager wRM = null;
         ResourceManager msgRM = null;
         
 
@@ -33,41 +33,41 @@ namespace EldigmPlusApp.SubForm.Sys.CompanyTeam
             try
             {
                 logs = new LogUtil();
-                lngRM = new ResourceManager("EldigmPlusApp.strLanguage", typeof(FrmCompany).Assembly);
-                msgRM = new ResourceManager("EldigmPlusApp.msgLanguage", typeof(FrmCompany).Assembly);
+                wRM = new ResourceManager("EldigmPlusApp.GlobalLanguage.word_Language", typeof(FrmCompany).Assembly);
+                msgRM = new ResourceManager("EldigmPlusApp.GlobalLanguage.msg_Language", typeof(FrmCompany).Assembly);
 
-                btnSearch.Text = lngRM.GetString("lngSearch");
-                btnSave.Text = "저장";
+                btnSearch.Text = wRM.GetString("wSearch");
+                btnSave.Text = wRM.GetString("wSave");
 
-                dataGridView1.Columns["dgv1_CHK"].HeaderText = "선택";
-                dataGridView1.Columns["dgv1_CO_CD"].HeaderText = "업체 코드";
-                dataGridView1.Columns["dgv1_CO_NM"].HeaderText = "업체 이름";
-                dataGridView1.Columns["dgv1_USING_FLAG"].HeaderText = "사용";
-                dataGridView1.Columns["dgv1_HEADCO_CD"].HeaderText = "본사";
-                dataGridView1.Columns["dgv1_CONST_CCD"].HeaderText = "공종";
-                dataGridView1.Columns["dgv1_CO_TYPE_SCD"].HeaderText = "업체구분";
-                dataGridView1.Columns["dgv1_SITE_CD"].HeaderText = "현장";
-                dataGridView1.Columns["dgv1_START_DATE"].HeaderText = "시작일";
-                dataGridView1.Columns["dgv1_END_DATE"].HeaderText = "종료일";
-                dataGridView1.Columns["dgv1_BIZ_NO"].HeaderText = "사업자 번호";
-                dataGridView1.Columns["dgv1_OWNER_NM"].HeaderText = "대표자";
-                dataGridView1.Columns["dgv1_TEL"].HeaderText = "연락처";
-                dataGridView1.Columns["dgv1_ADDR"].HeaderText = "주소";
-                dataGridView1.Columns["dgv1_USING_CNT"].HeaderText = "사용 현장";
-                dataGridView1.Columns["dgv1_SORT_NO"].HeaderText = "정렬";
-                dataGridView1.Columns["dgv1_MEMO"].HeaderText = "메모";
+                dataGridView1.Columns["dgv1_CHK"].HeaderText = wRM.GetString("wSelect");
+                dataGridView1.Columns["dgv1_CO_CD"].HeaderText = wRM.GetString("wCode");
+                dataGridView1.Columns["dgv1_CO_NM"].HeaderText = wRM.GetString("wName");
+                dataGridView1.Columns["dgv1_USING_FLAG"].HeaderText = wRM.GetString("wUse");
+                dataGridView1.Columns["dgv1_HEADCO_CD"].HeaderText = wRM.GetString("wHeadOffice");
+                dataGridView1.Columns["dgv1_CONST_CCD"].HeaderText = wRM.GetString("wConstructionTypes");
+                dataGridView1.Columns["dgv1_CO_TYPE_SCD"].HeaderText = wRM.GetString("wCompany") + wRM.GetString("wClassify");
+                dataGridView1.Columns["dgv1_SITE_CD"].HeaderText = wRM.GetString("wSite");
+                dataGridView1.Columns["dgv1_START_DATE"].HeaderText = wRM.GetString("wStartDate");
+                dataGridView1.Columns["dgv1_END_DATE"].HeaderText = wRM.GetString("wEndDate");
+                dataGridView1.Columns["dgv1_BIZ_NO"].HeaderText = wRM.GetString("wBizNo");
+                dataGridView1.Columns["dgv1_OWNER_NM"].HeaderText = wRM.GetString("wOwner");
+                dataGridView1.Columns["dgv1_TEL"].HeaderText = wRM.GetString("wTel");
+                dataGridView1.Columns["dgv1_ADDR"].HeaderText = wRM.GetString("wAddress");
+                dataGridView1.Columns["dgv1_USING_CNT"].HeaderText = wRM.GetString("wUse") + wRM.GetString("wCounter");
+                dataGridView1.Columns["dgv1_SORT_NO"].HeaderText = wRM.GetString("wSort");
+                dataGridView1.Columns["dgv1_MEMO"].HeaderText = wRM.GetString("wMemo");
 
 
 
-                dataGridView2.Columns["dgv2_CO_NM"].HeaderText = "*업체 이름";
-                dataGridView2.Columns["dgv2_BIZ_NO"].HeaderText = "사업자 번호";
-                dataGridView2.Columns["dgv2_CONST_CCD"].HeaderText = "공종";
-                dataGridView2.Columns["dgv2_CO_TYPE_SCD"].HeaderText = "업체구분";
-                dataGridView2.Columns["dgv2_OWNER_NM"].HeaderText = "대표자";
-                dataGridView2.Columns["dgv2_TEL"].HeaderText = "연락처";
-                dataGridView2.Columns["dgv2_ADDR"].HeaderText = "주소";
-                dataGridView2.Columns["dgv2_SORT_NO"].HeaderText = "정렬";
-                dataGridView2.Columns["dgv2_MEMO"].HeaderText = "메모";
+                dataGridView2.Columns["dgv2_CO_NM"].HeaderText = "*" + wRM.GetString("wName");
+                dataGridView2.Columns["dgv2_BIZ_NO"].HeaderText = wRM.GetString("wBizNo");
+                dataGridView2.Columns["dgv2_CONST_CCD"].HeaderText = wRM.GetString("wConstructionTypes");
+                dataGridView2.Columns["dgv2_CO_TYPE_SCD"].HeaderText = wRM.GetString("wCompany") + wRM.GetString("wClassify");
+                dataGridView2.Columns["dgv2_OWNER_NM"].HeaderText = wRM.GetString("wOwner");
+                dataGridView2.Columns["dgv2_TEL"].HeaderText = wRM.GetString("wTel");
+                dataGridView2.Columns["dgv2_ADDR"].HeaderText = wRM.GetString("wAddress");
+                dataGridView2.Columns["dgv2_SORT_NO"].HeaderText = wRM.GetString("wSort");
+                dataGridView2.Columns["dgv2_MEMO"].HeaderText = wRM.GetString("wMemo");
 
 
 
@@ -123,8 +123,8 @@ namespace EldigmPlusApp.SubForm.Sys.CompanyTeam
 
                 setCmb.AddColumn();
 
-                setCmb.AddRow("사용", "1");
-                setCmb.AddRow("전체", "");
+                setCmb.AddRow(wRM.GetString("wUse"), "1");
+                setCmb.AddRow(wRM.GetString("wTotal"), "");
 
                 setCmb.Bind(cmbUse);
 
@@ -454,7 +454,7 @@ namespace EldigmPlusApp.SubForm.Sys.CompanyTeam
                 set_Grideview2Combo1(0, "dgv2_CONST_CCD");
                 set_Grideview2Combo2(0, "dgv2_CO_TYPE_SCD");
                 dataGridView2.Rows[0].Cells["dgv2_SORT_NO"].Value = "10";
-                dataGridView2.Rows[0].Cells["dgv2_BTNADD"].Value = "추가";
+                dataGridView2.Rows[0].Cells["dgv2_BTNADD"].Value = wRM.GetString("wAdd");
             }
             catch (Exception ex)
             {
@@ -489,7 +489,7 @@ namespace EldigmPlusApp.SubForm.Sys.CompanyTeam
                 }
                 if (reCnt < 1)
                 {
-                    MessageBox.Show("선택된 데이터가 없습니다.");
+                    MessageBox.Show(msgRM.GetString("msgNotSelected"));
                     return;
                 }
 
@@ -544,7 +544,7 @@ namespace EldigmPlusApp.SubForm.Sys.CompanyTeam
                             if (dataGridView1.Rows[i].Cells["dgv1_MEMO"].Value != null)
                                 pMemo = dataGridView1.Rows[i].Cells["dgv1_MEMO"].Value.ToString();
 
-                            string pInputId = AppInfo.SsUserId;
+                            string pInputId = AppInfo.SsLabNo;
 
                             int updatefail = 0;
 
@@ -579,11 +579,11 @@ namespace EldigmPlusApp.SubForm.Sys.CompanyTeam
                 }
                 if (reCnt > 0)
                 {
-                    MessageBox.Show("저장 성공");
+                    MessageBox.Show(wRM.GetString("wSave") + " " + wRM.GetString("wSuccess"));
                 }
                 else
                 {
-                    MessageBox.Show("저장 실패");
+                    MessageBox.Show(wRM.GetString("wSave") + " " + wRM.GetString("wFail"));
                 }
 
                 SetDataBind_gridView1();
@@ -609,7 +609,7 @@ namespace EldigmPlusApp.SubForm.Sys.CompanyTeam
                 string reVal = ChkDgv2Param();
 
                 if (reVal != "")
-                    MessageBox.Show("데이터 확인 :: " + reVal);
+                    MessageBox.Show(wRM.GetString("wCheck") + " :: " + reVal);
                 else
                 {
                     string pCoNm = dataGridView2.Rows[0].Cells["dgv2_CO_NM"].Value.ToString();
@@ -645,7 +645,7 @@ namespace EldigmPlusApp.SubForm.Sys.CompanyTeam
                     if (dataGridView2.Rows[0].Cells["dgv2_MEMO"].Value != null)
                         pMemo = dataGridView2.Rows[0].Cells["dgv2_MEMO"].Value.ToString();
 
-                    string pInputId = AppInfo.SsUserId;
+                    string pInputId = AppInfo.SsLabNo;
 
                     Mem_WsSysCompanyTeam.WsSysCompanyTeam wSvc = null;
                     string reCode = "";
@@ -681,10 +681,10 @@ namespace EldigmPlusApp.SubForm.Sys.CompanyTeam
                             reCnt = Convert.ToInt16(reData);
 
                         if (reCnt != 0)
-                            MessageBox.Show("저장 성공");
+                            MessageBox.Show(wRM.GetString("wSave") + " " + wRM.GetString("wSuccess"));
 
                         else
-                            MessageBox.Show("저장 실패");
+                            MessageBox.Show(wRM.GetString("wSave") + " " + wRM.GetString("wFail"));
 
 
                         SetDataBind_gridView1();
@@ -713,49 +713,49 @@ namespace EldigmPlusApp.SubForm.Sys.CompanyTeam
                 {
                     if (dataGridView2.Rows[0].Cells["dgv2_CO_NM"].Value.ToString() == "")
                     {
-                        reVal = "업체 이름";
+                        reVal = wRM.GetString("wName");
                         return reVal;
                     }
                 }
                 else
                 {
-                    reVal = "업체 이름";
+                    reVal = wRM.GetString("wName");
                     return reVal;
                 }
-
+                
                 if (dataGridView2.Rows[0].Cells["dgv2_CONST_CCD"].Value != null)
                 {
                     if (dataGridView2.Rows[0].Cells["dgv2_CONST_CCD"].Value.ToString() == "")
                     {
-                        reVal = "공종";
+                        reVal = wRM.GetString("wConstructionTypes");
                         return reVal;
                     }
                 }
                 else
                 {
-                    reVal = "공종";
+                    reVal = wRM.GetString("wConstructionTypes");
                     return reVal;
                 }
 
-
+                 
 
                 if (dataGridView2.Rows[0].Cells["dgv2_CO_TYPE_SCD"].Value != null)
                 {
                     if (dataGridView2.Rows[0].Cells["dgv2_CO_TYPE_SCD"].Value.ToString() == "")
                     {
-                        reVal = "업체 구분";
+                        reVal = wRM.GetString("wCompany");
                         return reVal;
                     }
                 }
                 else
                 {
-                    reVal = "업체 구분";
+                    reVal = wRM.GetString("wClassify");
                     return reVal;
                 }
             }
             catch (Exception ex)
             {
-                reVal = "에러";
+                reVal = wRM.GetString("wError");
                 logs.SaveLog("[error]  (page)::FrmCompany.cs  (Function)::ChkDgv2Param  (Detail):: " + "\r\n" + ex.ToString(), "Error");
             }
 

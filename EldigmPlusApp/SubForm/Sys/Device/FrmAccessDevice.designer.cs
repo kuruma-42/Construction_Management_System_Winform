@@ -146,7 +146,6 @@
             this.dgv1_DEV_CD.MinimumWidth = 100;
             this.dgv1_DEV_CD.Name = "dgv1_DEV_CD";
             this.dgv1_DEV_CD.ReadOnly = true;
-            this.dgv1_DEV_CD.Visible = false;
             // 
             // dgv1_DEVICE_ID
             // 

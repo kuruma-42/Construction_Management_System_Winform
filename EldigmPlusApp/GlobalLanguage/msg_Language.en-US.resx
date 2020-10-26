@@ -141,4 +141,64 @@
   <data name="lngSearch" xml:space="preserve">
     <value>Search</value>
   </data>
+  <data name="msgAlreadyUsed" xml:space="preserve">
+    <value>Already in use elsewhere</value>
+  </data>
+  <data name="msgChangeUsingFlag" xml:space="preserve">
+    <value>Change to Enabled</value>
+  </data>
+  <data name="msgClickUsingFlagPlz" xml:space="preserve">
+    <value>Please click on the Using section</value>
+  </data>
+  <data name="msgDeviceId" xml:space="preserve">
+    <value>DeviceId</value>
+  </data>
+  <data name="msgDuplicated" xml:space="preserve">
+    <value>Duplicated data</value>
+  </data>
+  <data name="msgEndDate" xml:space="preserve">
+    <value>quitting time</value>
+  </data>
+  <data name="msgMyCompanyStatus" xml:space="preserve">
+    <value>MyCompanyStatus</value>
+  </data>
+  <data name="msgMyConstructionTypesStatus" xml:space="preserve">
+    <value>MyConstructionTypesStatus</value>
+  </data>
+  <data name="msgMyTeamStatus" xml:space="preserve">
+    <value>MyTeamStatus</value>
+  </data>
+  <data name="msgMyZoneStatus" xml:space="preserve">
+    <value>MyZoneStatus</value>
+  </data>
+  <data name="msgNoneDeviceId" xml:space="preserve">
+    <value>Please put the device ID</value>
+  </data>
+  <data name="msgNoneDeviceInOut" xml:space="preserve">
+    <value>Please select device InOut</value>
+  </data>
+  <data name="msgNoneDeviceName" xml:space="preserve">
+    <value>Please put the device name</value>
+  </data>
+  <data name="msgNoneDeviceType" xml:space="preserve">
+    <value>Please select a device type</value>
+  </data>
+  <data name="msgNotSelected" xml:space="preserve">
+    <value>No data selected</value>
+  </data>
+  <data name="msgSameName" xml:space="preserve">
+    <value>The same name already exists</value>
+  </data>
+  <data name="msgStartDate" xml:space="preserve">
+    <value>entrance time</value>
+  </data>
+  <data name="msgUsageStatus" xml:space="preserve">
+    <value>UsageStatus</value>
+  </data>
+  <data name="msgWorkerApprovalStatus" xml:space="preserve">
+    <value>WorkerApprovalStatus</value>
+  </data>
+  <data name="wEventDate" xml:space="preserve">
+    <value>Event time</value>
+  </data>
 </root>

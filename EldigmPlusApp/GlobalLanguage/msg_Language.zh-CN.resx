@@ -124,7 +124,7 @@
     <value>结束</value>
   </data>
   <data name="lngHome" xml:space="preserve">
-    <value>家</value>
+    <value>主页</value>
   </data>
   <data name="lngInfo" xml:space="preserve">
     <value>信息</value>
@@ -140,5 +140,65 @@
   </data>
   <data name="lngSearch" xml:space="preserve">
     <value>搜索</value>
+  </data>
+  <data name="msgAlreadyUsed" xml:space="preserve">
+    <value>其他地方已经使用中</value>
+  </data>
+  <data name="msgChangeUsingFlag" xml:space="preserve">
+    <value>切换使用</value>
+  </data>
+  <data name="msgClickUsingFlagPlz" xml:space="preserve">
+    <value>请按使用部分</value>
+  </data>
+  <data name="msgDeviceId" xml:space="preserve">
+    <value>装备名</value>
+  </data>
+  <data name="msgDuplicated" xml:space="preserve">
+    <value>重复数据</value>
+  </data>
+  <data name="msgEndDate" xml:space="preserve">
+    <value>下班</value>
+  </data>
+  <data name="msgMyCompanyStatus" xml:space="preserve">
+    <value>我的公司状态</value>
+  </data>
+  <data name="msgMyConstructionTypesStatus" xml:space="preserve">
+    <value>我的工种状态</value>
+  </data>
+  <data name="msgMyTeamStatus" xml:space="preserve">
+    <value>我的团队状态</value>
+  </data>
+  <data name="msgMyZoneStatus" xml:space="preserve">
+    <value>我的地区状态</value>
+  </data>
+  <data name="msgNoneDeviceId" xml:space="preserve">
+    <value>写一下装备的ID</value>
+  </data>
+  <data name="msgNoneDeviceInOut" xml:space="preserve">
+    <value>请选择装备出入号</value>
+  </data>
+  <data name="msgNoneDeviceName" xml:space="preserve">
+    <value>写一下装备的名字</value>
+  </data>
+  <data name="msgNoneDeviceType" xml:space="preserve">
+    <value>请选择装备类型号</value>
+  </data>
+  <data name="msgNotSelected" xml:space="preserve">
+    <value>点一下要修改部分的选择</value>
+  </data>
+  <data name="msgSameName" xml:space="preserve">
+    <value>同样的名字已经存在了</value>
+  </data>
+  <data name="msgStartDate" xml:space="preserve">
+    <value>上班</value>
+  </data>
+  <data name="msgUsageStatus" xml:space="preserve">
+    <value>是否使用</value>
+  </data>
+  <data name="msgWorkerApprovalStatus" xml:space="preserve">
+    <value>工人批准状态</value>
+  </data>
+  <data name="wEventDate" xml:space="preserve">
+    <value>事件时期</value>
   </data>
 </root>

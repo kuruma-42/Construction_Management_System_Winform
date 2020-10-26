@@ -18,10 +18,9 @@ namespace EldigmPlusApp.SubForm.Sys.CodeT
     public partial class FrmCodeTAuthSite : Form
     {
         LogUtil logs = null;
-        ResourceManager lngRM = null;
+        ResourceManager wRM = null;
         ResourceManager msgRM = null;
 
-        string _topMenuCd = "";
         string _codeGrp = "";
         string _code = "";
 
@@ -36,18 +35,17 @@ namespace EldigmPlusApp.SubForm.Sys.CodeT
             try
             {
                 logs = new LogUtil();
-                lngRM = new ResourceManager("EldigmPlusApp.strLanguage", typeof(FrmCodeTAuthSite).Assembly);
-                msgRM = new ResourceManager("EldigmPlusApp.msgLanguage", typeof(FrmCodeTAuthSite).Assembly);
+                wRM = new ResourceManager("EldigmPlusApp.GlobalLanguage.word_Language", typeof(FrmCodeTAuthSite).Assembly);
+                msgRM = new ResourceManager("EldigmPlusApp.GlobalLanguage.msg_Language", typeof(FrmCodeTAuthSite).Assembly);
 
                 btnSave.Text = "저장";
-
-                dataGridView1.Columns["dgv1_CHK"].HeaderText = "선택";
-                dataGridView1.Columns["dgv1_TCODE"].HeaderText = "T코드";
-                dataGridView1.Columns["dgv1_AUTH_CD"].HeaderText = "권한 코드";
-                dataGridView1.Columns["dgv1_TCODE_NM"].HeaderText = "T코드 이름";
-                dataGridView1.Columns["dgv1_VIEW_FLAG"].HeaderText = "보기";
-                dataGridView1.Columns["dgv1_NEW_FLAG"].HeaderText = "작성";
-                dataGridView1.Columns["dgv1_MODIFY_FLAG"].HeaderText = "수정";
+                dataGridView1.Columns["dgv1_CHK"].HeaderText = wRM.GetString("wSelect");
+                dataGridView1.Columns["dgv1_TCODE"].HeaderText = wRM.GetString("wTcode");
+                dataGridView1.Columns["dgv1_AUTH_CD"].HeaderText = wRM.GetString("wAuthority") + wRM.GetString("wCode");
+                dataGridView1.Columns["dgv1_TCODE_NM"].HeaderText = wRM.GetString("wTcode") + wRM.GetString("wName");
+                dataGridView1.Columns["dgv1_VIEW_FLAG"].HeaderText = wRM.GetString("wView");
+                dataGridView1.Columns["dgv1_NEW_FLAG"].HeaderText = wRM.GetString("wAdd");
+                dataGridView1.Columns["dgv1_MODIFY_FLAG"].HeaderText = wRM.GetString("wModify");
 
                 Control.CheckForIllegalCrossThreadCalls = false;
 
@@ -202,7 +200,7 @@ namespace EldigmPlusApp.SubForm.Sys.CodeT
             }
             catch (Exception ex)
             {
-                logs.SaveLog("[error]  (page)::FrmMenuSetAuthSite.cs  (Function)::SetDataBind_CmbSite  (Detail):: " + "\r\n" + ex.ToString());
+                logs.SaveLog("[error]  (page)::FrmCodeTAuthSite.cs  (Function)::SetDataBind_CmbSite  (Detail):: " + "\r\n" + ex.ToString());
             }
         }
 
@@ -316,7 +314,7 @@ namespace EldigmPlusApp.SubForm.Sys.CodeT
             }
             catch (Exception ex)
             {
-                logs.SaveLog("[error]  (page)::FrmCodeTAuthSite.cs  (Function)::SetDataBind_gridView1  (Detail)::pScodeGrp=[" + _topMenuCd + "]", "Error");
+                logs.SaveLog("[error]  (page)::FrmCodeTAuthSite.cs  (Function)::SetDataBind_gridView1  (Detail)::codeGrp=[" + codeGrp + "], code_val=[" + code_val + "]", "Error");
                 logs.SaveLog("[error]  (page)::FrmCodeTAuthSite.cs  (Function)::SetDataBind_gridView1  (Detail)::reMsg=[" + reMsg + "]", "Error");
                 logs.SaveLog("[error]  (page)::FrmCodeTAuthSite.cs  (Function)::SetDataBind_gridView1  (Detail):: " + "\r\n" + ex.ToString(), "Error");
             }
@@ -420,7 +418,7 @@ namespace EldigmPlusApp.SubForm.Sys.CodeT
                 }
                 if (reCnt < 1)
                 {
-                    MessageBox.Show("선택된 데이터가 없습니다.");
+                    MessageBox.Show(msgRM.GetString("msgNotSelected"));
                     return;
                 }
 
@@ -449,9 +447,9 @@ namespace EldigmPlusApp.SubForm.Sys.CodeT
                     }
                 }
                 if (reCnt > 0)
-                    MessageBox.Show("저장 성공" + " : " + reCnt.ToString());
+                    MessageBox.Show(wRM.GetString("wSave") + " " + wRM.GetString("wSuccess") + " : " + reCnt.ToString());
                 else
-                    MessageBox.Show("저장 실패");
+                    MessageBox.Show(wRM.GetString("wSave") + " " + wRM.GetString("wFail"));
 
                 SetDataBind_gridView1(_codeGrp, _code);
 
@@ -459,7 +457,7 @@ namespace EldigmPlusApp.SubForm.Sys.CodeT
             }
             catch (Exception ex)
             {
-                logs.SaveLog("[error]  (page)::FrmSysCode.cs  (Function)::btnSave_Click  (Detail):: " + "\r\n" + ex.ToString(), "Error");
+                logs.SaveLog("[error]  (page)::FrmCodeTAuthSite.cs  (Function)::btnSave_Click  (Detail):: " + "\r\n" + ex.ToString(), "Error");
 
             }
             finally

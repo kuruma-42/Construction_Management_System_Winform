@@ -38,16 +38,16 @@ namespace EldigmPlusApp.SubForm.Sys.Device
                 msgRM = new ResourceManager("EldigmPlusApp.GlobalLanguage.msg_Language", typeof(FrmAccessDevice).Assembly);
 
                 btnSave.Text = wRM.GetString("wSave");
-                dataGridView1.Columns["dgv1_CHK"].HeaderText = "선택";
-                dataGridView1.Columns["dgv1_DEV_CD"].HeaderText = "장치 코드";
-                dataGridView1.Columns["dgv1_DEVICE_ID"].HeaderText = "*장치 ID";
-                dataGridView1.Columns["dgv1_DEV_TYPE_SCD"].HeaderText = "*장치 유형 S코드";
-                dataGridView1.Columns["dgv1_DEV_IO_SCD"].HeaderText = "*장치 IO S코드";
-                dataGridView1.Columns["dgv1_DEV_NM"].HeaderText = "장치 이름";
-                dataGridView1.Columns["dgv1_IP"].HeaderText = "IP";
-                dataGridView1.Columns["dgv1_USING_FLAG"].HeaderText = "사용 여부";
-                dataGridView1.Columns["dgv1_SORT_NO"].HeaderText = "정렬";
-                dataGridView1.Columns["dgv1_MEMO"].HeaderText = "메모";
+                dataGridView1.Columns["dgv1_CHK"].HeaderText = wRM.GetString("wSelect");
+                dataGridView1.Columns["dgv1_DEV_CD"].HeaderText = wRM.GetString("wDevice") + wRM.GetString("wCode");
+                dataGridView1.Columns["dgv1_DEVICE_ID"].HeaderText = msgRM.GetString("msgDeviceId");
+                dataGridView1.Columns["dgv1_DEV_TYPE_SCD"].HeaderText = wRM.GetString("wDevice") + wRM.GetString("wType") + wRM.GetString("wScode");
+                dataGridView1.Columns["dgv1_DEV_IO_SCD"].HeaderText = wRM.GetString("wDevice") + wRM.GetString("wInOut") + wRM.GetString("wScode");
+                dataGridView1.Columns["dgv1_DEV_NM"].HeaderText = wRM.GetString("wDevice") + wRM.GetString("wName");
+                dataGridView1.Columns["dgv1_IP"].HeaderText = wRM.GetString("wIp");
+                dataGridView1.Columns["dgv1_USING_FLAG"].HeaderText = msgRM.GetString("msgUsageStatus");
+                dataGridView1.Columns["dgv1_SORT_NO"].HeaderText = wRM.GetString("wSort");
+                dataGridView1.Columns["dgv1_MEMO"].HeaderText = wRM.GetString("wMemo");
 
 
 
@@ -275,7 +275,8 @@ namespace EldigmPlusApp.SubForm.Sys.Device
                 }
                 if (reCnt < 1)
                 {
-                    MessageBox.Show("선택된 데이터가 없습니다.");
+                    MessageBox.Show(msgRM.GetString("msgNotSelected"));
+
                     return;
                 }
 
@@ -296,7 +297,7 @@ namespace EldigmPlusApp.SubForm.Sys.Device
                                 string pDeviceId = "";
                                 if(dataGridView1.Rows[i].Cells["dgv1_DEVICE_ID"].Value == null)
                                 {
-                                    MessageBox.Show("장치 이름을 입력해주세요");
+                                    MessageBox.Show(msgRM.GetString("msgNoneDeviceName"));
                                     return;
                                 }
                                 else
@@ -328,7 +329,7 @@ namespace EldigmPlusApp.SubForm.Sys.Device
                                 reCode = wSvc.mDevice(pDbNm, pSiteCd, pDevCd, pDeviceId, pDevTypeScd, pDevIOScd, pDevNm, pIp, pSortNo, pUsingFlag, pMemo, out reMsg, out reData);
 
                                 //UPDATE LOG 
-                                wSvc.logDevice(pDbNm, pDevCd, pSiteCd, pDeviceId, pDevTypeScd, pDevIOScd, pDevNm, pIp, pUsingFlag, pSortNo, pMemo, AppInfo.SsUserId, out reMsg, out reData);
+                                wSvc.logDevice(pDbNm, pDevCd, pSiteCd, pDeviceId, pDevTypeScd, pDevIOScd, pDevNm, pIp, pUsingFlag, pSortNo, pMemo, AppInfo.SsLabNo, out reMsg, out reData);
 
                                 if (reCode == "Y" && reData != "0")
                                     reCnt += Convert.ToInt16(reData);
@@ -344,11 +345,14 @@ namespace EldigmPlusApp.SubForm.Sys.Device
                             {
                                 string pDbNm = AppInfo.SsDbNm;
                                 string pSiteCd = AppInfo.SsSiteCd;
+                                
+
 
                                 string pDeviceId = "";
                                 if (dataGridView1.Rows[i].Cells["dgv1_DEVICE_ID"].Value == null)
                                 {
-                                    MessageBox.Show("장치 이름을 입력해주세요");
+                                    MessageBox.Show(msgRM.GetString("msgNoneDeviceId"));
+                                    SetDataBind_gridView1();
                                     return;
                                 }
                                 else
@@ -359,7 +363,9 @@ namespace EldigmPlusApp.SubForm.Sys.Device
                                 string pDevTypeScd = "";
                                 if (dataGridView1.Rows[i].Cells["dgv1_DEV_TYPE_SCD"].Value == null)
                                 {
-                                    MessageBox.Show("장치 유형을 선택해주세요");
+                                    
+                                    MessageBox.Show(msgRM.GetString("msgNoneDeviceType"));
+                                    SetDataBind_gridView1();
                                     return;
                                 }
                                 else
@@ -369,8 +375,9 @@ namespace EldigmPlusApp.SubForm.Sys.Device
 
                                 string pDevIOScd = "";
                                 if (dataGridView1.Rows[i].Cells["dgv1_DEV_IO_SCD"].Value == null)
-                                {
-                                    MessageBox.Show("장치 IO 선택해주세요");
+                                {                                    
+                                    MessageBox.Show(msgRM.GetString("msgNoneDeviceInOut"));
+                                    SetDataBind_gridView1();
                                     return;
                                 }
                                 else
@@ -409,7 +416,7 @@ namespace EldigmPlusApp.SubForm.Sys.Device
                                 param[6] = pUsingFlag;
                                 param[7] = pSortNo;
                                 param[8] = pMemo;
-                                param[9] = AppInfo.SsUserId;
+                                param[9] = AppInfo.SsLabNo;
 
                                 //INSERT WITH PROCEDURE 
                                 reCode = wSvc.aDevicePro(AppInfo.SsDbNm, param, out reData, out reMsg);
@@ -423,11 +430,11 @@ namespace EldigmPlusApp.SubForm.Sys.Device
                 }
                 if (reCnt > 0)
                 {
-                    MessageBox.Show("저장 성공");
+                    MessageBox.Show(wRM.GetString("wSave") + " " + wRM.GetString("wSuccess")  );
                 }
                 else
                 {
-                    MessageBox.Show("저장 실패");
+                    MessageBox.Show(wRM.GetString("wSave") + " " + wRM.GetString("wFail"));
                 }
 
                 SetDataBind_gridView1();

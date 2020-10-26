@@ -12,7 +12,7 @@ namespace EldigmPlusApp.SubForm.Sys.MemberSite
     public partial class FrmMember : Form
     {
         LogUtil logs = null;
-        ResourceManager lngRM = null;
+        ResourceManager wRM = null;
         ResourceManager msgRM = null;
 
     
@@ -28,22 +28,22 @@ namespace EldigmPlusApp.SubForm.Sys.MemberSite
             try
             {
                 logs = new LogUtil();
-                lngRM = new ResourceManager("EldigmPlusApp.strLanguage", typeof(FrmMember).Assembly);
-                msgRM = new ResourceManager("EldigmPlusApp.msgLanguage", typeof(FrmMember).Assembly);
+                wRM = new ResourceManager("EldigmPlusApp.GlobalLanguage.word_Language", typeof(FrmMember).Assembly);
+                msgRM = new ResourceManager("EldigmPlusApp.GlobalLanguage.msg_Language", typeof(FrmMember).Assembly);
 
-                //btnSearch.Text = lngRM.GetString("lngSearch");
-                btnSave.Text = "저장";
+                //btnSearch.Text = wRM.GetString("lngSearch");
+                btnSave.Text = wRM.GetString("wSave");
 
-                dataGridView1.Columns["dgv1_CHK"].HeaderText = "선택";
-                dataGridView1.Columns["dgv1_MEMCO_CD"].HeaderText = "회원사 코드";
-                dataGridView1.Columns["dgv1_MEMCO_NM"].HeaderText = "회원사 이름";
-                dataGridView1.Columns["dgv1_USING_FLAG"].HeaderText = "사용";
-                dataGridView1.Columns["dgv1_SORT_NO"].HeaderText = "정렬";
-                dataGridView1.Columns["dgv1_MEMO"].HeaderText = "메모";
+                dataGridView1.Columns["dgv1_CHK"].HeaderText = wRM.GetString("wSelect");
+                dataGridView1.Columns["dgv1_MEMCO_CD"].HeaderText = wRM.GetString("wCode");
+                dataGridView1.Columns["dgv1_MEMCO_NM"].HeaderText = wRM.GetString("wName");
+                dataGridView1.Columns["dgv1_USING_FLAG"].HeaderText = wRM.GetString("wUse");
+                dataGridView1.Columns["dgv1_SORT_NO"].HeaderText = wRM.GetString("wSort");
+                dataGridView1.Columns["dgv1_MEMO"].HeaderText = wRM.GetString("wMemo");
 
-                dataGridView2.Columns["dgv2_MEMCO_NM"].HeaderText = "*회원사이름";
-                dataGridView2.Columns["dgv2_SORT_NO"].HeaderText = "정렬";
-                dataGridView2.Columns["dgv2_MEMO"].HeaderText = "메모";
+                dataGridView2.Columns["dgv2_MEMCO_NM"].HeaderText = "*" + wRM.GetString("wName");
+                dataGridView2.Columns["dgv2_SORT_NO"].HeaderText = wRM.GetString("wSort");
+                dataGridView2.Columns["dgv2_MEMO"].HeaderText = wRM.GetString("wMemo");
                 dataGridView2.Columns["dgv2_MEMCO_NM"].HeaderCell.Style.ForeColor = Color.Maroon; // 헤더 필수 항목 빨강색
 
                 Control.CheckForIllegalCrossThreadCalls = false;
@@ -109,7 +109,7 @@ namespace EldigmPlusApp.SubForm.Sys.MemberSite
 
                 TreeNode root = new TreeNode();
                 root.Tag = "";
-                root.Text = "전체";
+                root.Text = wRM.GetString("wTotal");
 
                 reCode = wSvc.sMember_UsingFlag("1", out getData, out reMsg);
                 if (reCode == "Y")
@@ -311,7 +311,7 @@ namespace EldigmPlusApp.SubForm.Sys.MemberSite
                 }
                 if (reCnt < 1)
                 {
-                    MessageBox.Show("선택된 데이터가 없습니다.");
+                    MessageBox.Show(msgRM.GetString("msgNotSelected"));
                     return;
                 }
                 
@@ -347,9 +347,9 @@ namespace EldigmPlusApp.SubForm.Sys.MemberSite
                                 reCnt = Convert.ToInt16(reData);
 
                             if (reCnt > 0)
-                                MessageBox.Show("저장 성공" + " : " + reCnt.ToString());
+                                MessageBox.Show(wRM.GetString("wSave") + " " + wRM.GetString("wSuccess") + " : " + reCnt.ToString());
                             else
-                                MessageBox.Show("저장 실패");
+                                MessageBox.Show(wRM.GetString("wSave") + " " + wRM.GetString("wFail"));
 
                             SetDataBind_gridView1(pMemcoCd);
                             SetDataBind_treeView1();
@@ -377,7 +377,7 @@ namespace EldigmPlusApp.SubForm.Sys.MemberSite
                 dataGridView2.Rows.Clear();
                 dataGridView2.Rows.Add();
                 dataGridView2.Rows[0].Cells["dgv2_SORT_NO"].Value = "10";
-                dataGridView2.Rows[0].Cells["dgv2_BTNADD"].Value = "추가";
+                dataGridView2.Rows[0].Cells["dgv2_BTNADD"].Value = wRM.GetString("wAdd");
             }
             catch (Exception ex)
             {
@@ -395,7 +395,7 @@ namespace EldigmPlusApp.SubForm.Sys.MemberSite
                 string reVal = ChkDgv2Param();
 
                 if (reVal != "")
-                    MessageBox.Show("데이터 확인 :: " + reVal);
+                    MessageBox.Show(wRM.GetString("wCheck") + " :: " + reVal);
                 else
                 {
                     
@@ -409,7 +409,7 @@ namespace EldigmPlusApp.SubForm.Sys.MemberSite
                     if (dataGridView2.Rows[0].Cells["dgv2_MEMO"].Value != null)
                         memo_val = dataGridView2.Rows[0].Cells["dgv2_MEMO"].Value.ToString();
                     string usingFlag_val = "1";
-                    string pInputId = AppInfo.SsUserId;
+                    string pInputId = AppInfo.SsLabNo;
 
                     M_WsMember.WsMember wSvc = null;
                     string reCode = "";
@@ -429,7 +429,7 @@ namespace EldigmPlusApp.SubForm.Sys.MemberSite
                             //중복데이터 체크 후 USING FLAG 1로 업데이트 
                             //본인이 소속된 SiteCd
                             reCode = wSvc.mMember(AppInfo.SsSiteCd, pMemcoNm, usingFlag_val, sortNo_val, memo_val, out reMsg, out reData);
-                            MessageBox.Show("중복 데이터 입니다. 사용으로 전환합니다. ");
+                            MessageBox.Show(wRM.GetString("msgDuplicated") + " " + wRM.GetString("msgChangeUsingFlag"));
                         }
                         else
                         {
@@ -441,9 +441,9 @@ namespace EldigmPlusApp.SubForm.Sys.MemberSite
                                 reCnt = Convert.ToInt16(reData);
 
                             if (reCnt > 0)
-                                MessageBox.Show("저장 성공" + " : " + reCnt.ToString());
+                                MessageBox.Show(wRM.GetString("wSave") + " " + wRM.GetString("wSuccess") + " : " + reCnt.ToString());
                             else
-                                MessageBox.Show("저장 실패");
+                                MessageBox.Show(wRM.GetString("wSave") + " " + wRM.GetString("wFail"));
                         }
 
                                              
@@ -474,19 +474,19 @@ namespace EldigmPlusApp.SubForm.Sys.MemberSite
                 {
                     if (dataGridView2.Rows[0].Cells["dgv2_MEMCO_NM"].Value.ToString() == "")
                     {
-                        reVal = "회원사 이름";
+                        reVal = wRM.GetString("wName");
                         return reVal;
                     }
                 }
                 else
                 {
-                    reVal = "회원사 이름";
+                    reVal = wRM.GetString("wName");
                     return reVal;
                 }
             }
             catch (Exception ex)
             {
-                reVal = "에러";
+                reVal = wRM.GetString("wError");
                 logs.SaveLog("[error]  (page)::FrmMember.cs  (Function)::ChkDgv2Param  (Detail):: " + "\r\n" + ex.ToString(), "Error");
             }
 

@@ -87,6 +87,9 @@
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xaml" />
     <Reference Include="System.Xml" />
+    <Reference Include="Test_ClassLibrary2">
+      <HintPath>C:\Users\kurum\Desktop\Test_ClassLibrary2.dll</HintPath>
+    </Reference>
     <Reference Include="UIAutomationProvider" />
     <Reference Include="WindowsBase" />
     <Reference Include="WindowsFormsIntegration" />
@@ -237,6 +240,12 @@
     <Compile Include="SubForm\Worker\Labor\FrmLaborSearch.Designer.cs">
       <DependentUpon>FrmLaborSearch.cs</DependentUpon>
     </Compile>
+    <Compile Include="SubForm\Worker\Labor\FrmLaborSearchPop.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubForm\Worker\Labor\FrmLaborSearchPop.Designer.cs">
+      <DependentUpon>FrmLaborSearchPop.cs</DependentUpon>
+    </Compile>
     <Compile Include="Web References\Mem_WsInOut\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -304,7 +313,9 @@
     </Compile>
     <EmbeddedResource Include="GlobalLanguage\msg_Language.en-US.resx" />
     <EmbeddedResource Include="GlobalLanguage\word_Language.en-US.resx" />
-    <EmbeddedResource Include="GlobalLanguage\msg_Language.ko-KR.resx" />
+    <EmbeddedResource Include="GlobalLanguage\msg_Language.ko-KR.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EmbeddedResource Include="GlobalLanguage\word_Language.ko-KR.resx" />
     <EmbeddedResource Include="GlobalLanguage\msg_Language.zh-CN.resx" />
     <EmbeddedResource Include="GlobalLanguage\word_Language.zh-CN.resx" />
@@ -360,12 +371,14 @@
     </EmbeddedResource>
     <EmbeddedResource Include="SubForm\Sys\Menu\FrmMenuMainDB.resx">
       <DependentUpon>FrmMenuMainDB.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="SubForm\Sys\Menu\FrmMenuSetAuthSite.resx">
       <DependentUpon>FrmMenuSetAuthSite.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SubForm\Sys\Menu\FrmMenuSite.resx">
       <DependentUpon>FrmMenuSite.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="SubForm\Sys\SysAuth\FrmSysAuthMainDB.resx">
       <DependentUpon>FrmSysAuthMainDB.cs</DependentUpon>
@@ -390,6 +403,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="SubForm\Worker\Labor\FrmLaborSearch.resx">
       <DependentUpon>FrmLaborSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubForm\Worker\Labor\FrmLaborSearchPop.resx">
+      <DependentUpon>FrmLaborSearchPop.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Class\Common\Eldigm_Plus\.vs\config\applicationhost.config" />
     <None Include="Class\Common\Eldigm_Plus\.vs\EldigmPlus\v15\.suo" />
@@ -427,6 +443,9 @@
     </None>
     <None Include="Web References\Mem_WsDevice\WsDevice2.xsd">
       <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\Mem_WsInOut\DataComCombo1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
     </None>
     <None Include="Web References\Mem_WsInOut\DataInOut.datasource">
       <DependentUpon>Reference.map</DependentUpon>
@@ -532,12 +551,6 @@
     <None Include="Web References\Mem_WsWorkerLaborSearch\DataComCombo.datasource">
       <DependentUpon>Reference.map</DependentUpon>
     </None>
-    <None Include="Web References\Mem_WsWorkerLaborSearch\DataDevCombo.datasource">
-      <DependentUpon>Reference.map</DependentUpon>
-    </None>
-    <None Include="Web References\Mem_WsWorkerLaborSearch\DataDevice.datasource">
-      <DependentUpon>Reference.map</DependentUpon>
-    </None>
     <None Include="Web References\Mem_WsWorkerLaborSearch\DataLaborSearch.datasource">
       <DependentUpon>Reference.map</DependentUpon>
     </None>
@@ -553,9 +566,6 @@
       <SubType>Designer</SubType>
     </None>
     <None Include="Web References\Mem_WsWorkerLaborSearch\WsWorkerLaborSearch1.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Web References\Mem_WsWorkerLaborSearch\WsWorkerLaborSearch2.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Web References\M_WsCCodeGrp\DataCodeAuthSiteMemberDB1.datasource">
@@ -962,5 +972,15 @@
       <CachedSettingsPropName>EldigmPlusApp_Mem_WsWorkerLaborSearch_WsWorkerLaborSearch</CachedSettingsPropName>
     </WebReferenceUrl>
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\EldigmPlusApp_UserControl\EldigmPlusApp_UserControl.csproj">
+      <Project>{15B9CB1D-047A-4EC8-BDB7-3019B369CD46}</Project>
+      <Name>EldigmPlusApp_UserControl</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
 </Project>

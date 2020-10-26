@@ -18,7 +18,7 @@ namespace EldigmPlusApp.SubForm.Sys.SysAuth
     public partial class FrmSysAuthSiteDB : Form
     {
         LogUtil logs = null;
-        ResourceManager lngRM = null;
+        ResourceManager wRM = null;
         ResourceManager msgRM = null;
 
         string DBNM = "";
@@ -32,18 +32,18 @@ namespace EldigmPlusApp.SubForm.Sys.SysAuth
             InitializeComponent(); try
             {
                 logs = new LogUtil();
-                lngRM = new ResourceManager("EldigmPlusApp.strLanguage", typeof(FrmSysAuthMainDB).Assembly);
-                msgRM = new ResourceManager("EldigmPlusApp.msgLanguage", typeof(FrmSysAuthMainDB).Assembly);
+                wRM = new ResourceManager("EldigmPlusApp.GlobalLanguage.word_Language", typeof(FrmSysAuthMainDB).Assembly);
+                msgRM = new ResourceManager("EldigmPlusApp.GlobalLanguage.msg_Language", typeof(FrmSysAuthMainDB).Assembly);
 
 
-                btnSave.Text = "저장";
-                dataGridView1.Columns["dgv1_CHK"].HeaderText = "선택";
-                dataGridView1.Columns["dgv1_AUTH_CD"].HeaderText = "권한 코드";
-                dataGridView1.Columns["dgv1_AUTH_NM"].HeaderText = "권한 이름";
-                dataGridView1.Columns["dgv1_AUTH_LEVEL"].HeaderText = "권한 레벨";
-                dataGridView1.Columns["dgv1_LAB_APRV_FLAG"].HeaderText = "근로자 승인 여부";
-                dataGridView1.Columns["dgv1_USING_FLAG"].HeaderText = "사용 여부";
-                dataGridView1.Columns["dgv1_MEMO"].HeaderText = "메모";
+                btnSave.Text = wRM.GetString("wSave");
+                dataGridView1.Columns["dgv1_CHK"].HeaderText = wRM.GetString("wSelect");
+                dataGridView1.Columns["dgv1_AUTH_CD"].HeaderText = wRM.GetString("wAuthority") + wRM.GetString("wCode");
+                dataGridView1.Columns["dgv1_AUTH_NM"].HeaderText = wRM.GetString("wName");
+                dataGridView1.Columns["dgv1_AUTH_LEVEL"].HeaderText = wRM.GetString("wAuthority") + wRM.GetString("wLevel");
+                dataGridView1.Columns["dgv1_LAB_APRV_FLAG"].HeaderText = msgRM.GetString("msgWorkerApprovalStatus");
+                dataGridView1.Columns["dgv1_USING_FLAG"].HeaderText = msgRM.GetString("msgUsageStatus");
+                dataGridView1.Columns["dgv1_MEMO"].HeaderText = wRM.GetString("wMemo");
 
 
 
@@ -142,9 +142,9 @@ namespace EldigmPlusApp.SubForm.Sys.SysAuth
 
                 setCmb.AddColumn();
 
-                setCmb.AddRow("사용", "1");
-                setCmb.AddRow("미사용", "0");
-                setCmb.AddRow("전체", "");
+                setCmb.AddRow(wRM.GetString("wUse"), "1");
+                setCmb.AddRow(wRM.GetString("wNotUsing"), "0");
+                setCmb.AddRow(wRM.GetString("wTotal"), "");
 
                 setCmb.Bind(cmbUse);
 
@@ -266,7 +266,7 @@ namespace EldigmPlusApp.SubForm.Sys.SysAuth
                 }
                 if (reCnt < 1)
                 {
-                    MessageBox.Show("선택된 데이터가 없습니다.");
+                    MessageBox.Show(msgRM.GetString("msgNotSelected"));
                     return;
                 }
 
@@ -302,7 +302,7 @@ namespace EldigmPlusApp.SubForm.Sys.SysAuth
                                     //SITE DB 업데이트 실패시 INSERT 해준다.
                                     if (Convert.ToInt16(reData) < 1)
                                     {
-                                        string pInputId = AppInfo.SsUserId;
+                                        string pInputId = AppInfo.SsLabNo;
                                         if (usingFlag_val == "1")
                                         {
                                                                                 
@@ -334,11 +334,11 @@ namespace EldigmPlusApp.SubForm.Sys.SysAuth
 
                 if (reCnt > 0)
                 {
-                    MessageBox.Show("성공" + "[" + reCnt.ToString() + "], " + "실패" + "[" + reCnt2.ToString() + "], " + "보류(미사용)" + "[" + reCnt3.ToString() + "]");
+                    MessageBox.Show(wRM.GetString("wSuccess") + "[" + reCnt.ToString() + "], " + wRM.GetString("wFail") + "[" + reCnt2.ToString() + "], " + wRM.GetString("wNotUsing") + "[" + reCnt3.ToString() + "]");
                 }
                 else
                 {
-                    MessageBox.Show("성공" + "[" + reCnt.ToString() + "], " + "실패" + "[" + reCnt2.ToString() + "], " + "보류(미사용)" + "[" + reCnt3.ToString() + "]");
+                    MessageBox.Show(wRM.GetString("wSuccess") + "[" + reCnt.ToString() + "], " + wRM.GetString("wFail") + "[" + reCnt2.ToString() + "], " + wRM.GetString("wNotUsing") + "[" + reCnt3.ToString() + "]");
                 }
 
                 SetDataBind_gridView1();
