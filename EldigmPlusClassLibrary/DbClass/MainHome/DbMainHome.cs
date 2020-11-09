@@ -109,17 +109,43 @@ namespace EldigmPlusClassLibrary.DbClass.MainHome
             return ds;
         }
 
-        public DataSet sSiteSubMenu2(string DBNM, string SITE_CD, string TOP_MENU_CD, string SUB_MENU_CD)
+        public DataSet sSiteSubMenu2(string DBNM, string SITE_CD, string TOP_MENU_CD, string SUB_MENU_CD, string AUTH_CD)
         {
             string con = "[PLUS-" + DBNM + "].dbo.";
-            string sql = "" +
-                " SELECT A.MENU_CD, A.TOP_MENU_CD, A.SUB_MENU_CD, A.MENU_NM, A.MEMO " +
-                " , B.MENU_PATH " +
-                " FROM " + con + "T00_MENU_SITE A " +
-                " INNER JOIN [PLUS_MAIN].dbo.TM00_MENU B ON A.MENU_CD = B.MENU_CD AND A.TOP_MENU_CD = B.TOP_MENU_CD AND A.SUB_MENU_CD = B.SUB_MENU_CD " +
-                " WHERE A.SITE_CD = " + SITE_CD + " AND A.TOP_MENU_CD = " + TOP_MENU_CD + " AND A.SUB_MENU_CD = " + SUB_MENU_CD + " " +
-                " AND A.USING_FLAG = 1 " +
-                " ORDER BY A.SORT_NO ";
+            string sql = "";
+
+            if(AUTH_CD.ToLower() == "superadmin")
+            {
+                sql += "" +                  
+                  "     SELECT A.MENU_CD, A.TOP_MENU_CD, A.SUB_MENU_CD, A.MENU_NM, A.MEMO, B.MENU_PATH " +
+                  "     FROM " + con + "T00_MENU_SITE A " +
+                  "     INNER JOIN [PLUS_MAIN].dbo.TM00_MENU B ON A.MENU_CD = B.MENU_CD AND A.TOP_MENU_CD = B.TOP_MENU_CD AND A.SUB_MENU_CD = B.SUB_MENU_CD " +
+                  "     WHERE A.SITE_CD = " + SITE_CD + " AND A.TOP_MENU_CD = " + TOP_MENU_CD + " AND A.SUB_MENU_CD = " + SUB_MENU_CD + " " +
+                  "     AND A.USING_FLAG = 1 " +                                 
+                  " ORDER BY A.SORT_NO ";
+            }
+            else
+            {
+                sql += "" +
+                  " SELECT A.MENU_CD, A.TOP_MENU_CD, A.SUB_MENU_CD, A.MENU_NM, A.MEMO, A.MENU_PATH " +
+                  " FROM " +
+                  " ( " +
+                  "     SELECT A.MENU_CD, A.TOP_MENU_CD, A.SUB_MENU_CD, A.MENU_NM, A.MEMO, A.SORT_NO, B.MENU_PATH " +
+                  "     FROM " + con + "T00_MENU_SITE A " +
+                  "     INNER JOIN [PLUS_MAIN].dbo.TM00_MENU B ON A.MENU_CD = B.MENU_CD AND A.TOP_MENU_CD = B.TOP_MENU_CD AND A.SUB_MENU_CD = B.SUB_MENU_CD " +
+                  "     WHERE A.SITE_CD = " + SITE_CD + " AND A.TOP_MENU_CD = " + TOP_MENU_CD + " AND A.SUB_MENU_CD = " + SUB_MENU_CD + " " +
+                  "     AND A.USING_FLAG = 1 " +
+                  " ) A " +
+                  " INNER JOIN " +
+                  " ( " +
+                  "     SELECT MENU_CD " +
+                  "     FROM " + con + "T00_MENU_SETAUTH_SITE " +
+                  "     WHERE SITE_CD = " + SITE_CD + " " +
+                  "     AND AUTH_CD = '" + AUTH_CD + "' " +
+                  "     AND VIEW_FLAG = 1 " +
+                  " ) B ON A.MENU_CD = B.MENU_CD " +
+                  " ORDER BY A.SORT_NO ";
+            }
 
             DataSet ds = null;
 

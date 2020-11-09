@@ -293,7 +293,7 @@ namespace EldigmPlusApp.SubForm.MainHome
 
 
 
-                            reCode2 = wSvc.sSiteSubMenu2(AppInfo.SsDbNm, AppInfo.SsSiteCd, pTopMenuCd, subMenuCd, out getData2, out reMsg2);
+                            reCode2 = wSvc.sSiteSubMenu2(AppInfo.SsDbNm, AppInfo.SsSiteCd, pTopMenuCd, subMenuCd, AppInfo.SsLabAuth,out getData2, out reMsg2);
 
                             if (reCode2 == "Y")
                             {

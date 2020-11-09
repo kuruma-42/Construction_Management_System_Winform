@@ -111,7 +111,7 @@ namespace EldigmPlusApp.SubForm.Sys.MemberSite
                 root.Tag = "";
                 root.Text = wRM.GetString("wTotal");
 
-                reCode = wSvc.sMember_UsingFlag("1", out getData, out reMsg);
+                reCode = wSvc.sMember_UsingFlag("", out getData, out reMsg);
                 if (reCode == "Y")
                 {
                     if (getData != null && getData.Length > 0)
@@ -506,8 +506,8 @@ namespace EldigmPlusApp.SubForm.Sys.MemberSite
                 row.HeaderCell.Value = String.Format("{0}", row.Index + 1);
 
             dgv.AutoResizeRowHeadersWidth(DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders);
-        }                      
+        }
 
-               
+       
     }
 }

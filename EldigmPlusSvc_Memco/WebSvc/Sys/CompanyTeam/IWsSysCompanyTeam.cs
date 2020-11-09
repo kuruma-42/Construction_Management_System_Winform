@@ -64,8 +64,8 @@ namespace EldigmPlusSvc_Memco.WebSvc.Sys.CompanyTeam
         [OperationContract]
         string mTeamMemco(string pSiteCd, string pTeamCd, string pTeamNm, string pUsingFalg, string pSortNo, string pMemo, out string reMsg, out string reData);
 
-        [OperationContract]
-        string aTeamPro(string pDbNm, string[] param, out string reMsg, out string reData);
+        //[OperationContract]
+        //string aTeamPro(string pDbNm, string[] param, out string reMsg, out string reData);
 
 
 

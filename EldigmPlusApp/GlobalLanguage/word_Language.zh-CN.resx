@@ -309,4 +309,40 @@
   <data name="wWorker" xml:space="preserve">
     <value>工人</value>
   </data>
+  <data name="wBirthDate" xml:space="preserve">
+    <value>出生日期</value>
+  </data>
+  <data name="wBlock" xml:space="preserve">
+    <value>地区</value>
+  </data>
+  <data name="wCamera" xml:space="preserve">
+    <value>相机</value>
+  </data>
+  <data name="wJoinCom" xml:space="preserve">
+    <value>入职日期</value>
+  </data>
+  <data name="wClose" xml:space="preserve">
+    <value>关闭</value>
+  </data>
+  <data name="wAttendance" xml:space="preserve">
+    <value>上班</value>
+  </data>
+  <data name="wGetOff" xml:space="preserve">
+    <value>wGetOff</value>
+  </data>
+  <data name="wPicture" xml:space="preserve">
+    <value>照片</value>
+  </data>
+  <data name="wNotAttendance" xml:space="preserve">
+    <value>未上班</value>
+  </data>
+  <data name="wRegistration" xml:space="preserve">
+    <value>注册</value>
+  </data>
+  <data name="wUser" xml:space="preserve">
+    <value>使用者</value>
+  </data>
+  <data name="wContent" xml:space="preserve">
+    <value>内容</value>
+  </data>
 </root>

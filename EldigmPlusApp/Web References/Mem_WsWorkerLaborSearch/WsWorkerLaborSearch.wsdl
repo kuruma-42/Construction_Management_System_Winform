@@ -5,6 +5,7 @@
       <xsd:import schemaLocation="http://localhost:49501/WebSvc/Worker/Labor/WsWorkerLaborSearch.svc?xsd=xsd0" namespace="http://tempuri.org/" />
       <xsd:import schemaLocation="http://localhost:49501/WebSvc/Worker/Labor/WsWorkerLaborSearch.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
       <xsd:import schemaLocation="http://localhost:49501/WebSvc/Worker/Labor/WsWorkerLaborSearch.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/EldigmPlusSvc_Memco.WebSvc.Sys.Worker" />
+      <xsd:import schemaLocation="http://localhost:49501/WebSvc/Worker/Labor/WsWorkerLaborSearch.svc?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
     </xsd:schema>
   </wsdl:types>
   <wsdl:message name="IWsWorkerLaborSearch_sLaborCompanyList_InputMessage">
@@ -43,6 +44,84 @@
   <wsdl:message name="IWsWorkerLaborSearch_sLaborSearch_OutputMessage">
     <wsdl:part name="parameters" element="tns:sLaborSearchResponse" />
   </wsdl:message>
+  <wsdl:message name="IWsWorkerLaborSearch_sLabAprvFlag_InputMessage">
+    <wsdl:part name="parameters" element="tns:sLabAprvFlag" />
+  </wsdl:message>
+  <wsdl:message name="IWsWorkerLaborSearch_sLabAprvFlag_OutputMessage">
+    <wsdl:part name="parameters" element="tns:sLabAprvFlagResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWsWorkerLaborSearch_sLabAuth_InputMessage">
+    <wsdl:part name="parameters" element="tns:sLabAuth" />
+  </wsdl:message>
+  <wsdl:message name="IWsWorkerLaborSearch_sLabAuth_OutputMessage">
+    <wsdl:part name="parameters" element="tns:sLabAuthResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWsWorkerLaborSearch_exLabMember_InputMessage">
+    <wsdl:part name="parameters" element="tns:exLabMember" />
+  </wsdl:message>
+  <wsdl:message name="IWsWorkerLaborSearch_exLabMember_OutputMessage">
+    <wsdl:part name="parameters" element="tns:exLabMemberResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWsWorkerLaborSearch_exLabMain_InputMessage">
+    <wsdl:part name="parameters" element="tns:exLabMain" />
+  </wsdl:message>
+  <wsdl:message name="IWsWorkerLaborSearch_exLabMain_OutputMessage">
+    <wsdl:part name="parameters" element="tns:exLabMainResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWsWorkerLaborSearch_sLaborAddInfoCcode_InputMessage">
+    <wsdl:part name="parameters" element="tns:sLaborAddInfoCcode" />
+  </wsdl:message>
+  <wsdl:message name="IWsWorkerLaborSearch_sLaborAddInfoCcode_OutputMessage">
+    <wsdl:part name="parameters" element="tns:sLaborAddInfoCcodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWsWorkerLaborSearch_sLaborAddInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:sLaborAddInfo" />
+  </wsdl:message>
+  <wsdl:message name="IWsWorkerLaborSearch_sLaborAddInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:sLaborAddInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWsWorkerLaborSearch_sLaborAddInfoModify_InputMessage">
+    <wsdl:part name="parameters" element="tns:sLaborAddInfoModify" />
+  </wsdl:message>
+  <wsdl:message name="IWsWorkerLaborSearch_sLaborAddInfoModify_OutputMessage">
+    <wsdl:part name="parameters" element="tns:sLaborAddInfoModifyResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWsWorkerLaborSearch_sLaborAddInfoSub_InputMessage">
+    <wsdl:part name="parameters" element="tns:sLaborAddInfoSub" />
+  </wsdl:message>
+  <wsdl:message name="IWsWorkerLaborSearch_sLaborAddInfoSub_OutputMessage">
+    <wsdl:part name="parameters" element="tns:sLaborAddInfoSubResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWsWorkerLaborSearch_aLaborPro_InputMessage">
+    <wsdl:part name="parameters" element="tns:aLaborPro" />
+  </wsdl:message>
+  <wsdl:message name="IWsWorkerLaborSearch_aLaborPro_OutputMessage">
+    <wsdl:part name="parameters" element="tns:aLaborProResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWsWorkerLaborSearch_mLaborPro_InputMessage">
+    <wsdl:part name="parameters" element="tns:mLaborPro" />
+  </wsdl:message>
+  <wsdl:message name="IWsWorkerLaborSearch_mLaborPro_OutputMessage">
+    <wsdl:part name="parameters" element="tns:mLaborProResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWsWorkerLaborSearch_aLaborLabTcodeSite_InputMessage">
+    <wsdl:part name="parameters" element="tns:aLaborLabTcodeSite" />
+  </wsdl:message>
+  <wsdl:message name="IWsWorkerLaborSearch_aLaborLabTcodeSite_OutputMessage">
+    <wsdl:part name="parameters" element="tns:aLaborLabTcodeSiteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWsWorkerLaborSearch_mLaborLabTcodeSite_InputMessage">
+    <wsdl:part name="parameters" element="tns:mLaborLabTcodeSite" />
+  </wsdl:message>
+  <wsdl:message name="IWsWorkerLaborSearch_mLaborLabTcodeSite_OutputMessage">
+    <wsdl:part name="parameters" element="tns:mLaborLabTcodeSiteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWsWorkerLaborSearch_aLaborLabTcodeSiteLog_InputMessage">
+    <wsdl:part name="parameters" element="tns:aLaborLabTcodeSiteLog" />
+  </wsdl:message>
+  <wsdl:message name="IWsWorkerLaborSearch_aLaborLabTcodeSiteLog_OutputMessage">
+    <wsdl:part name="parameters" element="tns:aLaborLabTcodeSiteLogResponse" />
+  </wsdl:message>
   <wsdl:portType name="IWsWorkerLaborSearch">
     <wsdl:operation name="sLaborCompanyList">
       <wsdl:input wsaw:Action="http://tempuri.org/IWsWorkerLaborSearch/sLaborCompanyList" message="tns:IWsWorkerLaborSearch_sLaborCompanyList_InputMessage" />
@@ -67,6 +146,58 @@
     <wsdl:operation name="sLaborSearch">
       <wsdl:input wsaw:Action="http://tempuri.org/IWsWorkerLaborSearch/sLaborSearch" message="tns:IWsWorkerLaborSearch_sLaborSearch_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IWsWorkerLaborSearch/sLaborSearchResponse" message="tns:IWsWorkerLaborSearch_sLaborSearch_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="sLabAprvFlag">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWsWorkerLaborSearch/sLabAprvFlag" message="tns:IWsWorkerLaborSearch_sLabAprvFlag_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWsWorkerLaborSearch/sLabAprvFlagResponse" message="tns:IWsWorkerLaborSearch_sLabAprvFlag_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="sLabAuth">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWsWorkerLaborSearch/sLabAuth" message="tns:IWsWorkerLaborSearch_sLabAuth_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWsWorkerLaborSearch/sLabAuthResponse" message="tns:IWsWorkerLaborSearch_sLabAuth_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="exLabMember">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWsWorkerLaborSearch/exLabMember" message="tns:IWsWorkerLaborSearch_exLabMember_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWsWorkerLaborSearch/exLabMemberResponse" message="tns:IWsWorkerLaborSearch_exLabMember_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="exLabMain">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWsWorkerLaborSearch/exLabMain" message="tns:IWsWorkerLaborSearch_exLabMain_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWsWorkerLaborSearch/exLabMainResponse" message="tns:IWsWorkerLaborSearch_exLabMain_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="sLaborAddInfoCcode">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWsWorkerLaborSearch/sLaborAddInfoCcode" message="tns:IWsWorkerLaborSearch_sLaborAddInfoCcode_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWsWorkerLaborSearch/sLaborAddInfoCcodeResponse" message="tns:IWsWorkerLaborSearch_sLaborAddInfoCcode_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="sLaborAddInfo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWsWorkerLaborSearch/sLaborAddInfo" message="tns:IWsWorkerLaborSearch_sLaborAddInfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWsWorkerLaborSearch/sLaborAddInfoResponse" message="tns:IWsWorkerLaborSearch_sLaborAddInfo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="sLaborAddInfoModify">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWsWorkerLaborSearch/sLaborAddInfoModify" message="tns:IWsWorkerLaborSearch_sLaborAddInfoModify_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWsWorkerLaborSearch/sLaborAddInfoModifyResponse" message="tns:IWsWorkerLaborSearch_sLaborAddInfoModify_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="sLaborAddInfoSub">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWsWorkerLaborSearch/sLaborAddInfoSub" message="tns:IWsWorkerLaborSearch_sLaborAddInfoSub_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWsWorkerLaborSearch/sLaborAddInfoSubResponse" message="tns:IWsWorkerLaborSearch_sLaborAddInfoSub_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="aLaborPro">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWsWorkerLaborSearch/aLaborPro" message="tns:IWsWorkerLaborSearch_aLaborPro_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWsWorkerLaborSearch/aLaborProResponse" message="tns:IWsWorkerLaborSearch_aLaborPro_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="mLaborPro">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWsWorkerLaborSearch/mLaborPro" message="tns:IWsWorkerLaborSearch_mLaborPro_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWsWorkerLaborSearch/mLaborProResponse" message="tns:IWsWorkerLaborSearch_mLaborPro_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="aLaborLabTcodeSite">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWsWorkerLaborSearch/aLaborLabTcodeSite" message="tns:IWsWorkerLaborSearch_aLaborLabTcodeSite_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWsWorkerLaborSearch/aLaborLabTcodeSiteResponse" message="tns:IWsWorkerLaborSearch_aLaborLabTcodeSite_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="mLaborLabTcodeSite">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWsWorkerLaborSearch/mLaborLabTcodeSite" message="tns:IWsWorkerLaborSearch_mLaborLabTcodeSite_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWsWorkerLaborSearch/mLaborLabTcodeSiteResponse" message="tns:IWsWorkerLaborSearch_mLaborLabTcodeSite_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="aLaborLabTcodeSiteLog">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWsWorkerLaborSearch/aLaborLabTcodeSiteLog" message="tns:IWsWorkerLaborSearch_aLaborLabTcodeSiteLog_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWsWorkerLaborSearch/aLaborLabTcodeSiteLogResponse" message="tns:IWsWorkerLaborSearch_aLaborLabTcodeSiteLog_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IWsWorkerLaborSearch" type="tns:IWsWorkerLaborSearch">
@@ -118,6 +249,123 @@
     </wsdl:operation>
     <wsdl:operation name="sLaborSearch">
       <soap:operation soapAction="http://tempuri.org/IWsWorkerLaborSearch/sLaborSearch" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="sLabAprvFlag">
+      <soap:operation soapAction="http://tempuri.org/IWsWorkerLaborSearch/sLabAprvFlag" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="sLabAuth">
+      <soap:operation soapAction="http://tempuri.org/IWsWorkerLaborSearch/sLabAuth" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="exLabMember">
+      <soap:operation soapAction="http://tempuri.org/IWsWorkerLaborSearch/exLabMember" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="exLabMain">
+      <soap:operation soapAction="http://tempuri.org/IWsWorkerLaborSearch/exLabMain" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="sLaborAddInfoCcode">
+      <soap:operation soapAction="http://tempuri.org/IWsWorkerLaborSearch/sLaborAddInfoCcode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="sLaborAddInfo">
+      <soap:operation soapAction="http://tempuri.org/IWsWorkerLaborSearch/sLaborAddInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="sLaborAddInfoModify">
+      <soap:operation soapAction="http://tempuri.org/IWsWorkerLaborSearch/sLaborAddInfoModify" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="sLaborAddInfoSub">
+      <soap:operation soapAction="http://tempuri.org/IWsWorkerLaborSearch/sLaborAddInfoSub" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="aLaborPro">
+      <soap:operation soapAction="http://tempuri.org/IWsWorkerLaborSearch/aLaborPro" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mLaborPro">
+      <soap:operation soapAction="http://tempuri.org/IWsWorkerLaborSearch/mLaborPro" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="aLaborLabTcodeSite">
+      <soap:operation soapAction="http://tempuri.org/IWsWorkerLaborSearch/aLaborLabTcodeSite" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mLaborLabTcodeSite">
+      <soap:operation soapAction="http://tempuri.org/IWsWorkerLaborSearch/mLaborLabTcodeSite" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="aLaborLabTcodeSiteLog">
+      <soap:operation soapAction="http://tempuri.org/IWsWorkerLaborSearch/aLaborLabTcodeSiteLog" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

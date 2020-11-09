@@ -339,7 +339,7 @@ namespace EldigmPlusSvc_Memco.WebSvc.Sys.CompanyTeam
                 int reCnt = bizSys.mCompanyMemcoSite(pSiteCd, pCoCd, pStartDate, pEndDate, pUsingFlag, pSortNo, pMemo);
                 //int reCntLog = bizSys.aSysCodeLog(pScode, pScodeNm, pUsingFlag, pSortNo, pMemo, pInputId);
 
-                if (reCnt > 0)
+                if (reCnt >= 0)
                 {
                     reMsg = "[저장 성공]";
                     reCode = "Y";

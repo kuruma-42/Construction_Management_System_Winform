@@ -16,7 +16,7 @@ namespace EldigmPlusApp_UserControl
         {
             InitializeComponent();
         }
-
+                
         [Description("Search 클릭 시"), Category("UserControlProperty")]
         public event EventHandler btnSearchClick;
 
@@ -24,5 +24,7 @@ namespace EldigmPlusApp_UserControl
         {
             this.btnSearchClick?.Invoke(this, e);
         }
+
+      
     }
 }

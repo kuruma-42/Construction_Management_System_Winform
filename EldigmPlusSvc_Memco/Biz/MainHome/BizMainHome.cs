@@ -97,7 +97,7 @@ namespace EldigmPlusSvc_Memco.Biz.MainHome
             return ds;
         }
 
-        public DataSet sSiteSubMenu2(string pDbNm, string pSiteCd, string pTopMenuCd, string pSubMenuCd)
+        public DataSet sSiteSubMenu2(string pDbNm, string pSiteCd, string pTopMenuCd, string pSubMenuCd, string pAuthCd)
         {
             DataSet ds = null;
 
@@ -109,7 +109,7 @@ namespace EldigmPlusSvc_Memco.Biz.MainHome
                 string dbCon_USER = WebConfigurationManager.ConnectionStrings["ConnectionStr_USER"].ConnectionString;
 
                 db = new DbMainHome(dbCon_IP, dbCon_DB, dbCon_USER);
-                ds = db.sSiteSubMenu2(pDbNm, pSiteCd, pTopMenuCd, pSubMenuCd);
+                ds = db.sSiteSubMenu2(pDbNm, pSiteCd, pTopMenuCd, pSubMenuCd, pAuthCd);
             }
             catch (Exception ex)
             {

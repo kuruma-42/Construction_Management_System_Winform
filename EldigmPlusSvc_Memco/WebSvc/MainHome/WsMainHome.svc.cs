@@ -138,7 +138,7 @@ namespace EldigmPlusSvc_Memco.WebSvc.MainHome
             return reCode;
         }
 
-        public string sSiteSubMenu2(string pDbNm, string pSiteCd, string pTopMenuCd, string pSubMenuCd, out List<DataSubMenu2> reList, out string reMsg)
+        public string sSiteSubMenu2(string pDbNm, string pSiteCd, string pTopMenuCd, string pSubMenuCd, string pAuthCd, out List<DataSubMenu2> reList, out string reMsg)
         {
             string reCode = "N";
 
@@ -150,7 +150,7 @@ namespace EldigmPlusSvc_Memco.WebSvc.MainHome
 
                 try
                 {
-                    ds = bizHome.sSiteSubMenu2(pDbNm, pSiteCd, pTopMenuCd, pSubMenuCd);
+                    ds = bizHome.sSiteSubMenu2(pDbNm, pSiteCd, pTopMenuCd, pSubMenuCd, pAuthCd);
 
                     reMsg = "[검색 성공]";
                     reCode = "Y";

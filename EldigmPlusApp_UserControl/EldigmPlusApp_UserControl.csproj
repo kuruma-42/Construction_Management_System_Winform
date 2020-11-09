@@ -53,6 +53,12 @@
     <Compile Include="LabRegister.Designer.cs">
       <DependentUpon>LabRegister.cs</DependentUpon>
     </Compile>
+    <Compile Include="LabRegister2.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="LabRegister2.Designer.cs">
+      <DependentUpon>LabRegister2.cs</DependentUpon>
+    </Compile>
     <Compile Include="SearchCondition1.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -71,6 +77,9 @@
   <ItemGroup>
     <EmbeddedResource Include="LabRegister.resx">
       <DependentUpon>LabRegister.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LabRegister2.resx">
+      <DependentUpon>LabRegister2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SearchCondition1.resx">
       <DependentUpon>SearchCondition1.cs</DependentUpon>

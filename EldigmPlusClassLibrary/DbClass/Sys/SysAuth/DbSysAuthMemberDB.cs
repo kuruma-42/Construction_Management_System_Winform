@@ -71,13 +71,14 @@ namespace EldigmPlusClassLibrary.DbClass.Sys.SysAuth
         //SELECT
         public DataSet sSysAuthMemberDB(string DBNM, string USING_FLAG)
         {
+            string con = "[PLUS-" + DBNM + "].dbo.";
             string sql = "" +
                " SELECT A.AUTH_CD, A.AUTH_NM, ISNULL(B.MYBLOCK_FLAG, 0) MYBLOCK_FLAG, ISNULL(B.MYCON_FLAG, 0) MYCON_FLAG, ISNULL(B.MYCOM_FLAG, 0) MYCOM_FLAG " +
                " , ISNULL(B.MYTEAM_FLAG, 0) MYTEAM_FLAG, ISNULL(B.USING_FLAG, 0) USING_FLAG " +
                " , CASE WHEN B.AUTH_LEVEL IS NOT NULL THEN B.AUTH_LEVEL ELSE A.AUTH_LEVEL END AUTH_LEVEL " +
                " , ISNULL(B.MEMO, '') MEMO " +
                " FROM [PLUS_MAIN].dbo.TM00_CODE_AUTH A " +
-               " LEFT OUTER JOIN [PLUS-" + DBNM + "].dbo.T00_CODE_AUTH B ON A.AUTH_CD = B.AUTH_CD ";
+               " LEFT OUTER JOIN " + con + "T00_CODE_AUTH B ON A.AUTH_CD = B.AUTH_CD ";
             if (USING_FLAG != "")
             {
                 sql += " WHERE B.USING_FLAG = '" + USING_FLAG + "' ";
@@ -96,8 +97,9 @@ namespace EldigmPlusClassLibrary.DbClass.Sys.SysAuth
         //수정
         public int mSysAuthMemberDB(string DBNM, string AUTH_CD, string AUTH_NM, string MYBLOCK_FLAG, string MYCON_FLAG, string MYCOM_FLAG, string MYTEAM_FLAG, string USING_FLAG, string MEMO)
         {
+            string con = "[PLUS-" + DBNM + "].dbo.";
             string sql = "" +
-                " UPDATE [PLUS-" + DBNM + "].dbo.T00_CODE_AUTH SET MYBLOCK_FLAG = " + MYBLOCK_FLAG + ", MYCON_FLAG = " + MYCON_FLAG + ", MYCOM_FLAG = " + MYCOM_FLAG + ", MYTEAM_FLAG = " + MYTEAM_FLAG + ", USING_FLAG = " + USING_FLAG + ", MEMO = '" + MEMO + "' " +
+                " UPDATE " + con + "T00_CODE_AUTH SET MYBLOCK_FLAG = " + MYBLOCK_FLAG + ", MYCON_FLAG = " + MYCON_FLAG + ", MYCOM_FLAG = " + MYCOM_FLAG + ", MYTEAM_FLAG = " + MYTEAM_FLAG + ", USING_FLAG = " + USING_FLAG + ", MEMO = '" + MEMO + "' " +
                 " WHERE AUTH_CD = '" + AUTH_CD + "' ";
 
             int reCnt = 0;
@@ -141,8 +143,9 @@ namespace EldigmPlusClassLibrary.DbClass.Sys.SysAuth
         //MEMBER DB INSERT
         public int aSysAuthMemberDB(string DBNM, string AUTH_CD, string AUTH_NM, string MYBLOCK_FLAG, string MYCON_FLAG, string MYCOM_FLAG, string MYTEAM_FLAG, string USING_FLAG, string AUTH_LEVEL, string MEMO, string INPUT_ID)
         {
+            string con = "[PLUS-" + DBNM + "].dbo.";
             string sql = "" +
-                " INSERT INTO [PLUS-" + DBNM + "].dbo.T00_CODE_AUTH (AUTH_CD, AUTH_NM, MYBLOCK_FLAG, MYCON_FLAG, MYCOM_FLAG, MYTEAM_FLAG, USING_FLAG, AUTH_LEVEL, MEMO, INPUT_ID, INPUT_DT) " +
+                " INSERT INTO " + con + "T00_CODE_AUTH (AUTH_CD, AUTH_NM, MYBLOCK_FLAG, MYCON_FLAG, MYCOM_FLAG, MYTEAM_FLAG, USING_FLAG, AUTH_LEVEL, MEMO, INPUT_ID, INPUT_DT) " +
                 " VALUES ('" + AUTH_CD + "', '" + AUTH_NM + "', " + MYBLOCK_FLAG + ", " + MYCON_FLAG + ", " + MYCOM_FLAG + ", " + MYTEAM_FLAG + ", " + USING_FLAG + ", " + AUTH_LEVEL + ", '" + MEMO + "', " + INPUT_ID + ", GETDATE()) ";
 
             int reCnt = 0;

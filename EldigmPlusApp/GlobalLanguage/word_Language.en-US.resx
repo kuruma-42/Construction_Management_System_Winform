@@ -309,4 +309,40 @@
   <data name="wWorker" xml:space="preserve">
     <value>Worker</value>
   </data>
+  <data name="wClose" xml:space="preserve">
+    <value>Close</value>
+  </data>
+  <data name="wAttendance" xml:space="preserve">
+    <value>Attendance</value>
+  </data>
+  <data name="wGetOff" xml:space="preserve">
+    <value>GetOff</value>
+  </data>
+  <data name="wPicture" xml:space="preserve">
+    <value>Picture</value>
+  </data>
+  <data name="wNotAttendance" xml:space="preserve">
+    <value>NotAttendance</value>
+  </data>
+  <data name="wBirthDate" xml:space="preserve">
+    <value>BirthDate</value>
+  </data>
+  <data name="wBlock" xml:space="preserve">
+    <value>Block</value>
+  </data>
+  <data name="wCamera" xml:space="preserve">
+    <value>Camera</value>
+  </data>
+  <data name="wJoinCom" xml:space="preserve">
+    <value>date of entry</value>
+  </data>
+  <data name="wRegistration" xml:space="preserve">
+    <value>Registration</value>
+  </data>
+  <data name="wUser" xml:space="preserve">
+    <value>User</value>
+  </data>
+  <data name="wContent" xml:space="preserve">
+    <value>Content</value>
+  </data>
 </root>

@@ -309,4 +309,40 @@
   <data name="wWorker" xml:space="preserve">
     <value>근로자</value>
   </data>
+  <data name="wClose" xml:space="preserve">
+    <value>닫기</value>
+  </data>
+  <data name="wAttendance" xml:space="preserve">
+    <value>출근</value>
+  </data>
+  <data name="wGetOff" xml:space="preserve">
+    <value>퇴근</value>
+  </data>
+  <data name="wPicture" xml:space="preserve">
+    <value>사진</value>
+  </data>
+  <data name="wNotAttendance" xml:space="preserve">
+    <value>미출근</value>
+  </data>
+  <data name="wBirthDate" xml:space="preserve">
+    <value>생년월일</value>
+  </data>
+  <data name="wBlock" xml:space="preserve">
+    <value>구역</value>
+  </data>
+  <data name="wCamera" xml:space="preserve">
+    <value>카메라</value>
+  </data>
+  <data name="wJoinCom" xml:space="preserve">
+    <value>입사일</value>
+  </data>
+  <data name="wRegistration" xml:space="preserve">
+    <value>등록</value>
+  </data>
+  <data name="wContent" xml:space="preserve">
+    <value>내용</value>
+  </data>
+  <data name="wUser" xml:space="preserve">
+    <value>사용자</value>
+  </data>
 </root>

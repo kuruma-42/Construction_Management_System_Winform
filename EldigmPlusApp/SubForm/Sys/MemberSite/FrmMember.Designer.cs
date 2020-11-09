@@ -36,18 +36,18 @@
             this.dgv2_BTNADD = new System.Windows.Forms.DataGridViewButtonColumn();
             this.panel2 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.dgv1_CHK = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.dgv1_MEMCO_CD = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgv1_MEMCO_NM = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgv1_USING_FLAG = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.dgv1_SORT_NO = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgv1_MEMO = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.splitContainer4 = new System.Windows.Forms.SplitContainer();
             this.treeView1 = new System.Windows.Forms.TreeView();
             this.splitContainer3 = new System.Windows.Forms.SplitContainer();
             this.btnSave = new System.Windows.Forms.Button();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.dgv1_CHK = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.dgv1_MEMCO_CD = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgv1_MEMCO_NM = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgv1_USING_FLAG = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.dgv1_SORT_NO = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgv1_MEMO = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -149,60 +149,8 @@
             this.dataGridView1.RowTemplate.Height = 23;
             this.dataGridView1.Size = new System.Drawing.Size(853, 475);
             this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.CellBeginEdit += new System.Windows.Forms.DataGridViewCellCancelEventHandler(this.dataGridView1_CellBeginEdit);
             this.dataGridView1.ColumnHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView1_ColumnHeaderMouseClick);
-            // 
-            // dgv1_CHK
-            // 
-            this.dgv1_CHK.FalseValue = "0";
-            this.dgv1_CHK.HeaderText = "CHK";
-            this.dgv1_CHK.IndeterminateValue = "0";
-            this.dgv1_CHK.MinimumWidth = 60;
-            this.dgv1_CHK.Name = "dgv1_CHK";
-            this.dgv1_CHK.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgv1_CHK.TrueValue = "1";
-            this.dgv1_CHK.Width = 60;
-            // 
-            // dgv1_MEMCO_CD
-            // 
-            this.dgv1_MEMCO_CD.HeaderText = "MEMCO_CD";
-            this.dgv1_MEMCO_CD.MaxInputLength = 100;
-            this.dgv1_MEMCO_CD.MinimumWidth = 100;
-            this.dgv1_MEMCO_CD.Name = "dgv1_MEMCO_CD";
-            this.dgv1_MEMCO_CD.ReadOnly = true;
-            // 
-            // dgv1_MEMCO_NM
-            // 
-            this.dgv1_MEMCO_NM.HeaderText = "MEMCO_NM";
-            this.dgv1_MEMCO_NM.MaxInputLength = 100;
-            this.dgv1_MEMCO_NM.MinimumWidth = 150;
-            this.dgv1_MEMCO_NM.Name = "dgv1_MEMCO_NM";
-            this.dgv1_MEMCO_NM.Width = 150;
-            // 
-            // dgv1_USING_FLAG
-            // 
-            this.dgv1_USING_FLAG.FalseValue = "0";
-            this.dgv1_USING_FLAG.HeaderText = "USING_FLAG";
-            this.dgv1_USING_FLAG.IndeterminateValue = "0";
-            this.dgv1_USING_FLAG.MinimumWidth = 60;
-            this.dgv1_USING_FLAG.Name = "dgv1_USING_FLAG";
-            this.dgv1_USING_FLAG.TrueValue = "1";
-            this.dgv1_USING_FLAG.Width = 60;
-            // 
-            // dgv1_SORT_NO
-            // 
-            this.dgv1_SORT_NO.HeaderText = "SORT_NO";
-            this.dgv1_SORT_NO.MinimumWidth = 80;
-            this.dgv1_SORT_NO.Name = "dgv1_SORT_NO";
-            this.dgv1_SORT_NO.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv1_SORT_NO.Width = 80;
-            // 
-            // dgv1_MEMO
-            // 
-            this.dgv1_MEMO.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dgv1_MEMO.HeaderText = "MEMO";
-            this.dgv1_MEMO.MaxInputLength = 100;
-            this.dgv1_MEMO.MinimumWidth = 100;
-            this.dgv1_MEMO.Name = "dgv1_MEMO";
             // 
             // splitContainer4
             // 
@@ -296,6 +244,59 @@
             this.splitContainer1.SplitterDistance = 40;
             this.splitContainer1.TabIndex = 4;
             // 
+            // dgv1_CHK
+            // 
+            this.dgv1_CHK.FalseValue = "0";
+            this.dgv1_CHK.HeaderText = "CHK";
+            this.dgv1_CHK.IndeterminateValue = "0";
+            this.dgv1_CHK.MinimumWidth = 60;
+            this.dgv1_CHK.Name = "dgv1_CHK";
+            this.dgv1_CHK.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgv1_CHK.TrueValue = "1";
+            this.dgv1_CHK.Width = 60;
+            // 
+            // dgv1_MEMCO_CD
+            // 
+            this.dgv1_MEMCO_CD.HeaderText = "MEMCO_CD";
+            this.dgv1_MEMCO_CD.MaxInputLength = 100;
+            this.dgv1_MEMCO_CD.MinimumWidth = 100;
+            this.dgv1_MEMCO_CD.Name = "dgv1_MEMCO_CD";
+            this.dgv1_MEMCO_CD.ReadOnly = true;
+            // 
+            // dgv1_MEMCO_NM
+            // 
+            this.dgv1_MEMCO_NM.HeaderText = "MEMCO_NM";
+            this.dgv1_MEMCO_NM.MaxInputLength = 100;
+            this.dgv1_MEMCO_NM.MinimumWidth = 250;
+            this.dgv1_MEMCO_NM.Name = "dgv1_MEMCO_NM";
+            this.dgv1_MEMCO_NM.Width = 250;
+            // 
+            // dgv1_USING_FLAG
+            // 
+            this.dgv1_USING_FLAG.FalseValue = "0";
+            this.dgv1_USING_FLAG.HeaderText = "USING_FLAG";
+            this.dgv1_USING_FLAG.IndeterminateValue = "0";
+            this.dgv1_USING_FLAG.MinimumWidth = 60;
+            this.dgv1_USING_FLAG.Name = "dgv1_USING_FLAG";
+            this.dgv1_USING_FLAG.TrueValue = "1";
+            this.dgv1_USING_FLAG.Width = 60;
+            // 
+            // dgv1_SORT_NO
+            // 
+            this.dgv1_SORT_NO.HeaderText = "SORT_NO";
+            this.dgv1_SORT_NO.MinimumWidth = 80;
+            this.dgv1_SORT_NO.Name = "dgv1_SORT_NO";
+            this.dgv1_SORT_NO.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv1_SORT_NO.Width = 80;
+            // 
+            // dgv1_MEMO
+            // 
+            this.dgv1_MEMO.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dgv1_MEMO.HeaderText = "MEMO";
+            this.dgv1_MEMO.MaxInputLength = 100;
+            this.dgv1_MEMO.MinimumWidth = 100;
+            this.dgv1_MEMO.Name = "dgv1_MEMO";
+            // 
             // FrmMember
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
@@ -340,15 +341,15 @@
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.SplitContainer splitContainer2;
         private System.Windows.Forms.SplitContainer splitContainer1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgv2_MEMCO_NM;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgv2_SORT_NO;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgv2_MEMO;
+        private System.Windows.Forms.DataGridViewButtonColumn dgv2_BTNADD;
         private System.Windows.Forms.DataGridViewCheckBoxColumn dgv1_CHK;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgv1_MEMCO_CD;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgv1_MEMCO_NM;
         private System.Windows.Forms.DataGridViewCheckBoxColumn dgv1_USING_FLAG;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgv1_SORT_NO;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgv1_MEMO;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgv2_MEMCO_NM;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgv2_SORT_NO;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgv2_MEMO;
-        private System.Windows.Forms.DataGridViewButtonColumn dgv2_BTNADD;
     }
 }

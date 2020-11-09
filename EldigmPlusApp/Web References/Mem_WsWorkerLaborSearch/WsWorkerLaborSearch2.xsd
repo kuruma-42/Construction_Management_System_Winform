@@ -8,6 +8,7 @@
         <xs:element minOccurs="0" name="pSiteCd" nillable="true" type="xs:string" />
         <xs:element minOccurs="0" name="pAuthCd" nillable="true" type="xs:string" />
         <xs:element minOccurs="0" name="pCoCd" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pLngCom" nillable="true" type="xs:string" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -20,11 +21,91 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
+  <xs:element name="sLaborConstList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="pSiteCd" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pAuthCd" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pCcode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pLngConst" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="sLaborConstListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sLaborConstListResult" nillable="true" type="xs:string" />
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/EldigmPlusSvc_Memco.WebSvc.Sys.Worker" minOccurs="0" name="reList" nillable="true" type="q2:ArrayOfDataComCombo" />
+        <xs:element minOccurs="0" name="reMsg" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="sLaborJobList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="pSiteCd" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pLngJob" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="sLaborJobListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sLaborJobListResult" nillable="true" type="xs:string" />
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/EldigmPlusSvc_Memco.WebSvc.Sys.Worker" minOccurs="0" name="reList" nillable="true" type="q3:ArrayOfDataComCombo" />
+        <xs:element minOccurs="0" name="reMsg" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="sLaborBlockList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="pSiteCd" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pAuthCd" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pCcode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pLngBlock" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="sLaborBlockListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sLaborBlockListResult" nillable="true" type="xs:string" />
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/EldigmPlusSvc_Memco.WebSvc.Sys.Worker" minOccurs="0" name="reList" nillable="true" type="q4:ArrayOfDataComCombo" />
+        <xs:element minOccurs="0" name="reMsg" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="sLaborTeamList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="pSiteCd" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pAuthCd" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pTeamCd" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pCocd" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pLngTeam" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="sLaborTeamListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sLaborTeamListResult" nillable="true" type="xs:string" />
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/EldigmPlusSvc_Memco.WebSvc.Sys.Worker" minOccurs="0" name="reList" nillable="true" type="q5:ArrayOfDataComCombo" />
+        <xs:element minOccurs="0" name="reMsg" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
   <xs:element name="sLaborSearch">
     <xs:complexType>
       <xs:sequence>
         <xs:element minOccurs="0" name="pSiteCd" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pBlockCcd" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pConstCcd" nillable="true" type="xs:string" />
         <xs:element minOccurs="0" name="pCoCd" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pTeamCd" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pSearchCondition" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pSearchTxt" nillable="true" type="xs:string" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -32,123 +113,247 @@
     <xs:complexType>
       <xs:sequence>
         <xs:element minOccurs="0" name="sLaborSearchResult" nillable="true" type="xs:string" />
-        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/EldigmPlusSvc_Memco.WebSvc.Sys.Worker" minOccurs="0" name="reList" nillable="true" type="q2:ArrayOfDataLaborSearch" />
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/EldigmPlusSvc_Memco.WebSvc.Sys.Worker" minOccurs="0" name="reList" nillable="true" type="q6:ArrayOfDataLaborSearch" />
         <xs:element minOccurs="0" name="reMsg" nillable="true" type="xs:string" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="devTypeCmb">
-    <xs:complexType>
-      <xs:sequence />
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="devTypeCmbResponse">
+  <xs:element name="sLabAprvFlag">
     <xs:complexType>
       <xs:sequence>
-        <xs:element minOccurs="0" name="devTypeCmbResult" nillable="true" type="xs:string" />
-        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/EldigmPlusSvc_Memco.WebSvc.Sys.Worker" minOccurs="0" name="reList" nillable="true" type="q3:ArrayOfDataDevCombo" />
-        <xs:element minOccurs="0" name="reMsg" nillable="true" type="xs:string" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="devIOCmb">
-    <xs:complexType>
-      <xs:sequence />
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="devIOCmbResponse">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="devIOCmbResult" nillable="true" type="xs:string" />
-        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/EldigmPlusSvc_Memco.WebSvc.Sys.Worker" minOccurs="0" name="reList" nillable="true" type="q4:ArrayOfDataDevCombo" />
-        <xs:element minOccurs="0" name="reMsg" nillable="true" type="xs:string" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="sDevice">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="pDbNm" nillable="true" type="xs:string" />
         <xs:element minOccurs="0" name="pSiteCd" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pAuthCd" nillable="true" type="xs:string" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="sDeviceResponse">
+  <xs:element name="sLabAprvFlagResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element minOccurs="0" name="sDeviceResult" nillable="true" type="xs:string" />
-        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/EldigmPlusSvc_Memco.WebSvc.Sys.Worker" minOccurs="0" name="reList" nillable="true" type="q5:ArrayOfDataDevice" />
-        <xs:element minOccurs="0" name="reMsg" nillable="true" type="xs:string" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="mDevice">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="pDbNm" nillable="true" type="xs:string" />
-        <xs:element minOccurs="0" name="pSiteCd" nillable="true" type="xs:string" />
-        <xs:element minOccurs="0" name="pDevCd" nillable="true" type="xs:string" />
-        <xs:element minOccurs="0" name="pDeviceId" nillable="true" type="xs:string" />
-        <xs:element minOccurs="0" name="pDevTypeScd" nillable="true" type="xs:string" />
-        <xs:element minOccurs="0" name="pDevIOScd" nillable="true" type="xs:string" />
-        <xs:element minOccurs="0" name="pDevNm" nillable="true" type="xs:string" />
-        <xs:element minOccurs="0" name="pIp" nillable="true" type="xs:string" />
-        <xs:element minOccurs="0" name="pSortNo" nillable="true" type="xs:string" />
-        <xs:element minOccurs="0" name="pUsingFalg" nillable="true" type="xs:string" />
-        <xs:element minOccurs="0" name="pMemo" nillable="true" type="xs:string" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="mDeviceResponse">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="mDeviceResult" nillable="true" type="xs:string" />
-        <xs:element minOccurs="0" name="reMsg" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="sLabAprvFlagResult" nillable="true" type="xs:string" />
         <xs:element minOccurs="0" name="reData" nillable="true" type="xs:string" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="aDevicePro">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="pDbNm" nillable="true" type="xs:string" />
-        <xs:element xmlns:q6="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="param" nillable="true" type="q6:ArrayOfstring" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="aDeviceProResponse">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="aDeviceProResult" nillable="true" type="xs:string" />
         <xs:element minOccurs="0" name="reMsg" nillable="true" type="xs:string" />
-        <xs:element minOccurs="0" name="reData" nillable="true" type="xs:string" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="logDevice">
+  <xs:element name="sLabAuth">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="pSiteCd" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="sLabAuthResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sLabAuthResult" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="reData" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="reMsg" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="exLabMember">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="pSiteCd" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pLabNm" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pMobileNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pBirthDate" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="exLabMemberResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="exLabMemberResult" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="reData" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="reMsg" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="exLabMain">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="pLabNm" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pMobileNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pBirthDate" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="exLabMainResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="exLabMainResult" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="reData" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="reMsg" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="sLaborAddInfoCcode">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="pDbnm" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pSiteCd" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pAuth" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="sLaborAddInfoCcodeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sLaborAddInfoCcodeResult" nillable="true" type="xs:string" />
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/EldigmPlusSvc_Memco.WebSvc.Sys.Worker" minOccurs="0" name="reList" nillable="true" type="q7:ArrayOfDataAddinfoCcode" />
+        <xs:element minOccurs="0" name="reMsg" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="sLaborAddInfo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="pSiteCd" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pCodeT" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pTgrpCcd" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="sLaborAddInfoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sLaborAddInfoResult" nillable="true" type="xs:string" />
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/EldigmPlusSvc_Memco.WebSvc.Sys.Worker" minOccurs="0" name="reList" nillable="true" type="q8:ArrayOfDataAddinfo" />
+        <xs:element minOccurs="0" name="reMsg" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="sLaborAddInfoModify">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="pLabNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pSiteCd" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pTtypeScd" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pTgrpCcd" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="sLaborAddInfoModifyResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sLaborAddInfoModifyResult" nillable="true" type="xs:string" />
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/EldigmPlusSvc_Memco.WebSvc.Sys.Worker" minOccurs="0" name="reList" nillable="true" type="q9:ArrayOfDataAddinfo" />
+        <xs:element minOccurs="0" name="reMsg" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="sLaborAddInfoSub">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="pSiteCd" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pTcode" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="sLaborAddInfoSubResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sLaborAddInfoSubResult" nillable="true" type="xs:string" />
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/EldigmPlusSvc_Memco.WebSvc.Sys.Worker" minOccurs="0" name="reList" nillable="true" type="q10:ArrayOfDataAddinfoCcodesub" />
+        <xs:element minOccurs="0" name="reMsg" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="aLaborPro">
     <xs:complexType>
       <xs:sequence>
         <xs:element minOccurs="0" name="pDbNm" nillable="true" type="xs:string" />
-        <xs:element minOccurs="0" name="pDevCd" nillable="true" type="xs:string" />
+        <xs:element xmlns:q11="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="param" nillable="true" type="q11:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="aLaborProResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="aLaborProResult" nillable="true" type="xs:string" />
+        <xs:element xmlns:q12="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="reData" nillable="true" type="q12:ArrayOfstring" />
+        <xs:element minOccurs="0" name="reMsg" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="mLaborPro">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="pDbNm" nillable="true" type="xs:string" />
+        <xs:element xmlns:q13="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="param" nillable="true" type="q13:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="mLaborProResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="mLaborProResult" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="reData" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="reMsg" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="aLaborLabTcodeSite">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="pDbnm" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pLabNo" nillable="true" type="xs:string" />
         <xs:element minOccurs="0" name="pSiteCd" nillable="true" type="xs:string" />
-        <xs:element minOccurs="0" name="pDeviceId" nillable="true" type="xs:string" />
-        <xs:element minOccurs="0" name="pDevTypeScd" nillable="true" type="xs:string" />
-        <xs:element minOccurs="0" name="pDevIOScd" nillable="true" type="xs:string" />
-        <xs:element minOccurs="0" name="pDevNm" nillable="true" type="xs:string" />
-        <xs:element minOccurs="0" name="pIp" nillable="true" type="xs:string" />
-        <xs:element minOccurs="0" name="pUsingFalg" nillable="true" type="xs:string" />
-        <xs:element minOccurs="0" name="pSortNo" nillable="true" type="xs:string" />
-        <xs:element minOccurs="0" name="pMemo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pTcode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pTtypeScd" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pValue" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="aLaborLabTcodeSiteResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="aLaborLabTcodeSiteResult" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="reData" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="reMsg" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="mLaborLabTcodeSite">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="pDbnm" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pLabNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pSiteCd" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pTcode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pValue" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="mLaborLabTcodeSiteResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="mLaborLabTcodeSiteResult" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="reData" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="reMsg" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="aLaborLabTcodeSiteLog">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="pDbnm" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pLabNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pSiteCd" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pTcode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pTtypeScd" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pValue" nillable="true" type="xs:string" />
         <xs:element minOccurs="0" name="pInputId" nillable="true" type="xs:string" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="logDeviceResponse">
+  <xs:element name="aLaborLabTcodeSiteLogResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element minOccurs="0" name="logDeviceResult" nillable="true" type="xs:string" />
-        <xs:element minOccurs="0" name="reMsg" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="aLaborLabTcodeSiteLogResult" nillable="true" type="xs:string" />
         <xs:element minOccurs="0" name="reData" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="reMsg" nillable="true" type="xs:string" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>

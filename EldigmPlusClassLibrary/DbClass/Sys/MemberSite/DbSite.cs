@@ -79,11 +79,12 @@ namespace EldigmPlusClassLibrary.DbClass.Sys.MemberSite
         public DataSet sSite(string MEMCO_CD, string USING_FLAG)
         {
             string dbNm = sDbNm(MEMCO_CD);
+            string con = "[PLUS-" + dbNm + "].dbo.";
 
             string sql = "" +
             " SELECT B.SITE_CD,B.MEMCO_CD,B.SITE_NM, ISNULL(A.USING_FLAG, 0) USING_FLAG, ISNULL(A.SORT_NO, 1) SORT_NO, ISNULL(A.MEMO, '') MEMO " +
             " FROM [PLUS_MAIN].dbo.TM00_SITE A " +
-            " INNER JOIN [PLUS-" + dbNm + "].dbo.T00_SITE B ON A.SITE_CD = B.SITE_CD " +
+            " INNER JOIN " + con + "T00_SITE B ON A.SITE_CD = B.SITE_CD " +
             " WHERE A.MEMCO_CD = " + MEMCO_CD + " ";
 
             if (USING_FLAG != "")

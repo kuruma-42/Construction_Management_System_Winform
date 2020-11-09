@@ -128,9 +128,10 @@ namespace EldigmPlusClassLibrary.DbClass.Sys.CommonCode
 
         public DataSet sCodeAuthSiteMemberDB(string DBNM)
         {
+            string con = "[PLUS-" + DBNM + "].dbo.";
             string sql = "" +
-                 " SELECT B.AUTH_CD, A.AUTH_NM FROM [PLUS-" + DBNM + "].dbo.T00_CODE_AUTH A " +
-                 " INNER JOIN [PLUS-" + DBNM + "].dbo.T00_CODE_AUTH_SITE B " +
+                 " SELECT B.AUTH_CD, A.AUTH_NM FROM " + con + "T00_CODE_AUTH A " +
+                 " INNER JOIN " + con + "T00_CODE_AUTH_SITE B " +
                  " ON A.AUTH_CD = B.AUTH_CD AND B.USING_FLAG = 1 AND B.SITE_CD = 1 ";
 
             sql += "" +
@@ -145,10 +146,11 @@ namespace EldigmPlusClassLibrary.DbClass.Sys.CommonCode
 
         public DataSet sSetAuthSiteMemberDB(string DBNM, string SITE_CD, string AUTH_CD)
         {
+            string con = "[PLUS-" + DBNM + "].dbo.";
             string sql = "" +
                  " SELECT A.CCODE_GRP, A.CCODE_GRP_NM, ISNULL(B.VIEW_FLAG, 0) VIEW_FLAG, ISNULL(B.NEW_FLAG, 0) NEW_FLAG, ISNULL(B.MODIFY_FLAG, 0) MODIFY_FLAG, " +
                  " ISNULL(B.DEL_FLAG, 0) DEL_FLAG, ISNULL(B.REPORT_FLAG, 0) REPORT_FLAG, ISNULL(B.PRINT_FLAG, 0) PRINT_FLAG, ISNULL(B.DOWNLOAD_FLAG, 0) DOWNLOAD_FLAG " +
-                 " FROM [PLUS_MAIN].dbo.TM00_CODE_COMN_GRP A LEFT OUTER JOIN [PLUS-" + DBNM + "].dbo.T00_CODE_GRP_SETAUTH_SITE B " +
+                 " FROM [PLUS_MAIN].dbo.TM00_CODE_COMN_GRP A LEFT OUTER JOIN " + con + "T00_CODE_GRP_SETAUTH_SITE B " +
                  " ON A.CCODE_GRP = B.CCODE_GRP AND B.SITE_CD = " + SITE_CD + " AND B.AUTH_CD = '" + AUTH_CD + "'" +
                  " WHERE A.USING_FLAG = 1 ";
 
@@ -166,10 +168,11 @@ namespace EldigmPlusClassLibrary.DbClass.Sys.CommonCode
 
         public DataSet sSetAuthSiteMemberDBSub(string CCODE_GRP, string DBNM, string SITE_CD, string AUTH_CD)
         {
+            string con = "[PLUS-" + DBNM + "].dbo.";
             string sql = "" +
                  " SELECT A.CCODE_GRP, A.CCODE_GRP_NM, ISNULL(B.VIEW_FLAG, 0) VIEW_FLAG, ISNULL(B.NEW_FLAG, 0) NEW_FLAG, ISNULL(B.MODIFY_FLAG, 0) MODIFY_FLAG, " +
                  " ISNULL(B.DEL_FLAG, 0) DEL_FLAG, ISNULL(B.REPORT_FLAG, 0) REPORT_FLAG, ISNULL(B.PRINT_FLAG, 0) PRINT_FLAG, ISNULL(B.DOWNLOAD_FLAG, 0) DOWNLOAD_FLAG " +
-                 " FROM [PLUS_MAIN].dbo.TM00_CODE_COMN_GRP A LEFT OUTER JOIN [PLUS-" + DBNM + "].dbo.T00_CODE_GRP_SETAUTH_SITE B " +
+                 " FROM [PLUS_MAIN].dbo.TM00_CODE_COMN_GRP A LEFT OUTER JOIN " + con + "T00_CODE_GRP_SETAUTH_SITE B " +
                  " ON A.CCODE_GRP = B.CCODE_GRP AND B.SITE_CD = " + SITE_CD + " AND B.AUTH_CD = '" + AUTH_CD + "'" +
                  " WHERE A.USING_FLAG = 1 AND A.CCODE_GRP = '" + CCODE_GRP + "'";
 
@@ -187,8 +190,9 @@ namespace EldigmPlusClassLibrary.DbClass.Sys.CommonCode
 
         public int mSetAuthSiteMemberDB(string DBNM, string SITE_CD, string AUTH_CD, string CCODE_GRP, string VIEW_FLAG, string NEW_FLAG, string MODIFY_FLAG, string DEL_FLAG, string REPORT_FLAG, string PRINT_FLAG, string DOWNLOAD_FLAG)
         {
+            string con = "[PLUS-" + DBNM + "].dbo.";
             string sql = "" +
-            " UPDATE [PLUS-" + DBNM + "].dbo.T00_CODE_GRP_SETAUTH_SITE SET VIEW_FLAG = " + VIEW_FLAG + ", NEW_FLAG = " + NEW_FLAG + "," +
+            " UPDATE " + con + "T00_CODE_GRP_SETAUTH_SITE SET VIEW_FLAG = " + VIEW_FLAG + ", NEW_FLAG = " + NEW_FLAG + "," +
             " MODIFY_FLAG = " + MODIFY_FLAG + "," + " DEL_FLAG = " + DEL_FLAG + ", REPORT_FLAG = " + REPORT_FLAG + "," +
             " PRINT_FLAG = " + PRINT_FLAG + ", DOWNLOAD_FLAG = " + DOWNLOAD_FLAG + "" +
             " WHERE SITE_CD = '" + SITE_CD + "' AND AUTH_CD = '" + AUTH_CD + "' AND CCODE_GRP = '" + CCODE_GRP + "'";
@@ -202,11 +206,12 @@ namespace EldigmPlusClassLibrary.DbClass.Sys.CommonCode
 
         public int aSetAuthSiteMemberDBLog(string DBNM, string SITE_CD, string AUTH_CD, string CCODE_GRP, string VIEW_FLAG, string NEW_FLAG, string MODIFY_FLAG, string DEL_FLAG, string REPORT_FLAG, string PRINT_FLAG, string DOWNLOAD_FLAG, string INPUT_ID)
         {
+            string con = "[PLUS-" + DBNM + "].dbo.";
             string sql = "" +
-                " INSERT INTO [PLUS-" + DBNM + "].dbo.T00_CODE_GRP_SETAUTH_SITE_LOG (SITE_CD, AUTH_CD, CCODE_GRP, LOG_NO, VIEW_FLAG," +
+                " INSERT INTO " + con + "T00_CODE_GRP_SETAUTH_SITE_LOG (SITE_CD, AUTH_CD, CCODE_GRP, LOG_NO, VIEW_FLAG," +
                 " NEW_FLAG, MODIFY_FLAG, DEL_FLAG, REPORT_FLAG, PRINT_FLAG, DOWNLOAD_FLAG, INPUT_ID, INPUT_DT) " +
                 " VALUES (" + SITE_CD + ", '" + AUTH_CD + "', '" + CCODE_GRP + "'," +
-                " (SELECT ISNULL(MAX(LOG_NO),0)+1 FROM [PLUS-" + DBNM + "].dbo.T00_CODE_GRP_SETAUTH_SITE_LOG WHERE SITE_CD = " + SITE_CD + " AND CCODE_GRP = '" + CCODE_GRP + "' AND AUTH_CD = '" + AUTH_CD + "')," +
+                " (SELECT ISNULL(MAX(LOG_NO),0)+1 FROM " + con + "T00_CODE_GRP_SETAUTH_SITE_LOG WHERE SITE_CD = " + SITE_CD + " AND CCODE_GRP = '" + CCODE_GRP + "' AND AUTH_CD = '" + AUTH_CD + "')," +
                 " " + VIEW_FLAG + ", " + NEW_FLAG + ", " + MODIFY_FLAG + ", " + DEL_FLAG + ", " + REPORT_FLAG + "," +
                 " " + PRINT_FLAG + ", " + DOWNLOAD_FLAG + ", '" + INPUT_ID + "', GETDATE()) ";
 
@@ -219,8 +224,9 @@ namespace EldigmPlusClassLibrary.DbClass.Sys.CommonCode
 
         public int aSetAuthSiteMemberDB(string DBNM, string SITE_CD, string AUTH_CD, string CCODE_GRP, string VIEW_FLAG, string NEW_FLAG, string MODIFY_FLAG, string DEL_FLAG, string REPORT_FLAG, string PRINT_FLAG, string DOWNLOAD_FLAG, string INPUT_ID)
         {
+            string con = "[PLUS-" + DBNM + "].dbo.";
             string sql = "" +
-                " INSERT INTO [PLUS-" + DBNM + "].dbo.T00_CODE_GRP_SETAUTH_SITE (SITE_CD, AUTH_CD, CCODE_GRP, VIEW_FLAG," +
+                " INSERT INTO " + con + "T00_CODE_GRP_SETAUTH_SITE (SITE_CD, AUTH_CD, CCODE_GRP, VIEW_FLAG," +
                 " NEW_FLAG, MODIFY_FLAG, DEL_FLAG, REPORT_FLAG, PRINT_FLAG, DOWNLOAD_FLAG, INPUT_ID, INPUT_DT) " +
                 " VALUES (" + SITE_CD + ", '" + AUTH_CD + "', '" + CCODE_GRP + "'," +
                 " " + VIEW_FLAG + ", " + NEW_FLAG + ", " + MODIFY_FLAG + ", " + DEL_FLAG + ", " + REPORT_FLAG + "," +
@@ -235,9 +241,10 @@ namespace EldigmPlusClassLibrary.DbClass.Sys.CommonCode
 
         public DataSet sComnSiteTreeView(string DBNM, string SITE_CD, string AUTH_CD)
         {
+            string con = "[PLUS-" + DBNM + "].dbo.";
             string sql = "" +
                  " SELECT A.NEW_FLAG, A.MODIFY_FLAG, A.DEL_FLAG, B.CCODE_GRP, B.CCODE_GRP_NM FROM ( SELECT CCODE_GRP, NEW_FLAG, MODIFY_FLAG, DEL_FLAG " +
-                 " FROM [PLUS-" + DBNM + "].dbo.T00_CODE_GRP_SETAUTH_SITE " +
+                 " FROM " + con + "T00_CODE_GRP_SETAUTH_SITE " +
                  " WHERE SITE_CD = 1 AND AUTH_CD = 'SysAdmin' AND VIEW_FLAG = 1 ) A INNER JOIN " +
                  " ( SELECT CCODE_GRP, CCODE_GRP_NM FROM [PLUS_MAIN].dbo.TM00_CODE_COMN_GRP WHERE USING_FLAG = 1 ) B " +
                  " ON A.CCODE_GRP = B.CCODE_GRP " +
@@ -252,8 +259,9 @@ namespace EldigmPlusClassLibrary.DbClass.Sys.CommonCode
 
         public DataSet sComnSite(string DBNM, string SITE_CD, string CCODE_GRP, string USING_FLAG, string CCODE_NM)
         {
+            string con = "[PLUS-" + DBNM + "].dbo.";
             string sql = "" +
-                " SELECT * FROM [PLUS-" + DBNM + "].dbo.View_Code_Comn " +
+                " SELECT * FROM " + con + "View_Code_Comn " +
                 " WHERE CCODE_GRP = '" + CCODE_GRP + "' AND SITE_CD = " + SITE_CD;
             
             if (USING_FLAG != "")
@@ -277,8 +285,9 @@ namespace EldigmPlusClassLibrary.DbClass.Sys.CommonCode
 
         public int mComnSite(string DBNM, string SITE_CD, string CCODE, string USING_FLAG, string SORT_NO, string MEMO)
         {
+            string con = "[PLUS-" + DBNM + "].dbo.";
             string sql = "" +
-            " UPDATE [PLUS-" + DBNM + "].dbo.T00_CODE_COMN_SITE SET USING_FLAG = " + USING_FLAG + ", SORT_NO = " + SORT_NO + "," +
+            " UPDATE " + con + "T00_CODE_COMN_SITE SET USING_FLAG = " + USING_FLAG + ", SORT_NO = " + SORT_NO + "," +
             " MEMO = '" + MEMO + "' WHERE SITE_CD = " + SITE_CD + " AND CCODE = " + CCODE + "";
 
             int reCnt = 0;
@@ -290,10 +299,11 @@ namespace EldigmPlusClassLibrary.DbClass.Sys.CommonCode
         
         public int aComnSiteLog(string DBNM, string SITE_CD, string CCODE, string USING_FLAG, string SORT_NO, string MEMO, string INPUT_ID)
         {
+            string con = "[PLUS-" + DBNM + "].dbo.";
             string sql = "" +
-                " INSERT INTO [PLUS-" + DBNM + "].dbo.T00_CODE_COMN_SITE_LOG (SITE_CD, CCODE, LOG_NO, USING_FLAG, SORT_NO, MEMO, INPUT_ID, INPUT_DT) " +
+                " INSERT INTO " + con + "T00_CODE_COMN_SITE_LOG (SITE_CD, CCODE, LOG_NO, USING_FLAG, SORT_NO, MEMO, INPUT_ID, INPUT_DT) " +
                 " VALUES (" + SITE_CD + ", " + CCODE + "," +
-                " (SELECT ISNULL(MAX(LOG_NO),0)+1 FROM [PLUS-" + DBNM + "].dbo.T00_CODE_COMN_SITE_LOG WHERE SITE_CD = " + SITE_CD + " AND CCODE = '" + CCODE + "')," +
+                " (SELECT ISNULL(MAX(LOG_NO),0)+1 FROM " + con + "T00_CODE_COMN_SITE_LOG WHERE SITE_CD = " + SITE_CD + " AND CCODE = '" + CCODE + "')," +
                 " " + USING_FLAG + ", " + SORT_NO + ", '" + MEMO + "', " + INPUT_ID + ", GETDATE())";
 
             int reCnt = 0;

@@ -82,7 +82,7 @@
             this.dataGridView2.Location = new System.Drawing.Point(0, 0);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.RowTemplate.Height = 23;
-            this.dataGridView2.Size = new System.Drawing.Size(1037, 78);
+            this.dataGridView2.Size = new System.Drawing.Size(1037, 52);
             this.dataGridView2.TabIndex = 1;
             this.dataGridView2.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellClick);
             // 
@@ -240,6 +240,7 @@
             // splitContainer3
             // 
             this.splitContainer3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer3.FixedPanel = System.Windows.Forms.FixedPanel.Panel2;
             this.splitContainer3.Location = new System.Drawing.Point(0, 0);
             this.splitContainer3.Name = "splitContainer3";
             this.splitContainer3.Orientation = System.Windows.Forms.Orientation.Horizontal;
@@ -252,7 +253,7 @@
             // 
             this.splitContainer3.Panel2.Controls.Add(this.dataGridView2);
             this.splitContainer3.Size = new System.Drawing.Size(1037, 557);
-            this.splitContainer3.SplitterDistance = 475;
+            this.splitContainer3.SplitterDistance = 501;
             this.splitContainer3.TabIndex = 0;
             // 
             // dataGridView1
@@ -271,7 +272,7 @@
             this.dataGridView1.Location = new System.Drawing.Point(0, 0);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 23;
-            this.dataGridView1.Size = new System.Drawing.Size(1037, 475);
+            this.dataGridView1.Size = new System.Drawing.Size(1037, 501);
             this.dataGridView1.TabIndex = 1;
             this.dataGridView1.CellBeginEdit += new System.Windows.Forms.DataGridViewCellCancelEventHandler(this.dataGridView1_CellBeginEdit);
             this.dataGridView1.ColumnHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView1_ColumnHeaderMouseClick);

@@ -81,9 +81,10 @@ namespace EldigmPlusClassLibrary.DbClass.Sys.Device
         //SELECT 
         public DataSet sDevice(string DBNM, string SITE_CD)
         {
+            string con = "[PLUS-" + DBNM + "].dbo.";
             string sql = "" +
                " SELECT DEV_CD, DEVICE_ID, DEV_TYPE_SCD, DEV_IO_SCD, DEV_NM, IP, USING_FLAG, SORT_NO, MEMO " +
-               " FROM [PLUS-" + DBNM + "].dbo.T00_DEVICE " +
+               " FROM " + con + "T00_DEVICE " +
                " WHERE SITE_CD =" + SITE_CD + " " +
                " ORDER BY SORT_NO, DEV_NM ";
 
@@ -105,8 +106,9 @@ namespace EldigmPlusClassLibrary.DbClass.Sys.Device
         //MODIFY
         public int mDevice(string DBNM, string SITE_CD, string DEV_CD, string DEVICE_ID, string DEV_TYPE_SCD, string DEV_IO_SCD, string DEV_NM, string IP, string SORT_NO,  string USING_FLAG, string MEMO)
         {
+            string con = "[PLUS-" + DBNM + "].dbo.";
             string sql = "" +
-              " UPDATE [PLUS-" + DBNM + "].dbo.T00_DEVICE " +
+              " UPDATE " + con + "T00_DEVICE " +
               " SET DEVICE_ID = " + DEVICE_ID + ", DEV_TYPE_SCD = '" + DEV_TYPE_SCD + "', DEV_IO_SCD = '" + DEV_IO_SCD + "', DEV_NM = '" + DEV_NM + "', IP = '" + IP + "', USING_FLAG = " + USING_FLAG + ", SORT_NO = " + SORT_NO + ", MEMO = '" + MEMO + "' " +
               " WHERE DEV_CD = " + DEV_CD + " AND SITE_CD = " + SITE_CD + " ";
 
@@ -122,8 +124,9 @@ namespace EldigmPlusClassLibrary.DbClass.Sys.Device
         //LOG
         public int logDevice(string DBNM, string DEV_CD, string SITE_CD, string DEVICE_ID, string DEV_TYPE_SCD, string DEV_IO_SCD, string DEV_NM, string IP, string USING_FLAG, string SORT_NO, string MEMO, string INPUT_ID)
         {
+            string con = "[PLUS-" + DBNM + "].dbo.";
             string sql = "" +
-                " INSERT INTO [PLUS-" + DBNM + "].dbo.T00_DEVICE_LOG (DEV_CD, LOG_NO, SITE_CD, DEVICE_ID, DEV_TYPE_SCD, DEV_IO_SCD, DEV_NM, IP, USING_FLAG, SORT_NO, MEMO, INPUT_ID, INPUT_DT) " +
+                " INSERT INTO " + con + "T00_DEVICE_LOG (DEV_CD, LOG_NO, SITE_CD, DEVICE_ID, DEV_TYPE_SCD, DEV_IO_SCD, DEV_NM, IP, USING_FLAG, SORT_NO, MEMO, INPUT_ID, INPUT_DT) " +
                 " VALUES (" + DEV_CD + ",(SELECT ISNULL(MAX(LOG_NO),0)+1 FROM [PLUS-ELDIGM].dbo.T00_DEVICE_LOG WHERE SITE_CD = SITE_CD AND DEV_CD = DEV_CD), " + SITE_CD + ", " + DEVICE_ID +
                 ", '" + DEV_TYPE_SCD + "', '" + DEV_IO_SCD + "' ,'" + DEV_NM + "', '" + IP + "', " + USING_FLAG + ", " + SORT_NO + ", '" + MEMO + "' ," + INPUT_ID + ", GETDATE())";
 

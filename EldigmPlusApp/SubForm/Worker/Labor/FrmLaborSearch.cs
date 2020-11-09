@@ -15,8 +15,9 @@ namespace EldigmPlusApp.SubForm.Worker.Labor
         LogUtil logs = null;
         ResourceManager wRM = null;
         ResourceManager msgRM = null;
-       
 
+        string columnNm = "";
+        int rowIdx = 0;
 
         public FrmLaborSearch()
         {
@@ -32,24 +33,31 @@ namespace EldigmPlusApp.SubForm.Worker.Labor
                 wRM = new ResourceManager("EldigmPlusApp.GlobalLanguage.word_Language", typeof(FrmLaborSearch).Assembly);
                 msgRM = new ResourceManager("EldigmPlusApp.GlobalLanguage.msg_Language", typeof(FrmLaborSearch).Assembly);
 
-                dataGridView1.Columns["dgv1_CHK"].HeaderText = "선택";
-                dataGridView1.Columns["dgv1_LAB_NO"].HeaderText = "근로자 번호";
-                dataGridView1.Columns["dgv1_CO_NM"].HeaderText = "업체 이름";
-                dataGridView1.Columns["dgv1_LAB_NM"].HeaderText = "근로자 이름";                                              
-                dataGridView1.Columns["dgv1_TEAM_NM"].HeaderText = "팀 이름";
-                dataGridView1.Columns["dgv1_JOB_NM"].HeaderText = "직종";
-                dataGridView1.Columns["dgv1_BIRTH_DATE"].HeaderText = "생년월일";
-                dataGridView1.Columns["dgv1_MOBILE_NO"].HeaderText = "휴대폰 번호";
-                dataGridView1.Columns["dgv1_USER_NO"].HeaderText = "사용자 번호";
-                dataGridView1.Columns["dgv1_AUTH_CD"].HeaderText = "권한";
+                //VISIBLE
+                dataGridView1.Columns["dgv1_CHK"].HeaderText = wRM.GetString("wSelect");
+                dataGridView1.Columns["dgv1_LAB_NO"].HeaderText = wRM.GetString("wWorker") + wRM.GetString("wNumber");
+                dataGridView1.Columns["dgv1_CO_NM"].HeaderText =  wRM.GetString("wCompany") + wRM.GetString("wName");
+                dataGridView1.Columns["dgv1_LAB_NM"].HeaderText = wRM.GetString("wWorker") + wRM.GetString("wName");
+                dataGridView1.Columns["dgv1_TEAM_NM"].HeaderText = wRM.GetString("wTeam") + wRM.GetString("wName");
+                dataGridView1.Columns["dgv1_JOB_NM"].HeaderText = wRM.GetString("wJobType");
+                dataGridView1.Columns["dgv1_BIRTH_DATE"].HeaderText = wRM.GetString("wBirthDate");
+                dataGridView1.Columns["dgv1_MOBILE_NO"].HeaderText = wRM.GetString("wTel");
+                dataGridView1.Columns["dgv1_USER_NO"].HeaderText = wRM.GetString("wUser") + wRM.GetString("wNumber");
+                dataGridView1.Columns["dgv1_AUTH_CD"].HeaderText = wRM.GetString("wAuthority");
+
+                //INVISIBLE(THESE ARE JUST FOR TRANSFERING DATA TO POP UP MODIFY PAGE)
+                dataGridView1.Columns["dgv1_BLOCK_CCD"].HeaderText = wRM.GetString("wBlock") + wRM.GetString("wCode");
+                dataGridView1.Columns["dgv1_CO_CD"].HeaderText = wRM.GetString("wCompany") + wRM.GetString("wCode");
+                dataGridView1.Columns["dgv1_TEAM_CD"].HeaderText = wRM.GetString("wTeam") + wRM.GetString("wCode");
+                dataGridView1.Columns["dgv1_JOB_CCD"].HeaderText = wRM.GetString("wJobType") + wRM.GetString("wCode");
 
 
 
-
+                //POSSIBLE TO USE THESE DATA AFTER 
                 //dataGridView1.Columns["dgv1_BLOCK_CCD"].HeaderText = "구역 C코드";
                 //dataGridView1.Columns["dgv1_FACE_PHOTO"].HeaderText = "얼굴 사진";
                 //dataGridView1.Columns["dgv1_LAB_STS"].HeaderText = "근로자 상태";
-                
+
 
 
 
@@ -120,7 +128,7 @@ namespace EldigmPlusApp.SubForm.Worker.Labor
                 wSvc.Url = "http://" + AppInfo.SsWsvcServer1 + "/WebSvc/Worker/Labor/WsWorkerLaborSearch.svc";
                 wSvc.Timeout = 1000;
 
-                reCode = wSvc.sLaborBlockList(AppInfo.SsSiteCd, AppInfo.SsLabAuth, AppInfo.SsBlockCcd, out getData, out reMsg);
+                reCode = wSvc.sLaborBlockList(AppInfo.SsSiteCd, AppInfo.SsLabAuth, AppInfo.SsBlockCcd, wRM.GetString("wBlock"), out getData, out reMsg);
                 if (reCode == "Y")
                 {
                     if (getData != null && getData.Length > 0)
@@ -160,7 +168,7 @@ namespace EldigmPlusApp.SubForm.Worker.Labor
                 wSvc.Url = "http://" + AppInfo.SsWsvcServer1 + "/WebSvc/Worker/Labor/WsWorkerLaborSearch.svc";
                 wSvc.Timeout = 1000;
 
-                reCode = wSvc.sLaborConstList(AppInfo.SsSiteCd, AppInfo.SsLabAuth, AppInfo.SsConstCd, out getData, out reMsg);
+                reCode = wSvc.sLaborConstList(AppInfo.SsSiteCd, AppInfo.SsLabAuth, AppInfo.SsConstCd, wRM.GetString("wConstructionTypes"), out getData, out reMsg);
                 if (reCode == "Y")
                 {
                     if (getData != null && getData.Length > 0)
@@ -201,7 +209,7 @@ namespace EldigmPlusApp.SubForm.Worker.Labor
                 wSvc.Url = "http://" + AppInfo.SsWsvcServer1 + "/WebSvc/Worker/Labor/WsWorkerLaborSearch.svc";
                 wSvc.Timeout = 1000;
 
-                reCode = wSvc.sLaborCompanyList(AppInfo.SsSiteCd, AppInfo.SsLabAuth, AppInfo.SsCoCd, out getData, out reMsg);
+                reCode = wSvc.sLaborCompanyList(AppInfo.SsSiteCd, AppInfo.SsLabAuth, AppInfo.SsCoCd, wRM.GetString("wCompany"), out getData, out reMsg);
                 if (reCode == "Y")
                 {
                     if (getData != null && getData.Length > 0)
@@ -216,7 +224,7 @@ namespace EldigmPlusApp.SubForm.Worker.Labor
                             setCmb.AddRow(getData[i].TEXT.ToString(), getData[i].VALUE.ToString());
                         }
                         setCmb.Bind(searchCondition11.comboBox3);
-                        searchCondition11.comboBox3.SelectedValue = "0";
+                        searchCondition11.comboBox3.SelectedIndex = searchCondition11.comboBox3.Items.Count - 1;
                     }
                 }
             }
@@ -224,6 +232,12 @@ namespace EldigmPlusApp.SubForm.Worker.Labor
             {
                 logs.SaveLog("[error]  (page)::FrmLaborSearch.cs  (Function)::SetDataBind_CmbMember  (Detail):: " + "\r\n" + ex.ToString());
             }
+        }
+
+
+        private void searchCondition11_cmb3_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            SetDataBind_TeamCmb();
         }
 
 
@@ -241,7 +255,7 @@ namespace EldigmPlusApp.SubForm.Worker.Labor
                 wSvc.Url = "http://" + AppInfo.SsWsvcServer1 + "/WebSvc/Worker/Labor/WsWorkerLaborSearch.svc";
                 wSvc.Timeout = 1000;
 
-                reCode = wSvc.sLaborTeamList(AppInfo.SsSiteCd, AppInfo.SsLabAuth, AppInfo.SsTeamCd, AppInfo.SsCoCd, out getData, out reMsg);
+                reCode = wSvc.sLaborTeamList(AppInfo.SsSiteCd, AppInfo.SsLabAuth, AppInfo.SsTeamCd, searchCondition11.comboBox3.SelectedValue.ToString(), wRM.GetString("wTeam"), out getData, out reMsg);
                 if (reCode == "Y")
                 {
                     if (getData != null && getData.Length > 0)
@@ -257,8 +271,7 @@ namespace EldigmPlusApp.SubForm.Worker.Labor
                         }
 
                         setCmb.Bind(searchCondition11.comboBox4);
-                        searchCondition11.comboBox4.SelectedValue = "0";
-                    }
+                        searchCondition11.comboBox4.SelectedValue = "0";                    }
                 }
             }
             catch (Exception ex)
@@ -293,8 +306,8 @@ namespace EldigmPlusApp.SubForm.Worker.Labor
             }
 
         }
-      
-        
+
+
 
         private void SetDataBind_gridView1()
         {
@@ -324,7 +337,7 @@ namespace EldigmPlusApp.SubForm.Worker.Labor
 
 
                 //SELECT
-                reCode = wSvc.sLaborSearch(AppInfo.SsSiteCd, pBlockCcd , pConstCcd, pCodCd, pTeamCd, pSearchCondition, pSearchTxt, out getData, out reMsg); //AppInfo.SsSiteCD
+                reCode = wSvc.sLaborSearch(AppInfo.SsSiteCd, pBlockCcd, pConstCcd, pCodCd, pTeamCd, pSearchCondition, pSearchTxt, out getData, out reMsg); //AppInfo.SsSiteCD
 
                 if (reCode == "Y")
                 {
@@ -334,6 +347,7 @@ namespace EldigmPlusApp.SubForm.Worker.Labor
                         for (int i = 0; i < getData.Length; i++)
                         {
                             dataGridView1.Rows.Add();
+                            //VISBLE 
                             dataGridView1.Rows[i].Cells["dgv1_LAB_NO"].Value = getData[i].LAB_NO.ToString();
                             dataGridView1.Rows[i].Cells["dgv1_CO_NM"].Value = getData[i].CO_NM.ToString();
                             dataGridView1.Rows[i].Cells["dgv1_LAB_NM"].Value = getData[i].LAB_NM.ToString();
@@ -342,13 +356,24 @@ namespace EldigmPlusApp.SubForm.Worker.Labor
                             dataGridView1.Rows[i].Cells["dgv1_BIRTH_DATE"].Value = getData[i].BIRTH_DATE.ToString();
                             dataGridView1.Rows[i].Cells["dgv1_MOBILE_NO"].Value = getData[i].MOBILE_NO.ToString();
                             dataGridView1.Rows[i].Cells["dgv1_USER_NO"].Value = getData[i].USER_NO.ToString();
-                            dataGridView1.Rows[i].Cells["dgv1_AUTH_CD"].Value = getData[i].AUTH_CD.ToString();                          
+                            dataGridView1.Rows[i].Cells["dgv1_AUTH_CD"].Value = getData[i].AUTH_CD.ToString();
+                            dataGridView1.Rows[i].Cells["dgv1_BIRTH_DATE"].Value = getData[i].BIRTH_DATE.ToString();
+                            dataGridView1.Rows[i].Cells["dgv1_MOBILE_NO"].Value = getData[i].MOBILE_NO.ToString();
+                            dataGridView1.Rows[i].Cells["dgv1_USER_NO"].Value = getData[i].USER_NO.ToString();
+                            dataGridView1.Rows[i].Cells["dgv1_AUTH_CD"].Value = getData[i].AUTH_CD.ToString();
+
+                            //INVISIBLE(THESE ARE JUST FOR TRANSFERING DATA TO POP UP MODIFY PAGE)
+                            dataGridView1.Rows[i].Cells["dgv1_BLOCK_CCD"].Value = getData[i].BLOCK_CCD.ToString();
+                            dataGridView1.Rows[i].Cells["dgv1_CO_CD"].Value = getData[i].CO_CD.ToString();
+                            dataGridView1.Rows[i].Cells["dgv1_TEAM_CD"].Value = getData[i].TEAM_CD.ToString();
+                            dataGridView1.Rows[i].Cells["dgv1_JOB_CCD"].Value = getData[i].JOB_CCD.ToString();
+
 
 
                             //dataGridView1.Rows[i].Cells["dgv1_FACE_PHOTO"].Value = getData[i].FACE_PHOTO.ToString();      
                             //dataGridView1.Rows[i].Cells["dgv1_BLOCK_CCD"].Value = getData[i].BLOCK_CCD.ToString();
                             //dataGridView1.Rows[i].Cells["dgv1_LAB_STS"].Value = getData[i].LAB_STS.ToString();
-                            
+
                         }
 
                         SetRowNumber(dataGridView1);
@@ -385,7 +410,7 @@ namespace EldigmPlusApp.SubForm.Worker.Labor
             }
         }
 
-     
+
         //열번호 자동 
         private void SetRowNumber(DataGridView dgv)
         {
@@ -416,7 +441,7 @@ namespace EldigmPlusApp.SubForm.Worker.Labor
             try
             {
                 string columnNm = dataGridView1.Columns[e.ColumnIndex].Name;
-                if (columnNm == "dgv1_CHK" )
+                if (columnNm == "dgv1_CHK")
                 {
                     for (int i = 0; i < dataGridView1.Rows.Count; i++)
                     {
@@ -464,7 +489,53 @@ namespace EldigmPlusApp.SubForm.Worker.Labor
             frm.TopMost = true;
 
             //DialogResult result =
-            frm.Show();
+            frm.ShowDialog();
         }
+                
+     
+        //MODIFY FUNCTION
+        private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            columnNm = dataGridView1.Columns[e.ColumnIndex].Name;
+            rowIdx = Convert.ToInt16(dataGridView1.Rows[e.RowIndex].Index);
+
+            if (e.RowIndex < 0)
+                return;
+
+            
+            //COMBO VALUE 
+            string pBlock_Cd = dataGridView1.Rows[e.RowIndex].Cells["dgv1_BLOCK_CCD"].Value.ToString();
+            string pCo_Cd = dataGridView1.Rows[e.RowIndex].Cells["dgv1_CO_CD"].Value.ToString();
+            string pTeam_Cd = dataGridView1.Rows[e.RowIndex].Cells["dgv1_TEAM_CD"].Value.ToString();
+            string pJob_Cd = dataGridView1.Rows[e.RowIndex].Cells["dgv1_JOB_CCD"].Value.ToString();
+
+            //TEXT 
+            string pLab_No = dataGridView1.Rows[e.RowIndex].Cells["dgv1_LAB_NO"].Value.ToString();
+            string pLab_Nm = dataGridView1.Rows[e.RowIndex].Cells["dgv1_LAB_NM"].Value.ToString();
+            string pBirth_Date = dataGridView1.Rows[e.RowIndex].Cells["dgv1_BIRTH_DATE"].Value.ToString();
+            string pMobile_No = dataGridView1.Rows[e.RowIndex].Cells["dgv1_MOBILE_NO"].Value.ToString();
+            string pUser_No = dataGridView1.Rows[e.RowIndex].Cells["dgv1_USER_NO"].Value.ToString();
+            string pAuth_Cd = dataGridView1.Rows[e.RowIndex].Cells["dgv1_AUTH_CD"].Value.ToString();
+
+
+            //PART OF LABOR SEARCH POP UP MODIFYING PAGE CALLING 
+            FrmLaborSearchPopModify frm = new FrmLaborSearchPopModify(pBlock_Cd, pCo_Cd, pTeam_Cd, pJob_Cd, pLab_No, pLab_Nm, pBirth_Date, pMobile_No, pUser_No, pAuth_Cd, this);
+            frm.StartPosition = FormStartPosition.CenterScreen;
+            frm.ShowInTaskbar = false;
+            frm.FormBorderStyle = FormBorderStyle.FixedToolWindow;
+            frm.TopMost = true;
+
+            //DialogResult result =
+            frm.ShowDialog();
+        }
+
+        
     }
 }
+
+
+
+
+
+
+

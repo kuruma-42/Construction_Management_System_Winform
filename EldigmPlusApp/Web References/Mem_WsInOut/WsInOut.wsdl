@@ -13,36 +13,234 @@
   <wsdl:message name="IWsInOut_sLaborCompanyList_OutputMessage">
     <wsdl:part name="parameters" element="tns:sLaborCompanyListResponse" />
   </wsdl:message>
+  <wsdl:message name="IWsInOut_co_Cmb_InputMessage">
+    <wsdl:part name="parameters" element="tns:co_Cmb" />
+  </wsdl:message>
+  <wsdl:message name="IWsInOut_co_Cmb_OutputMessage">
+    <wsdl:part name="parameters" element="tns:co_CmbResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWsInOut_team_Cmb_InputMessage">
+    <wsdl:part name="parameters" element="tns:team_Cmb" />
+  </wsdl:message>
+  <wsdl:message name="IWsInOut_team_Cmb_OutputMessage">
+    <wsdl:part name="parameters" element="tns:team_CmbResponse" />
+  </wsdl:message>
   <wsdl:message name="IWsInOut_sInOut_InputMessage">
     <wsdl:part name="parameters" element="tns:sInOut" />
   </wsdl:message>
   <wsdl:message name="IWsInOut_sInOut_OutputMessage">
     <wsdl:part name="parameters" element="tns:sInOutResponse" />
   </wsdl:message>
-  <wsdl:message name="IWsInOut_sInOutLog_InputMessage">
-    <wsdl:part name="parameters" element="tns:sInOutLog" />
+  <wsdl:message name="IWsInOut_sInOutHistory_InputMessage">
+    <wsdl:part name="parameters" element="tns:sInOutHistory" />
   </wsdl:message>
-  <wsdl:message name="IWsInOut_sInOutLog_OutputMessage">
-    <wsdl:part name="parameters" element="tns:sInOutLogResponse" />
+  <wsdl:message name="IWsInOut_sInOutHistory_OutputMessage">
+    <wsdl:part name="parameters" element="tns:sInOutHistoryResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWsInOut_mInOut_InputMessage">
+    <wsdl:part name="parameters" element="tns:mInOut" />
+  </wsdl:message>
+  <wsdl:message name="IWsInOut_mInOut_OutputMessage">
+    <wsdl:part name="parameters" element="tns:mInOutResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWsInOut_aInOutLog_InputMessage">
+    <wsdl:part name="parameters" element="tns:aInOutLog" />
+  </wsdl:message>
+  <wsdl:message name="IWsInOut_aInOutLog_OutputMessage">
+    <wsdl:part name="parameters" element="tns:aInOutLogResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWsInOut_dInHistory_InputMessage">
+    <wsdl:part name="parameters" element="tns:dInHistory" />
+  </wsdl:message>
+  <wsdl:message name="IWsInOut_dInHistory_OutputMessage">
+    <wsdl:part name="parameters" element="tns:dInHistoryResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWsInOut_dOutHistory_InputMessage">
+    <wsdl:part name="parameters" element="tns:dOutHistory" />
+  </wsdl:message>
+  <wsdl:message name="IWsInOut_dOutHistory_OutputMessage">
+    <wsdl:part name="parameters" element="tns:dOutHistoryResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWsInOut_mInOutHistory_InputMessage">
+    <wsdl:part name="parameters" element="tns:mInOutHistory" />
+  </wsdl:message>
+  <wsdl:message name="IWsInOut_mInOutHistory_OutputMessage">
+    <wsdl:part name="parameters" element="tns:mInOutHistoryResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWsInOut_aInOutHistory_InputMessage">
+    <wsdl:part name="parameters" element="tns:aInOutHistory" />
+  </wsdl:message>
+  <wsdl:message name="IWsInOut_aInOutHistory_OutputMessage">
+    <wsdl:part name="parameters" element="tns:aInOutHistoryResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWsInOut_aInOut_InputMessage">
+    <wsdl:part name="parameters" element="tns:aInOut" />
+  </wsdl:message>
+  <wsdl:message name="IWsInOut_aInOut_OutputMessage">
+    <wsdl:part name="parameters" element="tns:aInOutResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWsInOut_exInOutCo_InputMessage">
+    <wsdl:part name="parameters" element="tns:exInOutCo" />
+  </wsdl:message>
+  <wsdl:message name="IWsInOut_exInOutCo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:exInOutCoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWsInOut_aInOutCo_InputMessage">
+    <wsdl:part name="parameters" element="tns:aInOutCo" />
+  </wsdl:message>
+  <wsdl:message name="IWsInOut_aInOutCo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:aInOutCoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWsInOut_mInOutCo_InputMessage">
+    <wsdl:part name="parameters" element="tns:mInOutCo" />
+  </wsdl:message>
+  <wsdl:message name="IWsInOut_mInOutCo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:mInOutCoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWsInOut_exLabInOutFinal_InputMessage">
+    <wsdl:part name="parameters" element="tns:exLabInOutFinal" />
+  </wsdl:message>
+  <wsdl:message name="IWsInOut_exLabInOutFinal_OutputMessage">
+    <wsdl:part name="parameters" element="tns:exLabInOutFinalResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWsInOut_mLabInOutFinal_InputMessage">
+    <wsdl:part name="parameters" element="tns:mLabInOutFinal" />
+  </wsdl:message>
+  <wsdl:message name="IWsInOut_mLabInOutFinal_OutputMessage">
+    <wsdl:part name="parameters" element="tns:mLabInOutFinalResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWsInOut_aLabInOutFinal_InputMessage">
+    <wsdl:part name="parameters" element="tns:aLabInOutFinal" />
+  </wsdl:message>
+  <wsdl:message name="IWsInOut_aLabInOutFinal_OutputMessage">
+    <wsdl:part name="parameters" element="tns:aLabInOutFinalResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWsInOut_exInOut2020_InputMessage">
+    <wsdl:part name="parameters" element="tns:exInOut2020" />
+  </wsdl:message>
+  <wsdl:message name="IWsInOut_exInOut2020_OutputMessage">
+    <wsdl:part name="parameters" element="tns:exInOut2020Response" />
+  </wsdl:message>
+  <wsdl:message name="IWsInOut_aInOut2020_InputMessage">
+    <wsdl:part name="parameters" element="tns:aInOut2020" />
+  </wsdl:message>
+  <wsdl:message name="IWsInOut_aInOut2020_OutputMessage">
+    <wsdl:part name="parameters" element="tns:aInOut2020Response" />
+  </wsdl:message>
+  <wsdl:message name="IWsInOut_mInOut2020_InputMessage">
+    <wsdl:part name="parameters" element="tns:mInOut2020" />
+  </wsdl:message>
+  <wsdl:message name="IWsInOut_mInOut2020_OutputMessage">
+    <wsdl:part name="parameters" element="tns:mInOut2020Response" />
   </wsdl:message>
   <wsdl:portType name="IWsInOut">
     <wsdl:operation name="sLaborCompanyList">
       <wsdl:input wsaw:Action="http://tempuri.org/IWsInOut/sLaborCompanyList" message="tns:IWsInOut_sLaborCompanyList_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IWsInOut/sLaborCompanyListResponse" message="tns:IWsInOut_sLaborCompanyList_OutputMessage" />
     </wsdl:operation>
+    <wsdl:operation name="co_Cmb">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWsInOut/co_Cmb" message="tns:IWsInOut_co_Cmb_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWsInOut/co_CmbResponse" message="tns:IWsInOut_co_Cmb_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="team_Cmb">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWsInOut/team_Cmb" message="tns:IWsInOut_team_Cmb_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWsInOut/team_CmbResponse" message="tns:IWsInOut_team_Cmb_OutputMessage" />
+    </wsdl:operation>
     <wsdl:operation name="sInOut">
       <wsdl:input wsaw:Action="http://tempuri.org/IWsInOut/sInOut" message="tns:IWsInOut_sInOut_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IWsInOut/sInOutResponse" message="tns:IWsInOut_sInOut_OutputMessage" />
     </wsdl:operation>
-    <wsdl:operation name="sInOutLog">
-      <wsdl:input wsaw:Action="http://tempuri.org/IWsInOut/sInOutLog" message="tns:IWsInOut_sInOutLog_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IWsInOut/sInOutLogResponse" message="tns:IWsInOut_sInOutLog_OutputMessage" />
+    <wsdl:operation name="sInOutHistory">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWsInOut/sInOutHistory" message="tns:IWsInOut_sInOutHistory_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWsInOut/sInOutHistoryResponse" message="tns:IWsInOut_sInOutHistory_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="mInOut">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWsInOut/mInOut" message="tns:IWsInOut_mInOut_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWsInOut/mInOutResponse" message="tns:IWsInOut_mInOut_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="aInOutLog">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWsInOut/aInOutLog" message="tns:IWsInOut_aInOutLog_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWsInOut/aInOutLogResponse" message="tns:IWsInOut_aInOutLog_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="dInHistory">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWsInOut/dInHistory" message="tns:IWsInOut_dInHistory_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWsInOut/dInHistoryResponse" message="tns:IWsInOut_dInHistory_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="dOutHistory">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWsInOut/dOutHistory" message="tns:IWsInOut_dOutHistory_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWsInOut/dOutHistoryResponse" message="tns:IWsInOut_dOutHistory_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="mInOutHistory">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWsInOut/mInOutHistory" message="tns:IWsInOut_mInOutHistory_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWsInOut/mInOutHistoryResponse" message="tns:IWsInOut_mInOutHistory_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="aInOutHistory">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWsInOut/aInOutHistory" message="tns:IWsInOut_aInOutHistory_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWsInOut/aInOutHistoryResponse" message="tns:IWsInOut_aInOutHistory_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="aInOut">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWsInOut/aInOut" message="tns:IWsInOut_aInOut_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWsInOut/aInOutResponse" message="tns:IWsInOut_aInOut_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="exInOutCo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWsInOut/exInOutCo" message="tns:IWsInOut_exInOutCo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWsInOut/exInOutCoResponse" message="tns:IWsInOut_exInOutCo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="aInOutCo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWsInOut/aInOutCo" message="tns:IWsInOut_aInOutCo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWsInOut/aInOutCoResponse" message="tns:IWsInOut_aInOutCo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="mInOutCo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWsInOut/mInOutCo" message="tns:IWsInOut_mInOutCo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWsInOut/mInOutCoResponse" message="tns:IWsInOut_mInOutCo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="exLabInOutFinal">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWsInOut/exLabInOutFinal" message="tns:IWsInOut_exLabInOutFinal_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWsInOut/exLabInOutFinalResponse" message="tns:IWsInOut_exLabInOutFinal_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="mLabInOutFinal">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWsInOut/mLabInOutFinal" message="tns:IWsInOut_mLabInOutFinal_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWsInOut/mLabInOutFinalResponse" message="tns:IWsInOut_mLabInOutFinal_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="aLabInOutFinal">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWsInOut/aLabInOutFinal" message="tns:IWsInOut_aLabInOutFinal_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWsInOut/aLabInOutFinalResponse" message="tns:IWsInOut_aLabInOutFinal_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="exInOut2020">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWsInOut/exInOut2020" message="tns:IWsInOut_exInOut2020_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWsInOut/exInOut2020Response" message="tns:IWsInOut_exInOut2020_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="aInOut2020">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWsInOut/aInOut2020" message="tns:IWsInOut_aInOut2020_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWsInOut/aInOut2020Response" message="tns:IWsInOut_aInOut2020_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="mInOut2020">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWsInOut/mInOut2020" message="tns:IWsInOut_mInOut2020_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWsInOut/mInOut2020Response" message="tns:IWsInOut_mInOut2020_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IWsInOut" type="tns:IWsInOut">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
     <wsdl:operation name="sLaborCompanyList">
       <soap:operation soapAction="http://tempuri.org/IWsInOut/sLaborCompanyList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="co_Cmb">
+      <soap:operation soapAction="http://tempuri.org/IWsInOut/co_Cmb" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="team_Cmb">
+      <soap:operation soapAction="http://tempuri.org/IWsInOut/team_Cmb" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -59,8 +257,152 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="sInOutLog">
-      <soap:operation soapAction="http://tempuri.org/IWsInOut/sInOutLog" style="document" />
+    <wsdl:operation name="sInOutHistory">
+      <soap:operation soapAction="http://tempuri.org/IWsInOut/sInOutHistory" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mInOut">
+      <soap:operation soapAction="http://tempuri.org/IWsInOut/mInOut" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="aInOutLog">
+      <soap:operation soapAction="http://tempuri.org/IWsInOut/aInOutLog" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="dInHistory">
+      <soap:operation soapAction="http://tempuri.org/IWsInOut/dInHistory" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="dOutHistory">
+      <soap:operation soapAction="http://tempuri.org/IWsInOut/dOutHistory" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mInOutHistory">
+      <soap:operation soapAction="http://tempuri.org/IWsInOut/mInOutHistory" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="aInOutHistory">
+      <soap:operation soapAction="http://tempuri.org/IWsInOut/aInOutHistory" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="aInOut">
+      <soap:operation soapAction="http://tempuri.org/IWsInOut/aInOut" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="exInOutCo">
+      <soap:operation soapAction="http://tempuri.org/IWsInOut/exInOutCo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="aInOutCo">
+      <soap:operation soapAction="http://tempuri.org/IWsInOut/aInOutCo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mInOutCo">
+      <soap:operation soapAction="http://tempuri.org/IWsInOut/mInOutCo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="exLabInOutFinal">
+      <soap:operation soapAction="http://tempuri.org/IWsInOut/exLabInOutFinal" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mLabInOutFinal">
+      <soap:operation soapAction="http://tempuri.org/IWsInOut/mLabInOutFinal" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="aLabInOutFinal">
+      <soap:operation soapAction="http://tempuri.org/IWsInOut/aLabInOutFinal" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="exInOut2020">
+      <soap:operation soapAction="http://tempuri.org/IWsInOut/exInOut2020" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="aInOut2020">
+      <soap:operation soapAction="http://tempuri.org/IWsInOut/aInOut2020" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mInOut2020">
+      <soap:operation soapAction="http://tempuri.org/IWsInOut/mInOut2020" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

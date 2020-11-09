@@ -32,12 +32,14 @@
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.cmbCom = new System.Windows.Forms.ComboBox();
             this.btnSearch = new System.Windows.Forms.Button();
+            this.cmbInOut = new System.Windows.Forms.ComboBox();
+            this.lbl1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // dateTimePicker2
             // 
             this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker2.Location = new System.Drawing.Point(308, 10);
+            this.dateTimePicker2.Location = new System.Drawing.Point(318, 10);
             this.dateTimePicker2.Name = "dateTimePicker2";
             this.dateTimePicker2.Size = new System.Drawing.Size(98, 21);
             this.dateTimePicker2.TabIndex = 11;
@@ -61,7 +63,7 @@
             // 
             // btnSearch
             // 
-            this.btnSearch.Location = new System.Drawing.Point(413, 9);
+            this.btnSearch.Location = new System.Drawing.Point(423, 9);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(75, 23);
             this.btnSearch.TabIndex = 12;
@@ -69,10 +71,30 @@
             this.btnSearch.UseVisualStyleBackColor = true;
             this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
+            // cmbInOut
+            // 
+            this.cmbInOut.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbInOut.FormattingEnabled = true;
+            this.cmbInOut.Location = new System.Drawing.Point(508, 11);
+            this.cmbInOut.Name = "cmbInOut";
+            this.cmbInOut.Size = new System.Drawing.Size(121, 20);
+            this.cmbInOut.TabIndex = 13;
+            // 
+            // lbl1
+            // 
+            this.lbl1.AutoSize = true;
+            this.lbl1.Location = new System.Drawing.Point(301, 15);
+            this.lbl1.Name = "lbl1";
+            this.lbl1.Size = new System.Drawing.Size(14, 12);
+            this.lbl1.TabIndex = 14;
+            this.lbl1.Text = "~";
+            // 
             // SearchCondition2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.lbl1);
+            this.Controls.Add(this.cmbInOut);
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.dateTimePicker2);
             this.Controls.Add(this.dateTimePicker1);
@@ -80,6 +102,7 @@
             this.Name = "SearchCondition2";
             this.Size = new System.Drawing.Size(750, 40);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -89,5 +112,7 @@
         public System.Windows.Forms.DateTimePicker dateTimePicker1;
         public System.Windows.Forms.ComboBox cmbCom;
         public System.Windows.Forms.Button btnSearch;
+        public System.Windows.Forms.ComboBox cmbInOut;
+        private System.Windows.Forms.Label lbl1;
     }
 }

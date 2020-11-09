@@ -22,7 +22,7 @@ namespace EldigmPlusSvc_Memco.WebSvc.MainHome
         string sSiteSubMenu1(string pDbNm, string pSiteCd, string pTopMenuCd, out List<DataSubMenu1> reList, out string reMsg);
 
         [OperationContract]
-        string sSiteSubMenu2(string pDbNm, string pSiteCd, string pTopMenuCd, string pSubMenuCd, out List<DataSubMenu2> reList, out string reMsg);
+        string sSiteSubMenu2(string pDbNm, string pSiteCd, string pTopMenuCd, string pSubMenuCd, string pAuthCd, out List<DataSubMenu2> reList, out string reMsg);
     }
 
 

@@ -333,7 +333,6 @@ namespace EldigmPlusApp.SubForm.Sys.CodeT
                         else
                         {
                             dataGridView1.Rows.Clear();
-                            //MessageBox.Show("데이터가 없습니다");
                         }
                     }
                 }
@@ -836,7 +835,6 @@ namespace EldigmPlusApp.SubForm.Sys.CodeT
                     wSvc.Dispose();
             }
         }
-
      
     }
 }

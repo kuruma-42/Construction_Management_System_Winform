@@ -31,9 +31,45 @@ namespace EldigmPlusApp.Mem_WsInOut {
         
         private System.Threading.SendOrPostCallback sLaborCompanyListOperationCompleted;
         
+        private System.Threading.SendOrPostCallback co_CmbOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback team_CmbOperationCompleted;
+        
         private System.Threading.SendOrPostCallback sInOutOperationCompleted;
         
-        private System.Threading.SendOrPostCallback sInOutLogOperationCompleted;
+        private System.Threading.SendOrPostCallback sInOutHistoryOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback mInOutOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback aInOutLogOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback dInHistoryOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback dOutHistoryOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback mInOutHistoryOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback aInOutHistoryOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback aInOutOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback exInOutCoOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback aInOutCoOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback mInOutCoOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback exLabInOutFinalOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback mLabInOutFinalOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback aLabInOutFinalOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback exInOut2020OperationCompleted;
+        
+        private System.Threading.SendOrPostCallback aInOut2020OperationCompleted;
+        
+        private System.Threading.SendOrPostCallback mInOut2020OperationCompleted;
         
         private bool useDefaultCredentialsSetExplicitly;
         
@@ -77,10 +113,64 @@ namespace EldigmPlusApp.Mem_WsInOut {
         public event sLaborCompanyListCompletedEventHandler sLaborCompanyListCompleted;
         
         /// <remarks/>
+        public event co_CmbCompletedEventHandler co_CmbCompleted;
+        
+        /// <remarks/>
+        public event team_CmbCompletedEventHandler team_CmbCompleted;
+        
+        /// <remarks/>
         public event sInOutCompletedEventHandler sInOutCompleted;
         
         /// <remarks/>
-        public event sInOutLogCompletedEventHandler sInOutLogCompleted;
+        public event sInOutHistoryCompletedEventHandler sInOutHistoryCompleted;
+        
+        /// <remarks/>
+        public event mInOutCompletedEventHandler mInOutCompleted;
+        
+        /// <remarks/>
+        public event aInOutLogCompletedEventHandler aInOutLogCompleted;
+        
+        /// <remarks/>
+        public event dInHistoryCompletedEventHandler dInHistoryCompleted;
+        
+        /// <remarks/>
+        public event dOutHistoryCompletedEventHandler dOutHistoryCompleted;
+        
+        /// <remarks/>
+        public event mInOutHistoryCompletedEventHandler mInOutHistoryCompleted;
+        
+        /// <remarks/>
+        public event aInOutHistoryCompletedEventHandler aInOutHistoryCompleted;
+        
+        /// <remarks/>
+        public event aInOutCompletedEventHandler aInOutCompleted;
+        
+        /// <remarks/>
+        public event exInOutCoCompletedEventHandler exInOutCoCompleted;
+        
+        /// <remarks/>
+        public event aInOutCoCompletedEventHandler aInOutCoCompleted;
+        
+        /// <remarks/>
+        public event mInOutCoCompletedEventHandler mInOutCoCompleted;
+        
+        /// <remarks/>
+        public event exLabInOutFinalCompletedEventHandler exLabInOutFinalCompleted;
+        
+        /// <remarks/>
+        public event mLabInOutFinalCompletedEventHandler mLabInOutFinalCompleted;
+        
+        /// <remarks/>
+        public event aLabInOutFinalCompletedEventHandler aLabInOutFinalCompleted;
+        
+        /// <remarks/>
+        public event exInOut2020CompletedEventHandler exInOut2020Completed;
+        
+        /// <remarks/>
+        public event aInOut2020CompletedEventHandler aInOut2020Completed;
+        
+        /// <remarks/>
+        public event mInOut2020CompletedEventHandler mInOut2020Completed;
         
         /// <remarks/>
         [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IWsInOut/sLaborCompanyList", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
@@ -119,27 +209,92 @@ namespace EldigmPlusApp.Mem_WsInOut {
         }
         
         /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IWsInOut/co_Cmb", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [return: System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string co_Cmb([System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pSiteCd, [System.Xml.Serialization.XmlArrayAttribute(IsNullable=true)] [System.Xml.Serialization.XmlArrayItemAttribute(Namespace="http://schemas.datacontract.org/2004/07/EldigmPlusSvc_Main.WebSvc.Worker.InOut")] out DataComCombo[] reList, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] out string reMsg) {
+            object[] results = this.Invoke("co_Cmb", new object[] {
+                        pSiteCd});
+            reList = ((DataComCombo[])(results[1]));
+            reMsg = ((string)(results[2]));
+            return ((string)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void co_CmbAsync(string pSiteCd) {
+            this.co_CmbAsync(pSiteCd, null);
+        }
+        
+        /// <remarks/>
+        public void co_CmbAsync(string pSiteCd, object userState) {
+            if ((this.co_CmbOperationCompleted == null)) {
+                this.co_CmbOperationCompleted = new System.Threading.SendOrPostCallback(this.Onco_CmbOperationCompleted);
+            }
+            this.InvokeAsync("co_Cmb", new object[] {
+                        pSiteCd}, this.co_CmbOperationCompleted, userState);
+        }
+        
+        private void Onco_CmbOperationCompleted(object arg) {
+            if ((this.co_CmbCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.co_CmbCompleted(this, new co_CmbCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IWsInOut/team_Cmb", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [return: System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string team_Cmb([System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pSiteCd, [System.Xml.Serialization.XmlArrayAttribute(IsNullable=true)] [System.Xml.Serialization.XmlArrayItemAttribute(Namespace="http://schemas.datacontract.org/2004/07/EldigmPlusSvc_Main.WebSvc.Worker.InOut")] out DataComCombo[] reList, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] out string reMsg) {
+            object[] results = this.Invoke("team_Cmb", new object[] {
+                        pSiteCd});
+            reList = ((DataComCombo[])(results[1]));
+            reMsg = ((string)(results[2]));
+            return ((string)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void team_CmbAsync(string pSiteCd) {
+            this.team_CmbAsync(pSiteCd, null);
+        }
+        
+        /// <remarks/>
+        public void team_CmbAsync(string pSiteCd, object userState) {
+            if ((this.team_CmbOperationCompleted == null)) {
+                this.team_CmbOperationCompleted = new System.Threading.SendOrPostCallback(this.Onteam_CmbOperationCompleted);
+            }
+            this.InvokeAsync("team_Cmb", new object[] {
+                        pSiteCd}, this.team_CmbOperationCompleted, userState);
+        }
+        
+        private void Onteam_CmbOperationCompleted(object arg) {
+            if ((this.team_CmbCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.team_CmbCompleted(this, new team_CmbCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
         [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IWsInOut/sInOut", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
         [return: System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public string sInOut([System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pDbnm, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pSiteCd, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pDtp1, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pDtp2, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pCocd, [System.Xml.Serialization.XmlArrayAttribute(IsNullable=true)] [System.Xml.Serialization.XmlArrayItemAttribute(Namespace="http://schemas.datacontract.org/2004/07/EldigmPlusSvc_Main.WebSvc.Worker.InOut")] out DataInOut[] reList, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] out string reMsg) {
+        public string sInOut([System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pDbnm, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pSiteCd, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pDtp1, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pDtp2, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pCocd, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pCmbIO, [System.Xml.Serialization.XmlArrayAttribute(IsNullable=true)] [System.Xml.Serialization.XmlArrayItemAttribute(Namespace="http://schemas.datacontract.org/2004/07/EldigmPlusSvc_Main.WebSvc.Worker.InOut")] out DataInOut[] reList, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] out string reMsg) {
             object[] results = this.Invoke("sInOut", new object[] {
                         pDbnm,
                         pSiteCd,
                         pDtp1,
                         pDtp2,
-                        pCocd});
+                        pCocd,
+                        pCmbIO});
             reList = ((DataInOut[])(results[1]));
             reMsg = ((string)(results[2]));
             return ((string)(results[0]));
         }
         
         /// <remarks/>
-        public void sInOutAsync(string pDbnm, string pSiteCd, string pDtp1, string pDtp2, string pCocd) {
-            this.sInOutAsync(pDbnm, pSiteCd, pDtp1, pDtp2, pCocd, null);
+        public void sInOutAsync(string pDbnm, string pSiteCd, string pDtp1, string pDtp2, string pCocd, string pCmbIO) {
+            this.sInOutAsync(pDbnm, pSiteCd, pDtp1, pDtp2, pCocd, pCmbIO, null);
         }
         
         /// <remarks/>
-        public void sInOutAsync(string pDbnm, string pSiteCd, string pDtp1, string pDtp2, string pCocd, object userState) {
+        public void sInOutAsync(string pDbnm, string pSiteCd, string pDtp1, string pDtp2, string pCocd, string pCmbIO, object userState) {
             if ((this.sInOutOperationCompleted == null)) {
                 this.sInOutOperationCompleted = new System.Threading.SendOrPostCallback(this.OnsInOutOperationCompleted);
             }
@@ -148,7 +303,8 @@ namespace EldigmPlusApp.Mem_WsInOut {
                         pSiteCd,
                         pDtp1,
                         pDtp2,
-                        pCocd}, this.sInOutOperationCompleted, userState);
+                        pCocd,
+                        pCmbIO}, this.sInOutOperationCompleted, userState);
         }
         
         private void OnsInOutOperationCompleted(object arg) {
@@ -159,10 +315,10 @@ namespace EldigmPlusApp.Mem_WsInOut {
         }
         
         /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IWsInOut/sInOutLog", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IWsInOut/sInOutHistory", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
         [return: System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public string sInOutLog([System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pDbnm, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pSiteCd, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pDtp1, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pDtp2, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pCocd, [System.Xml.Serialization.XmlArrayAttribute(IsNullable=true)] [System.Xml.Serialization.XmlArrayItemAttribute(Namespace="http://schemas.datacontract.org/2004/07/EldigmPlusSvc_Main.WebSvc.Worker.InOut")] out DataInOut[] reList, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] out string reMsg) {
-            object[] results = this.Invoke("sInOutLog", new object[] {
+        public string sInOutHistory([System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pDbnm, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pSiteCd, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pDtp1, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pDtp2, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pCocd, [System.Xml.Serialization.XmlArrayAttribute(IsNullable=true)] [System.Xml.Serialization.XmlArrayItemAttribute(Namespace="http://schemas.datacontract.org/2004/07/EldigmPlusSvc_Main.WebSvc.Worker.InOut")] out DataInOut[] reList, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] out string reMsg) {
+            object[] results = this.Invoke("sInOutHistory", new object[] {
                         pDbnm,
                         pSiteCd,
                         pDtp1,
@@ -174,27 +330,707 @@ namespace EldigmPlusApp.Mem_WsInOut {
         }
         
         /// <remarks/>
-        public void sInOutLogAsync(string pDbnm, string pSiteCd, string pDtp1, string pDtp2, string pCocd) {
-            this.sInOutLogAsync(pDbnm, pSiteCd, pDtp1, pDtp2, pCocd, null);
+        public void sInOutHistoryAsync(string pDbnm, string pSiteCd, string pDtp1, string pDtp2, string pCocd) {
+            this.sInOutHistoryAsync(pDbnm, pSiteCd, pDtp1, pDtp2, pCocd, null);
         }
         
         /// <remarks/>
-        public void sInOutLogAsync(string pDbnm, string pSiteCd, string pDtp1, string pDtp2, string pCocd, object userState) {
-            if ((this.sInOutLogOperationCompleted == null)) {
-                this.sInOutLogOperationCompleted = new System.Threading.SendOrPostCallback(this.OnsInOutLogOperationCompleted);
+        public void sInOutHistoryAsync(string pDbnm, string pSiteCd, string pDtp1, string pDtp2, string pCocd, object userState) {
+            if ((this.sInOutHistoryOperationCompleted == null)) {
+                this.sInOutHistoryOperationCompleted = new System.Threading.SendOrPostCallback(this.OnsInOutHistoryOperationCompleted);
             }
-            this.InvokeAsync("sInOutLog", new object[] {
+            this.InvokeAsync("sInOutHistory", new object[] {
                         pDbnm,
                         pSiteCd,
                         pDtp1,
                         pDtp2,
-                        pCocd}, this.sInOutLogOperationCompleted, userState);
+                        pCocd}, this.sInOutHistoryOperationCompleted, userState);
         }
         
-        private void OnsInOutLogOperationCompleted(object arg) {
-            if ((this.sInOutLogCompleted != null)) {
+        private void OnsInOutHistoryOperationCompleted(object arg) {
+            if ((this.sInOutHistoryCompleted != null)) {
                 System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
-                this.sInOutLogCompleted(this, new sInOutLogCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+                this.sInOutHistoryCompleted(this, new sInOutHistoryCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IWsInOut/mInOut", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [return: System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string mInOut([System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pDbnm, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pLabNo, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pSiteCd, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pRegDate, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pInDt, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pOutDt, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pCoCd, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pTeamCd, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] out string reMsg, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] out string reData) {
+            object[] results = this.Invoke("mInOut", new object[] {
+                        pDbnm,
+                        pLabNo,
+                        pSiteCd,
+                        pRegDate,
+                        pInDt,
+                        pOutDt,
+                        pCoCd,
+                        pTeamCd});
+            reMsg = ((string)(results[1]));
+            reData = ((string)(results[2]));
+            return ((string)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void mInOutAsync(string pDbnm, string pLabNo, string pSiteCd, string pRegDate, string pInDt, string pOutDt, string pCoCd, string pTeamCd) {
+            this.mInOutAsync(pDbnm, pLabNo, pSiteCd, pRegDate, pInDt, pOutDt, pCoCd, pTeamCd, null);
+        }
+        
+        /// <remarks/>
+        public void mInOutAsync(string pDbnm, string pLabNo, string pSiteCd, string pRegDate, string pInDt, string pOutDt, string pCoCd, string pTeamCd, object userState) {
+            if ((this.mInOutOperationCompleted == null)) {
+                this.mInOutOperationCompleted = new System.Threading.SendOrPostCallback(this.OnmInOutOperationCompleted);
+            }
+            this.InvokeAsync("mInOut", new object[] {
+                        pDbnm,
+                        pLabNo,
+                        pSiteCd,
+                        pRegDate,
+                        pInDt,
+                        pOutDt,
+                        pCoCd,
+                        pTeamCd}, this.mInOutOperationCompleted, userState);
+        }
+        
+        private void OnmInOutOperationCompleted(object arg) {
+            if ((this.mInOutCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.mInOutCompleted(this, new mInOutCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IWsInOut/aInOutLog", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [return: System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string aInOutLog([System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pDbnm, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pLabNo, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pSiteCd, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pRegDate, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pInDt, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pOutDt, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pCoCd, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pTeamCd, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pInIOPFId, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pOutIOPFId, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pInputId, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] out string reMsg, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] out string reData) {
+            object[] results = this.Invoke("aInOutLog", new object[] {
+                        pDbnm,
+                        pLabNo,
+                        pSiteCd,
+                        pRegDate,
+                        pInDt,
+                        pOutDt,
+                        pCoCd,
+                        pTeamCd,
+                        pInIOPFId,
+                        pOutIOPFId,
+                        pInputId});
+            reMsg = ((string)(results[1]));
+            reData = ((string)(results[2]));
+            return ((string)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void aInOutLogAsync(string pDbnm, string pLabNo, string pSiteCd, string pRegDate, string pInDt, string pOutDt, string pCoCd, string pTeamCd, string pInIOPFId, string pOutIOPFId, string pInputId) {
+            this.aInOutLogAsync(pDbnm, pLabNo, pSiteCd, pRegDate, pInDt, pOutDt, pCoCd, pTeamCd, pInIOPFId, pOutIOPFId, pInputId, null);
+        }
+        
+        /// <remarks/>
+        public void aInOutLogAsync(string pDbnm, string pLabNo, string pSiteCd, string pRegDate, string pInDt, string pOutDt, string pCoCd, string pTeamCd, string pInIOPFId, string pOutIOPFId, string pInputId, object userState) {
+            if ((this.aInOutLogOperationCompleted == null)) {
+                this.aInOutLogOperationCompleted = new System.Threading.SendOrPostCallback(this.OnaInOutLogOperationCompleted);
+            }
+            this.InvokeAsync("aInOutLog", new object[] {
+                        pDbnm,
+                        pLabNo,
+                        pSiteCd,
+                        pRegDate,
+                        pInDt,
+                        pOutDt,
+                        pCoCd,
+                        pTeamCd,
+                        pInIOPFId,
+                        pOutIOPFId,
+                        pInputId}, this.aInOutLogOperationCompleted, userState);
+        }
+        
+        private void OnaInOutLogOperationCompleted(object arg) {
+            if ((this.aInOutLogCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.aInOutLogCompleted(this, new aInOutLogCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IWsInOut/dInHistory", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [return: System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string dInHistory([System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pDbnm, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pLabNo, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pSiteCd, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pRegDate, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pEventDt, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] out string reMsg, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] out string reData) {
+            object[] results = this.Invoke("dInHistory", new object[] {
+                        pDbnm,
+                        pLabNo,
+                        pSiteCd,
+                        pRegDate,
+                        pEventDt});
+            reMsg = ((string)(results[1]));
+            reData = ((string)(results[2]));
+            return ((string)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void dInHistoryAsync(string pDbnm, string pLabNo, string pSiteCd, string pRegDate, string pEventDt) {
+            this.dInHistoryAsync(pDbnm, pLabNo, pSiteCd, pRegDate, pEventDt, null);
+        }
+        
+        /// <remarks/>
+        public void dInHistoryAsync(string pDbnm, string pLabNo, string pSiteCd, string pRegDate, string pEventDt, object userState) {
+            if ((this.dInHistoryOperationCompleted == null)) {
+                this.dInHistoryOperationCompleted = new System.Threading.SendOrPostCallback(this.OndInHistoryOperationCompleted);
+            }
+            this.InvokeAsync("dInHistory", new object[] {
+                        pDbnm,
+                        pLabNo,
+                        pSiteCd,
+                        pRegDate,
+                        pEventDt}, this.dInHistoryOperationCompleted, userState);
+        }
+        
+        private void OndInHistoryOperationCompleted(object arg) {
+            if ((this.dInHistoryCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.dInHistoryCompleted(this, new dInHistoryCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IWsInOut/dOutHistory", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [return: System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string dOutHistory([System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pDbnm, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pLabNo, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pSiteCd, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pRegDate, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pEventDt, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] out string reMsg, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] out string reData) {
+            object[] results = this.Invoke("dOutHistory", new object[] {
+                        pDbnm,
+                        pLabNo,
+                        pSiteCd,
+                        pRegDate,
+                        pEventDt});
+            reMsg = ((string)(results[1]));
+            reData = ((string)(results[2]));
+            return ((string)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void dOutHistoryAsync(string pDbnm, string pLabNo, string pSiteCd, string pRegDate, string pEventDt) {
+            this.dOutHistoryAsync(pDbnm, pLabNo, pSiteCd, pRegDate, pEventDt, null);
+        }
+        
+        /// <remarks/>
+        public void dOutHistoryAsync(string pDbnm, string pLabNo, string pSiteCd, string pRegDate, string pEventDt, object userState) {
+            if ((this.dOutHistoryOperationCompleted == null)) {
+                this.dOutHistoryOperationCompleted = new System.Threading.SendOrPostCallback(this.OndOutHistoryOperationCompleted);
+            }
+            this.InvokeAsync("dOutHistory", new object[] {
+                        pDbnm,
+                        pLabNo,
+                        pSiteCd,
+                        pRegDate,
+                        pEventDt}, this.dOutHistoryOperationCompleted, userState);
+        }
+        
+        private void OndOutHistoryOperationCompleted(object arg) {
+            if ((this.dOutHistoryCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.dOutHistoryCompleted(this, new dOutHistoryCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IWsInOut/mInOutHistory", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [return: System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string mInOutHistory([System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pDbnm, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pLabNo, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pSiteCd, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pRegDate, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pEventDt, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pEventDtH, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pCoCd, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pTeamCd, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] out string reMsg, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] out string reData) {
+            object[] results = this.Invoke("mInOutHistory", new object[] {
+                        pDbnm,
+                        pLabNo,
+                        pSiteCd,
+                        pRegDate,
+                        pEventDt,
+                        pEventDtH,
+                        pCoCd,
+                        pTeamCd});
+            reMsg = ((string)(results[1]));
+            reData = ((string)(results[2]));
+            return ((string)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void mInOutHistoryAsync(string pDbnm, string pLabNo, string pSiteCd, string pRegDate, string pEventDt, string pEventDtH, string pCoCd, string pTeamCd) {
+            this.mInOutHistoryAsync(pDbnm, pLabNo, pSiteCd, pRegDate, pEventDt, pEventDtH, pCoCd, pTeamCd, null);
+        }
+        
+        /// <remarks/>
+        public void mInOutHistoryAsync(string pDbnm, string pLabNo, string pSiteCd, string pRegDate, string pEventDt, string pEventDtH, string pCoCd, string pTeamCd, object userState) {
+            if ((this.mInOutHistoryOperationCompleted == null)) {
+                this.mInOutHistoryOperationCompleted = new System.Threading.SendOrPostCallback(this.OnmInOutHistoryOperationCompleted);
+            }
+            this.InvokeAsync("mInOutHistory", new object[] {
+                        pDbnm,
+                        pLabNo,
+                        pSiteCd,
+                        pRegDate,
+                        pEventDt,
+                        pEventDtH,
+                        pCoCd,
+                        pTeamCd}, this.mInOutHistoryOperationCompleted, userState);
+        }
+        
+        private void OnmInOutHistoryOperationCompleted(object arg) {
+            if ((this.mInOutHistoryCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.mInOutHistoryCompleted(this, new mInOutHistoryCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IWsInOut/aInOutHistory", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [return: System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string aInOutHistory([System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pDbnm, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pLabNo, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pSiteCd, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pRegDate, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pEventDt, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pCoCd, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pTeamCd, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pInputId, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] out string reMsg, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] out string reData) {
+            object[] results = this.Invoke("aInOutHistory", new object[] {
+                        pDbnm,
+                        pLabNo,
+                        pSiteCd,
+                        pRegDate,
+                        pEventDt,
+                        pCoCd,
+                        pTeamCd,
+                        pInputId});
+            reMsg = ((string)(results[1]));
+            reData = ((string)(results[2]));
+            return ((string)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void aInOutHistoryAsync(string pDbnm, string pLabNo, string pSiteCd, string pRegDate, string pEventDt, string pCoCd, string pTeamCd, string pInputId) {
+            this.aInOutHistoryAsync(pDbnm, pLabNo, pSiteCd, pRegDate, pEventDt, pCoCd, pTeamCd, pInputId, null);
+        }
+        
+        /// <remarks/>
+        public void aInOutHistoryAsync(string pDbnm, string pLabNo, string pSiteCd, string pRegDate, string pEventDt, string pCoCd, string pTeamCd, string pInputId, object userState) {
+            if ((this.aInOutHistoryOperationCompleted == null)) {
+                this.aInOutHistoryOperationCompleted = new System.Threading.SendOrPostCallback(this.OnaInOutHistoryOperationCompleted);
+            }
+            this.InvokeAsync("aInOutHistory", new object[] {
+                        pDbnm,
+                        pLabNo,
+                        pSiteCd,
+                        pRegDate,
+                        pEventDt,
+                        pCoCd,
+                        pTeamCd,
+                        pInputId}, this.aInOutHistoryOperationCompleted, userState);
+        }
+        
+        private void OnaInOutHistoryOperationCompleted(object arg) {
+            if ((this.aInOutHistoryCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.aInOutHistoryCompleted(this, new aInOutHistoryCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IWsInOut/aInOut", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [return: System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string aInOut([System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pDbnm, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pLabNo, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pSiteCd, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pRegDate, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pInDt, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pOutDt, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pCoCd, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pTeamCd, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] out string reMsg, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] out string reData) {
+            object[] results = this.Invoke("aInOut", new object[] {
+                        pDbnm,
+                        pLabNo,
+                        pSiteCd,
+                        pRegDate,
+                        pInDt,
+                        pOutDt,
+                        pCoCd,
+                        pTeamCd});
+            reMsg = ((string)(results[1]));
+            reData = ((string)(results[2]));
+            return ((string)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void aInOutAsync(string pDbnm, string pLabNo, string pSiteCd, string pRegDate, string pInDt, string pOutDt, string pCoCd, string pTeamCd) {
+            this.aInOutAsync(pDbnm, pLabNo, pSiteCd, pRegDate, pInDt, pOutDt, pCoCd, pTeamCd, null);
+        }
+        
+        /// <remarks/>
+        public void aInOutAsync(string pDbnm, string pLabNo, string pSiteCd, string pRegDate, string pInDt, string pOutDt, string pCoCd, string pTeamCd, object userState) {
+            if ((this.aInOutOperationCompleted == null)) {
+                this.aInOutOperationCompleted = new System.Threading.SendOrPostCallback(this.OnaInOutOperationCompleted);
+            }
+            this.InvokeAsync("aInOut", new object[] {
+                        pDbnm,
+                        pLabNo,
+                        pSiteCd,
+                        pRegDate,
+                        pInDt,
+                        pOutDt,
+                        pCoCd,
+                        pTeamCd}, this.aInOutOperationCompleted, userState);
+        }
+        
+        private void OnaInOutOperationCompleted(object arg) {
+            if ((this.aInOutCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.aInOutCompleted(this, new aInOutCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IWsInOut/exInOutCo", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [return: System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string exInOutCo([System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pDbnm, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pLabNo, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pSiteCd, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pCoCd, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] out string reMsg, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] out string reData) {
+            object[] results = this.Invoke("exInOutCo", new object[] {
+                        pDbnm,
+                        pLabNo,
+                        pSiteCd,
+                        pCoCd});
+            reMsg = ((string)(results[1]));
+            reData = ((string)(results[2]));
+            return ((string)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void exInOutCoAsync(string pDbnm, string pLabNo, string pSiteCd, string pCoCd) {
+            this.exInOutCoAsync(pDbnm, pLabNo, pSiteCd, pCoCd, null);
+        }
+        
+        /// <remarks/>
+        public void exInOutCoAsync(string pDbnm, string pLabNo, string pSiteCd, string pCoCd, object userState) {
+            if ((this.exInOutCoOperationCompleted == null)) {
+                this.exInOutCoOperationCompleted = new System.Threading.SendOrPostCallback(this.OnexInOutCoOperationCompleted);
+            }
+            this.InvokeAsync("exInOutCo", new object[] {
+                        pDbnm,
+                        pLabNo,
+                        pSiteCd,
+                        pCoCd}, this.exInOutCoOperationCompleted, userState);
+        }
+        
+        private void OnexInOutCoOperationCompleted(object arg) {
+            if ((this.exInOutCoCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.exInOutCoCompleted(this, new exInOutCoCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IWsInOut/aInOutCo", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [return: System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string aInOutCo([System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pDbnm, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pLabNo, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pSiteCd, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pCoCd, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pInDt, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] out string reMsg, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] out string reData) {
+            object[] results = this.Invoke("aInOutCo", new object[] {
+                        pDbnm,
+                        pLabNo,
+                        pSiteCd,
+                        pCoCd,
+                        pInDt});
+            reMsg = ((string)(results[1]));
+            reData = ((string)(results[2]));
+            return ((string)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void aInOutCoAsync(string pDbnm, string pLabNo, string pSiteCd, string pCoCd, string pInDt) {
+            this.aInOutCoAsync(pDbnm, pLabNo, pSiteCd, pCoCd, pInDt, null);
+        }
+        
+        /// <remarks/>
+        public void aInOutCoAsync(string pDbnm, string pLabNo, string pSiteCd, string pCoCd, string pInDt, object userState) {
+            if ((this.aInOutCoOperationCompleted == null)) {
+                this.aInOutCoOperationCompleted = new System.Threading.SendOrPostCallback(this.OnaInOutCoOperationCompleted);
+            }
+            this.InvokeAsync("aInOutCo", new object[] {
+                        pDbnm,
+                        pLabNo,
+                        pSiteCd,
+                        pCoCd,
+                        pInDt}, this.aInOutCoOperationCompleted, userState);
+        }
+        
+        private void OnaInOutCoOperationCompleted(object arg) {
+            if ((this.aInOutCoCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.aInOutCoCompleted(this, new aInOutCoCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IWsInOut/mInOutCo", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [return: System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string mInOutCo([System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pDbnm, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pLabNo, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pSiteCd, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pCoCd, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pInDt, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] out string reMsg, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] out string reData) {
+            object[] results = this.Invoke("mInOutCo", new object[] {
+                        pDbnm,
+                        pLabNo,
+                        pSiteCd,
+                        pCoCd,
+                        pInDt});
+            reMsg = ((string)(results[1]));
+            reData = ((string)(results[2]));
+            return ((string)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void mInOutCoAsync(string pDbnm, string pLabNo, string pSiteCd, string pCoCd, string pInDt) {
+            this.mInOutCoAsync(pDbnm, pLabNo, pSiteCd, pCoCd, pInDt, null);
+        }
+        
+        /// <remarks/>
+        public void mInOutCoAsync(string pDbnm, string pLabNo, string pSiteCd, string pCoCd, string pInDt, object userState) {
+            if ((this.mInOutCoOperationCompleted == null)) {
+                this.mInOutCoOperationCompleted = new System.Threading.SendOrPostCallback(this.OnmInOutCoOperationCompleted);
+            }
+            this.InvokeAsync("mInOutCo", new object[] {
+                        pDbnm,
+                        pLabNo,
+                        pSiteCd,
+                        pCoCd,
+                        pInDt}, this.mInOutCoOperationCompleted, userState);
+        }
+        
+        private void OnmInOutCoOperationCompleted(object arg) {
+            if ((this.mInOutCoCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.mInOutCoCompleted(this, new mInOutCoCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IWsInOut/exLabInOutFinal", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [return: System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string exLabInOutFinal([System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pLabNo, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pSiteCd, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] out string reMsg, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] out string reData) {
+            object[] results = this.Invoke("exLabInOutFinal", new object[] {
+                        pLabNo,
+                        pSiteCd});
+            reMsg = ((string)(results[1]));
+            reData = ((string)(results[2]));
+            return ((string)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void exLabInOutFinalAsync(string pLabNo, string pSiteCd) {
+            this.exLabInOutFinalAsync(pLabNo, pSiteCd, null);
+        }
+        
+        /// <remarks/>
+        public void exLabInOutFinalAsync(string pLabNo, string pSiteCd, object userState) {
+            if ((this.exLabInOutFinalOperationCompleted == null)) {
+                this.exLabInOutFinalOperationCompleted = new System.Threading.SendOrPostCallback(this.OnexLabInOutFinalOperationCompleted);
+            }
+            this.InvokeAsync("exLabInOutFinal", new object[] {
+                        pLabNo,
+                        pSiteCd}, this.exLabInOutFinalOperationCompleted, userState);
+        }
+        
+        private void OnexLabInOutFinalOperationCompleted(object arg) {
+            if ((this.exLabInOutFinalCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.exLabInOutFinalCompleted(this, new exLabInOutFinalCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IWsInOut/mLabInOutFinal", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [return: System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string mLabInOutFinal([System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pLabNo, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pSiteCd, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pCoCd, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pTeamCd, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pRegDate, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pInHHMM, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pOutHHMM, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] out string reMsg, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] out string reData) {
+            object[] results = this.Invoke("mLabInOutFinal", new object[] {
+                        pLabNo,
+                        pSiteCd,
+                        pCoCd,
+                        pTeamCd,
+                        pRegDate,
+                        pInHHMM,
+                        pOutHHMM});
+            reMsg = ((string)(results[1]));
+            reData = ((string)(results[2]));
+            return ((string)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void mLabInOutFinalAsync(string pLabNo, string pSiteCd, string pCoCd, string pTeamCd, string pRegDate, string pInHHMM, string pOutHHMM) {
+            this.mLabInOutFinalAsync(pLabNo, pSiteCd, pCoCd, pTeamCd, pRegDate, pInHHMM, pOutHHMM, null);
+        }
+        
+        /// <remarks/>
+        public void mLabInOutFinalAsync(string pLabNo, string pSiteCd, string pCoCd, string pTeamCd, string pRegDate, string pInHHMM, string pOutHHMM, object userState) {
+            if ((this.mLabInOutFinalOperationCompleted == null)) {
+                this.mLabInOutFinalOperationCompleted = new System.Threading.SendOrPostCallback(this.OnmLabInOutFinalOperationCompleted);
+            }
+            this.InvokeAsync("mLabInOutFinal", new object[] {
+                        pLabNo,
+                        pSiteCd,
+                        pCoCd,
+                        pTeamCd,
+                        pRegDate,
+                        pInHHMM,
+                        pOutHHMM}, this.mLabInOutFinalOperationCompleted, userState);
+        }
+        
+        private void OnmLabInOutFinalOperationCompleted(object arg) {
+            if ((this.mLabInOutFinalCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.mLabInOutFinalCompleted(this, new mLabInOutFinalCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IWsInOut/aLabInOutFinal", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [return: System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string aLabInOutFinal([System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pLabNo, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pSiteCd, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pCoCd, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pTeamCd, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pRegDate, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pInHHMM, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pOutHHMM, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] out string reMsg, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] out string reData) {
+            object[] results = this.Invoke("aLabInOutFinal", new object[] {
+                        pLabNo,
+                        pSiteCd,
+                        pCoCd,
+                        pTeamCd,
+                        pRegDate,
+                        pInHHMM,
+                        pOutHHMM});
+            reMsg = ((string)(results[1]));
+            reData = ((string)(results[2]));
+            return ((string)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void aLabInOutFinalAsync(string pLabNo, string pSiteCd, string pCoCd, string pTeamCd, string pRegDate, string pInHHMM, string pOutHHMM) {
+            this.aLabInOutFinalAsync(pLabNo, pSiteCd, pCoCd, pTeamCd, pRegDate, pInHHMM, pOutHHMM, null);
+        }
+        
+        /// <remarks/>
+        public void aLabInOutFinalAsync(string pLabNo, string pSiteCd, string pCoCd, string pTeamCd, string pRegDate, string pInHHMM, string pOutHHMM, object userState) {
+            if ((this.aLabInOutFinalOperationCompleted == null)) {
+                this.aLabInOutFinalOperationCompleted = new System.Threading.SendOrPostCallback(this.OnaLabInOutFinalOperationCompleted);
+            }
+            this.InvokeAsync("aLabInOutFinal", new object[] {
+                        pLabNo,
+                        pSiteCd,
+                        pCoCd,
+                        pTeamCd,
+                        pRegDate,
+                        pInHHMM,
+                        pOutHHMM}, this.aLabInOutFinalOperationCompleted, userState);
+        }
+        
+        private void OnaLabInOutFinalOperationCompleted(object arg) {
+            if ((this.aLabInOutFinalCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.aLabInOutFinalCompleted(this, new aLabInOutFinalCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IWsInOut/exInOut2020", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [return: System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string exInOut2020([System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pLabNo, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pSiteCd, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pRegdate, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] out string reMsg, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] out string reData) {
+            object[] results = this.Invoke("exInOut2020", new object[] {
+                        pLabNo,
+                        pSiteCd,
+                        pRegdate});
+            reMsg = ((string)(results[1]));
+            reData = ((string)(results[2]));
+            return ((string)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void exInOut2020Async(string pLabNo, string pSiteCd, string pRegdate) {
+            this.exInOut2020Async(pLabNo, pSiteCd, pRegdate, null);
+        }
+        
+        /// <remarks/>
+        public void exInOut2020Async(string pLabNo, string pSiteCd, string pRegdate, object userState) {
+            if ((this.exInOut2020OperationCompleted == null)) {
+                this.exInOut2020OperationCompleted = new System.Threading.SendOrPostCallback(this.OnexInOut2020OperationCompleted);
+            }
+            this.InvokeAsync("exInOut2020", new object[] {
+                        pLabNo,
+                        pSiteCd,
+                        pRegdate}, this.exInOut2020OperationCompleted, userState);
+        }
+        
+        private void OnexInOut2020OperationCompleted(object arg) {
+            if ((this.exInOut2020Completed != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.exInOut2020Completed(this, new exInOut2020CompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IWsInOut/aInOut2020", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [return: System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string aInOut2020([System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pLabNo, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pSiteCd, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pRegdate, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pCoCd, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pTeamCd, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pInHHMM, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pOutHHMM, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] out string reMsg, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] out string reData) {
+            object[] results = this.Invoke("aInOut2020", new object[] {
+                        pLabNo,
+                        pSiteCd,
+                        pRegdate,
+                        pCoCd,
+                        pTeamCd,
+                        pInHHMM,
+                        pOutHHMM});
+            reMsg = ((string)(results[1]));
+            reData = ((string)(results[2]));
+            return ((string)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void aInOut2020Async(string pLabNo, string pSiteCd, string pRegdate, string pCoCd, string pTeamCd, string pInHHMM, string pOutHHMM) {
+            this.aInOut2020Async(pLabNo, pSiteCd, pRegdate, pCoCd, pTeamCd, pInHHMM, pOutHHMM, null);
+        }
+        
+        /// <remarks/>
+        public void aInOut2020Async(string pLabNo, string pSiteCd, string pRegdate, string pCoCd, string pTeamCd, string pInHHMM, string pOutHHMM, object userState) {
+            if ((this.aInOut2020OperationCompleted == null)) {
+                this.aInOut2020OperationCompleted = new System.Threading.SendOrPostCallback(this.OnaInOut2020OperationCompleted);
+            }
+            this.InvokeAsync("aInOut2020", new object[] {
+                        pLabNo,
+                        pSiteCd,
+                        pRegdate,
+                        pCoCd,
+                        pTeamCd,
+                        pInHHMM,
+                        pOutHHMM}, this.aInOut2020OperationCompleted, userState);
+        }
+        
+        private void OnaInOut2020OperationCompleted(object arg) {
+            if ((this.aInOut2020Completed != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.aInOut2020Completed(this, new aInOut2020CompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IWsInOut/mInOut2020", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [return: System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string mInOut2020([System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pLabNo, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pSiteCd, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pRegdate, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pCoCd, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pTeamCd, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pInHHMM, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pOutHHMM, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] out string reMsg, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] out string reData) {
+            object[] results = this.Invoke("mInOut2020", new object[] {
+                        pLabNo,
+                        pSiteCd,
+                        pRegdate,
+                        pCoCd,
+                        pTeamCd,
+                        pInHHMM,
+                        pOutHHMM});
+            reMsg = ((string)(results[1]));
+            reData = ((string)(results[2]));
+            return ((string)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void mInOut2020Async(string pLabNo, string pSiteCd, string pRegdate, string pCoCd, string pTeamCd, string pInHHMM, string pOutHHMM) {
+            this.mInOut2020Async(pLabNo, pSiteCd, pRegdate, pCoCd, pTeamCd, pInHHMM, pOutHHMM, null);
+        }
+        
+        /// <remarks/>
+        public void mInOut2020Async(string pLabNo, string pSiteCd, string pRegdate, string pCoCd, string pTeamCd, string pInHHMM, string pOutHHMM, object userState) {
+            if ((this.mInOut2020OperationCompleted == null)) {
+                this.mInOut2020OperationCompleted = new System.Threading.SendOrPostCallback(this.OnmInOut2020OperationCompleted);
+            }
+            this.InvokeAsync("mInOut2020", new object[] {
+                        pLabNo,
+                        pSiteCd,
+                        pRegdate,
+                        pCoCd,
+                        pTeamCd,
+                        pInHHMM,
+                        pOutHHMM}, this.mInOut2020OperationCompleted, userState);
+        }
+        
+        private void OnmInOut2020OperationCompleted(object arg) {
+            if ((this.mInOut2020Completed != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.mInOut2020Completed(this, new mInOut2020CompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
             }
         }
         
@@ -276,6 +1112,10 @@ namespace EldigmPlusApp.Mem_WsInOut {
         
         private bool lAB_NOFieldSpecified;
         
+        private int rEG_DATEField;
+        
+        private bool rEG_DATEFieldSpecified;
+        
         private string lAB_NMField;
         
         private System.DateTime iN_DTField;
@@ -290,7 +1130,15 @@ namespace EldigmPlusApp.Mem_WsInOut {
         
         private bool eVENT_DTFieldSpecified;
         
+        private int cO_CDField;
+        
+        private bool cO_CDFieldSpecified;
+        
         private string cO_NMField;
+        
+        private int tEAM_CDField;
+        
+        private bool tEAM_CDFieldSpecified;
         
         private string tEAM_NMField;
         
@@ -302,7 +1150,21 @@ namespace EldigmPlusApp.Mem_WsInOut {
         
         private string dEV_IO_SCDField;
         
-        private string cODE_NMField;
+        private string cCODE_NMField;
+        
+        private string dEV_NMField;
+        
+        private string dEV_IO_NMField;
+        
+        private string dEV_TYPE_NMField;
+        
+        private int iN_IOPF_IDField;
+        
+        private bool iN_IOPF_IDFieldSpecified;
+        
+        private int oUT_IOPF_IDField;
+        
+        private bool oUT_IOPF_IDFieldSpecified;
         
         /// <remarks/>
         public int LAB_NO {
@@ -322,6 +1184,27 @@ namespace EldigmPlusApp.Mem_WsInOut {
             }
             set {
                 this.lAB_NOFieldSpecified = value;
+            }
+        }
+        
+        /// <remarks/>
+        public int REG_DATE {
+            get {
+                return this.rEG_DATEField;
+            }
+            set {
+                this.rEG_DATEField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool REG_DATESpecified {
+            get {
+                return this.rEG_DATEFieldSpecified;
+            }
+            set {
+                this.rEG_DATEFieldSpecified = value;
             }
         }
         
@@ -400,6 +1283,27 @@ namespace EldigmPlusApp.Mem_WsInOut {
         }
         
         /// <remarks/>
+        public int CO_CD {
+            get {
+                return this.cO_CDField;
+            }
+            set {
+                this.cO_CDField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool CO_CDSpecified {
+            get {
+                return this.cO_CDFieldSpecified;
+            }
+            set {
+                this.cO_CDFieldSpecified = value;
+            }
+        }
+        
+        /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
         public string CO_NM {
             get {
@@ -407,6 +1311,27 @@ namespace EldigmPlusApp.Mem_WsInOut {
             }
             set {
                 this.cO_NMField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public int TEAM_CD {
+            get {
+                return this.tEAM_CDField;
+            }
+            set {
+                this.tEAM_CDField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool TEAM_CDSpecified {
+            get {
+                return this.tEAM_CDFieldSpecified;
+            }
+            set {
+                this.tEAM_CDFieldSpecified = value;
             }
         }
         
@@ -466,12 +1391,87 @@ namespace EldigmPlusApp.Mem_WsInOut {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public string CODE_NM {
+        public string CCODE_NM {
             get {
-                return this.cODE_NMField;
+                return this.cCODE_NMField;
             }
             set {
-                this.cODE_NMField = value;
+                this.cCODE_NMField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string DEV_NM {
+            get {
+                return this.dEV_NMField;
+            }
+            set {
+                this.dEV_NMField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string DEV_IO_NM {
+            get {
+                return this.dEV_IO_NMField;
+            }
+            set {
+                this.dEV_IO_NMField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string DEV_TYPE_NM {
+            get {
+                return this.dEV_TYPE_NMField;
+            }
+            set {
+                this.dEV_TYPE_NMField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public int IN_IOPF_ID {
+            get {
+                return this.iN_IOPF_IDField;
+            }
+            set {
+                this.iN_IOPF_IDField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool IN_IOPF_IDSpecified {
+            get {
+                return this.iN_IOPF_IDFieldSpecified;
+            }
+            set {
+                this.iN_IOPF_IDFieldSpecified = value;
+            }
+        }
+        
+        /// <remarks/>
+        public int OUT_IOPF_ID {
+            get {
+                return this.oUT_IOPF_IDField;
+            }
+            set {
+                this.oUT_IOPF_IDField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool OUT_IOPF_IDSpecified {
+            get {
+                return this.oUT_IOPF_IDFieldSpecified;
+            }
+            set {
+                this.oUT_IOPF_IDFieldSpecified = value;
             }
         }
     }
@@ -489,6 +1489,90 @@ namespace EldigmPlusApp.Mem_WsInOut {
         private object[] results;
         
         internal sLaborCompanyListCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public string Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[0]));
+            }
+        }
+        
+        /// <remarks/>
+        public DataComCombo[] reList {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((DataComCombo[])(this.results[1]));
+            }
+        }
+        
+        /// <remarks/>
+        public string reMsg {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[2]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
+    public delegate void co_CmbCompletedEventHandler(object sender, co_CmbCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class co_CmbCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal co_CmbCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public string Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[0]));
+            }
+        }
+        
+        /// <remarks/>
+        public DataComCombo[] reList {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((DataComCombo[])(this.results[1]));
+            }
+        }
+        
+        /// <remarks/>
+        public string reMsg {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[2]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
+    public delegate void team_CmbCompletedEventHandler(object sender, team_CmbCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class team_CmbCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal team_CmbCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
                 base(exception, cancelled, userState) {
             this.results = results;
         }
@@ -562,17 +1646,17 @@ namespace EldigmPlusApp.Mem_WsInOut {
     
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
-    public delegate void sInOutLogCompletedEventHandler(object sender, sInOutLogCompletedEventArgs e);
+    public delegate void sInOutHistoryCompletedEventHandler(object sender, sInOutHistoryCompletedEventArgs e);
     
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class sInOutLogCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+    public partial class sInOutHistoryCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
         
         private object[] results;
         
-        internal sInOutLogCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+        internal sInOutHistoryCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
                 base(exception, cancelled, userState) {
             this.results = results;
         }
@@ -595,6 +1679,678 @@ namespace EldigmPlusApp.Mem_WsInOut {
         
         /// <remarks/>
         public string reMsg {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[2]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
+    public delegate void mInOutCompletedEventHandler(object sender, mInOutCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class mInOutCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal mInOutCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public string Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[0]));
+            }
+        }
+        
+        /// <remarks/>
+        public string reMsg {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[1]));
+            }
+        }
+        
+        /// <remarks/>
+        public string reData {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[2]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
+    public delegate void aInOutLogCompletedEventHandler(object sender, aInOutLogCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class aInOutLogCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal aInOutLogCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public string Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[0]));
+            }
+        }
+        
+        /// <remarks/>
+        public string reMsg {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[1]));
+            }
+        }
+        
+        /// <remarks/>
+        public string reData {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[2]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
+    public delegate void dInHistoryCompletedEventHandler(object sender, dInHistoryCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class dInHistoryCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal dInHistoryCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public string Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[0]));
+            }
+        }
+        
+        /// <remarks/>
+        public string reMsg {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[1]));
+            }
+        }
+        
+        /// <remarks/>
+        public string reData {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[2]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
+    public delegate void dOutHistoryCompletedEventHandler(object sender, dOutHistoryCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class dOutHistoryCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal dOutHistoryCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public string Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[0]));
+            }
+        }
+        
+        /// <remarks/>
+        public string reMsg {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[1]));
+            }
+        }
+        
+        /// <remarks/>
+        public string reData {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[2]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
+    public delegate void mInOutHistoryCompletedEventHandler(object sender, mInOutHistoryCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class mInOutHistoryCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal mInOutHistoryCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public string Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[0]));
+            }
+        }
+        
+        /// <remarks/>
+        public string reMsg {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[1]));
+            }
+        }
+        
+        /// <remarks/>
+        public string reData {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[2]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
+    public delegate void aInOutHistoryCompletedEventHandler(object sender, aInOutHistoryCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class aInOutHistoryCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal aInOutHistoryCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public string Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[0]));
+            }
+        }
+        
+        /// <remarks/>
+        public string reMsg {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[1]));
+            }
+        }
+        
+        /// <remarks/>
+        public string reData {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[2]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
+    public delegate void aInOutCompletedEventHandler(object sender, aInOutCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class aInOutCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal aInOutCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public string Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[0]));
+            }
+        }
+        
+        /// <remarks/>
+        public string reMsg {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[1]));
+            }
+        }
+        
+        /// <remarks/>
+        public string reData {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[2]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
+    public delegate void exInOutCoCompletedEventHandler(object sender, exInOutCoCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class exInOutCoCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal exInOutCoCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public string Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[0]));
+            }
+        }
+        
+        /// <remarks/>
+        public string reMsg {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[1]));
+            }
+        }
+        
+        /// <remarks/>
+        public string reData {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[2]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
+    public delegate void aInOutCoCompletedEventHandler(object sender, aInOutCoCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class aInOutCoCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal aInOutCoCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public string Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[0]));
+            }
+        }
+        
+        /// <remarks/>
+        public string reMsg {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[1]));
+            }
+        }
+        
+        /// <remarks/>
+        public string reData {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[2]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
+    public delegate void mInOutCoCompletedEventHandler(object sender, mInOutCoCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class mInOutCoCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal mInOutCoCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public string Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[0]));
+            }
+        }
+        
+        /// <remarks/>
+        public string reMsg {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[1]));
+            }
+        }
+        
+        /// <remarks/>
+        public string reData {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[2]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
+    public delegate void exLabInOutFinalCompletedEventHandler(object sender, exLabInOutFinalCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class exLabInOutFinalCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal exLabInOutFinalCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public string Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[0]));
+            }
+        }
+        
+        /// <remarks/>
+        public string reMsg {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[1]));
+            }
+        }
+        
+        /// <remarks/>
+        public string reData {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[2]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
+    public delegate void mLabInOutFinalCompletedEventHandler(object sender, mLabInOutFinalCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class mLabInOutFinalCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal mLabInOutFinalCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public string Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[0]));
+            }
+        }
+        
+        /// <remarks/>
+        public string reMsg {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[1]));
+            }
+        }
+        
+        /// <remarks/>
+        public string reData {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[2]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
+    public delegate void aLabInOutFinalCompletedEventHandler(object sender, aLabInOutFinalCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class aLabInOutFinalCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal aLabInOutFinalCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public string Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[0]));
+            }
+        }
+        
+        /// <remarks/>
+        public string reMsg {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[1]));
+            }
+        }
+        
+        /// <remarks/>
+        public string reData {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[2]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
+    public delegate void exInOut2020CompletedEventHandler(object sender, exInOut2020CompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class exInOut2020CompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal exInOut2020CompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public string Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[0]));
+            }
+        }
+        
+        /// <remarks/>
+        public string reMsg {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[1]));
+            }
+        }
+        
+        /// <remarks/>
+        public string reData {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[2]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
+    public delegate void aInOut2020CompletedEventHandler(object sender, aInOut2020CompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class aInOut2020CompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal aInOut2020CompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public string Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[0]));
+            }
+        }
+        
+        /// <remarks/>
+        public string reMsg {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[1]));
+            }
+        }
+        
+        /// <remarks/>
+        public string reData {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[2]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
+    public delegate void mInOut2020CompletedEventHandler(object sender, mInOut2020CompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class mInOut2020CompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal mInOut2020CompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public string Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[0]));
+            }
+        }
+        
+        /// <remarks/>
+        public string reMsg {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[1]));
+            }
+        }
+        
+        /// <remarks/>
+        public string reData {
             get {
                 this.RaiseExceptionIfNecessary();
                 return ((string)(this.results[2]));

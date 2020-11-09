@@ -40,6 +40,11 @@
             this.splitContainer3 = new System.Windows.Forms.SplitContainer();
             this.treeView1 = new System.Windows.Forms.TreeView();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.splitContainer2 = new System.Windows.Forms.SplitContainer();
+            this.cmbMenuTop = new System.Windows.Forms.ComboBox();
+            this.btnSave = new System.Windows.Forms.Button();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.dgv1_CHK = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.dgv1_MENU_CD = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgv1_NM = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -50,11 +55,6 @@
             this.dgv1_REPORT_FLAG = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.dgv1_PRINT_FLAG = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.dgv1_DOWNLOAD_FLAG = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.splitContainer2 = new System.Windows.Forms.SplitContainer();
-            this.btnSave = new System.Windows.Forms.Button();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.splitContainer1 = new System.Windows.Forms.SplitContainer();
-            this.cmbMenuTop = new System.Windows.Forms.ComboBox();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer3)).BeginInit();
             this.splitContainer3.Panel1.SuspendLayout();
@@ -200,6 +200,75 @@
             this.dataGridView1.ColumnHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView1_ColumnHeaderMouseClick);
             this.dataGridView1.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.dataGridView1_DataBindingComplete);
             // 
+            // splitContainer2
+            // 
+            this.splitContainer2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer2.Location = new System.Drawing.Point(0, 0);
+            this.splitContainer2.Name = "splitContainer2";
+            // 
+            // splitContainer2.Panel1
+            // 
+            this.splitContainer2.Panel1.Controls.Add(this.cmbMenuTop);
+            this.splitContainer2.Panel1.Controls.Add(this.cmbSite);
+            // 
+            // splitContainer2.Panel2
+            // 
+            this.splitContainer2.Panel2.Controls.Add(this.btnSave);
+            this.splitContainer2.Size = new System.Drawing.Size(1037, 40);
+            this.splitContainer2.SplitterDistance = 817;
+            this.splitContainer2.TabIndex = 0;
+            // 
+            // cmbMenuTop
+            // 
+            this.cmbMenuTop.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbMenuTop.FormattingEnabled = true;
+            this.cmbMenuTop.Location = new System.Drawing.Point(196, 14);
+            this.cmbMenuTop.Name = "cmbMenuTop";
+            this.cmbMenuTop.Size = new System.Drawing.Size(170, 20);
+            this.cmbMenuTop.TabIndex = 6;
+            this.cmbMenuTop.SelectedIndexChanged += new System.EventHandler(this.cmbMenuTop_SelectedIndexChanged);
+            // 
+            // btnSave
+            // 
+            this.btnSave.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.btnSave.Location = new System.Drawing.Point(7, 12);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(75, 23);
+            this.btnSave.TabIndex = 0;
+            this.btnSave.Text = "Save";
+            this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn5.DataPropertyName = "MEMO";
+            this.dataGridViewTextBoxColumn5.HeaderText = "Memo";
+            this.dataGridViewTextBoxColumn5.MaxInputLength = 100;
+            this.dataGridViewTextBoxColumn5.MinimumWidth = 150;
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.dataGridViewTextBoxColumn5.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            // 
+            // splitContainer1
+            // 
+            this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer1.FixedPanel = System.Windows.Forms.FixedPanel.Panel1;
+            this.splitContainer1.Location = new System.Drawing.Point(0, 0);
+            this.splitContainer1.Name = "splitContainer1";
+            this.splitContainer1.Orientation = System.Windows.Forms.Orientation.Horizontal;
+            // 
+            // splitContainer1.Panel1
+            // 
+            this.splitContainer1.Panel1.Controls.Add(this.splitContainer2);
+            this.splitContainer1.Panel1MinSize = 40;
+            // 
+            // splitContainer1.Panel2
+            // 
+            this.splitContainer1.Panel2.Controls.Add(this.splitContainer3);
+            this.splitContainer1.Size = new System.Drawing.Size(1037, 601);
+            this.splitContainer1.SplitterDistance = 40;
+            this.splitContainer1.TabIndex = 2;
+            // 
             // dgv1_CHK
             // 
             this.dgv1_CHK.FalseValue = "0";
@@ -217,6 +286,7 @@
             this.dgv1_MENU_CD.MaxInputLength = 1000;
             this.dgv1_MENU_CD.MinimumWidth = 100;
             this.dgv1_MENU_CD.Name = "dgv1_MENU_CD";
+            this.dgv1_MENU_CD.ReadOnly = true;
             // 
             // dgv1_NM
             // 
@@ -225,6 +295,7 @@
             this.dgv1_NM.MaxInputLength = 1000;
             this.dgv1_NM.MinimumWidth = 100;
             this.dgv1_NM.Name = "dgv1_NM";
+            this.dgv1_NM.ReadOnly = true;
             // 
             // dgv1_VIEW_FLAG
             // 
@@ -296,75 +367,6 @@
             this.dgv1_DOWNLOAD_FLAG.TrueValue = "1";
             this.dgv1_DOWNLOAD_FLAG.Width = 60;
             // 
-            // splitContainer2
-            // 
-            this.splitContainer2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainer2.Location = new System.Drawing.Point(0, 0);
-            this.splitContainer2.Name = "splitContainer2";
-            // 
-            // splitContainer2.Panel1
-            // 
-            this.splitContainer2.Panel1.Controls.Add(this.cmbMenuTop);
-            this.splitContainer2.Panel1.Controls.Add(this.cmbSite);
-            // 
-            // splitContainer2.Panel2
-            // 
-            this.splitContainer2.Panel2.Controls.Add(this.btnSave);
-            this.splitContainer2.Size = new System.Drawing.Size(1037, 40);
-            this.splitContainer2.SplitterDistance = 817;
-            this.splitContainer2.TabIndex = 0;
-            // 
-            // btnSave
-            // 
-            this.btnSave.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnSave.Location = new System.Drawing.Point(7, 12);
-            this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(75, 23);
-            this.btnSave.TabIndex = 0;
-            this.btnSave.Text = "Save";
-            this.btnSave.UseVisualStyleBackColor = true;
-            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
-            // 
-            // dataGridViewTextBoxColumn5
-            // 
-            this.dataGridViewTextBoxColumn5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridViewTextBoxColumn5.DataPropertyName = "MEMO";
-            this.dataGridViewTextBoxColumn5.HeaderText = "Memo";
-            this.dataGridViewTextBoxColumn5.MaxInputLength = 100;
-            this.dataGridViewTextBoxColumn5.MinimumWidth = 150;
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            this.dataGridViewTextBoxColumn5.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            // 
-            // splitContainer1
-            // 
-            this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainer1.FixedPanel = System.Windows.Forms.FixedPanel.Panel1;
-            this.splitContainer1.Location = new System.Drawing.Point(0, 0);
-            this.splitContainer1.Name = "splitContainer1";
-            this.splitContainer1.Orientation = System.Windows.Forms.Orientation.Horizontal;
-            // 
-            // splitContainer1.Panel1
-            // 
-            this.splitContainer1.Panel1.Controls.Add(this.splitContainer2);
-            this.splitContainer1.Panel1MinSize = 40;
-            // 
-            // splitContainer1.Panel2
-            // 
-            this.splitContainer1.Panel2.Controls.Add(this.splitContainer3);
-            this.splitContainer1.Size = new System.Drawing.Size(1037, 601);
-            this.splitContainer1.SplitterDistance = 40;
-            this.splitContainer1.TabIndex = 2;
-            // 
-            // cmbMenuTop
-            // 
-            this.cmbMenuTop.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbMenuTop.FormattingEnabled = true;
-            this.cmbMenuTop.Location = new System.Drawing.Point(196, 14);
-            this.cmbMenuTop.Name = "cmbMenuTop";
-            this.cmbMenuTop.Size = new System.Drawing.Size(170, 20);
-            this.cmbMenuTop.TabIndex = 6;
-            this.cmbMenuTop.SelectedIndexChanged += new System.EventHandler(this.cmbMenuTop_SelectedIndexChanged);
-            // 
             // FrmMenuSetAuthSite
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
@@ -410,6 +412,7 @@
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.ComboBox cmbSite;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.ComboBox cmbMenuTop;
         private System.Windows.Forms.DataGridViewCheckBoxColumn dgv1_CHK;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgv1_MENU_CD;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgv1_NM;
@@ -420,6 +423,5 @@
         private System.Windows.Forms.DataGridViewCheckBoxColumn dgv1_REPORT_FLAG;
         private System.Windows.Forms.DataGridViewCheckBoxColumn dgv1_PRINT_FLAG;
         private System.Windows.Forms.DataGridViewCheckBoxColumn dgv1_DOWNLOAD_FLAG;
-        private System.Windows.Forms.ComboBox cmbMenuTop;
     }
 }

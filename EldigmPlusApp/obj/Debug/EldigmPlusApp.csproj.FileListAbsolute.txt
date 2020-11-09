@@ -69,10 +69,12 @@ D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\obj\Debug\EldigmPlusApp.GlobalLanguage.wor
 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\obj\Debug\EldigmPlusApp.GlobalLanguage.msg_Language.zh-CN.resources
 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\obj\Debug\EldigmPlusApp.GlobalLanguage.word_Language.zh-CN.resources
 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\obj\Debug\EldigmPlusApp.SubForm.Worker.InOut.FrmInOut.resources
-D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\obj\Debug\EldigmPlusApp.SubForm.Worker.InOut.FrmInOutLog.resources
 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\obj\Debug\EldigmPlusApp.SubForm.MainHome.FrmMain.resources
 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\obj\Debug\EldigmPlusApp.SubForm.Worker.Labor.FrmLaborSearch.resources
 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\obj\Debug\EldigmPlusApp.csprojAssemblyReference.cache
 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\bin\Debug\EldigmPlusApp_UserControl.dll
 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\bin\Debug\EldigmPlusApp_UserControl.pdb
 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\obj\Debug\EldigmPlusApp.SubForm.Worker.Labor.FrmLaborSearchPop.resources
+D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\obj\Debug\EldigmPlusApp.SubForm.Worker.Labor.FrmLaborSearchPopModify.resources
+D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\obj\Debug\EldigmPlusApp.SubForm.Worker.InOut.FrmInOutTime.resources
+D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\obj\Debug\EldigmPlusApp.SubForm.Worker.InOut.FrmInOutHistory.resources

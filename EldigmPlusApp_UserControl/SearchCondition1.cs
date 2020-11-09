@@ -16,5 +16,14 @@ namespace EldigmPlusApp_UserControl
         {
             InitializeComponent();
         }
+
+        [Description("업체 콤보 데이터 변경 시"), Category("UserControlProperty")]
+        public event EventHandler cmb3_SelectedIndexChanged;
+
+
+        private void comboBox3_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            this.cmb3_SelectedIndexChanged?.Invoke(this, e);
+        }
     }
 }

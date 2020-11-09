@@ -192,24 +192,25 @@ namespace EldigmPlusApp.M_WsMHome {
         /// <remarks/>
         [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IWsMainHome/sSiteSubMenu2", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
         [return: System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public string sSiteSubMenu2([System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pDbNm, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pSiteCd, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pTopMenuCd, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pSubMenuCd, [System.Xml.Serialization.XmlArrayAttribute(IsNullable=true)] [System.Xml.Serialization.XmlArrayItemAttribute(Namespace="http://schemas.datacontract.org/2004/07/EldigmPlusSvc_Memco.WebSvc.MainHome")] out DataSubMenu2[] reList, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] out string reMsg) {
+        public string sSiteSubMenu2([System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pDbNm, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pSiteCd, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pTopMenuCd, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pSubMenuCd, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pAuthCd, [System.Xml.Serialization.XmlArrayAttribute(IsNullable=true)] [System.Xml.Serialization.XmlArrayItemAttribute(Namespace="http://schemas.datacontract.org/2004/07/EldigmPlusSvc_Memco.WebSvc.MainHome")] out DataSubMenu2[] reList, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] out string reMsg) {
             object[] results = this.Invoke("sSiteSubMenu2", new object[] {
                         pDbNm,
                         pSiteCd,
                         pTopMenuCd,
-                        pSubMenuCd});
+                        pSubMenuCd,
+                        pAuthCd});
             reList = ((DataSubMenu2[])(results[1]));
             reMsg = ((string)(results[2]));
             return ((string)(results[0]));
         }
         
         /// <remarks/>
-        public void sSiteSubMenu2Async(string pDbNm, string pSiteCd, string pTopMenuCd, string pSubMenuCd) {
-            this.sSiteSubMenu2Async(pDbNm, pSiteCd, pTopMenuCd, pSubMenuCd, null);
+        public void sSiteSubMenu2Async(string pDbNm, string pSiteCd, string pTopMenuCd, string pSubMenuCd, string pAuthCd) {
+            this.sSiteSubMenu2Async(pDbNm, pSiteCd, pTopMenuCd, pSubMenuCd, pAuthCd, null);
         }
         
         /// <remarks/>
-        public void sSiteSubMenu2Async(string pDbNm, string pSiteCd, string pTopMenuCd, string pSubMenuCd, object userState) {
+        public void sSiteSubMenu2Async(string pDbNm, string pSiteCd, string pTopMenuCd, string pSubMenuCd, string pAuthCd, object userState) {
             if ((this.sSiteSubMenu2OperationCompleted == null)) {
                 this.sSiteSubMenu2OperationCompleted = new System.Threading.SendOrPostCallback(this.OnsSiteSubMenu2OperationCompleted);
             }
@@ -217,7 +218,8 @@ namespace EldigmPlusApp.M_WsMHome {
                         pDbNm,
                         pSiteCd,
                         pTopMenuCd,
-                        pSubMenuCd}, this.sSiteSubMenu2OperationCompleted, userState);
+                        pSubMenuCd,
+                        pAuthCd}, this.sSiteSubMenu2OperationCompleted, userState);
         }
         
         private void OnsSiteSubMenu2OperationCompleted(object arg) {

@@ -163,10 +163,11 @@ namespace EldigmPlusClassLibrary.DbClass.Sys.CodeT
 
         public int aCodeTSiteLog(string DBNM, string SITE_CD, string TCODE, string TGRP_CCD, string REQUIRED_FLAG, string NUMERIC_FLAG, string DEFAULT_VALUE, string USING_FLAG, string SORT_NO, string MEMO, string INPUT_ID)
         {
+            string con = "[PLUS-" + DBNM + "].dbo.";
             string sql = "" +
-                " INSERT INTO [PLUS-" + DBNM + "].dbo.T00_CODE_T_SITE_LOG (SITE_CD, TCODE, LOG_NO, TGRP_CCD, REQUIRED_FLAG," +
+                " INSERT INTO " + con + "T00_CODE_T_SITE_LOG (SITE_CD, TCODE, LOG_NO, TGRP_CCD, REQUIRED_FLAG," +
                 " NUMERIC_FLAG, DEFAULT_VALUE, USING_FLAG, SORT_NO, MEMO, INPUT_ID, INPUT_DT) VALUES (" + SITE_CD + ", '" + TCODE + "'," +
-                " (SELECT ISNULL(MAX(LOG_NO),0)+1 FROM [PLUS-" + DBNM + "].dbo.T00_CODE_T_SITE_LOG WHERE SITE_CD = " + SITE_CD + " AND TCODE = '" + TCODE + "'), " +
+                " (SELECT ISNULL(MAX(LOG_NO),0)+1 FROM " + con + "T00_CODE_T_SITE_LOG WHERE SITE_CD = " + SITE_CD + " AND TCODE = '" + TCODE + "'), " +
                 " " + TGRP_CCD + ", " + REQUIRED_FLAG + ", " + NUMERIC_FLAG + "," +
                 " '" + DEFAULT_VALUE + "', " + USING_FLAG + ", " + SORT_NO + ", '" + MEMO + "', '" + INPUT_ID + "', GETDATE()) ";
 
@@ -229,11 +230,12 @@ namespace EldigmPlusClassLibrary.DbClass.Sys.CodeT
 
         public DataSet sCodeTSiteTreeView(string DBNM, string SITE_CD, string AUTH_CD)
         {
+            string con = "[PLUS-" + DBNM + "].dbo.";
             string sql = "" +
                 " SELECT A.CCODE, A.CCODE_NM FROM (SELECT A.CCODE, A.CCODE_GRP, A.CCODE_NM, B.SORT_NO " +
-                " FROM [PLUS-" + DBNM + "].dbo.T00_CODE_COMN A INNER JOIN [PLUS-" + DBNM + "].dbo.T00_CODE_COMN_SITE B " +
+                " FROM " + con + "T00_CODE_COMN A INNER JOIN " + con + "T00_CODE_COMN_SITE B " +
                 " ON A.CCODE = B.CCODE WHERE SITE_CD = " + SITE_CD + " AND CCODE_GRP = 'AddinfoGrp' AND USING_FLAG = 1) A " +
-                " INNER JOIN (SELECT CCODE_GRP FROM [PLUS-" + DBNM + "].dbo.T00_CODE_GRP_SETAUTH_SITE WHERE SITE_CD = " + SITE_CD + "" +
+                " INNER JOIN (SELECT CCODE_GRP FROM " + con + "T00_CODE_GRP_SETAUTH_SITE WHERE SITE_CD = " + SITE_CD + "" +
                 " AND AUTH_CD = '" + AUTH_CD + "' AND CCODE_GRP = 'AddinfoGrp' AND VIEW_FLAG = 1) B ON A.CCODE_GRP = B.CCODE_GRP ";
 
             sql += "" +
@@ -251,12 +253,13 @@ namespace EldigmPlusClassLibrary.DbClass.Sys.CodeT
         //**AUTH PART START
         public DataSet sCodeTAuthTreeView(string SCODE, string SITE_CD)
         {
-            string dbNm = sDbNm(SITE_CD);            
-        
+            string dbNm = sDbNm(SITE_CD);
+            string con = "[PLUS-" + dbNm + "].dbo.";
+
             string sql = "" +
                " SELECT A.TCODE,B.TCODE_NM " +
-               " FROM [PLUS-" + dbNm + "].dbo.T00_CODE_T_SITE A " +
-               " INNER JOIN [PLUS-" + dbNm + "].dbo.T00_CODE_T B ON A.TCODE = B.TCODE AND A.USING_FLAG = 1 AND SITE_CD = " + SITE_CD + " " +
+               " FROM " + con + "T00_CODE_T_SITE A " +
+               " INNER JOIN " + con + "T00_CODE_T B ON A.TCODE = B.TCODE AND A.USING_FLAG = 1 AND SITE_CD = " + SITE_CD + " " +
                " WHERE B.TTYPE_SCD = '" + SCODE + "' ";
 
             sql += "" +
@@ -274,11 +277,12 @@ namespace EldigmPlusClassLibrary.DbClass.Sys.CodeT
         public DataSet sCodeTAuth(string TCODE, string SITE_CD, string AUTH_CD )
         {
             string dbNm = sDbNm(SITE_CD);
+            string con = "[PLUS-" + dbNm + "].dbo.";
 
             string sql = "" +
                 " SELECT A.TCODE, A.AUTH_CD, B.TCODE_NM, A.VIEW_FLAG, A.NEW_FLAG, A.MODIFY_FLAG " +
-                " FROM [PLUS-" + dbNm + "].dbo.T00_CODE_T_SETAUTH_SITE A" +
-                " INNER JOIN [PLUS-" + dbNm + "].dbo.T00_CODE_T B ON A.TCODE = B.TCODE AND A.SITE_CD =" + SITE_CD + " " +
+                " FROM " + con + "T00_CODE_T_SETAUTH_SITE A" +
+                " INNER JOIN " + con + "T00_CODE_T B ON A.TCODE = B.TCODE AND A.SITE_CD =" + SITE_CD + " " +
                 " WHERE A.TCODE = '" + TCODE + "' AND A.AUTH_CD = '" + AUTH_CD + "' ";
 
             sql += "" +
@@ -296,11 +300,12 @@ namespace EldigmPlusClassLibrary.DbClass.Sys.CodeT
         public DataSet sCodeTAuthTtype(string TTYPE_SCD, string SITE_CD, string AUTH_CD)
         {
             string dbNm = sDbNm(SITE_CD);
+            string con = "[PLUS-" + dbNm + "].dbo.";
 
             string sql = "" +
                " SELECT A.TCODE, A.AUTH_CD, B.TCODE_NM, A.VIEW_FLAG, A.NEW_FLAG, A.MODIFY_FLAG " +
-               " FROM [PLUS-" + dbNm + "].dbo.T00_CODE_T_SETAUTH_SITE A" +
-               " INNER JOIN [PLUS-" + dbNm + "].dbo.T00_CODE_T B ON A.TCODE = B.TCODE AND A.SITE_CD = " + SITE_CD + " " +
+               " FROM " + con + "T00_CODE_T_SETAUTH_SITE A" +
+               " INNER JOIN " + con + "T00_CODE_T B ON A.TCODE = B.TCODE AND A.SITE_CD = " + SITE_CD + " " +
                " WHERE B.TTYPE_SCD = '" + TTYPE_SCD + "' AND A.AUTH_CD = '" + AUTH_CD + "' ";
             sql += "" +
                 " ORDER BY B.TCODE_NM, A.AUTH_CD";
@@ -317,9 +322,10 @@ namespace EldigmPlusClassLibrary.DbClass.Sys.CodeT
         public int mCodeTAuth(string TCODE, string SITE_CD, string AUTH_CD, string VIEW_FLAG, string NEW_FLAG, string MODIFY_FLAG)
         {
             string dbNm = sDbNm(SITE_CD);
+            string con = "[PLUS-" + dbNm + "].dbo.";
 
             string sql = "" +
-              " UPDATE [PLUS-" + dbNm + "].dbo.T00_CODE_T_SETAUTH_SITE " +
+              " UPDATE " + con + "T00_CODE_T_SETAUTH_SITE " +
               " SET VIEW_FLAG = " + VIEW_FLAG + ", NEW_FLAG = " + NEW_FLAG + ", MODIFY_FLAG = " + MODIFY_FLAG + " " +
               " WHERE SITE_CD = " + SITE_CD + " AND TCODE = '" + TCODE + "' AND AUTH_CD = '" + AUTH_CD + "' ";
 
@@ -335,9 +341,10 @@ namespace EldigmPlusClassLibrary.DbClass.Sys.CodeT
 
         public DataSet sCodeTSite(string DBNM, string SITE_CD, string TGRP_CCD)
         {
+            string con = "[PLUS-" + DBNM + "].dbo.";
             string sql = "" +
-                " SELECT A.TCODE, B.TCODE_NM, DEFAULT_VALUE, USING_FLAG, SORT_NO, MEMO FROM [PLUS-" + DBNM + "].dbo.T00_CODE_T_SITE A " +
-                " INNER JOIN [PLUS-" + DBNM + "].dbo.T00_CODE_T B ON A.TCODE = B.TCODE " +
+                " SELECT A.TCODE, B.TCODE_NM, DEFAULT_VALUE, USING_FLAG, SORT_NO, MEMO FROM " + con + "T00_CODE_T_SITE A " +
+                " INNER JOIN " + con + "T00_CODE_T B ON A.TCODE = B.TCODE " +
                 " WHERE SITE_CD = " + SITE_CD + " AND TGRP_CCD = " + TGRP_CCD + "";
 
             sql += "" +
@@ -352,8 +359,9 @@ namespace EldigmPlusClassLibrary.DbClass.Sys.CodeT
 
         public int mCodeTSite(string DBNM, string SITE_CD, string TCODE, string DEFAULT_VALUE, string USING_FLAG, string SORT_NO, string MEMO)
         {
+            string con = "[PLUS-" + DBNM + "].dbo.";
             string sql = "" +
-                " UPDATE [PLUS-" + DBNM + "].dbo.T00_CODE_T_SITE SET DEFAULT_VALUE = '" + DEFAULT_VALUE + "', USING_FLAG = " + USING_FLAG +
+                " UPDATE " + con + "T00_CODE_T_SITE SET DEFAULT_VALUE = '" + DEFAULT_VALUE + "', USING_FLAG = " + USING_FLAG +
                 ", SORT_NO = " + SORT_NO + ", MEMO = '" + MEMO + "' WHERE SITE_CD = " + SITE_CD + " AND TCODE = '" + TCODE + "'";
 
             int reCnt = 0;

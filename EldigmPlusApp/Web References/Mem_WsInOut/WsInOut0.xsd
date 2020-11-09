@@ -22,16 +22,24 @@
   <xs:complexType name="DataInOut">
     <xs:sequence>
       <xs:element minOccurs="0" name="LAB_NO" type="xs:int" />
+      <xs:element minOccurs="0" name="REG_DATE" type="xs:int" />
       <xs:element minOccurs="0" name="LAB_NM" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="IN_DT" type="xs:dateTime" />
       <xs:element minOccurs="0" name="OUT_DT" type="xs:dateTime" />
       <xs:element minOccurs="0" name="EVENT_DT" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="CO_CD" type="xs:int" />
       <xs:element minOccurs="0" name="CO_NM" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TEAM_CD" type="xs:int" />
       <xs:element minOccurs="0" name="TEAM_NM" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="DEV_CD" type="xs:int" />
       <xs:element minOccurs="0" name="DEV_TYPE_SCD" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="DEV_IO_SCD" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="CODE_NM" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CCODE_NM" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DEV_NM" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DEV_IO_NM" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DEV_TYPE_NM" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IN_IOPF_ID" type="xs:int" />
+      <xs:element minOccurs="0" name="OUT_IOPF_ID" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
   <xs:element name="DataInOut" nillable="true" type="tns:DataInOut" />

@@ -102,6 +102,21 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Settings.cs" />
+    <Compile Include="strLanguage.en-US.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>strLanguage.en-US.resx</DependentUpon>
+    </Compile>
+    <Compile Include="strLanguage.ko-KR.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>strLanguage.ko-KR.resx</DependentUpon>
+    </Compile>
+    <Compile Include="strLanguage.zh-CN.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>strLanguage.zh-CN.resx</DependentUpon>
+    </Compile>
     <Compile Include="SubForm\MainHome\FrmMain.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -228,11 +243,17 @@
     <Compile Include="SubForm\Worker\InOut\FrmInOut.Designer.cs">
       <DependentUpon>FrmInOut.cs</DependentUpon>
     </Compile>
-    <Compile Include="SubForm\Worker\InOut\FrmInOutLog.cs">
+    <Compile Include="SubForm\Worker\InOut\FrmInOutHistory.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="SubForm\Worker\InOut\FrmInOutLog.Designer.cs">
-      <DependentUpon>FrmInOutLog.cs</DependentUpon>
+    <Compile Include="SubForm\Worker\InOut\FrmInOutHistory.Designer.cs">
+      <DependentUpon>FrmInOutHistory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubForm\Worker\InOut\FrmInOutTime.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubForm\Worker\InOut\FrmInOutTime.Designer.cs">
+      <DependentUpon>FrmInOutTime.cs</DependentUpon>
     </Compile>
     <Compile Include="SubForm\Worker\Labor\FrmLaborSearch.cs">
       <SubType>Form</SubType>
@@ -245,6 +266,12 @@
     </Compile>
     <Compile Include="SubForm\Worker\Labor\FrmLaborSearchPop.Designer.cs">
       <DependentUpon>FrmLaborSearchPop.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubForm\Worker\Labor\FrmLaborSearchPopModify.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubForm\Worker\Labor\FrmLaborSearchPopModify.Designer.cs">
+      <DependentUpon>FrmLaborSearchPopModify.cs</DependentUpon>
     </Compile>
     <Compile Include="Web References\Mem_WsInOut\Reference.cs">
       <AutoGen>True</AutoGen>
@@ -311,14 +338,24 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.map</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="GlobalLanguage\msg_Language.en-US.resx" />
-    <EmbeddedResource Include="GlobalLanguage\word_Language.en-US.resx" />
+    <EmbeddedResource Include="GlobalLanguage\msg_Language.en-US.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GlobalLanguage\word_Language.en-US.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EmbeddedResource Include="GlobalLanguage\msg_Language.ko-KR.resx">
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="GlobalLanguage\word_Language.ko-KR.resx" />
-    <EmbeddedResource Include="GlobalLanguage\msg_Language.zh-CN.resx" />
-    <EmbeddedResource Include="GlobalLanguage\word_Language.zh-CN.resx" />
+    <EmbeddedResource Include="GlobalLanguage\word_Language.ko-KR.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GlobalLanguage\msg_Language.zh-CN.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GlobalLanguage\word_Language.zh-CN.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -330,9 +367,18 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="strLanguage.en-US.resx" />
-    <EmbeddedResource Include="strLanguage.ko-KR.resx" />
-    <EmbeddedResource Include="strLanguage.zh-CN.resx" />
+    <EmbeddedResource Include="strLanguage.en-US.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>strLanguage.en-US.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="strLanguage.ko-KR.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>strLanguage.ko-KR.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="strLanguage.zh-CN.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>strLanguage.zh-CN.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="SubForm\MainHome\FrmMain.resx">
       <DependentUpon>FrmMain.cs</DependentUpon>
     </EmbeddedResource>
@@ -398,14 +444,20 @@
     <EmbeddedResource Include="SubForm\Worker\InOut\FrmInOut.resx">
       <DependentUpon>FrmInOut.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="SubForm\Worker\InOut\FrmInOutLog.resx">
-      <DependentUpon>FrmInOutLog.cs</DependentUpon>
+    <EmbeddedResource Include="SubForm\Worker\InOut\FrmInOutHistory.resx">
+      <DependentUpon>FrmInOutHistory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubForm\Worker\InOut\FrmInOutTime.resx">
+      <DependentUpon>FrmInOutTime.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SubForm\Worker\Labor\FrmLaborSearch.resx">
       <DependentUpon>FrmLaborSearch.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SubForm\Worker\Labor\FrmLaborSearchPop.resx">
       <DependentUpon>FrmLaborSearchPop.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubForm\Worker\Labor\FrmLaborSearchPopModify.resx">
+      <DependentUpon>FrmLaborSearchPopModify.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Class\Common\Eldigm_Plus\.vs\config\applicationhost.config" />
     <None Include="Class\Common\Eldigm_Plus\.vs\EldigmPlus\v15\.suo" />
@@ -548,6 +600,15 @@
     <None Include="Web References\Mem_WsSysCompanyTeam\WsSysCompanyTeam1.xsd">
       <SubType>Designer</SubType>
     </None>
+    <None Include="Web References\Mem_WsWorkerLaborSearch\DataAddinfo.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\Mem_WsWorkerLaborSearch\DataAddinfoCcode.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\Mem_WsWorkerLaborSearch\DataAddinfoCcodesub.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
     <None Include="Web References\Mem_WsWorkerLaborSearch\DataComCombo.datasource">
       <DependentUpon>Reference.map</DependentUpon>
     </None>
@@ -566,6 +627,9 @@
       <SubType>Designer</SubType>
     </None>
     <None Include="Web References\Mem_WsWorkerLaborSearch\WsWorkerLaborSearch1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\Mem_WsWorkerLaborSearch\WsWorkerLaborSearch2.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Web References\M_WsCCodeGrp\DataCodeAuthSiteMemberDB1.datasource">

@@ -1,0 +1,448 @@
+
+2020-11-06 10:39:49-->  [error]  (page)::FrmLaborSearch.cs  (Function)::SetDataBind_CmbMember  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Worker.Labor.FrmLaborSearch.SetDataBind_TeamCmb() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Worker\Labor\FrmLaborSearch.cs:줄 258
+2020-11-06 10:41:24-->  [error]  (page)::FrmLaborSearch.cs  (Function)::SetDataBind_CmbMember  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Worker.Labor.FrmLaborSearch.SetDataBind_TeamCmb() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Worker\Labor\FrmLaborSearch.cs:줄 258
+2020-11-06 11:03:54-->  [error]  (page)::FrmLaborSearch.cs  (Function)::SetDataBind_CmbMember  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Worker.Labor.FrmLaborSearch.SetDataBind_TeamCmb() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Worker\Labor\FrmLaborSearch.cs:줄 258
+2020-11-06 11:09:14-->  [error]  (page)::FrmLaborSearch.cs  (Function)::SetDataBind_CmbMember  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Worker.Labor.FrmLaborSearch.SetDataBind_TeamCmb() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Worker\Labor\FrmLaborSearch.cs:줄 258
+2020-11-06 11:11:36-->  [error]  (page)::FrmLaborSearch.cs  (Function)::SetDataBind_CmbMember  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Worker.Labor.FrmLaborSearch.SetDataBind_TeamCmb() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Worker\Labor\FrmLaborSearch.cs:줄 258
+2020-11-06 11:22:16-->  [error]  (page)::FrmLaborSearch.cs  (Function)::SetDataBind_CmbMember  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Worker.Labor.FrmLaborSearch.SetDataBind_TeamCmb() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Worker\Labor\FrmLaborSearch.cs:줄 258
+2020-11-06 11:36:17-->  [error]  (page)::FrmLaborSearchPop.cs  (Function)::SetDataBind_BlockCmb  (Detail):: 
+System.Net.WebException: 작업 시간이 초과되었습니다.
+   위치: System.Web.Services.Protocols.WebClientProtocol.GetWebResponse(WebRequest request)
+   위치: System.Web.Services.Protocols.HttpWebClientProtocol.GetWebResponse(WebRequest request)
+   위치: System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke(String methodName, Object[] parameters)
+   위치: EldigmPlusApp.Mem_WsWorkerLaborSearch.WsWorkerLaborSearch.sLaborBlockList(String pSiteCd, String pAuthCd, String pCcode, String pLngBlock, DataComCombo[]& reList, String& reMsg) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\Web References\Mem_WsWorkerLaborSearch\Reference.cs:줄 279
+   위치: EldigmPlusApp.SubForm.Worker.Labor.FrmLaborSearchPop.SetDataBind_BlockCmb() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Worker\Labor\FrmLaborSearchPop.cs:줄 162
+2020-11-06 11:36:18-->  [error]  (page)::FrmLaborSearchPop.cs  (Function)::SetDataBind_TeamCmb  (Detail):: 
+System.Net.WebException: 작업 시간이 초과되었습니다.
+   위치: System.Web.Services.Protocols.WebClientProtocol.GetWebResponse(WebRequest request)
+   위치: System.Web.Services.Protocols.HttpWebClientProtocol.GetWebResponse(WebRequest request)
+   위치: System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke(String methodName, Object[] parameters)
+   위치: EldigmPlusApp.Mem_WsWorkerLaborSearch.WsWorkerLaborSearch.sLaborTeamList(String pSiteCd, String pAuthCd, String pTeamCd, String pCocd, String pLngTeam, DataComCombo[]& reList, String& reMsg) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\Web References\Mem_WsWorkerLaborSearch\Reference.cs:줄 317
+   위치: EldigmPlusApp.SubForm.Worker.Labor.FrmLaborSearchPop.SetDataBind_TeamCmb() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Worker\Labor\FrmLaborSearchPop.cs:줄 245
+2020-11-06 11:36:25-->  [error]  (page)::FrmLaborSearchPop.cs  (Function)::SetDataBind_JobCmb  (Detail):: 
+System.Net.WebException: 작업 시간이 초과되었습니다.
+   위치: System.Web.Services.Protocols.WebClientProtocol.GetWebResponse(WebRequest request)
+   위치: System.Web.Services.Protocols.HttpWebClientProtocol.GetWebResponse(WebRequest request)
+   위치: System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke(String methodName, Object[] parameters)
+   위치: EldigmPlusApp.Mem_WsWorkerLaborSearch.WsWorkerLaborSearch.sLaborJobList(String pSiteCd, String pLngJob, DataComCombo[]& reList, String& reMsg) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\Web References\Mem_WsWorkerLaborSearch\Reference.cs:줄 245
+   위치: EldigmPlusApp.SubForm.Worker.Labor.FrmLaborSearchPop.SetDataBind_JobCmb() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Worker\Labor\FrmLaborSearchPop.cs:줄 285
+2020-11-06 11:36:26-->  [error]  (page)::FrmLaborSearchPop.cs  (Function)::SetDataBind_CompanyCmb  (Detail):: 
+System.Net.WebException: 작업 시간이 초과되었습니다.
+   위치: System.Web.Services.Protocols.WebClientProtocol.GetWebResponse(WebRequest request)
+   위치: System.Web.Services.Protocols.HttpWebClientProtocol.GetWebResponse(WebRequest request)
+   위치: System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke(String methodName, Object[] parameters)
+   위치: EldigmPlusApp.Mem_WsWorkerLaborSearch.WsWorkerLaborSearch.sLaborCompanyList(String pSiteCd, String pAuthCd, String pCoCd, String pLngCom, DataComCombo[]& reList, String& reMsg) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\Web References\Mem_WsWorkerLaborSearch\Reference.cs:줄 169
+   위치: EldigmPlusApp.SubForm.Worker.Labor.FrmLaborSearchPop.SetDataBind_CompanyCmb() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Worker\Labor\FrmLaborSearchPop.cs:줄 204
+2020-11-06 11:36:27-->  [error]  (page)::FrmLaborSearchPop.cs  (Function)::SetDataBind_CcodeCmb  (Detail):: 
+System.Net.WebException: 작업 시간이 초과되었습니다.
+   위치: System.Web.Services.Protocols.WebClientProtocol.GetWebResponse(WebRequest request)
+   위치: System.Web.Services.Protocols.HttpWebClientProtocol.GetWebResponse(WebRequest request)
+   위치: System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke(String methodName, Object[] parameters)
+   위치: EldigmPlusApp.Mem_WsWorkerLaborSearch.WsWorkerLaborSearch.sLaborAddInfoCcode(String pDbnm, String pSiteCd, String pAuth, DataAddinfoCcode[]& reList, String& reMsg) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\Web References\Mem_WsWorkerLaborSearch\Reference.cs:줄 541
+   위치: EldigmPlusApp.SubForm.Worker.Labor.FrmLaborSearchPop.SetDataBind_CcodeCmb() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Worker\Labor\FrmLaborSearchPop.cs:줄 324
+2020-11-06 11:40:45-->  [error]  (page)::FrmLaborSearchPop.cs  (Function)::SetDataBind_BlockCmb  (Detail):: 
+System.Net.WebException: 작업 시간이 초과되었습니다.
+   위치: System.Web.Services.Protocols.WebClientProtocol.GetWebResponse(WebRequest request)
+   위치: System.Web.Services.Protocols.HttpWebClientProtocol.GetWebResponse(WebRequest request)
+   위치: System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke(String methodName, Object[] parameters)
+   위치: EldigmPlusApp.Mem_WsWorkerLaborSearch.WsWorkerLaborSearch.sLaborBlockList(String pSiteCd, String pAuthCd, String pCcode, String pLngBlock, DataComCombo[]& reList, String& reMsg) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\Web References\Mem_WsWorkerLaborSearch\Reference.cs:줄 279
+   위치: EldigmPlusApp.SubForm.Worker.Labor.FrmLaborSearchPop.SetDataBind_BlockCmb() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Worker\Labor\FrmLaborSearchPop.cs:줄 162
+2020-11-06 11:40:47-->  [error]  (page)::FrmLaborSearchPop.cs  (Function)::SetDataBind_TeamCmb  (Detail):: 
+System.Net.WebException: 작업 시간이 초과되었습니다.
+   위치: System.Web.Services.Protocols.WebClientProtocol.GetWebResponse(WebRequest request)
+   위치: System.Web.Services.Protocols.HttpWebClientProtocol.GetWebResponse(WebRequest request)
+   위치: System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke(String methodName, Object[] parameters)
+   위치: EldigmPlusApp.Mem_WsWorkerLaborSearch.WsWorkerLaborSearch.sLaborTeamList(String pSiteCd, String pAuthCd, String pTeamCd, String pCocd, String pLngTeam, DataComCombo[]& reList, String& reMsg) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\Web References\Mem_WsWorkerLaborSearch\Reference.cs:줄 317
+   위치: EldigmPlusApp.SubForm.Worker.Labor.FrmLaborSearchPop.SetDataBind_TeamCmb() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Worker\Labor\FrmLaborSearchPop.cs:줄 245
+2020-11-06 11:40:53-->  [error]  (page)::FrmLaborSearchPop.cs  (Function)::SetDataBind_CcodeCmb  (Detail):: 
+System.Net.WebException: 작업 시간이 초과되었습니다.
+   위치: System.Web.Services.Protocols.WebClientProtocol.GetWebResponse(WebRequest request)
+   위치: System.Web.Services.Protocols.HttpWebClientProtocol.GetWebResponse(WebRequest request)
+   위치: System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke(String methodName, Object[] parameters)
+   위치: EldigmPlusApp.Mem_WsWorkerLaborSearch.WsWorkerLaborSearch.sLaborAddInfoCcode(String pDbnm, String pSiteCd, String pAuth, DataAddinfoCcode[]& reList, String& reMsg) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\Web References\Mem_WsWorkerLaborSearch\Reference.cs:줄 541
+   위치: EldigmPlusApp.SubForm.Worker.Labor.FrmLaborSearchPop.SetDataBind_CcodeCmb() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Worker\Labor\FrmLaborSearchPop.cs:줄 324
+2020-11-06 11:41:13-->  [error]  (page)::FrmLaborSearch.cs  (Function)::SetDataBind_CmbMember  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Worker.Labor.FrmLaborSearch.SetDataBind_TeamCmb() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Worker\Labor\FrmLaborSearch.cs:줄 258
+2020-11-06 11:50:10-->  [error]  (page)::FrmLaborSearch.cs  (Function)::SetDataBind_CmbMember  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Worker.Labor.FrmLaborSearch.SetDataBind_TeamCmb() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Worker\Labor\FrmLaborSearch.cs:줄 258
+2020-11-06 11:50:17-->  [error]  (page)::FrmLaborSearch.cs  (Function)::SetDataBind_CmbMember  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Worker.Labor.FrmLaborSearch.SetDataBind_TeamCmb() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Worker\Labor\FrmLaborSearch.cs:줄 258
+2020-11-06 15:00:08-->  [error]  (page)::FrmLaborSearch.cs  (Function)::SetDataBind_CmbMember  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Worker.Labor.FrmLaborSearch.SetDataBind_TeamCmb() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Worker\Labor\FrmLaborSearch.cs:줄 258
+2020-11-06 15:00:09-->  [error]  (page)::FrmLaborSearch.cs  (Function)::SetDataBind_CmbMember  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Worker.Labor.FrmLaborSearch.SetDataBind_TeamCmb() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Worker\Labor\FrmLaborSearch.cs:줄 258
+2020-11-06 15:00:15-->  [error]  (page)::FrmLaborSearchPopModify.cs  (Function)::SetDataBind_TeamCmb  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Worker.Labor.FrmLaborSearchPopModify.SetDataBind_TeamCmb() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Worker\Labor\FrmLaborSearchPopModify.cs:줄 256
+2020-11-06 15:03:54-->  [error]  (page)::FrmLaborSearch.cs  (Function)::SetDataBind_CmbMember  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Worker.Labor.FrmLaborSearch.SetDataBind_TeamCmb() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Worker\Labor\FrmLaborSearch.cs:줄 258
+2020-11-06 15:03:56-->  [error]  (page)::FrmLaborSearchPopModify.cs  (Function)::SetDataBind_TeamCmb  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Worker.Labor.FrmLaborSearchPopModify.SetDataBind_TeamCmb() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Worker\Labor\FrmLaborSearchPopModify.cs:줄 262
+2020-11-06 15:04:47-->  [error]  (page)::FrmLaborSearch.cs  (Function)::SetDataBind_CmbMember  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Worker.Labor.FrmLaborSearch.SetDataBind_TeamCmb() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Worker\Labor\FrmLaborSearch.cs:줄 258
+2020-11-06 15:08:56-->  [error]  (page)::FrmLaborSearchPopModify.cs  (Function)::SetDataBind_TeamCmb  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Worker.Labor.FrmLaborSearchPopModify.SetDataBind_TeamCmb() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Worker\Labor\FrmLaborSearchPopModify.cs:줄 266
+2020-11-06 15:09:31-->  [error]  (page)::FrmLaborSearch.cs  (Function)::SetDataBind_CmbMember  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Worker.Labor.FrmLaborSearch.SetDataBind_TeamCmb() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Worker\Labor\FrmLaborSearch.cs:줄 258
+2020-11-06 15:09:32-->  [error]  (page)::FrmLaborSearchPopModify.cs  (Function)::SetDataBind_TeamCmb  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Worker.Labor.FrmLaborSearchPopModify.SetDataBind_TeamCmb() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Worker\Labor\FrmLaborSearchPopModify.cs:줄 287
+2020-11-06 15:27:21-->  [error]  (page)::FrmLaborSearch.cs  (Function)::SetDataBind_CmbMember  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Worker.Labor.FrmLaborSearch.SetDataBind_TeamCmb() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Worker\Labor\FrmLaborSearch.cs:줄 258
+2020-11-06 15:27:23-->  [error]  (page)::FrmLaborSearch.cs  (Function)::SetDataBind_CmbMember  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Worker.Labor.FrmLaborSearch.SetDataBind_TeamCmb() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Worker\Labor\FrmLaborSearch.cs:줄 258
+2020-11-06 15:27:26-->  [error]  (page)::FrmLaborSearchPopModify.cs  (Function)::SetDataBind_TeamCmb  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Worker.Labor.FrmLaborSearchPopModify.SetDataBind_TeamCmb() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Worker\Labor\FrmLaborSearchPopModify.cs:줄 287
+2020-11-06 15:28:18-->  [error]  (page)::FrmLaborSearch.cs  (Function)::SetDataBind_CmbMember  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Worker.Labor.FrmLaborSearch.SetDataBind_TeamCmb() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Worker\Labor\FrmLaborSearch.cs:줄 258
+2020-11-06 15:28:28-->  [error]  (page)::FrmLaborSearchPopModify.cs  (Function)::SetDataBind_TeamCmb  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Worker.Labor.FrmLaborSearchPopModify.SetDataBind_TeamCmb() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Worker\Labor\FrmLaborSearchPopModify.cs:줄 287
+2020-11-06 15:29:37-->  [error]  (page)::FrmLaborSearch.cs  (Function)::SetDataBind_CmbMember  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Worker.Labor.FrmLaborSearch.SetDataBind_TeamCmb() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Worker\Labor\FrmLaborSearch.cs:줄 258
+2020-11-06 15:29:49-->  [error]  (page)::FrmLaborSearchPopModify.cs  (Function)::SetDataBind_TeamCmb  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Worker.Labor.FrmLaborSearchPopModify.SetDataBind_TeamCmb() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Worker\Labor\FrmLaborSearchPopModify.cs:줄 287
+2020-11-06 15:30:06-->  [error]  (page)::FrmLaborSearch.cs  (Function)::SetDataBind_CmbMember  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Worker.Labor.FrmLaborSearch.SetDataBind_TeamCmb() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Worker\Labor\FrmLaborSearch.cs:줄 258
+2020-11-06 15:30:07-->  [error]  (page)::FrmLaborSearchPopModify.cs  (Function)::SetDataBind_TeamCmb  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Worker.Labor.FrmLaborSearchPopModify.SetDataBind_TeamCmb() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Worker\Labor\FrmLaborSearchPopModify.cs:줄 287
+2020-11-06 15:34:41-->  [error]  (page)::FrmLaborSearch.cs  (Function)::SetDataBind_CmbMember  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Worker.Labor.FrmLaborSearch.SetDataBind_TeamCmb() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Worker\Labor\FrmLaborSearch.cs:줄 258
+2020-11-06 15:34:43-->  [error]  (page)::FrmLaborSearchPopModify.cs  (Function)::SetDataBind_TeamCmb  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Worker.Labor.FrmLaborSearchPopModify.SetDataBind_TeamCmb() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Worker\Labor\FrmLaborSearchPopModify.cs:줄 287
+2020-11-06 15:36:17-->  [error]  (page)::FrmLaborSearch.cs  (Function)::SetDataBind_CmbMember  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Worker.Labor.FrmLaborSearch.SetDataBind_TeamCmb() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Worker\Labor\FrmLaborSearch.cs:줄 258
+2020-11-06 15:36:18-->  [error]  (page)::FrmLaborSearchPopModify.cs  (Function)::SetDataBind_TeamCmb  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Worker.Labor.FrmLaborSearchPopModify.SetDataBind_TeamCmb() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Worker\Labor\FrmLaborSearchPopModify.cs:줄 287
+2020-11-06 15:36:32-->  [error]  (page)::FrmLaborSearchPopModify.cs  (Function)::SetDataBind_TeamCmb  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Worker.Labor.FrmLaborSearchPopModify.SetDataBind_TeamCmb() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Worker\Labor\FrmLaborSearchPopModify.cs:줄 287
+2020-11-06 15:37:01-->  [error]  (page)::FrmLaborSearchPopModify.cs  (Function)::SetDataBind_TeamCmb  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Worker.Labor.FrmLaborSearchPopModify.SetDataBind_TeamCmb() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Worker\Labor\FrmLaborSearchPopModify.cs:줄 287
+2020-11-06 16:30:53-->  [error]  (page)::FrmLaborSearch.cs  (Function)::SetDataBind_CmbMember  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Worker.Labor.FrmLaborSearch.SetDataBind_TeamCmb() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Worker\Labor\FrmLaborSearch.cs:줄 258
+2020-11-06 16:30:57-->  [error]  (page)::FrmLaborSearchPopModify.cs  (Function)::SetDataBind_TeamCmb  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Worker.Labor.FrmLaborSearchPopModify.SetDataBind_TeamCmb() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Worker\Labor\FrmLaborSearchPopModify.cs:줄 287
+2020-11-06 16:32:30-->  [error]  (page)::FrmLaborSearchPopModify.cs  (Function)::SetDataBind_TeamCmb  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Worker.Labor.FrmLaborSearchPopModify.SetDataBind_TeamCmb() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Worker\Labor\FrmLaborSearchPopModify.cs:줄 287
+2020-11-06 16:35:52-->  [error]  (page)::FrmLaborSearchPopModify.cs  (Function)::SetDataBind_BlockCmb  (Detail):: 
+System.Net.WebException: 요청이 중단되었습니다. 작업 시간이 초과되었습니다.
+   위치: System.Web.Services.Protocols.WebClientProtocol.GetWebResponse(WebRequest request)
+   위치: System.Web.Services.Protocols.HttpWebClientProtocol.GetWebResponse(WebRequest request)
+   위치: System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke(String methodName, Object[] parameters)
+   위치: EldigmPlusApp.Mem_WsWorkerLaborSearch.WsWorkerLaborSearch.sLaborBlockList(String pSiteCd, String pAuthCd, String pCcode, String pLngBlock, DataComCombo[]& reList, String& reMsg) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\Web References\Mem_WsWorkerLaborSearch\Reference.cs:줄 279
+   위치: EldigmPlusApp.SubForm.Worker.Labor.FrmLaborSearchPopModify.SetDataBind_BlockCmb() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Worker\Labor\FrmLaborSearchPopModify.cs:줄 194
+2020-11-06 16:35:52-->  [error]  (page)::FrmLaborSearchPopModify.cs  (Function)::SetDataBind_TeamCmb  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Worker.Labor.FrmLaborSearchPopModify.SetDataBind_TeamCmb() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Worker\Labor\FrmLaborSearchPopModify.cs:줄 287
+2020-11-06 16:38:36-->  [error]  (page)::FrmLaborSearchPopModify.cs  (Function)::SetDataBind_TeamCmb  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Worker.Labor.FrmLaborSearchPopModify.SetDataBind_TeamCmb() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Worker\Labor\FrmLaborSearchPopModify.cs:줄 287
+2020-11-06 16:41:13-->  [error]  (page)::FrmLaborSearchPopModify.cs  (Function)::SetDataBind_TeamCmb  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Worker.Labor.FrmLaborSearchPopModify.SetDataBind_TeamCmb() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Worker\Labor\FrmLaborSearchPopModify.cs:줄 287
+2020-11-06 16:51:41-->  [error]  (page)::FrmLaborSearch.cs  (Function)::SetDataBind_CmbMember  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Worker.Labor.FrmLaborSearch.SetDataBind_TeamCmb() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Worker\Labor\FrmLaborSearch.cs:줄 258
+2020-11-06 16:51:45-->  [error]  (page)::FrmLaborSearchPopModify.cs  (Function)::SetDataBind_TeamCmb  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Worker.Labor.FrmLaborSearchPopModify.SetDataBind_TeamCmb() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Worker\Labor\FrmLaborSearchPopModify.cs:줄 287
+2020-11-06 16:51:57-->  [error]  (page)::FrmLaborSearchPopModify.cs  (Function)::SetDataBind_TeamCmb  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Worker.Labor.FrmLaborSearchPopModify.SetDataBind_TeamCmb() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Worker\Labor\FrmLaborSearchPopModify.cs:줄 287
+2020-11-06 16:52:12-->  [error]  (page)::FrmLaborSearchPopModify.cs  (Function)::SetDataBind_TeamCmb  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Worker.Labor.FrmLaborSearchPopModify.SetDataBind_TeamCmb() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Worker\Labor\FrmLaborSearchPopModify.cs:줄 287
+2020-11-06 16:53:33-->  [error]  (page)::FrmLaborSearch.cs  (Function)::SetDataBind_CmbMember  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Worker.Labor.FrmLaborSearch.SetDataBind_TeamCmb() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Worker\Labor\FrmLaborSearch.cs:줄 258
+2020-11-06 16:53:36-->  [error]  (page)::FrmLaborSearchPopModify.cs  (Function)::SetDataBind_TeamCmb  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Worker.Labor.FrmLaborSearchPopModify.SetDataBind_TeamCmb() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Worker\Labor\FrmLaborSearchPopModify.cs:줄 287
+2020-11-06 17:16:40-->  [error]  (page)::FrmLaborSearch.cs  (Function)::SetDataBind_CmbMember  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Worker.Labor.FrmLaborSearch.SetDataBind_TeamCmb() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Worker\Labor\FrmLaborSearch.cs:줄 258
+2020-11-06 17:16:43-->  [error]  (page)::FrmLaborSearchPopModify.cs  (Function)::SetDataBind_TeamCmb  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Worker.Labor.FrmLaborSearchPopModify.SetDataBind_TeamCmb() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Worker\Labor\FrmLaborSearchPopModify.cs:줄 294
+2020-11-06 17:16:49-->  [error]  (page)::FrmLaborSearchPopModify.cs  (Function)::SetDataBind_TeamCmb  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Worker.Labor.FrmLaborSearchPopModify.SetDataBind_TeamCmb() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Worker\Labor\FrmLaborSearchPopModify.cs:줄 294
+2020-11-06 17:16:56-->  [error]  (page)::FrmLaborSearchPopModify.cs  (Function)::SetDataBind_TeamCmb  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Worker.Labor.FrmLaborSearchPopModify.SetDataBind_TeamCmb() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Worker\Labor\FrmLaborSearchPopModify.cs:줄 294
+2020-11-06 17:17:00-->  [error]  (page)::FrmLaborSearchPopModify.cs  (Function)::SetDataBind_TeamCmb  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Worker.Labor.FrmLaborSearchPopModify.SetDataBind_TeamCmb() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Worker\Labor\FrmLaborSearchPopModify.cs:줄 294
+2020-11-06 17:17:38-->  [error]  (page)::FrmLaborSearch.cs  (Function)::SetDataBind_CmbMember  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Worker.Labor.FrmLaborSearch.SetDataBind_TeamCmb() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Worker\Labor\FrmLaborSearch.cs:줄 258
+2020-11-06 17:17:56-->  [error]  (page)::FrmLaborSearchPopModify.cs  (Function)::SetDataBind_TeamCmb  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Worker.Labor.FrmLaborSearchPopModify.SetDataBind_TeamCmb() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Worker\Labor\FrmLaborSearchPopModify.cs:줄 294
+2020-11-06 17:17:59-->  [error]  (page)::FrmLaborSearchPopModify.cs  (Function)::SetDataBind_TeamCmb  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Worker.Labor.FrmLaborSearchPopModify.SetDataBind_TeamCmb() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Worker\Labor\FrmLaborSearchPopModify.cs:줄 294
+2020-11-06 17:18:29-->  [error]  (page)::FrmLaborSearchPopModify.cs  (Function)::SetDataBind_TeamCmb  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Worker.Labor.FrmLaborSearchPopModify.SetDataBind_TeamCmb() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Worker\Labor\FrmLaborSearchPopModify.cs:줄 294
+2020-11-06 17:19:56-->  [error]  (page)::FrmLaborSearch.cs  (Function)::SetDataBind_CmbMember  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Worker.Labor.FrmLaborSearch.SetDataBind_TeamCmb() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Worker\Labor\FrmLaborSearch.cs:줄 258
+2020-11-06 17:20:02-->  [error]  (page)::FrmLaborSearchPopModify.cs  (Function)::SetDataBind_TeamCmb  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Worker.Labor.FrmLaborSearchPopModify.SetDataBind_TeamCmb() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Worker\Labor\FrmLaborSearchPopModify.cs:줄 294
+2020-11-06 17:20:10-->  [error]  (page)::FrmLaborSearchPopModify.cs  (Function)::SetDataBind_TeamCmb  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Worker.Labor.FrmLaborSearchPopModify.SetDataBind_TeamCmb() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Worker\Labor\FrmLaborSearchPopModify.cs:줄 294
+2020-11-06 17:20:52-->  [error]  (page)::FrmLaborSearch.cs  (Function)::SetDataBind_CmbMember  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Worker.Labor.FrmLaborSearch.SetDataBind_TeamCmb() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Worker\Labor\FrmLaborSearch.cs:줄 258
+2020-11-06 17:21:00-->  [error]  (page)::FrmLaborSearchPopModify.cs  (Function)::SetDataBind_TeamCmb  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Worker.Labor.FrmLaborSearchPopModify.SetDataBind_TeamCmb() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Worker\Labor\FrmLaborSearchPopModify.cs:줄 294
+2020-11-06 17:21:06-->  [error]  (page)::FrmLaborSearchPopModify.cs  (Function)::SetDataBind_TeamCmb  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Worker.Labor.FrmLaborSearchPopModify.SetDataBind_TeamCmb() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Worker\Labor\FrmLaborSearchPopModify.cs:줄 294
+2020-11-06 17:21:12-->  [error]  (page)::FrmLaborSearchPopModify.cs  (Function)::SetDataBind_TeamCmb  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Worker.Labor.FrmLaborSearchPopModify.SetDataBind_TeamCmb() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Worker\Labor\FrmLaborSearchPopModify.cs:줄 294
+2020-11-06 17:21:16-->  [error]  (page)::FrmLaborSearchPopModify.cs  (Function)::SetDataBind_TeamCmb  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Worker.Labor.FrmLaborSearchPopModify.SetDataBind_TeamCmb() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Worker\Labor\FrmLaborSearchPopModify.cs:줄 294
+2020-11-06 17:21:21-->  [error]  (page)::FrmLaborSearchPopModify.cs  (Function)::SetDataBind_TeamCmb  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Worker.Labor.FrmLaborSearchPopModify.SetDataBind_TeamCmb() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Worker\Labor\FrmLaborSearchPopModify.cs:줄 294
+2020-11-06 17:21:26-->  [error]  (page)::FrmLaborSearchPopModify.cs  (Function)::SetDataBind_TeamCmb  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Worker.Labor.FrmLaborSearchPopModify.SetDataBind_TeamCmb() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Worker\Labor\FrmLaborSearchPopModify.cs:줄 294
+2020-11-06 17:21:30-->  [error]  (page)::FrmLaborSearchPopModify.cs  (Function)::SetDataBind_TeamCmb  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Worker.Labor.FrmLaborSearchPopModify.SetDataBind_TeamCmb() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Worker\Labor\FrmLaborSearchPopModify.cs:줄 294
+2020-11-06 17:21:37-->  [error]  (page)::FrmLaborSearchPopModify.cs  (Function)::SetDataBind_TeamCmb  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Worker.Labor.FrmLaborSearchPopModify.SetDataBind_TeamCmb() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Worker\Labor\FrmLaborSearchPopModify.cs:줄 294
+2020-11-06 17:21:41-->  [error]  (page)::FrmLaborSearchPopModify.cs  (Function)::SetDataBind_TeamCmb  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Worker.Labor.FrmLaborSearchPopModify.SetDataBind_TeamCmb() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Worker\Labor\FrmLaborSearchPopModify.cs:줄 294
+2020-11-06 17:22:25-->  [error]  (page)::FrmLaborSearchPopModify.cs  (Function)::SetDataBind_TeamCmb  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Worker.Labor.FrmLaborSearchPopModify.SetDataBind_TeamCmb() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Worker\Labor\FrmLaborSearchPopModify.cs:줄 294
+2020-11-06 17:23:08-->  [error]  (page)::FrmLaborSearchPopModify.cs  (Function)::SetDataBind_TeamCmb  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Worker.Labor.FrmLaborSearchPopModify.SetDataBind_TeamCmb() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Worker\Labor\FrmLaborSearchPopModify.cs:줄 294
+2020-11-06 17:46:36-->  [error]  (page)::FrmLaborSearch.cs  (Function)::SetDataBind_CmbMember  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Worker.Labor.FrmLaborSearch.SetDataBind_TeamCmb() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Worker\Labor\FrmLaborSearch.cs:줄 258
+2020-11-06 17:46:38-->  [error]  (page)::FrmLaborSearchPopModify.cs  (Function)::SetDataBind_TeamCmb  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Worker.Labor.FrmLaborSearchPopModify.SetDataBind_TeamCmb() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Worker\Labor\FrmLaborSearchPopModify.cs:줄 294
+2020-11-06 17:46:52-->  [error]  (page)::FrmLaborSearchPopModify.cs  (Function)::SetDataBind_TeamCmb  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Worker.Labor.FrmLaborSearchPopModify.SetDataBind_TeamCmb() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Worker\Labor\FrmLaborSearchPopModify.cs:줄 294
+2020-11-06 17:48:09-->  [error]  (page)::FrmLaborSearchPopModify.cs  (Function)::SetDataBind_TeamCmb  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Worker.Labor.FrmLaborSearchPopModify.SetDataBind_TeamCmb() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Worker\Labor\FrmLaborSearchPopModify.cs:줄 294
+2020-11-06 17:48:15-->  [error]  (page)::FrmLaborSearchPopModify.cs  (Function)::SetDataBind_TeamCmb  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Worker.Labor.FrmLaborSearchPopModify.SetDataBind_TeamCmb() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Worker\Labor\FrmLaborSearchPopModify.cs:줄 294
+2020-11-06 17:48:40-->  [error]  (page)::FrmLaborSearch.cs  (Function)::SetDataBind_CmbMember  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Worker.Labor.FrmLaborSearch.SetDataBind_TeamCmb() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Worker\Labor\FrmLaborSearch.cs:줄 258
+2020-11-06 17:48:42-->  [error]  (page)::FrmLaborSearchPopModify.cs  (Function)::SetDataBind_TeamCmb  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Worker.Labor.FrmLaborSearchPopModify.SetDataBind_TeamCmb() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Worker\Labor\FrmLaborSearchPopModify.cs:줄 294
+2020-11-06 17:49:17-->  [error]  (page)::FrmLaborSearch.cs  (Function)::SetDataBind_CmbMember  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Worker.Labor.FrmLaborSearch.SetDataBind_TeamCmb() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Worker\Labor\FrmLaborSearch.cs:줄 258
+2020-11-06 17:49:26-->  [error]  (page)::FrmLaborSearchPopModify.cs  (Function)::SetDataBind_TeamCmb  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Worker.Labor.FrmLaborSearchPopModify.SetDataBind_TeamCmb() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Worker\Labor\FrmLaborSearchPopModify.cs:줄 294
+2020-11-06 17:54:36-->  [error]  (page)::FrmLaborSearch.cs  (Function)::SetDataBind_CmbMember  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Worker.Labor.FrmLaborSearch.SetDataBind_TeamCmb() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Worker\Labor\FrmLaborSearch.cs:줄 258
+2020-11-06 17:54:39-->  [error]  (page)::FrmLaborSearch.cs  (Function)::SetDataBind_CmbMember  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Worker.Labor.FrmLaborSearch.SetDataBind_TeamCmb() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Worker\Labor\FrmLaborSearch.cs:줄 258
+2020-11-06 17:54:43-->  [error]  (page)::FrmLaborSearchPopModify.cs  (Function)::SetDataBind_TeamCmb  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Worker.Labor.FrmLaborSearchPopModify.SetDataBind_TeamCmb() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Worker\Labor\FrmLaborSearchPopModify.cs:줄 294
+2020-11-06 17:55:06-->  [error]  (page)::FrmLaborSearchPopModify.cs  (Function)::SetDataBind_TeamCmb  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Worker.Labor.FrmLaborSearchPopModify.SetDataBind_TeamCmb() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Worker\Labor\FrmLaborSearchPopModify.cs:줄 294
+2020-11-06 17:55:29-->  [error]  (page)::FrmLaborSearchPopModify.cs  (Function)::SetDataBind_TeamCmb  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Worker.Labor.FrmLaborSearchPopModify.SetDataBind_TeamCmb() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Worker\Labor\FrmLaborSearchPopModify.cs:줄 294
+2020-11-06 17:55:36-->  [error]  (page)::FrmLaborSearchPopModify.cs  (Function)::SetDataBind_TeamCmb  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Worker.Labor.FrmLaborSearchPopModify.SetDataBind_TeamCmb() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Worker\Labor\FrmLaborSearchPopModify.cs:줄 294
+2020-11-06 17:55:41-->  [error]  (page)::FrmLaborSearchPopModify.cs  (Function)::SetDataBind_TeamCmb  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Worker.Labor.FrmLaborSearchPopModify.SetDataBind_TeamCmb() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Worker\Labor\FrmLaborSearchPopModify.cs:줄 294
+2020-11-06 17:57:10-->  [error]  (page)::FrmLaborSearch.cs  (Function)::SetDataBind_CmbMember  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Worker.Labor.FrmLaborSearch.SetDataBind_TeamCmb() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Worker\Labor\FrmLaborSearch.cs:줄 258
+2020-11-06 17:57:17-->  [error]  (page)::FrmLaborSearchPopModify.cs  (Function)::SetDataBind_TeamCmb  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Worker.Labor.FrmLaborSearchPopModify.SetDataBind_TeamCmb() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Worker\Labor\FrmLaborSearchPopModify.cs:줄 294
+2020-11-06 18:08:20-->  [error]  (page)::FrmLaborSearch.cs  (Function)::SetDataBind_CmbMember  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Worker.Labor.FrmLaborSearch.SetDataBind_TeamCmb() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Worker\Labor\FrmLaborSearch.cs:줄 258
+2020-11-06 18:08:23-->  [error]  (page)::FrmLaborSearchPopModify.cs  (Function)::SetDataBind_TeamCmb  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Worker.Labor.FrmLaborSearchPopModify.SetDataBind_TeamCmb() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Worker\Labor\FrmLaborSearchPopModify.cs:줄 294
+2020-11-06 18:08:30-->  [error]  (page)::FrmLaborSearchPopModify.cs  (Function)::SetDataBind_TeamCmb  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Worker.Labor.FrmLaborSearchPopModify.SetDataBind_TeamCmb() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Worker\Labor\FrmLaborSearchPopModify.cs:줄 294
+2020-11-06 18:08:35-->  [error]  (page)::FrmLaborSearchPopModify.cs  (Function)::SetDataBind_TeamCmb  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Worker.Labor.FrmLaborSearchPopModify.SetDataBind_TeamCmb() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Worker\Labor\FrmLaborSearchPopModify.cs:줄 294
+2020-11-06 18:08:40-->  [error]  (page)::FrmLaborSearchPopModify.cs  (Function)::SetDataBind_TeamCmb  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Worker.Labor.FrmLaborSearchPopModify.SetDataBind_TeamCmb() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Worker\Labor\FrmLaborSearchPopModify.cs:줄 294
+2020-11-06 18:09:01-->  [error]  (page)::FrmLaborSearchPopModify.cs  (Function)::SetDataBind_TeamCmb  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Worker.Labor.FrmLaborSearchPopModify.SetDataBind_TeamCmb() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Worker\Labor\FrmLaborSearchPopModify.cs:줄 294
+2020-11-06 18:09:20-->  [error]  (page)::FrmLaborSearch.cs  (Function)::SetDataBind_CmbMember  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Worker.Labor.FrmLaborSearch.SetDataBind_TeamCmb() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Worker\Labor\FrmLaborSearch.cs:줄 258
+2020-11-06 18:09:24-->  [error]  (page)::FrmLaborSearchPopModify.cs  (Function)::SetDataBind_TeamCmb  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Worker.Labor.FrmLaborSearchPopModify.SetDataBind_TeamCmb() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Worker\Labor\FrmLaborSearchPopModify.cs:줄 294
+2020-11-06 18:12:37-->  [error]  (page)::FrmLaborSearch.cs  (Function)::SetDataBind_CmbMember  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Worker.Labor.FrmLaborSearch.SetDataBind_TeamCmb() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Worker\Labor\FrmLaborSearch.cs:줄 258
+2020-11-06 18:12:38-->  [error]  (page)::FrmLaborSearchPopModify.cs  (Function)::SetDataBind_TeamCmb  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Worker.Labor.FrmLaborSearchPopModify.SetDataBind_TeamCmb() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Worker\Labor\FrmLaborSearchPopModify.cs:줄 294
+2020-11-06 18:17:56-->  [error]  (page)::FrmLaborSearch.cs  (Function)::SetDataBind_CmbMember  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Worker.Labor.FrmLaborSearch.SetDataBind_TeamCmb() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Worker\Labor\FrmLaborSearch.cs:줄 258
+2020-11-06 18:17:57-->  [error]  (page)::FrmLaborSearchPopModify.cs  (Function)::SetDataBind_TeamCmb  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Worker.Labor.FrmLaborSearchPopModify.SetDataBind_TeamCmb() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Worker\Labor\FrmLaborSearchPopModify.cs:줄 294
+2020-11-06 18:20:58-->  [error]  (page)::FrmLaborSearch.cs  (Function)::SetDataBind_CmbMember  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Worker.Labor.FrmLaborSearch.SetDataBind_TeamCmb() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Worker\Labor\FrmLaborSearch.cs:줄 258
+2020-11-06 18:21:05-->  [error]  (page)::FrmLaborSearchPopModify.cs  (Function)::SetDataBind_TeamCmb  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Worker.Labor.FrmLaborSearchPopModify.SetDataBind_TeamCmb() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Worker\Labor\FrmLaborSearchPopModify.cs:줄 294
+2020-11-06 18:21:11-->  [error]  (page)::FrmLaborSearchPopModify.cs  (Function)::SetDataBind_TeamCmb  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Worker.Labor.FrmLaborSearchPopModify.SetDataBind_TeamCmb() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Worker\Labor\FrmLaborSearchPopModify.cs:줄 294
+2020-11-06 18:22:14-->  [error]  (page)::FrmLaborSearchPopModify.cs  (Function)::SetDataBind_TeamCmb  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Worker.Labor.FrmLaborSearchPopModify.SetDataBind_TeamCmb() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Worker\Labor\FrmLaborSearchPopModify.cs:줄 294
+2020-11-06 18:23:06-->  [error]  (page)::FrmLaborSearchPopModify.cs  (Function)::SetDataBind_TeamCmb  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Worker.Labor.FrmLaborSearchPopModify.SetDataBind_TeamCmb() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Worker\Labor\FrmLaborSearchPopModify.cs:줄 294
+2020-11-06 18:24:31-->  [error]  (page)::FrmLaborSearchPopModify.cs  (Function)::SetDataBind_TeamCmb  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Worker.Labor.FrmLaborSearchPopModify.SetDataBind_TeamCmb() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Worker\Labor\FrmLaborSearchPopModify.cs:줄 294
+2020-11-06 18:25:05-->  [error]  (page)::FrmLaborSearch.cs  (Function)::SetDataBind_CmbMember  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Worker.Labor.FrmLaborSearch.SetDataBind_TeamCmb() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Worker\Labor\FrmLaborSearch.cs:줄 258
+2020-11-06 18:25:07-->  [error]  (page)::FrmLaborSearchPopModify.cs  (Function)::SetDataBind_TeamCmb  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Worker.Labor.FrmLaborSearchPopModify.SetDataBind_TeamCmb() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Worker\Labor\FrmLaborSearchPopModify.cs:줄 294
+2020-11-06 18:25:41-->  [error]  (page)::FrmLaborSearchPopModify.cs  (Function)::SetDataBind_TeamCmb  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Worker.Labor.FrmLaborSearchPopModify.SetDataBind_TeamCmb() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Worker\Labor\FrmLaborSearchPopModify.cs:줄 294
+2020-11-06 18:26:42-->  [error]  (page)::FrmLaborSearchPopModify.cs  (Function)::SetDataBind_TeamCmb  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Worker.Labor.FrmLaborSearchPopModify.SetDataBind_TeamCmb() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Worker\Labor\FrmLaborSearchPopModify.cs:줄 294
+2020-11-06 18:28:19-->  [error]  (page)::FrmLaborSearch.cs  (Function)::SetDataBind_CmbMember  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Worker.Labor.FrmLaborSearch.SetDataBind_TeamCmb() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Worker\Labor\FrmLaborSearch.cs:줄 258
+2020-11-06 18:28:22-->  [error]  (page)::FrmLaborSearchPopModify.cs  (Function)::SetDataBind_TeamCmb  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Worker.Labor.FrmLaborSearchPopModify.SetDataBind_TeamCmb() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Worker\Labor\FrmLaborSearchPopModify.cs:줄 294
+2020-11-06 18:28:26-->  [error]  (page)::FrmLaborSearchPopModify.cs  (Function)::SetDataBind_TeamCmb  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Worker.Labor.FrmLaborSearchPopModify.SetDataBind_TeamCmb() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Worker\Labor\FrmLaborSearchPopModify.cs:줄 294
+2020-11-06 18:29:06-->  [error]  (page)::FrmLaborSearch.cs  (Function)::SetDataBind_CmbMember  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Worker.Labor.FrmLaborSearch.SetDataBind_TeamCmb() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Worker\Labor\FrmLaborSearch.cs:줄 258
+2020-11-06 18:29:22-->  [error]  (page)::FrmLaborSearch.cs  (Function)::SetDataBind_CmbMember  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Worker.Labor.FrmLaborSearch.SetDataBind_TeamCmb() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Worker\Labor\FrmLaborSearch.cs:줄 258
+2020-11-06 18:29:26-->  [error]  (page)::FrmLaborSearchPopModify.cs  (Function)::SetDataBind_TeamCmb  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Worker.Labor.FrmLaborSearchPopModify.SetDataBind_TeamCmb() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Worker\Labor\FrmLaborSearchPopModify.cs:줄 294
+2020-11-06 18:30:08-->  [error]  (page)::FrmLaborSearchPopModify.cs  (Function)::SetDataBind_TeamCmb  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Worker.Labor.FrmLaborSearchPopModify.SetDataBind_TeamCmb() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Worker\Labor\FrmLaborSearchPopModify.cs:줄 294
+2020-11-06 18:32:35-->  [error]  (page)::FrmLaborSearch.cs  (Function)::SetDataBind_CmbMember  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Worker.Labor.FrmLaborSearch.SetDataBind_TeamCmb() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Worker\Labor\FrmLaborSearch.cs:줄 258
+2020-11-06 18:32:39-->  [error]  (page)::FrmLaborSearchPopModify.cs  (Function)::SetDataBind_TeamCmb  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Worker.Labor.FrmLaborSearchPopModify.SetDataBind_TeamCmb() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Worker\Labor\FrmLaborSearchPopModify.cs:줄 294
+2020-11-06 18:35:12-->  [error]  (page)::FrmLaborSearch.cs  (Function)::SetDataBind_CmbMember  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Worker.Labor.FrmLaborSearch.SetDataBind_TeamCmb() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Worker\Labor\FrmLaborSearch.cs:줄 258
+2020-11-06 18:35:17-->  [error]  (page)::FrmLaborSearchPopModify.cs  (Function)::SetDataBind_TeamCmb  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Worker.Labor.FrmLaborSearchPopModify.SetDataBind_TeamCmb() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Worker\Labor\FrmLaborSearchPopModify.cs:줄 294
+2020-11-06 18:38:51-->  [error]  (page)::FrmLaborSearch.cs  (Function)::SetDataBind_CmbMember  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Worker.Labor.FrmLaborSearch.SetDataBind_TeamCmb() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Worker\Labor\FrmLaborSearch.cs:줄 258
+2020-11-06 18:41:34-->  [error]  (page)::FrmLaborSearch.cs  (Function)::SetDataBind_CmbMember  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Worker.Labor.FrmLaborSearch.SetDataBind_TeamCmb() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Worker\Labor\FrmLaborSearch.cs:줄 258
+2020-11-06 18:41:39-->  [error]  (page)::FrmLaborSearchPopModify.cs  (Function)::SetDataBind_TeamCmb  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Worker.Labor.FrmLaborSearchPopModify.SetDataBind_TeamCmb() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Worker\Labor\FrmLaborSearchPopModify.cs:줄 294
+2020-11-06 18:42:56-->  [error]  (page)::FrmLaborSearch.cs  (Function)::SetDataBind_CmbMember  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Worker.Labor.FrmLaborSearch.SetDataBind_TeamCmb() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Worker\Labor\FrmLaborSearch.cs:줄 258
+2020-11-06 18:42:58-->  [error]  (page)::FrmLaborSearchPopModify.cs  (Function)::SetDataBind_TeamCmb  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Worker.Labor.FrmLaborSearchPopModify.SetDataBind_TeamCmb() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Worker\Labor\FrmLaborSearchPopModify.cs:줄 294
+2020-11-06 18:43:54-->  [error]  (page)::FrmLaborSearch.cs  (Function)::SetDataBind_CmbMember  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Worker.Labor.FrmLaborSearch.SetDataBind_TeamCmb() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Worker\Labor\FrmLaborSearch.cs:줄 258
+2020-11-06 18:44:08-->  [error]  (page)::FrmLaborSearchPopModify.cs  (Function)::SetDataBind_TeamCmb  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Worker.Labor.FrmLaborSearchPopModify.SetDataBind_TeamCmb() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Worker\Labor\FrmLaborSearchPopModify.cs:줄 294
+2020-11-06 18:45:28-->  [error]  (page)::FrmLaborSearchPopModify.cs  (Function)::SetDataBind_TeamCmb  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Worker.Labor.FrmLaborSearchPopModify.SetDataBind_TeamCmb() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Worker\Labor\FrmLaborSearchPopModify.cs:줄 294

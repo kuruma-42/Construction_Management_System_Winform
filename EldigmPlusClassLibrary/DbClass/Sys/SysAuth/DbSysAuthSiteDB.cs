@@ -80,10 +80,11 @@ namespace EldigmPlusClassLibrary.DbClass.Sys.SysAuth
         //SELECT
         public DataSet sSysAuthSiteDB(string SITE_CD, string DBNM, string USING_FLAG)
         {
+            string con = "[PLUS-" + DBNM + "].dbo.";
             string sql = "" +
                 " SELECT A.AUTH_CD, A.AUTH_NM, A.AUTH_LEVEL, ISNULL(B.LAB_APRV_FLAG, 0) LAB_APRV_FLAG, ISNULL(B.USING_FLAG, 0) USING_FLAG, ISNULL(B.MEMO, '') MEMO " +
                 " FROM[PLUS-ELDIGM].dbo.T00_CODE_AUTH A " +
-                " LEFT OUTER JOIN[PLUS-" + DBNM + "].dbo.T00_CODE_AUTH_SITE B ON A.AUTH_CD = B.AUTH_CD AND B.SITE_CD =" + SITE_CD + " ";
+                " LEFT OUTER JOIN" + con + "T00_CODE_AUTH_SITE B ON A.AUTH_CD = B.AUTH_CD AND B.SITE_CD =" + SITE_CD + " ";
 
             if (USING_FLAG != "")
             {
@@ -103,8 +104,9 @@ namespace EldigmPlusClassLibrary.DbClass.Sys.SysAuth
         //수정
         public int mSysAuthSiteDB(string DBNM, string SITE_CD ,string AUTH_CD, string LAB_APRV_FLAG, string USING_FLAG, string MEMO)
         {
+            string con = "[PLUS-" + DBNM + "].dbo.";
             string sql = "" + 
-            " UPDATE[PLUS-" + DBNM + "].dbo.T00_CODE_AUTH_SITE SET LAB_APRV_FLAG = " + LAB_APRV_FLAG + ", USING_FLAG = " + USING_FLAG + ", MEMO = '" + MEMO + "' " +
+            " UPDATE " + con + "T00_CODE_AUTH_SITE SET LAB_APRV_FLAG = " + LAB_APRV_FLAG + ", USING_FLAG = " + USING_FLAG + ", MEMO = '" + MEMO + "' " +
             " WHERE SITE_CD = " + SITE_CD + " AND AUTH_CD = '" + AUTH_CD + "' ";
 
 
@@ -120,8 +122,9 @@ namespace EldigmPlusClassLibrary.DbClass.Sys.SysAuth
         //AUTH_SITE INSERT
         public int aSysAuthSiteDB(string DBNM, string SITE_CD ,string AUTH_CD, string LAB_APRV_FLAG, string USING_FLAG, string AUTH_LEVEL, string MEMO, string INPUT_ID)
         {
+            string con = "[PLUS-" + DBNM + "].dbo.";
             string sql = "" +
-                " INSERT INTO [PLUS-" + DBNM + "].dbo.T00_CODE_AUTH_SITE (SITE_CD, AUTH_CD, LAB_APRV_FLAG, USING_FLAG, AUTH_LEVEL, MEMO, INPUT_ID, INPUT_DT) " +
+                " INSERT INTO " + con + "T00_CODE_AUTH_SITE (SITE_CD, AUTH_CD, LAB_APRV_FLAG, USING_FLAG, AUTH_LEVEL, MEMO, INPUT_ID, INPUT_DT) " +
                 " VALUES (" + SITE_CD + ", '" + AUTH_CD + "', " + LAB_APRV_FLAG + ", "  + USING_FLAG + ", " + AUTH_LEVEL + ", '" + MEMO + "', " + INPUT_ID + ", GETDATE()) ";
 
             int reCnt = 0;

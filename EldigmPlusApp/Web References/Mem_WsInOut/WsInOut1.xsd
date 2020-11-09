@@ -19,6 +19,38 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
+  <xs:element name="co_Cmb">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="pSiteCd" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="co_CmbResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="co_CmbResult" nillable="true" type="xs:string" />
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/EldigmPlusSvc_Main.WebSvc.Worker.InOut" minOccurs="0" name="reList" nillable="true" type="q2:ArrayOfDataComCombo" />
+        <xs:element minOccurs="0" name="reMsg" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="team_Cmb">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="pSiteCd" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="team_CmbResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="team_CmbResult" nillable="true" type="xs:string" />
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/EldigmPlusSvc_Main.WebSvc.Worker.InOut" minOccurs="0" name="reList" nillable="true" type="q3:ArrayOfDataComCombo" />
+        <xs:element minOccurs="0" name="reMsg" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
   <xs:element name="sInOut">
     <xs:complexType>
       <xs:sequence>
@@ -27,6 +59,7 @@
         <xs:element minOccurs="0" name="pDtp1" nillable="true" type="xs:string" />
         <xs:element minOccurs="0" name="pDtp2" nillable="true" type="xs:string" />
         <xs:element minOccurs="0" name="pCocd" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pCmbIO" nillable="true" type="xs:string" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -34,12 +67,12 @@
     <xs:complexType>
       <xs:sequence>
         <xs:element minOccurs="0" name="sInOutResult" nillable="true" type="xs:string" />
-        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/EldigmPlusSvc_Main.WebSvc.Worker.InOut" minOccurs="0" name="reList" nillable="true" type="q2:ArrayOfDataInOut" />
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/EldigmPlusSvc_Main.WebSvc.Worker.InOut" minOccurs="0" name="reList" nillable="true" type="q4:ArrayOfDataInOut" />
         <xs:element minOccurs="0" name="reMsg" nillable="true" type="xs:string" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="sInOutLog">
+  <xs:element name="sInOutHistory">
     <xs:complexType>
       <xs:sequence>
         <xs:element minOccurs="0" name="pDbnm" nillable="true" type="xs:string" />
@@ -50,12 +83,352 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="sInOutLogResponse">
+  <xs:element name="sInOutHistoryResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element minOccurs="0" name="sInOutLogResult" nillable="true" type="xs:string" />
-        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/EldigmPlusSvc_Main.WebSvc.Worker.InOut" minOccurs="0" name="reList" nillable="true" type="q3:ArrayOfDataInOut" />
+        <xs:element minOccurs="0" name="sInOutHistoryResult" nillable="true" type="xs:string" />
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/EldigmPlusSvc_Main.WebSvc.Worker.InOut" minOccurs="0" name="reList" nillable="true" type="q5:ArrayOfDataInOut" />
         <xs:element minOccurs="0" name="reMsg" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="mInOut">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="pDbnm" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pLabNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pSiteCd" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pRegDate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pInDt" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pOutDt" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pCoCd" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pTeamCd" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="mInOutResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="mInOutResult" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="reMsg" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="reData" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="aInOutLog">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="pDbnm" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pLabNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pSiteCd" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pRegDate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pInDt" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pOutDt" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pCoCd" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pTeamCd" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pInIOPFId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pOutIOPFId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pInputId" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="aInOutLogResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="aInOutLogResult" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="reMsg" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="reData" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="dInHistory">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="pDbnm" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pLabNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pSiteCd" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pRegDate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pEventDt" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="dInHistoryResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="dInHistoryResult" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="reMsg" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="reData" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="dOutHistory">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="pDbnm" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pLabNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pSiteCd" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pRegDate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pEventDt" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="dOutHistoryResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="dOutHistoryResult" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="reMsg" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="reData" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="mInOutHistory">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="pDbnm" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pLabNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pSiteCd" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pRegDate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pEventDt" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pEventDtH" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pCoCd" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pTeamCd" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="mInOutHistoryResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="mInOutHistoryResult" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="reMsg" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="reData" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="aInOutHistory">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="pDbnm" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pLabNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pSiteCd" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pRegDate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pEventDt" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pCoCd" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pTeamCd" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pInputId" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="aInOutHistoryResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="aInOutHistoryResult" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="reMsg" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="reData" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="aInOut">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="pDbnm" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pLabNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pSiteCd" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pRegDate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pInDt" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pOutDt" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pCoCd" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pTeamCd" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="aInOutResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="aInOutResult" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="reMsg" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="reData" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="exInOutCo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="pDbnm" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pLabNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pSiteCd" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pCoCd" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="exInOutCoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="exInOutCoResult" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="reMsg" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="reData" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="aInOutCo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="pDbnm" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pLabNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pSiteCd" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pCoCd" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pInDt" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="aInOutCoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="aInOutCoResult" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="reMsg" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="reData" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="mInOutCo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="pDbnm" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pLabNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pSiteCd" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pCoCd" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pInDt" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="mInOutCoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="mInOutCoResult" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="reMsg" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="reData" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="exLabInOutFinal">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="pLabNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pSiteCd" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="exLabInOutFinalResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="exLabInOutFinalResult" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="reMsg" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="reData" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="mLabInOutFinal">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="pLabNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pSiteCd" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pCoCd" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pTeamCd" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pRegDate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pInHHMM" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pOutHHMM" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="mLabInOutFinalResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="mLabInOutFinalResult" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="reMsg" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="reData" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="aLabInOutFinal">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="pLabNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pSiteCd" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pCoCd" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pTeamCd" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pRegDate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pInHHMM" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pOutHHMM" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="aLabInOutFinalResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="aLabInOutFinalResult" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="reMsg" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="reData" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="exInOut2020">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="pLabNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pSiteCd" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pRegdate" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="exInOut2020Response">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="exInOut2020Result" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="reMsg" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="reData" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="aInOut2020">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="pLabNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pSiteCd" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pRegdate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pCoCd" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pTeamCd" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pInHHMM" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pOutHHMM" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="aInOut2020Response">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="aInOut2020Result" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="reMsg" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="reData" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="mInOut2020">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="pLabNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pSiteCd" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pRegdate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pCoCd" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pTeamCd" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pInHHMM" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pOutHHMM" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="mInOut2020Response">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="mInOut2020Result" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="reMsg" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="reData" nillable="true" type="xs:string" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>

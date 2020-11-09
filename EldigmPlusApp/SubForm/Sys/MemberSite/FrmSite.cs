@@ -210,7 +210,7 @@ namespace EldigmPlusApp.SubForm.Sys.MemberSite
                 wSvc = new M_WsMember.WsMember();
                 wSvc.Url = "http://" + AppInfo.SsWsvcServer2 + "/WebSvc/Sys/MemberSite/WsMember.svc";
                 wSvc.Timeout = 1000;
-                string pUsing_Flag = "1";
+                string pUsing_Flag = "";
 
                 if (cmbMember.SelectedValue != null)
                 {
@@ -555,7 +555,11 @@ namespace EldigmPlusApp.SubForm.Sys.MemberSite
         {
             SetDataBind_gridView1();
         }
-        
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
 

@@ -59,6 +59,7 @@
         <xs:element minOccurs="0" name="pSiteCd" nillable="true" type="xs:string" />
         <xs:element minOccurs="0" name="pTopMenuCd" nillable="true" type="xs:string" />
         <xs:element minOccurs="0" name="pSubMenuCd" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pAuthCd" nillable="true" type="xs:string" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>

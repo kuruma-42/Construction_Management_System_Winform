@@ -57,12 +57,14 @@ namespace EldigmPlusClassLibrary.DbClass.Sys.CompanyTeam
         public DataSet constCmb(string SITE_CD)
         {
             string dbNm = sDbNm(SITE_CD);
+            string con = "[PLUS-" + dbNm + "].dbo.";
+
 
             string sql = "" +
             " SELECT VALUE, TEXT " +
                 " FROM( " +
                     " SELECT CCODE AS VALUE, CCODE_NM AS TEXT, SORT_NO " +
-                    " FROM[PLUS-" + dbNm + "].dbo.View_Code_Comn " +
+                    " FROM " + con + "View_Code_Comn " +
                     " WHERE CCODE_GRP = 'Const' " +
                     " AND SITE_CD = " + SITE_CD + " AND USING_FLAG = 1 " +
                     " UNION ALL " +
@@ -194,9 +196,10 @@ namespace EldigmPlusClassLibrary.DbClass.Sys.CompanyTeam
         public int mCompanyMemco(string SITE_CD, string CO_CD, string CO_NM, string HEADCO_CD, string CONST_CCD, string CO_TYPE_SCD, string SORT_NO)
         {
             string dbNm = sDbNm(SITE_CD);
+            string con = "[PLUS-" + dbNm + "].dbo.";
             string sql = "" +                
 
-                " UPDATE [PLUS-" + dbNm + "].dbo.T00_COMPANY " +
+                " UPDATE " + con + "T00_COMPANY " +
                 " SET CO_NM = '" + CO_NM + "', HEADCO_CD = '" + HEADCO_CD + "', CONST_CCD =" + CONST_CCD + ", CO_TYPE_SCD = '" + CO_TYPE_SCD + "', SORT_NO = " + SORT_NO + " " +
                 " WHERE CO_CD =" + CO_CD + " ";
 
@@ -213,8 +216,9 @@ namespace EldigmPlusClassLibrary.DbClass.Sys.CompanyTeam
         public int mCompanyMemcoSite(string SITE_CD, string CO_CD, string START_DATE, string END_DATE, string USING_FLAG, string SORT_NO, string MEMO)
         {
             string dbNm = sDbNm(SITE_CD);
+            string con = "[PLUS-" + dbNm + "].dbo.";
             string sql = "" +
-                " UPDATE [PLUS-" + dbNm + "].dbo.T00_COMPANY_SITE " +
+                " UPDATE " + con + "T00_COMPANY_SITE " +
                 " SET START_DATE = " + START_DATE + ", END_DATE = " + END_DATE + ", USING_FLAG = " + USING_FLAG + ", SORT_NO = " + SORT_NO + ", MEMO = '" + MEMO + "' " +
                 " WHERE CO_CD = " + CO_CD + " AND SITE_CD = " + SITE_CD + " ";        
 
@@ -230,8 +234,9 @@ namespace EldigmPlusClassLibrary.DbClass.Sys.CompanyTeam
         public int aCompanyMemcoSite(string CO_CD, string SITE_CD, string START_DATE, string END_DATE, string USING_FLAG, string SORT_NO, string MEMO, string INPUT_ID)
         {
             string dbNm = sDbNm(SITE_CD);
+            string con = "[PLUS-" + dbNm + "].dbo.";
             string sql = "" +
-                " INSERT INTO [PLUS-" + dbNm + "].dbo.T00_COMPANY_SITE (CO_CD, SITE_CD, START_DATE, END_DATE, USING_FLAG, SORT_NO, MEMO, INPUT_ID, INPUT_DT) " +
+                " INSERT INTO " + con + "T00_COMPANY_SITE (CO_CD, SITE_CD, START_DATE, END_DATE, USING_FLAG, SORT_NO, MEMO, INPUT_ID, INPUT_DT) " +
                 " VALUES(" + CO_CD + ", " + SITE_CD + ", " + START_DATE + ", " + END_DATE + ", " + USING_FLAG + ", " + SORT_NO + ", " + MEMO + ", " + INPUT_ID + ", GETDATE())";
 
             int reCnt = 0;
@@ -271,8 +276,9 @@ namespace EldigmPlusClassLibrary.DbClass.Sys.CompanyTeam
         public int mCompanySiteLog(string CO_CD, string SITE_CD, string CO_NM, string CONST_CCD, string CO_TYPE_SCD, string START_DATE, string END_DATE, string USING_FLAG, string SORT_NO, string MEMO, string INPUT_ID)
         {
             string dbNm = sDbNm(SITE_CD);
+            string con = "[PLUS-" + dbNm + "].dbo.";
             string sql = "" + 
-            " INSERT INTO [PLUS-" + dbNm + "].dbo.T00_COMPANY_SITE_LOG (CO_CD, SITE_CD, LOG_NO, CO_NM, CONST_CCD, CO_TYPE_SCD, START_DATE, END_DATE, USING_FLAG, SORT_NO, MEMO, INPUT_ID, INPUT_DT) " +
+            " INSERT INTO " + con + "T00_COMPANY_SITE_LOG (CO_CD, SITE_CD, LOG_NO, CO_NM, CONST_CCD, CO_TYPE_SCD, START_DATE, END_DATE, USING_FLAG, SORT_NO, MEMO, INPUT_ID, INPUT_DT) " +
             " VALUES (" + CO_CD + ", " + SITE_CD + ", (SELECT ISNULL(MAX(LOG_NO),0)+1 FROM [PLUS-" + dbNm + "].dbo.T00_COMPANY_SITE_LOG WHERE SITE_CD = " + SITE_CD + " AND CO_CD = " + CO_CD + ") " +
             " , '" + CO_NM + "', " + CONST_CCD + ", '" + CO_TYPE_SCD + "', " + START_DATE + ", " + END_DATE + ", " + USING_FLAG + ", " + SORT_NO + ", '" + MEMO + "', " + INPUT_ID + ", GETDATE())";
 

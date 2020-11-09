@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <DiscoveryClientResultsFile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <Results>
-    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://localhost:49501/WebSvc/Worker/Labor/WsWorkerLaborSearch.svc?xsd=xsd0" filename="WsWorkerLaborSearch.xsd" />
     <DiscoveryClientResult referenceType="System.Web.Services.Discovery.DiscoveryDocumentReference" url="http://localhost:49501/WebSvc/Worker/Labor/WsWorkerLaborSearch.svc?disco" filename="WsWorkerLaborSearch.disco" />
-    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://localhost:49501/WebSvc/Worker/Labor/WsWorkerLaborSearch.svc?xsd=xsd2" filename="WsWorkerLaborSearch0.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://localhost:49501/WebSvc/Worker/Labor/WsWorkerLaborSearch.svc?xsd=xsd2" filename="WsWorkerLaborSearch.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://localhost:49501/WebSvc/Worker/Labor/WsWorkerLaborSearch.svc?xsd=xsd1" filename="WsWorkerLaborSearch0.xsd" />
     <DiscoveryClientResult referenceType="System.Web.Services.Discovery.ContractReference" url="http://localhost:49501/WebSvc/Worker/Labor/WsWorkerLaborSearch.svc?wsdl" filename="WsWorkerLaborSearch.wsdl" />
-    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://localhost:49501/WebSvc/Worker/Labor/WsWorkerLaborSearch.svc?xsd=xsd1" filename="WsWorkerLaborSearch1.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://localhost:49501/WebSvc/Worker/Labor/WsWorkerLaborSearch.svc?xsd=xsd3" filename="WsWorkerLaborSearch1.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://localhost:49501/WebSvc/Worker/Labor/WsWorkerLaborSearch.svc?xsd=xsd0" filename="WsWorkerLaborSearch2.xsd" />
   </Results>
 </DiscoveryClientResultsFile>

@@ -35,13 +35,6 @@
             this.btnSave = new System.Windows.Forms.Button();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.dgv1_CHK = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.dgv1_SITE_CD = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgv1_MEMCO_CD = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgv1_SITE_NM = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgv1_USING_FLAG = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.dgv1_SORT_NO = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgv1_MEMO = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1 = new System.Windows.Forms.Panel();
             this.lblName = new System.Windows.Forms.Label();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
@@ -50,6 +43,13 @@
             this.dgv2_HEADCO_CD = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgv2_MEMO = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgv2_BTNADD = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.dgv1_CHK = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.dgv1_SITE_CD = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgv1_MEMCO_CD = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgv1_SITE_NM = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgv1_USING_FLAG = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.dgv1_SORT_NO = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgv1_MEMO = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -175,60 +175,8 @@
             this.dataGridView1.Size = new System.Drawing.Size(1037, 476);
             this.dataGridView1.TabIndex = 1;
             this.dataGridView1.CellBeginEdit += new System.Windows.Forms.DataGridViewCellCancelEventHandler(this.dataGridView1_CellBeginEdit);
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             this.dataGridView1.ColumnHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView1_ColumnHeaderMouseClick);
-            // 
-            // dgv1_CHK
-            // 
-            this.dgv1_CHK.FalseValue = "0";
-            this.dgv1_CHK.HeaderText = "CHK";
-            this.dgv1_CHK.IndeterminateValue = "0";
-            this.dgv1_CHK.MinimumWidth = 60;
-            this.dgv1_CHK.Name = "dgv1_CHK";
-            this.dgv1_CHK.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv1_CHK.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.dgv1_CHK.TrueValue = "1";
-            // 
-            // dgv1_SITE_CD
-            // 
-            this.dgv1_SITE_CD.HeaderText = "SITE_CD";
-            this.dgv1_SITE_CD.MinimumWidth = 100;
-            this.dgv1_SITE_CD.Name = "dgv1_SITE_CD";
-            this.dgv1_SITE_CD.ReadOnly = true;
-            // 
-            // dgv1_MEMCO_CD
-            // 
-            this.dgv1_MEMCO_CD.HeaderText = "MEMCO_CD";
-            this.dgv1_MEMCO_CD.MinimumWidth = 100;
-            this.dgv1_MEMCO_CD.Name = "dgv1_MEMCO_CD";
-            this.dgv1_MEMCO_CD.ReadOnly = true;
-            // 
-            // dgv1_SITE_NM
-            // 
-            this.dgv1_SITE_NM.HeaderText = "SITE_NM";
-            this.dgv1_SITE_NM.MinimumWidth = 100;
-            this.dgv1_SITE_NM.Name = "dgv1_SITE_NM";
-            // 
-            // dgv1_USING_FLAG
-            // 
-            this.dgv1_USING_FLAG.FalseValue = "0";
-            this.dgv1_USING_FLAG.HeaderText = "USING_FLAG";
-            this.dgv1_USING_FLAG.IndeterminateValue = "0";
-            this.dgv1_USING_FLAG.MinimumWidth = 60;
-            this.dgv1_USING_FLAG.Name = "dgv1_USING_FLAG";
-            this.dgv1_USING_FLAG.TrueValue = "1";
-            // 
-            // dgv1_SORT_NO
-            // 
-            this.dgv1_SORT_NO.HeaderText = "SORT_NO";
-            this.dgv1_SORT_NO.MinimumWidth = 60;
-            this.dgv1_SORT_NO.Name = "dgv1_SORT_NO";
-            // 
-            // dgv1_MEMO
-            // 
-            this.dgv1_MEMO.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dgv1_MEMO.HeaderText = "MEMO";
-            this.dgv1_MEMO.MinimumWidth = 100;
-            this.dgv1_MEMO.Name = "dgv1_MEMO";
             // 
             // panel1
             // 
@@ -297,6 +245,60 @@
             this.dgv2_BTNADD.Name = "dgv2_BTNADD";
             this.dgv2_BTNADD.Text = "";
             // 
+            // dgv1_CHK
+            // 
+            this.dgv1_CHK.FalseValue = "0";
+            this.dgv1_CHK.HeaderText = "CHK";
+            this.dgv1_CHK.IndeterminateValue = "0";
+            this.dgv1_CHK.MinimumWidth = 60;
+            this.dgv1_CHK.Name = "dgv1_CHK";
+            this.dgv1_CHK.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv1_CHK.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.dgv1_CHK.TrueValue = "1";
+            // 
+            // dgv1_SITE_CD
+            // 
+            this.dgv1_SITE_CD.HeaderText = "SITE_CD";
+            this.dgv1_SITE_CD.MinimumWidth = 100;
+            this.dgv1_SITE_CD.Name = "dgv1_SITE_CD";
+            this.dgv1_SITE_CD.ReadOnly = true;
+            // 
+            // dgv1_MEMCO_CD
+            // 
+            this.dgv1_MEMCO_CD.HeaderText = "MEMCO_CD";
+            this.dgv1_MEMCO_CD.MinimumWidth = 100;
+            this.dgv1_MEMCO_CD.Name = "dgv1_MEMCO_CD";
+            this.dgv1_MEMCO_CD.ReadOnly = true;
+            // 
+            // dgv1_SITE_NM
+            // 
+            this.dgv1_SITE_NM.HeaderText = "SITE_NM";
+            this.dgv1_SITE_NM.MinimumWidth = 250;
+            this.dgv1_SITE_NM.Name = "dgv1_SITE_NM";
+            this.dgv1_SITE_NM.Width = 250;
+            // 
+            // dgv1_USING_FLAG
+            // 
+            this.dgv1_USING_FLAG.FalseValue = "0";
+            this.dgv1_USING_FLAG.HeaderText = "USING_FLAG";
+            this.dgv1_USING_FLAG.IndeterminateValue = "0";
+            this.dgv1_USING_FLAG.MinimumWidth = 60;
+            this.dgv1_USING_FLAG.Name = "dgv1_USING_FLAG";
+            this.dgv1_USING_FLAG.TrueValue = "1";
+            // 
+            // dgv1_SORT_NO
+            // 
+            this.dgv1_SORT_NO.HeaderText = "SORT_NO";
+            this.dgv1_SORT_NO.MinimumWidth = 60;
+            this.dgv1_SORT_NO.Name = "dgv1_SORT_NO";
+            // 
+            // dgv1_MEMO
+            // 
+            this.dgv1_MEMO.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dgv1_MEMO.HeaderText = "MEMO";
+            this.dgv1_MEMO.MinimumWidth = 100;
+            this.dgv1_MEMO.Name = "dgv1_MEMO";
+            // 
             // FrmSite
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
@@ -338,6 +340,11 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label lblName;
         private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgv2_SITE_NM;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgv2_SORT_NO;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgv2_HEADCO_CD;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgv2_MEMO;
+        private System.Windows.Forms.DataGridViewButtonColumn dgv2_BTNADD;
         private System.Windows.Forms.DataGridViewCheckBoxColumn dgv1_CHK;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgv1_SITE_CD;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgv1_MEMCO_CD;
@@ -345,10 +352,5 @@
         private System.Windows.Forms.DataGridViewCheckBoxColumn dgv1_USING_FLAG;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgv1_SORT_NO;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgv1_MEMO;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgv2_SITE_NM;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgv2_SORT_NO;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgv2_HEADCO_CD;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgv2_MEMO;
-        private System.Windows.Forms.DataGridViewButtonColumn dgv2_BTNADD;
     }
 }
