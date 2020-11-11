@@ -190,10 +190,8 @@ namespace EldigmPlusSvc_Memco.Biz.Worker
             return ds;
         }
 
-
-
-        //SELECT 
-        public DataSet sLaborSearch(string pSiteCd, string pBlockCcd , string pConstCcd, string pCoCd, string pTeamCd, string pSearchCondition, string pSearchTxt)
+        //LAB INFO TYPE CMB BOX 
+        public DataSet sLabInfoTypeList(string pSiteCd, string pLngCategory)
         {
             DataSet ds = null;
 
@@ -205,12 +203,107 @@ namespace EldigmPlusSvc_Memco.Biz.Worker
                 string dbCon_USER = WebConfigurationManager.ConnectionStrings["ConnectionStr_USER"].ConnectionString;
 
                 db = new DbLaborSearch(dbCon_IP, dbCon_DB, dbCon_USER, "0");
-                ds = db.sLaborSearch(pSiteCd, pBlockCcd, pConstCcd, pCoCd, pTeamCd, pSearchCondition, pSearchTxt);
+
+                ds = db.sLabInfoTypeList(pSiteCd, pLngCategory);
+            }
+            catch (Exception ex)
+            {
+                logs.SaveLog("[error]  (page)::BizLaborSearch.cs  (Function)::sLabInfoTypeList  (Detail):: " +
+                " pSiteCd=['" + pSiteCd + "'], pLngCategory=[" + pLngCategory + "]", "Error");
+                logs.SaveLog("[error]  (page)::BizLaborSearch.cs  (Function)::sLabInfoTypeList  (Detail)::" + "\r\n" + ex.ToString(), "Error");
+            }
+            finally
+            {
+                if (db != null)
+                    db.DisConnect();
+            }
+
+            return ds;
+        }
+
+        //LAB INFO TYPE CMB BOX 
+        public DataSet sLabTcodeList(string pSiteCd, string pTgrpCcd, string pTtypeScd, string pLngCategory, string pAuthCd)
+        {
+            DataSet ds = null;
+
+            DbLaborSearch db = null;
+            try
+            {
+                string dbCon_IP = WebConfigurationManager.ConnectionStrings["ConnectionStr_IP"].ConnectionString;
+                string dbCon_DB = WebConfigurationManager.ConnectionStrings["ConnectionStr_DB"].ConnectionString;
+                string dbCon_USER = WebConfigurationManager.ConnectionStrings["ConnectionStr_USER"].ConnectionString;
+
+                db = new DbLaborSearch(dbCon_IP, dbCon_DB, dbCon_USER, "0");
+
+                ds = db.sLabTcodeList(pSiteCd, pTgrpCcd, pTtypeScd, pLngCategory, pAuthCd);
+            }
+            catch (Exception ex)
+            {
+                logs.SaveLog("[error]  (page)::BizLaborSearch.cs  (Function)::sLabTcodeList  (Detail):: " +
+                " pSiteCd=['" + pSiteCd + "'], pTgrpCcd=['" + pTgrpCcd + "'], pTtypeScd=['" + pTtypeScd + "'], pLngCategory=['" + pLngCategory + "'], pAuthCd=[" + pAuthCd + "]", "Error");
+                logs.SaveLog("[error]  (page)::BizLaborSearch.cs  (Function)::sLabTcodeList  (Detail)::" + "\r\n" + ex.ToString(), "Error");
+            }
+            finally
+            {
+                if (db != null)
+                    db.DisConnect();
+            }
+
+            return ds;
+        }
+
+        //CCODE COMBO BOX (USING THIS CMB CCODE AS TGRP_CCD **INCLUDE CATEGORY FOR VALUE 0**)
+        public DataSet sLaborAddInfoCcode2(string pSiteCd, string pAuth, string pLangCategory)
+        {
+            DataSet ds = null;
+
+            DbLaborSearch db = null;
+            try
+            {
+                string dbCon_IP = WebConfigurationManager.ConnectionStrings["ConnectionStr_IP"].ConnectionString;
+                string dbCon_DB = WebConfigurationManager.ConnectionStrings["ConnectionStr_DB"].ConnectionString;
+                string dbCon_USER = WebConfigurationManager.ConnectionStrings["ConnectionStr_USER"].ConnectionString;
+
+                db = new DbLaborSearch(dbCon_IP, dbCon_DB, dbCon_USER, "0");
+                ds = db.sLaborAddInfoCcode2(pSiteCd, pAuth, pLangCategory);
+            }
+            catch (Exception ex)
+            {
+                logs.SaveLog("[error]  (page)::BizLaborSearch.cs  (Function)::sLaborAddInfoCcode2  (Detail):: " +
+                    " pSiteCd=['" + pSiteCd + "'], pAuth=[" + pAuth + "], pLangCategory=[" + pLangCategory + "]", "Error");
+                logs.SaveLog("[error]  (page)::BizLaborSearch.cs  (Function)::sLaborAddInfoCcode2  (Detail)::" + "\r\n" + ex.ToString(), "Error");
+            }
+            finally
+            {
+                if (db != null)
+                    db.DisConnect();
+            }
+
+            return ds;
+        }
+
+
+
+        //SELECT 
+        public DataSet sLaborSearch(string pSiteCd, string pBlockCcd , string pConstCcd, string pCoCd, string pTeamCd, string pSearchCondition, string pSearchTxt, string pTtypeScd, string pTcode, string pValue)
+        {
+            DataSet ds = null;
+
+            DbLaborSearch db = null;
+            try
+            {
+                string dbCon_IP = WebConfigurationManager.ConnectionStrings["ConnectionStr_IP"].ConnectionString;
+                string dbCon_DB = WebConfigurationManager.ConnectionStrings["ConnectionStr_DB"].ConnectionString;
+                string dbCon_USER = WebConfigurationManager.ConnectionStrings["ConnectionStr_USER"].ConnectionString;
+
+                db = new DbLaborSearch(dbCon_IP, dbCon_DB, dbCon_USER, "0");
+                ds = db.sLaborSearch(pSiteCd, pBlockCcd, pConstCcd, pCoCd, pTeamCd, pSearchCondition, pSearchTxt, pTtypeScd, pTcode, pValue);
             }
             catch (Exception ex)
             {
                 logs.SaveLog("[error]  (page)::BizLaborSearch.cs  (Function)::sLaborSearch  (Detail):: " +
-                " pSiteCd=['" + pSiteCd + "'], pBlockCcd=[" + pBlockCcd + "], pConstCcd=[" + pConstCcd + "], pCoCd=[" + pCoCd + "],pTeamCd=[" + pTeamCd + "],pSearchCondition=[" + pSearchCondition + "], pSearchTxt=[" + pSearchTxt + "]", "Error");
+                " pSiteCd=['" + pSiteCd + "'], pBlockCcd=[" + pBlockCcd + "], pConstCcd=[" + pConstCcd + "], pCoCd=[" + pCoCd + "],pTeamCd=[" + pTeamCd + "],pSearchCondition=[" + pSearchCondition + "]," +
+                "pSearchTxt=[" + pSearchTxt + "],pTtypeScd=[" + pTtypeScd + "],pTcode=[" + pTcode + "], pValue=[" + pValue + "]", "Error");
                 logs.SaveLog("[error]  (page)::BizLaborSearch.cs  (Function)::sLaborSearch  (Detail)::" + "\r\n" + ex.ToString(), "Error");
             }
             finally
@@ -438,7 +531,7 @@ namespace EldigmPlusSvc_Memco.Biz.Worker
 
 
         //ADD INFO 
-        public DataSet sLaborAddInfo(string pSiteCd, string pTcode, string pTgrpCcd)
+        public DataSet sLaborAddInfo(string pSiteCd, string pTcode, string pTgrpCcd, string pAuthCd)
         {
             DataSet ds = null;
 
@@ -451,7 +544,7 @@ namespace EldigmPlusSvc_Memco.Biz.Worker
 
                 db = new DbLaborSearch(dbCon_IP, dbCon_DB, dbCon_USER, "0");
                 
-                ds = db.sLaborAddInfo(pSiteCd, pTcode, pTgrpCcd);
+                ds = db.sLaborAddInfo(pSiteCd, pTcode, pTgrpCcd, pAuthCd);
             }
             catch (Exception ex)
             {
@@ -656,6 +749,82 @@ namespace EldigmPlusSvc_Memco.Biz.Worker
 
             return reCnt;
         }
+
+
+
+        //** AUTH SET PART START 
+        public string AuthLaborNew(string pDbNm, string pSiteCd, string pAuthCd)
+        {
+            string reVal = "";
+
+            DbLaborSearch db = null;
+            try
+            {
+                string dbCon_IP = WebConfigurationManager.ConnectionStrings["ConnectionStr_IP"].ConnectionString;
+                string dbCon_DB = WebConfigurationManager.ConnectionStrings["ConnectionStr_DB"].ConnectionString;
+                string dbCon_USER = WebConfigurationManager.ConnectionStrings["ConnectionStr_USER"].ConnectionString;
+
+                db = new DbLaborSearch(dbCon_IP, dbCon_DB, dbCon_USER, "0");
+
+                DataSet ds1 = db.AuthLabor(pDbNm, pSiteCd, pAuthCd);
+                string pNew_Flag = ds1.Tables[0].Rows[0]["NEW_FLAG"].ToString();
+
+                reVal = pNew_Flag;
+            }
+            catch (Exception ex)
+            {
+                logs.SaveLog("[error]  (page)::BizLaborSearch.cs  (Function)::AuthLaborNew  (Detail):: " +
+                  " pSiteCd=['" + pDbNm + "'], pAuthCd=[" + pSiteCd + "], pLngBlock=[" + pAuthCd + "]", "Error");
+                logs.SaveLog("[error]  (page)::BizLaborSearch.cs  (Function)::AuthLaborNew  (Detail)::" + "\r\n" + ex.ToString(), "Error");
+            }
+            finally
+            {
+                if (db != null)
+                    db.DisConnect();
+            }
+
+            return reVal;
+        }
+
+        public string AuthLaborModify(string pDbNm, string pSiteCd, string pAuthCd)
+        {
+            string reVal = "";
+
+            DbLaborSearch db = null;
+            try
+            {
+                string dbCon_IP = WebConfigurationManager.ConnectionStrings["ConnectionStr_IP"].ConnectionString;
+                string dbCon_DB = WebConfigurationManager.ConnectionStrings["ConnectionStr_DB"].ConnectionString;
+                string dbCon_USER = WebConfigurationManager.ConnectionStrings["ConnectionStr_USER"].ConnectionString;
+
+                db = new DbLaborSearch(dbCon_IP, dbCon_DB, dbCon_USER, "0");
+
+                DataSet ds1 = db.AuthLabor(pDbNm, pSiteCd, pAuthCd);
+                string pModify_Flag = ds1.Tables[0].Rows[0]["MODIFY_FLAG"].ToString();
+
+                reVal = pModify_Flag;
+            }
+            catch (Exception ex)
+            {
+                logs.SaveLog("[error]  (page)::BizLaborSearch.cs  (Function)::AuthLaborModify  (Detail):: " +
+                  " pSiteCd=['" + pDbNm + "'], pAuthCd=[" + pSiteCd + "], pLngBlock=[" + pAuthCd + "]", "Error");
+                logs.SaveLog("[error]  (page)::BizLaborSearch.cs  (Function)::AuthLaborModify  (Detail)::" + "\r\n" + ex.ToString(), "Error");
+            }
+            finally
+            {
+                if (db != null)
+                    db.DisConnect();
+            }
+
+            return reVal;
+        }
+
+
+
+
+
+
+        //** AUTH SET PART END
 
 
         //////UPDATE LAB_TCODE_SITE_LOG  

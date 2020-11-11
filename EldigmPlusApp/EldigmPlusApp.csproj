@@ -612,6 +612,9 @@
     <None Include="Web References\Mem_WsWorkerLaborSearch\DataComCombo.datasource">
       <DependentUpon>Reference.map</DependentUpon>
     </None>
+    <None Include="Web References\Mem_WsWorkerLaborSearch\DataComComboStr.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
     <None Include="Web References\Mem_WsWorkerLaborSearch\DataLaborSearch.datasource">
       <DependentUpon>Reference.map</DependentUpon>
     </None>

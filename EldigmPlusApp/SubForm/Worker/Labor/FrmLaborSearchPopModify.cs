@@ -1,4 +1,7 @@
 ﻿using EldigmPlusApp.Config;
+using EldigmPlusApp.SubForm.Sys.CodeT;
+using EldigmPlusApp.SubForm.Sys.ComnCode;
+using EldigmPlusApp.SubForm.Sys.CompanyTeam;
 using Framework.Log;
 using System;
 using System.Collections.Generic;
@@ -38,6 +41,7 @@ namespace EldigmPlusApp.SubForm.Worker.Labor
         string _CcodeCmb = "";
         List<searchData> sd = new List<searchData>();
         searchData sdRow = new searchData();
+        string _auth_Modify = "";
 
 
         public FrmLaborSearchPopModify(string pBlock_Cd, string pCo_Cd, string pTeam_Cd, string pJob_Cd, string pLab_No, string pLab_Nm, string pBirth_Date, string pMobile_No, string pUser_No, string pAuth_Cd, FrmLaborSearch frm)
@@ -159,22 +163,18 @@ namespace EldigmPlusApp.SubForm.Worker.Labor
         {
             try
             {
+                //** AUTH PART 
+                Auth_Modify();
+
                 //** LAB PART 
                 SetDataBind_BlockCmb();
                 SetDataBind_TeamCmb();
                 SetDataBind_JobCmb();
                 SetDataBind_CompanyCmb();
-
-                //**ADD INFO PART 
                 SetDataBind_CcodeCmb();
 
-
+                //**ADD INFO PART 
                 SetDataBind_gridView1();
-                //SetCheckedDataBind_gridView1();
-
-
-
-
                 SetDataBind_gridView2();
                 SetDataBind_gridView3();
                 SetDataBind_gridView4();
@@ -182,6 +182,39 @@ namespace EldigmPlusApp.SubForm.Worker.Labor
             catch (Exception ex)
             {
                 logs.SaveLog("[error]  (page)::FrmLaborSearchPopModify_Load.cs  (Function)::Form_Load  (Detail):: " + "\r\n" + ex.ToString(), "Error");
+            }
+        }
+
+        //CHECK MODIFY AUTH 
+        private void Auth_Modify()
+        {
+            Mem_WsWorkerLaborSearch.WsWorkerLaborSearch wSvc = null;
+            string reCode = "";
+            string reMsg = "";
+            string reData = "";
+            try
+            {
+                wSvc = new Mem_WsWorkerLaborSearch.WsWorkerLaborSearch();
+                wSvc.Url = "http://" + AppInfo.SsWsvcServer1 + "/WebSvc/Worker/Labor/WsWorkerLaborSearch.svc";
+                wSvc.Timeout = 1000;
+
+                reCode = wSvc.AuthLaborModify(AppInfo.SsDbNm, AppInfo.SsSiteCd, AppInfo.SsLabAuth, out reData, out reMsg);
+                if (reCode == "Y")
+                {
+                    if (reData != null && reData != "0")
+                    {
+                        _auth_Modify = reData;
+                    }
+                    else
+                    {
+                        _auth_Modify = reData;
+                    }
+
+                }
+            }
+            catch (Exception ex)
+            {
+                logs.SaveLog("[error]  (page)::FrmLaborSearch.cs  (Function)::Auth_Modify  (Detail):: " + "\r\n" + ex.ToString());
             }
         }
 
@@ -431,254 +464,263 @@ namespace EldigmPlusApp.SubForm.Worker.Labor
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            string reVal = ChkDgv2Param();
-
-            if (reVal != "")
-                MessageBox.Show(wRM.GetString("wCheck") + " :: " + reVal);
+            //CHECK MODIFY AUTH 
+            if (_auth_Modify == "0")
+            {
+                //CASE : HAVE NO MODIFY AUTH 
+                MessageBox.Show(wRM.GetString("wModify") + " " +  msgRM.GetString("msgAuthority"));
+            }
             else
             {
-                string pSite_Cd = AppInfo.SsSiteCd;
-                //TRANSFERED LAB_NO
-                string pLab_No = lsLab_No;
-                //TRANSFERED USER_NO
-                string pUser_No = lsUser_No;
-                string pLab_Nm = NameKorTxt.Text;
-                string pBirth_Date = Convert.ToDateTime(Birth_DatePicker.Value).ToString("yyyyMMdd");
-                string pMobile_No = PhoneTxt.Text;
-                string pCo_Cd = ComCmb.SelectedValue.ToString();
-                string pTeam_Cd = TeamCmb.SelectedValue.ToString();
-                string pJob_Cd = JobCmb.SelectedValue.ToString();
-                string pBlock_Cd = BlockCmb.SelectedValue.ToString();
-                string pInput_Id = AppInfo.SsLabNo;
-                string pAprv_Flag = "0";
-                //TRANSFERED AUTH (POSSIBLE TO USE AFTER)
-                string pAuth_Cd = lsAuth_Cd;
+                string reVal = ChkDgv2Param();
 
-
-
-                Mem_WsWorkerLaborSearch.WsWorkerLaborSearch wSvc = null;
-                string reCode = "";
-                string reMsg = "";
-                string reData = "";
-                string[] reDataArray = new string[2];
-                int reCnt = 0;
-                try
+                if (reVal != "")
+                    MessageBox.Show(wRM.GetString("wCheck") + " :: " + reVal);
+                else
                 {
-                    wSvc = new Mem_WsWorkerLaborSearch.WsWorkerLaborSearch();
-                    wSvc.Url = "http://" + AppInfo.SsWsvcServer1 + "/WebSvc/Worker/Labor/WsWorkerLaborSearch.svc";
-                    wSvc.Timeout = 1000;
+                    string pSite_Cd = AppInfo.SsSiteCd;
+                    //TRANSFERED LAB_NO
+                    string pLab_No = lsLab_No;
+                    //TRANSFERED USER_NO
+                    string pUser_No = lsUser_No;
+                    string pLab_Nm = NameKorTxt.Text;
+                    string pBirth_Date = Convert.ToDateTime(Birth_DatePicker.Value).ToString("yyyyMMdd");
+                    string pMobile_No = PhoneTxt.Text;
+                    string pCo_Cd = ComCmb.SelectedValue.ToString();
+                    string pTeam_Cd = TeamCmb.SelectedValue.ToString();
+                    string pJob_Cd = JobCmb.SelectedValue.ToString();
+                    string pBlock_Cd = BlockCmb.SelectedValue.ToString();
+                    string pInput_Id = AppInfo.SsLabNo;
+                    string pAprv_Flag = "0";
+                    //TRANSFERED AUTH (POSSIBLE TO USE AFTER)
+                    string pAuth_Cd = lsAuth_Cd;
 
-                    //REGISTER AUTH CHECK
-                    reCode = wSvc.sLabAprvFlag(pSite_Cd, AppInfo.SsLabAuth, out reData, out reMsg);
-                    if (reCode == "Y")
+
+
+                    Mem_WsWorkerLaborSearch.WsWorkerLaborSearch wSvc = null;
+                    string reCode = "";
+                    string reMsg = "";
+                    string reData = "";
+                    string[] reDataArray = new string[2];
+                    int reCnt = 0;
+                    try
                     {
+                        wSvc = new Mem_WsWorkerLaborSearch.WsWorkerLaborSearch();
+                        wSvc.Url = "http://" + AppInfo.SsWsvcServer1 + "/WebSvc/Worker/Labor/WsWorkerLaborSearch.svc";
+                        wSvc.Timeout = 1000;
+
+                        //REGISTER AUTH CHECK
+                        reCode = wSvc.sLabAprvFlag(pSite_Cd, AppInfo.SsLabAuth, out reData, out reMsg);
                         if (reCode == "Y")
                         {
-                            if (reData == "1")
+                            if (reCode == "Y")
                             {
-                                pAprv_Flag = "1";
-                            }
-                        }
-                    }
-
-
-                    string[] param = new string[12];
-                    param[0] = pLab_No;
-                    param[1] = pUser_No;
-                    param[2] = pLab_Nm;
-                    param[3] = pBirth_Date;
-                    param[4] = pMobile_No;
-                    param[5] = pSite_Cd;
-                    param[6] = pCo_Cd;
-                    param[7] = pAprv_Flag;
-                    param[8] = pTeam_Cd;
-                    param[9] = pJob_Cd;
-                    param[10] = pBlock_Cd;
-                    param[11] = pInput_Id;
-
-
-                    //MODIFY WITH PROCEDURE
-                    reCode = wSvc.mLaborPro(AppInfo.SsDbNm, param, out reData, out reMsg);
-
-                    for (int i = 0; i < sd.Count; i++)
-                    {
-                        string[] strArr = sd[i].str.Split('$');
-
-                        if (strArr[1] == "Calender" && strArr[4] != "")
-                        {
-                            reCode = wSvc.mLaborLabTcodeSite(AppInfo.SsDbNm, pLab_No, AppInfo.SsSiteCd, strArr[2], Convert.ToDateTime(strArr[4]).ToString("yyyyMMdd"), out reData, out reMsg);
-                            if (reCode == "Y" && reData == "0")
-                            {
-                                //strArr[4] SHOULD CONVERT TO TYPE OF DATE AND SHAPE HAVE TO BE LIKE "yyyyMMdd"
-                                reCode = wSvc.aLaborLabTcodeSite(AppInfo.SsDbNm, pLab_No, AppInfo.SsSiteCd, strArr[2], strArr[1], Convert.ToDateTime(strArr[4]).ToString("yyyyMMdd"), out reData, out reMsg);
-
-                                if (reCode == "Y" && reData == "1")
+                                if (reData == "1")
                                 {
-                                    //LAB TCODE SITE LOG WHEN INSTERT SUCCESS 
-                                    reCode = reCode = wSvc.aLaborLabTcodeSiteLog(AppInfo.SsDbNm, pLab_No, AppInfo.SsSiteCd, strArr[2], strArr[1], Convert.ToDateTime(strArr[4]).ToString("yyyyMMdd"), AppInfo.SsLabNo, out reData, out reMsg);
+                                    pAprv_Flag = "1";
                                 }
                             }
-                            else if (reCode == "Y" && reData == "1")
-                            {
-                                //LAB TCODE SITE LOG WHEN UPDATE SUCCESS 
-                                reCode = reCode = wSvc.aLaborLabTcodeSiteLog(AppInfo.SsDbNm, pLab_No, AppInfo.SsSiteCd, strArr[2], strArr[1], Convert.ToDateTime(strArr[4]).ToString("yyyyMMdd"), AppInfo.SsLabNo, out reData, out reMsg);
-                            }
-
                         }
-                        else
-                        {
-                            reCode = wSvc.mLaborLabTcodeSite(AppInfo.SsDbNm, pLab_No, AppInfo.SsSiteCd, strArr[2], strArr[4], out reData, out reMsg);
-                            if (reCode == "Y" && reData == "0")
-                            {
-                                reCode = wSvc.aLaborLabTcodeSite(AppInfo.SsDbNm, pLab_No, AppInfo.SsSiteCd, strArr[2], strArr[1], strArr[4], out reData, out reMsg);
 
-                                if (reCode == "Y" && reData == "1")
+
+                        string[] param = new string[12];
+                        param[0] = pLab_No;
+                        param[1] = pUser_No;
+                        param[2] = pLab_Nm;
+                        param[3] = pBirth_Date;
+                        param[4] = pMobile_No;
+                        param[5] = pSite_Cd;
+                        param[6] = pCo_Cd;
+                        param[7] = pAprv_Flag;
+                        param[8] = pTeam_Cd;
+                        param[9] = pJob_Cd;
+                        param[10] = pBlock_Cd;
+                        param[11] = pInput_Id;
+
+
+                        //MODIFY WITH PROCEDURE
+                        reCode = wSvc.mLaborPro(AppInfo.SsDbNm, param, out reData, out reMsg);
+
+                        for (int i = 0; i < sd.Count; i++)
+                        {
+                            string[] strArr = sd[i].str.Split('$');
+
+                            if (strArr[1] == "Calender" && strArr[4] != "")
+                            {
+                                reCode = wSvc.mLaborLabTcodeSite(AppInfo.SsDbNm, pLab_No, AppInfo.SsSiteCd, strArr[2], Convert.ToDateTime(strArr[4]).ToString("yyyyMMdd"), out reData, out reMsg);
+                                if (reCode == "Y" && reData == "0")
                                 {
-                                    //LAB TCODE SITE LOG WHEN INSTERT SUCCESS 
+                                    //strArr[4] SHOULD CONVERT TO TYPE OF DATE AND SHAPE HAVE TO BE LIKE "yyyyMMdd"
+                                    reCode = wSvc.aLaborLabTcodeSite(AppInfo.SsDbNm, pLab_No, AppInfo.SsSiteCd, strArr[2], strArr[1], Convert.ToDateTime(strArr[4]).ToString("yyyyMMdd"), out reData, out reMsg);
+
+                                    if (reCode == "Y" && reData == "1")
+                                    {
+                                        //LAB TCODE SITE LOG WHEN INSTERT SUCCESS 
+                                        reCode = reCode = wSvc.aLaborLabTcodeSiteLog(AppInfo.SsDbNm, pLab_No, AppInfo.SsSiteCd, strArr[2], strArr[1], Convert.ToDateTime(strArr[4]).ToString("yyyyMMdd"), AppInfo.SsLabNo, out reData, out reMsg);
+                                    }
+                                }
+                                else if (reCode == "Y" && reData == "1")
+                                {
+                                    //LAB TCODE SITE LOG WHEN UPDATE SUCCESS 
+                                    reCode = reCode = wSvc.aLaborLabTcodeSiteLog(AppInfo.SsDbNm, pLab_No, AppInfo.SsSiteCd, strArr[2], strArr[1], Convert.ToDateTime(strArr[4]).ToString("yyyyMMdd"), AppInfo.SsLabNo, out reData, out reMsg);
+                                }
+
+                            }
+                            else
+                            {
+                                reCode = wSvc.mLaborLabTcodeSite(AppInfo.SsDbNm, pLab_No, AppInfo.SsSiteCd, strArr[2], strArr[4], out reData, out reMsg);
+                                if (reCode == "Y" && reData == "0")
+                                {
+                                    reCode = wSvc.aLaborLabTcodeSite(AppInfo.SsDbNm, pLab_No, AppInfo.SsSiteCd, strArr[2], strArr[1], strArr[4], out reData, out reMsg);
+
+                                    if (reCode == "Y" && reData == "1")
+                                    {
+                                        //LAB TCODE SITE LOG WHEN INSTERT SUCCESS 
+                                        reCode = reCode = wSvc.aLaborLabTcodeSiteLog(AppInfo.SsDbNm, pLab_No, AppInfo.SsSiteCd, strArr[2], strArr[1], strArr[4], AppInfo.SsLabNo, out reData, out reMsg);
+                                    }
+                                }
+                                else if (reCode == "Y" && reData == "1")
+                                {
+                                    //LAB TCODE SITE LOG WHEN UPDATE SUCCESS 
                                     reCode = reCode = wSvc.aLaborLabTcodeSiteLog(AppInfo.SsDbNm, pLab_No, AppInfo.SsSiteCd, strArr[2], strArr[1], strArr[4], AppInfo.SsLabNo, out reData, out reMsg);
                                 }
                             }
-                            else if (reCode == "Y" && reData == "1")
-                            {
-                                //LAB TCODE SITE LOG WHEN UPDATE SUCCESS 
-                                reCode = reCode = wSvc.aLaborLabTcodeSiteLog(AppInfo.SsDbNm, pLab_No, AppInfo.SsSiteCd, strArr[2], strArr[1], strArr[4], AppInfo.SsLabNo, out reData, out reMsg);
-                            }
+
                         }
 
-                    }
+                        // LIST FOR DGV SELECTED DATA BUT NOT BELONGING TO ARRAY  
+                        // THIS DECLARE WILL BE RESET WHENEVER THIS CLASS BE CALLED 
+                        List<searchData> sd1 = new List<searchData>();
+                        searchData sdRow1 = new searchData();
 
-                    // LIST FOR DGV SELECTED DATA BUT NOT BELONGING TO ARRAY  
-                    // THIS DECLARE WILL BE RESET WHENEVER THIS CLASS BE CALLED 
-                    List<searchData> sd1 = new List<searchData>();
-                    searchData sdRow1 = new searchData();
-
-                    //** DGV1 PART START 
-                    for (int i = 0; i < dgv1_addInfo.RowCount; i++)
-                    {
-                        if (dgv1_addInfo.Rows[i].Cells["dgv1_CONTENT"].Value == null)
-                            dgv1_addInfo.Rows[i].Cells["dgv1_CONTENT"].Value = "0";
-                        else
-                            dgv1_addInfo.Rows[i].Cells["dgv1_CONTENT"].Value.ToString();
-
-
-                        sdRow1.str = _CcodeCmb + "$" + dgv1_addInfo.Rows[i].Cells["dgv1_TTYPE_SCD"].Value.ToString() + "$" + dgv1_addInfo.Rows[i].Cells["dgv1_TCODE"].Value.ToString()
-                            + "$" + dgv1_addInfo.Rows[i].Cells["dgv1_TCODE_NM"].Value.ToString() + "$" + dgv1_addInfo.Rows[i].Cells["dgv1_CONTENT"].Value.ToString();
-
-                        sd1.Add(sdRow1);
-
-                    }
-
-
-                    //** DGV2 PART START 
-                    for (int i = 0; i < dgv2_addInfo.RowCount; i++)
-                    {
-                        if (dgv2_addInfo.Rows[i].Cells["dgv2_CONTENT"].Value == null)
-                            dgv2_addInfo.Rows[i].Cells["dgv2_CONTENT"].Value = "";
-                        else
-                            dgv2_addInfo.Rows[i].Cells["dgv2_CONTENT"].Value.ToString();
-
-
-                        sdRow1.str = _CcodeCmb + "$" + dgv2_addInfo.Rows[i].Cells["dgv2_TTYPE_SCD"].Value.ToString() + "$" + dgv2_addInfo.Rows[i].Cells["dgv2_TCODE"].Value.ToString()
-                            + "$" + dgv2_addInfo.Rows[i].Cells["dgv2_TCODE_NM"].Value.ToString() + "$" + dgv2_addInfo.Rows[i].Cells["dgv2_CONTENT"].Value.ToString();
-
-                        sd1.Add(sdRow1);
-
-                    }
-
-                    //** DGV3 PART START 
-                    for (int i = 0; i < dgv3_addInfo.RowCount; i++)
-                    {
-                        if (dgv3_addInfo.Rows[i].Cells["dgv3_CONTENT"].Value == null)
-                            dgv3_addInfo.Rows[i].Cells["dgv3_CONTENT"].Value = "";
-                        else
-                            dgv3_addInfo.Rows[i].Cells["dgv3_CONTENT"].Value.ToString();
-
-
-                        sdRow1.str = _CcodeCmb + "$" + dgv3_addInfo.Rows[i].Cells["dgv3_TTYPE_SCD"].Value.ToString() + "$" + dgv3_addInfo.Rows[i].Cells["dgv3_TCODE"].Value.ToString()
-                            + "$" + dgv3_addInfo.Rows[i].Cells["dgv3_TCODE_NM"].Value.ToString() + "$" + dgv3_addInfo.Rows[i].Cells["dgv3_CONTENT"].Value.ToString();
-
-                        sd1.Add(sdRow1);
-
-                    }
-
-                    //** DGV4 PART START 
-                    for (int i = 0; i < dgv4_addInfo.RowCount; i++)
-                    {
-                        if (dgv4_addInfo.Rows[i].Cells["dgv4_CONTENT"].Value == null)
-                            dgv4_addInfo.Rows[i].Cells["dgv4_CONTENT"].Value = "";
-                        else
-                            dgv4_addInfo.Rows[i].Cells["dgv4_CONTENT"].Value.ToString();
-
-
-                        sdRow1.str = _CcodeCmb + "$" + dgv4_addInfo.Rows[i].Cells["dgv4_TTYPE_SCD"].Value.ToString() + "$" + dgv4_addInfo.Rows[i].Cells["dgv4_TCODE"].Value.ToString()
-                            + "$" + dgv4_addInfo.Rows[i].Cells["dgv4_TCODE_NM"].Value.ToString() + "$" + dgv4_addInfo.Rows[i].Cells["dgv4_CONTENT"].Value.ToString();
-
-                        sd1.Add(sdRow1);
-                    }
-
-
-                    for (int i = 0; i < sd1.Count; i++)
-                    {
-                        string[] strArr = sd1[i].str.Split('$');
-
-                        if (strArr[1] == "Calender" && strArr[4] != "")
+                        //** DGV1 PART START 
+                        for (int i = 0; i < dgv1_addInfo.RowCount; i++)
                         {
-                            reCode = wSvc.mLaborLabTcodeSite(AppInfo.SsDbNm, pLab_No, AppInfo.SsSiteCd, strArr[2], Convert.ToDateTime(strArr[4]).ToString("yyyyMMdd"), out reData, out reMsg);
-                            if (reCode == "Y" && reData == "0")
+                            if (dgv1_addInfo.Rows[i].Cells["dgv1_CONTENT"].Value == null)
+                                dgv1_addInfo.Rows[i].Cells["dgv1_CONTENT"].Value = "0";
+                            else
+                                dgv1_addInfo.Rows[i].Cells["dgv1_CONTENT"].Value.ToString();
+
+
+                            sdRow1.str = _CcodeCmb + "$" + dgv1_addInfo.Rows[i].Cells["dgv1_TTYPE_SCD"].Value.ToString() + "$" + dgv1_addInfo.Rows[i].Cells["dgv1_TCODE"].Value.ToString()
+                                + "$" + dgv1_addInfo.Rows[i].Cells["dgv1_TCODE_NM"].Value.ToString() + "$" + dgv1_addInfo.Rows[i].Cells["dgv1_CONTENT"].Value.ToString();
+
+                            sd1.Add(sdRow1);
+
+                        }
+
+
+                        //** DGV2 PART START 
+                        for (int i = 0; i < dgv2_addInfo.RowCount; i++)
+                        {
+                            if (dgv2_addInfo.Rows[i].Cells["dgv2_CONTENT"].Value == null)
+                                dgv2_addInfo.Rows[i].Cells["dgv2_CONTENT"].Value = "";
+                            else
+                                dgv2_addInfo.Rows[i].Cells["dgv2_CONTENT"].Value.ToString();
+
+
+                            sdRow1.str = _CcodeCmb + "$" + dgv2_addInfo.Rows[i].Cells["dgv2_TTYPE_SCD"].Value.ToString() + "$" + dgv2_addInfo.Rows[i].Cells["dgv2_TCODE"].Value.ToString()
+                                + "$" + dgv2_addInfo.Rows[i].Cells["dgv2_TCODE_NM"].Value.ToString() + "$" + dgv2_addInfo.Rows[i].Cells["dgv2_CONTENT"].Value.ToString();
+
+                            sd1.Add(sdRow1);
+
+                        }
+
+                        //** DGV3 PART START 
+                        for (int i = 0; i < dgv3_addInfo.RowCount; i++)
+                        {
+                            if (dgv3_addInfo.Rows[i].Cells["dgv3_CONTENT"].Value == null)
+                                dgv3_addInfo.Rows[i].Cells["dgv3_CONTENT"].Value = "";
+                            else
+                                dgv3_addInfo.Rows[i].Cells["dgv3_CONTENT"].Value.ToString();
+
+
+                            sdRow1.str = _CcodeCmb + "$" + dgv3_addInfo.Rows[i].Cells["dgv3_TTYPE_SCD"].Value.ToString() + "$" + dgv3_addInfo.Rows[i].Cells["dgv3_TCODE"].Value.ToString()
+                                + "$" + dgv3_addInfo.Rows[i].Cells["dgv3_TCODE_NM"].Value.ToString() + "$" + dgv3_addInfo.Rows[i].Cells["dgv3_CONTENT"].Value.ToString();
+
+                            sd1.Add(sdRow1);
+
+                        }
+
+                        //** DGV4 PART START 
+                        for (int i = 0; i < dgv4_addInfo.RowCount; i++)
+                        {
+                            if (dgv4_addInfo.Rows[i].Cells["dgv4_CONTENT"].Value == null)
+                                dgv4_addInfo.Rows[i].Cells["dgv4_CONTENT"].Value = "";
+                            else
+                                dgv4_addInfo.Rows[i].Cells["dgv4_CONTENT"].Value.ToString();
+
+
+                            sdRow1.str = _CcodeCmb + "$" + dgv4_addInfo.Rows[i].Cells["dgv4_TTYPE_SCD"].Value.ToString() + "$" + dgv4_addInfo.Rows[i].Cells["dgv4_TCODE"].Value.ToString()
+                                + "$" + dgv4_addInfo.Rows[i].Cells["dgv4_TCODE_NM"].Value.ToString() + "$" + dgv4_addInfo.Rows[i].Cells["dgv4_CONTENT"].Value.ToString();
+
+                            sd1.Add(sdRow1);
+                        }
+
+
+                        for (int i = 0; i < sd1.Count; i++)
+                        {
+                            string[] strArr = sd1[i].str.Split('$');
+
+                            if (strArr[1] == "Calender" && strArr[4] != "")
                             {
-                                //strArr[4] SHOULD CONVERT TO TYPE OF DATE AND SHAPE HAVE TO BE LIKE "yyyyMMdd"
-                                reCode = wSvc.aLaborLabTcodeSite(AppInfo.SsDbNm, pLab_No, AppInfo.SsSiteCd, strArr[2], strArr[1], Convert.ToDateTime(strArr[4]).ToString("yyyyMMdd"), out reData, out reMsg);
-                                if (reCode == "Y" && reData == "1")
+                                reCode = wSvc.mLaborLabTcodeSite(AppInfo.SsDbNm, pLab_No, AppInfo.SsSiteCd, strArr[2], Convert.ToDateTime(strArr[4]).ToString("yyyyMMdd"), out reData, out reMsg);
+                                if (reCode == "Y" && reData == "0")
                                 {
-                                    //LAB TCODE SITE LOG WHEN INSTERT SUCCESS 
+                                    //strArr[4] SHOULD CONVERT TO TYPE OF DATE AND SHAPE HAVE TO BE LIKE "yyyyMMdd"
+                                    reCode = wSvc.aLaborLabTcodeSite(AppInfo.SsDbNm, pLab_No, AppInfo.SsSiteCd, strArr[2], strArr[1], Convert.ToDateTime(strArr[4]).ToString("yyyyMMdd"), out reData, out reMsg);
+                                    if (reCode == "Y" && reData == "1")
+                                    {
+                                        //LAB TCODE SITE LOG WHEN INSTERT SUCCESS 
+                                        reCode = reCode = wSvc.aLaborLabTcodeSiteLog(AppInfo.SsDbNm, pLab_No, AppInfo.SsSiteCd, strArr[2], strArr[1], Convert.ToDateTime(strArr[4]).ToString("yyyyMMdd"), AppInfo.SsLabNo, out reData, out reMsg);
+                                    }
+                                }
+                                else if (reCode == "Y" && reData == "1")
+                                {
+                                    //LAB TCODE SITE LOG WHEN UPDATE SUCCESS 
                                     reCode = reCode = wSvc.aLaborLabTcodeSiteLog(AppInfo.SsDbNm, pLab_No, AppInfo.SsSiteCd, strArr[2], strArr[1], Convert.ToDateTime(strArr[4]).ToString("yyyyMMdd"), AppInfo.SsLabNo, out reData, out reMsg);
                                 }
                             }
-                            else if (reCode == "Y" && reData == "1")
+                            else
                             {
-                                //LAB TCODE SITE LOG WHEN UPDATE SUCCESS 
-                                reCode = reCode = wSvc.aLaborLabTcodeSiteLog(AppInfo.SsDbNm, pLab_No, AppInfo.SsSiteCd, strArr[2], strArr[1], Convert.ToDateTime(strArr[4]).ToString("yyyyMMdd"), AppInfo.SsLabNo, out reData, out reMsg);
-                            }
-                        }
-                        else
-                        {
-                            reCode = wSvc.mLaborLabTcodeSite(AppInfo.SsDbNm, pLab_No, AppInfo.SsSiteCd, strArr[2], strArr[4], out reData, out reMsg);
-                            if (reCode == "Y" && reData == "0")
-                            {
-                                reCode = wSvc.aLaborLabTcodeSite(AppInfo.SsDbNm, pLab_No, AppInfo.SsSiteCd, strArr[2], strArr[1], strArr[4], out reData, out reMsg);
-                                if (reCode == "Y" && reData == "1")
+                                reCode = wSvc.mLaborLabTcodeSite(AppInfo.SsDbNm, pLab_No, AppInfo.SsSiteCd, strArr[2], strArr[4], out reData, out reMsg);
+                                if (reCode == "Y" && reData == "0")
                                 {
-                                    //LAB TCODE SITE LOG WHEN INSTERT SUCCESS 
+                                    reCode = wSvc.aLaborLabTcodeSite(AppInfo.SsDbNm, pLab_No, AppInfo.SsSiteCd, strArr[2], strArr[1], strArr[4], out reData, out reMsg);
+                                    if (reCode == "Y" && reData == "1")
+                                    {
+                                        //LAB TCODE SITE LOG WHEN INSTERT SUCCESS 
+                                        reCode = reCode = wSvc.aLaborLabTcodeSiteLog(AppInfo.SsDbNm, pLab_No, AppInfo.SsSiteCd, strArr[2], strArr[1], strArr[4], AppInfo.SsLabNo, out reData, out reMsg);
+                                    }
+                                }
+                                else if (reCode == "Y" && reData == "1")
+                                {
+                                    //LAB TCODE SITE LOG WHEN UPDATE SUCCESS 
                                     reCode = reCode = wSvc.aLaborLabTcodeSiteLog(AppInfo.SsDbNm, pLab_No, AppInfo.SsSiteCd, strArr[2], strArr[1], strArr[4], AppInfo.SsLabNo, out reData, out reMsg);
                                 }
                             }
-                            else if (reCode == "Y" && reData == "1")
-                            {
-                                //LAB TCODE SITE LOG WHEN UPDATE SUCCESS 
-                                reCode = reCode = wSvc.aLaborLabTcodeSiteLog(AppInfo.SsDbNm, pLab_No, AppInfo.SsSiteCd, strArr[2], strArr[1], strArr[4], AppInfo.SsLabNo, out reData, out reMsg);
-                            }
                         }
+
+
+                        if (reCode == "Y" && reData != "")
+                            reCnt = Convert.ToInt16(reData);
+
+                        if (reCnt != 0)
+                            MessageBox.Show(wRM.GetString("wSave") + " " + wRM.GetString("wSuccess"));
+
+                        else
+                            MessageBox.Show(wRM.GetString("wSave") + " " + wRM.GetString("wFail"));
+
                     }
-
-
-                    if (reCode == "Y" && reData != "")
-                        reCnt = Convert.ToInt16(reData);
-
-                    if (reCnt != 0)
-                        MessageBox.Show(wRM.GetString("wSave") + " " + wRM.GetString("wSuccess"));
-
-                    else
-                        MessageBox.Show(wRM.GetString("wSave") + " " + wRM.GetString("wFail"));
-
-                }
-                catch (Exception ex)
-                {
-                    logs.SaveLog("[error]  (page)::FrmLaborSearchPopModify.cs  (Function)::dataGridView2_CellClick  (Detail):: " + "\r\n" + ex.ToString(), "Error");
-                }
-                finally
-                {
-                    if (wSvc != null)
-                        wSvc.Dispose();
+                    catch (Exception ex)
+                    {
+                        logs.SaveLog("[error]  (page)::FrmLaborSearchPopModify.cs  (Function)::dataGridView2_CellClick  (Detail):: " + "\r\n" + ex.ToString(), "Error");
+                    }
+                    finally
+                    {
+                        if (wSvc != null)
+                            wSvc.Dispose();
+                    }
                 }
             }
         }
@@ -880,21 +922,19 @@ namespace EldigmPlusApp.SubForm.Worker.Labor
                 }
 
 
-                if (BlockCmb.SelectedValue != null)
-                {
-                    if (BlockCmb.SelectedValue.ToString() == "0")
-                    {
-                        reVal = wRM.GetString("wBlock");
-                        return reVal;
-                    }
-                }
-                else
-                {
-                    reVal = wRM.GetString("wBlock");
-                    return reVal;
-                }
-
-
+                //if (BlockCmb.SelectedValue != null)
+                //{
+                //    if (BlockCmb.SelectedValue.ToString() == "0")
+                //    {
+                //        reVal = wRM.GetString("wBlock");
+                //        return reVal;
+                //    }
+                //}
+                //else
+                //{
+                //    reVal = wRM.GetString("wBlock");
+                //    return reVal;
+                //}
 
             }
             catch (Exception ex)
@@ -925,7 +965,7 @@ namespace EldigmPlusApp.SubForm.Worker.Labor
                 string pTcode = "Check";
                 int dgvLength = 0;
                 //SELECT
-                reCode = wSvc.sLaborAddInfo(AppInfo.SsSiteCd, pTcode, CcodeCmb.SelectedValue.ToString(), out getData, out reMsg);
+                reCode = wSvc.sLaborAddInfo(AppInfo.SsSiteCd, pTcode, CcodeCmb.SelectedValue.ToString(), AppInfo.SsLabAuth, out getData, out reMsg);
 
                 dgvLength = getData.Length;
 
@@ -1017,7 +1057,7 @@ namespace EldigmPlusApp.SubForm.Worker.Labor
                 int dgvLength = 0;
 
                 //SELECT
-                reCode = wSvc.sLaborAddInfo(AppInfo.SsSiteCd, pTcode, CcodeCmb.SelectedValue.ToString(), out getData, out reMsg);
+                reCode = wSvc.sLaborAddInfo(AppInfo.SsSiteCd, pTcode, CcodeCmb.SelectedValue.ToString(), AppInfo.SsLabAuth, out getData, out reMsg);
 
                 dgvLength = getData.Length;
 
@@ -1109,7 +1149,7 @@ namespace EldigmPlusApp.SubForm.Worker.Labor
                 int dgvLength = 0;
 
                 //SELECT
-                reCode = wSvc.sLaborAddInfo(AppInfo.SsSiteCd, pTcode, CcodeCmb.SelectedValue.ToString(), out getData, out reMsg);
+                reCode = wSvc.sLaborAddInfo(AppInfo.SsSiteCd, pTcode, CcodeCmb.SelectedValue.ToString(), AppInfo.SsLabAuth, out getData, out reMsg);
                 dgvLength = getData.Length;
 
                 if (reCode == "Y")
@@ -1249,7 +1289,7 @@ namespace EldigmPlusApp.SubForm.Worker.Labor
                 string pTcode = "ComboBox";
                 int dgvLength = 0;
                 //SELECT
-                reCode = wSvc.sLaborAddInfo(AppInfo.SsSiteCd, pTcode, CcodeCmb.SelectedValue.ToString(), out getData, out reMsg);
+                reCode = wSvc.sLaborAddInfo(AppInfo.SsSiteCd, pTcode, CcodeCmb.SelectedValue.ToString(), AppInfo.SsLabAuth, out getData, out reMsg);
 
                 dgvLength = getData.Length;
 
@@ -1492,9 +1532,55 @@ namespace EldigmPlusApp.SubForm.Worker.Labor
             public string str;  // 열화상 데이터            
         }
 
-        private void lblCom_Click(object sender, EventArgs e)
-        {
 
+
+        private void lblTeam_Click(object sender, EventArgs e)
+        {
+            FrmTeam frm = new FrmTeam();
+            frm.StartPosition = FormStartPosition.CenterScreen;
+            frm.ShowInTaskbar = false;
+            frm.FormBorderStyle = FormBorderStyle.FixedToolWindow;
+            frm.TopMost = true;
+
+            //DialogResult result =
+            frm.ShowDialog();
+        }
+
+
+        private void lblJob_Click(object sender, EventArgs e)
+        {
+            FrmComnCodeSite frm = new FrmComnCodeSite();
+            frm.StartPosition = FormStartPosition.CenterScreen;
+            frm.ShowInTaskbar = false;
+            frm.FormBorderStyle = FormBorderStyle.FixedToolWindow;
+            frm.TopMost = true;
+
+            //DialogResult result =
+            frm.ShowDialog();
+        }
+
+        private void lblBlock_Click(object sender, EventArgs e)
+        {
+            FrmComnCodeSite frm = new FrmComnCodeSite();
+            frm.StartPosition = FormStartPosition.CenterScreen;
+            frm.ShowInTaskbar = false;
+            frm.FormBorderStyle = FormBorderStyle.FixedToolWindow;
+            frm.TopMost = true;
+
+            //DialogResult result =
+            frm.ShowDialog();
+        }
+
+        private void lblAddInfo_Click(object sender, EventArgs e)
+        {
+            FrmCodeTSite frm = new FrmCodeTSite();
+            frm.StartPosition = FormStartPosition.CenterScreen;
+            frm.ShowInTaskbar = false;
+            frm.FormBorderStyle = FormBorderStyle.FixedToolWindow;
+            frm.TopMost = true;
+
+            //DialogResult result =
+            frm.ShowDialog();
         }
 
     }

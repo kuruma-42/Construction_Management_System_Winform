@@ -144,6 +144,9 @@
   <data name="msgAlreadyUsed" xml:space="preserve">
     <value>Already in use elsewhere</value>
   </data>
+  <data name="msgAuthority" xml:space="preserve">
+    <value />
+  </data>
   <data name="msgChangeUsingFlag" xml:space="preserve">
     <value>Change to Enabled</value>
   </data>
@@ -158,6 +161,9 @@
   </data>
   <data name="msgEndDate" xml:space="preserve">
     <value>quitting time</value>
+  </data>
+  <data name="msgInputValue" xml:space="preserve">
+    <value>Please put the Value of Add Info</value>
   </data>
   <data name="msgMyCompanyStatus" xml:space="preserve">
     <value>MyCompanyStatus</value>

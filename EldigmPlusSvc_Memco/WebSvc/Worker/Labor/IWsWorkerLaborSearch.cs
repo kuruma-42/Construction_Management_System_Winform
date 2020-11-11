@@ -29,7 +29,16 @@ namespace EldigmPlusSvc_Memco.WebSvc.Sys.Worker
         string sLaborTeamList(string pSiteCd, string pAuthCd, string pTeamCd, string pCocd, string pLngTeam, out List<DataComCombo> reList, out string reMsg);
 
         [OperationContract]
-        string sLaborSearch(string pSiteCd, string pBlockCcd, string pConstCcd, string pCoCd, string pTeamCd, string pSearchCondition, string pSearchTxt, out List<DataLaborSearch> reList, out string reMsg);
+        string sLabInfoTypeList(string pSiteCd, string pLngCategory, out List<DataComComboStr> reList, out string reMsg);
+
+        [OperationContract]
+        string sLabTcodeList(string pSiteCd, string pTgrpCcd, string pTtypeScd, string pLngCategory, string pAuthCd, out List<DataComComboStr> reList, out string reMsg);
+
+        [OperationContract]
+        string sLaborAddInfoCcode2(string pSiteCd, string pAuth, string pLangCategory, out List<DataComCombo> reList, out string reMsg);
+
+        [OperationContract]
+        string sLaborSearch(string pSiteCd, string pBlockCcd, string pConstCcd, string pCoCd, string pTeamCd, string pSearchCondition, string pSearchTxt, string pTtypeScd, string pTcode, string pValue, out List<DataLaborSearch> reList, out string reMsg);
 
         // ** LABOR SEARCH PART END **
 
@@ -57,7 +66,7 @@ namespace EldigmPlusSvc_Memco.WebSvc.Sys.Worker
         string sLaborAddInfoCcode(string pDbnm, string pSiteCd, string pAuth, out List<DataAddinfoCcode> reList, out string reMsg);        
 
         [OperationContract]
-        string sLaborAddInfo(string pSiteCd, string pCodeT, string pTgrpCcd, out List<DataAddinfo> reList, out string reMsg);
+        string sLaborAddInfo(string pSiteCd, string pCodeT, string pTgrpCcd, string pAuthCd, out List<DataAddinfo> reList, out string reMsg);
 
         [OperationContract]
         string sLaborAddInfoModify(string pLabNo, string pSiteCd, string pTtypeScd, string pTgrpCcd, out List<DataAddinfo> reList, out string reMsg);
@@ -85,6 +94,17 @@ namespace EldigmPlusSvc_Memco.WebSvc.Sys.Worker
 
         // ** LABOR SEARCH POP UP PART END **
 
+
+        //** AUTH SET PART START 
+
+        [OperationContract]
+        string AuthLaborNew(string pDbNm, string pSiteCd, string pAuthCd, out string reData, out string reMsg);
+
+        [OperationContract]
+        string AuthLaborModify(string pDbNm, string pSiteCd, string pAuthCd, out string reData, out string reMsg);
+
+
+        //** AUTH SET PART END 
     }
 
 
@@ -135,6 +155,17 @@ namespace EldigmPlusSvc_Memco.WebSvc.Sys.Worker
     {
         [DataMember(Order = 0)]
         public int VALUE { get; set; }
+
+        [DataMember(Order = 1)]
+        public string TEXT { get; set; }
+    }
+
+    //COMBO DATA -> LAB INFO TYPE COZ VALUE'S TYPE IS STRING 
+    [DataContract]
+    public class DataComComboStr
+    {
+        [DataMember(Order = 0)]
+        public string VALUE { get; set; }
 
         [DataMember(Order = 1)]
         public string TEXT { get; set; }

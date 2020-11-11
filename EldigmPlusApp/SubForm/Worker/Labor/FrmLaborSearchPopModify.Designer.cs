@@ -66,15 +66,15 @@
             this.dgv2_TTYPE_SCD = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgv2_TCODE_NM = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgv2_CONTENT = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.label4 = new System.Windows.Forms.Label();
+            this.lblAddInfo = new System.Windows.Forms.Label();
             this.dgv1_addInfo = new System.Windows.Forms.DataGridView();
-            this.lblHead = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.dgv1_TCODE = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgv1_TTYPE_SCD = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgv1_TCODE_NM = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgv1_CONTENT = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.lblHead = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.LabDetail.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -96,6 +96,7 @@
             this.lblBlock.Size = new System.Drawing.Size(41, 12);
             this.lblBlock.TabIndex = 0;
             this.lblBlock.Text = "* 구역";
+            this.lblBlock.Click += new System.EventHandler(this.lblBlock_Click);
             // 
             // BlockCmb
             // 
@@ -141,6 +142,7 @@
             this.lblTeam.Size = new System.Drawing.Size(27, 12);
             this.lblTeam.TabIndex = 32;
             this.lblTeam.Text = "* 팀";
+            this.lblTeam.Click += new System.EventHandler(this.lblTeam_Click);
             // 
             // lblJob
             // 
@@ -150,6 +152,7 @@
             this.lblJob.Size = new System.Drawing.Size(39, 12);
             this.lblJob.TabIndex = 30;
             this.lblJob.Text = "* 직종";
+            this.lblJob.Click += new System.EventHandler(this.lblJob_Click);
             // 
             // lblBirthDate
             // 
@@ -186,7 +189,6 @@
             this.lblCom.Size = new System.Drawing.Size(39, 12);
             this.lblCom.TabIndex = 19;
             this.lblCom.Text = "* 업체";
-            this.lblCom.Click += new System.EventHandler(this.lblCom_Click);
             // 
             // TeamCmb
             // 
@@ -237,6 +239,7 @@
             // 
             // ComCmb
             // 
+            this.ComCmb.Enabled = false;
             this.ComCmb.FormattingEnabled = true;
             this.ComCmb.Location = new System.Drawing.Point(197, 24);
             this.ComCmb.Name = "ComCmb";
@@ -262,7 +265,7 @@
             this.tabPage1.Controls.Add(this.dgv3_addInfo);
             this.tabPage1.Controls.Add(this.dgv4_addInfo);
             this.tabPage1.Controls.Add(this.dgv2_addInfo);
-            this.tabPage1.Controls.Add(this.label4);
+            this.tabPage1.Controls.Add(this.lblAddInfo);
             this.tabPage1.Controls.Add(this.dgv1_addInfo);
             this.tabPage1.Controls.Add(this.lblBlock);
             this.tabPage1.Controls.Add(this.BlockCmb);
@@ -428,15 +431,16 @@
             this.dgv2_CONTENT.Name = "dgv2_CONTENT";
             this.dgv2_CONTENT.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             // 
-            // label4
+            // lblAddInfo
             // 
-            this.label4.AutoSize = true;
-            this.label4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label4.Location = new System.Drawing.Point(12, 225);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(53, 12);
-            this.label4.TabIndex = 62;
-            this.label4.Text = "추가정보";
+            this.lblAddInfo.AutoSize = true;
+            this.lblAddInfo.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblAddInfo.Location = new System.Drawing.Point(12, 225);
+            this.lblAddInfo.Name = "lblAddInfo";
+            this.lblAddInfo.Size = new System.Drawing.Size(53, 12);
+            this.lblAddInfo.TabIndex = 62;
+            this.lblAddInfo.Text = "추가정보";
+            this.lblAddInfo.Click += new System.EventHandler(this.lblAddInfo_Click);
             // 
             // dgv1_addInfo
             // 
@@ -452,6 +456,39 @@
             this.dgv1_addInfo.RowTemplate.Height = 23;
             this.dgv1_addInfo.Size = new System.Drawing.Size(267, 225);
             this.dgv1_addInfo.TabIndex = 61;
+            // 
+            // dgv1_TCODE
+            // 
+            this.dgv1_TCODE.HeaderText = "TCODE";
+            this.dgv1_TCODE.Name = "dgv1_TCODE";
+            this.dgv1_TCODE.ReadOnly = true;
+            this.dgv1_TCODE.Visible = false;
+            // 
+            // dgv1_TTYPE_SCD
+            // 
+            this.dgv1_TTYPE_SCD.HeaderText = "TTYPE_SCD";
+            this.dgv1_TTYPE_SCD.Name = "dgv1_TTYPE_SCD";
+            this.dgv1_TTYPE_SCD.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgv1_TTYPE_SCD.Visible = false;
+            // 
+            // dgv1_TCODE_NM
+            // 
+            this.dgv1_TCODE_NM.HeaderText = "TCODE_NM";
+            this.dgv1_TCODE_NM.Name = "dgv1_TCODE_NM";
+            this.dgv1_TCODE_NM.ReadOnly = true;
+            this.dgv1_TCODE_NM.Width = 150;
+            // 
+            // dgv1_CONTENT
+            // 
+            this.dgv1_CONTENT.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dgv1_CONTENT.FalseValue = "0";
+            this.dgv1_CONTENT.HeaderText = "CONTENT";
+            this.dgv1_CONTENT.IndeterminateValue = "0";
+            this.dgv1_CONTENT.MinimumWidth = 70;
+            this.dgv1_CONTENT.Name = "dgv1_CONTENT";
+            this.dgv1_CONTENT.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv1_CONTENT.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.dgv1_CONTENT.TrueValue = "1";
             // 
             // lblHead
             // 
@@ -490,39 +527,6 @@
             this.splitContainer1.Size = new System.Drawing.Size(579, 961);
             this.splitContainer1.SplitterDistance = 25;
             this.splitContainer1.TabIndex = 1;
-            // 
-            // dgv1_TCODE
-            // 
-            this.dgv1_TCODE.HeaderText = "TCODE";
-            this.dgv1_TCODE.Name = "dgv1_TCODE";
-            this.dgv1_TCODE.ReadOnly = true;
-            this.dgv1_TCODE.Visible = false;
-            // 
-            // dgv1_TTYPE_SCD
-            // 
-            this.dgv1_TTYPE_SCD.HeaderText = "TTYPE_SCD";
-            this.dgv1_TTYPE_SCD.Name = "dgv1_TTYPE_SCD";
-            this.dgv1_TTYPE_SCD.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgv1_TTYPE_SCD.Visible = false;
-            // 
-            // dgv1_TCODE_NM
-            // 
-            this.dgv1_TCODE_NM.HeaderText = "TCODE_NM";
-            this.dgv1_TCODE_NM.Name = "dgv1_TCODE_NM";
-            this.dgv1_TCODE_NM.ReadOnly = true;
-            this.dgv1_TCODE_NM.Width = 150;
-            // 
-            // dgv1_CONTENT
-            // 
-            this.dgv1_CONTENT.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dgv1_CONTENT.FalseValue = "0";
-            this.dgv1_CONTENT.HeaderText = "CONTENT";
-            this.dgv1_CONTENT.IndeterminateValue = "0";
-            this.dgv1_CONTENT.MinimumWidth = 70;
-            this.dgv1_CONTENT.Name = "dgv1_CONTENT";
-            this.dgv1_CONTENT.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv1_CONTENT.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.dgv1_CONTENT.TrueValue = "1";
             // 
             // FrmLaborSearchPopModify
             // 
@@ -577,10 +581,6 @@
         private System.Windows.Forms.SplitContainer splitContainer1;
         private System.Windows.Forms.ComboBox CcodeCmb;
         public System.Windows.Forms.DataGridView dgv3_addInfo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgv3_TCODE;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgv3_TTYPE_SCD;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgv3_TCODE_NM;
-        private Infragistics.Win.UltraDataGridView.UltraCalendarComboColumn dgv3_CONTENT;
         public System.Windows.Forms.DataGridView dgv4_addInfo;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgv4_TCODE;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgv4_TTYPE_SCD;
@@ -591,11 +591,15 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dgv2_TTYPE_SCD;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgv2_TCODE_NM;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgv2_CONTENT;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label lblAddInfo;
         public System.Windows.Forms.DataGridView dgv1_addInfo;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgv1_TCODE;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgv1_TTYPE_SCD;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgv1_TCODE_NM;
         private System.Windows.Forms.DataGridViewCheckBoxColumn dgv1_CONTENT;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgv3_TCODE;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgv3_TTYPE_SCD;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgv3_TCODE_NM;
+        private Infragistics.Win.UltraDataGridView.UltraCalendarComboColumn dgv3_CONTENT;
     }
 }

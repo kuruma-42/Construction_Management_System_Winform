@@ -39,6 +39,12 @@ namespace EldigmPlusApp.Mem_WsWorkerLaborSearch {
         
         private System.Threading.SendOrPostCallback sLaborTeamListOperationCompleted;
         
+        private System.Threading.SendOrPostCallback sLabInfoTypeListOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback sLabTcodeListOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback sLaborAddInfoCcode2OperationCompleted;
+        
         private System.Threading.SendOrPostCallback sLaborSearchOperationCompleted;
         
         private System.Threading.SendOrPostCallback sLabAprvFlagOperationCompleted;
@@ -66,6 +72,10 @@ namespace EldigmPlusApp.Mem_WsWorkerLaborSearch {
         private System.Threading.SendOrPostCallback mLaborLabTcodeSiteOperationCompleted;
         
         private System.Threading.SendOrPostCallback aLaborLabTcodeSiteLogOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback AuthLaborNewOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback AuthLaborModifyOperationCompleted;
         
         private bool useDefaultCredentialsSetExplicitly;
         
@@ -121,6 +131,15 @@ namespace EldigmPlusApp.Mem_WsWorkerLaborSearch {
         public event sLaborTeamListCompletedEventHandler sLaborTeamListCompleted;
         
         /// <remarks/>
+        public event sLabInfoTypeListCompletedEventHandler sLabInfoTypeListCompleted;
+        
+        /// <remarks/>
+        public event sLabTcodeListCompletedEventHandler sLabTcodeListCompleted;
+        
+        /// <remarks/>
+        public event sLaborAddInfoCcode2CompletedEventHandler sLaborAddInfoCcode2Completed;
+        
+        /// <remarks/>
         public event sLaborSearchCompletedEventHandler sLaborSearchCompleted;
         
         /// <remarks/>
@@ -161,6 +180,12 @@ namespace EldigmPlusApp.Mem_WsWorkerLaborSearch {
         
         /// <remarks/>
         public event aLaborLabTcodeSiteLogCompletedEventHandler aLaborLabTcodeSiteLogCompleted;
+        
+        /// <remarks/>
+        public event AuthLaborNewCompletedEventHandler AuthLaborNewCompleted;
+        
+        /// <remarks/>
+        public event AuthLaborModifyCompletedEventHandler AuthLaborModifyCompleted;
         
         /// <remarks/>
         [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IWsWorkerLaborSearch/sLaborCompanyList", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
@@ -351,9 +376,119 @@ namespace EldigmPlusApp.Mem_WsWorkerLaborSearch {
         }
         
         /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IWsWorkerLaborSearch/sLabInfoTypeList", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [return: System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string sLabInfoTypeList([System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pSiteCd, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pLngCategory, [System.Xml.Serialization.XmlArrayAttribute(IsNullable=true)] [System.Xml.Serialization.XmlArrayItemAttribute(Namespace="http://schemas.datacontract.org/2004/07/EldigmPlusSvc_Memco.WebSvc.Sys.Worker")] out DataComComboStr[] reList, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] out string reMsg) {
+            object[] results = this.Invoke("sLabInfoTypeList", new object[] {
+                        pSiteCd,
+                        pLngCategory});
+            reList = ((DataComComboStr[])(results[1]));
+            reMsg = ((string)(results[2]));
+            return ((string)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void sLabInfoTypeListAsync(string pSiteCd, string pLngCategory) {
+            this.sLabInfoTypeListAsync(pSiteCd, pLngCategory, null);
+        }
+        
+        /// <remarks/>
+        public void sLabInfoTypeListAsync(string pSiteCd, string pLngCategory, object userState) {
+            if ((this.sLabInfoTypeListOperationCompleted == null)) {
+                this.sLabInfoTypeListOperationCompleted = new System.Threading.SendOrPostCallback(this.OnsLabInfoTypeListOperationCompleted);
+            }
+            this.InvokeAsync("sLabInfoTypeList", new object[] {
+                        pSiteCd,
+                        pLngCategory}, this.sLabInfoTypeListOperationCompleted, userState);
+        }
+        
+        private void OnsLabInfoTypeListOperationCompleted(object arg) {
+            if ((this.sLabInfoTypeListCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.sLabInfoTypeListCompleted(this, new sLabInfoTypeListCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IWsWorkerLaborSearch/sLabTcodeList", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [return: System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string sLabTcodeList([System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pSiteCd, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pTgrpCcd, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pTtypeScd, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pLngCategory, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pAuthCd, [System.Xml.Serialization.XmlArrayAttribute(IsNullable=true)] [System.Xml.Serialization.XmlArrayItemAttribute(Namespace="http://schemas.datacontract.org/2004/07/EldigmPlusSvc_Memco.WebSvc.Sys.Worker")] out DataComComboStr[] reList, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] out string reMsg) {
+            object[] results = this.Invoke("sLabTcodeList", new object[] {
+                        pSiteCd,
+                        pTgrpCcd,
+                        pTtypeScd,
+                        pLngCategory,
+                        pAuthCd});
+            reList = ((DataComComboStr[])(results[1]));
+            reMsg = ((string)(results[2]));
+            return ((string)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void sLabTcodeListAsync(string pSiteCd, string pTgrpCcd, string pTtypeScd, string pLngCategory, string pAuthCd) {
+            this.sLabTcodeListAsync(pSiteCd, pTgrpCcd, pTtypeScd, pLngCategory, pAuthCd, null);
+        }
+        
+        /// <remarks/>
+        public void sLabTcodeListAsync(string pSiteCd, string pTgrpCcd, string pTtypeScd, string pLngCategory, string pAuthCd, object userState) {
+            if ((this.sLabTcodeListOperationCompleted == null)) {
+                this.sLabTcodeListOperationCompleted = new System.Threading.SendOrPostCallback(this.OnsLabTcodeListOperationCompleted);
+            }
+            this.InvokeAsync("sLabTcodeList", new object[] {
+                        pSiteCd,
+                        pTgrpCcd,
+                        pTtypeScd,
+                        pLngCategory,
+                        pAuthCd}, this.sLabTcodeListOperationCompleted, userState);
+        }
+        
+        private void OnsLabTcodeListOperationCompleted(object arg) {
+            if ((this.sLabTcodeListCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.sLabTcodeListCompleted(this, new sLabTcodeListCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IWsWorkerLaborSearch/sLaborAddInfoCcode2", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [return: System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string sLaborAddInfoCcode2([System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pSiteCd, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pAuth, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pLangCategory, [System.Xml.Serialization.XmlArrayAttribute(IsNullable=true)] [System.Xml.Serialization.XmlArrayItemAttribute(Namespace="http://schemas.datacontract.org/2004/07/EldigmPlusSvc_Memco.WebSvc.Sys.Worker")] out DataComCombo[] reList, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] out string reMsg) {
+            object[] results = this.Invoke("sLaborAddInfoCcode2", new object[] {
+                        pSiteCd,
+                        pAuth,
+                        pLangCategory});
+            reList = ((DataComCombo[])(results[1]));
+            reMsg = ((string)(results[2]));
+            return ((string)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void sLaborAddInfoCcode2Async(string pSiteCd, string pAuth, string pLangCategory) {
+            this.sLaborAddInfoCcode2Async(pSiteCd, pAuth, pLangCategory, null);
+        }
+        
+        /// <remarks/>
+        public void sLaborAddInfoCcode2Async(string pSiteCd, string pAuth, string pLangCategory, object userState) {
+            if ((this.sLaborAddInfoCcode2OperationCompleted == null)) {
+                this.sLaborAddInfoCcode2OperationCompleted = new System.Threading.SendOrPostCallback(this.OnsLaborAddInfoCcode2OperationCompleted);
+            }
+            this.InvokeAsync("sLaborAddInfoCcode2", new object[] {
+                        pSiteCd,
+                        pAuth,
+                        pLangCategory}, this.sLaborAddInfoCcode2OperationCompleted, userState);
+        }
+        
+        private void OnsLaborAddInfoCcode2OperationCompleted(object arg) {
+            if ((this.sLaborAddInfoCcode2Completed != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.sLaborAddInfoCcode2Completed(this, new sLaborAddInfoCcode2CompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
         [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IWsWorkerLaborSearch/sLaborSearch", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
         [return: System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public string sLaborSearch([System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pSiteCd, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pBlockCcd, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pConstCcd, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pCoCd, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pTeamCd, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pSearchCondition, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pSearchTxt, [System.Xml.Serialization.XmlArrayAttribute(IsNullable=true)] [System.Xml.Serialization.XmlArrayItemAttribute(Namespace="http://schemas.datacontract.org/2004/07/EldigmPlusSvc_Memco.WebSvc.Sys.Worker")] out DataLaborSearch[] reList, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] out string reMsg) {
+        public string sLaborSearch([System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pSiteCd, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pBlockCcd, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pConstCcd, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pCoCd, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pTeamCd, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pSearchCondition, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pSearchTxt, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pTtypeScd, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pTcode, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pValue, [System.Xml.Serialization.XmlArrayAttribute(IsNullable=true)] [System.Xml.Serialization.XmlArrayItemAttribute(Namespace="http://schemas.datacontract.org/2004/07/EldigmPlusSvc_Memco.WebSvc.Sys.Worker")] out DataLaborSearch[] reList, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] out string reMsg) {
             object[] results = this.Invoke("sLaborSearch", new object[] {
                         pSiteCd,
                         pBlockCcd,
@@ -361,19 +496,22 @@ namespace EldigmPlusApp.Mem_WsWorkerLaborSearch {
                         pCoCd,
                         pTeamCd,
                         pSearchCondition,
-                        pSearchTxt});
+                        pSearchTxt,
+                        pTtypeScd,
+                        pTcode,
+                        pValue});
             reList = ((DataLaborSearch[])(results[1]));
             reMsg = ((string)(results[2]));
             return ((string)(results[0]));
         }
         
         /// <remarks/>
-        public void sLaborSearchAsync(string pSiteCd, string pBlockCcd, string pConstCcd, string pCoCd, string pTeamCd, string pSearchCondition, string pSearchTxt) {
-            this.sLaborSearchAsync(pSiteCd, pBlockCcd, pConstCcd, pCoCd, pTeamCd, pSearchCondition, pSearchTxt, null);
+        public void sLaborSearchAsync(string pSiteCd, string pBlockCcd, string pConstCcd, string pCoCd, string pTeamCd, string pSearchCondition, string pSearchTxt, string pTtypeScd, string pTcode, string pValue) {
+            this.sLaborSearchAsync(pSiteCd, pBlockCcd, pConstCcd, pCoCd, pTeamCd, pSearchCondition, pSearchTxt, pTtypeScd, pTcode, pValue, null);
         }
         
         /// <remarks/>
-        public void sLaborSearchAsync(string pSiteCd, string pBlockCcd, string pConstCcd, string pCoCd, string pTeamCd, string pSearchCondition, string pSearchTxt, object userState) {
+        public void sLaborSearchAsync(string pSiteCd, string pBlockCcd, string pConstCcd, string pCoCd, string pTeamCd, string pSearchCondition, string pSearchTxt, string pTtypeScd, string pTcode, string pValue, object userState) {
             if ((this.sLaborSearchOperationCompleted == null)) {
                 this.sLaborSearchOperationCompleted = new System.Threading.SendOrPostCallback(this.OnsLaborSearchOperationCompleted);
             }
@@ -384,7 +522,10 @@ namespace EldigmPlusApp.Mem_WsWorkerLaborSearch {
                         pCoCd,
                         pTeamCd,
                         pSearchCondition,
-                        pSearchTxt}, this.sLaborSearchOperationCompleted, userState);
+                        pSearchTxt,
+                        pTtypeScd,
+                        pTcode,
+                        pValue}, this.sLaborSearchOperationCompleted, userState);
         }
         
         private void OnsLaborSearchOperationCompleted(object arg) {
@@ -573,30 +714,32 @@ namespace EldigmPlusApp.Mem_WsWorkerLaborSearch {
         /// <remarks/>
         [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IWsWorkerLaborSearch/sLaborAddInfo", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
         [return: System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public string sLaborAddInfo([System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pSiteCd, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pCodeT, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pTgrpCcd, [System.Xml.Serialization.XmlArrayAttribute(IsNullable=true)] [System.Xml.Serialization.XmlArrayItemAttribute(Namespace="http://schemas.datacontract.org/2004/07/EldigmPlusSvc_Memco.WebSvc.Sys.Worker")] out DataAddinfo[] reList, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] out string reMsg) {
+        public string sLaborAddInfo([System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pSiteCd, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pCodeT, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pTgrpCcd, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pAuthCd, [System.Xml.Serialization.XmlArrayAttribute(IsNullable=true)] [System.Xml.Serialization.XmlArrayItemAttribute(Namespace="http://schemas.datacontract.org/2004/07/EldigmPlusSvc_Memco.WebSvc.Sys.Worker")] out DataAddinfo[] reList, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] out string reMsg) {
             object[] results = this.Invoke("sLaborAddInfo", new object[] {
                         pSiteCd,
                         pCodeT,
-                        pTgrpCcd});
+                        pTgrpCcd,
+                        pAuthCd});
             reList = ((DataAddinfo[])(results[1]));
             reMsg = ((string)(results[2]));
             return ((string)(results[0]));
         }
         
         /// <remarks/>
-        public void sLaborAddInfoAsync(string pSiteCd, string pCodeT, string pTgrpCcd) {
-            this.sLaborAddInfoAsync(pSiteCd, pCodeT, pTgrpCcd, null);
+        public void sLaborAddInfoAsync(string pSiteCd, string pCodeT, string pTgrpCcd, string pAuthCd) {
+            this.sLaborAddInfoAsync(pSiteCd, pCodeT, pTgrpCcd, pAuthCd, null);
         }
         
         /// <remarks/>
-        public void sLaborAddInfoAsync(string pSiteCd, string pCodeT, string pTgrpCcd, object userState) {
+        public void sLaborAddInfoAsync(string pSiteCd, string pCodeT, string pTgrpCcd, string pAuthCd, object userState) {
             if ((this.sLaborAddInfoOperationCompleted == null)) {
                 this.sLaborAddInfoOperationCompleted = new System.Threading.SendOrPostCallback(this.OnsLaborAddInfoOperationCompleted);
             }
             this.InvokeAsync("sLaborAddInfo", new object[] {
                         pSiteCd,
                         pCodeT,
-                        pTgrpCcd}, this.sLaborAddInfoOperationCompleted, userState);
+                        pTgrpCcd,
+                        pAuthCd}, this.sLaborAddInfoOperationCompleted, userState);
         }
         
         private void OnsLaborAddInfoOperationCompleted(object arg) {
@@ -869,6 +1012,78 @@ namespace EldigmPlusApp.Mem_WsWorkerLaborSearch {
             if ((this.aLaborLabTcodeSiteLogCompleted != null)) {
                 System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
                 this.aLaborLabTcodeSiteLogCompleted(this, new aLaborLabTcodeSiteLogCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IWsWorkerLaborSearch/AuthLaborNew", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [return: System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string AuthLaborNew([System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pDbNm, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pSiteCd, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pAuthCd, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] out string reData, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] out string reMsg) {
+            object[] results = this.Invoke("AuthLaborNew", new object[] {
+                        pDbNm,
+                        pSiteCd,
+                        pAuthCd});
+            reData = ((string)(results[1]));
+            reMsg = ((string)(results[2]));
+            return ((string)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void AuthLaborNewAsync(string pDbNm, string pSiteCd, string pAuthCd) {
+            this.AuthLaborNewAsync(pDbNm, pSiteCd, pAuthCd, null);
+        }
+        
+        /// <remarks/>
+        public void AuthLaborNewAsync(string pDbNm, string pSiteCd, string pAuthCd, object userState) {
+            if ((this.AuthLaborNewOperationCompleted == null)) {
+                this.AuthLaborNewOperationCompleted = new System.Threading.SendOrPostCallback(this.OnAuthLaborNewOperationCompleted);
+            }
+            this.InvokeAsync("AuthLaborNew", new object[] {
+                        pDbNm,
+                        pSiteCd,
+                        pAuthCd}, this.AuthLaborNewOperationCompleted, userState);
+        }
+        
+        private void OnAuthLaborNewOperationCompleted(object arg) {
+            if ((this.AuthLaborNewCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.AuthLaborNewCompleted(this, new AuthLaborNewCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IWsWorkerLaborSearch/AuthLaborModify", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [return: System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string AuthLaborModify([System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pDbNm, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pSiteCd, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string pAuthCd, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] out string reData, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] out string reMsg) {
+            object[] results = this.Invoke("AuthLaborModify", new object[] {
+                        pDbNm,
+                        pSiteCd,
+                        pAuthCd});
+            reData = ((string)(results[1]));
+            reMsg = ((string)(results[2]));
+            return ((string)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void AuthLaborModifyAsync(string pDbNm, string pSiteCd, string pAuthCd) {
+            this.AuthLaborModifyAsync(pDbNm, pSiteCd, pAuthCd, null);
+        }
+        
+        /// <remarks/>
+        public void AuthLaborModifyAsync(string pDbNm, string pSiteCd, string pAuthCd, object userState) {
+            if ((this.AuthLaborModifyOperationCompleted == null)) {
+                this.AuthLaborModifyOperationCompleted = new System.Threading.SendOrPostCallback(this.OnAuthLaborModifyOperationCompleted);
+            }
+            this.InvokeAsync("AuthLaborModify", new object[] {
+                        pDbNm,
+                        pSiteCd,
+                        pAuthCd}, this.AuthLaborModifyOperationCompleted, userState);
+        }
+        
+        private void OnAuthLaborModifyOperationCompleted(object arg) {
+            if ((this.AuthLaborModifyCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.AuthLaborModifyCompleted(this, new AuthLaborModifyCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
             }
         }
         
@@ -1356,6 +1571,41 @@ namespace EldigmPlusApp.Mem_WsWorkerLaborSearch {
     }
     
     /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.datacontract.org/2004/07/EldigmPlusSvc_Memco.WebSvc.Sys.Worker")]
+    public partial class DataComComboStr {
+        
+        private string vALUEField;
+        
+        private string tEXTField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string VALUE {
+            get {
+                return this.vALUEField;
+            }
+            set {
+                this.vALUEField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string TEXT {
+            get {
+                return this.tEXTField;
+            }
+            set {
+                this.tEXTField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
     public delegate void sLaborCompanyListCompletedEventHandler(object sender, sLaborCompanyListCompletedEventArgs e);
     
@@ -1536,6 +1786,132 @@ namespace EldigmPlusApp.Mem_WsWorkerLaborSearch {
         private object[] results;
         
         internal sLaborTeamListCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public string Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[0]));
+            }
+        }
+        
+        /// <remarks/>
+        public DataComCombo[] reList {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((DataComCombo[])(this.results[1]));
+            }
+        }
+        
+        /// <remarks/>
+        public string reMsg {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[2]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
+    public delegate void sLabInfoTypeListCompletedEventHandler(object sender, sLabInfoTypeListCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class sLabInfoTypeListCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal sLabInfoTypeListCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public string Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[0]));
+            }
+        }
+        
+        /// <remarks/>
+        public DataComComboStr[] reList {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((DataComComboStr[])(this.results[1]));
+            }
+        }
+        
+        /// <remarks/>
+        public string reMsg {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[2]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
+    public delegate void sLabTcodeListCompletedEventHandler(object sender, sLabTcodeListCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class sLabTcodeListCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal sLabTcodeListCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public string Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[0]));
+            }
+        }
+        
+        /// <remarks/>
+        public DataComComboStr[] reList {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((DataComComboStr[])(this.results[1]));
+            }
+        }
+        
+        /// <remarks/>
+        public string reMsg {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[2]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
+    public delegate void sLaborAddInfoCcode2CompletedEventHandler(object sender, sLaborAddInfoCcode2CompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class sLaborAddInfoCcode2CompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal sLaborAddInfoCcode2CompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
                 base(exception, cancelled, userState) {
             this.results = results;
         }
@@ -2124,6 +2500,90 @@ namespace EldigmPlusApp.Mem_WsWorkerLaborSearch {
         private object[] results;
         
         internal aLaborLabTcodeSiteLogCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public string Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[0]));
+            }
+        }
+        
+        /// <remarks/>
+        public string reData {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[1]));
+            }
+        }
+        
+        /// <remarks/>
+        public string reMsg {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[2]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
+    public delegate void AuthLaborNewCompletedEventHandler(object sender, AuthLaborNewCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class AuthLaborNewCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal AuthLaborNewCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public string Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[0]));
+            }
+        }
+        
+        /// <remarks/>
+        public string reData {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[1]));
+            }
+        }
+        
+        /// <remarks/>
+        public string reMsg {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[2]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
+    public delegate void AuthLaborModifyCompletedEventHandler(object sender, AuthLaborModifyCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.3752.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class AuthLaborModifyCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal AuthLaborModifyCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
                 base(exception, cancelled, userState) {
             this.results = results;
         }

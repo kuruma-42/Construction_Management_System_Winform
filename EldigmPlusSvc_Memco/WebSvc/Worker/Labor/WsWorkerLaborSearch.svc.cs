@@ -261,8 +261,8 @@ namespace EldigmPlusSvc_Memco.WebSvc.Sys.Worker
         }
 
 
-        //SELECT 
-        public string sLaborSearch(string pSiteCd, string pBlockCcd, string pConstCcd, string pCoCd, string pTeamCd, string pSearchCondition, string pSearchTxt, out List<DataLaborSearch> reList, out string reMsg)
+        //LAB INFO TYPE CMB 
+        public string sLabInfoTypeList(string pSiteCd, string pLngCategory, out List<DataComComboStr> reList, out string reMsg)
         {
             string reCode = "N";
 
@@ -274,7 +274,149 @@ namespace EldigmPlusSvc_Memco.WebSvc.Sys.Worker
 
                 try
                 {
-                    ds = bizSys.sLaborSearch(pSiteCd, pBlockCcd, pConstCcd, pCoCd, pTeamCd, pSearchCondition, pSearchTxt);
+                    ds = bizSys.sLabInfoTypeList(pSiteCd, pLngCategory);
+
+                    reMsg = "[검색 성공]";
+                    reCode = "Y";
+                }
+                catch (Exception ex)
+                {
+                    reMsg = "[검색 실패]" + ex.ToString();
+                    reCode = "N";
+                }
+            }
+            catch (Exception ex)
+            {
+                reMsg = "[검색 에러] :: " + ex.ToString();
+                reCode = "N";
+            }
+
+            List<DataComComboStr> data = new List<DataComComboStr>();
+            try
+            {
+                data = ListClass.ConvertDataTableToList<DataComComboStr>(ds.Tables[0]);
+            }
+            catch (Exception ex)
+            {
+                logs.SaveLog("[error]  (page)::WsWorkerLaborSearch.svc  (Function)::sLabInfoTypeList  (Detail)::ConvertDataTableToList " + "\r\n" + ex.ToString(), "Error");
+                reMsg += "/[List 에러]" + ex.ToString();
+                reCode = "N";
+            }
+
+            reList = data;
+
+            return reCode;
+        }
+
+
+        //LAB INFO TYPE CMB 
+        public string sLabTcodeList(string pSiteCd, string pTgrpCcd, string pTtypeScd, string pLngCategory, string pAuthCd, out List<DataComComboStr> reList, out string reMsg)
+        {
+            string reCode = "N";
+
+            DataSet ds = null;
+            BizLaborSearch bizSys = null;
+            try
+            {
+                bizSys = new BizLaborSearch();
+
+                try
+                {
+                    ds = bizSys.sLabTcodeList(pSiteCd, pTgrpCcd, pTtypeScd, pLngCategory, pAuthCd);
+
+                    reMsg = "[검색 성공]";
+                    reCode = "Y";
+                }
+                catch (Exception ex)
+                {
+                    reMsg = "[검색 실패]" + ex.ToString();
+                    reCode = "N";
+                }
+            }
+            catch (Exception ex)
+            {
+                reMsg = "[검색 에러] :: " + ex.ToString();
+                reCode = "N";
+            }
+
+            List<DataComComboStr> data = new List<DataComComboStr>();
+            try
+            {
+                data = ListClass.ConvertDataTableToList<DataComComboStr>(ds.Tables[0]);
+            }
+            catch (Exception ex)
+            {
+                logs.SaveLog("[error]  (page)::WsWorkerLaborSearch.svc  (Function)::sLabTcodeList  (Detail)::ConvertDataTableToList " + "\r\n" + ex.ToString(), "Error");
+                reMsg += "/[List 에러]" + ex.ToString();
+                reCode = "N";
+            }
+
+            reList = data;
+
+            return reCode;
+        }
+
+        //CCODE COMBO BOX (USING THIS CMB CCODE AS TGRP_CCD **INCLUDE CATEGORY PARAMETER FOR VALUE 0**)
+        public string sLaborAddInfoCcode2(string pSiteCd, string pAuth, string pLangCategory, out List<DataComCombo> reList, out string reMsg)
+        {
+            string reCode = "N";
+
+            DataSet ds = null;
+            BizLaborSearch bizSys = null;
+            try
+            {
+                bizSys = new BizLaborSearch();
+
+                try
+                {
+                    ds = bizSys.sLaborAddInfoCcode2(pSiteCd, pAuth, pLangCategory);
+
+                    reMsg = "[검색 성공]";
+                    reCode = "Y";
+                }
+                catch (Exception ex)
+                {
+                    reMsg = "[검색 실패]" + ex.ToString();
+                    reCode = "N";
+                }
+            }
+            catch (Exception ex)
+            {
+                reMsg = "[검색 에러] :: " + ex.ToString();
+                reCode = "N";
+            }
+
+            List<DataComCombo> data = new List<DataComCombo>();
+            try
+            {
+                data = ListClass.ConvertDataTableToList<DataComCombo>(ds.Tables[0]);
+            }
+            catch (Exception ex)
+            {
+                logs.SaveLog("[error]  (page)::WsWorkerLaborSearch.svc  (Function)::sLaborAddInfoCcode2  (Detail)::ConvertDataTableToList " + "\r\n" + ex.ToString(), "Error");
+                reMsg += "/[List 에러]" + ex.ToString();
+                reCode = "N";
+            }
+
+            reList = data;
+
+            return reCode;
+        }
+
+        //SELECT 
+        public string sLaborSearch(string pSiteCd, string pBlockCcd, string pConstCcd, string pCoCd, string pTeamCd, string pSearchCondition, string pSearchTxt, string pTtypeScd, string pTcode, string pValue, out List<DataLaborSearch> reList, out string reMsg)
+        {
+            string reCode = "N";
+
+            DataSet ds = null;
+            BizLaborSearch bizSys = null;
+            try
+            {
+                bizSys = new BizLaborSearch();
+
+                try
+                {
+                    ds = bizSys.sLaborSearch(pSiteCd, pBlockCcd, pConstCcd, pCoCd, pTeamCd, pSearchCondition, pSearchTxt, pTtypeScd, pTcode, pValue);
 
                     reMsg = "[검색 성공]";
                     reCode = "Y";
@@ -298,7 +440,7 @@ namespace EldigmPlusSvc_Memco.WebSvc.Sys.Worker
             }
             catch (Exception ex)
             {
-                logs.SaveLog("[error]  (page)::WsDevice.svc  (Function)::sDevice  (Detail)::ConvertDataTableToList " + "\r\n" + ex.ToString(), "Error");
+                logs.SaveLog("[error]  (page)::WsWorkerLaborSearch.svc  (Function)::sDevice  (Detail)::ConvertDataTableToList " + "\r\n" + ex.ToString(), "Error");
                 reMsg += "/[List 에러]" + ex.ToString();
                 reCode = "N";
             }
@@ -501,7 +643,7 @@ namespace EldigmPlusSvc_Memco.WebSvc.Sys.Worker
             }
             catch (Exception ex)
             {
-                logs.SaveLog("[error]  (page)::WsCodeTMainDB.svc  (Function)::sLaborAddInfoCcode  (Detail)::ConvertDataTableToList " + "\r\n" + ex.ToString(), "Error");
+                logs.SaveLog("[error]  (page)::WsWorkerLaborSearch.svc  (Function)::sLaborAddInfoCcode  (Detail)::ConvertDataTableToList " + "\r\n" + ex.ToString(), "Error");
                 reMsg += "/[List 에러]" + ex.ToString();
                 reCode = "N";
             }
@@ -512,7 +654,7 @@ namespace EldigmPlusSvc_Memco.WebSvc.Sys.Worker
         }
 
         //ADD INFO DATA 
-        public string sLaborAddInfo(string pSiteCd, string pCodeT, string pTgrpCcd, out List<DataAddinfo> reList, out string reMsg)
+        public string sLaborAddInfo(string pSiteCd, string pCodeT, string pTgrpCcd, string pAuthCd, out List<DataAddinfo> reList, out string reMsg)
         {
             string reCode = "N";
 
@@ -524,7 +666,7 @@ namespace EldigmPlusSvc_Memco.WebSvc.Sys.Worker
 
                 try
                 {
-                    ds = bizSys.sLaborAddInfo(pSiteCd, pCodeT, pTgrpCcd);
+                    ds = bizSys.sLaborAddInfo(pSiteCd, pCodeT, pTgrpCcd, pAuthCd);
 
                     reMsg = "[검색 성공]";
                     reCode = "Y";
@@ -888,6 +1030,89 @@ namespace EldigmPlusSvc_Memco.WebSvc.Sys.Worker
 
             return reCode;
         }
+
+
+
+        //** AUTH SET PART START 
+
+        //DUPLICATE CHECK MEMBER AND RETURN LAB_NO 
+        public string AuthLaborNew(string pDbNm, string pSiteCd, string pAuthCd, out string reData, out string reMsg)
+        {
+            string reCode = "N";
+
+            string reVal = "";
+            BizLaborSearch bizSys = null;
+            try
+            {
+                bizSys = new BizLaborSearch();
+
+                try
+                {
+                    reVal = bizSys.AuthLaborNew(pDbNm, pSiteCd, pAuthCd);
+
+                    reMsg = "[검색 성공]";
+                    reCode = "Y";
+                }
+                catch (Exception ex)
+                {
+                    reMsg = "[검색 실패]" + ex.ToString();
+                    reCode = "N";
+                }
+            }
+            catch (Exception ex)
+            {
+                reMsg = "[검색 에러 - BizMainHome 연결 실패] :: " + ex.ToString();
+                reCode = "N";
+            }
+
+            reData = reVal;
+
+            return reCode;
+        }
+
+        public string AuthLaborModify(string pDbNm, string pSiteCd, string pAuthCd, out string reData, out string reMsg)
+        {
+
+            string reCode = "N";
+
+            string reVal = "";
+            BizLaborSearch bizSys = null;
+            try
+            {
+                bizSys = new BizLaborSearch();
+
+                try
+                {
+                    reVal = bizSys.AuthLaborModify(pDbNm, pSiteCd, pAuthCd);
+
+                    reMsg = "[검색 성공]";
+                    reCode = "Y";
+                }
+                catch (Exception ex)
+                {
+                    reMsg = "[검색 실패]" + ex.ToString();
+                    reCode = "N";
+                }
+            }
+            catch (Exception ex)
+            {
+                reMsg = "[검색 에러 - BizMainHome 연결 실패] :: " + ex.ToString();
+                reCode = "N";
+            }
+
+            reData = reVal;
+
+            return reCode;
+        }
+
+
+
+        //** AUTH SET PART END
+
+
+
+
+
 
         //UPDATE LAB_TCODE_SITE //추가 
         //public string mLaborLabTcodeSiteLog(string pDbnm, string pLabNo, string pSiteCd, string pTcode, string pTtypeScd, string pValue, string pInputId, out string reData, out string reMsg)

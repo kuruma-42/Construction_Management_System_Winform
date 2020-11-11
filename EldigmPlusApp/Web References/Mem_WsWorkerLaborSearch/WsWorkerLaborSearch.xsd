@@ -13,6 +13,19 @@
     </xs:sequence>
   </xs:complexType>
   <xs:element name="DataComCombo" nillable="true" type="tns:DataComCombo" />
+  <xs:complexType name="ArrayOfDataComComboStr">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DataComComboStr" nillable="true" type="tns:DataComComboStr" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDataComComboStr" nillable="true" type="tns:ArrayOfDataComComboStr" />
+  <xs:complexType name="DataComComboStr">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="VALUE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TEXT" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DataComComboStr" nillable="true" type="tns:DataComComboStr" />
   <xs:complexType name="ArrayOfDataLaborSearch">
     <xs:sequence>
       <xs:element minOccurs="0" maxOccurs="unbounded" name="DataLaborSearch" nillable="true" type="tns:DataLaborSearch" />

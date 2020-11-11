@@ -345,4 +345,16 @@
   <data name="wContent" xml:space="preserve">
     <value>Content</value>
   </data>
+  <data name="wCategory" xml:space="preserve">
+    <value>Category</value>
+  </data>
+  <data name="wForm" xml:space="preserve">
+    <value>Form</value>
+  </data>
+  <data name="wGroup" xml:space="preserve">
+    <value>Group</value>
+  </data>
+  <data name="wReset" xml:space="preserve">
+    <value>Reset</value>
+  </data>
 </root>

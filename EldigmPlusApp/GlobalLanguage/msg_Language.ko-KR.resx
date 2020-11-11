@@ -144,6 +144,9 @@
   <data name="msgAlreadyUsed" xml:space="preserve">
     <value>다른 곳에서 이미 사용 중입니다.</value>
   </data>
+  <data name="msgAuthority" xml:space="preserve">
+    <value>권한이 없습니다. </value>
+  </data>
   <data name="msgChangeUsingFlag" xml:space="preserve">
     <value>사용으로 전환합니다.</value>
   </data>
@@ -158,6 +161,9 @@
   </data>
   <data name="msgEndDate" xml:space="preserve">
     <value>퇴근일시</value>
+  </data>
+  <data name="msgInputValue" xml:space="preserve">
+    <value>값을 입력해 주세요. </value>
   </data>
   <data name="msgMyCompanyStatus" xml:space="preserve">
     <value>내 업체만 여부</value>

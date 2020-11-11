@@ -345,4 +345,16 @@
   <data name="wContent" xml:space="preserve">
     <value>内容</value>
   </data>
+  <data name="wCategory" xml:space="preserve">
+    <value>类别</value>
+  </data>
+  <data name="wForm" xml:space="preserve">
+    <value>形式</value>
+  </data>
+  <data name="wGroup" xml:space="preserve">
+    <value>组</value>
+  </data>
+  <data name="wReset" xml:space="preserve">
+    <value>重置</value>
+  </data>
 </root>

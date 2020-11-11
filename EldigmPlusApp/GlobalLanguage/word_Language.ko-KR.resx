@@ -345,4 +345,16 @@
   <data name="wUser" xml:space="preserve">
     <value>사용자</value>
   </data>
+  <data name="wCategory" xml:space="preserve">
+    <value>항목</value>
+  </data>
+  <data name="wForm" xml:space="preserve">
+    <value>형식</value>
+  </data>
+  <data name="wGroup" xml:space="preserve">
+    <value>그룹</value>
+  </data>
+  <data name="wReset" xml:space="preserve">
+    <value>초기화</value>
+  </data>
 </root>

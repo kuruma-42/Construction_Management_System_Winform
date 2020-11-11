@@ -144,6 +144,9 @@
   <data name="msgAlreadyUsed" xml:space="preserve">
     <value>其他地方已经使用中</value>
   </data>
+  <data name="msgAuthority" xml:space="preserve">
+    <value>无权</value>
+  </data>
   <data name="msgChangeUsingFlag" xml:space="preserve">
     <value>切换使用</value>
   </data>
@@ -158,6 +161,9 @@
   </data>
   <data name="msgEndDate" xml:space="preserve">
     <value>下班</value>
+  </data>
+  <data name="msgInputValue" xml:space="preserve">
+    <value>请输入价格</value>
   </data>
   <data name="msgMyCompanyStatus" xml:space="preserve">
     <value>我的公司状态</value>

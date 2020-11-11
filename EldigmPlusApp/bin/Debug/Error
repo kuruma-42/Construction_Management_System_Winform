@@ -5091,3 +5091,849 @@ System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다
 2020-11-06 18:41:43-->  [error]  (page)::FrmLaborSearch.cs  (Function)::SetDataBind_gridView4  (Detail):: 
 System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
    위치: EldigmPlusApp.SubForm.Worker.Labor.FrmLaborSearchPopModify.SetDataBind_gridView4() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Worker\Labor\FrmLaborSearchPopModify.cs:줄 1374
+2020-11-09 09:52:03-->  [error]  (page)::FrmMain.cs  (Function)::GetDbNm  (Detail)::reCode=[], reMsg=[]
+2020-11-09 09:52:03-->  [error]  (page)::FrmMain.cs  (Function)::GetDbNm  (Detail)::
+System.Net.WebException: 작업 시간이 초과되었습니다.
+   위치: System.Web.Services.Protocols.WebClientProtocol.GetWebResponse(WebRequest request)
+   위치: System.Web.Services.Protocols.HttpWebClientProtocol.GetWebResponse(WebRequest request)
+   위치: System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke(String methodName, Object[] parameters)
+   위치: EldigmPlusApp.Mem_WsMHome.WsMainHome.sDbNm(String pMemcoCd, String& reData, String& reMsg) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\Web References\Mem_WsMHome\Reference.cs:줄 94
+   위치: EldigmPlusApp.SubForm.MainHome.FrmMain.GetDbNm() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\MainHome\FrmMain.cs:줄 166
+2020-11-09 09:52:10-->  [error]  (page)::FrmMenuMainDB.cs  (Function)::SetDataBind_treeView1  (Detail):: 
+System.Net.WebException: 작업 시간이 초과되었습니다.
+   위치: System.Web.Services.Protocols.WebClientProtocol.GetWebResponse(WebRequest request)
+   위치: System.Web.Services.Protocols.HttpWebClientProtocol.GetWebResponse(WebRequest request)
+   위치: System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke(String methodName, Object[] parameters)
+   위치: EldigmPlusApp.M_WsMenuMainDB.WsMenuMainDB.sMenuTopTreeView(DataMenuTop[]& reList, String& reMsg) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\Web References\M_WsMenuMainDB\Reference.cs:줄 184
+   위치: EldigmPlusApp.SubForm.Sys.Menu.FrmMenuMainDB.SetDataBind_treeView1() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\Menu\FrmMenuMainDB.cs:줄 121
+2020-11-09 10:13:33-->  [error]  (page)::FrmLaborSearch.cs  (Function)::SetDataBind_gridView3  (Detail)::reMsg=[[검색 성공]]
+2020-11-09 10:13:33-->  [error]  (page)::FrmLaborSearch.cs  (Function)::SetDataBind_gridView3  (Detail):: 
+System.ArgumentOutOfRangeException: 인덱스 및 길이는 문자열 내의 위치를 참조해야 합니다.
+매개 변수 이름: length
+   위치: System.String.Substring(Int32 startIndex, Int32 length)
+   위치: EldigmPlusApp.SubForm.Worker.Labor.FrmLaborSearchPopModify.SetDataBind_gridView3() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Worker\Labor\FrmLaborSearchPopModify.cs:줄 1163
+2020-11-09 10:13:33-->  [error]  (page)::FrmLaborSearch.cs  (Function)::SetDataBind_gridView3  (Detail)::reMsg=[[검색 성공]]
+2020-11-09 10:13:33-->  [error]  (page)::FrmLaborSearch.cs  (Function)::SetDataBind_gridView3  (Detail):: 
+System.ArgumentOutOfRangeException: 인덱스 및 길이는 문자열 내의 위치를 참조해야 합니다.
+매개 변수 이름: length
+   위치: System.String.Substring(Int32 startIndex, Int32 length)
+   위치: EldigmPlusApp.SubForm.Worker.Labor.FrmLaborSearchPopModify.SetDataBind_gridView3() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Worker\Labor\FrmLaborSearchPopModify.cs:줄 1163
+2020-11-09 11:28:07-->  [error]  (page)::FrmLaborSearch.cs  (Function)::SetDataBind_gridView1  (Detail)::reMsg=[]
+2020-11-09 11:28:07-->  [error]  (page)::FrmLaborSearch.cs  (Function)::SetDataBind_gridView1  (Detail):: 
+System.Net.WebException: 작업 시간이 초과되었습니다.
+   위치: System.Web.Services.Protocols.WebClientProtocol.GetWebResponse(WebRequest request)
+   위치: System.Web.Services.Protocols.HttpWebClientProtocol.GetWebResponse(WebRequest request)
+   위치: System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke(String methodName, Object[] parameters)
+   위치: EldigmPlusApp.Mem_WsWorkerLaborSearch.WsWorkerLaborSearch.sLaborSearch(String pSiteCd, String pBlockCcd, String pConstCcd, String pCoCd, String pTeamCd, String pSearchCondition, String pSearchTxt, DataLaborSearch[]& reList, String& reMsg) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\Web References\Mem_WsWorkerLaborSearch\Reference.cs:줄 396
+   위치: EldigmPlusApp.SubForm.Worker.Labor.FrmLaborSearch.SetDataBind_gridView1() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Worker\Labor\FrmLaborSearch.cs:줄 430
+2020-11-09 11:29:44-->  [error]  (page)::FrmMain.cs  (Function)::SetLeftMenu  (Detail)::pTopMenuCd=[3]
+2020-11-09 11:29:44-->  [error]  (page)::FrmMain.cs  (Function)::SetLeftMenu  (Detail)::reMsg1=[], reMsg2=[]
+2020-11-09 11:29:44-->  [error]  (page)::FrmMain.cs  (Function)::SetLeftMenu  (Detail)::
+System.Net.WebException: 작업 시간이 초과되었습니다.
+   위치: System.Web.Services.Protocols.WebClientProtocol.GetWebResponse(WebRequest request)
+   위치: System.Web.Services.Protocols.HttpWebClientProtocol.GetWebResponse(WebRequest request)
+   위치: System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke(String methodName, Object[] parameters)
+   위치: EldigmPlusApp.Mem_WsMHome.WsMainHome.sSiteSubMenu1(String pDbNm, String pSiteCd, String pTopMenuCd, DataSubMenu1[]& reList, String& reMsg) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\Web References\Mem_WsMHome\Reference.cs:줄 160
+   위치: EldigmPlusApp.SubForm.MainHome.FrmMain.SetLeftMenu(String pTopMenuCd) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\MainHome\FrmMain.cs:줄 273
+2020-11-09 11:33:59-->  [error]  (page)::FrmLaborSearch.cs  (Function)::SetDataBind_gridView1  (Detail)::reMsg=[]
+2020-11-09 11:34:00-->  [error]  (page)::FrmLaborSearch.cs  (Function)::SetDataBind_gridView1  (Detail):: 
+System.Net.WebException: 작업 시간이 초과되었습니다.
+   위치: System.Web.Services.Protocols.WebClientProtocol.GetWebResponse(WebRequest request)
+   위치: System.Web.Services.Protocols.HttpWebClientProtocol.GetWebResponse(WebRequest request)
+   위치: System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke(String methodName, Object[] parameters)
+   위치: EldigmPlusApp.Mem_WsWorkerLaborSearch.WsWorkerLaborSearch.sLaborSearch(String pSiteCd, String pBlockCcd, String pConstCcd, String pCoCd, String pTeamCd, String pSearchCondition, String pSearchTxt, DataLaborSearch[]& reList, String& reMsg) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\Web References\Mem_WsWorkerLaborSearch\Reference.cs:줄 396
+   위치: EldigmPlusApp.SubForm.Worker.Labor.FrmLaborSearch.SetDataBind_gridView1() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Worker\Labor\FrmLaborSearch.cs:줄 430
+2020-11-09 11:34:04-->  [error]  (page)::FrmMain.cs  (Function)::SetLeftMenu  (Detail)::pTopMenuCd=[3]
+2020-11-09 11:34:04-->  [error]  (page)::FrmMain.cs  (Function)::SetLeftMenu  (Detail)::reMsg1=[[검색 성공]], reMsg2=[[검색 성공]]
+2020-11-09 11:34:04-->  [error]  (page)::FrmMain.cs  (Function)::SetLeftMenu  (Detail)::
+System.Net.WebException: 작업 시간이 초과되었습니다.
+   위치: System.Web.Services.Protocols.WebClientProtocol.GetWebResponse(WebRequest request)
+   위치: System.Web.Services.Protocols.HttpWebClientProtocol.GetWebResponse(WebRequest request)
+   위치: System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke(String methodName, Object[] parameters)
+   위치: EldigmPlusApp.Mem_WsMHome.WsMainHome.sSiteSubMenu2(String pDbNm, String pSiteCd, String pTopMenuCd, String pSubMenuCd, String pAuthCd, DataSubMenu2[]& reList, String& reMsg) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\Web References\Mem_WsMHome\Reference.cs:줄 196
+   위치: EldigmPlusApp.SubForm.MainHome.FrmMain.SetLeftMenu(String pTopMenuCd) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\MainHome\FrmMain.cs:줄 296
+2020-11-09 15:23:28-->  [error]  (page)::FrmLaborSearch.cs  (Function)::SetDataBind_gridView1  (Detail)::reMsg=[]
+2020-11-09 15:23:28-->  [error]  (page)::FrmLaborSearch.cs  (Function)::SetDataBind_gridView1  (Detail):: 
+System.Net.WebException: 작업 시간이 초과되었습니다.
+   위치: System.Web.Services.Protocols.WebClientProtocol.GetWebResponse(WebRequest request)
+   위치: System.Web.Services.Protocols.HttpWebClientProtocol.GetWebResponse(WebRequest request)
+   위치: System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke(String methodName, Object[] parameters)
+   위치: EldigmPlusApp.Mem_WsWorkerLaborSearch.WsWorkerLaborSearch.sLaborSearch(String pSiteCd, String pBlockCcd, String pConstCcd, String pCoCd, String pTeamCd, String pSearchCondition, String pSearchTxt, DataLaborSearch[]& reList, String& reMsg) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\Web References\Mem_WsWorkerLaborSearch\Reference.cs:줄 439
+   위치: EldigmPlusApp.SubForm.Worker.Labor.FrmLaborSearch.SetDataBind_gridView1() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Worker\Labor\FrmLaborSearch.cs:줄 470
+2020-11-09 17:08:54-->  [error]  (page)::FrmMain.cs  (Function)::GetDbNm  (Detail)::reCode=[], reMsg=[]
+2020-11-09 17:08:54-->  [error]  (page)::FrmMain.cs  (Function)::GetDbNm  (Detail)::
+System.Net.WebException: 작업 시간이 초과되었습니다.
+   위치: System.Web.Services.Protocols.WebClientProtocol.GetWebResponse(WebRequest request)
+   위치: System.Web.Services.Protocols.HttpWebClientProtocol.GetWebResponse(WebRequest request)
+   위치: System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke(String methodName, Object[] parameters)
+   위치: EldigmPlusApp.Mem_WsMHome.WsMainHome.sDbNm(String pMemcoCd, String& reData, String& reMsg) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\Web References\Mem_WsMHome\Reference.cs:줄 94
+   위치: EldigmPlusApp.SubForm.MainHome.FrmMain.GetDbNm() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\MainHome\FrmMain.cs:줄 166
+2020-11-09 17:46:30-->  [error]  (page)::FrmLaborSearch.cs  (Function)::SetDataBind_gridView1  (Detail)::reMsg=[]
+2020-11-09 17:46:30-->  [error]  (page)::FrmLaborSearch.cs  (Function)::SetDataBind_gridView1  (Detail):: 
+System.Net.WebException: 요청이 중단되었습니다. 작업 시간이 초과되었습니다.
+   위치: System.Web.Services.Protocols.WebClientProtocol.GetWebResponse(WebRequest request)
+   위치: System.Web.Services.Protocols.HttpWebClientProtocol.GetWebResponse(WebRequest request)
+   위치: System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke(String methodName, Object[] parameters)
+   위치: EldigmPlusApp.Mem_WsWorkerLaborSearch.WsWorkerLaborSearch.sLaborSearch(String pSiteCd, String pBlockCcd, String pConstCcd, String pCoCd, String pTeamCd, String pSearchCondition, String pSearchTxt, String pTtypeScd, String pTcode, String pValue, DataLaborSearch[]& reList, String& reMsg) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\Web References\Mem_WsWorkerLaborSearch\Reference.cs:줄 480
+   위치: EldigmPlusApp.SubForm.Worker.Labor.FrmLaborSearch.SetDataBind_gridView1() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Worker\Labor\FrmLaborSearch.cs:줄 535
+2020-11-09 17:46:36-->  [error]  (page)::FrmMain.cs  (Function)::SetLeftMenu  (Detail)::pTopMenuCd=[3]
+2020-11-09 17:46:36-->  [error]  (page)::FrmMain.cs  (Function)::SetLeftMenu  (Detail)::reMsg1=[[검색 성공]], reMsg2=[[검색 성공]]
+2020-11-09 17:46:37-->  [error]  (page)::FrmMain.cs  (Function)::SetLeftMenu  (Detail)::
+System.Net.WebException: 요청이 중단되었습니다. 작업 시간이 초과되었습니다.
+   위치: System.Web.Services.Protocols.WebClientProtocol.GetWebResponse(WebRequest request)
+   위치: System.Web.Services.Protocols.HttpWebClientProtocol.GetWebResponse(WebRequest request)
+   위치: System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke(String methodName, Object[] parameters)
+   위치: EldigmPlusApp.Mem_WsMHome.WsMainHome.sSiteSubMenu2(String pDbNm, String pSiteCd, String pTopMenuCd, String pSubMenuCd, String pAuthCd, DataSubMenu2[]& reList, String& reMsg) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\Web References\Mem_WsMHome\Reference.cs:줄 196
+   위치: EldigmPlusApp.SubForm.MainHome.FrmMain.SetLeftMenu(String pTopMenuCd) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\MainHome\FrmMain.cs:줄 296
+2020-11-09 17:53:52-->  [error]  (page)::FrmCodeTAuthSite.cs  (Function)::SetDataBind_gridView1  (Detail)::codeGrp=[1], code_val=[Text]
+2020-11-09 17:53:52-->  [error]  (page)::FrmCodeTAuthSite.cs  (Function)::SetDataBind_gridView1  (Detail)::reMsg=[]
+2020-11-09 17:53:52-->  [error]  (page)::FrmCodeTAuthSite.cs  (Function)::SetDataBind_gridView1  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Sys.CodeT.FrmCodeTAuthSite.SetDataBind_gridView1(String codeGrp, String code_val) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\CodeT\FrmCodeTAuthSite.cs:줄 253
+2020-11-09 18:22:15-->  [error]  (page)::FrmMain.cs  (Function)::StartFirstMenuForm  (Detail)::pMenuCd=[Safety], pMenuTag=[Safety@4@14@안전위반@@EldigmPlusApp.SubForm.Safety.Violation.FrmViolation], pFrmText=[안전위반]
+2020-11-09 18:22:15-->  [error]  (page)::FrmMain.cs  (Function)::StartFirstMenuForm  (Detail)::
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.MainHome.FrmMain.StartFirstMenuForm(String pMenuCd, String pMenuTag, String pFrmText) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\MainHome\FrmMain.cs:줄 374
+2020-11-09 18:22:24-->  [error]  (page)::FrmMain.cs  (Function)::StartFirstMenuForm  (Detail)::pMenuCd=[Safety], pMenuTag=[Safety@4@14@안전위반@@EldigmPlusApp.SubForm.Safety.Violation.FrmViolation], pFrmText=[안전위반]
+2020-11-09 18:22:25-->  [error]  (page)::FrmMain.cs  (Function)::StartFirstMenuForm  (Detail)::
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.MainHome.FrmMain.StartFirstMenuForm(String pMenuCd, String pMenuTag, String pFrmText) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\MainHome\FrmMain.cs:줄 374
+2020-11-09 18:23:43-->  [error]  (page)::FrmMain.cs  (Function)::StartFirstMenuForm  (Detail)::pMenuCd=[Safety], pMenuTag=[Safety@4@14@안전위반@@EldigmPlusApp.SubForm.Safety.Violation.FrmViolation], pFrmText=[안전위반]
+2020-11-09 18:23:43-->  [error]  (page)::FrmMain.cs  (Function)::StartFirstMenuForm  (Detail)::
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.MainHome.FrmMain.StartFirstMenuForm(String pMenuCd, String pMenuTag, String pFrmText) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\MainHome\FrmMain.cs:줄 374
+2020-11-09 20:06:07-->  [error]  (page)::FrmLaborSearchPop.cs  (Function)::ChkDgv2Param  (Detail):: 
+System.Resources.MissingManifestResourceException: 지정한 문화권 또는 중립 문화권에 적합한 리소스를 찾을 수 없습니다. 컴파일 타임에 "EldigmPlusApp.GlobalLanguage.word_Language.resources"이(가) "EldigmPlusApp" 어셈블리에 제대로 포함 또는 링크되어 있는지 확인하고, 필요한 위성 어셈블리가 로드 가능한지와 완전히 서명되어 있는지 확인하십시오.
+   위치: System.Resources.ManifestBasedResourceGroveler.HandleResourceStreamMissing(String fileName)
+   위치: System.Resources.ManifestBasedResourceGroveler.GrovelForResourceSet(CultureInfo culture, Dictionary`2 localResourceSets, Boolean tryParents, Boolean createIfNotExists, StackCrawlMark& stackMark)
+   위치: System.Resources.ResourceManager.InternalGetResourceSet(CultureInfo requestedCulture, Boolean createIfNotExists, Boolean tryParents, StackCrawlMark& stackMark)
+   위치: System.Resources.ResourceManager.InternalGetResourceSet(CultureInfo culture, Boolean createIfNotExists, Boolean tryParents)
+   위치: System.Resources.ResourceManager.GetString(String name, CultureInfo culture)
+   위치: System.Resources.ResourceManager.GetString(String name)
+   위치: EldigmPlusApp.SubForm.Worker.Labor.FrmLaborSearch.ChkDgv2Param() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Worker\Labor\FrmLaborSearch.cs:줄 643
+2020-11-09 20:06:11-->  [error]  (page)::FrmLaborSearchPop.cs  (Function)::ChkDgv2Param  (Detail):: 
+System.Resources.MissingManifestResourceException: 지정한 문화권 또는 중립 문화권에 적합한 리소스를 찾을 수 없습니다. 컴파일 타임에 "EldigmPlusApp.GlobalLanguage.word_Language.resources"이(가) "EldigmPlusApp" 어셈블리에 제대로 포함 또는 링크되어 있는지 확인하고, 필요한 위성 어셈블리가 로드 가능한지와 완전히 서명되어 있는지 확인하십시오.
+   위치: System.Resources.ManifestBasedResourceGroveler.HandleResourceStreamMissing(String fileName)
+   위치: System.Resources.ManifestBasedResourceGroveler.GrovelForResourceSet(CultureInfo culture, Dictionary`2 localResourceSets, Boolean tryParents, Boolean createIfNotExists, StackCrawlMark& stackMark)
+   위치: System.Resources.ResourceManager.InternalGetResourceSet(CultureInfo requestedCulture, Boolean createIfNotExists, Boolean tryParents, StackCrawlMark& stackMark)
+   위치: System.Resources.ResourceManager.InternalGetResourceSet(CultureInfo culture, Boolean createIfNotExists, Boolean tryParents)
+   위치: System.Resources.ResourceManager.GetString(String name, CultureInfo culture)
+   위치: System.Resources.ResourceManager.GetString(String name)
+   위치: EldigmPlusApp.SubForm.Worker.Labor.FrmLaborSearch.ChkDgv2Param() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Worker\Labor\FrmLaborSearch.cs:줄 643
+2020-11-09 20:07:21-->  [error]  (page)::FrmLaborSearchPop.cs  (Function)::ChkDgv2Param  (Detail):: 
+System.Resources.MissingManifestResourceException: 지정한 문화권 또는 중립 문화권에 적합한 리소스를 찾을 수 없습니다. 컴파일 타임에 "EldigmPlusApp.GlobalLanguage.word_Language.resources"이(가) "EldigmPlusApp" 어셈블리에 제대로 포함 또는 링크되어 있는지 확인하고, 필요한 위성 어셈블리가 로드 가능한지와 완전히 서명되어 있는지 확인하십시오.
+   위치: System.Resources.ManifestBasedResourceGroveler.HandleResourceStreamMissing(String fileName)
+   위치: System.Resources.ManifestBasedResourceGroveler.GrovelForResourceSet(CultureInfo culture, Dictionary`2 localResourceSets, Boolean tryParents, Boolean createIfNotExists, StackCrawlMark& stackMark)
+   위치: System.Resources.ResourceManager.InternalGetResourceSet(CultureInfo requestedCulture, Boolean createIfNotExists, Boolean tryParents, StackCrawlMark& stackMark)
+   위치: System.Resources.ResourceManager.InternalGetResourceSet(CultureInfo culture, Boolean createIfNotExists, Boolean tryParents)
+   위치: System.Resources.ResourceManager.GetString(String name, CultureInfo culture)
+   위치: System.Resources.ResourceManager.GetString(String name)
+   위치: EldigmPlusApp.SubForm.Worker.Labor.FrmLaborSearch.ChkDgv2Param() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Worker\Labor\FrmLaborSearch.cs:줄 643
+2020-11-09 20:08:01-->  [error]  (page)::FrmLaborSearchPop.cs  (Function)::ChkDgv2Param  (Detail):: 
+System.Resources.MissingManifestResourceException: 지정한 문화권 또는 중립 문화권에 적합한 리소스를 찾을 수 없습니다. 컴파일 타임에 "EldigmPlusApp.GlobalLanguage.word_Language.resources"이(가) "EldigmPlusApp" 어셈블리에 제대로 포함 또는 링크되어 있는지 확인하고, 필요한 위성 어셈블리가 로드 가능한지와 완전히 서명되어 있는지 확인하십시오.
+   위치: System.Resources.ManifestBasedResourceGroveler.HandleResourceStreamMissing(String fileName)
+   위치: System.Resources.ManifestBasedResourceGroveler.GrovelForResourceSet(CultureInfo culture, Dictionary`2 localResourceSets, Boolean tryParents, Boolean createIfNotExists, StackCrawlMark& stackMark)
+   위치: System.Resources.ResourceManager.InternalGetResourceSet(CultureInfo requestedCulture, Boolean createIfNotExists, Boolean tryParents, StackCrawlMark& stackMark)
+   위치: System.Resources.ResourceManager.InternalGetResourceSet(CultureInfo culture, Boolean createIfNotExists, Boolean tryParents)
+   위치: System.Resources.ResourceManager.GetString(String name, CultureInfo culture)
+   위치: System.Resources.ResourceManager.GetString(String name)
+   위치: EldigmPlusApp.SubForm.Worker.Labor.FrmLaborSearch.ChkDgv2Param() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Worker\Labor\FrmLaborSearch.cs:줄 643
+2020-11-09 20:08:47-->  [error]  (page)::FrmLaborSearchPop.cs  (Function)::ChkDgv2Param  (Detail):: 
+System.Resources.MissingManifestResourceException: 지정한 문화권 또는 중립 문화권에 적합한 리소스를 찾을 수 없습니다. 컴파일 타임에 "EldigmPlusApp.GlobalLanguage.word_Language.resources"이(가) "EldigmPlusApp" 어셈블리에 제대로 포함 또는 링크되어 있는지 확인하고, 필요한 위성 어셈블리가 로드 가능한지와 완전히 서명되어 있는지 확인하십시오.
+   위치: System.Resources.ManifestBasedResourceGroveler.HandleResourceStreamMissing(String fileName)
+   위치: System.Resources.ManifestBasedResourceGroveler.GrovelForResourceSet(CultureInfo culture, Dictionary`2 localResourceSets, Boolean tryParents, Boolean createIfNotExists, StackCrawlMark& stackMark)
+   위치: System.Resources.ResourceManager.InternalGetResourceSet(CultureInfo requestedCulture, Boolean createIfNotExists, Boolean tryParents, StackCrawlMark& stackMark)
+   위치: System.Resources.ResourceManager.InternalGetResourceSet(CultureInfo culture, Boolean createIfNotExists, Boolean tryParents)
+   위치: System.Resources.ResourceManager.GetString(String name, CultureInfo culture)
+   위치: System.Resources.ResourceManager.GetString(String name)
+   위치: EldigmPlusApp.SubForm.Worker.Labor.FrmLaborSearch.ChkDgv2Param() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Worker\Labor\FrmLaborSearch.cs:줄 643
+2020-11-09 20:09:26-->  [error]  (page)::FrmLaborSearchPop.cs  (Function)::ChkDgv2Param  (Detail):: 
+System.Resources.MissingManifestResourceException: 지정한 문화권 또는 중립 문화권에 적합한 리소스를 찾을 수 없습니다. 컴파일 타임에 "EldigmPlusApp.GlobalLanguage.word_Language.resources"이(가) "EldigmPlusApp" 어셈블리에 제대로 포함 또는 링크되어 있는지 확인하고, 필요한 위성 어셈블리가 로드 가능한지와 완전히 서명되어 있는지 확인하십시오.
+   위치: System.Resources.ManifestBasedResourceGroveler.HandleResourceStreamMissing(String fileName)
+   위치: System.Resources.ManifestBasedResourceGroveler.GrovelForResourceSet(CultureInfo culture, Dictionary`2 localResourceSets, Boolean tryParents, Boolean createIfNotExists, StackCrawlMark& stackMark)
+   위치: System.Resources.ResourceManager.InternalGetResourceSet(CultureInfo requestedCulture, Boolean createIfNotExists, Boolean tryParents, StackCrawlMark& stackMark)
+   위치: System.Resources.ResourceManager.InternalGetResourceSet(CultureInfo culture, Boolean createIfNotExists, Boolean tryParents)
+   위치: System.Resources.ResourceManager.GetString(String name, CultureInfo culture)
+   위치: System.Resources.ResourceManager.GetString(String name)
+   위치: EldigmPlusApp.SubForm.Worker.Labor.FrmLaborSearch.ChkDgv2Param() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Worker\Labor\FrmLaborSearch.cs:줄 650
+2020-11-09 20:36:48-->  [error]  (page)::FrmLaborSearch.cs  (Function)::ChkDgv2Param  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Worker.Labor.FrmLaborSearch.ChkDgv2Param() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Worker\Labor\FrmLaborSearch.cs:줄 627
+2020-11-09 20:40:06-->  [error]  (page)::FrmLaborSearch.cs  (Function)::ChkDgv2Param  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Worker.Labor.FrmLaborSearch.ChkDgv2Param() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Worker\Labor\FrmLaborSearch.cs:줄 627
+2020-11-09 20:41:38-->  [error]  (page)::FrmLaborSearch.cs  (Function)::ChkDgv2Param  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Worker.Labor.FrmLaborSearch.ChkDgv2Param() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Worker\Labor\FrmLaborSearch.cs:줄 627
+2020-11-09 20:59:05-->  [error]  (page)::FrmLaborSearch.cs  (Function)::SetDataBind_gridView1  (Detail)::reMsg=[]
+2020-11-09 20:59:05-->  [error]  (page)::FrmLaborSearch.cs  (Function)::SetDataBind_gridView1  (Detail):: 
+System.Net.WebException: 작업 시간이 초과되었습니다.
+   위치: System.Web.Services.Protocols.WebClientProtocol.GetWebResponse(WebRequest request)
+   위치: System.Web.Services.Protocols.HttpWebClientProtocol.GetWebResponse(WebRequest request)
+   위치: System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke(String methodName, Object[] parameters)
+   위치: EldigmPlusApp.Mem_WsWorkerLaborSearch.WsWorkerLaborSearch.sLaborSearch(String pSiteCd, String pBlockCcd, String pConstCcd, String pCoCd, String pTeamCd, String pSearchCondition, String pSearchTxt, String pTtypeScd, String pTcode, String pValue, DataLaborSearch[]& reList, String& reMsg) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\Web References\Mem_WsWorkerLaborSearch\Reference.cs:줄 480
+   위치: EldigmPlusApp.SubForm.Worker.Labor.FrmLaborSearch.SetDataBind_gridView1() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Worker\Labor\FrmLaborSearch.cs:줄 545
+2020-11-09 21:01:54-->  [error]  (page)::FrmLaborSearchPop.cs  (Function)::dataGridView2_CellClick  (Detail):: 
+System.Net.WebException: 요청이 중단되었습니다. 작업 시간이 초과되었습니다.
+   위치: System.Web.Services.Protocols.WebClientProtocol.GetWebResponse(WebRequest request)
+   위치: System.Web.Services.Protocols.HttpWebClientProtocol.GetWebResponse(WebRequest request)
+   위치: System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke(String methodName, Object[] parameters)
+   위치: EldigmPlusApp.Mem_WsWorkerLaborSearch.WsWorkerLaborSearch.sLabAprvFlag(String pSiteCd, String pAuthCd, String& reData, String& reMsg) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\Web References\Mem_WsWorkerLaborSearch\Reference.cs:줄 530
+   위치: EldigmPlusApp.SubForm.Worker.Labor.FrmLaborSearchPop.btnAdd_Click_pop(Object sender, EventArgs e) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Worker\Labor\FrmLaborSearchPop.cs:줄 414
+2020-11-09 21:06:53-->  [error]  (page)::FrmMain.cs  (Function)::StartFirstMenuForm  (Detail)::pMenuCd=[Safety], pMenuTag=[Safety@4@14@안전위반@@EldigmPlusApp.SubForm.Safety.Violation.FrmViolation], pFrmText=[안전위반]
+2020-11-09 21:06:53-->  [error]  (page)::FrmMain.cs  (Function)::StartFirstMenuForm  (Detail)::
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.MainHome.FrmMain.StartFirstMenuForm(String pMenuCd, String pMenuTag, String pFrmText) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\MainHome\FrmMain.cs:줄 374
+2020-11-09 21:24:44-->  [error]  (page)::FrmLaborSearch.cs  (Function)::ChkDgv2Param  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Worker.Labor.FrmLaborSearch.ChkDgv2Param() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Worker\Labor\FrmLaborSearch.cs:줄 686
+2020-11-10 10:27:38-->  [error]  (page)::FrmMain.cs  (Function)::StartFirstMenuForm  (Detail)::pMenuCd=[Safety], pMenuTag=[Safety@4@14@안전위반@@EldigmPlusApp.SubForm.Safety.Violation.FrmViolation], pFrmText=[안전위반]
+2020-11-10 10:27:39-->  [error]  (page)::FrmMain.cs  (Function)::StartFirstMenuForm  (Detail)::
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.MainHome.FrmMain.StartFirstMenuForm(String pMenuCd, String pMenuTag, String pFrmText) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\MainHome\FrmMain.cs:줄 374
+2020-11-10 10:27:42-->  [error]  (page)::FrmMain.cs  (Function)::StartFirstMenuForm  (Detail)::pMenuCd=[Safety], pMenuTag=[Safety@4@14@안전위반@@EldigmPlusApp.SubForm.Safety.Violation.FrmViolation], pFrmText=[안전위반]
+2020-11-10 10:27:42-->  [error]  (page)::FrmMain.cs  (Function)::StartFirstMenuForm  (Detail)::
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.MainHome.FrmMain.StartFirstMenuForm(String pMenuCd, String pMenuTag, String pFrmText) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\MainHome\FrmMain.cs:줄 374
+2020-11-10 10:27:44-->  [error]  (page)::FrmMain.cs  (Function)::StartFirstMenuForm  (Detail)::pMenuCd=[Safety], pMenuTag=[Safety@4@14@안전위반@@EldigmPlusApp.SubForm.Safety.Violation.FrmViolation], pFrmText=[안전위반]
+2020-11-10 10:27:44-->  [error]  (page)::FrmMain.cs  (Function)::StartFirstMenuForm  (Detail)::
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.MainHome.FrmMain.StartFirstMenuForm(String pMenuCd, String pMenuTag, String pFrmText) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\MainHome\FrmMain.cs:줄 374
+2020-11-10 10:27:45-->  [error]  (page)::FrmMain.cs  (Function)::ultraExplorerBarLeft_ItemClick  (Detail)::
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.MainHome.FrmMain.ultraExplorerBarLeft_ItemClick(Object sender, ItemEventArgs e) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\MainHome\FrmMain.cs:줄 415
+2020-11-10 11:13:23-->  [error]  (page)::FrmCodeTAuthSite.cs  (Function)::SetDataBind_gridView1  (Detail)::codeGrp=[1], code_val=[Text]
+2020-11-10 11:13:23-->  [error]  (page)::FrmCodeTAuthSite.cs  (Function)::SetDataBind_gridView1  (Detail)::reMsg=[]
+2020-11-10 11:13:23-->  [error]  (page)::FrmCodeTAuthSite.cs  (Function)::SetDataBind_gridView1  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Sys.CodeT.FrmCodeTAuthSite.SetDataBind_gridView1(String codeGrp, String code_val) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\CodeT\FrmCodeTAuthSite.cs:줄 253
+2020-11-10 11:29:18-->  [error]  (page)::FrmComnCodeSite.cs  (Function)::SetDataBind_gridView1  (Detail)::pCcodeGrp=[Const]
+2020-11-10 11:29:18-->  [error]  (page)::FrmComnCodeSite.cs  (Function)::SetDataBind_gridView1  (Detail)::reMsg=[]
+2020-11-10 11:29:18-->  [error]  (page)::FrmComnCodeSite.cs  (Function)::SetDataBind_gridView1  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Sys.ComnCode.FrmComnCodeSite.SetDataBind_gridView1(String pCcodeGrp) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\ComnCode\FrmComnCodeSite.cs:줄 229
+2020-11-10 11:30:02-->  [error]  (page)::FrmComnCodeSite.cs  (Function)::SetDataBind_gridView1  (Detail)::pCcodeGrp=[Const]
+2020-11-10 11:30:02-->  [error]  (page)::FrmComnCodeSite.cs  (Function)::SetDataBind_gridView1  (Detail)::reMsg=[]
+2020-11-10 11:30:02-->  [error]  (page)::FrmComnCodeSite.cs  (Function)::SetDataBind_gridView1  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Sys.ComnCode.FrmComnCodeSite.SetDataBind_gridView1(String pCcodeGrp) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\ComnCode\FrmComnCodeSite.cs:줄 229
+2020-11-10 11:30:17-->  [error]  (page)::FrmComnCodeSite.cs  (Function)::SetDataBind_gridView1  (Detail)::pCcodeGrp=[Const]
+2020-11-10 11:30:17-->  [error]  (page)::FrmComnCodeSite.cs  (Function)::SetDataBind_gridView1  (Detail)::reMsg=[]
+2020-11-10 11:30:17-->  [error]  (page)::FrmComnCodeSite.cs  (Function)::SetDataBind_gridView1  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Sys.ComnCode.FrmComnCodeSite.SetDataBind_gridView1(String pCcodeGrp) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\ComnCode\FrmComnCodeSite.cs:줄 229
+2020-11-10 11:55:08-->  [error]  (page)::FrmSysAuthMemberDB.cs  (Function)::SetDataBind_gridView1  (Detail)::reMsg=[]
+2020-11-10 11:55:08-->  [error]  (page)::FrmSysAuthMemberDB.cs  (Function)::SetDataBind_gridView1  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Sys.SysAuth.FrmSysAuthMemberDB.SetDataBind_gridView1() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\SysAuth\FrmSysAuthMemberDB.cs:줄 223
+2020-11-10 11:55:11-->  [error]  (page)::FrmSysAuthMemberDB.cs  (Function)::SetDataBind_gridView1  (Detail)::reMsg=[]
+2020-11-10 11:55:11-->  [error]  (page)::FrmSysAuthMemberDB.cs  (Function)::SetDataBind_gridView1  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Sys.SysAuth.FrmSysAuthMemberDB.SetDataBind_gridView1() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\SysAuth\FrmSysAuthMemberDB.cs:줄 223
+2020-11-10 11:55:15-->  [error]  (page)::FrmSysAuthMemberDB.cs  (Function)::SetDataBind_gridView1  (Detail)::reMsg=[]
+2020-11-10 11:55:15-->  [error]  (page)::FrmSysAuthMemberDB.cs  (Function)::SetDataBind_gridView1  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Sys.SysAuth.FrmSysAuthMemberDB.SetDataBind_gridView1() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\SysAuth\FrmSysAuthMemberDB.cs:줄 223
+2020-11-10 11:55:16-->  [error]  (page)::FrmSysAuthSiteDB.cs  (Function)::SetDataBind_gridView1  (Detail)::reMsg=[]
+2020-11-10 11:55:16-->  [error]  (page)::FrmSysAuthSiteDB.cs  (Function)::SetDataBind_gridView1  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Sys.SysAuth.FrmSysAuthSiteDB.SetDataBind_gridView1() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\SysAuth\FrmSysAuthSiteDB.cs:줄 207
+2020-11-10 11:56:51-->  [error]  (page)::FrmSysAuthSiteDB.cs  (Function)::SetDataBind_gridView1  (Detail)::reMsg=[]
+2020-11-10 11:56:51-->  [error]  (page)::FrmSysAuthSiteDB.cs  (Function)::SetDataBind_gridView1  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Sys.SysAuth.FrmSysAuthSiteDB.SetDataBind_gridView1() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\SysAuth\FrmSysAuthSiteDB.cs:줄 207
+2020-11-10 11:56:55-->  [error]  (page)::FrmSysAuthMemberDB.cs  (Function)::SetDataBind_gridView1  (Detail)::reMsg=[]
+2020-11-10 11:56:55-->  [error]  (page)::FrmSysAuthMemberDB.cs  (Function)::SetDataBind_gridView1  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Sys.SysAuth.FrmSysAuthMemberDB.SetDataBind_gridView1() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\SysAuth\FrmSysAuthMemberDB.cs:줄 223
+2020-11-10 11:57:07-->  [error]  (page)::FrmComnCodeSite.cs  (Function)::SetDataBind_gridView1  (Detail)::pCcodeGrp=[Const]
+2020-11-10 11:57:07-->  [error]  (page)::FrmComnCodeSite.cs  (Function)::SetDataBind_gridView1  (Detail)::reMsg=[]
+2020-11-10 11:57:07-->  [error]  (page)::FrmComnCodeSite.cs  (Function)::SetDataBind_gridView1  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Sys.ComnCode.FrmComnCodeSite.SetDataBind_gridView1(String pCcodeGrp) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\ComnCode\FrmComnCodeSite.cs:줄 229
+2020-11-10 11:57:12-->  [error]  (page)::FrmComnCodeSite.cs  (Function)::SetDataBind_gridView1  (Detail)::pCcodeGrp=[Const]
+2020-11-10 11:57:12-->  [error]  (page)::FrmComnCodeSite.cs  (Function)::SetDataBind_gridView1  (Detail)::reMsg=[]
+2020-11-10 11:57:12-->  [error]  (page)::FrmComnCodeSite.cs  (Function)::SetDataBind_gridView1  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Sys.ComnCode.FrmComnCodeSite.SetDataBind_gridView1(String pCcodeGrp) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\ComnCode\FrmComnCodeSite.cs:줄 229
+2020-11-10 11:57:48-->  [error]  (page)::FrmComnCodeSite.cs  (Function)::SetDataBind_gridView1  (Detail)::pCcodeGrp=[Const]
+2020-11-10 11:57:48-->  [error]  (page)::FrmComnCodeSite.cs  (Function)::SetDataBind_gridView1  (Detail)::reMsg=[]
+2020-11-10 11:57:48-->  [error]  (page)::FrmComnCodeSite.cs  (Function)::SetDataBind_gridView1  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Sys.ComnCode.FrmComnCodeSite.SetDataBind_gridView1(String pCcodeGrp) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\ComnCode\FrmComnCodeSite.cs:줄 229
+2020-11-10 11:58:11-->  [error]  (page)::FrmComnCodeSite.cs  (Function)::SetDataBind_gridView1  (Detail)::pCcodeGrp=[Const]
+2020-11-10 11:58:11-->  [error]  (page)::FrmComnCodeSite.cs  (Function)::SetDataBind_gridView1  (Detail)::reMsg=[]
+2020-11-10 11:58:11-->  [error]  (page)::FrmComnCodeSite.cs  (Function)::SetDataBind_gridView1  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Sys.ComnCode.FrmComnCodeSite.SetDataBind_gridView1(String pCcodeGrp) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\ComnCode\FrmComnCodeSite.cs:줄 229
+2020-11-10 11:58:24-->  [error]  (page)::FrmComnCodeSite.cs  (Function)::SetDataBind_gridView1  (Detail)::pCcodeGrp=[Const]
+2020-11-10 11:58:24-->  [error]  (page)::FrmComnCodeSite.cs  (Function)::SetDataBind_gridView1  (Detail)::reMsg=[]
+2020-11-10 11:58:24-->  [error]  (page)::FrmComnCodeSite.cs  (Function)::SetDataBind_gridView1  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Sys.ComnCode.FrmComnCodeSite.SetDataBind_gridView1(String pCcodeGrp) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\ComnCode\FrmComnCodeSite.cs:줄 229
+2020-11-10 11:58:28-->  [error]  (page)::FrmComnCodeSite.cs  (Function)::SetDataBind_gridView1  (Detail)::pCcodeGrp=[Const]
+2020-11-10 11:58:28-->  [error]  (page)::FrmComnCodeSite.cs  (Function)::SetDataBind_gridView1  (Detail)::reMsg=[]
+2020-11-10 11:58:28-->  [error]  (page)::FrmComnCodeSite.cs  (Function)::SetDataBind_gridView1  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Sys.ComnCode.FrmComnCodeSite.SetDataBind_gridView1(String pCcodeGrp) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\ComnCode\FrmComnCodeSite.cs:줄 229
+2020-11-10 12:11:34-->  [error]  (page)::FrmSysAuthSiteDB.cs  (Function)::SetDataBind_gridView1  (Detail)::reMsg=[]
+2020-11-10 12:11:34-->  [error]  (page)::FrmSysAuthSiteDB.cs  (Function)::SetDataBind_gridView1  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Sys.SysAuth.FrmSysAuthSiteDB.SetDataBind_gridView1() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\SysAuth\FrmSysAuthSiteDB.cs:줄 207
+2020-11-10 12:11:37-->  [error]  (page)::FrmComnCodeSite.cs  (Function)::SetDataBind_gridView1  (Detail)::pCcodeGrp=[Const]
+2020-11-10 12:11:37-->  [error]  (page)::FrmComnCodeSite.cs  (Function)::SetDataBind_gridView1  (Detail)::reMsg=[]
+2020-11-10 12:11:37-->  [error]  (page)::FrmComnCodeSite.cs  (Function)::SetDataBind_gridView1  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Sys.ComnCode.FrmComnCodeSite.SetDataBind_gridView1(String pCcodeGrp) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\ComnCode\FrmComnCodeSite.cs:줄 229
+2020-11-10 12:13:35-->  [error]  (page)::FrmSysAuthMemberDB.cs  (Function)::SetDataBind_gridView1  (Detail)::reMsg=[]
+2020-11-10 12:13:35-->  [error]  (page)::FrmSysAuthMemberDB.cs  (Function)::SetDataBind_gridView1  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Sys.SysAuth.FrmSysAuthMemberDB.SetDataBind_gridView1() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\SysAuth\FrmSysAuthMemberDB.cs:줄 223
+2020-11-10 12:13:36-->  [error]  (page)::FrmSysAuthSiteDB.cs  (Function)::SetDataBind_gridView1  (Detail)::reMsg=[]
+2020-11-10 12:13:36-->  [error]  (page)::FrmSysAuthSiteDB.cs  (Function)::SetDataBind_gridView1  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Sys.SysAuth.FrmSysAuthSiteDB.SetDataBind_gridView1() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\SysAuth\FrmSysAuthSiteDB.cs:줄 207
+2020-11-10 12:13:42-->  [error]  (page)::FrmComnCodeSite.cs  (Function)::SetDataBind_gridView1  (Detail)::pCcodeGrp=[Const]
+2020-11-10 12:13:42-->  [error]  (page)::FrmComnCodeSite.cs  (Function)::SetDataBind_gridView1  (Detail)::reMsg=[]
+2020-11-10 12:13:42-->  [error]  (page)::FrmComnCodeSite.cs  (Function)::SetDataBind_gridView1  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Sys.ComnCode.FrmComnCodeSite.SetDataBind_gridView1(String pCcodeGrp) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\ComnCode\FrmComnCodeSite.cs:줄 229
+2020-11-10 12:24:46-->  [error]  (page)::FrmComnCodeSite.cs  (Function)::SetDataBind_gridView1  (Detail)::pCcodeGrp=[Const]
+2020-11-10 12:24:46-->  [error]  (page)::FrmComnCodeSite.cs  (Function)::SetDataBind_gridView1  (Detail)::reMsg=[]
+2020-11-10 12:24:46-->  [error]  (page)::FrmComnCodeSite.cs  (Function)::SetDataBind_gridView1  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Sys.ComnCode.FrmComnCodeSite.SetDataBind_gridView1(String pCcodeGrp) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\ComnCode\FrmComnCodeSite.cs:줄 229
+2020-11-10 12:24:55-->  [error]  (page)::FrmComnCodeSite.cs  (Function)::SetDataBind_gridView1  (Detail)::pCcodeGrp=[Const]
+2020-11-10 12:24:55-->  [error]  (page)::FrmComnCodeSite.cs  (Function)::SetDataBind_gridView1  (Detail)::reMsg=[]
+2020-11-10 12:24:55-->  [error]  (page)::FrmComnCodeSite.cs  (Function)::SetDataBind_gridView1  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Sys.ComnCode.FrmComnCodeSite.SetDataBind_gridView1(String pCcodeGrp) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\ComnCode\FrmComnCodeSite.cs:줄 229
+2020-11-10 14:34:18-->  [error]  (page)::FrmComnCodeSite.cs  (Function)::SetDataBind_gridView1  (Detail)::pCcodeGrp=[Const]
+2020-11-10 14:34:18-->  [error]  (page)::FrmComnCodeSite.cs  (Function)::SetDataBind_gridView1  (Detail)::reMsg=[]
+2020-11-10 14:34:18-->  [error]  (page)::FrmComnCodeSite.cs  (Function)::SetDataBind_gridView1  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Sys.ComnCode.FrmComnCodeSite.SetDataBind_gridView1(String pCcodeGrp) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\ComnCode\FrmComnCodeSite.cs:줄 229
+2020-11-10 14:34:26-->  [error]  (page)::FrmComnCodeSite.cs  (Function)::SetDataBind_gridView1  (Detail)::pCcodeGrp=[Const]
+2020-11-10 14:34:26-->  [error]  (page)::FrmComnCodeSite.cs  (Function)::SetDataBind_gridView1  (Detail)::reMsg=[]
+2020-11-10 14:34:26-->  [error]  (page)::FrmComnCodeSite.cs  (Function)::SetDataBind_gridView1  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Sys.ComnCode.FrmComnCodeSite.SetDataBind_gridView1(String pCcodeGrp) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\ComnCode\FrmComnCodeSite.cs:줄 229
+2020-11-10 14:42:41-->  [error]  (page)::FrmSysAuthMemberDB.cs  (Function)::SetDataBind_gridView1  (Detail)::reMsg=[]
+2020-11-10 14:42:41-->  [error]  (page)::FrmSysAuthMemberDB.cs  (Function)::SetDataBind_gridView1  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Sys.SysAuth.FrmSysAuthMemberDB.SetDataBind_gridView1() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\SysAuth\FrmSysAuthMemberDB.cs:줄 223
+2020-11-10 14:42:42-->  [error]  (page)::FrmSysAuthSiteDB.cs  (Function)::SetDataBind_gridView1  (Detail)::reMsg=[]
+2020-11-10 14:42:42-->  [error]  (page)::FrmSysAuthSiteDB.cs  (Function)::SetDataBind_gridView1  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Sys.SysAuth.FrmSysAuthSiteDB.SetDataBind_gridView1() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\SysAuth\FrmSysAuthSiteDB.cs:줄 207
+2020-11-10 14:44:58-->  [error]  (page)::FrmComnCodeSite.cs  (Function)::SetDataBind_gridView1  (Detail)::pCcodeGrp=[Const]
+2020-11-10 14:44:58-->  [error]  (page)::FrmComnCodeSite.cs  (Function)::SetDataBind_gridView1  (Detail)::reMsg=[]
+2020-11-10 14:44:58-->  [error]  (page)::FrmComnCodeSite.cs  (Function)::SetDataBind_gridView1  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Sys.ComnCode.FrmComnCodeSite.SetDataBind_gridView1(String pCcodeGrp) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\ComnCode\FrmComnCodeSite.cs:줄 229
+2020-11-10 14:45:00-->  [error]  (page)::FrmCodeTAuthSite.cs  (Function)::SetDataBind_gridView1  (Detail)::codeGrp=[1], code_val=[Text]
+2020-11-10 14:45:00-->  [error]  (page)::FrmCodeTAuthSite.cs  (Function)::SetDataBind_gridView1  (Detail)::reMsg=[]
+2020-11-10 14:45:00-->  [error]  (page)::FrmCodeTAuthSite.cs  (Function)::SetDataBind_gridView1  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Sys.CodeT.FrmCodeTAuthSite.SetDataBind_gridView1(String codeGrp, String code_val) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\CodeT\FrmCodeTAuthSite.cs:줄 253
+2020-11-10 14:45:04-->  [error]  (page)::FrmCodeTAuthSite.cs  (Function)::SetDataBind_gridView1  (Detail)::codeGrp=[1], code_val=[Text]
+2020-11-10 14:45:04-->  [error]  (page)::FrmCodeTAuthSite.cs  (Function)::SetDataBind_gridView1  (Detail)::reMsg=[]
+2020-11-10 14:45:04-->  [error]  (page)::FrmCodeTAuthSite.cs  (Function)::SetDataBind_gridView1  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Sys.CodeT.FrmCodeTAuthSite.SetDataBind_gridView1(String codeGrp, String code_val) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\CodeT\FrmCodeTAuthSite.cs:줄 253
+2020-11-10 15:28:58-->  [error]  (page)::FrmComnCodeSite.cs  (Function)::SetDataBind_gridView1  (Detail)::pCcodeGrp=[Const]
+2020-11-10 15:28:58-->  [error]  (page)::FrmComnCodeSite.cs  (Function)::SetDataBind_gridView1  (Detail)::reMsg=[]
+2020-11-10 15:28:58-->  [error]  (page)::FrmComnCodeSite.cs  (Function)::SetDataBind_gridView1  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Sys.ComnCode.FrmComnCodeSite.SetDataBind_gridView1(String pCcodeGrp) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\ComnCode\FrmComnCodeSite.cs:줄 229
+2020-11-10 15:29:13-->  [error]  (page)::FrmComnCodeSite.cs  (Function)::SetDataBind_gridView1  (Detail)::pCcodeGrp=[Const]
+2020-11-10 15:29:13-->  [error]  (page)::FrmComnCodeSite.cs  (Function)::SetDataBind_gridView1  (Detail)::reMsg=[]
+2020-11-10 15:29:13-->  [error]  (page)::FrmComnCodeSite.cs  (Function)::SetDataBind_gridView1  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Sys.ComnCode.FrmComnCodeSite.SetDataBind_gridView1(String pCcodeGrp) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\ComnCode\FrmComnCodeSite.cs:줄 229
+2020-11-10 15:29:46-->  [error]  (page)::FrmCodeTAuthSite.cs  (Function)::SetDataBind_gridView1  (Detail)::codeGrp=[1], code_val=[Text]
+2020-11-10 15:29:46-->  [error]  (page)::FrmCodeTAuthSite.cs  (Function)::SetDataBind_gridView1  (Detail)::reMsg=[]
+2020-11-10 15:29:46-->  [error]  (page)::FrmCodeTAuthSite.cs  (Function)::SetDataBind_gridView1  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Sys.CodeT.FrmCodeTAuthSite.SetDataBind_gridView1(String codeGrp, String code_val) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\CodeT\FrmCodeTAuthSite.cs:줄 253
+2020-11-10 17:02:54-->  [error]  (page)::FrmMain.cs  (Function)::GetDbNm  (Detail)::reCode=[], reMsg=[]
+2020-11-10 17:02:54-->  [error]  (page)::FrmMain.cs  (Function)::GetDbNm  (Detail)::
+System.Net.WebException: 작업 시간이 초과되었습니다.
+   위치: System.Web.Services.Protocols.WebClientProtocol.GetWebResponse(WebRequest request)
+   위치: System.Web.Services.Protocols.HttpWebClientProtocol.GetWebResponse(WebRequest request)
+   위치: System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke(String methodName, Object[] parameters)
+   위치: EldigmPlusApp.Mem_WsMHome.WsMainHome.sDbNm(String pMemcoCd, String& reData, String& reMsg) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\Web References\Mem_WsMHome\Reference.cs:줄 94
+   위치: EldigmPlusApp.SubForm.MainHome.FrmMain.GetDbNm() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\MainHome\FrmMain.cs:줄 166
+2020-11-10 17:08:05-->  [error]  (page)::FrmSysAuthSiteDB.cs  (Function)::SetDataBind_gridView1  (Detail)::reMsg=[]
+2020-11-10 17:08:05-->  [error]  (page)::FrmSysAuthSiteDB.cs  (Function)::SetDataBind_gridView1  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Sys.SysAuth.FrmSysAuthSiteDB.SetDataBind_gridView1() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\SysAuth\FrmSysAuthSiteDB.cs:줄 207
+2020-11-10 17:08:06-->  [error]  (page)::FrmSysAuthMemberDB.cs  (Function)::SetDataBind_gridView1  (Detail)::reMsg=[]
+2020-11-10 17:08:06-->  [error]  (page)::FrmSysAuthMemberDB.cs  (Function)::SetDataBind_gridView1  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Sys.SysAuth.FrmSysAuthMemberDB.SetDataBind_gridView1() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\SysAuth\FrmSysAuthMemberDB.cs:줄 223
+2020-11-10 17:09:15-->  [error]  (page)::FrmCodeTAuthSite.cs  (Function)::SetDataBind_gridView1  (Detail)::codeGrp=[1], code_val=[Text]
+2020-11-10 17:09:15-->  [error]  (page)::FrmCodeTAuthSite.cs  (Function)::SetDataBind_gridView1  (Detail)::reMsg=[]
+2020-11-10 17:09:15-->  [error]  (page)::FrmCodeTAuthSite.cs  (Function)::SetDataBind_gridView1  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Sys.CodeT.FrmCodeTAuthSite.SetDataBind_gridView1(String codeGrp, String code_val) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\CodeT\FrmCodeTAuthSite.cs:줄 253
+2020-11-10 17:09:20-->  [error]  (page)::FrmCodeTAuthSite.cs  (Function)::SetDataBind_gridView1  (Detail)::codeGrp=[1], code_val=[Text]
+2020-11-10 17:09:20-->  [error]  (page)::FrmCodeTAuthSite.cs  (Function)::SetDataBind_gridView1  (Detail)::reMsg=[]
+2020-11-10 17:09:20-->  [error]  (page)::FrmCodeTAuthSite.cs  (Function)::SetDataBind_gridView1  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Sys.CodeT.FrmCodeTAuthSite.SetDataBind_gridView1(String codeGrp, String code_val) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\CodeT\FrmCodeTAuthSite.cs:줄 253
+2020-11-10 17:09:23-->  [error]  (page)::FrmCodeTAuthSite.cs  (Function)::SetDataBind_gridView1  (Detail)::codeGrp=[1], code_val=[Text]
+2020-11-10 17:09:23-->  [error]  (page)::FrmCodeTAuthSite.cs  (Function)::SetDataBind_gridView1  (Detail)::reMsg=[]
+2020-11-10 17:09:23-->  [error]  (page)::FrmCodeTAuthSite.cs  (Function)::SetDataBind_gridView1  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Sys.CodeT.FrmCodeTAuthSite.SetDataBind_gridView1(String codeGrp, String code_val) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\CodeT\FrmCodeTAuthSite.cs:줄 253
+2020-11-10 17:09:36-->  [error]  (page)::FrmSysAuthSiteDB.cs  (Function)::SetDataBind_gridView1  (Detail)::reMsg=[]
+2020-11-10 17:09:36-->  [error]  (page)::FrmSysAuthSiteDB.cs  (Function)::SetDataBind_gridView1  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Sys.SysAuth.FrmSysAuthSiteDB.SetDataBind_gridView1() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\SysAuth\FrmSysAuthSiteDB.cs:줄 207
+2020-11-10 17:09:37-->  [error]  (page)::FrmSysAuthMemberDB.cs  (Function)::SetDataBind_gridView1  (Detail)::reMsg=[]
+2020-11-10 17:09:37-->  [error]  (page)::FrmSysAuthMemberDB.cs  (Function)::SetDataBind_gridView1  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Sys.SysAuth.FrmSysAuthMemberDB.SetDataBind_gridView1() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\SysAuth\FrmSysAuthMemberDB.cs:줄 223
+2020-11-10 17:09:38-->  [error]  (page)::FrmSysAuthSiteDB.cs  (Function)::SetDataBind_gridView1  (Detail)::reMsg=[]
+2020-11-10 17:09:38-->  [error]  (page)::FrmSysAuthSiteDB.cs  (Function)::SetDataBind_gridView1  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Sys.SysAuth.FrmSysAuthSiteDB.SetDataBind_gridView1() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\SysAuth\FrmSysAuthSiteDB.cs:줄 207
+2020-11-10 17:09:44-->  [error]  (page)::FrmSysAuthSiteDB.cs  (Function)::SetDataBind_gridView1  (Detail)::reMsg=[]
+2020-11-10 17:09:44-->  [error]  (page)::FrmSysAuthSiteDB.cs  (Function)::SetDataBind_gridView1  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Sys.SysAuth.FrmSysAuthSiteDB.SetDataBind_gridView1() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\SysAuth\FrmSysAuthSiteDB.cs:줄 207
+2020-11-10 17:09:49-->  [error]  (page)::FrmSysAuthMemberDB.cs  (Function)::SetDataBind_gridView1  (Detail)::reMsg=[]
+2020-11-10 17:09:49-->  [error]  (page)::FrmSysAuthMemberDB.cs  (Function)::SetDataBind_gridView1  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Sys.SysAuth.FrmSysAuthMemberDB.SetDataBind_gridView1() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\SysAuth\FrmSysAuthMemberDB.cs:줄 223
+2020-11-10 17:10:08-->  [error]  (page)::FrmCodeTAuthSite.cs  (Function)::SetDataBind_gridView1  (Detail)::codeGrp=[1], code_val=[Text]
+2020-11-10 17:10:08-->  [error]  (page)::FrmCodeTAuthSite.cs  (Function)::SetDataBind_gridView1  (Detail)::reMsg=[]
+2020-11-10 17:10:08-->  [error]  (page)::FrmCodeTAuthSite.cs  (Function)::SetDataBind_gridView1  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Sys.CodeT.FrmCodeTAuthSite.SetDataBind_gridView1(String codeGrp, String code_val) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\CodeT\FrmCodeTAuthSite.cs:줄 253
+2020-11-10 17:10:10-->  [error]  (page)::FrmComnCodeSite.cs  (Function)::SetDataBind_gridView1  (Detail)::pCcodeGrp=[Const]
+2020-11-10 17:10:10-->  [error]  (page)::FrmComnCodeSite.cs  (Function)::SetDataBind_gridView1  (Detail)::reMsg=[]
+2020-11-10 17:10:10-->  [error]  (page)::FrmComnCodeSite.cs  (Function)::SetDataBind_gridView1  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Sys.ComnCode.FrmComnCodeSite.SetDataBind_gridView1(String pCcodeGrp) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\ComnCode\FrmComnCodeSite.cs:줄 229
+2020-11-10 17:13:48-->  [error]  (page)::FrmComnCodeSite.cs  (Function)::SetDataBind_gridView1  (Detail)::pCcodeGrp=[Const]
+2020-11-10 17:13:48-->  [error]  (page)::FrmComnCodeSite.cs  (Function)::SetDataBind_gridView1  (Detail)::reMsg=[]
+2020-11-10 17:13:48-->  [error]  (page)::FrmComnCodeSite.cs  (Function)::SetDataBind_gridView1  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Sys.ComnCode.FrmComnCodeSite.SetDataBind_gridView1(String pCcodeGrp) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\ComnCode\FrmComnCodeSite.cs:줄 229
+2020-11-10 17:14:18-->  [error]  (page)::FrmCodeTAuthSite.cs  (Function)::SetDataBind_gridView1  (Detail)::codeGrp=[1], code_val=[Text]
+2020-11-10 17:14:18-->  [error]  (page)::FrmCodeTAuthSite.cs  (Function)::SetDataBind_gridView1  (Detail)::reMsg=[]
+2020-11-10 17:14:18-->  [error]  (page)::FrmCodeTAuthSite.cs  (Function)::SetDataBind_gridView1  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Sys.CodeT.FrmCodeTAuthSite.SetDataBind_gridView1(String codeGrp, String code_val) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\CodeT\FrmCodeTAuthSite.cs:줄 253
+2020-11-10 17:14:26-->  [error]  (page)::FrmCodeTAuthSite.cs  (Function)::SetDataBind_gridView1  (Detail)::codeGrp=[1], code_val=[Text]
+2020-11-10 17:14:26-->  [error]  (page)::FrmCodeTAuthSite.cs  (Function)::SetDataBind_gridView1  (Detail)::reMsg=[]
+2020-11-10 17:14:26-->  [error]  (page)::FrmCodeTAuthSite.cs  (Function)::SetDataBind_gridView1  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Sys.CodeT.FrmCodeTAuthSite.SetDataBind_gridView1(String codeGrp, String code_val) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\CodeT\FrmCodeTAuthSite.cs:줄 253
+2020-11-10 17:15:20-->  [error]  (page)::FrmLaborSearch.cs  (Function)::SetDataBind_gridView1  (Detail)::reMsg=[]
+2020-11-10 17:15:20-->  [error]  (page)::FrmLaborSearch.cs  (Function)::SetDataBind_gridView1  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Worker.Labor.FrmLaborSearchPop.SetDataBind_gridView1() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Worker\Labor\FrmLaborSearchPop.cs:줄 944
+2020-11-10 17:15:20-->  [error]  (page)::FrmLaborSearch.cs  (Function)::SetDataBind_gridView2  (Detail)::reMsg=[]
+2020-11-10 17:15:20-->  [error]  (page)::FrmLaborSearch.cs  (Function)::SetDataBind_gridView2  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Worker.Labor.FrmLaborSearchPop.SetDataBind_gridView2() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Worker\Labor\FrmLaborSearchPop.cs:줄 998
+2020-11-10 17:15:20-->  [error]  (page)::FrmLaborSearch.cs  (Function)::SetDataBind_gridView3  (Detail)::reMsg=[]
+2020-11-10 17:15:20-->  [error]  (page)::FrmLaborSearch.cs  (Function)::SetDataBind_gridView3  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Worker.Labor.FrmLaborSearchPop.SetDataBind_gridView3() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Worker\Labor\FrmLaborSearchPop.cs:줄 1053
+2020-11-10 17:15:20-->  [error]  (page)::FrmLaborSearch.cs  (Function)::SetDataBind_gridView4  (Detail)::reMsg=[]
+2020-11-10 17:15:20-->  [error]  (page)::FrmLaborSearch.cs  (Function)::SetDataBind_gridView4  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Worker.Labor.FrmLaborSearchPop.SetDataBind_gridView4() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Worker\Labor\FrmLaborSearchPop.cs:줄 1152
+2020-11-10 17:17:02-->  [error]  (page)::FrmLaborSearch.cs  (Function)::SetDataBind_gridView1  (Detail)::reMsg=[]
+2020-11-10 17:17:02-->  [error]  (page)::FrmLaborSearch.cs  (Function)::SetDataBind_gridView1  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Worker.Labor.FrmLaborSearchPop.SetDataBind_gridView1() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Worker\Labor\FrmLaborSearchPop.cs:줄 944
+2020-11-10 17:17:02-->  [error]  (page)::FrmLaborSearch.cs  (Function)::SetDataBind_gridView2  (Detail)::reMsg=[]
+2020-11-10 17:17:02-->  [error]  (page)::FrmLaborSearch.cs  (Function)::SetDataBind_gridView2  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Worker.Labor.FrmLaborSearchPop.SetDataBind_gridView2() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Worker\Labor\FrmLaborSearchPop.cs:줄 998
+2020-11-10 17:17:02-->  [error]  (page)::FrmLaborSearch.cs  (Function)::SetDataBind_gridView3  (Detail)::reMsg=[]
+2020-11-10 17:17:02-->  [error]  (page)::FrmLaborSearch.cs  (Function)::SetDataBind_gridView3  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Worker.Labor.FrmLaborSearchPop.SetDataBind_gridView3() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Worker\Labor\FrmLaborSearchPop.cs:줄 1053
+2020-11-10 17:17:02-->  [error]  (page)::FrmLaborSearch.cs  (Function)::SetDataBind_gridView4  (Detail)::reMsg=[]
+2020-11-10 17:17:02-->  [error]  (page)::FrmLaborSearch.cs  (Function)::SetDataBind_gridView4  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Worker.Labor.FrmLaborSearchPop.SetDataBind_gridView4() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Worker\Labor\FrmLaborSearchPop.cs:줄 1152
+2020-11-10 17:19:58-->  [error]  (page)::FrmCodeTAuthSite.cs  (Function)::SetDataBind_gridView1  (Detail)::codeGrp=[1], code_val=[Text]
+2020-11-10 17:19:58-->  [error]  (page)::FrmCodeTAuthSite.cs  (Function)::SetDataBind_gridView1  (Detail)::reMsg=[]
+2020-11-10 17:19:58-->  [error]  (page)::FrmCodeTAuthSite.cs  (Function)::SetDataBind_gridView1  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Sys.CodeT.FrmCodeTAuthSite.SetDataBind_gridView1(String codeGrp, String code_val) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\CodeT\FrmCodeTAuthSite.cs:줄 253
+2020-11-10 17:20:04-->  [error]  (page)::FrmCodeTAuthSite.cs  (Function)::SetDataBind_gridView1  (Detail)::codeGrp=[1], code_val=[Text]
+2020-11-10 17:20:04-->  [error]  (page)::FrmCodeTAuthSite.cs  (Function)::SetDataBind_gridView1  (Detail)::reMsg=[]
+2020-11-10 17:20:04-->  [error]  (page)::FrmCodeTAuthSite.cs  (Function)::SetDataBind_gridView1  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Sys.CodeT.FrmCodeTAuthSite.SetDataBind_gridView1(String codeGrp, String code_val) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\CodeT\FrmCodeTAuthSite.cs:줄 253
+2020-11-10 17:26:45-->  [error]  (page)::FrmComnCodeSite.cs  (Function)::SetDataBind_gridView1  (Detail)::pCcodeGrp=[Const]
+2020-11-10 17:26:45-->  [error]  (page)::FrmComnCodeSite.cs  (Function)::SetDataBind_gridView1  (Detail)::reMsg=[]
+2020-11-10 17:26:45-->  [error]  (page)::FrmComnCodeSite.cs  (Function)::SetDataBind_gridView1  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Sys.ComnCode.FrmComnCodeSite.SetDataBind_gridView1(String pCcodeGrp) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\ComnCode\FrmComnCodeSite.cs:줄 229
+2020-11-10 17:26:58-->  [error]  (page)::FrmComnCodeSite.cs  (Function)::SetDataBind_gridView1  (Detail)::pCcodeGrp=[Const]
+2020-11-10 17:26:58-->  [error]  (page)::FrmComnCodeSite.cs  (Function)::SetDataBind_gridView1  (Detail)::reMsg=[]
+2020-11-10 17:26:58-->  [error]  (page)::FrmComnCodeSite.cs  (Function)::SetDataBind_gridView1  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Sys.ComnCode.FrmComnCodeSite.SetDataBind_gridView1(String pCcodeGrp) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\ComnCode\FrmComnCodeSite.cs:줄 229
+2020-11-10 17:27:31-->  [error]  (page)::FrmComnCodeSite.cs  (Function)::SetDataBind_gridView1  (Detail)::pCcodeGrp=[Const]
+2020-11-10 17:27:31-->  [error]  (page)::FrmComnCodeSite.cs  (Function)::SetDataBind_gridView1  (Detail)::reMsg=[]
+2020-11-10 17:27:31-->  [error]  (page)::FrmComnCodeSite.cs  (Function)::SetDataBind_gridView1  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Sys.ComnCode.FrmComnCodeSite.SetDataBind_gridView1(String pCcodeGrp) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\ComnCode\FrmComnCodeSite.cs:줄 229
+2020-11-10 18:09:49-->  [error]  (page)::FrmLaborSearch.cs  (Function)::SetDataBind_gridView4  (Detail)::reMsg=[]
+2020-11-10 18:09:49-->  [error]  (page)::FrmLaborSearch.cs  (Function)::SetDataBind_gridView4  (Detail):: 
+System.Net.WebException: 작업 시간이 초과되었습니다.
+   위치: System.Web.Services.Protocols.WebClientProtocol.GetWebResponse(WebRequest request)
+   위치: System.Web.Services.Protocols.HttpWebClientProtocol.GetWebResponse(WebRequest request)
+   위치: System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke(String methodName, Object[] parameters)
+   위치: EldigmPlusApp.Mem_WsWorkerLaborSearch.WsWorkerLaborSearch.sLaborAddInfo(String pSiteCd, String pCodeT, String pTgrpCcd, String pAuthCd, DataAddinfo[]& reList, String& reMsg) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\Web References\Mem_WsWorkerLaborSearch\Reference.cs:줄 711
+   위치: EldigmPlusApp.SubForm.Worker.Labor.FrmLaborSearchPop.SetDataBind_gridView4() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Worker\Labor\FrmLaborSearchPop.cs:줄 1152
+2020-11-10 18:09:51-->  [error]  (page)::FrmLaborSearch.cs  (Function)::SetDataBind_gridView1  (Detail)::reMsg=[]
+2020-11-10 18:09:51-->  [error]  (page)::FrmLaborSearch.cs  (Function)::SetDataBind_gridView1  (Detail):: 
+System.Net.WebException: 작업 시간이 초과되었습니다.
+   위치: System.Web.Services.Protocols.WebClientProtocol.GetWebResponse(WebRequest request)
+   위치: System.Web.Services.Protocols.HttpWebClientProtocol.GetWebResponse(WebRequest request)
+   위치: System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke(String methodName, Object[] parameters)
+   위치: EldigmPlusApp.Mem_WsWorkerLaborSearch.WsWorkerLaborSearch.sLaborAddInfo(String pSiteCd, String pCodeT, String pTgrpCcd, String pAuthCd, DataAddinfo[]& reList, String& reMsg) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\Web References\Mem_WsWorkerLaborSearch\Reference.cs:줄 711
+   위치: EldigmPlusApp.SubForm.Worker.Labor.FrmLaborSearchPop.SetDataBind_gridView1() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Worker\Labor\FrmLaborSearchPop.cs:줄 944
+2020-11-10 18:09:53-->  [error]  (page)::FrmLaborSearch.cs  (Function)::SetDataBind_gridView2  (Detail)::reMsg=[]
+2020-11-10 18:09:53-->  [error]  (page)::FrmLaborSearch.cs  (Function)::SetDataBind_gridView2  (Detail):: 
+System.Net.WebException: 작업 시간이 초과되었습니다.
+   위치: System.Web.Services.Protocols.WebClientProtocol.GetWebResponse(WebRequest request)
+   위치: System.Web.Services.Protocols.HttpWebClientProtocol.GetWebResponse(WebRequest request)
+   위치: System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke(String methodName, Object[] parameters)
+   위치: EldigmPlusApp.Mem_WsWorkerLaborSearch.WsWorkerLaborSearch.sLaborAddInfo(String pSiteCd, String pCodeT, String pTgrpCcd, String pAuthCd, DataAddinfo[]& reList, String& reMsg) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\Web References\Mem_WsWorkerLaborSearch\Reference.cs:줄 711
+   위치: EldigmPlusApp.SubForm.Worker.Labor.FrmLaborSearchPop.SetDataBind_gridView2() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Worker\Labor\FrmLaborSearchPop.cs:줄 998
+2020-11-10 18:09:55-->  [error]  (page)::FrmLaborSearch.cs  (Function)::SetDataBind_gridView3  (Detail)::reMsg=[]
+2020-11-10 18:09:55-->  [error]  (page)::FrmLaborSearch.cs  (Function)::SetDataBind_gridView3  (Detail):: 
+System.Net.WebException: 작업 시간이 초과되었습니다.
+   위치: System.Web.Services.Protocols.WebClientProtocol.GetWebResponse(WebRequest request)
+   위치: System.Web.Services.Protocols.HttpWebClientProtocol.GetWebResponse(WebRequest request)
+   위치: System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke(String methodName, Object[] parameters)
+   위치: EldigmPlusApp.Mem_WsWorkerLaborSearch.WsWorkerLaborSearch.sLaborAddInfo(String pSiteCd, String pCodeT, String pTgrpCcd, String pAuthCd, DataAddinfo[]& reList, String& reMsg) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\Web References\Mem_WsWorkerLaborSearch\Reference.cs:줄 711
+   위치: EldigmPlusApp.SubForm.Worker.Labor.FrmLaborSearchPop.SetDataBind_gridView3() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Worker\Labor\FrmLaborSearchPop.cs:줄 1053
+2020-11-10 18:10:00-->  [error]  (page)::FrmLaborSearch.cs  (Function)::SetDataBind_gridView4  (Detail)::reMsg=[]
+2020-11-10 18:10:00-->  [error]  (page)::FrmLaborSearch.cs  (Function)::SetDataBind_gridView4  (Detail):: 
+System.Net.WebException: 작업 시간이 초과되었습니다.
+   위치: System.Web.Services.Protocols.WebClientProtocol.GetWebResponse(WebRequest request)
+   위치: System.Web.Services.Protocols.HttpWebClientProtocol.GetWebResponse(WebRequest request)
+   위치: System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke(String methodName, Object[] parameters)
+   위치: EldigmPlusApp.Mem_WsWorkerLaborSearch.WsWorkerLaborSearch.sLaborAddInfo(String pSiteCd, String pCodeT, String pTgrpCcd, String pAuthCd, DataAddinfo[]& reList, String& reMsg) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\Web References\Mem_WsWorkerLaborSearch\Reference.cs:줄 711
+   위치: EldigmPlusApp.SubForm.Worker.Labor.FrmLaborSearchPop.SetDataBind_gridView4() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Worker\Labor\FrmLaborSearchPop.cs:줄 1152
+2020-11-10 18:12:19-->  [error]  (page)::FrmCodeTAuthSite.cs  (Function)::SetDataBind_gridView1  (Detail)::codeGrp=[1], code_val=[Text]
+2020-11-10 18:12:20-->  [error]  (page)::FrmCodeTAuthSite.cs  (Function)::SetDataBind_gridView1  (Detail)::reMsg=[]
+2020-11-10 18:12:20-->  [error]  (page)::FrmCodeTAuthSite.cs  (Function)::SetDataBind_gridView1  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Sys.CodeT.FrmCodeTAuthSite.SetDataBind_gridView1(String codeGrp, String code_val) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\CodeT\FrmCodeTAuthSite.cs:줄 253
+2020-11-10 18:12:51-->  [error]  (page)::FrmLaborSearch.cs  (Function)::SetDataBind_gridView3  (Detail)::reMsg=[[검색 성공]]
+2020-11-10 18:12:51-->  [error]  (page)::FrmLaborSearch.cs  (Function)::SetDataBind_gridView3  (Detail):: 
+System.ArgumentOutOfRangeException: 인덱스 및 길이는 문자열 내의 위치를 참조해야 합니다.
+매개 변수 이름: length
+   위치: System.String.Substring(Int32 startIndex, Int32 length)
+   위치: EldigmPlusApp.SubForm.Worker.Labor.FrmLaborSearchPopModify.SetDataBind_gridView3() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Worker\Labor\FrmLaborSearchPopModify.cs:줄 1164
+2020-11-10 18:12:51-->  [error]  (page)::FrmLaborSearch.cs  (Function)::SetDataBind_gridView3  (Detail)::reMsg=[[검색 성공]]
+2020-11-10 18:12:51-->  [error]  (page)::FrmLaborSearch.cs  (Function)::SetDataBind_gridView3  (Detail):: 
+System.ArgumentOutOfRangeException: 인덱스 및 길이는 문자열 내의 위치를 참조해야 합니다.
+매개 변수 이름: length
+   위치: System.String.Substring(Int32 startIndex, Int32 length)
+   위치: EldigmPlusApp.SubForm.Worker.Labor.FrmLaborSearchPopModify.SetDataBind_gridView3() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Worker\Labor\FrmLaborSearchPopModify.cs:줄 1164
+2020-11-10 18:12:53-->  [error]  (page)::FrmLaborSearch.cs  (Function)::SetDataBind_gridView3  (Detail)::reMsg=[[검색 성공]]
+2020-11-10 18:12:53-->  [error]  (page)::FrmLaborSearch.cs  (Function)::SetDataBind_gridView3  (Detail):: 
+System.ArgumentOutOfRangeException: 인덱스 및 길이는 문자열 내의 위치를 참조해야 합니다.
+매개 변수 이름: length
+   위치: System.String.Substring(Int32 startIndex, Int32 length)
+   위치: EldigmPlusApp.SubForm.Worker.Labor.FrmLaborSearchPopModify.SetDataBind_gridView3() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Worker\Labor\FrmLaborSearchPopModify.cs:줄 1164
+2020-11-10 18:12:53-->  [error]  (page)::FrmLaborSearch.cs  (Function)::SetDataBind_gridView3  (Detail)::reMsg=[[검색 성공]]
+2020-11-10 18:12:53-->  [error]  (page)::FrmLaborSearch.cs  (Function)::SetDataBind_gridView3  (Detail):: 
+System.ArgumentOutOfRangeException: 인덱스 및 길이는 문자열 내의 위치를 참조해야 합니다.
+매개 변수 이름: length
+   위치: System.String.Substring(Int32 startIndex, Int32 length)
+   위치: EldigmPlusApp.SubForm.Worker.Labor.FrmLaborSearchPopModify.SetDataBind_gridView3() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Worker\Labor\FrmLaborSearchPopModify.cs:줄 1164
+2020-11-10 18:12:56-->  [error]  (page)::FrmLaborSearch.cs  (Function)::SetDataBind_gridView3  (Detail)::reMsg=[[검색 성공]]
+2020-11-10 18:12:56-->  [error]  (page)::FrmLaborSearch.cs  (Function)::SetDataBind_gridView3  (Detail):: 
+System.ArgumentOutOfRangeException: 인덱스 및 길이는 문자열 내의 위치를 참조해야 합니다.
+매개 변수 이름: length
+   위치: System.String.Substring(Int32 startIndex, Int32 length)
+   위치: EldigmPlusApp.SubForm.Worker.Labor.FrmLaborSearchPopModify.SetDataBind_gridView3() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Worker\Labor\FrmLaborSearchPopModify.cs:줄 1164
+2020-11-10 18:12:56-->  [error]  (page)::FrmLaborSearch.cs  (Function)::SetDataBind_gridView3  (Detail)::reMsg=[[검색 성공]]
+2020-11-10 18:12:56-->  [error]  (page)::FrmLaborSearch.cs  (Function)::SetDataBind_gridView3  (Detail):: 
+System.ArgumentOutOfRangeException: 인덱스 및 길이는 문자열 내의 위치를 참조해야 합니다.
+매개 변수 이름: length
+   위치: System.String.Substring(Int32 startIndex, Int32 length)
+   위치: EldigmPlusApp.SubForm.Worker.Labor.FrmLaborSearchPopModify.SetDataBind_gridView3() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Worker\Labor\FrmLaborSearchPopModify.cs:줄 1164
+2020-11-10 18:12:59-->  [error]  (page)::FrmLaborSearch.cs  (Function)::SetDataBind_gridView3  (Detail)::reMsg=[[검색 성공]]
+2020-11-10 18:12:59-->  [error]  (page)::FrmLaborSearch.cs  (Function)::SetDataBind_gridView3  (Detail):: 
+System.ArgumentOutOfRangeException: 인덱스 및 길이는 문자열 내의 위치를 참조해야 합니다.
+매개 변수 이름: length
+   위치: System.String.Substring(Int32 startIndex, Int32 length)
+   위치: EldigmPlusApp.SubForm.Worker.Labor.FrmLaborSearchPopModify.SetDataBind_gridView3() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Worker\Labor\FrmLaborSearchPopModify.cs:줄 1164
+2020-11-10 18:12:59-->  [error]  (page)::FrmLaborSearch.cs  (Function)::SetDataBind_gridView3  (Detail)::reMsg=[[검색 성공]]
+2020-11-10 18:12:59-->  [error]  (page)::FrmLaborSearch.cs  (Function)::SetDataBind_gridView3  (Detail):: 
+System.ArgumentOutOfRangeException: 인덱스 및 길이는 문자열 내의 위치를 참조해야 합니다.
+매개 변수 이름: length
+   위치: System.String.Substring(Int32 startIndex, Int32 length)
+   위치: EldigmPlusApp.SubForm.Worker.Labor.FrmLaborSearchPopModify.SetDataBind_gridView3() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Worker\Labor\FrmLaborSearchPopModify.cs:줄 1164
+2020-11-10 18:13:03-->  [error]  (page)::FrmLaborSearch.cs  (Function)::SetDataBind_gridView3  (Detail)::reMsg=[[검색 성공]]
+2020-11-10 18:13:03-->  [error]  (page)::FrmLaborSearch.cs  (Function)::SetDataBind_gridView3  (Detail):: 
+System.ArgumentOutOfRangeException: 인덱스 및 길이는 문자열 내의 위치를 참조해야 합니다.
+매개 변수 이름: length
+   위치: System.String.Substring(Int32 startIndex, Int32 length)
+   위치: EldigmPlusApp.SubForm.Worker.Labor.FrmLaborSearchPopModify.SetDataBind_gridView3() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Worker\Labor\FrmLaborSearchPopModify.cs:줄 1164
+2020-11-10 18:13:03-->  [error]  (page)::FrmLaborSearch.cs  (Function)::SetDataBind_gridView3  (Detail)::reMsg=[[검색 성공]]
+2020-11-10 18:13:03-->  [error]  (page)::FrmLaborSearch.cs  (Function)::SetDataBind_gridView3  (Detail):: 
+System.ArgumentOutOfRangeException: 인덱스 및 길이는 문자열 내의 위치를 참조해야 합니다.
+매개 변수 이름: length
+   위치: System.String.Substring(Int32 startIndex, Int32 length)
+   위치: EldigmPlusApp.SubForm.Worker.Labor.FrmLaborSearchPopModify.SetDataBind_gridView3() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Worker\Labor\FrmLaborSearchPopModify.cs:줄 1164
+2020-11-10 18:17:40-->  [error]  (page)::FrmCodeTAuthSite.cs  (Function)::SetDataBind_gridView1  (Detail)::codeGrp=[1], code_val=[Text]
+2020-11-10 18:17:40-->  [error]  (page)::FrmCodeTAuthSite.cs  (Function)::SetDataBind_gridView1  (Detail)::reMsg=[]
+2020-11-10 18:17:40-->  [error]  (page)::FrmCodeTAuthSite.cs  (Function)::SetDataBind_gridView1  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Sys.CodeT.FrmCodeTAuthSite.SetDataBind_gridView1(String codeGrp, String code_val) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\CodeT\FrmCodeTAuthSite.cs:줄 253
+2020-11-10 18:18:08-->  [error]  (page)::FrmCodeTAuthSite.cs  (Function)::SetDataBind_gridView1  (Detail)::codeGrp=[1], code_val=[Text]
+2020-11-10 18:18:08-->  [error]  (page)::FrmCodeTAuthSite.cs  (Function)::SetDataBind_gridView1  (Detail)::reMsg=[]
+2020-11-10 18:18:08-->  [error]  (page)::FrmCodeTAuthSite.cs  (Function)::SetDataBind_gridView1  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Sys.CodeT.FrmCodeTAuthSite.SetDataBind_gridView1(String codeGrp, String code_val) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\CodeT\FrmCodeTAuthSite.cs:줄 253
+2020-11-10 18:18:21-->  [error]  (page)::FrmCodeTAuthSite.cs  (Function)::SetDataBind_gridView1  (Detail)::codeGrp=[1], code_val=[Text]
+2020-11-10 18:18:21-->  [error]  (page)::FrmCodeTAuthSite.cs  (Function)::SetDataBind_gridView1  (Detail)::reMsg=[]
+2020-11-10 18:18:21-->  [error]  (page)::FrmCodeTAuthSite.cs  (Function)::SetDataBind_gridView1  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Sys.CodeT.FrmCodeTAuthSite.SetDataBind_gridView1(String codeGrp, String code_val) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\CodeT\FrmCodeTAuthSite.cs:줄 253
+2020-11-10 18:18:53-->  [error]  (page)::FrmCodeTAuthSite.cs  (Function)::SetDataBind_gridView1  (Detail)::codeGrp=[1], code_val=[Text]
+2020-11-10 18:18:53-->  [error]  (page)::FrmCodeTAuthSite.cs  (Function)::SetDataBind_gridView1  (Detail)::reMsg=[]
+2020-11-10 18:18:53-->  [error]  (page)::FrmCodeTAuthSite.cs  (Function)::SetDataBind_gridView1  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Sys.CodeT.FrmCodeTAuthSite.SetDataBind_gridView1(String codeGrp, String code_val) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\CodeT\FrmCodeTAuthSite.cs:줄 253
+2020-11-10 18:18:57-->  [error]  (page)::FrmCodeTAuthSite.cs  (Function)::SetDataBind_gridView1  (Detail)::codeGrp=[1], code_val=[Text]
+2020-11-10 18:18:57-->  [error]  (page)::FrmCodeTAuthSite.cs  (Function)::SetDataBind_gridView1  (Detail)::reMsg=[]
+2020-11-10 18:18:57-->  [error]  (page)::FrmCodeTAuthSite.cs  (Function)::SetDataBind_gridView1  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Sys.CodeT.FrmCodeTAuthSite.SetDataBind_gridView1(String codeGrp, String code_val) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\CodeT\FrmCodeTAuthSite.cs:줄 253
+2020-11-10 18:20:32-->  [error]  (page)::FrmCodeTAuthSite.cs  (Function)::SetDataBind_gridView1  (Detail)::codeGrp=[1], code_val=[Text]
+2020-11-10 18:20:32-->  [error]  (page)::FrmCodeTAuthSite.cs  (Function)::SetDataBind_gridView1  (Detail)::reMsg=[]
+2020-11-10 18:20:32-->  [error]  (page)::FrmCodeTAuthSite.cs  (Function)::SetDataBind_gridView1  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Sys.CodeT.FrmCodeTAuthSite.SetDataBind_gridView1(String codeGrp, String code_val) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\CodeT\FrmCodeTAuthSite.cs:줄 253
+2020-11-10 18:21:36-->  [error]  (page)::FrmCodeTAuthSite.cs  (Function)::SetDataBind_gridView1  (Detail)::codeGrp=[1], code_val=[Text]
+2020-11-10 18:21:36-->  [error]  (page)::FrmCodeTAuthSite.cs  (Function)::SetDataBind_gridView1  (Detail)::reMsg=[]
+2020-11-10 18:21:36-->  [error]  (page)::FrmCodeTAuthSite.cs  (Function)::SetDataBind_gridView1  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Sys.CodeT.FrmCodeTAuthSite.SetDataBind_gridView1(String codeGrp, String code_val) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\CodeT\FrmCodeTAuthSite.cs:줄 253
+2020-11-10 18:21:49-->  [error]  (page)::FrmCodeTAuthSite.cs  (Function)::SetDataBind_gridView1  (Detail)::codeGrp=[1], code_val=[Text]
+2020-11-10 18:21:49-->  [error]  (page)::FrmCodeTAuthSite.cs  (Function)::SetDataBind_gridView1  (Detail)::reMsg=[]
+2020-11-10 18:21:49-->  [error]  (page)::FrmCodeTAuthSite.cs  (Function)::SetDataBind_gridView1  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Sys.CodeT.FrmCodeTAuthSite.SetDataBind_gridView1(String codeGrp, String code_val) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\CodeT\FrmCodeTAuthSite.cs:줄 253
+2020-11-10 18:22:07-->  [error]  (page)::FrmCodeTAuthSite.cs  (Function)::SetDataBind_gridView1  (Detail)::codeGrp=[1], code_val=[Text]
+2020-11-10 18:22:07-->  [error]  (page)::FrmCodeTAuthSite.cs  (Function)::SetDataBind_gridView1  (Detail)::reMsg=[]
+2020-11-10 18:22:07-->  [error]  (page)::FrmCodeTAuthSite.cs  (Function)::SetDataBind_gridView1  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Sys.CodeT.FrmCodeTAuthSite.SetDataBind_gridView1(String codeGrp, String code_val) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\CodeT\FrmCodeTAuthSite.cs:줄 253
+2020-11-10 19:47:33-->  [error]  (page)::FrmLaborSearch.cs  (Function)::ChkDgv2Param  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Worker.Labor.FrmLaborSearch.ChkDgv2Param() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Worker\Labor\FrmLaborSearch.cs:줄 759
+2020-11-10 19:48:10-->  [error]  (page)::FrmLaborSearch.cs  (Function)::ChkDgv2Param  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Worker.Labor.FrmLaborSearch.ChkDgv2Param() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Worker\Labor\FrmLaborSearch.cs:줄 759
+2020-11-10 19:48:53-->  [error]  (page)::FrmLaborSearch.cs  (Function)::ChkDgv2Param  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Worker.Labor.FrmLaborSearch.ChkDgv2Param() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Worker\Labor\FrmLaborSearch.cs:줄 759
+2020-11-10 19:49:42-->  [error]  (page)::FrmLaborSearch.cs  (Function)::ChkDgv2Param  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Worker.Labor.FrmLaborSearch.ChkDgv2Param() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Worker\Labor\FrmLaborSearch.cs:줄 759
+2020-11-10 19:51:07-->  [error]  (page)::FrmLaborSearch.cs  (Function)::ChkDgv2Param  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Worker.Labor.FrmLaborSearch.ChkDgv2Param() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Worker\Labor\FrmLaborSearch.cs:줄 759
+2020-11-10 19:56:21-->  [error]  (page)::FrmCodeTAuthSite.cs  (Function)::SetDataBind_gridView1  (Detail)::codeGrp=[1], code_val=[Text]
+2020-11-10 19:56:21-->  [error]  (page)::FrmCodeTAuthSite.cs  (Function)::SetDataBind_gridView1  (Detail)::reMsg=[]
+2020-11-10 19:56:21-->  [error]  (page)::FrmCodeTAuthSite.cs  (Function)::SetDataBind_gridView1  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Sys.CodeT.FrmCodeTAuthSite.SetDataBind_gridView1(String codeGrp, String code_val) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\CodeT\FrmCodeTAuthSite.cs:줄 253
+2020-11-10 19:56:55-->  [error]  (page)::FrmCodeTAuthSite.cs  (Function)::SetDataBind_gridView1  (Detail)::codeGrp=[1], code_val=[Text]
+2020-11-10 19:56:55-->  [error]  (page)::FrmCodeTAuthSite.cs  (Function)::SetDataBind_gridView1  (Detail)::reMsg=[]
+2020-11-10 19:56:55-->  [error]  (page)::FrmCodeTAuthSite.cs  (Function)::SetDataBind_gridView1  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Sys.CodeT.FrmCodeTAuthSite.SetDataBind_gridView1(String codeGrp, String code_val) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\CodeT\FrmCodeTAuthSite.cs:줄 253
+2020-11-10 19:57:43-->  [error]  (page)::FrmComnCodeSite.cs  (Function)::SetDataBind_gridView1  (Detail)::pCcodeGrp=[Const]
+2020-11-10 19:57:43-->  [error]  (page)::FrmComnCodeSite.cs  (Function)::SetDataBind_gridView1  (Detail)::reMsg=[]
+2020-11-10 19:57:43-->  [error]  (page)::FrmComnCodeSite.cs  (Function)::SetDataBind_gridView1  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Sys.ComnCode.FrmComnCodeSite.SetDataBind_gridView1(String pCcodeGrp) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\ComnCode\FrmComnCodeSite.cs:줄 229
+2020-11-10 19:57:46-->  [error]  (page)::FrmCodeTAuthSite.cs  (Function)::SetDataBind_gridView1  (Detail)::codeGrp=[1], code_val=[Text]
+2020-11-10 19:57:46-->  [error]  (page)::FrmCodeTAuthSite.cs  (Function)::SetDataBind_gridView1  (Detail)::reMsg=[]
+2020-11-10 19:57:46-->  [error]  (page)::FrmCodeTAuthSite.cs  (Function)::SetDataBind_gridView1  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Sys.CodeT.FrmCodeTAuthSite.SetDataBind_gridView1(String codeGrp, String code_val) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\CodeT\FrmCodeTAuthSite.cs:줄 253
+2020-11-10 19:58:45-->  [error]  (page)::FrmCodeTAuthSite.cs  (Function)::SetDataBind_gridView1  (Detail)::codeGrp=[1], code_val=[Text]
+2020-11-10 19:58:45-->  [error]  (page)::FrmCodeTAuthSite.cs  (Function)::SetDataBind_gridView1  (Detail)::reMsg=[]
+2020-11-10 19:58:45-->  [error]  (page)::FrmCodeTAuthSite.cs  (Function)::SetDataBind_gridView1  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Sys.CodeT.FrmCodeTAuthSite.SetDataBind_gridView1(String codeGrp, String code_val) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\CodeT\FrmCodeTAuthSite.cs:줄 253
+2020-11-10 19:58:46-->  [error]  (page)::FrmCodeTAuthSite.cs  (Function)::SetDataBind_gridView1  (Detail)::codeGrp=[1], code_val=[Text]
+2020-11-10 19:58:46-->  [error]  (page)::FrmCodeTAuthSite.cs  (Function)::SetDataBind_gridView1  (Detail)::reMsg=[]
+2020-11-10 19:58:46-->  [error]  (page)::FrmCodeTAuthSite.cs  (Function)::SetDataBind_gridView1  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Sys.CodeT.FrmCodeTAuthSite.SetDataBind_gridView1(String codeGrp, String code_val) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\CodeT\FrmCodeTAuthSite.cs:줄 253
+2020-11-10 19:58:59-->  [error]  (page)::FrmMain.cs  (Function)::StartFirstMenuForm  (Detail)::pMenuCd=[Safety], pMenuTag=[Safety@4@14@안전위반@@EldigmPlusApp.SubForm.Safety.Violation.FrmViolation], pFrmText=[안전위반]
+2020-11-10 19:58:59-->  [error]  (page)::FrmMain.cs  (Function)::StartFirstMenuForm  (Detail)::
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.MainHome.FrmMain.StartFirstMenuForm(String pMenuCd, String pMenuTag, String pFrmText) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\MainHome\FrmMain.cs:줄 374
+2020-11-10 19:59:10-->  [error]  (page)::FrmCodeTAuthSite.cs  (Function)::SetDataBind_gridView1  (Detail)::codeGrp=[1], code_val=[Text]
+2020-11-10 19:59:10-->  [error]  (page)::FrmCodeTAuthSite.cs  (Function)::SetDataBind_gridView1  (Detail)::reMsg=[]
+2020-11-10 19:59:10-->  [error]  (page)::FrmCodeTAuthSite.cs  (Function)::SetDataBind_gridView1  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Sys.CodeT.FrmCodeTAuthSite.SetDataBind_gridView1(String codeGrp, String code_val) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\CodeT\FrmCodeTAuthSite.cs:줄 253
+2020-11-10 20:10:22-->  [error]  (page)::FrmSysAuthMemberDB.cs  (Function)::SetDataBind_gridView1  (Detail)::reMsg=[]
+2020-11-10 20:10:22-->  [error]  (page)::FrmSysAuthMemberDB.cs  (Function)::SetDataBind_gridView1  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Sys.SysAuth.FrmSysAuthMemberDB.SetDataBind_gridView1() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\SysAuth\FrmSysAuthMemberDB.cs:줄 223
+2020-11-10 20:10:23-->  [error]  (page)::FrmSysAuthMemberDB.cs  (Function)::SetDataBind_gridView1  (Detail)::reMsg=[]
+2020-11-10 20:10:23-->  [error]  (page)::FrmSysAuthMemberDB.cs  (Function)::SetDataBind_gridView1  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Sys.SysAuth.FrmSysAuthMemberDB.SetDataBind_gridView1() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\SysAuth\FrmSysAuthMemberDB.cs:줄 223
+2020-11-10 20:10:25-->  [error]  (page)::FrmSysAuthMemberDB.cs  (Function)::SetDataBind_gridView1  (Detail)::reMsg=[]
+2020-11-10 20:10:25-->  [error]  (page)::FrmSysAuthMemberDB.cs  (Function)::SetDataBind_gridView1  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Sys.SysAuth.FrmSysAuthMemberDB.SetDataBind_gridView1() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\SysAuth\FrmSysAuthMemberDB.cs:줄 223
+2020-11-10 20:10:26-->  [error]  (page)::FrmSysAuthSiteDB.cs  (Function)::SetDataBind_gridView1  (Detail)::reMsg=[]
+2020-11-10 20:10:26-->  [error]  (page)::FrmSysAuthSiteDB.cs  (Function)::SetDataBind_gridView1  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Sys.SysAuth.FrmSysAuthSiteDB.SetDataBind_gridView1() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\SysAuth\FrmSysAuthSiteDB.cs:줄 207
+2020-11-10 20:24:43-->  [error]  (page)::FrmComnCodeSite.cs  (Function)::SetDataBind_gridView1  (Detail)::pCcodeGrp=[Const]
+2020-11-10 20:24:43-->  [error]  (page)::FrmComnCodeSite.cs  (Function)::SetDataBind_gridView1  (Detail)::reMsg=[]
+2020-11-10 20:24:43-->  [error]  (page)::FrmComnCodeSite.cs  (Function)::SetDataBind_gridView1  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Sys.ComnCode.FrmComnCodeSite.SetDataBind_gridView1(String pCcodeGrp) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\ComnCode\FrmComnCodeSite.cs:줄 229
+2020-11-10 21:43:09-->  [error]  (page)::FrmLaborSearch.cs  (Function)::SetDataBind_gridView1  (Detail)::reMsg=[]
+2020-11-10 21:43:09-->  [error]  (page)::FrmLaborSearch.cs  (Function)::SetDataBind_gridView1  (Detail):: 
+System.Net.WebException: 작업 시간이 초과되었습니다.
+   위치: System.Web.Services.Protocols.WebClientProtocol.GetWebResponse(WebRequest request)
+   위치: System.Web.Services.Protocols.HttpWebClientProtocol.GetWebResponse(WebRequest request)
+   위치: System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke(String methodName, Object[] parameters)
+   위치: EldigmPlusApp.Mem_WsWorkerLaborSearch.WsWorkerLaborSearch.sLaborAddInfo(String pSiteCd, String pCodeT, String pTgrpCcd, String pAuthCd, DataAddinfo[]& reList, String& reMsg) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\Web References\Mem_WsWorkerLaborSearch\Reference.cs:줄 718
+   위치: EldigmPlusApp.SubForm.Worker.Labor.FrmLaborSearchPopModify.SetDataBind_gridView1() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Worker\Labor\FrmLaborSearchPopModify.cs:줄 968
+2020-11-10 21:43:11-->  [error]  (page)::FrmLaborSearch.cs  (Function)::SetDataBind_gridView2  (Detail)::reMsg=[]
+2020-11-10 21:43:11-->  [error]  (page)::FrmLaborSearch.cs  (Function)::SetDataBind_gridView2  (Detail):: 
+System.Net.WebException: 작업 시간이 초과되었습니다.
+   위치: System.Web.Services.Protocols.WebClientProtocol.GetWebResponse(WebRequest request)
+   위치: System.Web.Services.Protocols.HttpWebClientProtocol.GetWebResponse(WebRequest request)
+   위치: System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke(String methodName, Object[] parameters)
+   위치: EldigmPlusApp.Mem_WsWorkerLaborSearch.WsWorkerLaborSearch.sLaborAddInfo(String pSiteCd, String pCodeT, String pTgrpCcd, String pAuthCd, DataAddinfo[]& reList, String& reMsg) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\Web References\Mem_WsWorkerLaborSearch\Reference.cs:줄 718
+   위치: EldigmPlusApp.SubForm.Worker.Labor.FrmLaborSearchPopModify.SetDataBind_gridView2() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Worker\Labor\FrmLaborSearchPopModify.cs:줄 1060
+2020-11-10 21:43:13-->  [error]  (page)::FrmLaborSearch.cs  (Function)::SetDataBind_gridView3  (Detail)::reMsg=[]
+2020-11-10 21:43:13-->  [error]  (page)::FrmLaborSearch.cs  (Function)::SetDataBind_gridView3  (Detail):: 
+System.Net.WebException: 작업 시간이 초과되었습니다.
+   위치: System.Web.Services.Protocols.WebClientProtocol.GetWebResponse(WebRequest request)
+   위치: System.Web.Services.Protocols.HttpWebClientProtocol.GetWebResponse(WebRequest request)
+   위치: System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke(String methodName, Object[] parameters)
+   위치: EldigmPlusApp.Mem_WsWorkerLaborSearch.WsWorkerLaborSearch.sLaborAddInfo(String pSiteCd, String pCodeT, String pTgrpCcd, String pAuthCd, DataAddinfo[]& reList, String& reMsg) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\Web References\Mem_WsWorkerLaborSearch\Reference.cs:줄 718
+   위치: EldigmPlusApp.SubForm.Worker.Labor.FrmLaborSearchPopModify.SetDataBind_gridView3() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Worker\Labor\FrmLaborSearchPopModify.cs:줄 1152
+2020-11-10 21:43:16-->  [error]  (page)::FrmLaborSearch.cs  (Function)::SetDataBind_gridView4  (Detail)::reMsg=[[검색 성공]]
+2020-11-10 21:43:16-->  [error]  (page)::FrmLaborSearch.cs  (Function)::SetDataBind_gridView4  (Detail):: 
+System.ArgumentException: 스트림을 읽을 수 없습니다.
+   위치: System.IO.StreamReader..ctor(Stream stream, Encoding encoding, Boolean detectEncodingFromByteOrderMarks, Int32 bufferSize, Boolean leaveOpen)
+   위치: System.IO.StreamReader..ctor(Stream stream, Encoding encoding, Boolean detectEncodingFromByteOrderMarks, Int32 bufferSize)
+   위치: System.Web.Services.Protocols.SoapHttpClientProtocol.GetReaderForMessage(SoapClientMessage message, Int32 bufferSize)
+   위치: System.Web.Services.Protocols.SoapHttpClientProtocol.ReadResponse(SoapClientMessage message, WebResponse response, Stream responseStream, Boolean asyncCall)
+   위치: System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke(String methodName, Object[] parameters)
+   위치: EldigmPlusApp.Mem_WsWorkerLaborSearch.WsWorkerLaborSearch.sLaborAddInfoModify(String pLabNo, String pSiteCd, String pTtypeScd, String pTgrpCcd, DataAddinfo[]& reList, String& reMsg) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\Web References\Mem_WsWorkerLaborSearch\Reference.cs:줄 756
+   위치: EldigmPlusApp.SubForm.Worker.Labor.FrmLaborSearchPopModify.SetDataBind_gridView4() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Worker\Labor\FrmLaborSearchPopModify.cs:줄 1321
+2020-11-10 21:43:20-->  [error]  (page)::FrmLaborSearch.cs  (Function)::SetDataBind_gridView1  (Detail)::reMsg=[]
+2020-11-10 21:43:20-->  [error]  (page)::FrmLaborSearch.cs  (Function)::SetDataBind_gridView1  (Detail):: 
+System.ArgumentException: 스트림을 읽을 수 없습니다.
+   위치: System.IO.StreamReader..ctor(Stream stream, Encoding encoding, Boolean detectEncodingFromByteOrderMarks, Int32 bufferSize, Boolean leaveOpen)
+   위치: System.IO.StreamReader..ctor(Stream stream, Encoding encoding, Boolean detectEncodingFromByteOrderMarks, Int32 bufferSize)
+   위치: System.Web.Services.Protocols.SoapHttpClientProtocol.GetReaderForMessage(SoapClientMessage message, Int32 bufferSize)
+   위치: System.Web.Services.Protocols.SoapHttpClientProtocol.ReadResponse(SoapClientMessage message, WebResponse response, Stream responseStream, Boolean asyncCall)
+   위치: System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke(String methodName, Object[] parameters)
+   위치: EldigmPlusApp.Mem_WsWorkerLaborSearch.WsWorkerLaborSearch.sLaborAddInfo(String pSiteCd, String pCodeT, String pTgrpCcd, String pAuthCd, DataAddinfo[]& reList, String& reMsg) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\Web References\Mem_WsWorkerLaborSearch\Reference.cs:줄 718
+   위치: EldigmPlusApp.SubForm.Worker.Labor.FrmLaborSearchPopModify.SetDataBind_gridView1() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Worker\Labor\FrmLaborSearchPopModify.cs:줄 968
+2020-11-10 21:43:25-->  [error]  (page)::FrmLaborSearch.cs  (Function)::SetDataBind_gridView2  (Detail)::reMsg=[]
+2020-11-10 21:43:25-->  [error]  (page)::FrmLaborSearch.cs  (Function)::SetDataBind_gridView2  (Detail):: 
+System.Net.WebException: 작업 시간이 초과되었습니다.
+   위치: System.Web.Services.Protocols.WebClientProtocol.GetWebResponse(WebRequest request)
+   위치: System.Web.Services.Protocols.HttpWebClientProtocol.GetWebResponse(WebRequest request)
+   위치: System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke(String methodName, Object[] parameters)
+   위치: EldigmPlusApp.Mem_WsWorkerLaborSearch.WsWorkerLaborSearch.sLaborAddInfo(String pSiteCd, String pCodeT, String pTgrpCcd, String pAuthCd, DataAddinfo[]& reList, String& reMsg) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\Web References\Mem_WsWorkerLaborSearch\Reference.cs:줄 718
+   위치: EldigmPlusApp.SubForm.Worker.Labor.FrmLaborSearchPopModify.SetDataBind_gridView2() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Worker\Labor\FrmLaborSearchPopModify.cs:줄 1060
+2020-11-10 21:43:27-->  [error]  (page)::FrmLaborSearch.cs  (Function)::SetDataBind_gridView3  (Detail)::reMsg=[]
+2020-11-10 21:43:27-->  [error]  (page)::FrmLaborSearch.cs  (Function)::SetDataBind_gridView3  (Detail):: 
+System.Net.WebException: 작업 시간이 초과되었습니다.
+   위치: System.Web.Services.Protocols.WebClientProtocol.GetWebResponse(WebRequest request)
+   위치: System.Web.Services.Protocols.HttpWebClientProtocol.GetWebResponse(WebRequest request)
+   위치: System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke(String methodName, Object[] parameters)
+   위치: EldigmPlusApp.Mem_WsWorkerLaborSearch.WsWorkerLaborSearch.sLaborAddInfo(String pSiteCd, String pCodeT, String pTgrpCcd, String pAuthCd, DataAddinfo[]& reList, String& reMsg) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\Web References\Mem_WsWorkerLaborSearch\Reference.cs:줄 718
+   위치: EldigmPlusApp.SubForm.Worker.Labor.FrmLaborSearchPopModify.SetDataBind_gridView3() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Worker\Labor\FrmLaborSearchPopModify.cs:줄 1152
+2020-11-10 21:43:29-->  [error]  (page)::FrmLaborSearch.cs  (Function)::SetDataBind_gridView4  (Detail)::reMsg=[]
+2020-11-10 21:43:29-->  [error]  (page)::FrmLaborSearch.cs  (Function)::SetDataBind_gridView4  (Detail):: 
+System.Net.WebException: 작업 시간이 초과되었습니다.
+   위치: System.Web.Services.Protocols.WebClientProtocol.GetWebResponse(WebRequest request)
+   위치: System.Web.Services.Protocols.HttpWebClientProtocol.GetWebResponse(WebRequest request)
+   위치: System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke(String methodName, Object[] parameters)
+   위치: EldigmPlusApp.Mem_WsWorkerLaborSearch.WsWorkerLaborSearch.sLaborAddInfo(String pSiteCd, String pCodeT, String pTgrpCcd, String pAuthCd, DataAddinfo[]& reList, String& reMsg) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\Web References\Mem_WsWorkerLaborSearch\Reference.cs:줄 718
+   위치: EldigmPlusApp.SubForm.Worker.Labor.FrmLaborSearchPopModify.SetDataBind_gridView4() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Worker\Labor\FrmLaborSearchPopModify.cs:줄 1292
+2020-11-10 21:54:24-->  [error]  (page)::FrmSysAuthMemberDB.cs  (Function)::SetDataBind_gridView1  (Detail)::reMsg=[]
+2020-11-10 21:54:24-->  [error]  (page)::FrmSysAuthMemberDB.cs  (Function)::SetDataBind_gridView1  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Sys.SysAuth.FrmSysAuthMemberDB.SetDataBind_gridView1() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\SysAuth\FrmSysAuthMemberDB.cs:줄 223
+2020-11-10 21:54:25-->  [error]  (page)::FrmSysAuthSiteDB.cs  (Function)::SetDataBind_gridView1  (Detail)::reMsg=[]
+2020-11-10 21:54:25-->  [error]  (page)::FrmSysAuthSiteDB.cs  (Function)::SetDataBind_gridView1  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Sys.SysAuth.FrmSysAuthSiteDB.SetDataBind_gridView1() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\SysAuth\FrmSysAuthSiteDB.cs:줄 207
+2020-11-10 21:54:37-->  [error]  (page)::FrmComnCodeSite.cs  (Function)::SetDataBind_gridView1  (Detail)::pCcodeGrp=[Const]
+2020-11-10 21:54:37-->  [error]  (page)::FrmComnCodeSite.cs  (Function)::SetDataBind_gridView1  (Detail)::reMsg=[]
+2020-11-10 21:54:37-->  [error]  (page)::FrmComnCodeSite.cs  (Function)::SetDataBind_gridView1  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Sys.ComnCode.FrmComnCodeSite.SetDataBind_gridView1(String pCcodeGrp) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\ComnCode\FrmComnCodeSite.cs:줄 229
+2020-11-10 21:54:41-->  [error]  (page)::FrmCodeTAuthSite.cs  (Function)::SetDataBind_gridView1  (Detail)::codeGrp=[1], code_val=[Text]
+2020-11-10 21:54:41-->  [error]  (page)::FrmCodeTAuthSite.cs  (Function)::SetDataBind_gridView1  (Detail)::reMsg=[]
+2020-11-10 21:54:41-->  [error]  (page)::FrmCodeTAuthSite.cs  (Function)::SetDataBind_gridView1  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Sys.CodeT.FrmCodeTAuthSite.SetDataBind_gridView1(String codeGrp, String code_val) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\CodeT\FrmCodeTAuthSite.cs:줄 253
+2020-11-10 21:54:44-->  [error]  (page)::FrmCodeTAuthSite.cs  (Function)::SetDataBind_gridView1  (Detail)::codeGrp=[1], code_val=[Text]
+2020-11-10 21:54:44-->  [error]  (page)::FrmCodeTAuthSite.cs  (Function)::SetDataBind_gridView1  (Detail)::reMsg=[]
+2020-11-10 21:54:44-->  [error]  (page)::FrmCodeTAuthSite.cs  (Function)::SetDataBind_gridView1  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Sys.CodeT.FrmCodeTAuthSite.SetDataBind_gridView1(String codeGrp, String code_val) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\CodeT\FrmCodeTAuthSite.cs:줄 253
+2020-11-10 21:54:48-->  [error]  (page)::FrmCodeTAuthSite.cs  (Function)::SetDataBind_gridView1  (Detail)::codeGrp=[1], code_val=[Text]
+2020-11-10 21:54:48-->  [error]  (page)::FrmCodeTAuthSite.cs  (Function)::SetDataBind_gridView1  (Detail)::reMsg=[]
+2020-11-10 21:54:48-->  [error]  (page)::FrmCodeTAuthSite.cs  (Function)::SetDataBind_gridView1  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Sys.CodeT.FrmCodeTAuthSite.SetDataBind_gridView1(String codeGrp, String code_val) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\CodeT\FrmCodeTAuthSite.cs:줄 253
+2020-11-10 21:55:03-->  [error]  (page)::FrmSysAuthMemberDB.cs  (Function)::SetDataBind_gridView1  (Detail)::reMsg=[]
+2020-11-10 21:55:03-->  [error]  (page)::FrmSysAuthMemberDB.cs  (Function)::SetDataBind_gridView1  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Sys.SysAuth.FrmSysAuthMemberDB.SetDataBind_gridView1() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\SysAuth\FrmSysAuthMemberDB.cs:줄 223
+2020-11-10 21:55:05-->  [error]  (page)::FrmSysAuthMemberDB.cs  (Function)::SetDataBind_gridView1  (Detail)::reMsg=[]
+2020-11-10 21:55:05-->  [error]  (page)::FrmSysAuthMemberDB.cs  (Function)::SetDataBind_gridView1  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Sys.SysAuth.FrmSysAuthMemberDB.SetDataBind_gridView1() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\SysAuth\FrmSysAuthMemberDB.cs:줄 223
+2020-11-10 21:55:05-->  [error]  (page)::FrmSysAuthSiteDB.cs  (Function)::SetDataBind_gridView1  (Detail)::reMsg=[]
+2020-11-10 21:55:05-->  [error]  (page)::FrmSysAuthSiteDB.cs  (Function)::SetDataBind_gridView1  (Detail):: 
+System.NullReferenceException: 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.
+   위치: EldigmPlusApp.SubForm.Sys.SysAuth.FrmSysAuthSiteDB.SetDataBind_gridView1() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\SysAuth\FrmSysAuthSiteDB.cs:줄 207
+2020-11-11 10:04:59-->  [error]  (page)::FrmMain.cs  (Function)::GetDbNm  (Detail)::reCode=[], reMsg=[]
+2020-11-11 10:04:59-->  [error]  (page)::FrmMain.cs  (Function)::GetDbNm  (Detail)::
+System.Net.WebException: 작업 시간이 초과되었습니다.
+   위치: System.Web.Services.Protocols.WebClientProtocol.GetWebResponse(WebRequest request)
+   위치: System.Web.Services.Protocols.HttpWebClientProtocol.GetWebResponse(WebRequest request)
+   위치: System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke(String methodName, Object[] parameters)
+   위치: EldigmPlusApp.Mem_WsMHome.WsMainHome.sDbNm(String pMemcoCd, String& reData, String& reMsg) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\Web References\Mem_WsMHome\Reference.cs:줄 94
+   위치: EldigmPlusApp.SubForm.MainHome.FrmMain.GetDbNm() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\MainHome\FrmMain.cs:줄 166
+2020-11-11 10:05:06-->  [error]  (page)::FrmMenuMainDB.cs  (Function)::SetDataBind_treeView1  (Detail):: 
+System.Net.WebException: 작업 시간이 초과되었습니다.
+   위치: System.Web.Services.Protocols.WebClientProtocol.GetWebResponse(WebRequest request)
+   위치: System.Web.Services.Protocols.HttpWebClientProtocol.GetWebResponse(WebRequest request)
+   위치: System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke(String methodName, Object[] parameters)
+   위치: EldigmPlusApp.M_WsMenuMainDB.WsMenuMainDB.sMenuTopTreeView(DataMenuTop[]& reList, String& reMsg) 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\Web References\M_WsMenuMainDB\Reference.cs:줄 184
+   위치: EldigmPlusApp.SubForm.Sys.Menu.FrmMenuMainDB.SetDataBind_treeView1() 파일 D:\3.DevOps\Eldigm_Plus\EldigmPlusApp\SubForm\Sys\Menu\FrmMenuMainDB.cs:줄 121

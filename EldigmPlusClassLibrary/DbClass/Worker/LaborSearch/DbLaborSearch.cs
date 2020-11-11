@@ -121,7 +121,7 @@ namespace EldigmPlusClassLibrary.DbClass.Worker.LaborSearch
         }
 
 
-    
+
 
         //CONST CMB BOX 
         public DataSet sLaborConstList(string SITE_CD, int MYCON_FLAG, int CCODE, string pLngConst)
@@ -152,7 +152,7 @@ namespace EldigmPlusClassLibrary.DbClass.Worker.LaborSearch
 
             return ds;
         }
-                                   
+
 
         //JOB CMB BOX 
         public DataSet sLaborJobList(string SITE_CD, string pLngJob)
@@ -167,8 +167,8 @@ namespace EldigmPlusClassLibrary.DbClass.Worker.LaborSearch
                 " FROM " + con + "View_Code_Comn " +
                 " WHERE CCODE_GRP = 'Job' AND SITE_CD = " + SITE_CD + " AND USING_FLAG = 1 " +
                 " UNION ALL " +
-                " SELECT '0' AS VALUE, '" + pLngJob +"' AS TEXT, '9999999' AS SORT_NO " +
-                " )X ";         
+                " SELECT '0' AS VALUE, '" + pLngJob + "' AS TEXT, '9999999' AS SORT_NO " +
+                " )X ";
 
             sql += "" +
                 " ORDER BY SORT_NO, TEXT ";
@@ -249,12 +249,104 @@ namespace EldigmPlusClassLibrary.DbClass.Worker.LaborSearch
             return ds;
         }
 
+        //LAB INFO TYPE CMB BOX 
+        public DataSet sLabInfoTypeList(string SITE_CD, string pLngCategory)
+        {
+            string dbNm = sDbNm(SITE_CD);
+            string con = "[PLUS-" + dbNm + "].dbo.";
+
+            string sql = "" +
+             " SELECT VALUE, TEXT " +
+             " FROM( " +
+             " SELECT SCODE AS VALUE, SCODE_NM AS TEXT, SORT_NO " +
+             " FROM[PLUS_MAIN].dbo.TM00_CODE_SYS " +
+             " WHERE SCODE_GRP = 'LabInfoType' " +
+             " UNION ALL " +
+             " SELECT '0' AS VALUE, '" + pLngCategory + "' AS TEXT, '999999' AS SORT_NO " +
+             " )X " +
+             " ORDER BY SORT_NO, TEXT ";
+
+
+
+            DataSet ds = null;
+
+            if (_sqlHelper != null)
+                ds = _sqlHelper.ExecuteFill(sql);
+
+            return ds;
+        }
+
+
+        //TCODE CMB BOX WITH AUTH 
+        public DataSet sLabTcodeList(string SITE_CD, string TGRP_CCD, string TTYPE_SCD, string pLngCategory, string AUTH_CD)
+        {
+            string dbNm = sDbNm(SITE_CD);
+            string con = "[PLUS-" + dbNm + "].dbo.";
+
+            string sql = "" +
+                " SELECT VALUE, TEXT " +
+                " FROM( " +
+                " SELECT A.TCODE AS VALUE, A.TCODE_NM AS TEXT, A.SORT_NO " +
+                " FROM " + con + "View_Code_T  A" +
+                " INNER JOIN " + con + "T00_CODE_T_SETAUTH_SITE B ON A.TCODE = B.TCODE AND A.SITE_CD = B.SITE_CD " +
+                " WHERE A.SITE_CD = " + SITE_CD + " " +
+                " AND B.VIEW_FLAG = 1 " +
+                " AND B.AUTH_CD = '" + AUTH_CD + "' ";
+
+            if (TGRP_CCD != "0")
+                sql += " AND A.TGRP_CCD = " + TGRP_CCD + " ";
+
+            if (TTYPE_SCD != "0")
+                sql += " AND A.TTYPE_SCD = '" + TTYPE_SCD + "' ";
+
+
+            sql += "" +
+            " UNION ALL " +
+                " SELECT '0' AS VALUE, '" + pLngCategory + "' AS TEXT, '999999' AS SORT_NO " +
+                " )X " + 
+               " ORDER BY SORT_NO, TEXT ";
+
+
+            DataSet ds = null;
+
+            if (_sqlHelper != null)
+                ds = _sqlHelper.ExecuteFill(sql);
+
+            return ds;
+        }
+
+        //CCODE COMBO BOX (USING THIS CMB CCODE AS TGRP_CCD **INCLUDE CATEGORY FOR VALUE 0**)
+        public DataSet sLaborAddInfoCcode2(string SITE_CD, string AUTH_CD, string pLngCategory)
+        {
+            string dbNm = sDbNm(SITE_CD);
+            string con = "[PLUS-" + dbNm + "].dbo.";
+
+            string sql = "" +
+                " SELECT VALUE, TEXT " + 
+                " FROM( " +
+                " SELECT A.CCODE AS VALUE, A.CCODE_NM AS TEXT, A.SORT_NO FROM(SELECT A.CCODE, A.CCODE_GRP, A.CCODE_NM, B.SORT_NO " +
+                " FROM " + con + "T00_CODE_COMN A INNER JOIN " + con + "T00_CODE_COMN_SITE B" +
+                " ON A.CCODE = B.CCODE WHERE SITE_CD = " + SITE_CD + " AND CCODE_GRP = 'AddinfoGrp' AND USING_FLAG = 1) A " +
+                " INNER JOIN(SELECT CCODE_GRP FROM " + con + "T00_CODE_GRP_SETAUTH_SITE WHERE SITE_CD = " + SITE_CD + " " +
+                " AND AUTH_CD = '" + AUTH_CD + "' AND CCODE_GRP = 'AddinfoGrp' AND VIEW_FLAG = 1) B ON A.CCODE_GRP = B.CCODE_GRP " +
+                " UNION ALL " +
+                " SELECT '0' AS VALUE, '" + pLngCategory + "' AS TEXT, '999999' AS SORT_NO " +
+                " )X " +
+                " ORDER BY SORT_NO, TEXT "; 
+
+            DataSet ds = null;
+            if (_sqlHelper != null)
+                ds = _sqlHelper.ExecuteFill(sql);
+
+            return ds;
+        }
+
 
 
 
         // LAB_STS 를 CMB BOX로 쓸 것인지 Frm의 용도 물어보기 
         //SELECT 
-        public DataSet sLaborSearch(string SITE_CD, string BLOCK_CCD, string CONST_CCD, string CO_CD, string TEAM_CD, string SEARCH_CONDITION, string SEARCH_TXT)
+        public DataSet sLaborSearch(string SITE_CD, string BLOCK_CCD, string CONST_CCD, string CO_CD, string TEAM_CD, string SEARCH_CONDITION, string SEARCH_TXT, string TTYPE_SCD, string TCODE, string VALUE )
         {
             string dbNm = sDbNm(SITE_CD);
             string con = "[PLUS-" + dbNm + "].dbo.";
@@ -264,8 +356,16 @@ namespace EldigmPlusClassLibrary.DbClass.Worker.LaborSearch
             " SELECT A.LAB_NO, COM.CO_NM, A.LAB_NM, ISNULL(A.JOB_NM, '') JOB_NM, ISNULL(TEAM.TEAM_NM, '') TEAM_NM , A.BIRTH_DATE, A.MOBILE_NO, A.USER_NO, A.AUTH_CD, A.BLOCK_CCD, A.CO_CD, A.TEAM_CD,A.JOB_CCD  " +
             " FROM " + con + "View_Lab_Job A " +
             " INNER JOIN " + con + "View_Company COM ON A.SITE_CD = COM.SITE_CD AND A.CO_CD = COM.CO_CD " +
-            " LEFT OUTER JOIN " + con + "T00_TEAM_SITE TEAM ON A.SITE_CD = TEAM.SITE_CD AND A.CO_CD = TEAM.CO_CD AND A.TEAM_CD = TEAM.TEAM_CD " +
-            " WHERE A.SITE_CD = " + SITE_CD + " ";
+            " LEFT OUTER JOIN " + con + "T00_TEAM_SITE TEAM ON A.SITE_CD = TEAM.SITE_CD AND A.CO_CD = TEAM.CO_CD AND A.TEAM_CD = TEAM.TEAM_CD ";
+
+            if (TCODE != "0" &&TTYPE_SCD !="0" && VALUE != "")
+            {
+                sql += " INNER JOIN " + con + "T01_LAB_TCODE_SITE T ON A.LAB_NO = T.LAB_NO AND A.SITE_CD = T.SITE_CD AND T.TTYPE_SCD = '" + TTYPE_SCD + "' AND T.TCODE = '" + TCODE +
+                    "' AND T.VALUE = '" + VALUE + "' ";
+            }
+
+            sql += "" +
+                " WHERE A.SITE_CD = " + SITE_CD + " ";
 
             //AND A.LAB_STS = 1
 
@@ -444,24 +544,29 @@ namespace EldigmPlusClassLibrary.DbClass.Worker.LaborSearch
         }
 
 
-        //SELECT ADD INFO CHECK BOX (INSERT POP UP) 
-        public DataSet sLaborAddInfo(string SITE_CD, string TCODE, string TGRP_CCD)
+        //SELECT ADD INFO WITH AUTH 
+        public DataSet sLaborAddInfo(string SITE_CD, string TCODE, string TGRP_CCD, string AUTH_CD)
         {
             string dbNm = sDbNm(SITE_CD);
             string con = "[PLUS-" + dbNm + "].dbo.";
 
             string sql = "" +
-                " SELECT TCODE, TTYPE_SCD, TCODE_NM FROM " + con + "View_Code_T " +
-                " WHERE TTYPE_SCD = '" + TCODE + "' AND SITE_CD = " + SITE_CD + " AND USING_FLAG = 1 ";
-                
+                " SELECT A.TCODE, A.TTYPE_SCD, A.TCODE_NM " +
+                " FROM " + con + "View_Code_T A " +
+                " INNER JOIN " + con + "T00_CODE_T_SETAUTH_SITE B ON A.TCODE = B.TCODE AND A.SITE_CD = B.SITE_CD " +
+                " WHERE B.AUTH_CD = '" + AUTH_CD + "' " +
+                " AND B.VIEW_FLAG = 1 " +
+                " AND A.SITE_CD = " + SITE_CD + " " +
+                " AND TTYPE_SCD = '" + TCODE + "' "; 
+
 
             if (TGRP_CCD != "0")
             {
-                sql += "AND TGRP_CCD = " + TGRP_CCD + " ";
+                sql += "AND A.TGRP_CCD = " + TGRP_CCD + " ";
             }
 
             sql += "" +
-                " ORDER BY SORT_NO, TCODE_NM ";
+                " ORDER BY A.SORT_NO, A.TCODE_NM ";
 
 
             DataSet ds = null;
@@ -480,8 +585,8 @@ namespace EldigmPlusClassLibrary.DbClass.Worker.LaborSearch
             string con = "[PLUS-" + dbNm + "].dbo.";
 
             string sql = "" +
-               " SELECT A.TCODE, A.TTYPE_SCD, A.VALUE, B.TCODE_NM " + 
-               " FROM " + 
+               " SELECT A.TCODE, A.TTYPE_SCD, A.VALUE, B.TCODE_NM " +
+               " FROM " +
                " ( " +
                " SELECT TCODE, TTYPE_SCD, VALUE " +
                " FROM " + con + "T01_LAB_TCODE_SITE " +
@@ -512,7 +617,7 @@ namespace EldigmPlusClassLibrary.DbClass.Worker.LaborSearch
             string con = "[PLUS-" + DBNMN + "].dbo.";
 
             string sql = "" +
-               " SELECT TSCODE, TSCODE_NM FROM " + con + "T00_CODE_TSUB WHERE TCODE = '" + TCODE + "' " + 
+               " SELECT TSCODE, TSCODE_NM FROM " + con + "T00_CODE_TSUB WHERE TCODE = '" + TCODE + "' " +
                 " ORDER BY TSCODE, TSCODE_NM";
 
             DataSet ds = null;
@@ -575,7 +680,7 @@ namespace EldigmPlusClassLibrary.DbClass.Worker.LaborSearch
                 reCnt = _sqlHelper.ExecuteCommand(sql);
 
             return reCnt;
-        }  
+        }
 
 
         //INSERT TCODE_LAB LOG
@@ -584,8 +689,8 @@ namespace EldigmPlusClassLibrary.DbClass.Worker.LaborSearch
             string con = "[PLUS-" + DBNM + "].dbo.";
             string sql = "" +
                  " INSERT INTO " + con + " T01_LAB_TCODE_SITE_LOG(LAB_NO, SITE_CD, TCODE, LOG_NO, TTYPE_SCD, VALUE, INPUT_ID, INPUT_DT) " +
-                 " VALUES(" + LAB_NO + ", " + SITE_CD + ", '" + TCODE + "', (SELECT ISNULL(MAX(LOG_NO), 0) + 1 FROM" + con + " T01_LAB_TCODE_SITE_LOG WHERE  LAB_NO = " + LAB_NO + "AND SITE_CD = " + SITE_CD + " AND TCODE = '" + TCODE + "') ,'" + TTYPE_SCD + "', '" + VALUE + "', " + INPUT_ID + ", GETDATE())"; 
-  
+                 " VALUES(" + LAB_NO + ", " + SITE_CD + ", '" + TCODE + "', (SELECT ISNULL(MAX(LOG_NO), 0) + 1 FROM" + con + " T01_LAB_TCODE_SITE_LOG WHERE  LAB_NO = " + LAB_NO + "AND SITE_CD = " + SITE_CD + " AND TCODE = '" + TCODE + "') ,'" + TTYPE_SCD + "', '" + VALUE + "', " + INPUT_ID + ", GETDATE())";
+
 
             int reCnt = 0;
             if (_sqlHelper != null)
@@ -593,6 +698,35 @@ namespace EldigmPlusClassLibrary.DbClass.Worker.LaborSearch
 
             return reCnt;
         }
+
+
+
+
+        //** AUTH SET PART START      
+
+
+        // SET LABOR SEARCH AUTH HERE ( NEW, MODIFY NOW , POSSIBLE TO ADD OTHER AUTH LATER) 
+        public DataSet AuthLabor(string DBNM, string SITE_CD, string AUTH_CD)
+        {
+            string con = "[PLUS-" + DBNM + "].dbo.";
+            string sql = "" +
+               " SELECT ISNULL(NEW_FLAG, 0) NEW_FLAG, ISNULL(MODIFY_FLAG, 0) MODIFY_FLAG " +
+               " FROM " + con + "T00_MENU_SETAUTH_SITE " +
+               " WHERE MENU_CD = 'LaborSearch' " +
+               " AND AUTH_CD = '" + AUTH_CD + "' " +
+               " AND SITE_CD = " + SITE_CD + " ";
+
+
+
+            DataSet ds = null;
+            if (_sqlHelper != null)
+                ds = _sqlHelper.ExecuteFill(sql);
+
+            return ds;
+        }
+                     
+
+        //** AUTH SET PART END 
 
 
 
